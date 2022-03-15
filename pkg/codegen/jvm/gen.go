@@ -74,7 +74,15 @@ func tokenToName(tok string) string {
 
 	components := strings.Split(tok, ":")
 	contract.Assertf(len(components) == 3, "malformed token %v", tok)
-	return names.Title(components[2])
+	returning := names.Ident(names.Title(components[2])).String()
+
+	if strings.Contains(returning, "/") {
+		panic(fmt.Sprintf("tokenToName failure: %s -> %s",
+			tok, returning,
+		))
+	}
+
+	return returning
 }
 
 func resourceName(r *schema.Resource) string {
