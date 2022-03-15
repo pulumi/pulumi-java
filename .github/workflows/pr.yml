@@ -63,7 +63,8 @@ jobs:
           make provider.aws.build && make provider.aws.install &&
           make provider.aws-native.build && make provider.aws-native.install &&
           make provider.kubernetes.build && make provider.kubernetes.install &&
-          make provider.docker.build && make provider.docker.install
+          make provider.docker.build && make provider.docker.install &&
+          make provider.eks.build && make provider.eks.install
       - name: Integration tests
         run: make integration_tests
     strategy:
