@@ -2478,7 +2478,10 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 			if err := p.ImportLanguages(map[string]schema.Language{"jvm": Importer}); err != nil {
 				panic(err)
 			}
-			jvmInfo, _ := pkg.Language["jvm"].(PackageInfo)
+			jvmInfo, ok := pkg.Language["jvm"].(PackageInfo)
+			if !ok {
+				panic("Failed to cast `pkg.Language[\"jvm\"]` to `PackageInfo`")
+			}
 			info = &jvmInfo
 			infos[p] = info
 		}
@@ -2694,14 +2697,14 @@ func LanguageResources(tool string, pkg *schema.Package) (map[string]LanguageRes
 func genGradleProject(pkg *schema.Package,
 	basePackageName string,
 	packageName string,
-	packageReferences map[string]string,
+	packageInfo PackageInfo,
 	files fs) error {
 	genSettingsFile, err := genSettingsFile(basePackageName + packageName)
 	if err != nil {
 		return err
 	}
 	files.add("settings.gradle", genSettingsFile)
-	genBuildFile, err := genBuildFile(pkg.Name, basePackageName)
+	genBuildFile, err := genBuildFile(pkg.Name, basePackageName, packageInfo)
 	if err != nil {
 		return err
 	}
@@ -2722,11 +2725,12 @@ func genSettingsFile(packageName string) ([]byte, error) {
 }
 
 // genBuildFile emits build.gradle
-func genBuildFile(name string, basePackageName string) ([]byte, error) {
+func genBuildFile(name string, basePackageName string, pkgInfo PackageInfo) ([]byte, error) {
 	w := &bytes.Buffer{}
 	err := jvmBuildTemplate.Execute(w, jvmBuildTemplateContext{
 		Name:            name,
 		BasePackageName: strings.TrimSuffix(basePackageName, "."),
+		PackageInfo:     pkgInfo,
 	})
 	if err != nil {
 		return nil, err
@@ -2757,7 +2761,7 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		pkg,
 		info.BasePackageOrDefault(),
 		packageName(info.Packages, pkg.Name),
-		info.PackageReferences,
+		*info,
 		files,
 	); err != nil {
 		return nil, err

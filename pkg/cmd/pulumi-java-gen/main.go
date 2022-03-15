@@ -19,10 +19,11 @@ import (
 )
 
 type Config struct {
-	Version     string `yaml:"version"`
-	Schema      string `yaml:"schema"`
-	Out         string `yaml:"out"`
-	VersionFile string `yaml:"versionFile"`
+	Version     string      `yaml:"version"`
+	Schema      string      `yaml:"schema"`
+	Out         string      `yaml:"out"`
+	VersionFile string      `yaml:"versionFile"`
+	PackageInfo interface{} `yaml:"packageInfo"`
 }
 
 func main() {
@@ -79,6 +80,19 @@ func readPackageSchema(path string) (*pschema.PackageSpec, error) {
 	return &result, nil
 }
 
+func convertPackageInfo(mapParsedFromYaml interface{}) (jvmgen.PackageInfo, error) {
+	packageInfoJson, err := json.Marshal(mapParsedFromYaml)
+	if err != nil {
+		return jvmgen.PackageInfo{}, err
+	}
+
+	var result jvmgen.PackageInfo
+	if err := json.Unmarshal(packageInfoJson, &result); err != nil {
+		return jvmgen.PackageInfo{}, err
+	}
+	return result, nil
+}
+
 func generateJava(configFile string) error {
 	rootDir, err := filepath.Abs(filepath.Dir(configFile))
 	if err != nil {
@@ -99,6 +113,13 @@ func generateJava(configFile string) error {
 	if err != nil {
 		return fmt.Errorf("failed to import Pulumi schema: %w", err)
 	}
+
+	pkgInfo, err := convertPackageInfo(cfg.PackageInfo)
+	if err != nil {
+		return err
+	}
+
+	pkg.Language["jvm"] = pkgInfo
 
 	// TODO handle overlays here?
 	extraFiles := map[string][]byte{}
