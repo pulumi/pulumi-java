@@ -68,7 +68,7 @@ jobs:
         run: make integration_tests
     strategy:
       fail-fast: true
-  example2:
+  example1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -128,7 +128,7 @@ jobs:
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi preview"
-  example3:
+  example2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -194,7 +194,7 @@ jobs:
             pulumi config set azure-native:location westus
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
             pulumi preview"
-  example4:
+  example3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -253,7 +253,7 @@ jobs:
             pulumi stack init dev;
             pulumi config set gcp:zone us-west1-a
             pulumi preview"
-  example5:
+  example4:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -306,7 +306,7 @@ jobs:
             pulumi config set minimal:name foo &&
             pulumi config set minimal:secret bar &&
             pulumi preview"
-  example6:
+  example5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -370,7 +370,7 @@ jobs:
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi preview"
-  example7:
+  example6:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -433,7 +433,7 @@ jobs:
             pulumi stack init dev;
             pulumi config set azure-native:location westus
             pulumi preview"
-  example8:
+  example7:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
