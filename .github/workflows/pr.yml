@@ -69,6 +69,8 @@ jobs:
         run: make provider.kubernetes.build provider.kubernetes.install
       - name: Build JVM SDK provider docker
         run: make provider.docker.build provider.docker.install
+      - name: Build JVM SDK provider eks
+        run: make provider.docker.build provider.eks.install
       - name: Integration tests
         run: make integration_tests
     strategy:
