@@ -313,7 +313,8 @@ jobs:
             pulumi config set minimal:secret bar &&
             pulumi preview
             pulumi up -s dev --yes
-            pulumi destroy -s dev --yes || true
+            err="$1"
+            pulumi destroy -s dev --yes || exit $err
             "
   example5:
     runs-on: ubuntu-latest
