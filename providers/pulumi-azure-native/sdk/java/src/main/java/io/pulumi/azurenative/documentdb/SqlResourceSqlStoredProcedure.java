@@ -142,24 +142,24 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlStoredProcedure").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlStoredProcedure").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20190801:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20191212:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200301:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200401:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200901:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlStoredProcedure").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlStoredProcedure").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -409,19 +409,19 @@ public class Cluster extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:kusto/v20170907privatepreview:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20180907preview:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190121:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190515:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190907:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20191109:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200215:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200614:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200918:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20210101:Cluster").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20210827:Cluster").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:kusto/v20170907privatepreview:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20180907preview:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190121:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190515:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190907:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20191109:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200215:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200614:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200918:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20210101:Cluster").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:Cluster").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -170,17 +170,17 @@ public class WebAppPrivateEndpointConnection extends io.pulumi.resources.CustomR
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppPrivateEndpointConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppPrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

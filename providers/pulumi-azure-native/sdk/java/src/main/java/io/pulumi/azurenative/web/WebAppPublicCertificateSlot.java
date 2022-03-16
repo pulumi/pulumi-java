@@ -159,20 +159,20 @@ public class WebAppPublicCertificateSlot extends io.pulumi.resources.CustomResou
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppPublicCertificateSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppPublicCertificateSlot").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppPublicCertificateSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

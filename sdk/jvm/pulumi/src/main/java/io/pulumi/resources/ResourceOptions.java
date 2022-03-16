@@ -76,72 +76,72 @@ public abstract class ResourceOptions {
             this.options = options;
         }
 
-        public B setId(@Nullable Output<String> id) {
+        public B id(@Nullable Output<String> id) {
             options.id = id;
             return (B) this;
         }
 
-        public B setId(@Nullable String id) {
+        public B id(@Nullable String id) {
             options.id = Output.ofNullable(id);
             return (B) this;
         }
 
-        public B setParent(@Nullable Resource parent) {
+        public B parent(@Nullable Resource parent) {
             options.parent = parent;
             return (B) this;
         }
 
-        public B setDependsOn(@Nullable Output<List<Resource>> dependsOn) {
+        public B dependsOn(@Nullable Output<List<Resource>> dependsOn) {
             options.dependsOn = dependsOn;
             return (B) this;
         }
 
-        public B setDependsOn(@Nullable List<Resource> dependsOn) {
+        public B dependsOn(@Nullable List<Resource> dependsOn) {
             options.dependsOn = Output.ofNullable(dependsOn);
             return (B) this;
         }
 
-        public B setProtect(boolean protect) {
+        public B protect(boolean protect) {
             options.protect = protect;
             return (B) this;
         }
 
-        public B setIgnoreChanges(@Nullable List<String> ignoreChanges) {
+        public B ignoreChanges(@Nullable List<String> ignoreChanges) {
             options.ignoreChanges = ignoreChanges;
             return (B) this;
         }
 
-        public B setVersion(@Nullable String version) {
+        public B version(@Nullable String version) {
             options.version = version;
             return (B) this;
         }
 
-        public B setProvider(@Nullable ProviderResource provider) {
+        public B provider(@Nullable ProviderResource provider) {
             options.provider = provider;
             return (B) this;
         }
 
-        public B setCustomTimeouts(@Nullable CustomTimeouts customTimeouts) {
+        public B customTimeouts(@Nullable CustomTimeouts customTimeouts) {
             options.customTimeouts = customTimeouts;
             return (B) this;
         }
 
-        public B setResourceTransformations(@Nullable List<ResourceTransformation> resourceTransformations) {
+        public B resourceTransformations(@Nullable List<ResourceTransformation> resourceTransformations) {
             options.resourceTransformations = resourceTransformations;
             return (B) this;
         }
 
-        public B setAliases(@Nullable List<Output<Alias>> aliases) {
+        public B aliases(@Nullable List<Output<Alias>> aliases) {
             options.aliases = aliases;
             return (B) this;
         }
 
-        public B setUrn(@Nullable String urn) {
+        public B urn(@Nullable String urn) {
             options.urn = urn;
             return (B) this;
         }
 
-        public B setReplaceOnChanges(@Nullable List<String> replaceOnChanges) {
+        public B replaceOnChanges(@Nullable List<String> replaceOnChanges) {
             options.replaceOnChanges = replaceOnChanges;
             return (B) this;
         }

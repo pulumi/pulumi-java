@@ -120,19 +120,19 @@ public class TagByApi extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:TagByApi").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:TagByApi").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20170301:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20180101:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20180601preview:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20190101:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201preview:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20200601preview:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:TagByApi").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

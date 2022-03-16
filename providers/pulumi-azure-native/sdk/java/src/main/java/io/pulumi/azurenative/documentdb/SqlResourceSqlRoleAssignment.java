@@ -148,17 +148,17 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlRoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlRoleAssignment").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlRoleAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

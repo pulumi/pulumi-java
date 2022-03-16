@@ -120,19 +120,19 @@ public class NotificationRecipientUser extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:NotificationRecipientUser").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20170301:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20180101:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20180601preview:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20190101:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201preview:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20200601preview:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:NotificationRecipientUser").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

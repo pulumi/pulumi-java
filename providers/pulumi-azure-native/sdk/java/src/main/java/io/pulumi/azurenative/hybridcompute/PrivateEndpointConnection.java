@@ -136,16 +136,16 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20200815preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210128preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210325preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210422preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210517preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210520:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210610preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20211210preview:PrivateEndpointConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20200815preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210128preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210325preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210422preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210517preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210520:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210610preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20211210preview:PrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

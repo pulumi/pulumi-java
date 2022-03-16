@@ -236,21 +236,21 @@ public class Backend extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20160707:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20161010:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Backend").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Backend").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20160707:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20161010:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20170301:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20180101:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20180601preview:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20190101:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201preview:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20200601preview:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:Backend").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Backend").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

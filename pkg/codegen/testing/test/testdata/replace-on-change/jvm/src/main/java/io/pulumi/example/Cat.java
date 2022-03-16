@@ -95,8 +95,8 @@ public class Cat extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAdditionalSecretOutputs(List.of(
+            .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
                 "name"
             ))
             .build();

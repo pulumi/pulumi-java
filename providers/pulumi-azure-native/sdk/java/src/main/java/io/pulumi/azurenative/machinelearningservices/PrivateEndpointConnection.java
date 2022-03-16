@@ -224,22 +224,22 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200101:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200218preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200301:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200401:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200501preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200515preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200601:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200801:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200901preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210101:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210301preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210401:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210701:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20220101preview:PrivateEndpointConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200101:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200218preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200301:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200401:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200501preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200515preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200601:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200801:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200901preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210101:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210301preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210401:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210701:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20220101preview:PrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

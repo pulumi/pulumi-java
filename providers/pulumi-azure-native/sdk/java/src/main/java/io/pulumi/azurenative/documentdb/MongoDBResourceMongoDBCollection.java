@@ -149,29 +149,29 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:MongoDBResourceMongoDBCollection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:MongoDBResourceMongoDBCollection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20150401:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20150408:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20151106:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20160319:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20160331:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20190801:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20191212:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200301:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200401:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200901:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:MongoDBResourceMongoDBCollection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

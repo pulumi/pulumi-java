@@ -178,11 +178,11 @@ public class IntegrationAccountSession extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:logic/v20160601:IntegrationAccountSession").build()),
-                Output.of(Alias.builder().setType("azure-native:logic/v20180701preview:IntegrationAccountSession").build()),
-                Output.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationAccountSession").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:logic/v20160601:IntegrationAccountSession").build()),
+                Output.of(Alias.builder().type("azure-native:logic/v20180701preview:IntegrationAccountSession").build()),
+                Output.of(Alias.builder().type("azure-native:logic/v20190501:IntegrationAccountSession").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

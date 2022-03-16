@@ -161,17 +161,17 @@ public class WebAppSwiftVirtualNetworkConnectionSlot extends io.pulumi.resources
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSwiftVirtualNetworkConnectionSlot").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppSwiftVirtualNetworkConnectionSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

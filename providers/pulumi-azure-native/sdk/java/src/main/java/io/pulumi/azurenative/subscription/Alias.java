@@ -120,11 +120,11 @@ public class Alias extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(io.pulumi.core.Alias.builder().setType("azure-native:subscription/v20191001preview:Alias").build()),
-                Output.of(io.pulumi.core.Alias.builder().setType("azure-native:subscription/v20200901:Alias").build()),
-                Output.of(io.pulumi.core.Alias.builder().setType("azure-native:subscription/v20211001:Alias").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(io.pulumi.core.Alias.builder().type("azure-native:subscription/v20191001preview:Alias").build()),
+                Output.of(io.pulumi.core.Alias.builder().type("azure-native:subscription/v20200901:Alias").build()),
+                Output.of(io.pulumi.core.Alias.builder().type("azure-native:subscription/v20211001:Alias").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

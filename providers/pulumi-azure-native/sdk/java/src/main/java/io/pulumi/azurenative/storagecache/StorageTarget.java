@@ -238,15 +238,15 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20190801preview:StorageTarget").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20191101:StorageTarget").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20200301:StorageTarget").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20201001:StorageTarget").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20210301:StorageTarget").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20210501:StorageTarget").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20210901:StorageTarget").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:storagecache/v20190801preview:StorageTarget").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20191101:StorageTarget").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20200301:StorageTarget").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20201001:StorageTarget").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20210301:StorageTarget").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20210501:StorageTarget").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20210901:StorageTarget").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

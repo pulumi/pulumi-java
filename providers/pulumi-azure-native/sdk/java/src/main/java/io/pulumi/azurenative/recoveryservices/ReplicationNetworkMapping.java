@@ -135,20 +135,20 @@ public class ReplicationNetworkMapping extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20160810:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20180110:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20180710:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211101:ReplicationNetworkMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ReplicationNetworkMapping").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20160810:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20180110:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20180710:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210210:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210301:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210401:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210601:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210701:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationNetworkMapping").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationNetworkMapping").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

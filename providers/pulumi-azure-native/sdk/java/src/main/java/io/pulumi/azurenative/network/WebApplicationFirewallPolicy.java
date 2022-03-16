@@ -266,27 +266,27 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:network/v20181201:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190201:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190401:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190601:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190701:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190801:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190901:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20191101:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20191201:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200301:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200401:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200501:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200601:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200701:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200801:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20201101:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210201:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210301:WebApplicationFirewallPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210501:WebApplicationFirewallPolicy").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:network/v20181201:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190201:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190401:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190601:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190701:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190801:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190901:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20191101:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20191201:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200301:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200401:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200501:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200601:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200701:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200801:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20201101:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210201:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210301:WebApplicationFirewallPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210501:WebApplicationFirewallPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

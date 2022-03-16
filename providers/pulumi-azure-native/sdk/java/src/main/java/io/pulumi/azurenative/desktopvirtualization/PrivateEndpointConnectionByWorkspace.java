@@ -165,10 +165,10 @@ public class PrivateEndpointConnectionByWorkspace extends io.pulumi.resources.Cu
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:PrivateEndpointConnectionByWorkspace").build()),
-                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:PrivateEndpointConnectionByWorkspace").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:PrivateEndpointConnectionByWorkspace").build()),
+                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:PrivateEndpointConnectionByWorkspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

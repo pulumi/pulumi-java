@@ -220,11 +220,11 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20150320:SavedSearch").build()),
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20200301preview:SavedSearch").build()),
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20200801:SavedSearch").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20150320:SavedSearch").build()),
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20200301preview:SavedSearch").build()),
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20200801:SavedSearch").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
