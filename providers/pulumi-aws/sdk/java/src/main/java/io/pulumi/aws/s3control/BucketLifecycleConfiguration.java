@@ -63,22 +63,6 @@ public class BucketLifecycleConfiguration extends io.pulumi.resources.CustomReso
         return this.rules;
     }
 
-    public interface BuilderApplicator {
-        public void apply(BucketLifecycleConfigurationArgs.Builder a);
-    }
-    private static io.pulumi.aws.s3control.BucketLifecycleConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.s3control.BucketLifecycleConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public BucketLifecycleConfiguration(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -110,7 +94,7 @@ public class BucketLifecycleConfiguration extends io.pulumi.resources.CustomReso
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
+            .setVersion(Utilities.getVersion())
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

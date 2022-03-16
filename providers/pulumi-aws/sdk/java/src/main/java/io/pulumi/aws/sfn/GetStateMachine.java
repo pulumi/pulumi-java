@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStateMachine {
     private GetStateMachine() {}
-    public interface BuilderApplicator {
-        public void apply(GetStateMachineArgs.Builder a);
-    }
-    private static GetStateMachineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStateMachineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the ARN of a State Machine in AWS Step
- * Function (SFN). By using this data source, you can reference a
- * state machine without having to hard code the ARNs as input.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getStateMachine.
- * 
-     *
-     * A collection of values returned by getStateMachine.
- * 
-     */
-    public static CompletableFuture<GetStateMachineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the ARN of a State Machine in AWS Step
      * Function (SFN). By using this data source, you can reference a

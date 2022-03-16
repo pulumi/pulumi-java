@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserSshKey {
     private GetUserSshKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserSshKeyArgs.Builder a);
-    }
-    private static GetUserSshKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserSshKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a SSH public key associated with the specified IAM user.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getUserSshKey.
- * 
-     *
-     * A collection of values returned by getUserSshKey.
- * 
-     */
-    public static CompletableFuture<GetUserSshKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a SSH public key associated with the specified IAM user.
      * 

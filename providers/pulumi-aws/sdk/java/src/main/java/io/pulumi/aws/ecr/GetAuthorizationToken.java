@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAuthorizationToken {
     private GetAuthorizationToken() {}
-    public interface BuilderApplicator {
-        public void apply(GetAuthorizationTokenArgs.Builder a);
-    }
-    private static GetAuthorizationTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAuthorizationTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The ECR Authorization Token data source allows the authorization token, proxy endpoint, token expiration date, user name and password to be retrieved for an ECR repository.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getAuthorizationToken.
- * 
-     *
-     * A collection of values returned by getAuthorizationToken.
- * 
-     */
-    public static CompletableFuture<GetAuthorizationTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The ECR Authorization Token data source allows the authorization token, proxy endpoint, token expiration date, user name and password to be retrieved for an ECR repository.
      * 

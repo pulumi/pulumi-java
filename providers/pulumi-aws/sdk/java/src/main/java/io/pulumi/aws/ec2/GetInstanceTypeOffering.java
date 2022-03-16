@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceTypeOffering {
     private GetInstanceTypeOffering() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceTypeOfferingArgs.Builder a);
-    }
-    private static GetInstanceTypeOfferingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceTypeOfferingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about single EC2 Instance Type Offering.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getInstanceTypeOffering.
- * 
-     *
-     * A collection of values returned by getInstanceTypeOffering.
- * 
-     */
-    public static CompletableFuture<GetInstanceTypeOfferingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about single EC2 Instance Type Offering.
      * 

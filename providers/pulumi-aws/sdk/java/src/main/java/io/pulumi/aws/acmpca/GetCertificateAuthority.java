@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCertificateAuthority {
     private GetCertificateAuthority() {}
-    public interface BuilderApplicator {
-        public void apply(GetCertificateAuthorityArgs.Builder a);
-    }
-    private static GetCertificateAuthorityArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCertificateAuthorityArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getCertificateAuthority.
- * 
-     *
-     * A collection of values returned by getCertificateAuthority.
- * 
-     */
-    public static CompletableFuture<GetCertificateAuthorityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).
      * 

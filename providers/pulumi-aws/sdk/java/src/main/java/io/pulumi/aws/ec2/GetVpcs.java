@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpcs {
     private GetVpcs() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpcsArgs.Builder a);
-    }
-    private static GetVpcsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpcsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This resource can be useful for getting back a list of VPC Ids for a region.
- * 
- * The following example retrieves a list of VPC Ids with a custom tag of `service` set to a value of "production".
- * 
-     *
-     * A collection of arguments for invoking getVpcs.
- * 
-     *
-     * A collection of values returned by getVpcs.
- * 
-     */
-    public static CompletableFuture<GetVpcsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This resource can be useful for getting back a list of VPC Ids for a region.
      * 

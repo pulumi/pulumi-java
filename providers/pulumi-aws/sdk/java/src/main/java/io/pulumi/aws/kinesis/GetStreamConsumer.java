@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStreamConsumer {
     private GetStreamConsumer() {}
-    public interface BuilderApplicator {
-        public void apply(GetStreamConsumerArgs.Builder a);
-    }
-    private static GetStreamConsumerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStreamConsumerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a Kinesis Stream Consumer.
- * 
- * For more details, see the [Amazon Kinesis Stream Consumer Documentation](https://docs.aws.amazon.com/streams/latest/dev/amazon-kinesis-consumers.html).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getStreamConsumer.
- * 
-     *
-     * A collection of values returned by getStreamConsumer.
- * 
-     */
-    public static CompletableFuture<GetStreamConsumerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a Kinesis Stream Consumer.
      * 

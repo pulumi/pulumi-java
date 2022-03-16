@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRuleGroup {
     private GetRuleGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetRuleGroupArgs.Builder a);
-    }
-    private static GetRuleGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRuleGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the summary of a WAFv2 Rule Group.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getRuleGroup.
- * 
-     *
-     * A collection of values returned by getRuleGroup.
- * 
-     */
-    public static CompletableFuture<GetRuleGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the summary of a WAFv2 Rule Group.
      * 

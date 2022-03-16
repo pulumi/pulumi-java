@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHostedZoneId {
     private GetHostedZoneId() {}
-    public interface BuilderApplicator {
-        public void apply(GetHostedZoneIdArgs.Builder a);
-    }
-    private static GetHostedZoneIdArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHostedZoneIdArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
- * in a given region for the purpose of using in an AWS Route53 Alias.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getHostedZoneId.
- * 
-     *
-     * A collection of values returned by getHostedZoneId.
- * 
-     */
-    public static CompletableFuture<GetHostedZoneIdResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
      * in a given region for the purpose of using in an AWS Route53 Alias.

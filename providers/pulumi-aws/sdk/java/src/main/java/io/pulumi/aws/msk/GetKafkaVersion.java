@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKafkaVersion {
     private GetKafkaVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetKafkaVersionArgs.Builder a);
-    }
-    private static GetKafkaVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKafkaVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on a Amazon MSK Kafka Version
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getKafkaVersion.
- * 
-     *
-     * A collection of values returned by getKafkaVersion.
- * 
-     */
-    public static CompletableFuture<GetKafkaVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on a Amazon MSK Kafka Version
      * 

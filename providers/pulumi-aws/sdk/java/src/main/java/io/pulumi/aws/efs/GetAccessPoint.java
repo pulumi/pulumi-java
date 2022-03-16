@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccessPoint {
     private GetAccessPoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccessPointArgs.Builder a);
-    }
-    private static GetAccessPointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccessPointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information about an Elastic File System (EFS) Access Point.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getAccessPoint.
- * 
-     *
-     * A collection of values returned by getAccessPoint.
- * 
-     */
-    public static CompletableFuture<GetAccessPointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information about an Elastic File System (EFS) Access Point.
      * 

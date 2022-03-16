@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOutpostInstanceTypes {
     private GetOutpostInstanceTypes() {}
-    public interface BuilderApplicator {
-        public void apply(GetOutpostInstanceTypesArgs.Builder a);
-    }
-    private static GetOutpostInstanceTypesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOutpostInstanceTypesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about Outposts Instance Types.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getOutpostInstanceTypes.
- * 
-     *
-     * A collection of values returned by getOutpostInstanceTypes.
- * 
-     */
-    public static CompletableFuture<GetOutpostInstanceTypesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about Outposts Instance Types.
      * 

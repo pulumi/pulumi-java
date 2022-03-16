@@ -14,17 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIpamPreviewNextCidr {
     private GetIpamPreviewNextCidr() {}
-    public interface BuilderApplicator {
-        public void apply(GetIpamPreviewNextCidrArgs.Builder a);
-    }
-    private static GetIpamPreviewNextCidrArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIpamPreviewNextCidrArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    public static CompletableFuture<GetIpamPreviewNextCidrResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     public static CompletableFuture<GetIpamPreviewNextCidrResult> invokeAsync(GetIpamPreviewNextCidrArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getIpamPreviewNextCidr:getIpamPreviewNextCidr", TypeShape.of(GetIpamPreviewNextCidrResult.class), args == null ? GetIpamPreviewNextCidrArgs.Empty : args, Utilities.withVersion(options));
     }

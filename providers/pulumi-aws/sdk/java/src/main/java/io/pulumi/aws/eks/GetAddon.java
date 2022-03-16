@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAddon {
     private GetAddon() {}
-    public interface BuilderApplicator {
-        public void apply(GetAddonArgs.Builder a);
-    }
-    private static GetAddonArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAddonArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve information about an EKS add-on.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getAddon.
- * 
-     *
-     * A collection of values returned by getAddon.
- * 
-     */
-    public static CompletableFuture<GetAddonResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve information about an EKS add-on.
      * 

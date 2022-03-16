@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLedger {
     private GetLedger() {}
-    public interface BuilderApplicator {
-        public void apply(GetLedgerArgs.Builder a);
-    }
-    private static GetLedgerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLedgerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to fetch information about a Quantum Ledger Database.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getLedger.
- * 
-     *
-     * A collection of values returned by getLedger.
- * 
-     */
-    public static CompletableFuture<GetLedgerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to fetch information about a Quantum Ledger Database.
      * 

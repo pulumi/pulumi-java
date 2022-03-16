@@ -14,32 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCipherText {
     private GetCipherText() {}
-    public interface BuilderApplicator {
-        public void apply(GetCipherTextArgs.Builder a);
-    }
-    private static GetCipherTextArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCipherTextArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The KMS ciphertext data source allows you to encrypt plaintext into ciphertext
- * by using an AWS KMS customer master key. The value returned by this data source
- * changes every apply. For a stable ciphertext value, see the `aws.kms.Ciphertext`
- * resource.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getCipherText.
- * 
-     *
-     * A collection of values returned by getCipherText.
- * 
-     */
-    public static CompletableFuture<GetCipherTextResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The KMS ciphertext data source allows you to encrypt plaintext into ciphertext
      * by using an AWS KMS customer master key. The value returned by this data source

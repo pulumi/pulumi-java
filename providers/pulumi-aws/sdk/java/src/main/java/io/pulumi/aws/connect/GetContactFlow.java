@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContactFlow {
     private GetContactFlow() {}
-    public interface BuilderApplicator {
-        public void apply(GetContactFlowArgs.Builder a);
-    }
-    private static GetContactFlowArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContactFlowArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific Amazon Connect Contact Flow.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getContactFlow.
- * 
-     *
-     * A collection of values returned by getContactFlow.
- * 
-     */
-    public static CompletableFuture<GetContactFlowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific Amazon Connect Contact Flow.
      * 

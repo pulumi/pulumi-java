@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRouteTables {
     private GetRouteTables() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouteTablesArgs.Builder a);
-    }
-    private static GetRouteTablesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouteTablesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
- * 
-     *
-     * A collection of arguments for invoking getRouteTables.
- * 
-     *
-     * A collection of values returned by getRouteTables.
- * 
-     */
-    public static CompletableFuture<GetRouteTablesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
      * 

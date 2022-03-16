@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCodeSigningConfig {
     private GetCodeSigningConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetCodeSigningConfigArgs.Builder a);
-    }
-    private static GetCodeSigningConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCodeSigningConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information about a Lambda Code Signing Config. A code signing configuration defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if deployment validation checks fail).
- * 
- * For information about Lambda code signing configurations and how to use them, see [configuring code signing for Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html)
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getCodeSigningConfig.
- * 
-     *
-     * A collection of values returned by getCodeSigningConfig.
- * 
-     */
-    public static CompletableFuture<GetCodeSigningConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information about a Lambda Code Signing Config. A code signing configuration defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if deployment validation checks fail).
      * 

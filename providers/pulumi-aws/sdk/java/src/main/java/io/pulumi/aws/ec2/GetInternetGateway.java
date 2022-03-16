@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInternetGateway {
     private GetInternetGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetInternetGatewayArgs.Builder a);
-    }
-    private static GetInternetGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInternetGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.ec2.InternetGateway` provides details about a specific Internet Gateway.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getInternetGateway.
- * 
-     *
-     * A collection of values returned by getInternetGateway.
- * 
-     */
-    public static CompletableFuture<GetInternetGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.ec2.InternetGateway` provides details about a specific Internet Gateway.
      * 

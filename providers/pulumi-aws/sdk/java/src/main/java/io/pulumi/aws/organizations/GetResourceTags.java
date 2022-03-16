@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourceTags {
     private GetResourceTags() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceTagsArgs.Builder a);
-    }
-    private static GetResourceTagsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceTagsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get tags attached to the specified AWS Organizations resource.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getResourceTags.
- * 
-     *
-     * A collection of values returned by getResourceTags.
- * 
-     */
-    public static CompletableFuture<GetResourceTagsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get tags attached to the specified AWS Organizations resource.
      * 

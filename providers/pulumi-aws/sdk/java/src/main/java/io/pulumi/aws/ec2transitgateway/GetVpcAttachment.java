@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpcAttachment {
     private GetVpcAttachment() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpcAttachmentArgs.Builder a);
-    }
-    private static GetVpcAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpcAttachmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on an EC2 Transit Gateway VPC Attachment.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getVpcAttachment.
- * 
-     *
-     * A collection of values returned by getVpcAttachment.
- * 
-     */
-    public static CompletableFuture<GetVpcAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on an EC2 Transit Gateway VPC Attachment.
      * 

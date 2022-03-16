@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventCategories {
     private GetEventCategories() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventCategoriesArgs.Builder a);
-    }
-    private static GetEventCategoriesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventCategoriesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getEventCategories.
- * 
-     *
-     * A collection of values returned by getEventCategories.
- * 
-     */
-    public static CompletableFuture<GetEventCategoriesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ## Example Usage
      * 

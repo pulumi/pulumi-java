@@ -14,32 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKey {
     private GetKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeyArgs.Builder a);
-    }
-    private static GetKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get detailed information about
- * the specified KMS Key with flexible key id input.
- * This can be useful to reference key alias
- * without having to hard code the ARN as input.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getKey.
- * 
-     *
-     * A collection of values returned by getKey.
- * 
-     */
-    public static CompletableFuture<GetKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get detailed information about
      * the specified KMS Key with flexible key id input.

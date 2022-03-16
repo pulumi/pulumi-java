@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpcEndpointService {
     private GetVpcEndpointService() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpcEndpointServiceArgs.Builder a);
-    }
-    private static GetVpcEndpointServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpcEndpointServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The VPC Endpoint Service data source details about a specific service that
- * can be specified when creating a VPC endpoint within the region configured in the provider.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getVpcEndpointService.
- * 
-     *
-     * A collection of values returned by getVpcEndpointService.
- * 
-     */
-    public static CompletableFuture<GetVpcEndpointServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The VPC Endpoint Service data source details about a specific service that
      * can be specified when creating a VPC endpoint within the region configured in the provider.

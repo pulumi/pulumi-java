@@ -14,17 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetParametersByPath {
     private GetParametersByPath() {}
-    public interface BuilderApplicator {
-        public void apply(GetParametersByPathArgs.Builder a);
-    }
-    private static GetParametersByPathArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetParametersByPathArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    public static CompletableFuture<GetParametersByPathResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     public static CompletableFuture<GetParametersByPathResult> invokeAsync(GetParametersByPathArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getParametersByPath:getParametersByPath", TypeShape.of(GetParametersByPathResult.class), args == null ? GetParametersByPathArgs.Empty : args, Utilities.withVersion(options));
     }

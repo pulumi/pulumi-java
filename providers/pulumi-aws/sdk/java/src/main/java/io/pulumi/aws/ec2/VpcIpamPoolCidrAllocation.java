@@ -149,22 +149,6 @@ public class VpcIpamPoolCidrAllocation extends io.pulumi.resources.CustomResourc
         return this.resourceType;
     }
 
-    public interface BuilderApplicator {
-        public void apply(VpcIpamPoolCidrAllocationArgs.Builder a);
-    }
-    private static io.pulumi.aws.ec2.VpcIpamPoolCidrAllocationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ec2.VpcIpamPoolCidrAllocationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public VpcIpamPoolCidrAllocation(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -196,7 +180,7 @@ public class VpcIpamPoolCidrAllocation extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
+            .setVersion(Utilities.getVersion())
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
