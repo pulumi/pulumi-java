@@ -103,14 +103,14 @@ publishing {
 
             from components.java
         }
+
         // TODO pom
 
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
-            //            version = '0.0.1-SNAPSHOT'
             groupId = "io.pulumi"
             artifactId = "pulumi"
-            version = '1.0.0'
+            version = '0.0.1-SNAPSHOT'
             from(components.java)
         }
     }
@@ -119,7 +119,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
+            url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
