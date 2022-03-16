@@ -3,6 +3,12 @@ on:
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'CHANGELOG.md'
+      - 'CHANGELOG_PENDING.md'
 
 # TODO[pulumi/java#10] protect jobs from crypto mining PR attacks
 # before making the repo public.
