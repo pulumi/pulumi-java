@@ -156,6 +156,10 @@ dependencies {
     implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
 
+    {{- range $ref, $ver := .PackageInfo.PackageReferences }}
+    implementation("{{$ref}}:{{$ver}}")
+    {{- end }}
+
     def junitVersion = "5.7.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testImplementation("org.junit.jupiter:junit-jupiter-params:${junitVersion}")
@@ -208,6 +212,7 @@ var jvmBuildTemplate = Template("JavaBuild", jvmBuildTemplateText)
 type jvmBuildTemplateContext struct {
 	Name            string
 	BasePackageName string
+	PackageInfo     PackageInfo
 }
 
 // nolint:lll
