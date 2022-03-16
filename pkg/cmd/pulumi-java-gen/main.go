@@ -81,13 +81,13 @@ func readPackageSchema(path string) (*pschema.PackageSpec, error) {
 }
 
 func convertPackageInfo(mapParsedFromYaml interface{}) (jvmgen.PackageInfo, error) {
-	packageInfoJson, err := json.Marshal(mapParsedFromYaml)
+	packageInfoJSON, err := json.Marshal(mapParsedFromYaml)
 	if err != nil {
 		return jvmgen.PackageInfo{}, err
 	}
 
 	var result jvmgen.PackageInfo
-	if err := json.Unmarshal(packageInfoJson, &result); err != nil {
+	if err := json.Unmarshal(packageInfoJSON, &result); err != nil {
 		return jvmgen.PackageInfo{}, err
 	}
 	return result, nil
