@@ -626,6 +626,14 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
+		var isList string
+		switch propType := prop.Type.(type) {
+		case *schema.OptionalType:
+			switch propType.ElementType.(type) {
+			case *schema.ArrayType:
+				isList = propertyType.Parameters[len(propertyType.Parameters)-1].ToCode(ctx.imports)
+			}
+		}
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
@@ -650,6 +658,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
+			IsList:       isList,
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -667,6 +676,14 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 				false,               // outer optional
 				true,                // inputless overload
 			)
+			var isList string
+			switch propType := prop.Type.(type) {
+			case *schema.OptionalType:
+				switch propType.ElementType.(type) {
+				case *schema.ArrayType:
+					isList = propertyTypeUnwrapped.Parameters[len(propertyTypeUnwrapped.Parameters)-1].ToCode(ctx.imports)
+				}
+			}
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
@@ -686,6 +703,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 					PropertyName: propertyName.String(),
 					Assignment:   assignmentUnwrapped(propertyName),
+					IsList:       isList,
 				})
 			}
 		}
@@ -829,6 +847,14 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
+		var isList string
+		switch propType := prop.Type.(type) {
+		case *schema.OptionalType:
+			switch propType.ElementType.(type) {
+			case *schema.ArrayType:
+				isList = propertyType.Parameters[len(propertyType.Parameters)-1].ToCode(ctx.imports)
+			}
+		}
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
@@ -853,6 +879,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
+			IsList:       isList,
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -870,6 +897,14 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 				false,               // outer optional
 				true,                // inputless overload
 			)
+			var isList string
+			switch propType := prop.Type.(type) {
+			case *schema.OptionalType:
+				switch propType.ElementType.(type) {
+				case *schema.ArrayType:
+					isList = propertyTypeUnwrapped.Parameters[len(propertyTypeUnwrapped.Parameters)-1].ToCode(ctx.imports)
+				}
+			}
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
@@ -889,6 +924,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 					PropertyName: propertyName.String(),
 					Assignment:   assignmentUnwrapped(propertyName),
+					IsList:       isList,
 				})
 			}
 		}
@@ -1077,6 +1113,14 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
+		var isList string
+		switch propType := prop.Type.(type) {
+		case *schema.OptionalType:
+			switch propType.ElementType.(type) {
+			case *schema.ArrayType:
+				isList = propertyType.Parameters[len(propertyType.Parameters)-1].ToCode(ctx.imports)
+			}
+		}
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
@@ -1098,6 +1142,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
+			IsList:       isList,
 		})
 	}
 
@@ -1303,6 +1348,14 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
+		var isList string
+		switch propType := prop.Type.(type) {
+		case *schema.OptionalType:
+			switch propType.ElementType.(type) {
+			case *schema.ArrayType:
+				isList = propertyType.Parameters[len(propertyType.Parameters)-1].ToCode(ctx.imports)
+			}
+		}
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
@@ -1324,6 +1377,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
+			IsList:       isList,
 		})
 	}
 

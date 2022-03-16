@@ -250,6 +250,7 @@ type builderSetterTemplateContext struct {
 	PropertyType string
 	PropertyName string
 	Assignment   string
+	IsList       string
 }
 
 type builderFieldTemplateContext struct {
@@ -283,9 +284,16 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}    }
 {{ range $setter := .Setters }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.PropertyType }} {{ $setter.PropertyName }}) {
-{{ $.Indent }}        {{ $setter.Assignment }};
+{{ $.Indent }}        {{ $setter.Assignment }}; // WOOOHOOO
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
+
+{{- if $setter.IsList }}
+{{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.IsList }}... {{ $setter.PropertyName }}) {
+{{ $.Indent }}        return {{ $setter.SetterName }}(List.of({{ $setter.PropertyName }}));
+{{ $.Indent }}    }
+{{- end -}}
+
 {{ end }}
 {{- if .IsJumbo -}}
 {{ $.Indent }}    public {{ .ResultType }} build() {
