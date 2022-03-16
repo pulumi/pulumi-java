@@ -1603,30 +1603,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		argsOverride = "makeArgs(args)"
 	}
 
-	// Name+Args builder constructor
-
-	// define builder mutator
-	fprintf(w, "    public interface BuilderApplicator {\n")
-	fprintf(w, "        public void apply(%s.Builder a);\n", argsType)
-	fprintf(w, "    }\n")
-
-	// define args builder
-	fprintf(w, "    private static %s buildArgs(BuilderApplicator argsBuilder) {\n", argsFQN)
-	fprintf(w, "        final var builder = %s.builder();\n", argsFQN)
-	fprintf(w, "        argsBuilder.apply(builder);\n")
-	fprintf(w, "        return builder.build();\n")
-	fprintf(w, "    }\n")
-
-	// define constructor
-	fprintf(w, "    /**\n")
-	fprintf(w, "     *\n")
-	fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
-	fprintf(w, "     * @param argsBuilder A function that configures a passed builder.\n")
-	fprintf(w, "     */\n")
-	fprintf(w, "    public %s(String name, BuilderApplicator argsBuilder) {\n", className)
-	fprintf(w, "        this(name, buildArgs(argsBuilder), null);\n")
-	fprintf(w, "    }\n")
-
 	// Name only constructor
 	fprintf(w, "    /**\n")
 	fprintf(w, "     *\n")
@@ -1808,46 +1784,6 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 
 	// [pulumi/pulumi-java#197]
 	fprintf(w, "    private %s() {}\n", className)
-
-	if argsParamDef != "" {
-		// Args builder
-		// define builder mutator
-		fprintf(w, "    public interface BuilderApplicator {\n")
-		fprintf(w, "        public void apply(%s.Builder a);\n", ctx.ref(argsFQN))
-		fprintf(w, "    }\n")
-
-		// define args builder
-		fprintf(w, "    private static %s buildArgs(BuilderApplicator argsBuilder) {\n", ctx.ref(argsFQN))
-		fprintf(w, "        final var builder = %s.builder();\n", ctx.ref(argsFQN))
-		fprintf(w, "        argsBuilder.apply(builder);\n")
-		fprintf(w, "        return builder.build();\n")
-		fprintf(w, "    }\n")
-
-		// Emit javadoc
-		if fun.Comment != "" || fun.DeprecationMessage != "" {
-			fprintf(w, "    /**\n")
-			fprintf(w, "    %s\n", formatBlockComment(fun.Comment, ""))
-			if fun.Inputs != nil && fun.Inputs.Comment != "" {
-				fprintf(w, "     *\n")
-				fprintf(w, "    %s\n", formatBlockComment(fun.Inputs.Comment, ""))
-			}
-			if fun.Outputs != nil && fun.Outputs.Comment != "" {
-				fprintf(w, "     *\n")
-				fprintf(w, "    %s\n", formatBlockComment(fun.Outputs.Comment, ""))
-			}
-			if fun.DeprecationMessage != "" {
-				fprintf(w, "     * @Deprecated\n")
-				fprintf(w, "    %s\n", formatBlockComment(fun.DeprecationMessage, ""))
-			}
-			fprintf(w, "     */\n")
-		}
-
-		fprintf(w, "    public static %s<%s> invokeAsync(BuilderApplicator argsBuilder, @%s %s options) {\n",
-			ctx.ref(names.CompletableFuture), typeParameter, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
-		fprintf(w, "        return invokeAsync(buildArgs(argsBuilder), %s.withVersion(options));\n", mod.utilitiesRef(ctx))
-		fprintf(w, "    }\n")
-
-	}
 
 	indent := "    "
 	// Emit javadoc
