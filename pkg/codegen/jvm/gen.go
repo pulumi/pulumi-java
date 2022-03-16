@@ -1447,13 +1447,13 @@ func genAlias(ctx *classFileContext, alias *schema.Alias) {
 	fprintf(w, "%s.of(", ctx.ref(names.Output))
 	fprintf(w, "%s.builder()", ctx.ref(names.Alias))
 	if alias.Name != nil {
-		fprintf(w, ".setName(\"%v\")", *alias.Name)
+		fprintf(w, ".name(\"%v\")", *alias.Name)
 	}
 	if alias.Project != nil {
-		fprintf(w, ".setProject(\"%v\")", *alias.Project)
+		fprintf(w, ".project(\"%v\")", *alias.Project)
 	}
 	if alias.Type != nil {
-		fprintf(w, ".setType(\"%v\")", *alias.Type)
+		fprintf(w, ".type(\"%v\")", *alias.Type)
 	}
 	fprintf(w, ".build()")
 	fprintf(w, ")")
@@ -1706,10 +1706,10 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		"    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Output))
 	fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
-	fprintf(w, "            .setVersion(%s.getVersion())\n", mod.utilitiesRef(ctx))
+	fprintf(w, "            .version(%s.getVersion())\n", mod.utilitiesRef(ctx))
 
 	if len(r.Aliases) > 0 {
-		fprintf(w, "            .setAliases(%s.of(\n", ctx.ref(names.List))
+		fprintf(w, "            .aliases(%s.of(\n", ctx.ref(names.List))
 		for i, alias := range r.Aliases {
 			fprintf(w, "                ")
 			genAlias(ctx, alias)
@@ -1723,7 +1723,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "            ))\n")
 	}
 	if len(secretProps) > 0 {
-		fprintf(w, "            .setAdditionalSecretOutputs(%s.of(\n", ctx.ref(names.List))
+		fprintf(w, "            .additionalSecretOutputs(%s.of(\n", ctx.ref(names.List))
 		for i, sp := range secretProps {
 			fprintf(w, "                ")
 			fprintf(w, "%q", sp)

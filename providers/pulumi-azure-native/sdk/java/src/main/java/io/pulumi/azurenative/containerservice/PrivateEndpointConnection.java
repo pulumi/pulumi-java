@@ -150,21 +150,21 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20200601:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20200701:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20200901:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20201101:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20201201:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20210201:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20210301:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20210501:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20210701:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20210801:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20210901:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20211001:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:containerservice/v20211101preview:PrivateEndpointConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:containerservice/v20200601:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20200701:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20200901:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20201101:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20201201:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20210201:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20210301:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20210501:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20210701:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20210801:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20210901:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20211001:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:containerservice/v20211101preview:PrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

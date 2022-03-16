@@ -362,22 +362,22 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20170801preview:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20171001preview:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20171201preview:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20180201preview:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20180401:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20180601:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20180901:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20181001:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20191201:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20201101:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20210301:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20210701:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20210901:ContainerGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:containerinstance/v20211001:ContainerGroup").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20170801preview:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20171001preview:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20171201preview:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20180201preview:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20180401:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20180601:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20180901:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20181001:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20191201:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20201101:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20210301:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20210701:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20210901:ContainerGroup").build()),
+                Output.of(Alias.builder().type("azure-native:containerinstance/v20211001:ContainerGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

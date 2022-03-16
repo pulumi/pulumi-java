@@ -121,10 +121,10 @@ public class ConfigurationProfileAssignment extends io.pulumi.resources.CustomRe
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:automanage/v20200630preview:ConfigurationProfileAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:automanage/v20210430preview:ConfigurationProfileAssignment").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:automanage/v20200630preview:ConfigurationProfileAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:automanage/v20210430preview:ConfigurationProfileAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

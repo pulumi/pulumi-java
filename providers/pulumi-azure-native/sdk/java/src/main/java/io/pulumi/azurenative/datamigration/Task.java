@@ -156,15 +156,15 @@ public class Task extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:datamigration/v20171115preview:Task").build()),
-                Output.of(Alias.builder().setType("azure-native:datamigration/v20180315preview:Task").build()),
-                Output.of(Alias.builder().setType("azure-native:datamigration/v20180331preview:Task").build()),
-                Output.of(Alias.builder().setType("azure-native:datamigration/v20180419:Task").build()),
-                Output.of(Alias.builder().setType("azure-native:datamigration/v20180715preview:Task").build()),
-                Output.of(Alias.builder().setType("azure-native:datamigration/v20210630:Task").build()),
-                Output.of(Alias.builder().setType("azure-native:datamigration/v20211030preview:Task").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:datamigration/v20171115preview:Task").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20180315preview:Task").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20180331preview:Task").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20180419:Task").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20180715preview:Task").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20210630:Task").build()),
+                Output.of(Alias.builder().type("azure-native:datamigration/v20211030preview:Task").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

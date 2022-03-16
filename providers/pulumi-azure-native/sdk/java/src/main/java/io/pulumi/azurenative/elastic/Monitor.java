@@ -195,12 +195,12 @@ public class Monitor extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:elastic/v20200701:Monitor").build()),
-                Output.of(Alias.builder().setType("azure-native:elastic/v20200701preview:Monitor").build()),
-                Output.of(Alias.builder().setType("azure-native:elastic/v20210901preview:Monitor").build()),
-                Output.of(Alias.builder().setType("azure-native:elastic/v20211001preview:Monitor").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:elastic/v20200701:Monitor").build()),
+                Output.of(Alias.builder().type("azure-native:elastic/v20200701preview:Monitor").build()),
+                Output.of(Alias.builder().type("azure-native:elastic/v20210901preview:Monitor").build()),
+                Output.of(Alias.builder().type("azure-native:elastic/v20211001preview:Monitor").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

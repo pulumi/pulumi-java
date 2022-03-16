@@ -233,20 +233,20 @@ public class Backup extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200501:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200601:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200701:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200801:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200901:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20201101:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20201201:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210201:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210401:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210401preview:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210601:Backup").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210801:Backup").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:netapp/v20200501:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200601:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200701:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200801:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200901:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20201101:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20201201:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210201:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210401:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210401preview:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210601:Backup").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Backup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

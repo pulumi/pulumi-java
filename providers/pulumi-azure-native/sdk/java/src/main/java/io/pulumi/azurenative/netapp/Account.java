@@ -194,29 +194,29 @@ public class Account extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:netapp/v20170815:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20190501:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20190601:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20190701:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20190801:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20191001:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20191101:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200201:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200301:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200501:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200601:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200701:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200801:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20200901:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20201101:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20201201:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210201:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210401:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210401preview:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210601:Account").build()),
-                Output.of(Alias.builder().setType("azure-native:netapp/v20210801:Account").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:netapp/v20170815:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20190501:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20190601:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20190701:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20190801:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20191001:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20191101:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200201:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200301:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200501:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200601:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200701:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200801:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20200901:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20201101:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20201201:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210201:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210401:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210401preview:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210601:Account").build()),
+                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Account").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

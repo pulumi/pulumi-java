@@ -149,11 +149,11 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:authorization/v20160901:ManagementLockAtResourceLevel").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20170401:ManagementLockAtResourceLevel").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20200501:ManagementLockAtResourceLevel").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:authorization/v20160901:ManagementLockAtResourceLevel").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20170401:ManagementLockAtResourceLevel").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20200501:ManagementLockAtResourceLevel").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

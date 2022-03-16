@@ -220,11 +220,11 @@ public class RemediationAtSubscription extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:policyinsights/v20180701preview:RemediationAtSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:policyinsights/v20190701:RemediationAtSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:policyinsights/v20211001:RemediationAtSubscription").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:policyinsights/v20180701preview:RemediationAtSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:policyinsights/v20190701:RemediationAtSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:policyinsights/v20211001:RemediationAtSubscription").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

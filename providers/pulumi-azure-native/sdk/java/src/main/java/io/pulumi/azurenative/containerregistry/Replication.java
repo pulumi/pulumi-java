@@ -164,17 +164,17 @@ public class Replication extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20170601preview:Replication").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20171001:Replication").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20190501:Replication").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20191201preview:Replication").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20201101preview:Replication").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210601preview:Replication").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210801preview:Replication").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210901:Replication").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20211201preview:Replication").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20170601preview:Replication").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20171001:Replication").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20190501:Replication").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20191201preview:Replication").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20201101preview:Replication").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210601preview:Replication").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210801preview:Replication").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210901:Replication").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20211201preview:Replication").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

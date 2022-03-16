@@ -255,17 +255,17 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190121:IotHubDataConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190515:IotHubDataConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190907:IotHubDataConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20191109:IotHubDataConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200215:IotHubDataConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200614:IotHubDataConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200918:IotHubDataConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20210101:IotHubDataConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20210827:IotHubDataConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:kusto/v20190121:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190515:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190907:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20191109:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200215:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200614:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200918:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20210101:IotHubDataConnection").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:IotHubDataConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -178,14 +178,14 @@ public class DiskAccess extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20200501:DiskAccess").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200630:DiskAccess").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200930:DiskAccess").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:DiskAccess").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:DiskAccess").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210801:DiskAccess").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20200501:DiskAccess").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200630:DiskAccess").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200930:DiskAccess").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:DiskAccess").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:DiskAccess").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210801:DiskAccess").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -105,7 +105,7 @@ public final class MyStack extends Stack {
             )
             .build(),
             CustomResourceOptions.builder()
-            .setDependsOn(List.of(cluster))
+            .dependsOn(List.of(cluster))
             .build());
         this.clusterName = cluster.getName();
 
@@ -155,10 +155,10 @@ public final class MyStack extends Stack {
                 .kubeconfig(this.kubeconfig)
                 .build(),
             CustomResourceOptions.builder()
-                .setDependsOn(List.of(nodePool, cluster))
+                .dependsOn(List.of(nodePool, cluster))
                 .build());
         final var clusterResourceOptions = CustomResourceOptions.builder()
-            .setProvider(clusterProvider)
+            .provider(clusterProvider)
             .build();
 
         // Create a Kubernetes Namespace

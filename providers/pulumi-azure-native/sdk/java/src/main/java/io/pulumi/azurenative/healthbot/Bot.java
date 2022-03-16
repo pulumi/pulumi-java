@@ -180,14 +180,14 @@ public class Bot extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:healthbot/v20201020:Bot").build()),
-                Output.of(Alias.builder().setType("azure-native:healthbot/v20201020preview:Bot").build()),
-                Output.of(Alias.builder().setType("azure-native:healthbot/v20201208:Bot").build()),
-                Output.of(Alias.builder().setType("azure-native:healthbot/v20201208preview:Bot").build()),
-                Output.of(Alias.builder().setType("azure-native:healthbot/v20210610:Bot").build()),
-                Output.of(Alias.builder().setType("azure-native:healthbot/v20210824:Bot").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:healthbot/v20201020:Bot").build()),
+                Output.of(Alias.builder().type("azure-native:healthbot/v20201020preview:Bot").build()),
+                Output.of(Alias.builder().type("azure-native:healthbot/v20201208:Bot").build()),
+                Output.of(Alias.builder().type("azure-native:healthbot/v20201208preview:Bot").build()),
+                Output.of(Alias.builder().type("azure-native:healthbot/v20210610:Bot").build()),
+                Output.of(Alias.builder().type("azure-native:healthbot/v20210824:Bot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

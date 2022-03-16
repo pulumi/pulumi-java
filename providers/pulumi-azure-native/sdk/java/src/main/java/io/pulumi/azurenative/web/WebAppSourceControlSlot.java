@@ -217,21 +217,21 @@ public class WebAppSourceControlSlot extends io.pulumi.resources.CustomResource 
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSourceControlSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSourceControlSlot").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:web/v20150801:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppSourceControlSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppSourceControlSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
