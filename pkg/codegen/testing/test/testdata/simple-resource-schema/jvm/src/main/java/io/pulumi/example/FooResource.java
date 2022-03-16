@@ -20,22 +20,6 @@ public class FooResource extends io.pulumi.resources.ComponentResource {
         return this.foo;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable FooResourceArgs.Builder a);
-    }
-    private static io.pulumi.example.FooResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.example.FooResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public FooResource(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

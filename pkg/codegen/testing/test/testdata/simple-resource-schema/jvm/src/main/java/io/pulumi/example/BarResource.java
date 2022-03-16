@@ -20,22 +20,6 @@ public class BarResource extends io.pulumi.resources.ComponentResource {
         return this.foo;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable BarResourceArgs.Builder a);
-    }
-    private static io.pulumi.example.BarResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.example.BarResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public BarResource(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
