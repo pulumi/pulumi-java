@@ -1,4 +1,4 @@
-package minimal;
+package io.pulumi.example.minimal;
 
 import io.pulumi.Config;
 import io.pulumi.Stack;
