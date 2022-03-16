@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPerfSampleSeries {
     private GetPerfSampleSeries() {}
-    public interface BuilderApplicator {
-        public void apply(GetPerfSampleSeriesArgs.Builder a);
-    }
-    private static GetPerfSampleSeriesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPerfSampleSeriesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a PerfSampleSeries. May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
- * 
-     */
-    public static CompletableFuture<GetPerfSampleSeriesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a PerfSampleSeries. May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRatePlan {
     private GetRatePlan() {}
-    public interface BuilderApplicator {
-        public void apply(GetRatePlanArgs.Builder a);
-    }
-    private static GetRatePlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRatePlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the details of a rate plan.
- * 
-     */
-    public static CompletableFuture<GetRatePlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the details of a rate plan.
      * 

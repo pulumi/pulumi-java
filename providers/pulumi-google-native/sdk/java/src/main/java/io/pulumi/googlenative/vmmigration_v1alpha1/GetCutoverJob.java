@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCutoverJob {
     private GetCutoverJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetCutoverJobArgs.Builder a);
-    }
-    private static GetCutoverJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCutoverJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single CutoverJob.
- * 
-     */
-    public static CompletableFuture<GetCutoverJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single CutoverJob.
      * 

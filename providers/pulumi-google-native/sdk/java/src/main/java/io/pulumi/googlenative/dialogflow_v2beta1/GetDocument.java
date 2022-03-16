@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDocument {
     private GetDocument() {}
-    public interface BuilderApplicator {
-        public void apply(GetDocumentArgs.Builder a);
-    }
-    private static GetDocumentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDocumentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified document. Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use `projects.knowledgeBases.documents`.
- * 
-     */
-    public static CompletableFuture<GetDocumentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified document. Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use `projects.knowledgeBases.documents`.
      * 

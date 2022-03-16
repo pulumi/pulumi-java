@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFolderIamPolicy {
     private GetFolderIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetFolderIamPolicyArgs.Builder a);
-    }
-    private static GetFolderIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFolderIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a Folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the Folder's resource name, e.g. "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
- * 
-     */
-    public static CompletableFuture<GetFolderIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a Folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the Folder's resource name, e.g. "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
      * 

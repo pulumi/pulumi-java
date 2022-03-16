@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBuild {
     private GetBuild() {}
-    public interface BuilderApplicator {
-        public void apply(GetBuildArgs.Builder a);
-    }
-    private static GetBuildArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBuildArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns information about a previously requested build. The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
- * 
-     */
-    public static CompletableFuture<GetBuildResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns information about a previously requested build. The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
      * 

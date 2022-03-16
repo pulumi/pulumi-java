@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNodeGroup {
     private GetNodeGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetNodeGroupArgs.Builder a);
-    }
-    private static GetNodeGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNodeGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
- * 
-     */
-    public static CompletableFuture<GetNodeGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
      * 

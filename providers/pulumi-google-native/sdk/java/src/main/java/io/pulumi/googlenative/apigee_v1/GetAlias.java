@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAlias {
     private GetAlias() {}
-    public interface BuilderApplicator {
-        public void apply(GetAliasArgs.Builder a);
-    }
-    private static GetAliasArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAliasArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an alias.
- * 
-     */
-    public static CompletableFuture<GetAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an alias.
      * 

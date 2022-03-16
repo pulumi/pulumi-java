@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVersion {
     private GetVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetVersionArgs.Builder a);
-    }
-    private static GetVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified Version resource. By default, only a BASIC_VIEW will be returned. Specify the FULL_VIEW parameter to get the full resource.
- * 
-     */
-    public static CompletableFuture<GetVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified Version resource. By default, only a BASIC_VIEW will be returned. Specify the FULL_VIEW parameter to get the full resource.
      * 

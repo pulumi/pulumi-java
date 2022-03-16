@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBillingAccountSink {
     private GetBillingAccountSink() {}
-    public interface BuilderApplicator {
-        public void apply(GetBillingAccountSinkArgs.Builder a);
-    }
-    private static GetBillingAccountSinkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBillingAccountSinkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a sink.
- * 
-     */
-    public static CompletableFuture<GetBillingAccountSinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a sink.
      * 

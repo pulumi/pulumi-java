@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicy {
     private GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs.Builder a);
-    }
-    private static GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 

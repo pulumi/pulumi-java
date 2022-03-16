@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadIdentityPool {
     private GetWorkloadIdentityPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadIdentityPoolArgs.Builder a);
-    }
-    private static GetWorkloadIdentityPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadIdentityPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an individual WorkloadIdentityPool.
- * 
-     */
-    public static CompletableFuture<GetWorkloadIdentityPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an individual WorkloadIdentityPool.
      * 

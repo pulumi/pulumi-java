@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFlow {
     private GetFlow() {}
-    public interface BuilderApplicator {
-        public void apply(GetFlowArgs.Builder a);
-    }
-    private static GetFlowArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFlowArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified flow.
- * 
-     */
-    public static CompletableFuture<GetFlowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified flow.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIdentityAwareProxyClient {
     private GetIdentityAwareProxyClient() {}
-    public interface BuilderApplicator {
-        public void apply(GetIdentityAwareProxyClientArgs.Builder a);
-    }
-    private static GetIdentityAwareProxyClientArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIdentityAwareProxyClientArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves an Identity Aware Proxy (IAP) OAuth client. Requires that the client is owned by IAP.
- * 
-     */
-    public static CompletableFuture<GetIdentityAwareProxyClientResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves an Identity Aware Proxy (IAP) OAuth client. Requires that the client is owned by IAP.
      * 

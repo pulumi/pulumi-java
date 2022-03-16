@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDicomStore {
     private GetDicomStore() {}
-    public interface BuilderApplicator {
-        public void apply(GetDicomStoreArgs.Builder a);
-    }
-    private static GetDicomStoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDicomStoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified DICOM store.
- * 
-     */
-    public static CompletableFuture<GetDicomStoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified DICOM store.
      * 

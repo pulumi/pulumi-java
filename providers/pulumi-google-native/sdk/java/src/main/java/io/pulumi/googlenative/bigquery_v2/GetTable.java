@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTable {
     private GetTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetTableArgs.Builder a);
-    }
-    private static GetTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified table resource by table ID. This method does not return the data in the table, it only returns the table resource, which describes the structure of this table.
- * 
-     */
-    public static CompletableFuture<GetTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified table resource by table ID. This method does not return the data in the table, it only returns the table resource, which describes the structure of this table.
      * 

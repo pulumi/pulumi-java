@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubnetwork {
     private GetSubnetwork() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubnetworkArgs.Builder a);
-    }
-    private static GetSubnetworkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubnetworkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
- * 
-     */
-    public static CompletableFuture<GetSubnetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
      * 

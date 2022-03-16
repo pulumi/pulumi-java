@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceAccount {
     private GetServiceAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceAccountArgs.Builder a);
-    }
-    private static GetServiceAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a ServiceAccount.
- * 
-     */
-    public static CompletableFuture<GetServiceAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a ServiceAccount.
      * 

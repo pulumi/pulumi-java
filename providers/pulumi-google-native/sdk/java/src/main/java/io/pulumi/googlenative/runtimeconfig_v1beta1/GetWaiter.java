@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWaiter {
     private GetWaiter() {}
-    public interface BuilderApplicator {
-        public void apply(GetWaiterArgs.Builder a);
-    }
-    private static GetWaiterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWaiterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets information about a single waiter.
- * 
-     */
-    public static CompletableFuture<GetWaiterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets information about a single waiter.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTagKeyIamPolicy {
     private GetTagKeyIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetTagKeyIamPolicyArgs.Builder a);
-    }
-    private static GetTagKeyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTagKeyIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a TagKey. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagKey's resource name. For example, "tagKeys/1234". The caller must have `cloudresourcemanager.googleapis.com/tagKeys.getIamPolicy` permission on the specified TagKey.
- * 
-     */
-    public static CompletableFuture<GetTagKeyIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a TagKey. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagKey's resource name. For example, "tagKeys/1234". The caller must have `cloudresourcemanager.googleapis.com/tagKeys.getIamPolicy` permission on the specified TagKey.
      * 

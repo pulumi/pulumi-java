@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagedZone {
     private GetManagedZone() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagedZoneArgs.Builder a);
-    }
-    private static GetManagedZoneArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagedZoneArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Fetches the representation of an existing ManagedZone.
- * 
-     */
-    public static CompletableFuture<GetManagedZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Fetches the representation of an existing ManagedZone.
      * 

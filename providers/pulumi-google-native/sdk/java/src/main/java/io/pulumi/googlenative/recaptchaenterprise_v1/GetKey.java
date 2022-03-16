@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKey {
     private GetKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeyArgs.Builder a);
-    }
-    private static GetKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified key.
- * 
-     */
-    public static CompletableFuture<GetKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified key.
      * 

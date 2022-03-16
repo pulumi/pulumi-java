@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetQueueIamPolicy {
     private GetQueueIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetQueueIamPolicyArgs.Builder a);
-    }
-    private static GetQueueIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetQueueIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and does not have a policy set. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the specified resource parent: * `cloudtasks.queues.getIamPolicy`
- * 
-     */
-    public static CompletableFuture<GetQueueIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and does not have a policy set. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the specified resource parent: * `cloudtasks.queues.getIamPolicy`
      * 

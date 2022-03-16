@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPublicAdvertisedPrefix {
     private GetPublicAdvertisedPrefix() {}
-    public interface BuilderApplicator {
-        public void apply(GetPublicAdvertisedPrefixArgs.Builder a);
-    }
-    private static GetPublicAdvertisedPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPublicAdvertisedPrefixArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified PublicAdvertisedPrefix resource.
- * 
-     */
-    public static CompletableFuture<GetPublicAdvertisedPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified PublicAdvertisedPrefix resource.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetParticipant {
     private GetParticipant() {}
-    public interface BuilderApplicator {
-        public void apply(GetParticipantArgs.Builder a);
-    }
-    private static GetParticipantArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetParticipantArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves a conversation participant.
- * 
-     */
-    public static CompletableFuture<GetParticipantResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves a conversation participant.
      * 

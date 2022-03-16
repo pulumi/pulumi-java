@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOccurrence {
     private GetOccurrence() {}
-    public interface BuilderApplicator {
-        public void apply(GetOccurrenceArgs.Builder a);
-    }
-    private static GetOccurrenceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOccurrenceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the requested `Occurrence`.
- * 
-     */
-    public static CompletableFuture<GetOccurrenceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the requested `Occurrence`.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGcpUserAccessBinding {
     private GetGcpUserAccessBinding() {}
-    public interface BuilderApplicator {
-        public void apply(GetGcpUserAccessBindingArgs.Builder a);
-    }
-    private static GetGcpUserAccessBindingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGcpUserAccessBindingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the GcpUserAccessBinding with the given name.
- * 
-     */
-    public static CompletableFuture<GetGcpUserAccessBindingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the GcpUserAccessBinding with the given name.
      * 

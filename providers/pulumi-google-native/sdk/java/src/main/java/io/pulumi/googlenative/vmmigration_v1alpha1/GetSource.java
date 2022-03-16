@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSource {
     private GetSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetSourceArgs.Builder a);
-    }
-    private static GetSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single Source.
- * 
-     */
-    public static CompletableFuture<GetSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single Source.
      * 

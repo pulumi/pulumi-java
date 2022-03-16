@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTagValue {
     private GetTagValue() {}
-    public interface BuilderApplicator {
-        public void apply(GetTagValueArgs.Builder a);
-    }
-    private static GetTagValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTagValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not have permission to view it, this method will return `PERMISSION_DENIED`.
- * 
-     */
-    public static CompletableFuture<GetTagValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not have permission to view it, this method will return `PERMISSION_DENIED`.
      * 

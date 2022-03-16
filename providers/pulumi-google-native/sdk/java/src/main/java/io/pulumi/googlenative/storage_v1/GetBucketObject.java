@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBucketObject {
     private GetBucketObject() {}
-    public interface BuilderApplicator {
-        public void apply(GetBucketObjectArgs.Builder a);
-    }
-    private static GetBucketObjectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBucketObjectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves an object or its metadata.
- * 
-     */
-    public static CompletableFuture<GetBucketObjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves an object or its metadata.
      * 

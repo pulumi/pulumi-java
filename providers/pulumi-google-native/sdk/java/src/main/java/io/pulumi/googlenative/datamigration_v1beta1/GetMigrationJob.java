@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMigrationJob {
     private GetMigrationJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetMigrationJobArgs.Builder a);
-    }
-    private static GetMigrationJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMigrationJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single migration job.
- * 
-     */
-    public static CompletableFuture<GetMigrationJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single migration job.
      * 

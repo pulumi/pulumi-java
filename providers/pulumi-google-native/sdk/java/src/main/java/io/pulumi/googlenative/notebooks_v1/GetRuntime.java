@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRuntime {
     private GetRuntime() {}
-    public interface BuilderApplicator {
-        public void apply(GetRuntimeArgs.Builder a);
-    }
-    private static GetRuntimeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRuntimeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single Runtime. The location must be a regional endpoint rather than zonal.
- * 
-     */
-    public static CompletableFuture<GetRuntimeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single Runtime. The location must be a regional endpoint rather than zonal.
      * 

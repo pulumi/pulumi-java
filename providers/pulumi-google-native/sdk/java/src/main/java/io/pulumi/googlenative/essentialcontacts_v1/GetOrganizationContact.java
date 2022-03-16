@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrganizationContact {
     private GetOrganizationContact() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrganizationContactArgs.Builder a);
-    }
-    private static GetOrganizationContactArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrganizationContactArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a single contact.
- * 
-     */
-    public static CompletableFuture<GetOrganizationContactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a single contact.
      * 

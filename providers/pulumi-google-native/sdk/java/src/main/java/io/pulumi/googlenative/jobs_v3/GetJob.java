@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetJob {
     private GetJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetJobArgs.Builder a);
-    }
-    private static GetJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified job, whose status is OPEN or recently EXPIRED within the last 90 days.
- * 
-     */
-    public static CompletableFuture<GetJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified job, whose status is OPEN or recently EXPIRED within the last 90 days.
      * 

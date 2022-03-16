@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNodePool {
     private GetNodePool() {}
-    public interface BuilderApplicator {
-        public void apply(GetNodePoolArgs.Builder a);
-    }
-    private static GetNodePoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNodePoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the requested node pool.
- * 
-     */
-    public static CompletableFuture<GetNodePoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the requested node pool.
      * 

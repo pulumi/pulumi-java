@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionHealthCheck {
     private GetRegionHealthCheck() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionHealthCheckArgs.Builder a);
-    }
-    private static GetRegionHealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionHealthCheckArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetRegionHealthCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
      * 

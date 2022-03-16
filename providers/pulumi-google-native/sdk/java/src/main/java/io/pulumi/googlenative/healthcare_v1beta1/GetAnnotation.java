@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAnnotation {
     private GetAnnotation() {}
-    public interface BuilderApplicator {
-        public void apply(GetAnnotationArgs.Builder a);
-    }
-    private static GetAnnotationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAnnotationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an Annotation.
- * 
-     */
-    public static CompletableFuture<GetAnnotationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an Annotation.
      * 

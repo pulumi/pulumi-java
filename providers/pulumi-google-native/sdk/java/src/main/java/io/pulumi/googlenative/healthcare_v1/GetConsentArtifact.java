@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConsentArtifact {
     private GetConsentArtifact() {}
-    public interface BuilderApplicator {
-        public void apply(GetConsentArtifactArgs.Builder a);
-    }
-    private static GetConsentArtifactArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConsentArtifactArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified Consent artifact.
- * 
-     */
-    public static CompletableFuture<GetConsentArtifactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified Consent artifact.
      * 

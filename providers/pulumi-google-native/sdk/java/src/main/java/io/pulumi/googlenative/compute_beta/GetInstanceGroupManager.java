@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceGroupManager {
     private GetInstanceGroupManager() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceGroupManagerArgs.Builder a);
-    }
-    private static GetInstanceGroupManagerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceGroupManagerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetInstanceGroupManagerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
      * 

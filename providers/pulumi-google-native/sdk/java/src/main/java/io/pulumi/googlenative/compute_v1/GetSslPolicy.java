@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSslPolicy {
     private GetSslPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetSslPolicyArgs.Builder a);
-    }
-    private static GetSslPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSslPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Lists all of the ordered rules present in a single specified policy.
- * 
-     */
-    public static CompletableFuture<GetSslPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Lists all of the ordered rules present in a single specified policy.
      * 

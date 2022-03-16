@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHl7V2Store {
     private GetHl7V2Store() {}
-    public interface BuilderApplicator {
-        public void apply(GetHl7V2StoreArgs.Builder a);
-    }
-    private static GetHl7V2StoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHl7V2StoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified HL7v2 store.
- * 
-     */
-    public static CompletableFuture<GetHl7V2StoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified HL7v2 store.
      * 

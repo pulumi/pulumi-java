@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionNetworkEndpointGroup {
     private GetRegionNetworkEndpointGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionNetworkEndpointGroupArgs.Builder a);
-    }
-    private static GetRegionNetworkEndpointGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionNetworkEndpointGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetRegionNetworkEndpointGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 

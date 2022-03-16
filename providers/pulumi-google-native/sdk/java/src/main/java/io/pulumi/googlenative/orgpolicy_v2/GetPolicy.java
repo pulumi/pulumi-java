@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPolicy {
     private GetPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetPolicyArgs.Builder a);
-    }
-    private static GetPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
- * 
-     */
-    public static CompletableFuture<GetPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
      * 

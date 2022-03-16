@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSessionEntityType {
     private GetSessionEntityType() {}
-    public interface BuilderApplicator {
-        public void apply(GetSessionEntityTypeArgs.Builder a);
-    }
-    private static GetSessionEntityTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSessionEntityTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified session entity type.
- * 
-     */
-    public static CompletableFuture<GetSessionEntityTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified session entity type.
      * 

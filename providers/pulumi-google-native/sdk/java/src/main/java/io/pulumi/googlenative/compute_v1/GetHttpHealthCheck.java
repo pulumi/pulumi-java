@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHttpHealthCheck {
     private GetHttpHealthCheck() {}
-    public interface BuilderApplicator {
-        public void apply(GetHttpHealthCheckArgs.Builder a);
-    }
-    private static GetHttpHealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHttpHealthCheckArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetHttpHealthCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSession {
     private GetSession() {}
-    public interface BuilderApplicator {
-        public void apply(GetSessionArgs.Builder a);
-    }
-    private static GetSessionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSessionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a session. Returns `NOT_FOUND` if the session does not exist. This is mainly useful for determining whether a session is still alive.
- * 
-     */
-    public static CompletableFuture<GetSessionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a session. Returns `NOT_FOUND` if the session does not exist. This is mainly useful for determining whether a session is still alive.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceClusterBackupIamPolicy {
     private GetInstanceClusterBackupIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceClusterBackupIamPolicyArgs.Builder a);
-    }
-    private static GetInstanceClusterBackupIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceClusterBackupIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetInstanceClusterBackupIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
      * 

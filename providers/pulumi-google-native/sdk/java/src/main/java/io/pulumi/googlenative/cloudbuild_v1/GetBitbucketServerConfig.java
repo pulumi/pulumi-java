@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBitbucketServerConfig {
     private GetBitbucketServerConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetBitbucketServerConfigArgs.Builder a);
-    }
-    private static GetBitbucketServerConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBitbucketServerConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve a `BitbucketServerConfig`. This API is experimental.
- * 
-     */
-    public static CompletableFuture<GetBitbucketServerConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve a `BitbucketServerConfig`. This API is experimental.
      * 

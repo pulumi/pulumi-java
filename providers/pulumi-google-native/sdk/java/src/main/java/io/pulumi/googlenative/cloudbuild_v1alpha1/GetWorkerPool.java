@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkerPool {
     private GetWorkerPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkerPoolArgs.Builder a);
-    }
-    private static GetWorkerPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkerPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns information about a `WorkerPool`.
- * 
-     */
-    public static CompletableFuture<GetWorkerPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns information about a `WorkerPool`.
      * 

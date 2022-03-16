@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFolderPolicy {
     private GetFolderPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetFolderPolicyArgs.Builder a);
-    }
-    private static GetFolderPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFolderPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
- * 
-     */
-    public static CompletableFuture<GetFolderPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSharedflow {
     private GetSharedflow() {}
-    public interface BuilderApplicator {
-        public void apply(GetSharedflowArgs.Builder a);
-    }
-    private static GetSharedflowArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSharedflowArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a shared flow by name, including a list of its revisions.
- * 
-     */
-    public static CompletableFuture<GetSharedflowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a shared flow by name, including a list of its revisions.
      * 

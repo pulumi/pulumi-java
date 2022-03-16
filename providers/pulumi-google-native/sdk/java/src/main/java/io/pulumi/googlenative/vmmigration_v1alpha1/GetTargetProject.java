@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTargetProject {
     private GetTargetProject() {}
-    public interface BuilderApplicator {
-        public void apply(GetTargetProjectArgs.Builder a);
-    }
-    private static GetTargetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTargetProjectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
- * 
-     */
-    public static CompletableFuture<GetTargetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
      * 
