@@ -627,12 +627,19 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			false,               // inputless overload
 		)
 		var isList string
-		switch propType := prop.Type.(type) {
-		case *schema.OptionalType:
-			switch propType.ElementType.(type) {
-			case *schema.ArrayType:
-				isList = propertyType.Parameters[len(propertyType.Parameters)-1].ToCode(ctx.imports)
-			}
+		switch pType := prop.Type.(type) {
+		case *schema.ArrayType:
+			eType := pt.mod.typeString(
+				ctx,
+				pType.ElementType,
+				pt.propertyTypeQualifier,
+				false, // is input
+				false, // is state
+				false, // requires initializers
+				false, // outer optional
+				false, // inputless overload
+			)
+			isList = eType.ToCode(ctx.imports)
 		}
 
 		// add field
@@ -677,12 +684,19 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 				true,                // inputless overload
 			)
 			var isList string
-			switch propType := prop.Type.(type) {
-			case *schema.OptionalType:
-				switch propType.ElementType.(type) {
-				case *schema.ArrayType:
-					isList = propertyTypeUnwrapped.Parameters[len(propertyTypeUnwrapped.Parameters)-1].ToCode(ctx.imports)
-				}
+			switch pType := prop.Type.(type) {
+			case *schema.ArrayType:
+				eType := pt.mod.typeString(
+					ctx,
+					pType.ElementType,
+					pt.propertyTypeQualifier,
+					false, // is input
+					false, // is state
+					false, // requires initializers
+					false, // outer optional
+					false, // inputless overload
+				)
+				isList = eType.ToCode(ctx.imports)
 			}
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
@@ -848,12 +862,19 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			false,               // inputless overload
 		)
 		var isList string
-		switch propType := prop.Type.(type) {
-		case *schema.OptionalType:
-			switch propType.ElementType.(type) {
-			case *schema.ArrayType:
-				isList = propertyType.Parameters[len(propertyType.Parameters)-1].ToCode(ctx.imports)
-			}
+		switch pType := prop.Type.(type) {
+		case *schema.ArrayType:
+			eType := pt.mod.typeString(
+				ctx,
+				pType.ElementType,
+				pt.propertyTypeQualifier,
+				false, // is input
+				false, // is state
+				false, // requires initializers
+				false, // outer optional
+				false, // inputless overload
+			)
+			isList = eType.ToCode(ctx.imports)
 		}
 
 		// add field
@@ -898,12 +919,19 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 				true,                // inputless overload
 			)
 			var isList string
-			switch propType := prop.Type.(type) {
-			case *schema.OptionalType:
-				switch propType.ElementType.(type) {
-				case *schema.ArrayType:
-					isList = propertyTypeUnwrapped.Parameters[len(propertyTypeUnwrapped.Parameters)-1].ToCode(ctx.imports)
-				}
+			switch pType := prop.Type.(type) {
+			case *schema.ArrayType:
+				eType := pt.mod.typeString(
+					ctx,
+					pType.ElementType,
+					pt.propertyTypeQualifier,
+					false, // is input
+					false, // is state
+					false, // requires initializers
+					false, // outer optional
+					false, // inputless overload
+				)
+				isList = eType.ToCode(ctx.imports)
 			}
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
@@ -1114,12 +1142,29 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 		var isList string
+		switch pType := prop.Type.(type) {
+		case *schema.ArrayType:
+			eType := pt.mod.typeString(
+				ctx,
+				pType.ElementType,
+				pt.propertyTypeQualifier,
+				false, // is input
+				false, // is state
+				false, // requires initializers
+				false, // outer optional
+				false, // inputless overload
+			)
+			isList = eType.ToCode(ctx.imports)
+		}
 		switch propType := prop.Type.(type) {
+		case *schema.InputType:
 		case *schema.OptionalType:
 			switch propType.ElementType.(type) {
 			case *schema.ArrayType:
 				isList = propertyType.Parameters[len(propertyType.Parameters)-1].ToCode(ctx.imports)
 			}
+		default:
+			isList = "/* wahaha3 */"
 		}
 
 		// add field
@@ -1348,13 +1393,21 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
+
 		var isList string
-		switch propType := prop.Type.(type) {
-		case *schema.OptionalType:
-			switch propType.ElementType.(type) {
-			case *schema.ArrayType:
-				isList = propertyType.Parameters[len(propertyType.Parameters)-1].ToCode(ctx.imports)
-			}
+		switch pType := prop.Type.(type) {
+		case *schema.ArrayType:
+			eType := pt.mod.typeString(
+				ctx,
+				pType.ElementType,
+				pt.propertyTypeQualifier,
+				false, // is input
+				false, // is state
+				false, // requires initializers
+				false, // outer optional
+				false, // inputless overload
+			)
+			isList = eType.ToCode(ctx.imports)
 		}
 
 		// add field
