@@ -100,7 +100,7 @@ publishing {
 
         // Publish to GitHub Packages like this
         //
-        // gradle -Pversion=0.0.1-SNAPSHOT pubish
+        // gradle -Pversion=0.0.1-SNAPSHOT publish
         //
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
