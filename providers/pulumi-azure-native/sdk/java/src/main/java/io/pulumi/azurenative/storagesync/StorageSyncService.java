@@ -235,18 +235,18 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20170605preview:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20180402:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20180701:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20181001:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190201:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190301:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190601:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20191001:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20200301:StorageSyncService").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20200901:StorageSyncService").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:storagesync/v20170605preview:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20180402:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20180701:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20181001:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190201:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190301:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190601:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20191001:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20200301:StorageSyncService").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20200901:StorageSyncService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -148,11 +148,11 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("kubernetes:autoscaling/v1:HorizontalPodAutoscaler").build()),
-                Output.of(Alias.builder().setType("kubernetes:autoscaling/v2beta1:HorizontalPodAutoscaler").build()),
-                Output.of(Alias.builder().setType("kubernetes:autoscaling/v2beta2:HorizontalPodAutoscaler").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("kubernetes:autoscaling/v1:HorizontalPodAutoscaler").build()),
+                Output.of(Alias.builder().type("kubernetes:autoscaling/v2beta1:HorizontalPodAutoscaler").build()),
+                Output.of(Alias.builder().type("kubernetes:autoscaling/v2beta2:HorizontalPodAutoscaler").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

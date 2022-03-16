@@ -178,15 +178,15 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:peering/v20190801preview:PeerAsn").build()),
-                Output.of(Alias.builder().setType("azure-native:peering/v20190901preview:PeerAsn").build()),
-                Output.of(Alias.builder().setType("azure-native:peering/v20200101preview:PeerAsn").build()),
-                Output.of(Alias.builder().setType("azure-native:peering/v20200401:PeerAsn").build()),
-                Output.of(Alias.builder().setType("azure-native:peering/v20201001:PeerAsn").build()),
-                Output.of(Alias.builder().setType("azure-native:peering/v20210101:PeerAsn").build()),
-                Output.of(Alias.builder().setType("azure-native:peering/v20210601:PeerAsn").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:peering/v20190801preview:PeerAsn").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20190901preview:PeerAsn").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20200101preview:PeerAsn").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20200401:PeerAsn").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20201001:PeerAsn").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20210101:PeerAsn").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20210601:PeerAsn").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

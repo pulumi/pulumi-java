@@ -207,20 +207,20 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20180401:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180601:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20181001:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190301:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190701:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20191201:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200601:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210301:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:ProximityPlacementGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20211101:ProximityPlacementGroup").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20180401:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180601:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20181001:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190301:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190701:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20191201:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200601:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210301:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:ProximityPlacementGroup").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211101:ProximityPlacementGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

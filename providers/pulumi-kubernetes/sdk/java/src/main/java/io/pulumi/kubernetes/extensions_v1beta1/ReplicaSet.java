@@ -152,10 +152,10 @@ public class ReplicaSet extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("kubernetes:apps/v1:ReplicaSet").build()),
-                Output.of(Alias.builder().setType("kubernetes:apps/v1beta2:ReplicaSet").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("kubernetes:apps/v1:ReplicaSet").build()),
+                Output.of(Alias.builder().type("kubernetes:apps/v1beta2:ReplicaSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

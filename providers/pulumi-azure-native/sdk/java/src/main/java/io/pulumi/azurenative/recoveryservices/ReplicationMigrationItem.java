@@ -135,19 +135,19 @@ public class ReplicationMigrationItem extends io.pulumi.resources.CustomResource
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20180110:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20180710:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211101:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ReplicationMigrationItem").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20180110:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20180710:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210210:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210301:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210401:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210601:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210701:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationMigrationItem").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

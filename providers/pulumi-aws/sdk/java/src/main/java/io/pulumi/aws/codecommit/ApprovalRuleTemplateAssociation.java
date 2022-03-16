@@ -104,7 +104,7 @@ public class ApprovalRuleTemplateAssociation extends io.pulumi.resources.CustomR
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
+            .version(Utilities.getVersion())
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

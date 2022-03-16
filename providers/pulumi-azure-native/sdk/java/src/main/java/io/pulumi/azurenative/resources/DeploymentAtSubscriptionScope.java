@@ -150,20 +150,20 @@ public class DeploymentAtSubscriptionScope extends io.pulumi.resources.CustomRes
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:resources/v20180501:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190301:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190501:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190510:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190701:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190801:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20191001:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20200601:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20200801:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20201001:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20210101:DeploymentAtSubscriptionScope").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20210401:DeploymentAtSubscriptionScope").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:resources/v20180501:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190301:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190501:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190510:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190701:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190801:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20191001:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20200601:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20200801:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20201001:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20210101:DeploymentAtSubscriptionScope").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20210401:DeploymentAtSubscriptionScope").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -193,16 +193,16 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:network/v20200501:HubVirtualNetworkConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200601:HubVirtualNetworkConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200701:HubVirtualNetworkConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200801:HubVirtualNetworkConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20201101:HubVirtualNetworkConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210201:HubVirtualNetworkConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210301:HubVirtualNetworkConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210501:HubVirtualNetworkConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:network/v20200501:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200601:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200701:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200801:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20201101:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210201:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210301:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210501:HubVirtualNetworkConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

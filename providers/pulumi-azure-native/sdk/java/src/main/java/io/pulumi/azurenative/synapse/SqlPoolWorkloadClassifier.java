@@ -190,15 +190,15 @@ public class SqlPoolWorkloadClassifier extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPoolWorkloadClassifier").build()),
-                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPoolWorkloadClassifier").build()),
-                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPoolWorkloadClassifier").build()),
-                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPoolWorkloadClassifier").build()),
-                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPoolWorkloadClassifier").build()),
-                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPoolWorkloadClassifier").build()),
-                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPoolWorkloadClassifier").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:synapse/v20190601preview:SqlPoolWorkloadClassifier").build()),
+                Output.of(Alias.builder().type("azure-native:synapse/v20201201:SqlPoolWorkloadClassifier").build()),
+                Output.of(Alias.builder().type("azure-native:synapse/v20210301:SqlPoolWorkloadClassifier").build()),
+                Output.of(Alias.builder().type("azure-native:synapse/v20210401preview:SqlPoolWorkloadClassifier").build()),
+                Output.of(Alias.builder().type("azure-native:synapse/v20210501:SqlPoolWorkloadClassifier").build()),
+                Output.of(Alias.builder().type("azure-native:synapse/v20210601:SqlPoolWorkloadClassifier").build()),
+                Output.of(Alias.builder().type("azure-native:synapse/v20210601preview:SqlPoolWorkloadClassifier").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -132,7 +132,7 @@ public class ValidatingWebhookConfigurationList extends io.pulumi.resources.Cust
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
+            .version(Utilities.getVersion())
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

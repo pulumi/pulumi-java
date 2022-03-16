@@ -214,13 +214,13 @@ public class KustoClusterDataSetMapping extends io.pulumi.resources.CustomResour
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:KustoClusterDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:KustoClusterDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:KustoClusterDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:KustoClusterDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:KustoClusterDataSetMapping").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:datashare/v20181101preview:KustoClusterDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20191101:KustoClusterDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20200901:KustoClusterDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20201001preview:KustoClusterDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20210801:KustoClusterDataSetMapping").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -179,11 +179,11 @@ public class ConnectionType extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:automation/v20151031:ConnectionType").build()),
-                Output.of(Alias.builder().setType("azure-native:automation/v20190601:ConnectionType").build()),
-                Output.of(Alias.builder().setType("azure-native:automation/v20200113preview:ConnectionType").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:automation/v20151031:ConnectionType").build()),
+                Output.of(Alias.builder().type("azure-native:automation/v20190601:ConnectionType").build()),
+                Output.of(Alias.builder().type("azure-native:automation/v20200113preview:ConnectionType").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
