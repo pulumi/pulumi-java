@@ -17,9 +17,6 @@ You will need:
 - access grant to read `pulumi/pulumi-java` repository
 - a [Personal Access Token](https://github.com/settings/tokens) with `read:package` scope
 
-
-https://github.com/settings/tokens
-
 ### Maven
 
 TODO
