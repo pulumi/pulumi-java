@@ -87,22 +87,6 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(NotebookWorkspaceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.documentdb.NotebookWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.documentdb.NotebookWorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public NotebookWorkspace(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -134,24 +118,24 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:documentdb/v20190801:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20191212:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20200301:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20200401:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20200901:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:NotebookWorkspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:NotebookWorkspace").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:NotebookWorkspace").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:NotebookWorkspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

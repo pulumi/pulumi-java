@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFactoryGitHubAccessToken {
     private GetFactoryGitHubAccessToken() {}
-    public interface BuilderApplicator {
-        public void apply(GetFactoryGitHubAccessTokenArgs.Builder a);
-    }
-    private static GetFactoryGitHubAccessTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFactoryGitHubAccessTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get GitHub access token response definition.
- * API Version: 2018-06-01.
- * 
-     *
-     * Get GitHub access token response definition.
- * 
-     */
-    public static CompletableFuture<GetFactoryGitHubAccessTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get GitHub access token response definition.
      * API Version: 2018-06-01.

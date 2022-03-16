@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppAuthSettings {
     private ListWebAppAuthSettings() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppAuthSettingsArgs.Builder a);
-    }
-    private static ListWebAppAuthSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppAuthSettingsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Configuration settings for the Azure App Service Authentication / Authorization feature.
- * API Version: 2020-12-01.
- * 
-     *
-     * Configuration settings for the Azure App Service Authentication / Authorization feature.
- * 
-     */
-    public static CompletableFuture<ListWebAppAuthSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Configuration settings for the Azure App Service Authentication / Authorization feature.
      * API Version: 2020-12-01.

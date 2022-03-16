@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFileServiceProperties {
     private GetFileServiceProperties() {}
-    public interface BuilderApplicator {
-        public void apply(GetFileServicePropertiesArgs.Builder a);
-    }
-    private static GetFileServicePropertiesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFileServicePropertiesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The properties of File services in storage account.
- * API Version: 2021-02-01.
- * 
-     *
-     * The properties of File services in storage account.
- * 
-     */
-    public static CompletableFuture<GetFileServicePropertiesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The properties of File services in storage account.
      * API Version: 2021-02-01.

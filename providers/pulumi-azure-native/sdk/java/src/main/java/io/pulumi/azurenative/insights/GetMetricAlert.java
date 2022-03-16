@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMetricAlert {
     private GetMetricAlert() {}
-    public interface BuilderApplicator {
-        public void apply(GetMetricAlertArgs.Builder a);
-    }
-    private static GetMetricAlertArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMetricAlertArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The metric alert resource.
- * API Version: 2018-03-01.
- * 
-     *
-     * The metric alert resource.
- * 
-     */
-    public static CompletableFuture<GetMetricAlertResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The metric alert resource.
      * API Version: 2018-03-01.

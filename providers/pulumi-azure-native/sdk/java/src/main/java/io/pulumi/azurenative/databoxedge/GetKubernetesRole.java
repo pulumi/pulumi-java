@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKubernetesRole {
     private GetKubernetesRole() {}
-    public interface BuilderApplicator {
-        public void apply(GetKubernetesRoleArgs.Builder a);
-    }
-    private static GetKubernetesRoleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKubernetesRoleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Kubernetes role.
- * API Version: 2020-12-01.
- * 
-     *
-     * Kubernetes role.
- * 
-     */
-    public static CompletableFuture<GetKubernetesRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Kubernetes role.
      * API Version: 2020-12-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccessReviewHistoryDefinitionById {
     private GetAccessReviewHistoryDefinitionById() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccessReviewHistoryDefinitionByIdArgs.Builder a);
-    }
-    private static GetAccessReviewHistoryDefinitionByIdArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccessReviewHistoryDefinitionByIdArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Access Review History Definition.
- * API Version: 2021-11-16-preview.
- * 
-     *
-     * Access Review History Definition.
- * 
-     */
-    public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Access Review History Definition.
      * API Version: 2021-11-16-preview.

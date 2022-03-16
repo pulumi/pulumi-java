@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIoTRole {
     private GetIoTRole() {}
-    public interface BuilderApplicator {
-        public void apply(GetIoTRoleArgs.Builder a);
-    }
-    private static GetIoTRoleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIoTRoleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Compute role.
- * API Version: 2020-12-01.
- * 
-     *
-     * Compute role.
- * 
-     */
-    public static CompletableFuture<GetIoTRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Compute role.
      * API Version: 2020-12-01.

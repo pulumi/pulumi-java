@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRulesEngine {
     private GetRulesEngine() {}
-    public interface BuilderApplicator {
-        public void apply(GetRulesEngineArgs.Builder a);
-    }
-    private static GetRulesEngineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRulesEngineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
- * API Version: 2020-05-01.
- * 
-     *
-     * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
- * 
-     */
-    public static CompletableFuture<GetRulesEngineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
      * API Version: 2020-05-01.

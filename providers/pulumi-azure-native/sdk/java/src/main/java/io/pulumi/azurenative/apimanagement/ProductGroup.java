@@ -116,22 +116,6 @@ public class ProductGroup extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ProductGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.apimanagement.ProductGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.apimanagement.ProductGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ProductGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -163,19 +147,19 @@ public class ProductGroup extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20170301:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20180101:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20180601preview:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20190101:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201preview:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20200601preview:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ProductGroup").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ProductGroup").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ProductGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ProductGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

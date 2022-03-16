@@ -144,22 +144,6 @@ public class Registration extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RegistrationArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.azurestack.RegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.azurestack.RegistrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Registration(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -191,11 +175,11 @@ public class Registration extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:azurestack/v20160101:Registration").build()),
-                Output.of(Alias.builder().type("azure-native:azurestack/v20170601:Registration").build()),
-                Output.of(Alias.builder().type("azure-native:azurestack/v20200601preview:Registration").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:azurestack/v20160101:Registration").build()),
+                Output.of(Alias.builder().setType("azure-native:azurestack/v20170601:Registration").build()),
+                Output.of(Alias.builder().setType("azure-native:azurestack/v20200601preview:Registration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

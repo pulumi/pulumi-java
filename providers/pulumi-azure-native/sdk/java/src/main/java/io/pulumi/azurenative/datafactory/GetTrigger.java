@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTrigger {
     private GetTrigger() {}
-    public interface BuilderApplicator {
-        public void apply(GetTriggerArgs.Builder a);
-    }
-    private static GetTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTriggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Trigger resource type.
- * API Version: 2018-06-01.
- * 
-     *
-     * Trigger resource type.
- * 
-     */
-    public static CompletableFuture<GetTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Trigger resource type.
      * API Version: 2018-06-01.

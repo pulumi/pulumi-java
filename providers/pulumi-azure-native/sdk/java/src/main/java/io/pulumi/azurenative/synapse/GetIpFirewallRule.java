@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIpFirewallRule {
     private GetIpFirewallRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetIpFirewallRuleArgs.Builder a);
-    }
-    private static GetIpFirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIpFirewallRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * IP firewall rule
- * API Version: 2021-03-01.
- * 
-     *
-     * IP firewall rule
- * 
-     */
-    public static CompletableFuture<GetIpFirewallRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * IP firewall rule
      * API Version: 2021-03-01.

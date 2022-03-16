@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListMonitorApiKeys {
     private ListMonitorApiKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListMonitorApiKeysArgs.Builder a);
-    }
-    private static ListMonitorApiKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListMonitorApiKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response of a list operation.
- * API Version: 2021-03-01.
- * 
-     *
-     * Response of a list operation.
- * 
-     */
-    public static CompletableFuture<ListMonitorApiKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response of a list operation.
      * API Version: 2021-03-01.

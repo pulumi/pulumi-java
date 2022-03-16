@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIotHubResource {
     private GetIotHubResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetIotHubResourceArgs.Builder a);
-    }
-    private static GetIotHubResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIotHubResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The description of the IoT hub.
- * API Version: 2020-08-31.
- * 
-     *
-     * The description of the IoT hub.
- * 
-     */
-    public static CompletableFuture<GetIotHubResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The description of the IoT hub.
      * API Version: 2020-08-31.

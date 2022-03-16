@@ -115,22 +115,6 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
         return this.updatedDateTime;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ApiReleaseArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.apimanagement.ApiReleaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.apimanagement.ApiReleaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ApiRelease(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -162,19 +146,19 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20170301:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20180101:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20180601preview:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20190101:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201preview:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20200601preview:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiRelease").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiRelease").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiRelease").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiRelease").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

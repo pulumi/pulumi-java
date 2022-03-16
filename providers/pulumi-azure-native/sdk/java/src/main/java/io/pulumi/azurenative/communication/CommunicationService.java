@@ -187,22 +187,6 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(CommunicationServiceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.communication.CommunicationServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.communication.CommunicationServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public CommunicationService(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -234,10 +218,10 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:communication/v20200820:CommunicationService").build()),
-                Output.of(Alias.builder().type("azure-native:communication/v20200820preview:CommunicationService").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:communication/v20200820:CommunicationService").build()),
+                Output.of(Alias.builder().setType("azure-native:communication/v20200820preview:CommunicationService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

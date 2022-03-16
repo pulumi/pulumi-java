@@ -161,22 +161,6 @@ public class PrivateLinkServicesForO365ManagementActivityAPI extends io.pulumi.r
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PrivateLinkServicesForO365ManagementActivityAPIArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.m365securityandcompliance.PrivateLinkServicesForO365ManagementActivityAPIArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.m365securityandcompliance.PrivateLinkServicesForO365ManagementActivityAPIArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PrivateLinkServicesForO365ManagementActivityAPI(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -208,9 +192,9 @@ public class PrivateLinkServicesForO365ManagementActivityAPI extends io.pulumi.r
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:m365securityandcompliance/v20210325preview:privateLinkServicesForO365ManagementActivityAPI").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:m365securityandcompliance/v20210325preview:privateLinkServicesForO365ManagementActivityAPI").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

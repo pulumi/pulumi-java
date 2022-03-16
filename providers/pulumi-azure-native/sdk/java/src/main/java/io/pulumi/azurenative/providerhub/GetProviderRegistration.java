@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProviderRegistration {
     private GetProviderRegistration() {}
-    public interface BuilderApplicator {
-        public void apply(GetProviderRegistrationArgs.Builder a);
-    }
-    private static GetProviderRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProviderRegistrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2020-11-20.
- * 
-     */
-    public static CompletableFuture<GetProviderRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2020-11-20.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPackageDownloadURL {
     private GetPackageDownloadURL() {}
-    public interface BuilderApplicator {
-        public void apply(GetPackageDownloadURLArgs.Builder a);
-    }
-    private static GetPackageDownloadURLArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPackageDownloadURLArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The response of getting a download URL.
- * API Version: 2020-12-16-preview.
- * 
-     *
-     * The response of getting a download URL.
- * 
-     */
-    public static CompletableFuture<GetPackageDownloadURLResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The response of getting a download URL.
      * API Version: 2020-12-16-preview.

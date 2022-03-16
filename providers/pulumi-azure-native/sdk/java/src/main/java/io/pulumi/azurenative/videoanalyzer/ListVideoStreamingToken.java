@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListVideoStreamingToken {
     private ListVideoStreamingToken() {}
-    public interface BuilderApplicator {
-        public void apply(ListVideoStreamingTokenArgs.Builder a);
-    }
-    private static ListVideoStreamingTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListVideoStreamingTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Video streaming token grants access to the video streaming URLs which can be used by an compatible HLS or DASH player.
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * Video streaming token grants access to the video streaming URLs which can be used by an compatible HLS or DASH player.
- * 
-     */
-    public static CompletableFuture<ListVideoStreamingTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Video streaming token grants access to the video streaming URLs which can be used by an compatible HLS or DASH player.
      * API Version: 2021-05-01-preview.

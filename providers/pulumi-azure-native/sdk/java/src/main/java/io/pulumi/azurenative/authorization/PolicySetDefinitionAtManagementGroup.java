@@ -162,22 +162,6 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PolicySetDefinitionAtManagementGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.authorization.PolicySetDefinitionAtManagementGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.authorization.PolicySetDefinitionAtManagementGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PolicySetDefinitionAtManagementGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -209,17 +193,17 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:authorization/v20170601preview:PolicySetDefinitionAtManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20180301:PolicySetDefinitionAtManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20180501:PolicySetDefinitionAtManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20190101:PolicySetDefinitionAtManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20190601:PolicySetDefinitionAtManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20190901:PolicySetDefinitionAtManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20200301:PolicySetDefinitionAtManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20200901:PolicySetDefinitionAtManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20210601:PolicySetDefinitionAtManagementGroup").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:authorization/v20170601preview:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20180301:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20180501:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190101:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190601:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190901:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200301:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200901:PolicySetDefinitionAtManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20210601:PolicySetDefinitionAtManagementGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

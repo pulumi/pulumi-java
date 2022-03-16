@@ -102,22 +102,6 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ManagementLockAtResourceLevelArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.authorization.ManagementLockAtResourceLevelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.authorization.ManagementLockAtResourceLevelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ManagementLockAtResourceLevel(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -149,11 +133,11 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:authorization/v20160901:ManagementLockAtResourceLevel").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20170401:ManagementLockAtResourceLevel").build()),
-                Output.of(Alias.builder().type("azure-native:authorization/v20200501:ManagementLockAtResourceLevel").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:authorization/v20160901:ManagementLockAtResourceLevel").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20170401:ManagementLockAtResourceLevel").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200501:ManagementLockAtResourceLevel").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

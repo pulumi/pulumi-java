@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetQueue {
     private GetQueue() {}
-    public interface BuilderApplicator {
-        public void apply(GetQueueArgs.Builder a);
-    }
-    private static GetQueueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetQueueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2021-02-01.
- * 
-     */
-    public static CompletableFuture<GetQueueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2021-02-01.
      * 

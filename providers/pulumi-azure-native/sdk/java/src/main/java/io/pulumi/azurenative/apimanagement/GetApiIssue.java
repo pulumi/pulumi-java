@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiIssue {
     private GetApiIssue() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiIssueArgs.Builder a);
-    }
-    private static GetApiIssueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiIssueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Issue Contract details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Issue Contract details.
- * 
-     */
-    public static CompletableFuture<GetApiIssueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Issue Contract details.
      * API Version: 2020-12-01.

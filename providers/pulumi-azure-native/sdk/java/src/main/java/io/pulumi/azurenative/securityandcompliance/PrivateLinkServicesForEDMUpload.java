@@ -161,22 +161,6 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PrivateLinkServicesForEDMUploadArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForEDMUploadArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForEDMUploadArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PrivateLinkServicesForEDMUpload(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -208,10 +192,10 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:securityandcompliance/v20210111:privateLinkServicesForEDMUpload").build()),
-                Output.of(Alias.builder().type("azure-native:securityandcompliance/v20210308:privateLinkServicesForEDMUpload").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:securityandcompliance/v20210111:privateLinkServicesForEDMUpload").build()),
+                Output.of(Alias.builder().setType("azure-native:securityandcompliance/v20210308:privateLinkServicesForEDMUpload").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

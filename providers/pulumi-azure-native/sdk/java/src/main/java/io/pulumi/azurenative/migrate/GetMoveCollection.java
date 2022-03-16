@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMoveCollection {
     private GetMoveCollection() {}
-    public interface BuilderApplicator {
-        public void apply(GetMoveCollectionArgs.Builder a);
-    }
-    private static GetMoveCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMoveCollectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Define the move collection.
- * API Version: 2021-01-01.
- * 
-     *
-     * Define the move collection.
- * 
-     */
-    public static CompletableFuture<GetMoveCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Define the move collection.
      * API Version: 2021-01-01.

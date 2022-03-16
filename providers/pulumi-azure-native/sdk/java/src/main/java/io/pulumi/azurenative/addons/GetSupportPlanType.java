@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSupportPlanType {
     private GetSupportPlanType() {}
-    public interface BuilderApplicator {
-        public void apply(GetSupportPlanTypeArgs.Builder a);
-    }
-    private static GetSupportPlanTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSupportPlanTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The status of the Canonical support plan.
- * API Version: 2018-03-01.
- * 
-     *
-     * The status of the Canonical support plan.
- * 
-     */
-    public static CompletableFuture<GetSupportPlanTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The status of the Canonical support plan.
      * API Version: 2018-03-01.

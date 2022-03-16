@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContentKeyPolicy {
     private GetContentKeyPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetContentKeyPolicyArgs.Builder a);
-    }
-    private static GetContentKeyPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContentKeyPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Content Key Policy resource.
- * API Version: 2020-05-01.
- * 
-     *
-     * A Content Key Policy resource.
- * 
-     */
-    public static CompletableFuture<GetContentKeyPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Content Key Policy resource.
      * API Version: 2020-05-01.

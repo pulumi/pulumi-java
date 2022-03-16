@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistrationActivationKey {
     private GetRegistrationActivationKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistrationActivationKeyArgs.Builder a);
-    }
-    private static GetRegistrationActivationKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistrationActivationKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The resource containing the Azure Stack activation key.
- * API Version: 2017-06-01.
- * 
-     *
-     * The resource containing the Azure Stack activation key.
- * 
-     */
-    public static CompletableFuture<GetRegistrationActivationKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The resource containing the Azure Stack activation key.
      * API Version: 2017-06-01.

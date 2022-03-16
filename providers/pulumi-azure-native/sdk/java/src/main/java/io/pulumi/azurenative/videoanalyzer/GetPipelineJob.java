@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPipelineJob {
     private GetPipelineJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetPipelineJobArgs.Builder a);
-    }
-    private static GetPipelineJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPipelineJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
- * API Version: 2021-11-01-preview.
- * 
-     *
-     * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
- * 
-     */
-    public static CompletableFuture<GetPipelineJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
      * API Version: 2021-11-01-preview.

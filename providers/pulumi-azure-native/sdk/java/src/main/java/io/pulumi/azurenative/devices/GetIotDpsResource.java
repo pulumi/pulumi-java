@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIotDpsResource {
     private GetIotDpsResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetIotDpsResourceArgs.Builder a);
-    }
-    private static GetIotDpsResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIotDpsResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The description of the provisioning service.
- * API Version: 2020-03-01.
- * 
-     *
-     * The description of the provisioning service.
- * 
-     */
-    public static CompletableFuture<GetIotDpsResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The description of the provisioning service.
      * API Version: 2020-03-01.

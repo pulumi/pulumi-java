@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlTrigger {
     private GetSqlResourceSqlTrigger() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlResourceSqlTriggerArgs.Builder a);
-    }
-    private static GetSqlResourceSqlTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlResourceSqlTriggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB trigger.
- * API Version: 2021-03-15.
- * 
-     *
-     * An Azure Cosmos DB trigger.
- * 
-     */
-    public static CompletableFuture<GetSqlResourceSqlTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB trigger.
      * API Version: 2021-03-15.

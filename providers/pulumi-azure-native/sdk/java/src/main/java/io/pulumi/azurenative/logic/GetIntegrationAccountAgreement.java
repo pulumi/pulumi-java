@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegrationAccountAgreement {
     private GetIntegrationAccountAgreement() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationAccountAgreementArgs.Builder a);
-    }
-    private static GetIntegrationAccountAgreementArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationAccountAgreementArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The integration account agreement.
- * API Version: 2019-05-01.
- * 
-     *
-     * The integration account agreement.
- * 
-     */
-    public static CompletableFuture<GetIntegrationAccountAgreementResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The integration account agreement.
      * API Version: 2019-05-01.

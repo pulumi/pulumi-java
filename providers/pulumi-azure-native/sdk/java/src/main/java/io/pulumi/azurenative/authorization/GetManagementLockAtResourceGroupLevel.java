@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagementLockAtResourceGroupLevel {
     private GetManagementLockAtResourceGroupLevel() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagementLockAtResourceGroupLevelArgs.Builder a);
-    }
-    private static GetManagementLockAtResourceGroupLevelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagementLockAtResourceGroupLevelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The lock information.
- * API Version: 2017-04-01.
- * 
-     *
-     * The lock information.
- * 
-     */
-    public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The lock information.
      * API Version: 2017-04-01.

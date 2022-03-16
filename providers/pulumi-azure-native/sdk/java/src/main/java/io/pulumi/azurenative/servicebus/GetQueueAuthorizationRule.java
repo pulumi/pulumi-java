@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetQueueAuthorizationRule {
     private GetQueueAuthorizationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetQueueAuthorizationRuleArgs.Builder a);
-    }
-    private static GetQueueAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetQueueAuthorizationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Description of a namespace authorization rule.
- * API Version: 2017-04-01.
- * 
-     *
-     * Description of a namespace authorization rule.
- * 
-     */
-    public static CompletableFuture<GetQueueAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Description of a namespace authorization rule.
      * API Version: 2017-04-01.

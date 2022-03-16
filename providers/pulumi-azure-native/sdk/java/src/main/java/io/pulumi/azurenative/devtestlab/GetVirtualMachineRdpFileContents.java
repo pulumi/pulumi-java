@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualMachineRdpFileContents {
     private GetVirtualMachineRdpFileContents() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualMachineRdpFileContentsArgs.Builder a);
-    }
-    private static GetVirtualMachineRdpFileContentsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualMachineRdpFileContentsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a .rdp file
- * API Version: 2018-09-15.
- * 
-     *
-     * Represents a .rdp file
- * 
-     */
-    public static CompletableFuture<GetVirtualMachineRdpFileContentsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a .rdp file
      * API Version: 2018-09-15.

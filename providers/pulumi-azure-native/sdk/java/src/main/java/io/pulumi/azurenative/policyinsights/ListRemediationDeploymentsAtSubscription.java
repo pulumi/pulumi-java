@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListRemediationDeploymentsAtSubscription {
     private ListRemediationDeploymentsAtSubscription() {}
-    public interface BuilderApplicator {
-        public void apply(ListRemediationDeploymentsAtSubscriptionArgs.Builder a);
-    }
-    private static ListRemediationDeploymentsAtSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListRemediationDeploymentsAtSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * List of deployments for a remediation.
- * API Version: 2019-07-01.
- * 
-     *
-     * List of deployments for a remediation.
- * 
-     */
-    public static CompletableFuture<ListRemediationDeploymentsAtSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * List of deployments for a remediation.
      * API Version: 2019-07-01.

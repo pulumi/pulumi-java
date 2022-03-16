@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApi {
     private GetApi() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiArgs.Builder a);
-    }
-    private static GetApiArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Api details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Api details.
- * 
-     */
-    public static CompletableFuture<GetApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Api details.
      * API Version: 2020-12-01.

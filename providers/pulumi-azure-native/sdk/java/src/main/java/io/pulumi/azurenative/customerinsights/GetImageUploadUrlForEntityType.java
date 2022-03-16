@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImageUploadUrlForEntityType {
     private GetImageUploadUrlForEntityType() {}
-    public interface BuilderApplicator {
-        public void apply(GetImageUploadUrlForEntityTypeArgs.Builder a);
-    }
-    private static GetImageUploadUrlForEntityTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImageUploadUrlForEntityTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The image definition.
- * API Version: 2017-04-26.
- * 
-     *
-     * The image definition.
- * 
-     */
-    public static CompletableFuture<GetImageUploadUrlForEntityTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The image definition.
      * API Version: 2017-04-26.

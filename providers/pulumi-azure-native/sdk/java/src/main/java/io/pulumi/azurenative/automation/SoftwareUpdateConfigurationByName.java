@@ -189,22 +189,6 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
         return this.updateConfiguration;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SoftwareUpdateConfigurationByNameArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.automation.SoftwareUpdateConfigurationByNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.automation.SoftwareUpdateConfigurationByNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SoftwareUpdateConfigurationByName(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -236,10 +220,10 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:automation/v20170515preview:SoftwareUpdateConfigurationByName").build()),
-                Output.of(Alias.builder().type("azure-native:automation/v20190601:SoftwareUpdateConfigurationByName").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:automation/v20170515preview:SoftwareUpdateConfigurationByName").build()),
+                Output.of(Alias.builder().setType("azure-native:automation/v20190601:SoftwareUpdateConfigurationByName").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

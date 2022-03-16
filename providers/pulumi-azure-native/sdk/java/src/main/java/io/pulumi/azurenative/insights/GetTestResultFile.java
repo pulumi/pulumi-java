@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTestResultFile {
     private GetTestResultFile() {}
-    public interface BuilderApplicator {
-        public void apply(GetTestResultFileArgs.Builder a);
-    }
-    private static GetTestResultFileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTestResultFileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Test result.
- * API Version: 2020-02-10-preview.
- * 
-     *
-     * Test result.
- * 
-     */
-    public static CompletableFuture<GetTestResultFileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Test result.
      * API Version: 2020-02-10-preview.

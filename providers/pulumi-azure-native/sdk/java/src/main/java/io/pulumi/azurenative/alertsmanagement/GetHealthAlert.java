@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHealthAlert {
     private GetHealthAlert() {}
-    public interface BuilderApplicator {
-        public void apply(GetHealthAlertArgs.Builder a);
-    }
-    private static GetHealthAlertArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHealthAlertArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The health alert resource.
- * API Version: 2020-08-04-preview.
- * 
-     *
-     * The health alert resource.
- * 
-     */
-    public static CompletableFuture<GetHealthAlertResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The health alert resource.
      * API Version: 2020-08-04-preview.

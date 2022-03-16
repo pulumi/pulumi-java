@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetViewByScope {
     private GetViewByScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetViewByScopeArgs.Builder a);
-    }
-    private static GetViewByScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetViewByScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * States and configurations of Cost Analysis.
- * API Version: 2019-11-01.
- * 
-     *
-     * States and configurations of Cost Analysis.
- * 
-     */
-    public static CompletableFuture<GetViewByScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * States and configurations of Cost Analysis.
      * API Version: 2019-11-01.

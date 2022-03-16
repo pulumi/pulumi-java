@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHybridConnectionAuthorizationRule {
     private GetHybridConnectionAuthorizationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetHybridConnectionAuthorizationRuleArgs.Builder a);
-    }
-    private static GetHybridConnectionAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHybridConnectionAuthorizationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Description of a namespace authorization rule.
- * API Version: 2017-04-01.
- * 
-     *
-     * Description of a namespace authorization rule.
- * 
-     */
-    public static CompletableFuture<GetHybridConnectionAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Description of a namespace authorization rule.
      * API Version: 2017-04-01.

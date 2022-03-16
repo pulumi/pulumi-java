@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIotConnector {
     private GetIotConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetIotConnectorArgs.Builder a);
-    }
-    private static GetIotConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIotConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * IoT Connector definition.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * IoT Connector definition.
- * 
-     */
-    public static CompletableFuture<GetIotConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * IoT Connector definition.
      * API Version: 2021-06-01-preview.

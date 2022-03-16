@@ -148,22 +148,6 @@ public class SqlManagedInstance extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SqlManagedInstanceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.azurearcdata.SqlManagedInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.azurearcdata.SqlManagedInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SqlManagedInstance(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -195,12 +179,12 @@ public class SqlManagedInstance extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:azurearcdata/v20210601preview:SqlManagedInstance").build()),
-                Output.of(Alias.builder().type("azure-native:azurearcdata/v20210701preview:SqlManagedInstance").build()),
-                Output.of(Alias.builder().type("azure-native:azurearcdata/v20210801:SqlManagedInstance").build()),
-                Output.of(Alias.builder().type("azure-native:azurearcdata/v20211101:SqlManagedInstance").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210601preview:SqlManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210701preview:SqlManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210801:SqlManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20211101:SqlManagedInstance").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

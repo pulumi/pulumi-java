@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMECRole {
     private GetMECRole() {}
-    public interface BuilderApplicator {
-        public void apply(GetMECRoleArgs.Builder a);
-    }
-    private static GetMECRoleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMECRoleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * MEC role.
- * API Version: 2020-12-01.
- * 
-     *
-     * MEC role.
- * 
-     */
-    public static CompletableFuture<GetMECRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * MEC role.
      * API Version: 2020-12-01.

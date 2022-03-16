@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventGridDataConnection {
     private GetEventGridDataConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventGridDataConnectionArgs.Builder a);
-    }
-    private static GetEventGridDataConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventGridDataConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing an Event Grid data connection.
- * API Version: 2021-01-01.
- * 
-     *
-     * Class representing an Event Grid data connection.
- * 
-     */
-    public static CompletableFuture<GetEventGridDataConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing an Event Grid data connection.
      * API Version: 2021-01-01.

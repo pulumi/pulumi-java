@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLiveOutput {
     private GetLiveOutput() {}
-    public interface BuilderApplicator {
-        public void apply(GetLiveOutputArgs.Builder a);
-    }
-    private static GetLiveOutputArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLiveOutputArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Live Output.
- * API Version: 2020-05-01.
- * 
-     *
-     * The Live Output.
- * 
-     */
-    public static CompletableFuture<GetLiveOutputResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Live Output.
      * API Version: 2020-05-01.

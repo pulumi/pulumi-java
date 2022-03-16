@@ -285,22 +285,6 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AuthorizationServerArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.apimanagement.AuthorizationServerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.apimanagement.AuthorizationServerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AuthorizationServer(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -332,21 +316,21 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20160707:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20161010:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20170301:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20180101:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20180601preview:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20190101:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201preview:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20200601preview:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:AuthorizationServer").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20160707:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20161010:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:AuthorizationServer").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:AuthorizationServer").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

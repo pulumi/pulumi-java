@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayNatRule {
     private GetVirtualNetworkGatewayNatRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualNetworkGatewayNatRuleArgs.Builder a);
-    }
-    private static GetVirtualNetworkGatewayNatRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualNetworkGatewayNatRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * VirtualNetworkGatewayNatRule Resource.
- * API Version: 2021-03-01.
- * 
-     *
-     * VirtualNetworkGatewayNatRule Resource.
- * 
-     */
-    public static CompletableFuture<GetVirtualNetworkGatewayNatRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * VirtualNetworkGatewayNatRule Resource.
      * API Version: 2021-03-01.

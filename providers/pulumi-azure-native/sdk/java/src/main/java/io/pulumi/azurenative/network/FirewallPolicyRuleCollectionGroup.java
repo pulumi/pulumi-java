@@ -119,22 +119,6 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(FirewallPolicyRuleCollectionGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.FirewallPolicyRuleCollectionGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.FirewallPolicyRuleCollectionGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public FirewallPolicyRuleCollectionGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -166,16 +150,16 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20200501:FirewallPolicyRuleCollectionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200601:FirewallPolicyRuleCollectionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200701:FirewallPolicyRuleCollectionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200801:FirewallPolicyRuleCollectionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20201101:FirewallPolicyRuleCollectionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210201:FirewallPolicyRuleCollectionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210301:FirewallPolicyRuleCollectionGroup").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:FirewallPolicyRuleCollectionGroup").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:FirewallPolicyRuleCollectionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:FirewallPolicyRuleCollectionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:FirewallPolicyRuleCollectionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:FirewallPolicyRuleCollectionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:FirewallPolicyRuleCollectionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:FirewallPolicyRuleCollectionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:FirewallPolicyRuleCollectionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:FirewallPolicyRuleCollectionGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

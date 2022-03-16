@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListDelegationSettingSecrets {
     private ListDelegationSettingSecrets() {}
-    public interface BuilderApplicator {
-        public void apply(ListDelegationSettingSecretsArgs.Builder a);
-    }
-    private static ListDelegationSettingSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListDelegationSettingSecretsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
- * API Version: 2020-12-01.
- * 
-     *
-     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
- * 
-     */
-    public static CompletableFuture<ListDelegationSettingSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
      * API Version: 2020-12-01.

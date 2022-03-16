@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppConnectionStringsSlot {
     private ListWebAppConnectionStringsSlot() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppConnectionStringsSlotArgs.Builder a);
-    }
-    private static ListWebAppConnectionStringsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppConnectionStringsSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * String dictionary resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * String dictionary resource.
- * 
-     */
-    public static CompletableFuture<ListWebAppConnectionStringsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * String dictionary resource.
      * API Version: 2020-12-01.

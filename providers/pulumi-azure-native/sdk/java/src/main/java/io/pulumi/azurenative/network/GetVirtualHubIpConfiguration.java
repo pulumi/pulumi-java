@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualHubIpConfiguration {
     private GetVirtualHubIpConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualHubIpConfigurationArgs.Builder a);
-    }
-    private static GetVirtualHubIpConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualHubIpConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * IpConfigurations.
- * API Version: 2020-11-01.
- * 
-     *
-     * IpConfigurations.
- * 
-     */
-    public static CompletableFuture<GetVirtualHubIpConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * IpConfigurations.
      * API Version: 2020-11-01.

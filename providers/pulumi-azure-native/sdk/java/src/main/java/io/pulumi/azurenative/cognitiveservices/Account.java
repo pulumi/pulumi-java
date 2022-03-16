@@ -161,22 +161,6 @@ public class Account extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AccountArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.cognitiveservices.AccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.cognitiveservices.AccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Account(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -208,12 +192,12 @@ public class Account extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:cognitiveservices/v20160201preview:Account").build()),
-                Output.of(Alias.builder().type("azure-native:cognitiveservices/v20170418:Account").build()),
-                Output.of(Alias.builder().type("azure-native:cognitiveservices/v20210430:Account").build()),
-                Output.of(Alias.builder().type("azure-native:cognitiveservices/v20211001:Account").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:cognitiveservices/v20160201preview:Account").build()),
+                Output.of(Alias.builder().setType("azure-native:cognitiveservices/v20170418:Account").build()),
+                Output.of(Alias.builder().setType("azure-native:cognitiveservices/v20210430:Account").build()),
+                Output.of(Alias.builder().setType("azure-native:cognitiveservices/v20211001:Account").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

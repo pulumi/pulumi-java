@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBlobContainerDataSetMapping {
     private GetBlobContainerDataSetMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetBlobContainerDataSetMappingArgs.Builder a);
-    }
-    private static GetBlobContainerDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBlobContainerDataSetMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Blob container data set mapping.
- * API Version: 2020-09-01.
- * 
-     *
-     * A Blob container data set mapping.
- * 
-     */
-    public static CompletableFuture<GetBlobContainerDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Blob container data set mapping.
      * API Version: 2020-09-01.

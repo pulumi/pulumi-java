@@ -158,22 +158,6 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AttachedDatabaseConfigurationArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.kusto.AttachedDatabaseConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.kusto.AttachedDatabaseConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AttachedDatabaseConfiguration(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -205,15 +189,15 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:kusto/v20190907:AttachedDatabaseConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20191109:AttachedDatabaseConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20200215:AttachedDatabaseConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20200614:AttachedDatabaseConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20200918:AttachedDatabaseConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210101:AttachedDatabaseConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kusto/v20210827:AttachedDatabaseConfiguration").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:kusto/v20190907:AttachedDatabaseConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20191109:AttachedDatabaseConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200215:AttachedDatabaseConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200614:AttachedDatabaseConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200918:AttachedDatabaseConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20210101:AttachedDatabaseConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20210827:AttachedDatabaseConfiguration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

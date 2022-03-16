@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListOpenShiftClusterAdminCredentials {
     private ListOpenShiftClusterAdminCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(ListOpenShiftClusterAdminCredentialsArgs.Builder a);
-    }
-    private static ListOpenShiftClusterAdminCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListOpenShiftClusterAdminCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
- * API Version: 2021-09-01-preview.
- * 
-     *
-     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
- * 
-     */
-    public static CompletableFuture<ListOpenShiftClusterAdminCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
      * API Version: 2021-09-01-preview.

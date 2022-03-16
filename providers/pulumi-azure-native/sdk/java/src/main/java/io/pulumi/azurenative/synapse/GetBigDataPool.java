@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBigDataPool {
     private GetBigDataPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetBigDataPoolArgs.Builder a);
-    }
-    private static GetBigDataPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBigDataPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Big Data pool
- * API Version: 2021-03-01.
- * 
-     *
-     * A Big Data pool
- * 
-     */
-    public static CompletableFuture<GetBigDataPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Big Data pool
      * API Version: 2021-03-01.

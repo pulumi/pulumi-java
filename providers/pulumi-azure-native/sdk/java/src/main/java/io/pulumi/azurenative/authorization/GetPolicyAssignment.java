@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPolicyAssignment {
     private GetPolicyAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetPolicyAssignmentArgs.Builder a);
-    }
-    private static GetPolicyAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPolicyAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The policy assignment.
- * API Version: 2020-09-01.
- * 
-     *
-     * The policy assignment.
- * 
-     */
-    public static CompletableFuture<GetPolicyAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The policy assignment.
      * API Version: 2020-09-01.

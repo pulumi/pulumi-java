@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRedis {
     private GetRedis() {}
-    public interface BuilderApplicator {
-        public void apply(GetRedisArgs.Builder a);
-    }
-    private static GetRedisArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRedisArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A single Redis item in List or Get Operation.
- * API Version: 2020-06-01.
- * 
-     *
-     * A single Redis item in List or Get Operation.
- * 
-     */
-    public static CompletableFuture<GetRedisResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A single Redis item in List or Get Operation.
      * API Version: 2020-06-01.

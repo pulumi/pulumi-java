@@ -103,22 +103,6 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ConfigurationProfilePreferenceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.automanage.ConfigurationProfilePreferenceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.automanage.ConfigurationProfilePreferenceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ConfigurationProfilePreference(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -150,9 +134,9 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:automanage/v20200630preview:ConfigurationProfilePreference").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:automanage/v20200630preview:ConfigurationProfilePreference").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

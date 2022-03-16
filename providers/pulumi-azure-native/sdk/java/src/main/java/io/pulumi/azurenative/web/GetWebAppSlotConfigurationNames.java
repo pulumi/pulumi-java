@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppSlotConfigurationNames {
     private GetWebAppSlotConfigurationNames() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppSlotConfigurationNamesArgs.Builder a);
-    }
-    private static GetWebAppSlotConfigurationNamesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppSlotConfigurationNamesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Slot Config names azure resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * Slot Config names azure resource.
- * 
-     */
-    public static CompletableFuture<GetWebAppSlotConfigurationNamesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Slot Config names azure resource.
      * API Version: 2020-12-01.

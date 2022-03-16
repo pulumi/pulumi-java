@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppPublishingCredentials {
     private ListWebAppPublishingCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppPublishingCredentialsArgs.Builder a);
-    }
-    private static ListWebAppPublishingCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppPublishingCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * User credentials used for publishing activity.
- * API Version: 2020-12-01.
- * 
-     *
-     * User credentials used for publishing activity.
- * 
-     */
-    public static CompletableFuture<ListWebAppPublishingCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * User credentials used for publishing activity.
      * API Version: 2020-12-01.

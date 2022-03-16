@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLiveEvent {
     private GetLiveEvent() {}
-    public interface BuilderApplicator {
-        public void apply(GetLiveEventArgs.Builder a);
-    }
-    private static GetLiveEventArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLiveEventArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The live event.
- * API Version: 2020-05-01.
- * 
-     *
-     * The live event.
- * 
-     */
-    public static CompletableFuture<GetLiveEventResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The live event.
      * API Version: 2020-05-01.

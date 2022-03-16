@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGraphQuery {
     private GetGraphQuery() {}
-    public interface BuilderApplicator {
-        public void apply(GetGraphQueryArgs.Builder a);
-    }
-    private static GetGraphQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGraphQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Graph Query entity definition.
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * Graph Query entity definition.
- * 
-     */
-    public static CompletableFuture<GetGraphQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Graph Query entity definition.
      * API Version: 2018-09-01-preview.

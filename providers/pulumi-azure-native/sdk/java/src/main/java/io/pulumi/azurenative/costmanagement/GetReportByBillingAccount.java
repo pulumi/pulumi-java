@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReportByBillingAccount {
     private GetReportByBillingAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetReportByBillingAccountArgs.Builder a);
-    }
-    private static GetReportByBillingAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReportByBillingAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A report resource.
- * API Version: 2018-08-01-preview.
- * 
-     *
-     * A report resource.
- * 
-     */
-    public static CompletableFuture<GetReportByBillingAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A report resource.
      * API Version: 2018-08-01-preview.

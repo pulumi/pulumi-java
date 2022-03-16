@@ -113,22 +113,6 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebAppRelayServiceConnectionSlotArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppRelayServiceConnectionSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppRelayServiceConnectionSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppRelayServiceConnectionSlot(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -160,21 +144,21 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:web/v20150801:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppRelayServiceConnectionSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppRelayServiceConnectionSlot").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppRelayServiceConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppRelayServiceConnectionSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

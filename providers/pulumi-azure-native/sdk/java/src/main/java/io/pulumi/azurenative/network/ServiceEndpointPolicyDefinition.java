@@ -115,22 +115,6 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
         return this.serviceResources;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ServiceEndpointPolicyDefinitionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.ServiceEndpointPolicyDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.ServiceEndpointPolicyDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ServiceEndpointPolicyDefinition(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -162,31 +146,31 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20180701:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180801:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181001:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181101:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181201:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190201:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190401:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190601:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190701:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190801:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190901:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191101:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191201:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200301:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200401:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200501:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200601:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200701:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200801:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20201101:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210201:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210301:ServiceEndpointPolicyDefinition").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ServiceEndpointPolicyDefinition").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:ServiceEndpointPolicyDefinition").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:ServiceEndpointPolicyDefinition").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

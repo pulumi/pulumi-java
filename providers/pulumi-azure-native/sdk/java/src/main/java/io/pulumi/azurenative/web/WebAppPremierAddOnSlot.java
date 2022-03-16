@@ -169,22 +169,6 @@ public class WebAppPremierAddOnSlot extends io.pulumi.resources.CustomResource {
         return this.vendor;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebAppPremierAddOnSlotArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppPremierAddOnSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppPremierAddOnSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppPremierAddOnSlot(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -216,21 +200,21 @@ public class WebAppPremierAddOnSlot extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:web/v20150801:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppPremierAddOnSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppPremierAddOnSlot").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppPremierAddOnSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppPremierAddOnSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

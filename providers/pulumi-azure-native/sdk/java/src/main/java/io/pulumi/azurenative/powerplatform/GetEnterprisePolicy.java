@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnterprisePolicy {
     private GetEnterprisePolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnterprisePolicyArgs.Builder a);
-    }
-    private static GetEnterprisePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnterprisePolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the EnterprisePolicy.
- * API Version: 2020-10-30-preview.
- * 
-     *
-     * Definition of the EnterprisePolicy.
- * 
-     */
-    public static CompletableFuture<GetEnterprisePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the EnterprisePolicy.
      * API Version: 2020-10-30-preview.

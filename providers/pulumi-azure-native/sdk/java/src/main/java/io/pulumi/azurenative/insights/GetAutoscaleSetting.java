@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAutoscaleSetting {
     private GetAutoscaleSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetAutoscaleSettingArgs.Builder a);
-    }
-    private static GetAutoscaleSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAutoscaleSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The autoscale setting resource.
- * API Version: 2015-04-01.
- * 
-     *
-     * The autoscale setting resource.
- * 
-     */
-    public static CompletableFuture<GetAutoscaleSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The autoscale setting resource.
      * API Version: 2015-04-01.

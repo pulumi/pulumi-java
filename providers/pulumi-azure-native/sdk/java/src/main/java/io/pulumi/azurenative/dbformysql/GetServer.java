@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServer {
     private GetServer() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerArgs.Builder a);
-    }
-    private static GetServerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a server.
- * API Version: 2017-12-01.
- * 
-     *
-     * Represents a server.
- * 
-     */
-    public static CompletableFuture<GetServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a server.
      * API Version: 2017-12-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGlobalReachConnection {
     private GetGlobalReachConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetGlobalReachConnectionArgs.Builder a);
-    }
-    private static GetGlobalReachConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGlobalReachConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A global reach connection resource
- * API Version: 2020-07-17-preview.
- * 
-     *
-     * A global reach connection resource
- * 
-     */
-    public static CompletableFuture<GetGlobalReachConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A global reach connection resource
      * API Version: 2020-07-17-preview.

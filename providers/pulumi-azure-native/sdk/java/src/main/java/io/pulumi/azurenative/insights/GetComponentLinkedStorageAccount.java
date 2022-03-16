@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetComponentLinkedStorageAccount {
     private GetComponentLinkedStorageAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetComponentLinkedStorageAccountArgs.Builder a);
-    }
-    private static GetComponentLinkedStorageAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetComponentLinkedStorageAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Application Insights component linked storage accounts
- * API Version: 2020-03-01-preview.
- * 
-     *
-     * An Application Insights component linked storage accounts
- * 
-     */
-    public static CompletableFuture<GetComponentLinkedStorageAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Application Insights component linked storage accounts
      * API Version: 2020-03-01-preview.

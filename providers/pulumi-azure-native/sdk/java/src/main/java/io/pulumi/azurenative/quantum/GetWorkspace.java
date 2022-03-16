@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkspace {
     private GetWorkspace() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkspaceArgs.Builder a);
-    }
-    private static GetWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The resource proxy definition object for quantum workspace.
- * API Version: 2019-11-04-preview.
- * 
-     *
-     * The resource proxy definition object for quantum workspace.
- * 
-     */
-    public static CompletableFuture<GetWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The resource proxy definition object for quantum workspace.
      * API Version: 2019-11-04-preview.

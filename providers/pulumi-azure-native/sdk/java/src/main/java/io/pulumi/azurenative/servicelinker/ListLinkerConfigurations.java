@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListLinkerConfigurations {
     private ListLinkerConfigurations() {}
-    public interface BuilderApplicator {
-        public void apply(ListLinkerConfigurationsArgs.Builder a);
-    }
-    private static ListLinkerConfigurationsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListLinkerConfigurationsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Configurations for source resource, include appSettings, connectionString and serviceBindings
- * API Version: 2021-11-01-preview.
- * 
-     *
-     * Configurations for source resource, include appSettings, connectionString and serviceBindings
- * 
-     */
-    public static CompletableFuture<ListLinkerConfigurationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Configurations for source resource, include appSettings, connectionString and serviceBindings
      * API Version: 2021-11-01-preview.

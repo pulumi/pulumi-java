@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHost {
     private GetHost() {}
-    public interface BuilderApplicator {
-        public void apply(GetHostArgs.Builder a);
-    }
-    private static GetHostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Define the host.
- * API Version: 2020-10-01-preview.
- * 
-     *
-     * Define the host.
- * 
-     */
-    public static CompletableFuture<GetHostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Define the host.
      * API Version: 2020-10-01-preview.

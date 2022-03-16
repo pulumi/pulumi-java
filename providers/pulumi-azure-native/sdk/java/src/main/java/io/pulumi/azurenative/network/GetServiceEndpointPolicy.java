@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceEndpointPolicy {
     private GetServiceEndpointPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceEndpointPolicyArgs.Builder a);
-    }
-    private static GetServiceEndpointPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceEndpointPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Service End point policy resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Service End point policy resource.
- * 
-     */
-    public static CompletableFuture<GetServiceEndpointPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Service End point policy resource.
      * API Version: 2020-11-01.

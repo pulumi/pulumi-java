@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegrationRuntimeStatus {
     private GetIntegrationRuntimeStatus() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationRuntimeStatusArgs.Builder a);
-    }
-    private static GetIntegrationRuntimeStatusArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationRuntimeStatusArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Integration runtime status response.
- * API Version: 2021-03-01.
- * 
-     *
-     * Integration runtime status response.
- * 
-     */
-    public static CompletableFuture<GetIntegrationRuntimeStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Integration runtime status response.
      * API Version: 2021-03-01.

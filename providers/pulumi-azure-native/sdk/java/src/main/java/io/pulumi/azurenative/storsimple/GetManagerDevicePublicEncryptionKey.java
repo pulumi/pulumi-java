@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagerDevicePublicEncryptionKey {
     private GetManagerDevicePublicEncryptionKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagerDevicePublicEncryptionKeyArgs.Builder a);
-    }
-    private static GetManagerDevicePublicEncryptionKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagerDevicePublicEncryptionKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The public key.
- * API Version: 2017-06-01.
- * 
-     *
-     * The public key.
- * 
-     */
-    public static CompletableFuture<GetManagerDevicePublicEncryptionKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The public key.
      * API Version: 2017-06-01.

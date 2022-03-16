@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListVirtualMachineApplicableSchedules {
     private ListVirtualMachineApplicableSchedules() {}
-    public interface BuilderApplicator {
-        public void apply(ListVirtualMachineApplicableSchedulesArgs.Builder a);
-    }
-    private static ListVirtualMachineApplicableSchedulesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListVirtualMachineApplicableSchedulesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schedules applicable to a virtual machine. The schedules may have been defined on a VM or on lab level.
- * API Version: 2018-09-15.
- * 
-     *
-     * Schedules applicable to a virtual machine. The schedules may have been defined on a VM or on lab level.
- * 
-     */
-    public static CompletableFuture<ListVirtualMachineApplicableSchedulesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schedules applicable to a virtual machine. The schedules may have been defined on a VM or on lab level.
      * API Version: 2018-09-15.

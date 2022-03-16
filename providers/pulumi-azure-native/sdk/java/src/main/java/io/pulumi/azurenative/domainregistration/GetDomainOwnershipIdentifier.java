@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDomainOwnershipIdentifier {
     private GetDomainOwnershipIdentifier() {}
-    public interface BuilderApplicator {
-        public void apply(GetDomainOwnershipIdentifierArgs.Builder a);
-    }
-    private static GetDomainOwnershipIdentifierArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDomainOwnershipIdentifierArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Domain ownership Identifier.
- * API Version: 2020-10-01.
- * 
-     *
-     * Domain ownership Identifier.
- * 
-     */
-    public static CompletableFuture<GetDomainOwnershipIdentifierResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Domain ownership Identifier.
      * API Version: 2020-10-01.

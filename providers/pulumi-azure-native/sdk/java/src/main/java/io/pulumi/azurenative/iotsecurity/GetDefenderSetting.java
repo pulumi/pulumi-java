@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDefenderSetting {
     private GetDefenderSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetDefenderSettingArgs.Builder a);
-    }
-    private static GetDefenderSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDefenderSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * IoT Defender settings
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * IoT Defender settings
- * 
-     */
-    public static CompletableFuture<GetDefenderSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * IoT Defender settings
      * API Version: 2021-02-01-preview.

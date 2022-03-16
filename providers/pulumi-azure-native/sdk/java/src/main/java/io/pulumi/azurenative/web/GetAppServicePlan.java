@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAppServicePlan {
     private GetAppServicePlan() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppServicePlanArgs.Builder a);
-    }
-    private static GetAppServicePlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppServicePlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * App Service plan.
- * API Version: 2020-12-01.
- * 
-     *
-     * App Service plan.
- * 
-     */
-    public static CompletableFuture<GetAppServicePlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * App Service plan.
      * API Version: 2020-12-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListAssetContainerSas {
     private ListAssetContainerSas() {}
-    public interface BuilderApplicator {
-        public void apply(ListAssetContainerSasArgs.Builder a);
-    }
-    private static ListAssetContainerSasArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListAssetContainerSasArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Asset Storage container SAS URLs.
- * API Version: 2020-05-01.
- * 
-     *
-     * The Asset Storage container SAS URLs.
- * 
-     */
-    public static CompletableFuture<ListAssetContainerSasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Asset Storage container SAS URLs.
      * API Version: 2020-05-01.

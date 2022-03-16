@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKustoPoolPrincipalAssignment {
     private GetKustoPoolPrincipalAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetKustoPoolPrincipalAssignmentArgs.Builder a);
-    }
-    private static GetKustoPoolPrincipalAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKustoPoolPrincipalAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing a cluster principal assignment.
- * API Version: 2021-04-01-preview.
- * 
-     *
-     * Class representing a cluster principal assignment.
- * 
-     */
-    public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing a cluster principal assignment.
      * API Version: 2021-04-01-preview.

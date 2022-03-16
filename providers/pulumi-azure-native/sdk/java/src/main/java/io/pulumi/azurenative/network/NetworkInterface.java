@@ -363,22 +363,6 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
         return this.virtualMachine;
     }
 
-    public interface BuilderApplicator {
-        public void apply(NetworkInterfaceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.NetworkInterfaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.NetworkInterfaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public NetworkInterface(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -410,47 +394,47 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20150501preview:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20150615:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20160330:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20160601:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20160901:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20161201:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170301:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170601:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170801:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170901:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20171001:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20171101:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180101:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180201:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180401:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180601:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180701:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180801:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181001:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181101:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181201:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190201:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190401:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190601:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190701:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190801:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190901:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191101:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191201:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200301:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200401:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200501:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200601:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200701:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200801:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20201101:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210201:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210301:NetworkInterface").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkInterface").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:network/v20150501preview:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:NetworkInterface").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:NetworkInterface").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

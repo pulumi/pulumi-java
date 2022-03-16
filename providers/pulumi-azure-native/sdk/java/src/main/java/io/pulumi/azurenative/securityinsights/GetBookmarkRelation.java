@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBookmarkRelation {
     private GetBookmarkRelation() {}
-    public interface BuilderApplicator {
-        public void apply(GetBookmarkRelationArgs.Builder a);
-    }
-    private static GetBookmarkRelationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBookmarkRelationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a relation between two resources
- * API Version: 2019-01-01-preview.
- * 
-     *
-     * Represents a relation between two resources
- * 
-     */
-    public static CompletableFuture<GetBookmarkRelationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a relation between two resources
      * API Version: 2019-01-01-preview.

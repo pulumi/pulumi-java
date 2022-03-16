@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission {
     private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission() {}
-    public interface BuilderApplicator {
-        public void apply(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs.Builder a);
-    }
-    private static ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of invoice section properties with create subscription permission.
- * API Version: 2020-05-01.
- * 
-     *
-     * The list of invoice section properties with create subscription permission.
- * 
-     */
-    public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of invoice section properties with create subscription permission.
      * API Version: 2020-05-01.

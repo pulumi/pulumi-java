@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnectorMapping {
     private GetConnectorMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectorMappingArgs.Builder a);
-    }
-    private static GetConnectorMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectorMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The connector mapping resource format.
- * API Version: 2017-04-26.
- * 
-     *
-     * The connector mapping resource format.
- * 
-     */
-    public static CompletableFuture<GetConnectorMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The connector mapping resource format.
      * API Version: 2017-04-26.

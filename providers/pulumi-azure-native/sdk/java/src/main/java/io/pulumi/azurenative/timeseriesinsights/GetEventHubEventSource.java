@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventHubEventSource {
     private GetEventHubEventSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventHubEventSourceArgs.Builder a);
-    }
-    private static GetEventHubEventSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventHubEventSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An event source that receives its data from an Azure EventHub.
- * API Version: 2020-05-15.
- * 
-     *
-     * An event source that receives its data from an Azure EventHub.
- * 
-     */
-    public static CompletableFuture<GetEventHubEventSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An event source that receives its data from an Azure EventHub.
      * API Version: 2020-05-15.

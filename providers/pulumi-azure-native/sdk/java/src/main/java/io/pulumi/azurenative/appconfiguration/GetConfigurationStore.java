@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfigurationStore {
     private GetConfigurationStore() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationStoreArgs.Builder a);
-    }
-    private static GetConfigurationStoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationStoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
- * API Version: 2020-06-01.
- * 
-     *
-     * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
- * 
-     */
-    public static CompletableFuture<GetConfigurationStoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
      * API Version: 2020-06-01.

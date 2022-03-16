@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetazureADMetric {
     private GetazureADMetric() {}
-    public interface BuilderApplicator {
-        public void apply(GetazureADMetricArgs.Builder a);
-    }
-    private static GetazureADMetricArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetazureADMetricArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AzureADMetrics resource.
- * API Version: 2020-07-01-preview.
- * 
-     *
-     * AzureADMetrics resource.
- * 
-     */
-    public static CompletableFuture<GetazureADMetricResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AzureADMetrics resource.
      * API Version: 2020-07-01-preview.

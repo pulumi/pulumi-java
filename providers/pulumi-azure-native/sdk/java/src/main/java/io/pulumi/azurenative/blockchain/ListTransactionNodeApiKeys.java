@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListTransactionNodeApiKeys {
     private ListTransactionNodeApiKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListTransactionNodeApiKeysArgs.Builder a);
-    }
-    private static ListTransactionNodeApiKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListTransactionNodeApiKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of the API key payload which is exposed in the response of the resource provider.
- * API Version: 2018-06-01-preview.
- * 
-     *
-     * Collection of the API key payload which is exposed in the response of the resource provider.
- * 
-     */
-    public static CompletableFuture<ListTransactionNodeApiKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of the API key payload which is exposed in the response of the resource provider.
      * API Version: 2018-06-01-preview.

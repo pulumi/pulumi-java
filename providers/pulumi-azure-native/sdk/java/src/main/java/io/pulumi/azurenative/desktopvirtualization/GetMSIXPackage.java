@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMSIXPackage {
     private GetMSIXPackage() {}
-    public interface BuilderApplicator {
-        public void apply(GetMSIXPackageArgs.Builder a);
-    }
-    private static GetMSIXPackageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMSIXPackageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schema for MSIX Package properties.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Schema for MSIX Package properties.
- * 
-     */
-    public static CompletableFuture<GetMSIXPackageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schema for MSIX Package properties.
      * API Version: 2021-02-01-preview.

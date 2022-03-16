@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetClusterGatewaySettings {
     private GetClusterGatewaySettings() {}
-    public interface BuilderApplicator {
-        public void apply(GetClusterGatewaySettingsArgs.Builder a);
-    }
-    private static GetClusterGatewaySettingsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetClusterGatewaySettingsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gateway settings.
- * API Version: 2018-06-01-preview.
- * 
-     *
-     * Gateway settings.
- * 
-     */
-    public static CompletableFuture<GetClusterGatewaySettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gateway settings.
      * API Version: 2018-06-01-preview.

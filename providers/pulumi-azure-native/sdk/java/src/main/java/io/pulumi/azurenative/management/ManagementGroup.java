@@ -117,22 +117,6 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable ManagementGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.management.ManagementGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.management.ManagementGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ManagementGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -164,16 +148,16 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:management/v20171101preview:ManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:management/v20180101preview:ManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:management/v20180301preview:ManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:management/v20191101:ManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:management/v20200201:ManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:management/v20200501:ManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:management/v20201001:ManagementGroup").build()),
-                Output.of(Alias.builder().type("azure-native:management/v20210401:ManagementGroup").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:management/v20171101preview:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20180101preview:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20180301preview:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20191101:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20200201:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20200501:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20201001:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20210401:ManagementGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

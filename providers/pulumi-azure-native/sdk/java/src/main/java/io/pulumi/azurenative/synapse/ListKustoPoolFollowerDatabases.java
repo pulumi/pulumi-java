@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListKustoPoolFollowerDatabases {
     private ListKustoPoolFollowerDatabases() {}
-    public interface BuilderApplicator {
-        public void apply(ListKustoPoolFollowerDatabasesArgs.Builder a);
-    }
-    private static ListKustoPoolFollowerDatabasesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListKustoPoolFollowerDatabasesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list Kusto database principals operation response.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * The list Kusto database principals operation response.
- * 
-     */
-    public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list Kusto database principals operation response.
      * API Version: 2021-06-01-preview.

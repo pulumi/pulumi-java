@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPipeline {
     private GetPipeline() {}
-    public interface BuilderApplicator {
-        public void apply(GetPipelineArgs.Builder a);
-    }
-    private static GetPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPipelineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
- * API Version: 2020-07-13-preview.
- * 
-     *
-     * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
- * 
-     */
-    public static CompletableFuture<GetPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
      * API Version: 2020-07-13-preview.

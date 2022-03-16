@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerCollector {
     private GetServerCollector() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerCollectorArgs.Builder a);
-    }
-    private static GetServerCollectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerCollectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2019-10-01.
- * 
-     */
-    public static CompletableFuture<GetServerCollectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2019-10-01.
      * 

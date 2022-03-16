@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListLabVhds {
     private ListLabVhds() {}
-    public interface BuilderApplicator {
-        public void apply(ListLabVhdsArgs.Builder a);
-    }
-    private static ListLabVhdsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListLabVhdsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The response of a list operation.
- * API Version: 2018-09-15.
- * 
-     *
-     * The response of a list operation.
- * 
-     */
-    public static CompletableFuture<ListLabVhdsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The response of a list operation.
      * API Version: 2018-09-15.

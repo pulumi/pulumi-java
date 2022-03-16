@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVolumeContainer {
     private GetVolumeContainer() {}
-    public interface BuilderApplicator {
-        public void apply(GetVolumeContainerArgs.Builder a);
-    }
-    private static GetVolumeContainerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVolumeContainerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The volume container.
- * API Version: 2017-06-01.
- * 
-     *
-     * The volume container.
- * 
-     */
-    public static CompletableFuture<GetVolumeContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The volume container.
      * API Version: 2017-06-01.

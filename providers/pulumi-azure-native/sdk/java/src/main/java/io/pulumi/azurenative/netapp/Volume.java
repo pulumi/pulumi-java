@@ -407,22 +407,6 @@ public class Volume extends io.pulumi.resources.CustomResource {
         return this.volumeType;
     }
 
-    public interface BuilderApplicator {
-        public void apply(VolumeArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.netapp.VolumeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.netapp.VolumeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Volume(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -454,29 +438,29 @@ public class Volume extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:netapp/v20170815:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20190501:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20190601:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20190701:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20190801:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20191001:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20191101:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20200201:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20200301:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20200501:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20200601:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20200701:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20200801:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20200901:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20201101:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20201201:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210201:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210401:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210401preview:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210601:Volume").build()),
-                Output.of(Alias.builder().type("azure-native:netapp/v20210801:Volume").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:netapp/v20170815:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20190501:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20190601:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20190701:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20190801:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20191001:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20191101:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200201:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200301:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200501:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200601:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200701:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200801:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200901:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20201101:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20201201:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210201:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210401:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210401preview:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210601:Volume").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210801:Volume").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLabelingJob {
     private GetLabelingJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetLabelingJobArgs.Builder a);
-    }
-    private static GetLabelingJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLabelingJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Machine Learning labeling job object wrapped into ARM resource envelope.
- * API Version: 2020-09-01-preview.
- * 
-     *
-     * Machine Learning labeling job object wrapped into ARM resource envelope.
- * 
-     */
-    public static CompletableFuture<GetLabelingJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Machine Learning labeling job object wrapped into ARM resource envelope.
      * API Version: 2020-09-01-preview.

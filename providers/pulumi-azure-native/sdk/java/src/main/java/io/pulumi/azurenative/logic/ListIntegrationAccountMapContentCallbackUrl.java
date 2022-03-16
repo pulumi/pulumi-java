@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListIntegrationAccountMapContentCallbackUrl {
     private ListIntegrationAccountMapContentCallbackUrl() {}
-    public interface BuilderApplicator {
-        public void apply(ListIntegrationAccountMapContentCallbackUrlArgs.Builder a);
-    }
-    private static ListIntegrationAccountMapContentCallbackUrlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListIntegrationAccountMapContentCallbackUrlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The workflow trigger callback URL.
- * API Version: 2019-05-01.
- * 
-     *
-     * The workflow trigger callback URL.
- * 
-     */
-    public static CompletableFuture<ListIntegrationAccountMapContentCallbackUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The workflow trigger callback URL.
      * API Version: 2019-05-01.

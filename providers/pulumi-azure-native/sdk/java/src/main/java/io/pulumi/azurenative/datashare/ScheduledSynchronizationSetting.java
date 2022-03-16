@@ -160,22 +160,6 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
         return this.userName;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ScheduledSynchronizationSettingArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.datashare.ScheduledSynchronizationSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.datashare.ScheduledSynchronizationSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ScheduledSynchronizationSetting(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -214,13 +198,13 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:datashare/v20181101preview:ScheduledSynchronizationSetting").build()),
-                Output.of(Alias.builder().type("azure-native:datashare/v20191101:ScheduledSynchronizationSetting").build()),
-                Output.of(Alias.builder().type("azure-native:datashare/v20200901:ScheduledSynchronizationSetting").build()),
-                Output.of(Alias.builder().type("azure-native:datashare/v20201001preview:ScheduledSynchronizationSetting").build()),
-                Output.of(Alias.builder().type("azure-native:datashare/v20210801:ScheduledSynchronizationSetting").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:ScheduledSynchronizationSetting").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:ScheduledSynchronizationSetting").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:ScheduledSynchronizationSetting").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:ScheduledSynchronizationSetting").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:ScheduledSynchronizationSetting").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

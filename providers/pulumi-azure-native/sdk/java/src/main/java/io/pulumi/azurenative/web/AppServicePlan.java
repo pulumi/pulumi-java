@@ -403,22 +403,6 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
         return this.workerTierName;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AppServicePlanArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.AppServicePlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.AppServicePlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AppServicePlan(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -450,20 +434,20 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:web/v20150801:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20160901:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20180201:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20190801:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200601:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200901:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201001:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201201:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210101:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210115:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210201:AppServicePlan").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210301:AppServicePlan").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160901:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:AppServicePlan").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:AppServicePlan").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

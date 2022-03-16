@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLivePipeline {
     private GetLivePipeline() {}
-    public interface BuilderApplicator {
-        public void apply(GetLivePipelineArgs.Builder a);
-    }
-    private static GetLivePipelineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLivePipelineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Live pipeline represents a unique instance of a live topology, used for real-time ingestion, archiving and publishing of content for a unique RTSP camera.
- * API Version: 2021-11-01-preview.
- * 
-     *
-     * Live pipeline represents a unique instance of a live topology, used for real-time ingestion, archiving and publishing of content for a unique RTSP camera.
- * 
-     */
-    public static CompletableFuture<GetLivePipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Live pipeline represents a unique instance of a live topology, used for real-time ingestion, archiving and publishing of content for a unique RTSP camera.
      * API Version: 2021-11-01-preview.

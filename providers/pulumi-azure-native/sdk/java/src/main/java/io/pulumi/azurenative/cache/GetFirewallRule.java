@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFirewallRule {
     private GetFirewallRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetFirewallRuleArgs.Builder a);
-    }
-    private static GetFirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFirewallRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
- * API Version: 2020-06-01.
- * 
-     *
-     * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
- * 
-     */
-    public static CompletableFuture<GetFirewallRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
      * API Version: 2020-06-01.

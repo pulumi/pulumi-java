@@ -156,22 +156,6 @@ public class MachineLearningCompute extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(MachineLearningComputeArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.machinelearningservices.MachineLearningComputeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.machinelearningservices.MachineLearningComputeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public MachineLearningCompute(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -203,27 +187,27 @@ public class MachineLearningCompute extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20180301preview:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20181119:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20190501:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20190601:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20191101:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200101:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200218preview:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200301:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200401:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200501preview:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200515preview:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200601:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200801:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200901preview:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210101:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210301preview:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210401:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210701:MachineLearningCompute").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20220101preview:MachineLearningCompute").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20180301preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20181119:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20190501:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20190601:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20191101:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200101:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200218preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200301:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200401:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200501preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200515preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200601:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200801:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200901preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210101:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210301preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210401:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210701:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20220101preview:MachineLearningCompute").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

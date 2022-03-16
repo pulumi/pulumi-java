@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScheduledSynchronizationSetting {
     private GetScheduledSynchronizationSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetScheduledSynchronizationSettingArgs.Builder a);
-    }
-    private static GetScheduledSynchronizationSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScheduledSynchronizationSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A type of synchronization setting based on schedule
- * API Version: 2020-09-01.
- * 
-     *
-     * A type of synchronization setting based on schedule
- * 
-     */
-    public static CompletableFuture<GetScheduledSynchronizationSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A type of synchronization setting based on schedule
      * API Version: 2020-09-01.

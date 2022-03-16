@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKustoClusterDataSetMapping {
     private GetKustoClusterDataSetMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetKustoClusterDataSetMappingArgs.Builder a);
-    }
-    private static GetKustoClusterDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKustoClusterDataSetMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Kusto cluster data set mapping
- * API Version: 2020-09-01.
- * 
-     *
-     * A Kusto cluster data set mapping
- * 
-     */
-    public static CompletableFuture<GetKustoClusterDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Kusto cluster data set mapping
      * API Version: 2020-09-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateLinkScopedResource {
     private GetPrivateLinkScopedResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateLinkScopedResourceArgs.Builder a);
-    }
-    private static GetPrivateLinkScopedResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateLinkScopedResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A private link scoped resource
- * API Version: 2019-10-17-preview.
- * 
-     *
-     * A private link scoped resource
- * 
-     */
-    public static CompletableFuture<GetPrivateLinkScopedResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A private link scoped resource
      * API Version: 2019-10-17-preview.

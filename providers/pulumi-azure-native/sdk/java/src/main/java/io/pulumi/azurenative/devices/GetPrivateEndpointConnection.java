@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnection {
     private GetPrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The private endpoint connection of an IotHub
- * API Version: 2020-08-31.
- * 
-     *
-     * The private endpoint connection of an IotHub
- * 
-     */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The private endpoint connection of an IotHub
      * API Version: 2020-08-31.

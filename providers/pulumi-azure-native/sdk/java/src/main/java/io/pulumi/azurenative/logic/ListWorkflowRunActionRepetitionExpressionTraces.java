@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWorkflowRunActionRepetitionExpressionTraces {
     private ListWorkflowRunActionRepetitionExpressionTraces() {}
-    public interface BuilderApplicator {
-        public void apply(ListWorkflowRunActionRepetitionExpressionTracesArgs.Builder a);
-    }
-    private static ListWorkflowRunActionRepetitionExpressionTracesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWorkflowRunActionRepetitionExpressionTracesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The expression traces.
- * API Version: 2019-05-01.
- * 
-     *
-     * The expression traces.
- * 
-     */
-    public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The expression traces.
      * API Version: 2019-05-01.

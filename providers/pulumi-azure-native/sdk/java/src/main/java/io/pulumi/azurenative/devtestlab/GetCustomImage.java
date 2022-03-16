@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomImage {
     private GetCustomImage() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomImageArgs.Builder a);
-    }
-    private static GetCustomImageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomImageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A custom image.
- * API Version: 2018-09-15.
- * 
-     *
-     * A custom image.
- * 
-     */
-    public static CompletableFuture<GetCustomImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A custom image.
      * API Version: 2018-09-15.

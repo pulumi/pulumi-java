@@ -147,22 +147,6 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(GalleryImageVersionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.compute.GalleryImageVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.compute.GalleryImageVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public GalleryImageVersion(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -194,14 +178,14 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:compute/v20180601:GalleryImageVersion").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20190301:GalleryImageVersion").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20190701:GalleryImageVersion").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20191201:GalleryImageVersion").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20200930:GalleryImageVersion").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20210701:GalleryImageVersion").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:compute/v20180601:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191201:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200930:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:GalleryImageVersion").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

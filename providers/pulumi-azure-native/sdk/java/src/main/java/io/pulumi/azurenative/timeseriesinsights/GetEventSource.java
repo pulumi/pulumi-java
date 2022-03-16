@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: EventHubEventSource, IoTHubEventSource. */
 public class GetEventSource {
     private GetEventSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventSourceArgs.Builder a);
-    }
-    private static GetEventSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
- * API Version: 2020-05-15.
- * 
-     *
-     * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
- * 
-     * @Deprecated
-     * Please use one of the variants: EventHubEventSource, IoTHubEventSource.
- * 
-     */
-    public static CompletableFuture<GetEventSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
      * API Version: 2020-05-15.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetArcAddon {
     private GetArcAddon() {}
-    public interface BuilderApplicator {
-        public void apply(GetArcAddonArgs.Builder a);
-    }
-    private static GetArcAddonArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetArcAddonArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Arc Addon.
- * API Version: 2020-12-01.
- * 
-     *
-     * Arc Addon.
- * 
-     */
-    public static CompletableFuture<GetArcAddonResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Arc Addon.
      * API Version: 2020-12-01.

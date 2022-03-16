@@ -387,22 +387,6 @@ public class Pool extends io.pulumi.resources.CustomResource {
         return this.vmSize;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PoolArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.batch.PoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.batch.PoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Pool(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -434,17 +418,17 @@ public class Pool extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:batch/v20170901:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20181201:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20190401:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20190801:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20200301:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20200501:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20200901:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20210101:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20210601:Pool").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:batch/v20170901:Pool").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20181201:Pool").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20190401:Pool").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20190801:Pool").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20200301:Pool").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20200501:Pool").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20200901:Pool").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20210101:Pool").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20210601:Pool").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFluidRelayServerKeys {
     private GetFluidRelayServerKeys() {}
-    public interface BuilderApplicator {
-        public void apply(GetFluidRelayServerKeysArgs.Builder a);
-    }
-    private static GetFluidRelayServerKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFluidRelayServerKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The set of available keys for this server.
- * API Version: 2021-03-12-preview.
- * 
-     *
-     * The set of available keys for this server.
- * 
-     */
-    public static CompletableFuture<GetFluidRelayServerKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The set of available keys for this server.
      * API Version: 2021-03-12-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetChannel {
     private GetChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetChannelArgs.Builder a);
-    }
-    private static GetChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The EngagementFabric channel
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * The EngagementFabric channel
- * 
-     */
-    public static CompletableFuture<GetChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The EngagementFabric channel
      * API Version: 2018-09-01-preview.

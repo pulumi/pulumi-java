@@ -265,22 +265,6 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
         return this.workspaceArmPath;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ApplicationGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.desktopvirtualization.ApplicationGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.desktopvirtualization.ApplicationGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ApplicationGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -312,21 +296,21 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20190123preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20190924preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20191210preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20200921preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20201019preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20201102preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20201110preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210114preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210201preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210309preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210712:ApplicationGroup").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:ApplicationGroup").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190123preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190924preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20191210preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20200921preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201019preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201102preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201110preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210114preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210201preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210309preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210712:ApplicationGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:ApplicationGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

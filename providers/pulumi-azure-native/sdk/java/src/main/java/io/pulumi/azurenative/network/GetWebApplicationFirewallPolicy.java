@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebApplicationFirewallPolicy {
     private GetWebApplicationFirewallPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebApplicationFirewallPolicyArgs.Builder a);
-    }
-    private static GetWebApplicationFirewallPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebApplicationFirewallPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Defines web application firewall policy.
- * API Version: 2020-11-01.
- * 
-     *
-     * Defines web application firewall policy.
- * 
-     */
-    public static CompletableFuture<GetWebApplicationFirewallPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Defines web application firewall policy.
      * API Version: 2020-11-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLinkedSubscription {
     private GetLinkedSubscription() {}
-    public interface BuilderApplicator {
-        public void apply(GetLinkedSubscriptionArgs.Builder a);
-    }
-    private static GetLinkedSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLinkedSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Linked Subscription information.
- * API Version: 2020-06-01-preview.
- * 
-     *
-     * Linked Subscription information.
- * 
-     */
-    public static CompletableFuture<GetLinkedSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Linked Subscription information.
      * API Version: 2020-06-01-preview.

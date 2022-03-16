@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWCFRelayAuthorizationRule {
     private GetWCFRelayAuthorizationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetWCFRelayAuthorizationRuleArgs.Builder a);
-    }
-    private static GetWCFRelayAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWCFRelayAuthorizationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Description of a namespace authorization rule.
- * API Version: 2017-04-01.
- * 
-     *
-     * Description of a namespace authorization rule.
- * 
-     */
-    public static CompletableFuture<GetWCFRelayAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Description of a namespace authorization rule.
      * API Version: 2017-04-01.

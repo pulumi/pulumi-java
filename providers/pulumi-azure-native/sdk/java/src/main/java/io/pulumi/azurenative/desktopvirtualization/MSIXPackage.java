@@ -216,22 +216,6 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(MSIXPackageArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.desktopvirtualization.MSIXPackageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.desktopvirtualization.MSIXPackageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public MSIXPackage(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -263,18 +247,18 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20200921preview:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20201019preview:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20201102preview:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20201110preview:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210114preview:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210201preview:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210309preview:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210401preview:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210712:MSIXPackage").build()),
-                Output.of(Alias.builder().type("azure-native:desktopvirtualization/v20210903preview:MSIXPackage").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20200921preview:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201019preview:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201102preview:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201110preview:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210114preview:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210201preview:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210309preview:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210712:MSIXPackage").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:MSIXPackage").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

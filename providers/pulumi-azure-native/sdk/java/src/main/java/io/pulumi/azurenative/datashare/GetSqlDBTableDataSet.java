@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlDBTableDataSet {
     private GetSqlDBTableDataSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlDBTableDataSetArgs.Builder a);
-    }
-    private static GetSqlDBTableDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlDBTableDataSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A SQL DB table data set.
- * API Version: 2020-09-01.
- * 
-     *
-     * A SQL DB table data set.
- * 
-     */
-    public static CompletableFuture<GetSqlDBTableDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A SQL DB table data set.
      * API Version: 2020-09-01.

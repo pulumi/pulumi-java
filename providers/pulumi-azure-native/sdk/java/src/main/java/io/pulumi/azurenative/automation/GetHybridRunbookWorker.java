@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHybridRunbookWorker {
     private GetHybridRunbookWorker() {}
-    public interface BuilderApplicator {
-        public void apply(GetHybridRunbookWorkerArgs.Builder a);
-    }
-    private static GetHybridRunbookWorkerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHybridRunbookWorkerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of hybrid runbook worker.
- * API Version: 2021-06-22.
- * 
-     *
-     * Definition of hybrid runbook worker.
- * 
-     */
-    public static CompletableFuture<GetHybridRunbookWorkerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of hybrid runbook worker.
      * API Version: 2021-06-22.

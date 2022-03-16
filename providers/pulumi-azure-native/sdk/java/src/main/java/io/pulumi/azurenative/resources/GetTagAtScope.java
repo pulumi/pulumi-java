@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTagAtScope {
     private GetTagAtScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetTagAtScopeArgs.Builder a);
-    }
-    private static GetTagAtScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTagAtScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Wrapper resource for tags API requests and responses.
- * API Version: 2019-10-01.
- * 
-     *
-     * Wrapper resource for tags API requests and responses.
- * 
-     */
-    public static CompletableFuture<GetTagAtScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Wrapper resource for tags API requests and responses.
      * API Version: 2019-10-01.

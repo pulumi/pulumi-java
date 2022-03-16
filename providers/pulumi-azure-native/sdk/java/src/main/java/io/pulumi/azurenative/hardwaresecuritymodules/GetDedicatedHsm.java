@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDedicatedHsm {
     private GetDedicatedHsm() {}
-    public interface BuilderApplicator {
-        public void apply(GetDedicatedHsmArgs.Builder a);
-    }
-    private static GetDedicatedHsmArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDedicatedHsmArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource information with extended details.
- * API Version: 2018-10-31-preview.
- * 
-     *
-     * Resource information with extended details.
- * 
-     */
-    public static CompletableFuture<GetDedicatedHsmResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource information with extended details.
      * API Version: 2018-10-31-preview.

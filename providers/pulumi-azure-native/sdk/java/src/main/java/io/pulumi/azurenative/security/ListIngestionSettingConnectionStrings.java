@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListIngestionSettingConnectionStrings {
     private ListIngestionSettingConnectionStrings() {}
-    public interface BuilderApplicator {
-        public void apply(ListIngestionSettingConnectionStringsArgs.Builder a);
-    }
-    private static ListIngestionSettingConnectionStringsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListIngestionSettingConnectionStringsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Connection string for ingesting security data and logs
- * API Version: 2021-01-15-preview.
- * 
-     *
-     * Connection string for ingesting security data and logs
- * 
-     */
-    public static CompletableFuture<ListIngestionSettingConnectionStringsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Connection string for ingesting security data and logs
      * API Version: 2021-01-15-preview.

@@ -103,22 +103,6 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DeploymentAtScopeArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.resources.DeploymentAtScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.resources.DeploymentAtScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DeploymentAtScope(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -150,16 +134,16 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:resources/v20190701:DeploymentAtScope").build()),
-                Output.of(Alias.builder().type("azure-native:resources/v20190801:DeploymentAtScope").build()),
-                Output.of(Alias.builder().type("azure-native:resources/v20191001:DeploymentAtScope").build()),
-                Output.of(Alias.builder().type("azure-native:resources/v20200601:DeploymentAtScope").build()),
-                Output.of(Alias.builder().type("azure-native:resources/v20200801:DeploymentAtScope").build()),
-                Output.of(Alias.builder().type("azure-native:resources/v20201001:DeploymentAtScope").build()),
-                Output.of(Alias.builder().type("azure-native:resources/v20210101:DeploymentAtScope").build()),
-                Output.of(Alias.builder().type("azure-native:resources/v20210401:DeploymentAtScope").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:resources/v20190701:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190801:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20191001:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20200601:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20200801:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20201001:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210101:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210401:DeploymentAtScope").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -219,22 +219,6 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
         return this.vpnServerConfiguration;
     }
 
-    public interface BuilderApplicator {
-        public void apply(P2sVpnGatewayArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.P2sVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.P2sVpnGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public P2sVpnGateway(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -266,30 +250,30 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20180801:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181001:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181101:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181201:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190201:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190401:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190601:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190701:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190801:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190901:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191101:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191201:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200301:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200401:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200501:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200601:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200701:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200801:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20201101:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210201:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210301:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:P2sVpnGateway").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:P2sVpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:P2sVpnGateway").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

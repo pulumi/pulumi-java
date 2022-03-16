@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAnalyticsItem {
     private GetAnalyticsItem() {}
-    public interface BuilderApplicator {
-        public void apply(GetAnalyticsItemArgs.Builder a);
-    }
-    private static GetAnalyticsItemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAnalyticsItemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Properties that define an Analytics item that is associated to an Application Insights component.
- * API Version: 2015-05-01.
- * 
-     *
-     * Properties that define an Analytics item that is associated to an Application Insights component.
- * 
-     */
-    public static CompletableFuture<GetAnalyticsItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Properties that define an Analytics item that is associated to an Application Insights component.
      * API Version: 2015-05-01.

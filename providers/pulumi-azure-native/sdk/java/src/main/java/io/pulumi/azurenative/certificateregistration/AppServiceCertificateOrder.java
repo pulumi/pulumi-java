@@ -384,22 +384,6 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
         return this.validityInYears;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AppServiceCertificateOrderArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.certificateregistration.AppServiceCertificateOrderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.certificateregistration.AppServiceCertificateOrderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AppServiceCertificateOrder(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -431,19 +415,19 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20150801:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20180201:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20190801:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20200601:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20200901:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20201001:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20201201:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20210101:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20210115:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20210201:AppServiceCertificateOrder").build()),
-                Output.of(Alias.builder().type("azure-native:certificateregistration/v20210301:AppServiceCertificateOrder").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20150801:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20180201:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20190801:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20200601:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20200901:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20201001:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20201201:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20210101:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20210115:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20210201:AppServiceCertificateOrder").build()),
+                Output.of(Alias.builder().setType("azure-native:certificateregistration/v20210301:AppServiceCertificateOrder").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

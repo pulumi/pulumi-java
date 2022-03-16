@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualRouterPeering {
     private GetVirtualRouterPeering() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualRouterPeeringArgs.Builder a);
-    }
-    private static GetVirtualRouterPeeringArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualRouterPeeringArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Virtual Router Peering resource.
- * API Version: 2020-08-01.
- * 
-     *
-     * Virtual Router Peering resource.
- * 
-     */
-    public static CompletableFuture<GetVirtualRouterPeeringResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Virtual Router Peering resource.
      * API Version: 2020-08-01.

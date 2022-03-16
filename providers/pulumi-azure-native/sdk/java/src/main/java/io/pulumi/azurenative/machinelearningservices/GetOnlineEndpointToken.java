@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOnlineEndpointToken {
     private GetOnlineEndpointToken() {}
-    public interface BuilderApplicator {
-        public void apply(GetOnlineEndpointTokenArgs.Builder a);
-    }
-    private static GetOnlineEndpointTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOnlineEndpointTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Service Token
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Service Token
- * 
-     */
-    public static CompletableFuture<GetOnlineEndpointTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Service Token
      * API Version: 2021-03-01-preview.

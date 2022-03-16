@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScriptExecutionLogs {
     private GetScriptExecutionLogs() {}
-    public interface BuilderApplicator {
-        public void apply(GetScriptExecutionLogsArgs.Builder a);
-    }
-    private static GetScriptExecutionLogsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScriptExecutionLogsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An instance of a script executed by a user - custom or AVS
- * API Version: 2021-06-01.
- * 
-     *
-     * An instance of a script executed by a user - custom or AVS
- * 
-     */
-    public static CompletableFuture<GetScriptExecutionLogsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An instance of a script executed by a user - custom or AVS
      * API Version: 2021-06-01.

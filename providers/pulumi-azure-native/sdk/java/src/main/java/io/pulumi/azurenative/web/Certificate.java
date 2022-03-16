@@ -384,22 +384,6 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return this.valid;
     }
 
-    public interface BuilderApplicator {
-        public void apply(CertificateArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.CertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.CertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Certificate(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -431,21 +415,21 @@ public class Certificate extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:web/v20150801:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20160301:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20180201:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20181101:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20190801:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200601:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200901:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201001:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201201:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210101:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210115:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210201:Certificate").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210301:Certificate").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160301:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:Certificate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

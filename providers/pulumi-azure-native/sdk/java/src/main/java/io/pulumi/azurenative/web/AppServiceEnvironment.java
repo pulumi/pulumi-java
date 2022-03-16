@@ -315,22 +315,6 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
         return this.virtualNetwork;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AppServiceEnvironmentArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.AppServiceEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.AppServiceEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AppServiceEnvironment(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -362,20 +346,20 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:web/v20150801:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20160901:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20180201:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20190801:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200601:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200901:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201001:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201201:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210101:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210115:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210201:AppServiceEnvironment").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210301:AppServiceEnvironment").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160901:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:AppServiceEnvironment").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:AppServiceEnvironment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

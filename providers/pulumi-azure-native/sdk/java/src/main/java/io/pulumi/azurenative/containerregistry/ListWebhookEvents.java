@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebhookEvents {
     private ListWebhookEvents() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebhookEventsArgs.Builder a);
-    }
-    private static ListWebhookEventsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebhookEventsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The result of a request to list events for a webhook.
- * API Version: 2019-05-01.
- * 
-     *
-     * The result of a request to list events for a webhook.
- * 
-     */
-    public static CompletableFuture<ListWebhookEventsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The result of a request to list events for a webhook.
      * API Version: 2019-05-01.

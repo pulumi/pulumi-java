@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetJob {
     private GetJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetJobArgs.Builder a);
-    }
-    private static GetJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Contains the job information.
- * API Version: 2020-08-01.
- * 
-     *
-     * Contains the job information.
- * 
-     */
-    public static CompletableFuture<GetJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Contains the job information.
      * API Version: 2020-08-01.

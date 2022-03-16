@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListDeviceFailoverTars {
     private ListDeviceFailoverTars() {}
-    public interface BuilderApplicator {
-        public void apply(ListDeviceFailoverTarsArgs.Builder a);
-    }
-    private static ListDeviceFailoverTarsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListDeviceFailoverTarsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of all devices in a resource and their eligibility status as a failover target device.
- * API Version: 2017-06-01.
- * 
-     *
-     * The list of all devices in a resource and their eligibility status as a failover target device.
- * 
-     */
-    public static CompletableFuture<ListDeviceFailoverTarsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of all devices in a resource and their eligibility status as a failover target device.
      * API Version: 2017-06-01.

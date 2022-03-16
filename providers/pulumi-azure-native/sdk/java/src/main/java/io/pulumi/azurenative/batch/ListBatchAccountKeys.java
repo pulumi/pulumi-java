@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListBatchAccountKeys {
     private ListBatchAccountKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListBatchAccountKeysArgs.Builder a);
-    }
-    private static ListBatchAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListBatchAccountKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A set of Azure Batch account keys.
- * API Version: 2021-01-01.
- * 
-     *
-     * A set of Azure Batch account keys.
- * 
-     */
-    public static CompletableFuture<ListBatchAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A set of Azure Batch account keys.
      * API Version: 2021-01-01.

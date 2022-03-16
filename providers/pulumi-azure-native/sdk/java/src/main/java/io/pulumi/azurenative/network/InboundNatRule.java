@@ -203,22 +203,6 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(InboundNatRuleArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.InboundNatRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.InboundNatRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public InboundNatRule(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -250,40 +234,40 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20170601:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170801:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170901:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20171001:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20171101:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180101:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180201:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180401:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180601:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180701:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180801:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181001:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181101:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181201:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190201:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190401:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190601:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190701:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190801:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190901:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191101:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191201:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200301:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200401:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200501:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200601:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200701:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200801:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20201101:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210201:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210301:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:InboundNatRule").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:InboundNatRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:InboundNatRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -217,22 +217,6 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(IntegrationAccountAgreementArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.logic.IntegrationAccountAgreementArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.logic.IntegrationAccountAgreementArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public IntegrationAccountAgreement(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -264,12 +248,12 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:logic/v20150801preview:IntegrationAccountAgreement").build()),
-                Output.of(Alias.builder().type("azure-native:logic/v20160601:IntegrationAccountAgreement").build()),
-                Output.of(Alias.builder().type("azure-native:logic/v20180701preview:IntegrationAccountAgreement").build()),
-                Output.of(Alias.builder().type("azure-native:logic/v20190501:IntegrationAccountAgreement").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:logic/v20150801preview:IntegrationAccountAgreement").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20160601:IntegrationAccountAgreement").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20180701preview:IntegrationAccountAgreement").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationAccountAgreement").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

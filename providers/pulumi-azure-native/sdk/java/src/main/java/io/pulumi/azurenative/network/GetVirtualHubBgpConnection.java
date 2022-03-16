@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualHubBgpConnection {
     private GetVirtualHubBgpConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualHubBgpConnectionArgs.Builder a);
-    }
-    private static GetVirtualHubBgpConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualHubBgpConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Virtual Appliance Site resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Virtual Appliance Site resource.
- * 
-     */
-    public static CompletableFuture<GetVirtualHubBgpConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Virtual Appliance Site resource.
      * API Version: 2020-11-01.

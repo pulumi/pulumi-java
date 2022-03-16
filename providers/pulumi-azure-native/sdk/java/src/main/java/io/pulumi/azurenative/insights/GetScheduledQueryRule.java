@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScheduledQueryRule {
     private GetScheduledQueryRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetScheduledQueryRuleArgs.Builder a);
-    }
-    private static GetScheduledQueryRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScheduledQueryRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Log Search Rule resource.
- * API Version: 2018-04-16.
- * 
-     *
-     * The Log Search Rule resource.
- * 
-     */
-    public static CompletableFuture<GetScheduledQueryRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Log Search Rule resource.
      * API Version: 2018-04-16.

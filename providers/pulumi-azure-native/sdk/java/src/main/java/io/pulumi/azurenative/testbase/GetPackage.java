@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPackage {
     private GetPackage() {}
-    public interface BuilderApplicator {
-        public void apply(GetPackageArgs.Builder a);
-    }
-    private static GetPackageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPackageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Test Base Package resource.
- * API Version: 2020-12-16-preview.
- * 
-     *
-     * The Test Base Package resource.
- * 
-     */
-    public static CompletableFuture<GetPackageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Test Base Package resource.
      * API Version: 2020-12-16-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRuleSet {
     private GetRuleSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetRuleSetArgs.Builder a);
-    }
-    private static GetRuleSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRuleSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Friendly RuleSet name mapping to the any RuleSet or secret related information.
- * API Version: 2020-09-01.
- * 
-     *
-     * Friendly RuleSet name mapping to the any RuleSet or secret related information.
- * 
-     */
-    public static CompletableFuture<GetRuleSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Friendly RuleSet name mapping to the any RuleSet or secret related information.
      * API Version: 2020-09-01.

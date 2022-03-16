@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAutomationRule {
     private GetAutomationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetAutomationRuleArgs.Builder a);
-    }
-    private static GetAutomationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAutomationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents an automation rule.
- * API Version: 2019-01-01-preview.
- * 
-     *
-     * Represents an automation rule.
- * 
-     */
-    public static CompletableFuture<GetAutomationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents an automation rule.
      * API Version: 2019-01-01-preview.

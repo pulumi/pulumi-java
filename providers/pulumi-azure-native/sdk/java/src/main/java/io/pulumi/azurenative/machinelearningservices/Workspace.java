@@ -420,22 +420,6 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return this.workspaceId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WorkspaceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.machinelearningservices.WorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.machinelearningservices.WorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Workspace(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -467,27 +451,27 @@ public class Workspace extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20180301preview:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20181119:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20190501:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20190601:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20191101:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200101:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200218preview:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200301:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200401:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200501preview:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200515preview:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200601:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200801:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20200901preview:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210101:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210301preview:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210401:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20210701:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:machinelearningservices/v20220101preview:Workspace").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20180301preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20181119:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20190501:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20190601:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20191101:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200101:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200218preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200301:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200401:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200501preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200515preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200601:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200801:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200901preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210101:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210301preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210401:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210701:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20220101preview:Workspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

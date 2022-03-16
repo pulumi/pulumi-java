@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUser {
     private GetUser() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserArgs.Builder a);
-    }
-    private static GetUserArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
- * API Version: 2020-12-01.
- * 
-     *
-     * Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
- * 
-     */
-    public static CompletableFuture<GetUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
      * API Version: 2020-12-01.

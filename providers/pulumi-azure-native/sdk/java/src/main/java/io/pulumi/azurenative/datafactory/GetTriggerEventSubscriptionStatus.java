@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTriggerEventSubscriptionStatus {
     private GetTriggerEventSubscriptionStatus() {}
-    public interface BuilderApplicator {
-        public void apply(GetTriggerEventSubscriptionStatusArgs.Builder a);
-    }
-    private static GetTriggerEventSubscriptionStatusArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTriggerEventSubscriptionStatusArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Defines the response of a trigger subscription operation.
- * API Version: 2018-06-01.
- * 
-     *
-     * Defines the response of a trigger subscription operation.
- * 
-     */
-    public static CompletableFuture<GetTriggerEventSubscriptionStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Defines the response of a trigger subscription operation.
      * API Version: 2018-06-01.

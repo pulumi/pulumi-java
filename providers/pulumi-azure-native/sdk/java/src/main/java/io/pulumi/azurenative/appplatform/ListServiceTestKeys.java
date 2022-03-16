@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListServiceTestKeys {
     private ListServiceTestKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListServiceTestKeysArgs.Builder a);
-    }
-    private static ListServiceTestKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListServiceTestKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Test keys payload
- * API Version: 2020-07-01.
- * 
-     *
-     * Test keys payload
- * 
-     */
-    public static CompletableFuture<ListServiceTestKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Test keys payload
      * API Version: 2020-07-01.

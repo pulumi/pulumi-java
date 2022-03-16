@@ -349,22 +349,6 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return this.workspaceUID;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WorkspaceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.synapse.WorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.synapse.WorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Workspace(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -396,15 +380,15 @@ public class Workspace extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:synapse/v20190601preview:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:synapse/v20201201:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:synapse/v20210301:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:synapse/v20210401preview:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:synapse/v20210501:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:synapse/v20210601:Workspace").build()),
-                Output.of(Alias.builder().type("azure-native:synapse/v20210601preview:Workspace").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:Workspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

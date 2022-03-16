@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplication {
     private GetApplication() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationArgs.Builder a);
-    }
-    private static GetApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Contains information about an application in a Batch account.
- * API Version: 2021-01-01.
- * 
-     *
-     * Contains information about an application in a Batch account.
- * 
-     */
-    public static CompletableFuture<GetApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Contains information about an application in a Batch account.
      * API Version: 2021-01-01.

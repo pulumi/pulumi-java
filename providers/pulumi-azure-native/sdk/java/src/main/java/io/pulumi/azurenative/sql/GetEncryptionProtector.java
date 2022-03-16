@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEncryptionProtector {
     private GetEncryptionProtector() {}
-    public interface BuilderApplicator {
-        public void apply(GetEncryptionProtectorArgs.Builder a);
-    }
-    private static GetEncryptionProtectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEncryptionProtectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The server encryption protector.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * The server encryption protector.
- * 
-     */
-    public static CompletableFuture<GetEncryptionProtectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The server encryption protector.
      * API Version: 2020-11-01-preview.

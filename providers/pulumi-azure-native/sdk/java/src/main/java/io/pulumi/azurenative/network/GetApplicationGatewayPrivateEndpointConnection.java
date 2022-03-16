@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplicationGatewayPrivateEndpointConnection {
     private GetApplicationGatewayPrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationGatewayPrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetApplicationGatewayPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationGatewayPrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Private Endpoint connection on an application gateway.
- * API Version: 2020-11-01.
- * 
-     *
-     * Private Endpoint connection on an application gateway.
- * 
-     */
-    public static CompletableFuture<GetApplicationGatewayPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Private Endpoint connection on an application gateway.
      * API Version: 2020-11-01.

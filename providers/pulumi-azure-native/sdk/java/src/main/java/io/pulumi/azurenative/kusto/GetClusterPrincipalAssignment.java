@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetClusterPrincipalAssignment {
     private GetClusterPrincipalAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetClusterPrincipalAssignmentArgs.Builder a);
-    }
-    private static GetClusterPrincipalAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetClusterPrincipalAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing a cluster principal assignment.
- * API Version: 2021-01-01.
- * 
-     *
-     * Class representing a cluster principal assignment.
- * 
-     */
-    public static CompletableFuture<GetClusterPrincipalAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing a cluster principal assignment.
      * API Version: 2021-01-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCostAllocationRule {
     private GetCostAllocationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetCostAllocationRuleArgs.Builder a);
-    }
-    private static GetCostAllocationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCostAllocationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The cost allocation rule model definition
- * API Version: 2020-03-01-preview.
- * 
-     *
-     * The cost allocation rule model definition
- * 
-     */
-    public static CompletableFuture<GetCostAllocationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The cost allocation rule model definition
      * API Version: 2020-03-01-preview.

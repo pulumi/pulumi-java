@@ -205,22 +205,6 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PrivateEndpointArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.PrivateEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.PrivateEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PrivateEndpoint(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -252,30 +236,30 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20180801:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181001:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181101:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181201:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190201:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190401:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190601:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190701:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190801:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190901:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191101:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191201:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200301:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200401:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200501:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200601:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200701:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200801:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20201101:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210201:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210301:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateEndpoint").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:PrivateEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:PrivateEndpoint").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

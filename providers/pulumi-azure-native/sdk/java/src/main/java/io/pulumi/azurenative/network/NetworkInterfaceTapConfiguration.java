@@ -102,22 +102,6 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
         return this.virtualNetworkTap;
     }
 
-    public interface BuilderApplicator {
-        public void apply(NetworkInterfaceTapConfigurationArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.NetworkInterfaceTapConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.NetworkInterfaceTapConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public NetworkInterfaceTapConfiguration(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -149,30 +133,30 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20180801:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181001:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181101:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181201:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190201:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190401:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190601:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190701:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190801:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190901:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191101:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191201:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200301:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200401:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200501:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200601:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200701:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200801:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20201101:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210201:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210301:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkInterfaceTapConfiguration").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:NetworkInterfaceTapConfiguration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

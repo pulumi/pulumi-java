@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplicationTypeVersion {
     private GetApplicationTypeVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationTypeVersionArgs.Builder a);
-    }
-    private static GetApplicationTypeVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationTypeVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An application type version resource for the specified application type name resource.
- * API Version: 2020-03-01.
- * 
-     *
-     * An application type version resource for the specified application type name resource.
- * 
-     */
-    public static CompletableFuture<GetApplicationTypeVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An application type version resource for the specified application type name resource.
      * API Version: 2020-03-01.

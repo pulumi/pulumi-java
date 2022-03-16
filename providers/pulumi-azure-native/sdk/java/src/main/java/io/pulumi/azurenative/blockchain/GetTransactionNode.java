@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransactionNode {
     private GetTransactionNode() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransactionNodeArgs.Builder a);
-    }
-    private static GetTransactionNodeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransactionNodeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Payload of the transaction node which is the request/response of the resource provider.
- * API Version: 2018-06-01-preview.
- * 
-     *
-     * Payload of the transaction node which is the request/response of the resource provider.
- * 
-     */
-    public static CompletableFuture<GetTransactionNodeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Payload of the transaction node which is the request/response of the resource provider.
      * API Version: 2018-06-01-preview.

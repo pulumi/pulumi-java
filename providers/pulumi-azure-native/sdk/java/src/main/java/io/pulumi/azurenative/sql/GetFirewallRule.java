@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFirewallRule {
     private GetFirewallRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetFirewallRuleArgs.Builder a);
-    }
-    private static GetFirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFirewallRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A server firewall rule.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A server firewall rule.
- * 
-     */
-    public static CompletableFuture<GetFirewallRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A server firewall rule.
      * API Version: 2020-11-01-preview.

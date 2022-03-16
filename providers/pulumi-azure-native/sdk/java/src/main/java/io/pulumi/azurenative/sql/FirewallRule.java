@@ -87,22 +87,6 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(FirewallRuleArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.sql.FirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.sql.FirewallRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public FirewallRule(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -134,16 +118,16 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:sql/v20140401:FirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20150501preview:FirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20200202preview:FirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20200801preview:FirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20201101preview:FirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210201preview:FirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210501preview:FirewallRule").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:FirewallRule").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:sql/v20140401:FirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20150501preview:FirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:FirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:FirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:FirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:FirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:FirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:FirewallRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

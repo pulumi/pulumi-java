@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnvironmentContainer {
     private GetEnvironmentContainer() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnvironmentContainerArgs.Builder a);
-    }
-    private static GetEnvironmentContainerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnvironmentContainerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Azure Resource Manager resource envelope.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Azure Resource Manager resource envelope.
- * 
-     */
-    public static CompletableFuture<GetEnvironmentContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.

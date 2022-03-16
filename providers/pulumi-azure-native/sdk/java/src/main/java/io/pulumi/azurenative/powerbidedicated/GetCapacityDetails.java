@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCapacityDetails {
     private GetCapacityDetails() {}
-    public interface BuilderApplicator {
-        public void apply(GetCapacityDetailsArgs.Builder a);
-    }
-    private static GetCapacityDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCapacityDetailsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents an instance of a Dedicated Capacity resource.
- * API Version: 2021-01-01.
- * 
-     *
-     * Represents an instance of a Dedicated Capacity resource.
- * 
-     */
-    public static CompletableFuture<GetCapacityDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents an instance of a Dedicated Capacity resource.
      * API Version: 2021-01-01.

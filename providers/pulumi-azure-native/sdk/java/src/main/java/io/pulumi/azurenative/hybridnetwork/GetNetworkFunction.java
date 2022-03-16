@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkFunction {
     private GetNetworkFunction() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkFunctionArgs.Builder a);
-    }
-    private static GetNetworkFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkFunctionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Network function resource response.
- * API Version: 2020-01-01-preview.
- * 
-     *
-     * Network function resource response.
- * 
-     */
-    public static CompletableFuture<GetNetworkFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Network function resource response.
      * API Version: 2020-01-01-preview.

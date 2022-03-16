@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListIotHubResourceKeysForKeyName {
     private ListIotHubResourceKeysForKeyName() {}
-    public interface BuilderApplicator {
-        public void apply(ListIotHubResourceKeysForKeyNameArgs.Builder a);
-    }
-    private static ListIotHubResourceKeysForKeyNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListIotHubResourceKeysForKeyNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The properties of an IoT hub shared access policy.
- * API Version: 2020-08-31.
- * 
-     *
-     * The properties of an IoT hub shared access policy.
- * 
-     */
-    public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The properties of an IoT hub shared access policy.
      * API Version: 2020-08-31.

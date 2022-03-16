@@ -320,22 +320,6 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ExpressRouteCircuitArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.ExpressRouteCircuitArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.ExpressRouteCircuitArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ExpressRouteCircuit(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -367,47 +351,47 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20150501preview:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20150615:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20160330:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20160601:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20160901:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20161201:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170301:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170601:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170801:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20170901:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20171001:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20171101:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180101:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180201:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180401:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180601:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180701:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20180801:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181001:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181101:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20181201:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190201:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190401:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190601:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190701:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190801:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20190901:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191101:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20191201:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200301:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200401:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200501:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200601:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200701:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20200801:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20201101:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210201:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210301:ExpressRouteCircuit").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCircuit").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:network/v20150501preview:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:ExpressRouteCircuit").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:ExpressRouteCircuit").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExpressRouteCircuitAuthorization {
     private GetExpressRouteCircuitAuthorization() {}
-    public interface BuilderApplicator {
-        public void apply(GetExpressRouteCircuitAuthorizationArgs.Builder a);
-    }
-    private static GetExpressRouteCircuitAuthorizationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExpressRouteCircuitAuthorizationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Authorization in an ExpressRouteCircuit resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Authorization in an ExpressRouteCircuit resource.
- * 
-     */
-    public static CompletableFuture<GetExpressRouteCircuitAuthorizationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Authorization in an ExpressRouteCircuit resource.
      * API Version: 2020-11-01.

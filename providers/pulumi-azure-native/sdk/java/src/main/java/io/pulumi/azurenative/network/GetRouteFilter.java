@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRouteFilter {
     private GetRouteFilter() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouteFilterArgs.Builder a);
-    }
-    private static GetRouteFilterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouteFilterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Route Filter Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Route Filter Resource.
- * 
-     */
-    public static CompletableFuture<GetRouteFilterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Route Filter Resource.
      * API Version: 2020-11-01.

@@ -102,22 +102,6 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RegisteredAsnArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.peering.RegisteredAsnArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.peering.RegisteredAsnArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RegisteredAsn(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -149,13 +133,13 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:peering/v20200101preview:RegisteredAsn").build()),
-                Output.of(Alias.builder().type("azure-native:peering/v20200401:RegisteredAsn").build()),
-                Output.of(Alias.builder().type("azure-native:peering/v20201001:RegisteredAsn").build()),
-                Output.of(Alias.builder().type("azure-native:peering/v20210101:RegisteredAsn").build()),
-                Output.of(Alias.builder().type("azure-native:peering/v20210601:RegisteredAsn").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:peering/v20200101preview:RegisteredAsn").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20200401:RegisteredAsn").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20201001:RegisteredAsn").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20210101:RegisteredAsn").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20210601:RegisteredAsn").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

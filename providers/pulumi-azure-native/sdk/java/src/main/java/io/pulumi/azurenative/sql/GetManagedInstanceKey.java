@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagedInstanceKey {
     private GetManagedInstanceKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagedInstanceKeyArgs.Builder a);
-    }
-    private static GetManagedInstanceKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagedInstanceKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A managed instance key.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A managed instance key.
- * 
-     */
-    public static CompletableFuture<GetManagedInstanceKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A managed instance key.
      * API Version: 2020-11-01-preview.

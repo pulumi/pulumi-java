@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrediction {
     private GetPrediction() {}
-    public interface BuilderApplicator {
-        public void apply(GetPredictionArgs.Builder a);
-    }
-    private static GetPredictionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPredictionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The prediction resource format.
- * API Version: 2017-04-26.
- * 
-     *
-     * The prediction resource format.
- * 
-     */
-    public static CompletableFuture<GetPredictionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The prediction resource format.
      * API Version: 2017-04-26.

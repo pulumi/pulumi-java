@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistrationAssignment {
     private GetRegistrationAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistrationAssignmentArgs.Builder a);
-    }
-    private static GetRegistrationAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistrationAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Registration assignment.
- * API Version: 2019-09-01.
- * 
-     *
-     * Registration assignment.
- * 
-     */
-    public static CompletableFuture<GetRegistrationAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Registration assignment.
      * API Version: 2019-09-01.

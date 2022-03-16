@@ -334,22 +334,6 @@ public class DomainService extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DomainServiceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.aad.DomainServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.aad.DomainServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DomainService(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -381,13 +365,13 @@ public class DomainService extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:aad/v20170101:DomainService").build()),
-                Output.of(Alias.builder().type("azure-native:aad/v20170601:DomainService").build()),
-                Output.of(Alias.builder().type("azure-native:aad/v20200101:DomainService").build()),
-                Output.of(Alias.builder().type("azure-native:aad/v20210301:DomainService").build()),
-                Output.of(Alias.builder().type("azure-native:aad/v20210501:DomainService").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:aad/v20170101:DomainService").build()),
+                Output.of(Alias.builder().setType("azure-native:aad/v20170601:DomainService").build()),
+                Output.of(Alias.builder().setType("azure-native:aad/v20200101:DomainService").build()),
+                Output.of(Alias.builder().setType("azure-native:aad/v20210301:DomainService").build()),
+                Output.of(Alias.builder().setType("azure-native:aad/v20210501:DomainService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

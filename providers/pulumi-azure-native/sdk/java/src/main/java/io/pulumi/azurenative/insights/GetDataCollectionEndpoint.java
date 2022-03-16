@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataCollectionEndpoint {
     private GetDataCollectionEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataCollectionEndpointArgs.Builder a);
-    }
-    private static GetDataCollectionEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataCollectionEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of ARM tracked top level resource.
- * API Version: 2021-04-01.
- * 
-     *
-     * Definition of ARM tracked top level resource.
- * 
-     */
-    public static CompletableFuture<GetDataCollectionEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of ARM tracked top level resource.
      * API Version: 2021-04-01.

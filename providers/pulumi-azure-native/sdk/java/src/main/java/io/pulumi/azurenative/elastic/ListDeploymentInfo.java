@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListDeploymentInfo {
     private ListDeploymentInfo() {}
-    public interface BuilderApplicator {
-        public void apply(ListDeploymentInfoArgs.Builder a);
-    }
-    private static ListDeploymentInfoArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListDeploymentInfoArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
- * API Version: 2020-07-01.
- * 
-     *
-     * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
- * 
-     */
-    public static CompletableFuture<ListDeploymentInfoResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
      * API Version: 2020-07-01.

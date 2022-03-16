@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataController {
     private GetDataController() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataControllerArgs.Builder a);
-    }
-    private static GetDataControllerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataControllerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Data controller resource
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * Data controller resource
- * 
-     */
-    public static CompletableFuture<GetDataControllerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Data controller resource
      * API Version: 2021-06-01-preview.

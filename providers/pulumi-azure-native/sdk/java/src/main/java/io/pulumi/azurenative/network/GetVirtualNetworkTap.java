@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualNetworkTap {
     private GetVirtualNetworkTap() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualNetworkTapArgs.Builder a);
-    }
-    private static GetVirtualNetworkTapArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualNetworkTapArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Virtual Network Tap resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Virtual Network Tap resource.
- * 
-     */
-    public static CompletableFuture<GetVirtualNetworkTapResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Virtual Network Tap resource.
      * API Version: 2020-11-01.

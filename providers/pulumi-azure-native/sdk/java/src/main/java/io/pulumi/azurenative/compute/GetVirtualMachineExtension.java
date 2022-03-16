@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualMachineExtension {
     private GetVirtualMachineExtension() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualMachineExtensionArgs.Builder a);
-    }
-    private static GetVirtualMachineExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualMachineExtensionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a Virtual Machine Extension.
- * API Version: 2021-03-01.
- * 
-     *
-     * Describes a Virtual Machine Extension.
- * 
-     */
-    public static CompletableFuture<GetVirtualMachineExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a Virtual Machine Extension.
      * API Version: 2021-03-01.

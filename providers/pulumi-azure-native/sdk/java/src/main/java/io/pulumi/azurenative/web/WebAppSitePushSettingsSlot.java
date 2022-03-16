@@ -133,22 +133,6 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebAppSitePushSettingsSlotArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppSitePushSettingsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppSitePushSettingsSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppSitePushSettingsSlot(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -180,20 +164,20 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppSitePushSettingsSlot").build()),
-                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppSitePushSettingsSlot").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSitePushSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSitePushSettingsSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

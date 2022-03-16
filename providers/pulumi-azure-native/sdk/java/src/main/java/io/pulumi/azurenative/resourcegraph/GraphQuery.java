@@ -158,22 +158,6 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(GraphQueryArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.resourcegraph.GraphQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.resourcegraph.GraphQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public GraphQuery(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -205,10 +189,10 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:resourcegraph/v20180901preview:GraphQuery").build()),
-                Output.of(Alias.builder().type("azure-native:resourcegraph/v20200401preview:GraphQuery").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("azure-native:resourcegraph/v20180901preview:GraphQuery").build()),
+                Output.of(Alias.builder().setType("azure-native:resourcegraph/v20200401preview:GraphQuery").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

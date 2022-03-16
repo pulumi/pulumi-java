@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateStoreCollectionOffer {
     private GetPrivateStoreCollectionOffer() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateStoreCollectionOfferArgs.Builder a);
-    }
-    private static GetPrivateStoreCollectionOfferArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateStoreCollectionOfferArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The privateStore offer data structure.
- * API Version: 2021-06-01.
- * 
-     *
-     * The privateStore offer data structure.
- * 
-     */
-    public static CompletableFuture<GetPrivateStoreCollectionOfferResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The privateStore offer data structure.
      * API Version: 2021-06-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnectedRegistry {
     private GetConnectedRegistry() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectedRegistryArgs.Builder a);
-    }
-    private static GetConnectedRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectedRegistryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An object that represents a connected registry for a container registry.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An object that represents a connected registry for a container registry.
- * 
-     */
-    public static CompletableFuture<GetConnectedRegistryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An object that represents a connected registry for a container registry.
      * API Version: 2020-11-01-preview.
