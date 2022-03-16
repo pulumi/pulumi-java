@@ -120,15 +120,15 @@ public class ServerDnsAlias extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:sql/v20170301preview:ServerDnsAlias").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ServerDnsAlias").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ServerDnsAlias").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ServerDnsAlias").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ServerDnsAlias").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ServerDnsAlias").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ServerDnsAlias").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:sql/v20170301preview:ServerDnsAlias").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200202preview:ServerDnsAlias").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200801preview:ServerDnsAlias").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ServerDnsAlias").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ServerDnsAlias").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ServerDnsAlias").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerDnsAlias").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

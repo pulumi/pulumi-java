@@ -59,17 +59,17 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             super(options);
         }
 
-        public Builder setDeleteBeforeReplace(boolean deleteBeforeReplace) {
+        public Builder deleteBeforeReplace(boolean deleteBeforeReplace) {
             options.deleteBeforeReplace = deleteBeforeReplace;
             return this;
         }
 
-        public Builder setAdditionalSecretOutputs(@Nullable List<String> additionalSecretOutputs) {
+        public Builder additionalSecretOutputs(@Nullable List<String> additionalSecretOutputs) {
             options.additionalSecretOutputs = additionalSecretOutputs;
             return this;
         }
 
-        public Builder setImportId(@Nullable String importId) {
+        public Builder importId(@Nullable String importId) {
             options.importId = importId;
             return this;
         }

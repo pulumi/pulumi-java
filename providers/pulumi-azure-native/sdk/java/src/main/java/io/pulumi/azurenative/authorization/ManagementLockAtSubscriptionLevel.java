@@ -149,12 +149,12 @@ public class ManagementLockAtSubscriptionLevel extends io.pulumi.resources.Custo
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:authorization/v20150101:ManagementLockAtSubscriptionLevel").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20160901:ManagementLockAtSubscriptionLevel").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20170401:ManagementLockAtSubscriptionLevel").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20200501:ManagementLockAtSubscriptionLevel").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:authorization/v20150101:ManagementLockAtSubscriptionLevel").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20160901:ManagementLockAtSubscriptionLevel").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20170401:ManagementLockAtSubscriptionLevel").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20200501:ManagementLockAtSubscriptionLevel").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

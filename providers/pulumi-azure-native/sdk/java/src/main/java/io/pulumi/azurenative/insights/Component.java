@@ -405,12 +405,12 @@ public class Component extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:insights/v20150501:Component").build()),
-                Output.of(Alias.builder().setType("azure-native:insights/v20180501preview:Component").build()),
-                Output.of(Alias.builder().setType("azure-native:insights/v20200202:Component").build()),
-                Output.of(Alias.builder().setType("azure-native:insights/v20200202preview:Component").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:insights/v20150501:Component").build()),
+                Output.of(Alias.builder().type("azure-native:insights/v20180501preview:Component").build()),
+                Output.of(Alias.builder().type("azure-native:insights/v20200202:Component").build()),
+                Output.of(Alias.builder().type("azure-native:insights/v20200202preview:Component").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

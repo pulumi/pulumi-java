@@ -327,15 +327,15 @@ public class Cache extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20190801preview:Cache").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20191101:Cache").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20200301:Cache").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20201001:Cache").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20210301:Cache").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20210501:Cache").build()),
-                Output.of(Alias.builder().setType("azure-native:storagecache/v20210901:Cache").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:storagecache/v20190801preview:Cache").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20191101:Cache").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20200301:Cache").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20201001:Cache").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20210301:Cache").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20210501:Cache").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20210901:Cache").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -369,15 +369,15 @@ public class Job extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:databox/v20180101:Job").build()),
-                Output.of(Alias.builder().setType("azure-native:databox/v20190901:Job").build()),
-                Output.of(Alias.builder().setType("azure-native:databox/v20200401:Job").build()),
-                Output.of(Alias.builder().setType("azure-native:databox/v20201101:Job").build()),
-                Output.of(Alias.builder().setType("azure-native:databox/v20210301:Job").build()),
-                Output.of(Alias.builder().setType("azure-native:databox/v20210501:Job").build()),
-                Output.of(Alias.builder().setType("azure-native:databox/v20210801preview:Job").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:databox/v20180101:Job").build()),
+                Output.of(Alias.builder().type("azure-native:databox/v20190901:Job").build()),
+                Output.of(Alias.builder().type("azure-native:databox/v20200401:Job").build()),
+                Output.of(Alias.builder().type("azure-native:databox/v20201101:Job").build()),
+                Output.of(Alias.builder().type("azure-native:databox/v20210301:Job").build()),
+                Output.of(Alias.builder().type("azure-native:databox/v20210501:Job").build()),
+                Output.of(Alias.builder().type("azure-native:databox/v20210801preview:Job").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

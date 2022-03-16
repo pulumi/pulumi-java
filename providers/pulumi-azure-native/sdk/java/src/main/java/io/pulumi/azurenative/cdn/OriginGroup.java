@@ -209,13 +209,13 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:cdn/v20191231:OriginGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20200331:OriginGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20200415:OriginGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20200901:OriginGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20210601:OriginGroup").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:cdn/v20191231:OriginGroup").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20200331:OriginGroup").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20200415:OriginGroup").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20200901:OriginGroup").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20210601:OriginGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

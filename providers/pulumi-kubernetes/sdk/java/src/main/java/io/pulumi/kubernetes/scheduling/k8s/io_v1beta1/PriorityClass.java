@@ -176,10 +176,10 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("kubernetes:scheduling.k8s.io/v1:PriorityClass").build()),
-                Output.of(Alias.builder().setType("kubernetes:scheduling.k8s.io/v1alpha1:PriorityClass").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("kubernetes:scheduling.k8s.io/v1:PriorityClass").build()),
+                Output.of(Alias.builder().type("kubernetes:scheduling.k8s.io/v1alpha1:PriorityClass").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

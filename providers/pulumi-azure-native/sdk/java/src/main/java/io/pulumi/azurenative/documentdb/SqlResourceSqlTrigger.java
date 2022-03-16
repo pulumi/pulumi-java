@@ -142,24 +142,24 @@ public class SqlResourceSqlTrigger extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlTrigger").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20190801:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20191212:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200301:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200401:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200901:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlTrigger").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

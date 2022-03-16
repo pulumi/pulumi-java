@@ -221,10 +221,10 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:hardwaresecuritymodules/v20181031preview:DedicatedHsm").build()),
-                Output.of(Alias.builder().setType("azure-native:hardwaresecuritymodules/v20211130:DedicatedHsm").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:hardwaresecuritymodules/v20181031preview:DedicatedHsm").build()),
+                Output.of(Alias.builder().type("azure-native:hardwaresecuritymodules/v20211130:DedicatedHsm").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

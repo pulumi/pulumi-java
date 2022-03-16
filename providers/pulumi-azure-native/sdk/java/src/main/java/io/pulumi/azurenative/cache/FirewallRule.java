@@ -134,16 +134,16 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:cache/v20160401:FirewallRule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20170201:FirewallRule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20171001:FirewallRule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20180301:FirewallRule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20190701:FirewallRule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20200601:FirewallRule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20201201:FirewallRule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20210601:FirewallRule").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:cache/v20160401:FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20170201:FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20171001:FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20180301:FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20190701:FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20200601:FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20201201:FirewallRule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20210601:FirewallRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

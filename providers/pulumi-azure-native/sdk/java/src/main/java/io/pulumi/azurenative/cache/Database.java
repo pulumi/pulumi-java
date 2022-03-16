@@ -221,13 +221,13 @@ public class Database extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:cache/v20201001preview:Database").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20210201preview:Database").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20210301:Database").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20210801:Database").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20220101:Database").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:cache/v20201001preview:Database").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20210201preview:Database").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20210301:Database").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20210801:Database").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20220101:Database").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -231,22 +231,22 @@ public class VirtualMachineScaleSetExtension extends io.pulumi.resources.CustomR
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20170330:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20171201:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180401:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180601:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20181001:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190301:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190701:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20191201:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineScaleSetExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineScaleSetExtension").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20170330:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20171201:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180401:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180601:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20181001:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190301:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190701:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20191201:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200601:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210301:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:VirtualMachineScaleSetExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211101:VirtualMachineScaleSetExtension").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

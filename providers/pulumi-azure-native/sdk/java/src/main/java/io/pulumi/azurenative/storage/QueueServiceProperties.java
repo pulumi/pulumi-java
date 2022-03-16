@@ -121,15 +121,15 @@ public class QueueServiceProperties extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:storage/v20190601:QueueServiceProperties").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20200801preview:QueueServiceProperties").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210101:QueueServiceProperties").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210201:QueueServiceProperties").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210401:QueueServiceProperties").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210601:QueueServiceProperties").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210801:QueueServiceProperties").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:storage/v20190601:QueueServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20200801preview:QueueServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210101:QueueServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210201:QueueServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210401:QueueServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210601:QueueServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:QueueServiceProperties").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

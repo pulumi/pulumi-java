@@ -207,12 +207,12 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:logic/v20150801preview:IntegrationAccountCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:logic/v20160601:IntegrationAccountCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:logic/v20180701preview:IntegrationAccountCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationAccountCertificate").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:logic/v20150801preview:IntegrationAccountCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:logic/v20160601:IntegrationAccountCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:logic/v20180701preview:IntegrationAccountCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:logic/v20190501:IntegrationAccountCertificate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
