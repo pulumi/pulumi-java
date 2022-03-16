@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStage {
     private GetStage() {}
-    public interface BuilderApplicator {
-        public void apply(GetStageArgs.Builder a);
-    }
-    private static GetStageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::ApiGateway::Stage
- * 
-     */
-    public static CompletableFuture<GetStageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::ApiGateway::Stage
      * 

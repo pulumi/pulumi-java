@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGlobalNetwork {
     private GetGlobalNetwork() {}
-    public interface BuilderApplicator {
-        public void apply(GetGlobalNetworkArgs.Builder a);
-    }
-    private static GetGlobalNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGlobalNetworkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user's account
- * 
-     */
-    public static CompletableFuture<GetGlobalNetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user's account
      * 

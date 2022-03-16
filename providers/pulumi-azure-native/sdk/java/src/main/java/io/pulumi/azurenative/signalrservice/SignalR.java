@@ -350,16 +350,16 @@ public class SignalR extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:signalrservice/v20180301preview:SignalR").build()),
-                Output.of(Alias.builder().setType("azure-native:signalrservice/v20181001:SignalR").build()),
-                Output.of(Alias.builder().setType("azure-native:signalrservice/v20200501:SignalR").build()),
-                Output.of(Alias.builder().setType("azure-native:signalrservice/v20200701preview:SignalR").build()),
-                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210401preview:SignalR").build()),
-                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210601preview:SignalR").build()),
-                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210901preview:SignalR").build()),
-                Output.of(Alias.builder().setType("azure-native:signalrservice/v20211001:SignalR").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20180301preview:SignalR").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20181001:SignalR").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20200501:SignalR").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20200701preview:SignalR").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20210401preview:SignalR").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20210601preview:SignalR").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20210901preview:SignalR").build()),
+                Output.of(Alias.builder().type("azure-native:signalrservice/v20211001:SignalR").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

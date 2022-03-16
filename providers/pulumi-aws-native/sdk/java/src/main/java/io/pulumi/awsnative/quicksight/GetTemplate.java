@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTemplate {
     private GetTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetTemplateArgs.Builder a);
-    }
-    private static GetTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the AWS::QuickSight::Template Resource Type.
- * 
-     */
-    public static CompletableFuture<GetTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the AWS::QuickSight::Template Resource Type.
      * 

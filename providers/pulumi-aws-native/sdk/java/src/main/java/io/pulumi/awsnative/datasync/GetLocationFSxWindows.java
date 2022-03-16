@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocationFSxWindows {
     private GetLocationFSxWindows() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocationFSxWindowsArgs.Builder a);
-    }
-    private static GetLocationFSxWindowsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocationFSxWindowsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::DataSync::LocationFSxWindows.
- * 
-     */
-    public static CompletableFuture<GetLocationFSxWindowsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::DataSync::LocationFSxWindows.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplicationFleetAssociation {
     private GetApplicationFleetAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationFleetAssociationArgs.Builder a);
-    }
-    private static GetApplicationFleetAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationFleetAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
- * 
-     */
-    public static CompletableFuture<GetApplicationFleetAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
      * 

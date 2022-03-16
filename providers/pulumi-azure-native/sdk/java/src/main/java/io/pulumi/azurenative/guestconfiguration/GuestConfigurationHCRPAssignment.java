@@ -135,11 +135,11 @@ public class GuestConfigurationHCRPAssignment extends io.pulumi.resources.Custom
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:guestconfiguration/v20181120:GuestConfigurationHCRPAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:guestconfiguration/v20200625:GuestConfigurationHCRPAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:guestconfiguration/v20210125:GuestConfigurationHCRPAssignment").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:guestconfiguration/v20181120:GuestConfigurationHCRPAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:guestconfiguration/v20200625:GuestConfigurationHCRPAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:guestconfiguration/v20210125:GuestConfigurationHCRPAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

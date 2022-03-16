@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetClientCertificate {
     private GetClientCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetClientCertificateArgs.Builder a);
-    }
-    private static GetClientCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetClientCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::ApiGateway::ClientCertificate
- * 
-     */
-    public static CompletableFuture<GetClientCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::ApiGateway::ClientCertificate
      * 

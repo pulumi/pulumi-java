@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistryPolicy {
     private GetRegistryPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistryPolicyArgs.Builder a);
-    }
-    private static GetRegistryPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistryPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EventSchemas::RegistryPolicy
- * 
-     */
-    public static CompletableFuture<GetRegistryPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EventSchemas::RegistryPolicy
      * 

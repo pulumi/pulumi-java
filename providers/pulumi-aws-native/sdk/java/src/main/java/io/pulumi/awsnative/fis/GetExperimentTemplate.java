@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExperimentTemplate {
     private GetExperimentTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetExperimentTemplateArgs.Builder a);
-    }
-    private static GetExperimentTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExperimentTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::FIS::ExperimentTemplate
- * 
-     */
-    public static CompletableFuture<GetExperimentTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::FIS::ExperimentTemplate
      * 

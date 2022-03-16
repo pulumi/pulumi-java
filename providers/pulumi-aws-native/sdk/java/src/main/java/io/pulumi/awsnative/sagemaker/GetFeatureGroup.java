@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFeatureGroup {
     private GetFeatureGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetFeatureGroupArgs.Builder a);
-    }
-    private static GetFeatureGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFeatureGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::SageMaker::FeatureGroup
- * 
-     */
-    public static CompletableFuture<GetFeatureGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::SageMaker::FeatureGroup
      * 

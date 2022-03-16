@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSignalingChannel {
     private GetSignalingChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetSignalingChannelArgs.Builder a);
-    }
-    private static GetSignalingChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSignalingChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
- * 
-     */
-    public static CompletableFuture<GetSignalingChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
      * 

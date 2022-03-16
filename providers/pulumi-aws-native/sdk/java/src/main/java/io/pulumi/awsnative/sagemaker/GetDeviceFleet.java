@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeviceFleet {
     private GetDeviceFleet() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeviceFleetArgs.Builder a);
-    }
-    private static GetDeviceFleetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeviceFleetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::SageMaker::DeviceFleet
- * 
-     */
-    public static CompletableFuture<GetDeviceFleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::SageMaker::DeviceFleet
      * 

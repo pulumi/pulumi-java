@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourceAssociation {
     private GetResourceAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceAssociationArgs.Builder a);
-    }
-    private static GetResourceAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
- * 
-     */
-    public static CompletableFuture<GetResourceAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
      * 

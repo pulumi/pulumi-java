@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKnowledgeBase {
     private GetKnowledgeBase() {}
-    public interface BuilderApplicator {
-        public void apply(GetKnowledgeBaseArgs.Builder a);
-    }
-    private static GetKnowledgeBaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKnowledgeBaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of AWS::Wisdom::KnowledgeBase Resource Type
- * 
-     */
-    public static CompletableFuture<GetKnowledgeBaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of AWS::Wisdom::KnowledgeBase Resource Type
      * 

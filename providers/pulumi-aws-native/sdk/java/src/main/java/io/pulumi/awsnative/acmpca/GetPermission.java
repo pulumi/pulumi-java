@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPermission {
     private GetPermission() {}
-    public interface BuilderApplicator {
-        public void apply(GetPermissionArgs.Builder a);
-    }
-    private static GetPermissionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPermissionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Permission set on private certificate authority
- * 
-     */
-    public static CompletableFuture<GetPermissionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Permission set on private certificate authority
      * 

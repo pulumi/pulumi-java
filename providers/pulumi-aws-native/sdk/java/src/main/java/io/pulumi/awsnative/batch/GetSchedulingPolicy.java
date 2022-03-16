@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSchedulingPolicy {
     private GetSchedulingPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetSchedulingPolicyArgs.Builder a);
-    }
-    private static GetSchedulingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSchedulingPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type schema for AWS::Batch::SchedulingPolicy
- * 
-     */
-    public static CompletableFuture<GetSchedulingPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type schema for AWS::Batch::SchedulingPolicy
      * 

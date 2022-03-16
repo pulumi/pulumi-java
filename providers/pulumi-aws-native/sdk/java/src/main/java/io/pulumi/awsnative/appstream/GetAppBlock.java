@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAppBlock {
     private GetAppBlock() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppBlockArgs.Builder a);
-    }
-    private static GetAppBlockArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppBlockArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::AppStream::AppBlock
- * 
-     */
-    public static CompletableFuture<GetAppBlockResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::AppStream::AppBlock
      * 

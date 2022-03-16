@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContainerRecipe {
     private GetContainerRecipe() {}
-    public interface BuilderApplicator {
-        public void apply(GetContainerRecipeArgs.Builder a);
-    }
-    private static GetContainerRecipeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContainerRecipeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::ImageBuilder::ContainerRecipe
- * 
-     */
-    public static CompletableFuture<GetContainerRecipeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::ImageBuilder::ContainerRecipe
      * 

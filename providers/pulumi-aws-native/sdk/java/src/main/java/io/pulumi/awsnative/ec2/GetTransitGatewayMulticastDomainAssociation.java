@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransitGatewayMulticastDomainAssociation {
     private GetTransitGatewayMulticastDomainAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransitGatewayMulticastDomainAssociationArgs.Builder a);
-    }
-    private static GetTransitGatewayMulticastDomainAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransitGatewayMulticastDomainAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::EC2::TransitGatewayMulticastDomainAssociation type
- * 
-     */
-    public static CompletableFuture<GetTransitGatewayMulticastDomainAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::EC2::TransitGatewayMulticastDomainAssociation type
      * 

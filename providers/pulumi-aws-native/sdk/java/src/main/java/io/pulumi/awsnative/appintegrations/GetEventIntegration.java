@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventIntegration {
     private GetEventIntegration() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventIntegrationArgs.Builder a);
-    }
-    private static GetEventIntegrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventIntegrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::AppIntegrations::EventIntegration
- * 
-     */
-    public static CompletableFuture<GetEventIntegrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::AppIntegrations::EventIntegration
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransitGatewayVpcAttachment {
     private GetTransitGatewayVpcAttachment() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransitGatewayVpcAttachmentArgs.Builder a);
-    }
-    private static GetTransitGatewayVpcAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransitGatewayVpcAttachmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::TransitGatewayVpcAttachment
- * 
-     */
-    public static CompletableFuture<GetTransitGatewayVpcAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::TransitGatewayVpcAttachment
      * 

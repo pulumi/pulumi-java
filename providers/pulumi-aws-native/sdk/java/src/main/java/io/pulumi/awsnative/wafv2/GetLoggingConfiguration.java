@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLoggingConfiguration {
     private GetLoggingConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetLoggingConfigurationArgs.Builder a);
-    }
-    private static GetLoggingConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLoggingConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A WAFv2 Logging Configuration Resource Provider
- * 
-     */
-    public static CompletableFuture<GetLoggingConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A WAFv2 Logging Configuration Resource Provider
      * 

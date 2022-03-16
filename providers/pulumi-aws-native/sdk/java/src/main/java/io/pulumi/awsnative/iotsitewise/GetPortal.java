@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPortal {
     private GetPortal() {}
-    public interface BuilderApplicator {
-        public void apply(GetPortalArgs.Builder a);
-    }
-    private static GetPortalArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPortalArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::IoTSiteWise::Portal
- * 
-     */
-    public static CompletableFuture<GetPortalResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::IoTSiteWise::Portal
      * 

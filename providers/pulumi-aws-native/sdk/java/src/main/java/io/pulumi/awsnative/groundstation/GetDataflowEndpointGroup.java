@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataflowEndpointGroup {
     private GetDataflowEndpointGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataflowEndpointGroupArgs.Builder a);
-    }
-    private static GetDataflowEndpointGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataflowEndpointGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
- * 
-     */
-    public static CompletableFuture<GetDataflowEndpointGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
      * 

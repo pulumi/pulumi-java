@@ -107,22 +107,6 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
         return this.usagePlanName;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable UsagePlanArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.apigateway.UsagePlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.apigateway.UsagePlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public UsagePlan(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

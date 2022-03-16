@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourceDefaultVersion {
     private GetResourceDefaultVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceDefaultVersionArgs.Builder a);
-    }
-    private static GetResourceDefaultVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceDefaultVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The default version of a resource that has been registered in the CloudFormation Registry.
- * 
-     */
-    public static CompletableFuture<GetResourceDefaultVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The default version of a resource that has been registered in the CloudFormation Registry.
      * 

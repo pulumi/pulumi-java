@@ -222,21 +222,21 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:cdn/v20150601:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20160402:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20161002:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20170402:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20171012:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20190415:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20190615:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20190615preview:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20191231:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20200331:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20200415:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20200901:CustomDomain").build()),
-                Output.of(Alias.builder().setType("azure-native:cdn/v20210601:CustomDomain").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:cdn/v20150601:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20160402:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20161002:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20170402:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20171012:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20190415:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20190615:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20190615preview:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20191231:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20200331:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20200415:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20200901:CustomDomain").build()),
+                Output.of(Alias.builder().type("azure-native:cdn/v20210601:CustomDomain").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

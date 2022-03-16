@@ -149,29 +149,29 @@ public class CassandraResourceCassandraKeyspace extends io.pulumi.resources.Cust
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:CassandraResourceCassandraKeyspace").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20150401:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20150408:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20151106:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20160319:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20160331:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20190801:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20191212:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200301:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200401:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200901:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraResourceCassandraKeyspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

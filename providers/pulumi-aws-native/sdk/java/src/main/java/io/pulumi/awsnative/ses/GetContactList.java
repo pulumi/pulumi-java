@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContactList {
     private GetContactList() {}
-    public interface BuilderApplicator {
-        public void apply(GetContactListArgs.Builder a);
-    }
-    private static GetContactListArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContactListArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::SES::ContactList.
- * 
-     */
-    public static CompletableFuture<GetContactListResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::SES::ContactList.
      * 

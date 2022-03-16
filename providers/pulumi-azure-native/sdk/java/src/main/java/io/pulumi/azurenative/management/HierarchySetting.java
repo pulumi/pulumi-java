@@ -149,12 +149,12 @@ public class HierarchySetting extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:management/v20200201:HierarchySetting").build()),
-                Output.of(Alias.builder().setType("azure-native:management/v20200501:HierarchySetting").build()),
-                Output.of(Alias.builder().setType("azure-native:management/v20201001:HierarchySetting").build()),
-                Output.of(Alias.builder().setType("azure-native:management/v20210401:HierarchySetting").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:management/v20200201:HierarchySetting").build()),
+                Output.of(Alias.builder().type("azure-native:management/v20200501:HierarchySetting").build()),
+                Output.of(Alias.builder().type("azure-native:management/v20201001:HierarchySetting").build()),
+                Output.of(Alias.builder().type("azure-native:management/v20210401:HierarchySetting").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

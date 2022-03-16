@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVPCDHCPOptionsAssociation {
     private GetVPCDHCPOptionsAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetVPCDHCPOptionsAssociationArgs.Builder a);
-    }
-    private static GetVPCDHCPOptionsAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVPCDHCPOptionsAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Associates a set of DHCP options with a VPC, or associates no DHCP options with the VPC.
- * 
-     */
-    public static CompletableFuture<GetVPCDHCPOptionsAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Associates a set of DHCP options with a VPC, or associates no DHCP options with the VPC.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventType {
     private GetEventType() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventTypeArgs.Builder a);
-    }
-    private static GetEventTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A resource schema for an EventType in Amazon Fraud Detector.
- * 
-     */
-    public static CompletableFuture<GetEventTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A resource schema for an EventType in Amazon Fraud Detector.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLogging {
     private GetLogging() {}
-    public interface BuilderApplicator {
-        public void apply(GetLoggingArgs.Builder a);
-    }
-    private static GetLoggingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLoggingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Logging Options enable you to configure your IoT V2 logging role and default logging level so that you can monitor progress events logs as it passes from your devices through Iot core service.
- * 
-     */
-    public static CompletableFuture<GetLoggingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Logging Options enable you to configure your IoT V2 logging role and default logging level so that you can monitor progress events logs as it passes from your devices through Iot core service.
      * 

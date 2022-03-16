@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
     private GetNotificationChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationChannelArgs.Builder a);
-    }
-    private static GetNotificationChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This resource schema represents the NotificationChannel resource in the Amazon DevOps Guru.
- * 
-     */
-    public static CompletableFuture<GetNotificationChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This resource schema represents the NotificationChannel resource in the Amazon DevOps Guru.
      * 

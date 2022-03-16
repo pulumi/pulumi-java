@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFunction {
     private GetFunction() {}
-    public interface BuilderApplicator {
-        public void apply(GetFunctionArgs.Builder a);
-    }
-    private static GetFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFunctionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Lambda::Function
- * 
-     */
-    public static CompletableFuture<GetFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Lambda::Function
      * 

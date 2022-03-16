@@ -175,12 +175,12 @@ public class Output extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable io.pulumi.core.Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                io.pulumi.core.Output.of(Alias.builder().setType("azure-native:streamanalytics/v20160301:Output").build()),
-                io.pulumi.core.Output.of(Alias.builder().setType("azure-native:streamanalytics/v20170401preview:Output").build()),
-                io.pulumi.core.Output.of(Alias.builder().setType("azure-native:streamanalytics/v20200301:Output").build()),
-                io.pulumi.core.Output.of(Alias.builder().setType("azure-native:streamanalytics/v20211001preview:Output").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                io.pulumi.core.Output.of(Alias.builder().type("azure-native:streamanalytics/v20160301:Output").build()),
+                io.pulumi.core.Output.of(Alias.builder().type("azure-native:streamanalytics/v20170401preview:Output").build()),
+                io.pulumi.core.Output.of(Alias.builder().type("azure-native:streamanalytics/v20200301:Output").build()),
+                io.pulumi.core.Output.of(Alias.builder().type("azure-native:streamanalytics/v20211001preview:Output").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

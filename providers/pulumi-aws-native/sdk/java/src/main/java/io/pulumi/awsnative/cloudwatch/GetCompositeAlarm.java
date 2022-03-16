@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCompositeAlarm {
     private GetCompositeAlarm() {}
-    public interface BuilderApplicator {
-        public void apply(GetCompositeAlarmArgs.Builder a);
-    }
-    private static GetCompositeAlarmArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCompositeAlarmArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::CloudWatch::CompositeAlarm type specifies an alarm which aggregates the states of other Alarms (Metric or Composite Alarms) as defined by the AlarmRule expression
- * 
-     */
-    public static CompletableFuture<GetCompositeAlarmResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::CloudWatch::CompositeAlarm type specifies an alarm which aggregates the states of other Alarms (Metric or Composite Alarms) as defined by the AlarmRule expression
      * 

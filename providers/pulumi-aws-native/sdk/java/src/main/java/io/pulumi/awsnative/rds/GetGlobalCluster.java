@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGlobalCluster {
     private GetGlobalCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetGlobalClusterArgs.Builder a);
-    }
-    private static GetGlobalClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGlobalClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::RDS::GlobalCluster
- * 
-     */
-    public static CompletableFuture<GetGlobalClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::RDS::GlobalCluster
      * 

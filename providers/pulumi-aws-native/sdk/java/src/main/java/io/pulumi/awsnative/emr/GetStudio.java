@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStudio {
     private GetStudio() {}
-    public interface BuilderApplicator {
-        public void apply(GetStudioArgs.Builder a);
-    }
-    private static GetStudioArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStudioArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::EMR::Studio
- * 
-     */
-    public static CompletableFuture<GetStudioResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::EMR::Studio
      * 

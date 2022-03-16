@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMetricStream {
     private GetMetricStream() {}
-    public interface BuilderApplicator {
-        public void apply(GetMetricStreamArgs.Builder a);
-    }
-    private static GetMetricStreamArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMetricStreamArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for Metric Stream
- * 
-     */
-    public static CompletableFuture<GetMetricStreamResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for Metric Stream
      * 

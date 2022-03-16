@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVariable {
     private GetVariable() {}
-    public interface BuilderApplicator {
-        public void apply(GetVariableArgs.Builder a);
-    }
-    private static GetVariableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVariableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A resource schema for a Variable in Amazon Fraud Detector.
- * 
-     */
-    public static CompletableFuture<GetVariableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A resource schema for a Variable in Amazon Fraud Detector.
      * 

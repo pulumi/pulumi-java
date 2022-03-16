@@ -135,15 +135,15 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:devices/v20170821preview:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20171115:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20180122:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200101:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200301:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200901preview:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20211015:DpsCertificate").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:devices/v20170821preview:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20171115:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20180122:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200101:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200301:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200901preview:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20211015:DpsCertificate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

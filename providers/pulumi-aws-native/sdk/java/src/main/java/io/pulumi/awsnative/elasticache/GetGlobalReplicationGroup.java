@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGlobalReplicationGroup {
     private GetGlobalReplicationGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetGlobalReplicationGroupArgs.Builder a);
-    }
-    private static GetGlobalReplicationGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGlobalReplicationGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
- * 
-     */
-    public static CompletableFuture<GetGlobalReplicationGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
      * 

@@ -251,15 +251,15 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20190201preview:ConfigurationStore").build()),
-                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20191001:ConfigurationStore").build()),
-                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20191101preview:ConfigurationStore").build()),
-                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20200601:ConfigurationStore").build()),
-                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20200701preview:ConfigurationStore").build()),
-                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20210301preview:ConfigurationStore").build()),
-                Output.of(Alias.builder().setType("azure-native:appconfiguration/v20211001preview:ConfigurationStore").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:appconfiguration/v20190201preview:ConfigurationStore").build()),
+                Output.of(Alias.builder().type("azure-native:appconfiguration/v20191001:ConfigurationStore").build()),
+                Output.of(Alias.builder().type("azure-native:appconfiguration/v20191101preview:ConfigurationStore").build()),
+                Output.of(Alias.builder().type("azure-native:appconfiguration/v20200601:ConfigurationStore").build()),
+                Output.of(Alias.builder().type("azure-native:appconfiguration/v20200701preview:ConfigurationStore").build()),
+                Output.of(Alias.builder().type("azure-native:appconfiguration/v20210301preview:ConfigurationStore").build()),
+                Output.of(Alias.builder().type("azure-native:appconfiguration/v20211001preview:ConfigurationStore").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

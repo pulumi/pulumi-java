@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetListenerRule {
     private GetListenerRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetListenerRuleArgs.Builder a);
-    }
-    private static GetListenerRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetListenerRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
- * 
-     */
-    public static CompletableFuture<GetListenerRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBackupVault {
     private GetBackupVault() {}
-    public interface BuilderApplicator {
-        public void apply(GetBackupVaultArgs.Builder a);
-    }
-    private static GetBackupVaultArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBackupVaultArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Backup::BackupVault
- * 
-     */
-    public static CompletableFuture<GetBackupVaultResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Backup::BackupVault
      * 

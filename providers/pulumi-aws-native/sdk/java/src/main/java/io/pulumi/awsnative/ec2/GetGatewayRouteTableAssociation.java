@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGatewayRouteTableAssociation {
     private GetGatewayRouteTableAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetGatewayRouteTableAssociationArgs.Builder a);
-    }
-    private static GetGatewayRouteTableAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGatewayRouteTableAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Associates a gateway with a route table. The gateway and route table must be in the same VPC. This association causes the incoming traffic to the gateway to be routed according to the routes in the route table.
- * 
-     */
-    public static CompletableFuture<GetGatewayRouteTableAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Associates a gateway with a route table. The gateway and route table must be in the same VPC. This association causes the incoming traffic to the gateway to be routed according to the routes in the route table.
      * 

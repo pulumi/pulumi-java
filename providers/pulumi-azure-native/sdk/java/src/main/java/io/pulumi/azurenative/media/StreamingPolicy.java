@@ -209,13 +209,13 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:media/v20180330preview:StreamingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:media/v20180601preview:StreamingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:media/v20180701:StreamingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:media/v20200501:StreamingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:media/v20210601:StreamingPolicy").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:media/v20180330preview:StreamingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20180601preview:StreamingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20180701:StreamingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20200501:StreamingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20210601:StreamingPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

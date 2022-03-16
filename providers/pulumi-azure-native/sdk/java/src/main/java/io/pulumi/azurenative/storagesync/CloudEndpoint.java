@@ -232,18 +232,18 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20170605preview:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20180402:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20180701:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20181001:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190201:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190301:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190601:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20191001:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20200301:CloudEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20200901:CloudEndpoint").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:storagesync/v20170605preview:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20180402:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20180701:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20181001:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190201:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190301:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190601:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20191001:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20200301:CloudEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20200901:CloudEndpoint").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

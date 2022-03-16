@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContactFlowModule {
     private GetContactFlowModule() {}
-    public interface BuilderApplicator {
-        public void apply(GetContactFlowModuleArgs.Builder a);
-    }
-    private static GetContactFlowModuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContactFlowModuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Connect::ContactFlowModule.
- * 
-     */
-    public static CompletableFuture<GetContactFlowModuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Connect::ContactFlowModule.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMultiRegionAccessPoint {
     private GetMultiRegionAccessPoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetMultiRegionAccessPointArgs.Builder a);
-    }
-    private static GetMultiRegionAccessPointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMultiRegionAccessPointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS::S3::MultiRegionAccessPoint is an Amazon S3 resource type that dynamically routes S3 requests to easily satisfy geographic compliance requirements based on customer-defined routing policies.
- * 
-     */
-    public static CompletableFuture<GetMultiRegionAccessPointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS::S3::MultiRegionAccessPoint is an Amazon S3 resource type that dynamically routes S3 requests to easily satisfy geographic compliance requirements based on customer-defined routing policies.
      * 

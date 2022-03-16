@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLoadBalancer {
     private GetLoadBalancer() {}
-    public interface BuilderApplicator {
-        public void apply(GetLoadBalancerArgs.Builder a);
-    }
-    private static GetLoadBalancerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLoadBalancerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Lightsail::LoadBalancer
- * 
-     */
-    public static CompletableFuture<GetLoadBalancerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Lightsail::LoadBalancer
      * 

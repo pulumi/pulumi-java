@@ -132,21 +132,21 @@ public class WebAppApplicationSettings extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppApplicationSettings").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppApplicationSettings").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:web/v20150801:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppApplicationSettings").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppApplicationSettings").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

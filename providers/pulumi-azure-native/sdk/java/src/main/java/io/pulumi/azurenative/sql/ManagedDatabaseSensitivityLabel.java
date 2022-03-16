@@ -239,15 +239,15 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:sql/v20180601preview:ManagedDatabaseSensitivityLabel").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ManagedDatabaseSensitivityLabel").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ManagedDatabaseSensitivityLabel").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ManagedDatabaseSensitivityLabel").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ManagedDatabaseSensitivityLabel").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ManagedDatabaseSensitivityLabel").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ManagedDatabaseSensitivityLabel").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:sql/v20180601preview:ManagedDatabaseSensitivityLabel").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200202preview:ManagedDatabaseSensitivityLabel").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200801preview:ManagedDatabaseSensitivityLabel").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ManagedDatabaseSensitivityLabel").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ManagedDatabaseSensitivityLabel").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ManagedDatabaseSensitivityLabel").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedDatabaseSensitivityLabel").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

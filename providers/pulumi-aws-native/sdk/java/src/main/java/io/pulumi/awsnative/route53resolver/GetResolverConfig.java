@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResolverConfig {
     private GetResolverConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetResolverConfigArgs.Builder a);
-    }
-    private static GetResolverConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResolverConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Route53Resolver::ResolverConfig.
- * 
-     */
-    public static CompletableFuture<GetResolverConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Route53Resolver::ResolverConfig.
      * 

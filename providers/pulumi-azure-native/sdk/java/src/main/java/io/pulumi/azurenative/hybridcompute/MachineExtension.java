@@ -250,20 +250,20 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20190802preview:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20191212:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20200730preview:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20200802:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20200815preview:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210128preview:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210325preview:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210422preview:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210517preview:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210520:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20210610preview:MachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:hybridcompute/v20211210preview:MachineExtension").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20190802preview:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20191212:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20200730preview:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20200802:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20200815preview:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210128preview:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210325preview:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210422preview:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210517preview:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210520:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20210610preview:MachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:hybridcompute/v20211210preview:MachineExtension").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

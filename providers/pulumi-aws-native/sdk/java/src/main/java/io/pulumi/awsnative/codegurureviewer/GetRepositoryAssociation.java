@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRepositoryAssociation {
     private GetRepositoryAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetRepositoryAssociationArgs.Builder a);
-    }
-    private static GetRepositoryAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRepositoryAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
- * 
-     */
-    public static CompletableFuture<GetRepositoryAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
      * 

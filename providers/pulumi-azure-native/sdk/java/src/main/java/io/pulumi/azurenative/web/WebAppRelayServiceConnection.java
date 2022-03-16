@@ -160,21 +160,21 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppRelayServiceConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppRelayServiceConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:web/v20150801:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppRelayServiceConnection").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppRelayServiceConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -236,16 +236,16 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20190701:DiskEncryptionSet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20191101:DiskEncryptionSet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200501:DiskEncryptionSet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200630:DiskEncryptionSet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200930:DiskEncryptionSet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:DiskEncryptionSet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:DiskEncryptionSet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210801:DiskEncryptionSet").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20190701:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20191101:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200501:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200630:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200930:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210801:DiskEncryptionSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -222,19 +222,19 @@ public class Order extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190301:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190701:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190801:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:Order").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:Order").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190301:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190701:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190801:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200501preview:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200901:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200901preview:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20201201:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:Order").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Order").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

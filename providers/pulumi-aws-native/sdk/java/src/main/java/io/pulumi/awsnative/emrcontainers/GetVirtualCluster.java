@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualCluster {
     private GetVirtualCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualClusterArgs.Builder a);
-    }
-    private static GetVirtualClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema of AWS::EMRContainers::VirtualCluster Type
- * 
-     */
-    public static CompletableFuture<GetVirtualClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema of AWS::EMRContainers::VirtualCluster Type
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMountTarget {
     private GetMountTarget() {}
-    public interface BuilderApplicator {
-        public void apply(GetMountTargetArgs.Builder a);
-    }
-    private static GetMountTargetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMountTargetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EFS::MountTarget
- * 
-     */
-    public static CompletableFuture<GetMountTargetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EFS::MountTarget
      * 

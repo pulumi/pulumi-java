@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSite {
     private GetSite() {}
-    public interface BuilderApplicator {
-        public void apply(GetSiteArgs.Builder a);
-    }
-    private static GetSiteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSiteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::NetworkManager::Site type describes a site.
- * 
-     */
-    public static CompletableFuture<GetSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::NetworkManager::Site type describes a site.
      * 

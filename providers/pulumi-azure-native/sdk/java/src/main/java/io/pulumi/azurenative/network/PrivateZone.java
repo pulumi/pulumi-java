@@ -262,11 +262,11 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:network/v20180901:PrivateZone").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200101:PrivateZone").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200601:PrivateZone").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:network/v20180901:PrivateZone").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200101:PrivateZone").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200601:PrivateZone").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

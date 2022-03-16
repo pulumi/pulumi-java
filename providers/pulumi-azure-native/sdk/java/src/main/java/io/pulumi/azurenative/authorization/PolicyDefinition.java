@@ -207,19 +207,19 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:authorization/v20151001preview:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20160401:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20161201:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20180301:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20180501:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20190101:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20190601:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20190901:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20200301:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20200901:PolicyDefinition").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20210601:PolicyDefinition").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:authorization/v20151001preview:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20160401:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20161201:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20180301:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20180501:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20190101:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20190601:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20190901:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20200301:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20200901:PolicyDefinition").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20210601:PolicyDefinition").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

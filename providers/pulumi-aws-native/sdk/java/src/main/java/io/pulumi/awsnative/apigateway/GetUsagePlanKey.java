@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUsagePlanKey {
     private GetUsagePlanKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetUsagePlanKeyArgs.Builder a);
-    }
-    private static GetUsagePlanKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUsagePlanKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::ApiGateway::UsagePlanKey
- * 
-     */
-    public static CompletableFuture<GetUsagePlanKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::ApiGateway::UsagePlanKey
      * 

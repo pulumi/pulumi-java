@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHoursOfOperation {
     private GetHoursOfOperation() {}
-    public interface BuilderApplicator {
-        public void apply(GetHoursOfOperationArgs.Builder a);
-    }
-    private static GetHoursOfOperationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHoursOfOperationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Connect::HoursOfOperation
- * 
-     */
-    public static CompletableFuture<GetHoursOfOperationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Connect::HoursOfOperation
      * 

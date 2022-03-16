@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataSource {
     private GetDataSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataSourceArgs.Builder a);
-    }
-    private static GetDataSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Kendra DataSource
- * 
-     */
-    public static CompletableFuture<GetDataSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Kendra DataSource
      * 

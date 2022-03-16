@@ -266,17 +266,17 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20190301:DedicatedHost").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190701:DedicatedHost").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20191201:DedicatedHost").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200601:DedicatedHost").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:DedicatedHost").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210301:DedicatedHost").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:DedicatedHost").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:DedicatedHost").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20211101:DedicatedHost").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20190301:DedicatedHost").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190701:DedicatedHost").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20191201:DedicatedHost").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200601:DedicatedHost").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:DedicatedHost").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210301:DedicatedHost").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:DedicatedHost").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:DedicatedHost").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211101:DedicatedHost").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

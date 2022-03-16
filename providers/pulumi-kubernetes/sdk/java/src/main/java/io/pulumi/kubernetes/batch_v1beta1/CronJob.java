@@ -148,10 +148,10 @@ public class CronJob extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("kubernetes:batch/v1:CronJob").build()),
-                Output.of(Alias.builder().setType("kubernetes:batch/v2alpha1:CronJob").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("kubernetes:batch/v1:CronJob").build()),
+                Output.of(Alias.builder().type("kubernetes:batch/v2alpha1:CronJob").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

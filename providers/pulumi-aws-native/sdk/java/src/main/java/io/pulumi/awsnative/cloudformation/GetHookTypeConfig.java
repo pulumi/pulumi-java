@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHookTypeConfig {
     private GetHookTypeConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetHookTypeConfigArgs.Builder a);
-    }
-    private static GetHookTypeConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHookTypeConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specifies the configuration data for a registered hook in CloudFormation Registry.
- * 
-     */
-    public static CompletableFuture<GetHookTypeConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specifies the configuration data for a registered hook in CloudFormation Registry.
      * 

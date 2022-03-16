@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRecoveryGroup {
     private GetRecoveryGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetRecoveryGroupArgs.Builder a);
-    }
-    private static GetRecoveryGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRecoveryGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS Route53 Recovery Readiness Recovery Group Schema and API specifications.
- * 
-     */
-    public static CompletableFuture<GetRecoveryGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS Route53 Recovery Readiness Recovery Group Schema and API specifications.
      * 

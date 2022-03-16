@@ -149,12 +149,12 @@ public class ManagementLockAtResourceGroupLevel extends io.pulumi.resources.Cust
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:authorization/v20150101:ManagementLockAtResourceGroupLevel").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20160901:ManagementLockAtResourceGroupLevel").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20170401:ManagementLockAtResourceGroupLevel").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20200501:ManagementLockAtResourceGroupLevel").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:authorization/v20150101:ManagementLockAtResourceGroupLevel").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20160901:ManagementLockAtResourceGroupLevel").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20170401:ManagementLockAtResourceGroupLevel").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20200501:ManagementLockAtResourceGroupLevel").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

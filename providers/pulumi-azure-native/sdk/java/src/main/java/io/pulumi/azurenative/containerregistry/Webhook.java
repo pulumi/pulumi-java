@@ -191,17 +191,17 @@ public class Webhook extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20170601preview:Webhook").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20171001:Webhook").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20190501:Webhook").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20191201preview:Webhook").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20201101preview:Webhook").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210601preview:Webhook").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210801preview:Webhook").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210901:Webhook").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20211201preview:Webhook").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20170601preview:Webhook").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20171001:Webhook").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20190501:Webhook").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20191201preview:Webhook").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20201101preview:Webhook").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210601preview:Webhook").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210801preview:Webhook").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210901:Webhook").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20211201preview:Webhook").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAnomalyDetector {
     private GetAnomalyDetector() {}
-    public interface BuilderApplicator {
-        public void apply(GetAnomalyDetectorArgs.Builder a);
-    }
-    private static GetAnomalyDetectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAnomalyDetectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Amazon Lookout for Metrics Detector
- * 
-     */
-    public static CompletableFuture<GetAnomalyDetectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Amazon Lookout for Metrics Detector
      * 

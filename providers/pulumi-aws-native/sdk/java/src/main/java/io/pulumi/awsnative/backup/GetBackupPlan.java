@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBackupPlan {
     private GetBackupPlan() {}
-    public interface BuilderApplicator {
-        public void apply(GetBackupPlanArgs.Builder a);
-    }
-    private static GetBackupPlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBackupPlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Backup::BackupPlan
- * 
-     */
-    public static CompletableFuture<GetBackupPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Backup::BackupPlan
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransitGatewayRegistration {
     private GetTransitGatewayRegistration() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransitGatewayRegistrationArgs.Builder a);
-    }
-    private static GetTransitGatewayRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransitGatewayRegistrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
- * 
-     */
-    public static CompletableFuture<GetTransitGatewayRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
      * 
