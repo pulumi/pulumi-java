@@ -96,22 +96,17 @@ test {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            groupId = 'io.pulumi'
-            artifactId = 'pulumi'
-            version = project.version
-
-            from components.java
-        }
-
         // TODO pom
 
+        // Publish to GitHub Packages like this
+        //
+        // gradle -Pversion=0.0.1-SNAPSHOT pubish
+        //
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
             groupId = "io.pulumi"
             artifactId = "pulumi"
-            version = '0.0.1-SNAPSHOT'
-            from(components.java)
+            from components.java
         }
     }
 
