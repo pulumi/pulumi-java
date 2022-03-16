@@ -8,8 +8,11 @@ import java.util.stream.Collectors;
 
 import io.pulumi.Stack;
 import io.pulumi.aws.s3.BucketObject;
+import io.pulumi.aws.s3.BucketObjectArgs;
 import io.pulumi.aws.s3.BucketPolicy;
+import io.pulumi.aws.s3.BucketPolicyArgs;
 import io.pulumi.awsnative.s3.Bucket;
+import io.pulumi.awsnative.s3.BucketArgs;
 import io.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
 import io.pulumi.core.Asset.FileAsset;
 import io.pulumi.core.Output;
@@ -33,28 +36,28 @@ public final class MyStack extends Stack {
     public MyStack() throws IOException {
 
         final var siteBucket = new Bucket("s3-website-bucket",
-                $ -> $.websiteConfiguration(BucketWebsiteConfigurationArgs.builder()
+                BucketArgs.builder().websiteConfiguration(BucketWebsiteConfigurationArgs.builder()
                         .indexDocument("index.html")
-                        .build()));
+                        .build()).build());
 
         final String sitedir = "www/";
         for (var path : Files.walk(Paths.get(sitedir)).filter(Files::isRegularFile).collect(Collectors.toList())) {
                 var contentType = Files.probeContentType(path);
                 new BucketObject(path.toString().replace(sitedir, ""),
-                    $ -> $.bucket(siteBucket.getId())
+                    BucketObjectArgs.builder().bucket(siteBucket.getId())
                         .source(new FileAsset(path.toAbsolutePath().toString()))
-                        .contentType(contentType)
+                        .contentType(contentType).build()
                     );
         }
 
         final var bucketPolicy = new BucketPolicy("bucketPolicy",
-                $ -> $.bucket(siteBucket.getId())
+                BucketPolicyArgs.builder().bucket(siteBucket.getId())
                         .policy(siteBucket.getArn()
                                 .applyValue(bucketArn ->
                                             "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":[\"s3:GetObject\"],\"Resource\":[\"" +
                                             bucketArn +
                                             "/*\"]}]}")
-                        ));
+                        ).build());
 
         this.bucketName = siteBucket.getBucketName();
         this.websiteUrl = siteBucket.getWebsiteURL();
