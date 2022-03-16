@@ -93,22 +93,6 @@ public class CronJob extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable CronJobArgs.Builder a);
-    }
-    private static io.pulumi.kubernetes.batch_v2alpha1.CronJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.kubernetes.batch_v2alpha1.CronJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public CronJob(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -148,10 +132,10 @@ public class CronJob extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .version(Utilities.getVersion())
-            .aliases(List.of(
-                Output.of(Alias.builder().type("kubernetes:batch/v1:CronJob").build()),
-                Output.of(Alias.builder().type("kubernetes:batch/v1beta1:CronJob").build())
+            .setVersion(Utilities.getVersion())
+            .setAliases(List.of(
+                Output.of(Alias.builder().setType("kubernetes:batch/v1:CronJob").build()),
+                Output.of(Alias.builder().setType("kubernetes:batch/v1beta1:CronJob").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
