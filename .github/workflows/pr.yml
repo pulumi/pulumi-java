@@ -5,7 +5,7 @@ on:
       - 'CHANGELOG_PENDING.md'
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
