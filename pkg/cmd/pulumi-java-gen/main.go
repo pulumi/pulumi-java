@@ -130,6 +130,10 @@ func generateJava(configFile string) error {
 
 	outDir := filepath.Join(rootDir, cfg.Out)
 
+	if err := cleanDir(outDir); err != nil {
+		return err
+	}
+
 	for f, bytes := range files {
 		if err := emitFile(filepath.Join(outDir, f), bytes); err != nil {
 			return err
@@ -150,6 +154,10 @@ func generateJava(configFile string) error {
 	}
 
 	return nil
+}
+
+func cleanDir(path string) error {
+	return os.RemoveAll(path)
 }
 
 func emitFile(path string, bytes []byte) error {
