@@ -128,14 +128,14 @@ jobs:
         run: |
           make provider.aws.build provider.aws.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH=\"$PATH:$(pwd)/bin/\" &&
             ss=0
             cd tests/examples/aws-java-webserver &&
             ./gradlew install || ((ss++))
             pulumi stack rm dev --yes || true
             pulumi stack init dev || ((ss++))
             pulumi preview || ((ss++))
-            exit $ss"
+            exit $ss
   example2:
     runs-on: ubuntu-latest
     steps:
@@ -193,7 +193,7 @@ jobs:
           make provider.azure-native.build
           make provider.azure-native.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-appservice-sql &&
             ./gradlew install &&
             ss=0
@@ -202,7 +202,7 @@ jobs:
             pulumi config set azure-native:location westus
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
             pulumi preview || ((ss++))
-            exit $ss"
+            exit $ss
   example3:
     runs-on: ubuntu-latest
     steps:
@@ -255,7 +255,7 @@ jobs:
           make provider.gcp.build provider.gcp.install
           make provider.kubernetes.build provider.kubernetes.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/gcp-java-gke-hello-world &&
             ss=0
             ./gradlew install || ((ss++))
@@ -263,7 +263,7 @@ jobs:
             pulumi stack init dev || ((ss++))
             pulumi config set gcp:zone us-west1-a
             pulumi preview || ((ss++))
-            exit $ss"
+            exit $ss
   example4:
     runs-on: ubuntu-latest
     steps:
@@ -309,7 +309,7 @@ jobs:
       - name: run example minimal
         run: |
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/minimal &&
             ./gradlew install &&
             ss=0
@@ -321,7 +321,7 @@ jobs:
             pulumi preview || ((ss++))
             pulumi up -s dev --yes || ((ss++))
             pulumi destroy -s dev --yes || ((ss++))
-            exit $ss"
+            exit $ss
   example5:
     runs-on: ubuntu-latest
     steps:
@@ -379,7 +379,7 @@ jobs:
           make provider.aws.build provider.aws.install
           make provider.aws-native.build provider.aws-native.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-native-java-s3-folder &&
             ss=0
             ./gradlew install || ((ss++))
@@ -387,7 +387,7 @@ jobs:
             pulumi stack rm dev --yes || true
             pulumi stack init dev || ((ss++))
             pulumi preview || ((ss++))
-            exit $ss"
+            exit $ss
   example6:
     runs-on: ubuntu-latest
     steps:
@@ -444,7 +444,7 @@ jobs:
         run: |
           make provider.azure-native.build provider.azure-native.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-static-website &&
             ss=0
             ./gradlew install || ((ss++))
@@ -452,7 +452,7 @@ jobs:
             pulumi stack init dev || ((ss++))
             pulumi config set azure-native:location westus
             pulumi preview || ((ss++))
-            exit $ss"
+            exit $ss
   example7:
     runs-on: ubuntu-latest
     steps:
@@ -499,7 +499,7 @@ jobs:
         run: |
           make provider.random.build provider.random.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/random &&
             ss=0
             ./gradlew install || ((ss++))
@@ -509,7 +509,7 @@ jobs:
             pulumi preview || ((ss++))
             pulumi up -s dev --yes || ((ss++))
             pulumi destroy -s dev --yes || ((ss++))
-            exit $ss"
+            exit $ss
     strategy:
       fail-fast: true
   go-lint:
