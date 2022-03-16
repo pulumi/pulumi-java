@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNodeTypes {
     private GetNodeTypes() {}
-    public interface BuilderApplicator {
-        public void apply(GetNodeTypesArgs.Builder a);
-    }
-    private static GetNodeTypesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNodeTypesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides available node types for Compute Engine sole-tenant nodes in a zone
- * for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getNodeTypes.
- * 
-     *
-     * A collection of values returned by getNodeTypes.
- * 
-     */
-    public static CompletableFuture<GetNodeTypesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides available node types for Compute Engine sole-tenant nodes in a zone
      * for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).

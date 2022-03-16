@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransferProjectServieAccount {
     private GetTransferProjectServieAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransferProjectServieAccountArgs.Builder a);
-    }
-    private static GetTransferProjectServieAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransferProjectServieAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to retrieve Storage Transfer service account for this project
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getTransferProjectServieAccount.
- * 
-     *
-     * A collection of values returned by getTransferProjectServieAccount.
- * 
-     */
-    public static CompletableFuture<GetTransferProjectServieAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to retrieve Storage Transfer service account for this project
      * 

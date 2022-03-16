@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubnetwork {
     private GetSubnetwork() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubnetworkArgs.Builder a);
-    }
-    private static GetSubnetworkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubnetworkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a subnetwork within GCE from its name and region.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSubnetwork.
- * 
-     *
-     * A collection of values returned by getSubnetwork.
- * 
-     */
-    public static CompletableFuture<GetSubnetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a subnetwork within GCE from its name and region.
      * 

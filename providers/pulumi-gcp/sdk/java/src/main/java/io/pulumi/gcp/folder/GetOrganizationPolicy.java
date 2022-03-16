@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrganizationPolicy {
     private GetOrganizationPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrganizationPolicyArgs.Builder a);
-    }
-    private static GetOrganizationPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrganizationPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Allows management of Organization policies for a Google Folder. For more information see
- * [the official
- * documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getOrganizationPolicy.
- * 
-     *
-     * A collection of values returned by getOrganizationPolicy.
- * 
-     */
-    public static CompletableFuture<GetOrganizationPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Allows management of Organization policies for a Google Folder. For more information see
      * [the official

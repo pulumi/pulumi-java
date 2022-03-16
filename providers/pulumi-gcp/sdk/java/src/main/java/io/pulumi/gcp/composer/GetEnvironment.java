@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnvironment {
     private GetEnvironment() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnvironmentArgs.Builder a);
-    }
-    private static GetEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides access to Cloud Composer environment configuration in a region for a given project.
- * 
-     *
-     * A collection of arguments for invoking getEnvironment.
- * 
-     *
-     * A collection of values returned by getEnvironment.
- * 
-     */
-    public static CompletableFuture<GetEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides access to Cloud Composer environment configuration in a region for a given project.
      * 

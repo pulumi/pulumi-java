@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFolder {
     private GetFolder() {}
-    public interface BuilderApplicator {
-        public void apply(GetFolderArgs.Builder a);
-    }
-    private static GetFolderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFolderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a Google Cloud Folder.
- * 
-     *
-     * A collection of arguments for invoking getFolder.
- * 
-     *
-     * A collection of values returned by getFolder.
- * 
-     */
-    public static CompletableFuture<GetFolderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a Google Cloud Folder.
      * 

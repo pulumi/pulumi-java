@@ -14,28 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegions {
     private GetRegions() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionsArgs.Builder a);
-    }
-    private static GetRegionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides access to available Google Compute regions for a given project.
- * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
- * 
-     *
-     * A collection of arguments for invoking getRegions.
- * 
-     *
-     * A collection of values returned by getRegions.
- * 
-     */
-    public static CompletableFuture<GetRegionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides access to available Google Compute regions for a given project.
      * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.

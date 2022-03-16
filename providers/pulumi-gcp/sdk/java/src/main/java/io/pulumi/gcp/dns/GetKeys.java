@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKeys {
     private GetKeys() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeysArgs.Builder a);
-    }
-    private static GetKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
- * [official documentation](https://cloud.google.com/dns/docs/dnskeys/)
- * and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getKeys.
- * 
-     *
-     * A collection of values returned by getKeys.
- * 
-     */
-    public static CompletableFuture<GetKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
      * [official documentation](https://cloud.google.com/dns/docs/dnskeys/)

@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetblockIPRanges {
     private GetNetblockIPRanges() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetblockIPRangesArgs.Builder a);
-    }
-    private static GetNetblockIPRangesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetblockIPRangesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getNetblockIPRanges.
- * 
-     *
-     * A collection of values returned by getNetblockIPRanges.
- * 
-     */
-    public static CompletableFuture<GetNetblockIPRangesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
      * 

@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGameServerDeploymentRollout {
     private GetGameServerDeploymentRollout() {}
-    public interface BuilderApplicator {
-        public void apply(GetGameServerDeploymentRolloutArgs.Builder a);
-    }
-    private static GetGameServerDeploymentRolloutArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGameServerDeploymentRolloutArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the rollout state.
- * 
- * https://cloud.google.com/game-servers/docs/reference/rest/v1beta/GameServerDeploymentRollout
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getGameServerDeploymentRollout.
- * 
-     *
-     * A collection of values returned by getGameServerDeploymentRollout.
- * 
-     */
-    public static CompletableFuture<GetGameServerDeploymentRolloutResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the rollout state.
      * 
