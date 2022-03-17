@@ -126,8 +126,8 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example aws-java-webserver
         run: |
-          make provider.aws.build provider.aws.install
           make bin/pulumi-language-jvm
+          make provider.aws.build provider.aws.install
           export PATH="$PATH:$(pwd)/bin/" &&
             ss=0
             cd tests/examples/aws-java-webserver &&
@@ -190,9 +190,9 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         name: run example azure-java-appservice-sql
         run: |
+          make bin/pulumi-language-jvm
           make provider.azure-native.build
           make provider.azure-native.install
-          make bin/pulumi-language-jvm
           export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/azure-java-appservice-sql &&
             ./gradlew install &&
@@ -252,9 +252,9 @@ jobs:
           export_default_credentials: true
       - name: run example gcp-java-gke-hello-world
         run: |
+          make bin/pulumi-language-jvm
           make provider.gcp.build provider.gcp.install
           make provider.kubernetes.build provider.kubernetes.install
-          make bin/pulumi-language-jvm
           export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/gcp-java-gke-hello-world &&
             ss=0
@@ -376,9 +376,9 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example aws-native-java-s3-folder
         run: |
+          make bin/pulumi-language-jvm
           make provider.aws.build provider.aws.install
           make provider.aws-native.build provider.aws-native.install
-          make bin/pulumi-language-jvm
           export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/aws-native-java-s3-folder &&
             ss=0
@@ -442,8 +442,8 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         name: run example azure-java-static-website
         run: |
-          make provider.azure-native.build provider.azure-native.install
           make bin/pulumi-language-jvm
+          make provider.azure-native.build provider.azure-native.install
           export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/azure-java-static-website &&
             ss=0
@@ -497,8 +497,8 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example random
         run: |
-          make provider.random.build provider.random.install
           make bin/pulumi-language-jvm
+          make provider.random.build provider.random.install
           export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/random &&
             ss=0
