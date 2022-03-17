@@ -11,7 +11,16 @@ import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.eks.Cluster;
 import io.pulumi.eks.ClusterArgs;
 
+import java.util.stream.Collectors;
+
 public final class MyStack extends Stack {
+
+    @Export(type = String.class)
+    private Output<String> vpcIdOutput;
+
+    @Export(type = String.class)
+    private Output<String> subnetIdsOutput;
+
     @Export(type = Object.class)
     private Output<Object> kubeconfig;
 
@@ -22,16 +31,25 @@ public final class MyStack extends Stack {
                         InvokeOptions.Empty)
                 .thenApply(getVpcResult -> getVpcResult.getId()));
 
+        this.vpcIdOutput = vpcIdOutput;
+
         var subnetIdsOutput = vpcIdOutput
                 .apply(vpcId -> Output.of(GetSubnetIds.invokeAsync(GetSubnetIdsArgs.builder()
                                 .vpcId(vpcId)
                                 .build(),
                         InvokeOptions.Empty)))
-                .applyValue(getSubnetIdsResult -> getSubnetIdsResult.getIds());
+                .applyValue(getSubnetIdsResult ->
+                        getSubnetIdsResult.getIds()
+                                .stream()
+                                .sorted()
+                                .limit(2)
+                                .collect(Collectors.toList()));
+
+        this.subnetIdsOutput = subnetIdsOutput.applyValue(vs -> String.join(",", vs));
 
         var cluster = new Cluster("my-cluster", ClusterArgs.builder()
                 .vpcId(vpcIdOutput)
-                .nodeSubnetIds(subnetIdsOutput)
+                .subnetIds(subnetIdsOutput)
                 .instanceType("t2.micro")
                 .minSize(1)
                 .maxSize(2)
