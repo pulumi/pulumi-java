@@ -74,7 +74,7 @@ public class ClusterCreationRoleProvider extends io.pulumi.resources.ComponentRe
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.ComponentResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
+            .version(Utilities.getVersion())
             .build();
         return io.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
     }
