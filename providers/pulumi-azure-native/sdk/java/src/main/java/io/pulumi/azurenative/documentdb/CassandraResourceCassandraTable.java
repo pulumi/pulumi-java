@@ -102,22 +102,6 @@ public class CassandraResourceCassandraTable extends io.pulumi.resources.CustomR
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(CassandraResourceCassandraTableArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.documentdb.CassandraResourceCassandraTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.documentdb.CassandraResourceCassandraTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public CassandraResourceCassandraTable(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -149,29 +133,29 @@ public class CassandraResourceCassandraTable extends io.pulumi.resources.CustomR
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:CassandraResourceCassandraTable").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:CassandraResourceCassandraTable").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20150401:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20150408:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20151106:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20160319:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20160331:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20190801:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20191212:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200301:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200401:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200901:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:CassandraResourceCassandraTable").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraResourceCassandraTable").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

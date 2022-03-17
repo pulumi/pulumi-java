@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGithubEnterpriseConfig {
     private GetGithubEnterpriseConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetGithubEnterpriseConfigArgs.Builder a);
-    }
-    private static GetGithubEnterpriseConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGithubEnterpriseConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve a GitHubEnterpriseConfig.
- * 
-     */
-    public static CompletableFuture<GetGithubEnterpriseConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve a GitHubEnterpriseConfig.
      * 

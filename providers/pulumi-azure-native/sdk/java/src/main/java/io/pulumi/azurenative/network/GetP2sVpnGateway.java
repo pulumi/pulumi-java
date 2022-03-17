@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetP2sVpnGateway {
     private GetP2sVpnGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetP2sVpnGatewayArgs.Builder a);
-    }
-    private static GetP2sVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetP2sVpnGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * P2SVpnGateway Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * P2SVpnGateway Resource.
- * 
-     */
-    public static CompletableFuture<GetP2sVpnGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * P2SVpnGateway Resource.
      * API Version: 2020-11-01.

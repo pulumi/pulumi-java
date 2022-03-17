@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLinkedServer {
     private GetLinkedServer() {}
-    public interface BuilderApplicator {
-        public void apply(GetLinkedServerArgs.Builder a);
-    }
-    private static GetLinkedServerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLinkedServerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response to put/get linked server (with properties) for Redis cache.
- * API Version: 2020-06-01.
- * 
-     *
-     * Response to put/get linked server (with properties) for Redis cache.
- * 
-     */
-    public static CompletableFuture<GetLinkedServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response to put/get linked server (with properties) for Redis cache.
      * API Version: 2020-06-01.

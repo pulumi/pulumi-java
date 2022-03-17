@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfigurationAggregator {
     private GetConfigurationAggregator() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationAggregatorArgs.Builder a);
-    }
-    private static GetConfigurationAggregatorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationAggregatorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Config::ConfigurationAggregator
- * 
-     */
-    public static CompletableFuture<GetConfigurationAggregatorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Config::ConfigurationAggregator
      * 

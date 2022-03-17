@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRoutingIntent {
     private GetRoutingIntent() {}
-    public interface BuilderApplicator {
-        public void apply(GetRoutingIntentArgs.Builder a);
-    }
-    private static GetRoutingIntentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRoutingIntentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The routing intent child resource of a Virtual hub.
- * API Version: 2021-05-01.
- * 
-     *
-     * The routing intent child resource of a Virtual hub.
- * 
-     */
-    public static CompletableFuture<GetRoutingIntentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The routing intent child resource of a Virtual hub.
      * API Version: 2021-05-01.

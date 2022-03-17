@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkAcl {
     private GetNetworkAcl() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkAclArgs.Builder a);
-    }
-    private static GetNetworkAclArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkAclArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::NetworkAcl
- * 
-     */
-    public static CompletableFuture<GetNetworkAclResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::NetworkAcl
      * 

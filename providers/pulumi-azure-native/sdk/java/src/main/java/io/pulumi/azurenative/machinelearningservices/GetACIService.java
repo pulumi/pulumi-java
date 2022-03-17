@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetACIService {
     private GetACIService() {}
-    public interface BuilderApplicator {
-        public void apply(GetACIServiceArgs.Builder a);
-    }
-    private static GetACIServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetACIServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Machine Learning service object wrapped into ARM resource envelope.
- * API Version: 2021-01-01.
- * 
-     *
-     * Machine Learning service object wrapped into ARM resource envelope.
- * 
-     */
-    public static CompletableFuture<GetACIServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Machine Learning service object wrapped into ARM resource envelope.
      * API Version: 2021-01-01.

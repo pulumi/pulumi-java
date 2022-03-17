@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnection {
     private GetConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectionArgs.Builder a);
-    }
-    private static GetConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This data source can be used to fetch information about a specific Glue Connection.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getConnection.
- * 
-     *
-     * A collection of values returned by getConnection.
- * 
-     */
-    public static CompletableFuture<GetConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This data source can be used to fetch information about a specific Glue Connection.
      * 

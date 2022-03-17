@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProjectIamPolicy {
     private GetProjectIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetProjectIamPolicyArgs.Builder a);
-    }
-    private static GetProjectIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProjectIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the IAM access control policy for the specified Project. Permission is denied if the policy or the resource does not exist. For additional information about resource structure and identification, see [Resource Names](/apis/design/resource_names).
- * 
-     */
-    public static CompletableFuture<GetProjectIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the IAM access control policy for the specified Project. Permission is denied if the policy or the resource does not exist. For additional information about resource structure and identification, see [Resource Names](/apis/design/resource_names).
      * 

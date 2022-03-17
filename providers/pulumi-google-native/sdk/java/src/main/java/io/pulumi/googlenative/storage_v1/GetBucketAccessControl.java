@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBucketAccessControl {
     private GetBucketAccessControl() {}
-    public interface BuilderApplicator {
-        public void apply(GetBucketAccessControlArgs.Builder a);
-    }
-    private static GetBucketAccessControlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBucketAccessControlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the ACL entry for the specified entity on the specified bucket.
- * 
-     */
-    public static CompletableFuture<GetBucketAccessControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the ACL entry for the specified entity on the specified bucket.
      * 

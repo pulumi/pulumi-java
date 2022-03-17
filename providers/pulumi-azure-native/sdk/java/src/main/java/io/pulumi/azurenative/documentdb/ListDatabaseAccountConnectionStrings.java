@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListDatabaseAccountConnectionStrings {
     private ListDatabaseAccountConnectionStrings() {}
-    public interface BuilderApplicator {
-        public void apply(ListDatabaseAccountConnectionStringsArgs.Builder a);
-    }
-    private static ListDatabaseAccountConnectionStringsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListDatabaseAccountConnectionStringsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The connection strings for the given database account.
- * API Version: 2021-03-15.
- * 
-     *
-     * The connection strings for the given database account.
- * 
-     */
-    public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The connection strings for the given database account.
      * API Version: 2021-03-15.

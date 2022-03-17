@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAFDOriginGroup {
     private GetAFDOriginGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetAFDOriginGroupArgs.Builder a);
-    }
-    private static GetAFDOriginGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAFDOriginGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
- * API Version: 2020-09-01.
- * 
-     *
-     * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
- * 
-     */
-    public static CompletableFuture<GetAFDOriginGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
      * API Version: 2020-09-01.

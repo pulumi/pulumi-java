@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRoute {
     private GetRoute() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouteArgs.Builder a);
-    }
-    private static GetRouteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified Route resource. Gets a list of available routes by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetRouteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified Route resource. Gets a list of available routes by making a list() request.
      * 

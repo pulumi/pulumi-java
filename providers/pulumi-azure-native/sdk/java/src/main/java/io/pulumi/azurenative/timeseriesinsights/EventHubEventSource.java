@@ -245,22 +245,6 @@ public class EventHubEventSource extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(EventHubEventSourceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.timeseriesinsights.EventHubEventSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.timeseriesinsights.EventHubEventSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public EventHubEventSource(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -299,14 +283,14 @@ public class EventHubEventSource extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:EventHubEventSource").build()),
-                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:EventHubEventSource").build()),
-                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:EventHubEventSource").build()),
-                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:EventHubEventSource").build()),
-                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:EventHubEventSource").build()),
-                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:EventHubEventSource").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:timeseriesinsights/v20170228preview:EventHubEventSource").build()),
+                Output.of(Alias.builder().type("azure-native:timeseriesinsights/v20171115:EventHubEventSource").build()),
+                Output.of(Alias.builder().type("azure-native:timeseriesinsights/v20180815preview:EventHubEventSource").build()),
+                Output.of(Alias.builder().type("azure-native:timeseriesinsights/v20200515:EventHubEventSource").build()),
+                Output.of(Alias.builder().type("azure-native:timeseriesinsights/v20210331preview:EventHubEventSource").build()),
+                Output.of(Alias.builder().type("azure-native:timeseriesinsights/v20210630preview:EventHubEventSource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

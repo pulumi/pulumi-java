@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListNetworkManagerDeploymentStatus {
     private ListNetworkManagerDeploymentStatus() {}
-    public interface BuilderApplicator {
-        public void apply(ListNetworkManagerDeploymentStatusArgs.Builder a);
-    }
-    private static ListNetworkManagerDeploymentStatusArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListNetworkManagerDeploymentStatusArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A list of Network Manager Deployment Status
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * A list of Network Manager Deployment Status
- * 
-     */
-    public static CompletableFuture<ListNetworkManagerDeploymentStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A list of Network Manager Deployment Status
      * API Version: 2021-02-01-preview.

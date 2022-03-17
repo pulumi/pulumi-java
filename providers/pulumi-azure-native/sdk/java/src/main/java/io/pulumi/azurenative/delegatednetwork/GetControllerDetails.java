@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetControllerDetails {
     private GetControllerDetails() {}
-    public interface BuilderApplicator {
-        public void apply(GetControllerDetailsArgs.Builder a);
-    }
-    private static GetControllerDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetControllerDetailsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents an instance of a DNC controller.
- * API Version: 2021-03-15.
- * 
-     *
-     * Represents an instance of a DNC controller.
- * 
-     */
-    public static CompletableFuture<GetControllerDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents an instance of a DNC controller.
      * API Version: 2021-03-15.

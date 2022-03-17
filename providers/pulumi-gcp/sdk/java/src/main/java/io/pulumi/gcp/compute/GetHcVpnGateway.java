@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHcVpnGateway {
     private GetHcVpnGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetHcVpnGatewayArgs.Builder a);
-    }
-    private static GetHcVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHcVpnGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a HA VPN Gateway within GCE from its name.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getHcVpnGateway.
- * 
-     *
-     * A collection of values returned by getHcVpnGateway.
- * 
-     */
-    public static CompletableFuture<GetHcVpnGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a HA VPN Gateway within GCE from its name.
      * 

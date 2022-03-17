@@ -49,22 +49,6 @@ public class SnapshotCreateVolumePermission extends io.pulumi.resources.CustomRe
         return this.snapshotId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SnapshotCreateVolumePermissionArgs.Builder a);
-    }
-    private static io.pulumi.aws.ec2.SnapshotCreateVolumePermissionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ec2.SnapshotCreateVolumePermissionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SnapshotCreateVolumePermission(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -96,7 +80,7 @@ public class SnapshotCreateVolumePermission extends io.pulumi.resources.CustomRe
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
+            .version(Utilities.getVersion())
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

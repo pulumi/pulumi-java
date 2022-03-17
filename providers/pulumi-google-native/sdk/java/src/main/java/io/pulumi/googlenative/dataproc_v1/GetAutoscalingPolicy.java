@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAutoscalingPolicy {
     private GetAutoscalingPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetAutoscalingPolicyArgs.Builder a);
-    }
-    private static GetAutoscalingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAutoscalingPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves autoscaling policy.
- * 
-     */
-    public static CompletableFuture<GetAutoscalingPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves autoscaling policy.
      * 

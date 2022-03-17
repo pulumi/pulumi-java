@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRepository {
     private GetRepository() {}
-    public interface BuilderApplicator {
-        public void apply(GetRepositoryArgs.Builder a);
-    }
-    private static GetRepositoryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRepositoryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
- * 
-     */
-    public static CompletableFuture<GetRepositoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
      * 

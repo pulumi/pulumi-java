@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIoTAddon {
     private GetIoTAddon() {}
-    public interface BuilderApplicator {
-        public void apply(GetIoTAddonArgs.Builder a);
-    }
-    private static GetIoTAddonArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIoTAddonArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * IoT Addon.
- * API Version: 2020-12-01.
- * 
-     *
-     * IoT Addon.
- * 
-     */
-    public static CompletableFuture<GetIoTAddonResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * IoT Addon.
      * API Version: 2020-12-01.

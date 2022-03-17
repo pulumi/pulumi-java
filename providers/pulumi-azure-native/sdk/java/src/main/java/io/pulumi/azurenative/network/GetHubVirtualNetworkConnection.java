@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHubVirtualNetworkConnection {
     private GetHubVirtualNetworkConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetHubVirtualNetworkConnectionArgs.Builder a);
-    }
-    private static GetHubVirtualNetworkConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHubVirtualNetworkConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * HubVirtualNetworkConnection Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * HubVirtualNetworkConnection Resource.
- * 
-     */
-    public static CompletableFuture<GetHubVirtualNetworkConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * HubVirtualNetworkConnection Resource.
      * API Version: 2020-11-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProfile {
     private GetProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetProfileArgs.Builder a);
-    }
-    private static GetProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing a Traffic Manager profile.
- * API Version: 2018-08-01.
- * 
-     *
-     * Class representing a Traffic Manager profile.
- * 
-     */
-    public static CompletableFuture<GetProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing a Traffic Manager profile.
      * API Version: 2018-08-01.

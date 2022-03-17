@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDelegatedServices {
     private GetDelegatedServices() {}
-    public interface BuilderApplicator {
-        public void apply(GetDelegatedServicesArgs.Builder a);
-    }
-    private static GetDelegatedServicesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDelegatedServicesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a list the AWS services for which the specified account is a delegated administrator
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDelegatedServices.
- * 
-     *
-     * A collection of values returned by getDelegatedServices.
- * 
-     */
-    public static CompletableFuture<GetDelegatedServicesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a list the AWS services for which the specified account is a delegated administrator
      * 

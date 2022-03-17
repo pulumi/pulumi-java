@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
     private GetNotificationChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationChannelArgs.Builder a);
-    }
-    private static GetNotificationChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A notification.
- * API Version: 2018-09-15.
- * 
-     *
-     * A notification.
- * 
-     */
-    public static CompletableFuture<GetNotificationChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A notification.
      * API Version: 2018-09-15.

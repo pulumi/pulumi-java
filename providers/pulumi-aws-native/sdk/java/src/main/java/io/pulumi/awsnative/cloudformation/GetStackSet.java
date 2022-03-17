@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStackSet {
     private GetStackSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetStackSetArgs.Builder a);
-    }
-    private static GetStackSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStackSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
- * 
-     */
-    public static CompletableFuture<GetStackSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
      * 

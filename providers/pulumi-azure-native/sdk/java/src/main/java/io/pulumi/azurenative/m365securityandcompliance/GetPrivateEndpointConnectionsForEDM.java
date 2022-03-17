@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsForEDM {
     private GetPrivateEndpointConnectionsForEDM() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateEndpointConnectionsForEDMArgs.Builder a);
-    }
-    private static GetPrivateEndpointConnectionsForEDMArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateEndpointConnectionsForEDMArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Private Endpoint Connection resource.
- * API Version: 2021-03-25-preview.
- * 
-     *
-     * The Private Endpoint Connection resource.
- * 
-     */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForEDMResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Private Endpoint Connection resource.
      * API Version: 2021-03-25-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTargetSslProxy {
     private GetTargetSslProxy() {}
-    public interface BuilderApplicator {
-        public void apply(GetTargetSslProxyArgs.Builder a);
-    }
-    private static GetTargetSslProxyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTargetSslProxyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetTargetSslProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
      * 

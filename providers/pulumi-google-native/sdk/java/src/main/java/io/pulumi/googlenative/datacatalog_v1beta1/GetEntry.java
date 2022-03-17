@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEntry {
     private GetEntry() {}
-    public interface BuilderApplicator {
-        public void apply(GetEntryArgs.Builder a);
-    }
-    private static GetEntryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEntryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an entry.
- * 
-     */
-    public static CompletableFuture<GetEntryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an entry.
      * 

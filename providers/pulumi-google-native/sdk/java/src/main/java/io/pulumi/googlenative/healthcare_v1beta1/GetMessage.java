@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMessage {
     private GetMessage() {}
-    public interface BuilderApplicator {
-        public void apply(GetMessageArgs.Builder a);
-    }
-    private static GetMessageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMessageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an HL7v2 message.
- * 
-     */
-    public static CompletableFuture<GetMessageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an HL7v2 message.
      * 

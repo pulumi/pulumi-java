@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRule {
     private GetRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetRuleArgs.Builder a);
-    }
-    private static GetRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Description of Rule Resource.
- * API Version: 2017-04-01.
- * 
-     *
-     * Description of Rule Resource.
- * 
-     */
-    public static CompletableFuture<GetRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Description of Rule Resource.
      * API Version: 2017-04-01.

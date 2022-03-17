@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetADCCatalog {
     private GetADCCatalog() {}
-    public interface BuilderApplicator {
-        public void apply(GetADCCatalogArgs.Builder a);
-    }
-    private static GetADCCatalogArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetADCCatalogArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Azure Data Catalog.
- * API Version: 2016-03-30.
- * 
-     *
-     * Azure Data Catalog.
- * 
-     */
-    public static CompletableFuture<GetADCCatalogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Azure Data Catalog.
      * API Version: 2016-03-30.

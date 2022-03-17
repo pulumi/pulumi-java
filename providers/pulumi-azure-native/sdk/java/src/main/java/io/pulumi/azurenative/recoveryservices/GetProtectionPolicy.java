@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProtectionPolicy {
     private GetProtectionPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetProtectionPolicyArgs.Builder a);
-    }
-    private static GetProtectionPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProtectionPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Base class for backup policy. Workload-specific backup policies are derived from this class.
- * API Version: 2021-02-01.
- * 
-     *
-     * Base class for backup policy. Workload-specific backup policies are derived from this class.
- * 
-     */
-    public static CompletableFuture<GetProtectionPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Base class for backup policy. Workload-specific backup policies are derived from this class.
      * API Version: 2021-02-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExecution {
     private GetExecution() {}
-    public interface BuilderApplicator {
-        public void apply(GetExecutionArgs.Builder a);
-    }
-    private static GetExecutionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExecutionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of executions
- * 
-     */
-    public static CompletableFuture<GetExecutionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of executions
      * 

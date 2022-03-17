@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReferenceImage {
     private GetReferenceImage() {}
-    public interface BuilderApplicator {
-        public void apply(GetReferenceImageArgs.Builder a);
-    }
-    private static GetReferenceImageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReferenceImageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the specified image does not exist.
- * 
-     */
-    public static CompletableFuture<GetReferenceImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the specified image does not exist.
      * 

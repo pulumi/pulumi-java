@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppDiagnosticLogsConfiguration {
     private GetWebAppDiagnosticLogsConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppDiagnosticLogsConfigurationArgs.Builder a);
-    }
-    private static GetWebAppDiagnosticLogsConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppDiagnosticLogsConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Configuration of App Service site logs.
- * API Version: 2020-12-01.
- * 
-     *
-     * Configuration of App Service site logs.
- * 
-     */
-    public static CompletableFuture<GetWebAppDiagnosticLogsConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Configuration of App Service site logs.
      * API Version: 2020-12-01.

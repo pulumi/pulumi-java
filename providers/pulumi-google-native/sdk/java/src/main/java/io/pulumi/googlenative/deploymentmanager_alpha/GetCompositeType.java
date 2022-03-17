@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCompositeType {
     private GetCompositeType() {}
-    public interface BuilderApplicator {
-        public void apply(GetCompositeTypeArgs.Builder a);
-    }
-    private static GetCompositeTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCompositeTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets information about a specific composite type.
- * 
-     */
-    public static CompletableFuture<GetCompositeTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets information about a specific composite type.
      * 

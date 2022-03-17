@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionDisk {
     private GetRegionDisk() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionDiskArgs.Builder a);
-    }
-    private static GetRegionDiskArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionDiskArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns a specified regional persistent disk.
- * 
-     */
-    public static CompletableFuture<GetRegionDiskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns a specified regional persistent disk.
      * 

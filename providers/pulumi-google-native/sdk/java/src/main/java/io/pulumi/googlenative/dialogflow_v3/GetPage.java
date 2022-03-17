@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPage {
     private GetPage() {}
-    public interface BuilderApplicator {
-        public void apply(GetPageArgs.Builder a);
-    }
-    private static GetPageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified page.
- * 
-     */
-    public static CompletableFuture<GetPageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified page.
      * 

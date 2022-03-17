@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFirewallPolicy {
     private GetFirewallPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetFirewallPolicyArgs.Builder a);
-    }
-    private static GetFirewallPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFirewallPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * FirewallPolicy Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * FirewallPolicy Resource.
- * 
-     */
-    public static CompletableFuture<GetFirewallPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * FirewallPolicy Resource.
      * API Version: 2020-11-01.

@@ -131,22 +131,6 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(JobAgentArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.sql.JobAgentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.sql.JobAgentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public JobAgent(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -178,15 +162,15 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:sql/v20170301preview:JobAgent").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:JobAgent").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:JobAgent").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:JobAgent").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:JobAgent").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:JobAgent").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:JobAgent").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:sql/v20170301preview:JobAgent").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200202preview:JobAgent").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200801preview:JobAgent").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20201101preview:JobAgent").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210201preview:JobAgent").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210501preview:JobAgent").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:JobAgent").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

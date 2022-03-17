@@ -83,22 +83,6 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
         return this.websiteCaId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebsiteCertificateAuthorityAssociationArgs.Builder a);
-    }
-    private static io.pulumi.aws.worklink.WebsiteCertificateAuthorityAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.worklink.WebsiteCertificateAuthorityAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebsiteCertificateAuthorityAssociation(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -130,7 +114,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
+            .version(Utilities.getVersion())
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

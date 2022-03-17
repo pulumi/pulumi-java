@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDedicatedHost {
     private GetDedicatedHost() {}
-    public interface BuilderApplicator {
-        public void apply(GetDedicatedHostArgs.Builder a);
-    }
-    private static GetDedicatedHostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDedicatedHostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specifies information about the Dedicated host.
- * API Version: 2020-12-01.
- * 
-     *
-     * Specifies information about the Dedicated host.
- * 
-     */
-    public static CompletableFuture<GetDedicatedHostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specifies information about the Dedicated host.
      * API Version: 2020-12-01.

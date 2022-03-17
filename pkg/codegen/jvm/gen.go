@@ -74,7 +74,7 @@ func tokenToName(tok string) string {
 
 	components := strings.Split(tok, ":")
 	contract.Assertf(len(components) == 3, "malformed token %v", tok)
-	return names.Title(components[2])
+	return names.Ident(names.Title(components[2])).String()
 }
 
 func resourceName(r *schema.Resource) string {
@@ -1554,13 +1554,13 @@ func genAlias(ctx *classFileContext, alias *schema.Alias) {
 	fprintf(w, "%s.of(", ctx.ref(names.Output))
 	fprintf(w, "%s.builder()", ctx.ref(names.Alias))
 	if alias.Name != nil {
-		fprintf(w, ".setName(\"%v\")", *alias.Name)
+		fprintf(w, ".name(\"%v\")", *alias.Name)
 	}
 	if alias.Project != nil {
-		fprintf(w, ".setProject(\"%v\")", *alias.Project)
+		fprintf(w, ".project(\"%v\")", *alias.Project)
 	}
 	if alias.Type != nil {
-		fprintf(w, ".setType(\"%v\")", *alias.Type)
+		fprintf(w, ".type(\"%v\")", *alias.Type)
 	}
 	fprintf(w, ".build()")
 	fprintf(w, ")")
@@ -1710,30 +1710,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		argsOverride = "makeArgs(args)"
 	}
 
-	// Name+Args builder constructor
-
-	// define builder mutator
-	fprintf(w, "    public interface BuilderApplicator {\n")
-	fprintf(w, "        public void apply(%s.Builder a);\n", argsType)
-	fprintf(w, "    }\n")
-
-	// define args builder
-	fprintf(w, "    private static %s buildArgs(BuilderApplicator argsBuilder) {\n", argsFQN)
-	fprintf(w, "        final var builder = %s.builder();\n", argsFQN)
-	fprintf(w, "        argsBuilder.apply(builder);\n")
-	fprintf(w, "        return builder.build();\n")
-	fprintf(w, "    }\n")
-
-	// define constructor
-	fprintf(w, "    /**\n")
-	fprintf(w, "     *\n")
-	fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
-	fprintf(w, "     * @param argsBuilder A function that configures a passed builder.\n")
-	fprintf(w, "     */\n")
-	fprintf(w, "    public %s(String name, BuilderApplicator argsBuilder) {\n", className)
-	fprintf(w, "        this(name, buildArgs(argsBuilder), null);\n")
-	fprintf(w, "    }\n")
-
 	// Name only constructor
 	fprintf(w, "    /**\n")
 	fprintf(w, "     *\n")
@@ -1813,10 +1789,10 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		"    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Output))
 	fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
-	fprintf(w, "            .setVersion(%s.getVersion())\n", mod.utilitiesRef(ctx))
+	fprintf(w, "            .version(%s.getVersion())\n", mod.utilitiesRef(ctx))
 
 	if len(r.Aliases) > 0 {
-		fprintf(w, "            .setAliases(%s.of(\n", ctx.ref(names.List))
+		fprintf(w, "            .aliases(%s.of(\n", ctx.ref(names.List))
 		for i, alias := range r.Aliases {
 			fprintf(w, "                ")
 			genAlias(ctx, alias)
@@ -1830,7 +1806,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "            ))\n")
 	}
 	if len(secretProps) > 0 {
-		fprintf(w, "            .setAdditionalSecretOutputs(%s.of(\n", ctx.ref(names.List))
+		fprintf(w, "            .additionalSecretOutputs(%s.of(\n", ctx.ref(names.List))
 		for i, sp := range secretProps {
 			fprintf(w, "                ")
 			fprintf(w, "%q", sp)
@@ -1915,46 +1891,6 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 
 	// [pulumi/pulumi-java#197]
 	fprintf(w, "    private %s() {}\n", className)
-
-	if argsParamDef != "" {
-		// Args builder
-		// define builder mutator
-		fprintf(w, "    public interface BuilderApplicator {\n")
-		fprintf(w, "        public void apply(%s.Builder a);\n", ctx.ref(argsFQN))
-		fprintf(w, "    }\n")
-
-		// define args builder
-		fprintf(w, "    private static %s buildArgs(BuilderApplicator argsBuilder) {\n", ctx.ref(argsFQN))
-		fprintf(w, "        final var builder = %s.builder();\n", ctx.ref(argsFQN))
-		fprintf(w, "        argsBuilder.apply(builder);\n")
-		fprintf(w, "        return builder.build();\n")
-		fprintf(w, "    }\n")
-
-		// Emit javadoc
-		if fun.Comment != "" || fun.DeprecationMessage != "" {
-			fprintf(w, "    /**\n")
-			fprintf(w, "    %s\n", formatBlockComment(fun.Comment, ""))
-			if fun.Inputs != nil && fun.Inputs.Comment != "" {
-				fprintf(w, "     *\n")
-				fprintf(w, "    %s\n", formatBlockComment(fun.Inputs.Comment, ""))
-			}
-			if fun.Outputs != nil && fun.Outputs.Comment != "" {
-				fprintf(w, "     *\n")
-				fprintf(w, "    %s\n", formatBlockComment(fun.Outputs.Comment, ""))
-			}
-			if fun.DeprecationMessage != "" {
-				fprintf(w, "     * @Deprecated\n")
-				fprintf(w, "    %s\n", formatBlockComment(fun.DeprecationMessage, ""))
-			}
-			fprintf(w, "     */\n")
-		}
-
-		fprintf(w, "    public static %s<%s> invokeAsync(BuilderApplicator argsBuilder, @%s %s options) {\n",
-			ctx.ref(names.CompletableFuture), typeParameter, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
-		fprintf(w, "        return invokeAsync(buildArgs(argsBuilder), %s.withVersion(options));\n", mod.utilitiesRef(ctx))
-		fprintf(w, "    }\n")
-
-	}
 
 	indent := "    "
 	// Emit javadoc
@@ -2442,6 +2378,12 @@ func (mod *modContext) gen(fs fs) error {
 
 	// Functions
 	for _, f := range mod.functions {
+
+		// TODO[pulumi/pulumi-jvm#262]: Support proper codegen for methods
+		if f.IsMethod {
+			continue
+		}
+
 		if f.IsOverlay {
 			// This function code is generated by the provider, so no further action is required.
 			continue
@@ -2577,7 +2519,14 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 			if err := p.ImportLanguages(map[string]schema.Language{"jvm": Importer}); err != nil {
 				panic(err)
 			}
-			jvmInfo, _ := pkg.Language["jvm"].(PackageInfo)
+
+			var jvmInfo PackageInfo
+			if raw, ok := pkg.Language["jvm"]; ok {
+				jvmInfo, ok = raw.(PackageInfo)
+				if !ok {
+					panic(fmt.Sprintf("Failed to cast `pkg.Language[\"jvm\"]`=%v to `PackageInfo`", raw))
+				}
+			}
 			info = &jvmInfo
 			infos[p] = info
 		}
@@ -2793,14 +2742,14 @@ func LanguageResources(tool string, pkg *schema.Package) (map[string]LanguageRes
 func genGradleProject(pkg *schema.Package,
 	basePackageName string,
 	packageName string,
-	packageReferences map[string]string,
+	packageInfo PackageInfo,
 	files fs) error {
 	genSettingsFile, err := genSettingsFile(basePackageName + packageName)
 	if err != nil {
 		return err
 	}
 	files.add("settings.gradle", genSettingsFile)
-	genBuildFile, err := genBuildFile(pkg.Name, basePackageName)
+	genBuildFile, err := genBuildFile(pkg.Name, basePackageName, packageInfo)
 	if err != nil {
 		return err
 	}
@@ -2821,11 +2770,12 @@ func genSettingsFile(packageName string) ([]byte, error) {
 }
 
 // genBuildFile emits build.gradle
-func genBuildFile(name string, basePackageName string) ([]byte, error) {
+func genBuildFile(name string, basePackageName string, pkgInfo PackageInfo) ([]byte, error) {
 	w := &bytes.Buffer{}
 	err := jvmBuildTemplate.Execute(w, jvmBuildTemplateContext{
 		Name:            name,
 		BasePackageName: strings.TrimSuffix(basePackageName, "."),
+		PackageInfo:     pkgInfo,
 	})
 	if err != nil {
 		return nil, err
@@ -2856,7 +2806,7 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		pkg,
 		info.BasePackageOrDefault(),
 		packageName(info.Packages, pkg.Name),
-		info.PackageReferences,
+		*info,
 		files,
 	); err != nil {
 		return nil, err

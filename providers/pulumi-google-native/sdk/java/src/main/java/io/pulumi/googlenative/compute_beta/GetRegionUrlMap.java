@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionUrlMap {
     private GetRegionUrlMap() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionUrlMapArgs.Builder a);
-    }
-    private static GetRegionUrlMapArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionUrlMapArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetRegionUrlMapResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
      * 

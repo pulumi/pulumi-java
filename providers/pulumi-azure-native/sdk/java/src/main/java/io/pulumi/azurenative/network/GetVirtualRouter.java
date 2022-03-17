@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualRouter {
     private GetVirtualRouter() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualRouterArgs.Builder a);
-    }
-    private static GetVirtualRouterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualRouterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * VirtualRouter Resource.
- * API Version: 2020-08-01.
- * 
-     *
-     * VirtualRouter Resource.
- * 
-     */
-    public static CompletableFuture<GetVirtualRouterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * VirtualRouter Resource.
      * API Version: 2020-08-01.

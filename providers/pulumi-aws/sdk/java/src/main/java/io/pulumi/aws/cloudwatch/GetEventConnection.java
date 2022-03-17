@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventConnection {
     private GetEventConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventConnectionArgs.Builder a);
-    }
-    private static GetEventConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to retrieve information about an EventBridge connection.
- * 
- * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getEventConnection.
- * 
-     *
-     * A collection of values returned by getEventConnection.
- * 
-     */
-    public static CompletableFuture<GetEventConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to retrieve information about an EventBridge connection.
      * 

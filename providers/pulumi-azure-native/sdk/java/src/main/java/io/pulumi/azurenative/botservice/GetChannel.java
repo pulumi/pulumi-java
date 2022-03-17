@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetChannel {
     private GetChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetChannelArgs.Builder a);
-    }
-    private static GetChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Bot channel resource definition
- * API Version: 2021-03-01.
- * 
-     *
-     * Bot channel resource definition
- * 
-     */
-    public static CompletableFuture<GetChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Bot channel resource definition
      * API Version: 2021-03-01.

@@ -14,34 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKMSCryptoKeyVersion {
     private GetKMSCryptoKeyVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetKMSCryptoKeyVersionArgs.Builder a);
-    }
-    private static GetKMSCryptoKeyVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKMSCryptoKeyVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides access to a Google Cloud Platform KMS CryptoKeyVersion. For more information see
- * [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key_version)
- * and
- * [API](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions).
- * 
- * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getKMSCryptoKeyVersion.
- * 
-     *
-     * A collection of values returned by getKMSCryptoKeyVersion.
- * 
-     */
-    public static CompletableFuture<GetKMSCryptoKeyVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides access to a Google Cloud Platform KMS CryptoKeyVersion. For more information see
      * [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key_version)

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListSubAccountVMHosts {
     private ListSubAccountVMHosts() {}
-    public interface BuilderApplicator {
-        public void apply(ListSubAccountVMHostsArgs.Builder a);
-    }
-    private static ListSubAccountVMHostsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListSubAccountVMHostsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response of a list VM Host Update Operation.
- * API Version: 2020-10-01.
- * 
-     *
-     * Response of a list VM Host Update Operation.
- * 
-     */
-    public static CompletableFuture<ListSubAccountVMHostsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response of a list VM Host Update Operation.
      * API Version: 2020-10-01.

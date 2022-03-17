@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetwork {
     private GetNetwork() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkArgs.Builder a);
-    }
-    private static GetNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified network. Gets a list of available networks by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetNetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified network. Gets a list of available networks by making a list() request.
      * 

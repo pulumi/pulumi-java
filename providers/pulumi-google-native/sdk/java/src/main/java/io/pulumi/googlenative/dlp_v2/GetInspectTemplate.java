@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInspectTemplate {
     private GetInspectTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetInspectTemplateArgs.Builder a);
-    }
-    private static GetInspectTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInspectTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
- * 
-     */
-    public static CompletableFuture<GetInspectTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppFunctionSecretsSlot {
     private ListWebAppFunctionSecretsSlot() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppFunctionSecretsSlotArgs.Builder a);
-    }
-    private static ListWebAppFunctionSecretsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppFunctionSecretsSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Function secrets.
- * API Version: 2020-12-01.
- * 
-     *
-     * Function secrets.
- * 
-     */
-    public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Function secrets.
      * API Version: 2020-12-01.

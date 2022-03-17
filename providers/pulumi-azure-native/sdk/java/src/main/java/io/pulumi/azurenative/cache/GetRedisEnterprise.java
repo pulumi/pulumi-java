@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRedisEnterprise {
     private GetRedisEnterprise() {}
-    public interface BuilderApplicator {
-        public void apply(GetRedisEnterpriseArgs.Builder a);
-    }
-    private static GetRedisEnterpriseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRedisEnterpriseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes the RedisEnterprise cluster
- * API Version: 2021-03-01.
- * 
-     *
-     * Describes the RedisEnterprise cluster
- * 
-     */
-    public static CompletableFuture<GetRedisEnterpriseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes the RedisEnterprise cluster
      * API Version: 2021-03-01.

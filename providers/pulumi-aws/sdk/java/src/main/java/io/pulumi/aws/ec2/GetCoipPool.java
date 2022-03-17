@@ -14,33 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCoipPool {
     private GetCoipPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetCoipPoolArgs.Builder a);
-    }
-    private static GetCoipPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCoipPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific EC2 Customer-Owned IP Pool.
- * 
- * This data source can prove useful when a module accepts a coip pool id as
- * an input variable and needs to, for example, determine the CIDR block of that
- * COIP Pool.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getCoipPool.
- * 
-     *
-     * A collection of values returned by getCoipPool.
- * 
-     */
-    public static CompletableFuture<GetCoipPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific EC2 Customer-Owned IP Pool.
      * 

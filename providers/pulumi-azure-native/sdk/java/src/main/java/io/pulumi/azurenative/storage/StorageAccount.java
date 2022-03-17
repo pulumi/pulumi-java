@@ -566,22 +566,6 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(StorageAccountArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.storage.StorageAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.storage.StorageAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public StorageAccount(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -613,27 +597,27 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:storage/v20150501preview:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20150615:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20160101:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20160501:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20161201:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20170601:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20171001:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20180201:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20180301preview:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20180701:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20181101:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20190401:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20190601:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20200801preview:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210101:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210201:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210401:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210601:StorageAccount").build()),
-                Output.of(Alias.builder().setType("azure-native:storage/v20210801:StorageAccount").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:storage/v20150501preview:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20150615:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20160101:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20160501:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20161201:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20170601:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20171001:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20180201:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20180301preview:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20180701:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20181101:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20190401:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20190601:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20200801preview:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210101:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210201:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210401:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210601:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:StorageAccount").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

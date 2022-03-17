@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserPoolClient {
     private GetUserPoolClient() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserPoolClientArgs.Builder a);
-    }
-    private static GetUserPoolClientArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserPoolClientArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides a Cognito User Pool Client resource.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getUserPoolClient.
- * 
-     *
-     * A collection of values returned by getUserPoolClient.
- * 
-     */
-    public static CompletableFuture<GetUserPoolClientResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides a Cognito User Pool Client resource.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSoftwareUpdateConfigurationByName {
     private GetSoftwareUpdateConfigurationByName() {}
-    public interface BuilderApplicator {
-        public void apply(GetSoftwareUpdateConfigurationByNameArgs.Builder a);
-    }
-    private static GetSoftwareUpdateConfigurationByNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSoftwareUpdateConfigurationByNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Software update configuration properties.
- * API Version: 2019-06-01.
- * 
-     *
-     * Software update configuration properties.
- * 
-     */
-    public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Software update configuration properties.
      * API Version: 2019-06-01.

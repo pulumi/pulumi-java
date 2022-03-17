@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKey {
     private GetKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeyArgs.Builder a);
-    }
-    private static GetKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
- * 
-     */
-    public static CompletableFuture<GetKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * 

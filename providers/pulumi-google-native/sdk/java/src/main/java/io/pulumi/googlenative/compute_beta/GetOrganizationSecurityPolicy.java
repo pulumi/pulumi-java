@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrganizationSecurityPolicy {
     private GetOrganizationSecurityPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrganizationSecurityPolicyArgs.Builder a);
-    }
-    private static GetOrganizationSecurityPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrganizationSecurityPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * List all of the ordered rules present in a single specified policy.
- * 
-     */
-    public static CompletableFuture<GetOrganizationSecurityPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * List all of the ordered rules present in a single specified policy.
      * 

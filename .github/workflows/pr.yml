@@ -3,6 +3,12 @@ on:
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'CHANGELOG.md'
+      - 'CHANGELOG_PENDING.md'
 
 # TODO[pulumi/java#10] protect jobs from crypto mining PR attacks
 # before making the repo public.
@@ -53,17 +59,24 @@ jobs:
         run: make build_go
       - name: Test Pulumi JVM Language Provider and Codegen
         run: make test_go
-      ###
-      - name: Build providers JVM SDK
-        run: |
-          make provider.random.build && make provider.random.install &&
-          make provider.azure-native.build && make provider.azure-native.install &&
-          make provider.google-native.build && make provider.google-native.install &&
-          make provider.gcp.build && make provider.gcp.install &&
-          make provider.aws.build && make provider.aws.install &&
-          make provider.aws-native.build && make provider.aws-native.install &&
-          make provider.kubernetes.build && make provider.kubernetes.install &&
-          make provider.docker.build && make provider.docker.install
+      - name: Build JVM SDK provider random
+        run: make provider.random.build provider.random.install
+      - name: Build JVM SDK provider azure-native
+        run: make provider.azure-native.build provider.azure-native.install
+      - name: Build JVM SDK provider google-native
+        run: make provider.google-native.build provider.google-native.install
+      - name: Build JVM SDK provider gcp
+        run: make provider.gcp.build provider.gcp.install
+      - name: Build JVM SDK provider aws
+        run: make provider.aws.build provider.aws.install
+      - name: Build JVM SDK provider aws-native
+        run: make provider.aws-native.build provider.aws-native.install
+      - name: Build JVM SDK provider kubernetes
+        run: make provider.kubernetes.build provider.kubernetes.install
+      - name: Build JVM SDK provider docker
+        run: make provider.docker.build provider.docker.install
+      - name: Build JVM SDK provider eks
+        run: make provider.docker.build provider.eks.install
       - name: Integration tests
         run: make integration_tests
     strategy:
@@ -99,6 +112,8 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
+      - name: Publish Pulumi Java SDK to a local Maven repo
+        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Configure AWS Credentials
@@ -119,15 +134,16 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example aws-java-webserver
         run: |
-          make install_sdk
-          make provider.aws.build provider.aws.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          make provider.aws.build provider.aws.install
+          export PATH="$PATH:$(pwd)/bin/" &&
+            ss=0
             cd tests/examples/aws-java-webserver &&
-            ./gradlew install &&
+            ./gradlew install || ((ss++))
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
-            pulumi preview"
+            pulumi stack init dev || ((ss++))
+            pulumi preview || ((ss++))
+            exit $ss
   example2:
     runs-on: ubuntu-latest
     steps:
@@ -182,18 +198,19 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         name: run example azure-java-appservice-sql
         run: |
-          make install_sdk
+          make bin/pulumi-language-jvm
           make provider.azure-native.build
           make provider.azure-native.install
-          make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/azure-java-appservice-sql &&
             ./gradlew install &&
+            ss=0
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
+            pulumi stack init dev || ((ss++))
             pulumi config set azure-native:location westus
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
-            pulumi preview"
+            pulumi preview || ((ss++))
+            exit $ss
   example3:
     runs-on: ubuntu-latest
     steps:
@@ -225,7 +242,8 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      ###
+      - name: Publish Pulumi Java SDK to a local Maven repo
+        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
@@ -242,17 +260,18 @@ jobs:
           export_default_credentials: true
       - name: run example gcp-java-gke-hello-world
         run: |
-          make install_sdk
+          make bin/pulumi-language-jvm
           make provider.gcp.build provider.gcp.install
           make provider.kubernetes.build provider.kubernetes.install
-          make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/gcp-java-gke-hello-world &&
-            ./gradlew install &&
+            ss=0
+            ./gradlew install || ((ss++))
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
+            pulumi stack init dev || ((ss++))
             pulumi config set gcp:zone us-west1-a
-            pulumi preview"
+            pulumi preview || ((ss++))
+            exit $ss
   example4:
     runs-on: ubuntu-latest
     steps:
@@ -284,7 +303,8 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      ###
+      - name: Publish Pulumi Java SDK to a local Maven repo
+        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
@@ -296,16 +316,20 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example minimal
         run: |
-          make install_sdk
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/minimal &&
             ./gradlew install &&
+            ss=0
+            pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
-            pulumi config set minimal:name foo &&
-            pulumi config set minimal:secret bar &&
-            pulumi preview"
+            pulumi stack init dev || ((ss++))
+            pulumi config set minimal:name foo
+            pulumi config set minimal:secret bar
+            pulumi preview || ((ss++))
+            pulumi up -s dev --yes || ((ss++))
+            pulumi destroy -s dev --yes || ((ss++))
+            exit $ss
   example5:
     runs-on: ubuntu-latest
     steps:
@@ -337,7 +361,8 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      ###
+      - name: Publish Pulumi Java SDK to a local Maven repo
+        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Configure AWS Credentials
@@ -359,17 +384,18 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example aws-native-java-s3-folder
         run: |
-          make install_sdk
+          make bin/pulumi-language-jvm
           make provider.aws.build provider.aws.install
           make provider.aws-native.build provider.aws-native.install
-          make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/aws-native-java-s3-folder &&
-            ./gradlew install &&
+            ss=0
+            ./gradlew install || ((ss++))
             pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
-            pulumi preview"
+            pulumi stack init dev || ((ss++))
+            pulumi preview || ((ss++))
+            exit $ss
   example6:
     runs-on: ubuntu-latest
     steps:
@@ -401,7 +427,8 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      ###
+      - name: Publish Pulumi Java SDK to a local Maven repo
+        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
@@ -423,16 +450,17 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         name: run example azure-java-static-website
         run: |
-          make install_sdk
-          make provider.azure-native.build provider.azure-native.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          make provider.azure-native.build provider.azure-native.install
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/azure-java-static-website &&
-            ./gradlew install &&
+            ss=0
+            ./gradlew install || ((ss++))
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
+            pulumi stack init dev || ((ss++))
             pulumi config set azure-native:location westus
-            pulumi preview"
+            pulumi preview || ((ss++))
+            exit $ss
   example7:
     runs-on: ubuntu-latest
     steps:
@@ -464,7 +492,8 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      ###
+      - name: Publish Pulumi Java SDK to a local Maven repo
+        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
@@ -476,17 +505,19 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example random
         run: |
-          make install_sdk
-          make provider.random.build provider.random.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          make provider.random.build provider.random.install
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/random &&
-            ./gradlew install &&
+            ss=0
+            ./gradlew install || ((ss++))
+            pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
-            pulumi preview"
-      - name: Integration tests
-        run: make integration_tests
+            pulumi stack init dev || ((ss++))
+            pulumi preview || ((ss++))
+            pulumi up -s dev --yes || ((ss++))
+            pulumi destroy -s dev --yes || ((ss++))
+            exit $ss
     strategy:
       fail-fast: true
   go-lint:

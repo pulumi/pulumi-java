@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEdgeModule {
     private GetEdgeModule() {}
-    public interface BuilderApplicator {
-        public void apply(GetEdgeModuleArgs.Builder a);
-    }
-    private static GetEdgeModuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEdgeModuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The representation of an edge module.
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * The representation of an edge module.
- * 
-     */
-    public static CompletableFuture<GetEdgeModuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The representation of an edge module.
      * API Version: 2021-05-01-preview.

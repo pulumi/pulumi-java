@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGateway {
     private GetGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetGatewayArgs.Builder a);
-    }
-    private static GetGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::IoTSiteWise::Gateway
- * 
-     */
-    public static CompletableFuture<GetGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::IoTSiteWise::Gateway
      * 

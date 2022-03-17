@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransitGatewayMulticastGroupSource {
     private GetTransitGatewayMulticastGroupSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransitGatewayMulticastGroupSourceArgs.Builder a);
-    }
-    private static GetTransitGatewayMulticastGroupSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransitGatewayMulticastGroupSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::EC2::TransitGatewayMulticastGroupSource registers and deregisters members and sources (network interfaces) with the transit gateway multicast group
- * 
-     */
-    public static CompletableFuture<GetTransitGatewayMulticastGroupSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::EC2::TransitGatewayMulticastGroupSource registers and deregisters members and sources (network interfaces) with the transit gateway multicast group
      * 

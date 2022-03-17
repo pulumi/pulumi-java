@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCassandraCluster {
     private GetCassandraCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetCassandraClusterArgs.Builder a);
-    }
-    private static GetCassandraClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCassandraClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Representation of a managed Cassandra cluster.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Representation of a managed Cassandra cluster.
- * 
-     */
-    public static CompletableFuture<GetCassandraClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Representation of a managed Cassandra cluster.
      * API Version: 2021-03-01-preview.

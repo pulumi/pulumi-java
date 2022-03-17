@@ -275,22 +275,6 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ExpressRoutePortArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.ExpressRoutePortArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.ExpressRoutePortArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ExpressRoutePort(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -322,30 +306,30 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:network/v20180801:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20181001:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20181101:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20181201:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190201:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190401:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190601:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190701:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190801:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190901:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20191101:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20191201:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200301:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200401:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200501:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200601:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200701:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200801:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20201101:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210201:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210301:ExpressRoutePort").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210501:ExpressRoutePort").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:network/v20180801:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20181001:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20181101:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20181201:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190201:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190401:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190601:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190701:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190801:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190901:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20191101:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20191201:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200301:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200401:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200501:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200601:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200701:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200801:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20201101:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210201:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210301:ExpressRoutePort").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRoutePort").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

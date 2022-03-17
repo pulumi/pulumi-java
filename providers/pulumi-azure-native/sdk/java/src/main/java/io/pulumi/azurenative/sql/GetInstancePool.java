@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstancePool {
     private GetInstancePool() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstancePoolArgs.Builder a);
-    }
-    private static GetInstancePoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstancePoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure SQL instance pool.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An Azure SQL instance pool.
- * 
-     */
-    public static CompletableFuture<GetInstancePoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure SQL instance pool.
      * API Version: 2020-11-01-preview.

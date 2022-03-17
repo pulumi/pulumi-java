@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAuthorizationServer {
     private GetAuthorizationServer() {}
-    public interface BuilderApplicator {
-        public void apply(GetAuthorizationServerArgs.Builder a);
-    }
-    private static GetAuthorizationServerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAuthorizationServerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * External OAuth authorization server settings.
- * API Version: 2020-12-01.
- * 
-     *
-     * External OAuth authorization server settings.
- * 
-     */
-    public static CompletableFuture<GetAuthorizationServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * External OAuth authorization server settings.
      * API Version: 2020-12-01.

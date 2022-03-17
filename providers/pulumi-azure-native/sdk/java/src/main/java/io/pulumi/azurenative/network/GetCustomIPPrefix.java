@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomIPPrefix {
     private GetCustomIPPrefix() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomIPPrefixArgs.Builder a);
-    }
-    private static GetCustomIPPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomIPPrefixArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Custom IP prefix resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Custom IP prefix resource.
- * 
-     */
-    public static CompletableFuture<GetCustomIPPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Custom IP prefix resource.
      * API Version: 2020-11-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGuestUsage {
     private GetGuestUsage() {}
-    public interface BuilderApplicator {
-        public void apply(GetGuestUsageArgs.Builder a);
-    }
-    private static GetGuestUsageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGuestUsageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Guest Usages Resource
- * API Version: 2020-05-01-preview.
- * 
-     *
-     * Guest Usages Resource
- * 
-     */
-    public static CompletableFuture<GetGuestUsageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Guest Usages Resource
      * API Version: 2020-05-01-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMCASDataConnector {
     private GetMCASDataConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetMCASDataConnectorArgs.Builder a);
-    }
-    private static GetMCASDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMCASDataConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents MCAS (Microsoft Cloud App Security) data connector.
- * API Version: 2020-01-01.
- * 
-     *
-     * Represents MCAS (Microsoft Cloud App Security) data connector.
- * 
-     */
-    public static CompletableFuture<GetMCASDataConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents MCAS (Microsoft Cloud App Security) data connector.
      * API Version: 2020-01-01.

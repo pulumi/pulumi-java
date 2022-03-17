@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerTlsPolicy {
     private GetServerTlsPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerTlsPolicyArgs.Builder a);
-    }
-    private static GetServerTlsPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerTlsPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single ServerTlsPolicy.
- * 
-     */
-    public static CompletableFuture<GetServerTlsPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single ServerTlsPolicy.
      * 

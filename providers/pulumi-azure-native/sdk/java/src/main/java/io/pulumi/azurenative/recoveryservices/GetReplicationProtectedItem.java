@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReplicationProtectedItem {
     private GetReplicationProtectedItem() {}
-    public interface BuilderApplicator {
-        public void apply(GetReplicationProtectedItemArgs.Builder a);
-    }
-    private static GetReplicationProtectedItemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReplicationProtectedItemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Replication protected item.
- * API Version: 2018-07-10.
- * 
-     *
-     * Replication protected item.
- * 
-     */
-    public static CompletableFuture<GetReplicationProtectedItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Replication protected item.
      * API Version: 2018-07-10.

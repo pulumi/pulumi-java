@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssociation {
     private GetAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssociationArgs.Builder a);
-    }
-    private static GetAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The resource definition of this association.
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * The resource definition of this association.
- * 
-     */
-    public static CompletableFuture<GetAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The resource definition of this association.
      * API Version: 2018-09-01-preview.

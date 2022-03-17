@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagementPolicy {
     private GetManagementPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagementPolicyArgs.Builder a);
-    }
-    private static GetManagementPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagementPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Get Storage Account ManagementPolicies operation response.
- * API Version: 2021-02-01.
- * 
-     *
-     * The Get Storage Account ManagementPolicies operation response.
- * 
-     */
-    public static CompletableFuture<GetManagementPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Get Storage Account ManagementPolicies operation response.
      * API Version: 2021-02-01.

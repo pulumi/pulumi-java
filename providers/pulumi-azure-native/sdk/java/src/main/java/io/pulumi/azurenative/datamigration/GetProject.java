@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProject {
     private GetProject() {}
-    public interface BuilderApplicator {
-        public void apply(GetProjectArgs.Builder a);
-    }
-    private static GetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProjectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A project resource
- * API Version: 2018-04-19.
- * 
-     *
-     * A project resource
- * 
-     */
-    public static CompletableFuture<GetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A project resource
      * API Version: 2018-04-19.

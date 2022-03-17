@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListMachineLearningComputeNodes {
     private ListMachineLearningComputeNodes() {}
-    public interface BuilderApplicator {
-        public void apply(ListMachineLearningComputeNodesArgs.Builder a);
-    }
-    private static ListMachineLearningComputeNodesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListMachineLearningComputeNodesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Compute node information related to a AmlCompute.
- * API Version: 2021-01-01.
- * 
-     *
-     * Compute node information related to a AmlCompute.
- * 
-     */
-    public static CompletableFuture<ListMachineLearningComputeNodesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Compute node information related to a AmlCompute.
      * API Version: 2021-01-01.

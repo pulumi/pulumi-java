@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKustoDatabaseDataSet {
     private GetKustoDatabaseDataSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetKustoDatabaseDataSetArgs.Builder a);
-    }
-    private static GetKustoDatabaseDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKustoDatabaseDataSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A kusto database data set.
- * API Version: 2020-09-01.
- * 
-     *
-     * A kusto database data set.
- * 
-     */
-    public static CompletableFuture<GetKustoDatabaseDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A kusto database data set.
      * API Version: 2020-09-01.

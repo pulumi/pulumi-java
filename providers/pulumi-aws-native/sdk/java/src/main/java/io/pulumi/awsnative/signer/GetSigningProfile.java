@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSigningProfile {
     private GetSigningProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetSigningProfileArgs.Builder a);
-    }
-    private static GetSigningProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSigningProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A signing profile is a signing template that can be used to carry out a pre-defined signing job.
- * 
-     */
-    public static CompletableFuture<GetSigningProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A signing profile is a signing template that can be used to carry out a pre-defined signing job.
      * 

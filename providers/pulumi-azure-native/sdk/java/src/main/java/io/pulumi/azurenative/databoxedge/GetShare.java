@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetShare {
     private GetShare() {}
-    public interface BuilderApplicator {
-        public void apply(GetShareArgs.Builder a);
-    }
-    private static GetShareArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetShareArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a share on the  Data Box Edge/Gateway device.
- * API Version: 2020-12-01.
- * 
-     *
-     * Represents a share on the  Data Box Edge/Gateway device.
- * 
-     */
-    public static CompletableFuture<GetShareResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a share on the  Data Box Edge/Gateway device.
      * API Version: 2020-12-01.

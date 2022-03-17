@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMaintenanceConfiguration {
     private GetMaintenanceConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetMaintenanceConfigurationArgs.Builder a);
-    }
-    private static GetMaintenanceConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMaintenanceConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Maintenance configuration record type
- * API Version: 2020-04-01.
- * 
-     *
-     * Maintenance configuration record type
- * 
-     */
-    public static CompletableFuture<GetMaintenanceConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Maintenance configuration record type
      * API Version: 2020-04-01.

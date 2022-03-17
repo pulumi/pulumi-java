@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListPartnerNamespaceSharedAccessKeys {
     private ListPartnerNamespaceSharedAccessKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListPartnerNamespaceSharedAccessKeysArgs.Builder a);
-    }
-    private static ListPartnerNamespaceSharedAccessKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListPartnerNamespaceSharedAccessKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Shared access keys of the partner namespace.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * Shared access keys of the partner namespace.
- * 
-     */
-    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Shared access keys of the partner namespace.
      * API Version: 2021-06-01-preview.

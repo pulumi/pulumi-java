@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrefixList {
     private GetPrefixList() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrefixListArgs.Builder a);
-    }
-    private static GetPrefixListArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrefixListArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema of AWS::EC2::PrefixList Type
- * 
-     */
-    public static CompletableFuture<GetPrefixListResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema of AWS::EC2::PrefixList Type
      * 

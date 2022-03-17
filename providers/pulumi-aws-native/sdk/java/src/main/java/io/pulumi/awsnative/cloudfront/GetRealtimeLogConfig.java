@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRealtimeLogConfig {
     private GetRealtimeLogConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetRealtimeLogConfigArgs.Builder a);
-    }
-    private static GetRealtimeLogConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRealtimeLogConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
- * 
-     */
-    public static CompletableFuture<GetRealtimeLogConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
      * 

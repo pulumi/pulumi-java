@@ -87,22 +87,6 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(CustomerSubscriptionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.azurestack.CustomerSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.azurestack.CustomerSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public CustomerSubscription(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -134,10 +118,10 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:azurestack/v20170601:CustomerSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:azurestack/v20200601preview:CustomerSubscription").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:azurestack/v20170601:CustomerSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:azurestack/v20200601preview:CustomerSubscription").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

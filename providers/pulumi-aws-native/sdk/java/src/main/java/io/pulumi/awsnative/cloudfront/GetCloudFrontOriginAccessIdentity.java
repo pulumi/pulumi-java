@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCloudFrontOriginAccessIdentity {
     private GetCloudFrontOriginAccessIdentity() {}
-    public interface BuilderApplicator {
-        public void apply(GetCloudFrontOriginAccessIdentityArgs.Builder a);
-    }
-    private static GetCloudFrontOriginAccessIdentityArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCloudFrontOriginAccessIdentityArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
- * 
-     */
-    public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
      * 

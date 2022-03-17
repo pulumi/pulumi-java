@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVolume {
     private GetVolume() {}
-    public interface BuilderApplicator {
-        public void apply(GetVolumeArgs.Builder a);
-    }
-    private static GetVolumeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVolumeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about an EBS volume for use in other
- * resources.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getVolume.
- * 
-     *
-     * A collection of values returned by getVolume.
- * 
-     */
-    public static CompletableFuture<GetVolumeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about an EBS volume for use in other
      * resources.

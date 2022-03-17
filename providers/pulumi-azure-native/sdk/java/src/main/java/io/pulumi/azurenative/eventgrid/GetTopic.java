@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTopic {
     private GetTopic() {}
-    public interface BuilderApplicator {
-        public void apply(GetTopicArgs.Builder a);
-    }
-    private static GetTopicArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTopicArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * EventGrid Topic
- * API Version: 2020-06-01.
- * 
-     *
-     * EventGrid Topic
- * 
-     */
-    public static CompletableFuture<GetTopicResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * EventGrid Topic
      * API Version: 2020-06-01.

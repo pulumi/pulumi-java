@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMHSMPrivateEndpointConnection {
     private GetMHSMPrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetMHSMPrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetMHSMPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMHSMPrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Private endpoint connection resource.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * Private endpoint connection resource.
- * 
-     */
-    public static CompletableFuture<GetMHSMPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Private endpoint connection resource.
      * API Version: 2021-06-01-preview.

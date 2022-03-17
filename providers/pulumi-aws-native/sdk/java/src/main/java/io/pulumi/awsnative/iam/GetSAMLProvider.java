@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSAMLProvider {
     private GetSAMLProvider() {}
-    public interface BuilderApplicator {
-        public void apply(GetSAMLProviderArgs.Builder a);
-    }
-    private static GetSAMLProviderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSAMLProviderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::IAM::SAMLProvider
- * 
-     */
-    public static CompletableFuture<GetSAMLProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::IAM::SAMLProvider
      * 

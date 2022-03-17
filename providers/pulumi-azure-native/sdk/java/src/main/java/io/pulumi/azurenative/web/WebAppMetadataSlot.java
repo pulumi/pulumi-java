@@ -85,22 +85,6 @@ public class WebAppMetadataSlot extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebAppMetadataSlotArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppMetadataSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppMetadataSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppMetadataSlot(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -132,21 +116,21 @@ public class WebAppMetadataSlot extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppMetadataSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppMetadataSlot").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:web/v20150801:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppMetadataSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppMetadataSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

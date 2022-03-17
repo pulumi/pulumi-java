@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDHCPOptions {
     private GetDHCPOptions() {}
-    public interface BuilderApplicator {
-        public void apply(GetDHCPOptionsArgs.Builder a);
-    }
-    private static GetDHCPOptionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDHCPOptionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::DHCPOptions
- * 
-     */
-    public static CompletableFuture<GetDHCPOptionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::DHCPOptions
      * 

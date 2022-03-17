@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDomainService {
     private GetDomainService() {}
-    public interface BuilderApplicator {
-        public void apply(GetDomainServiceArgs.Builder a);
-    }
-    private static GetDomainServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDomainServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Domain service.
- * API Version: 2021-03-01.
- * 
-     *
-     * Domain service.
- * 
-     */
-    public static CompletableFuture<GetDomainServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Domain service.
      * API Version: 2021-03-01.

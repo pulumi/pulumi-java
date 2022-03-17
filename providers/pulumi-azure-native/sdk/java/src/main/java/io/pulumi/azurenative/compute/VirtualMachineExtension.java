@@ -214,22 +214,6 @@ public class VirtualMachineExtension extends io.pulumi.resources.CustomResource 
         return this.typeHandlerVersion;
     }
 
-    public interface BuilderApplicator {
-        public void apply(VirtualMachineExtensionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.compute.VirtualMachineExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.compute.VirtualMachineExtensionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public VirtualMachineExtension(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -261,25 +245,25 @@ public class VirtualMachineExtension extends io.pulumi.resources.CustomResource 
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20150615:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20160330:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20160430preview:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20170330:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20171201:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180401:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180601:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20181001:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190301:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190701:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20191201:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineExtension").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineExtension").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20150615:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20160330:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20160430preview:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20170330:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20171201:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180401:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180601:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20181001:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190301:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190701:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20191201:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200601:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210301:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:VirtualMachineExtension").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211101:VirtualMachineExtension").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

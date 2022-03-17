@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSite {
     private GetSite() {}
-    public interface BuilderApplicator {
-        public void apply(GetSiteArgs.Builder a);
-    }
-    private static GetSiteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSiteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Site REST Resource.
- * API Version: 2020-01-01.
- * 
-     *
-     * Site REST Resource.
- * 
-     */
-    public static CompletableFuture<GetSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Site REST Resource.
      * API Version: 2020-01-01.

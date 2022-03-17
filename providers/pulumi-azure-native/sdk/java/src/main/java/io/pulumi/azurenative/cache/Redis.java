@@ -376,22 +376,6 @@ public class Redis extends io.pulumi.resources.CustomResource {
         return this.zones;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RedisArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.cache.RedisArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.cache.RedisArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Redis(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -423,17 +407,17 @@ public class Redis extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:cache/v20150801:Redis").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20160401:Redis").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20170201:Redis").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20171001:Redis").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20180301:Redis").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20190701:Redis").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20200601:Redis").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20201201:Redis").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20210601:Redis").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:cache/v20150801:Redis").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20160401:Redis").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20170201:Redis").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20171001:Redis").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20180301:Redis").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20190701:Redis").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20200601:Redis").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20201201:Redis").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20210601:Redis").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

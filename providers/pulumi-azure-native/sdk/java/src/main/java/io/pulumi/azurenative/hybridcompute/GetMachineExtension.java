@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMachineExtension {
     private GetMachineExtension() {}
-    public interface BuilderApplicator {
-        public void apply(GetMachineExtensionArgs.Builder a);
-    }
-    private static GetMachineExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMachineExtensionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a Machine Extension.
- * API Version: 2020-08-02.
- * 
-     *
-     * Describes a Machine Extension.
- * 
-     */
-    public static CompletableFuture<GetMachineExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a Machine Extension.
      * API Version: 2020-08-02.

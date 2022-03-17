@@ -117,22 +117,6 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PrivateEndpointConnectionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.documentdb.PrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.documentdb.PrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PrivateEndpointConnection(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -164,19 +148,19 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:PrivateEndpointConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20190801preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:PrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPublicIPAddress {
     private GetPublicIPAddress() {}
-    public interface BuilderApplicator {
-        public void apply(GetPublicIPAddressArgs.Builder a);
-    }
-    private static GetPublicIPAddressArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPublicIPAddressArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Public IP address resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Public IP address resource.
- * 
-     */
-    public static CompletableFuture<GetPublicIPAddressResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Public IP address resource.
      * API Version: 2020-11-01.

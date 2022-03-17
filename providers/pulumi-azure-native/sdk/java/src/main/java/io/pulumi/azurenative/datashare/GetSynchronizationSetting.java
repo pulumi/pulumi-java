@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: ScheduledSynchronizationSetting. */
 public class GetSynchronizationSetting {
     private GetSynchronizationSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetSynchronizationSettingArgs.Builder a);
-    }
-    private static GetSynchronizationSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSynchronizationSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Synchronization Setting data transfer object.
- * API Version: 2020-09-01.
- * 
-     *
-     * A Synchronization Setting data transfer object.
- * 
-     * @Deprecated
-     * Please use one of the variants: ScheduledSynchronizationSetting.
- * 
-     */
-    public static CompletableFuture<GetSynchronizationSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Synchronization Setting data transfer object.
      * API Version: 2020-09-01.

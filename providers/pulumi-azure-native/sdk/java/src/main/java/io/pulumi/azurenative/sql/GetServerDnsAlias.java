@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerDnsAlias {
     private GetServerDnsAlias() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerDnsAliasArgs.Builder a);
-    }
-    private static GetServerDnsAliasArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerDnsAliasArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A server DNS alias.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A server DNS alias.
- * 
-     */
-    public static CompletableFuture<GetServerDnsAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A server DNS alias.
      * API Version: 2020-11-01-preview.

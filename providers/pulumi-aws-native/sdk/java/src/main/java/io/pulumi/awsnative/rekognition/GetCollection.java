@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCollection {
     private GetCollection() {}
-    public interface BuilderApplicator {
-        public void apply(GetCollectionArgs.Builder a);
-    }
-    private static GetCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCollectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
- * 
-     */
-    public static CompletableFuture<GetCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
      * 

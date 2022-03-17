@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCertificate {
     private GetCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetCertificateArgs.Builder a);
-    }
-    private static GetCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use the AWS::IoT::Certificate resource to declare an AWS IoT X.509 certificate.
- * 
-     */
-    public static CompletableFuture<GetCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use the AWS::IoT::Certificate resource to declare an AWS IoT X.509 certificate.
      * 

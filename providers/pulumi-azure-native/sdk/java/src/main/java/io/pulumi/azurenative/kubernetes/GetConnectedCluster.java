@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnectedCluster {
     private GetConnectedCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectedClusterArgs.Builder a);
-    }
-    private static GetConnectedClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectedClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a connected cluster.
- * API Version: 2021-03-01.
- * 
-     *
-     * Represents a connected cluster.
- * 
-     */
-    public static CompletableFuture<GetConnectedClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a connected cluster.
      * API Version: 2021-03-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRestorePoint {
     private GetRestorePoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetRestorePointArgs.Builder a);
-    }
-    private static GetRestorePointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRestorePointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Restore Point details.
- * API Version: 2021-03-01.
- * 
-     *
-     * Restore Point details.
- * 
-     */
-    public static CompletableFuture<GetRestorePointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Restore Point details.
      * API Version: 2021-03-01.

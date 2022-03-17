@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetP2sVpnServerConfiguration {
     private GetP2sVpnServerConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetP2sVpnServerConfigurationArgs.Builder a);
-    }
-    private static GetP2sVpnServerConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetP2sVpnServerConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * P2SVpnServerConfiguration Resource.
- * API Version: 2019-07-01.
- * 
-     *
-     * P2SVpnServerConfiguration Resource.
- * 
-     */
-    public static CompletableFuture<GetP2sVpnServerConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * P2SVpnServerConfiguration Resource.
      * API Version: 2019-07-01.

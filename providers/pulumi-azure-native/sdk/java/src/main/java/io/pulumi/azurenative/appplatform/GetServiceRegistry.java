@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceRegistry {
     private GetServiceRegistry() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceRegistryArgs.Builder a);
-    }
-    private static GetServiceRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceRegistryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Service Registry resource
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Service Registry resource
- * 
-     */
-    public static CompletableFuture<GetServiceRegistryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Service Registry resource
      * API Version: 2022-01-01-preview.

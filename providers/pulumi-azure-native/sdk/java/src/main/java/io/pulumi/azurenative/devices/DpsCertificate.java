@@ -88,22 +88,6 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DpsCertificateArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.devices.DpsCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.devices.DpsCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DpsCertificate(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -135,15 +119,15 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:devices/v20170821preview:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20171115:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20180122:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200101:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200301:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200901preview:DpsCertificate").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20211015:DpsCertificate").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:devices/v20170821preview:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20171115:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20180122:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200101:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200301:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200901preview:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20211015:DpsCertificate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

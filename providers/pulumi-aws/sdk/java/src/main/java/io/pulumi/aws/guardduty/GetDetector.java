@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDetector {
     private GetDetector() {}
-    public interface BuilderApplicator {
-        public void apply(GetDetectorArgs.Builder a);
-    }
-    private static GetDetectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDetectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve information about a GuardDuty detector.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDetector.
- * 
-     *
-     * A collection of values returned by getDetector.
- * 
-     */
-    public static CompletableFuture<GetDetectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve information about a GuardDuty detector.
      * 

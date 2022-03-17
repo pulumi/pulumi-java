@@ -170,10 +170,10 @@ public class ResourcePackages {
 
     private static ResourceOptions resolveResourceOptions(Class<?> resourceType, String urn) {
         if (CustomResource.class.isAssignableFrom(resourceType)) {
-            return CustomResourceOptions.builder().setUrn(urn).build();
+            return CustomResourceOptions.builder().urn(urn).build();
         }
         if (ComponentResource.class.isAssignableFrom(resourceType)) {
-            return ComponentResourceOptions.builder().setUrn(urn).build();
+            return ComponentResourceOptions.builder().urn(urn).build();
         }
         throw new IllegalStateException(String.format("Unexpected resource type: '%s'", resourceType.getTypeName()));
     }

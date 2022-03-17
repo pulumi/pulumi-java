@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionSslCertificate {
     private GetRegionSslCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionSslCertificateArgs.Builder a);
-    }
-    private static GetRegionSslCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionSslCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetRegionSslCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
      * 

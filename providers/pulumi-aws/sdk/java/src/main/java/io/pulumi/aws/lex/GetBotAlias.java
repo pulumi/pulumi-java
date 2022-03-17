@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBotAlias {
     private GetBotAlias() {}
-    public interface BuilderApplicator {
-        public void apply(GetBotAliasArgs.Builder a);
-    }
-    private static GetBotAliasArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBotAliasArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific Amazon Lex Bot Alias.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getBotAlias.
- * 
-     *
-     * A collection of values returned by getBotAlias.
- * 
-     */
-    public static CompletableFuture<GetBotAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific Amazon Lex Bot Alias.
      * 

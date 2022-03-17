@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGameServerDeployment {
     private GetGameServerDeployment() {}
-    public interface BuilderApplicator {
-        public void apply(GetGameServerDeploymentArgs.Builder a);
-    }
-    private static GetGameServerDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGameServerDeploymentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single game server deployment.
- * 
-     */
-    public static CompletableFuture<GetGameServerDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single game server deployment.
      * 

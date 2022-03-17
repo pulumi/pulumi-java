@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagedInstancePrivateEndpointConnection {
     private GetManagedInstancePrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagedInstancePrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetManagedInstancePrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagedInstancePrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A private endpoint connection
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A private endpoint connection
- * 
-     */
-    public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A private endpoint connection
      * API Version: 2020-11-01-preview.

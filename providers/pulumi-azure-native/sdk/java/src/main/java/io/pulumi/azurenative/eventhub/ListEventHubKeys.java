@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListEventHubKeys {
     private ListEventHubKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListEventHubKeysArgs.Builder a);
-    }
-    private static ListEventHubKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListEventHubKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Namespace/EventHub Connection String
- * API Version: 2017-04-01.
- * 
-     *
-     * Namespace/EventHub Connection String
- * 
-     */
-    public static CompletableFuture<ListEventHubKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Namespace/EventHub Connection String
      * API Version: 2017-04-01.

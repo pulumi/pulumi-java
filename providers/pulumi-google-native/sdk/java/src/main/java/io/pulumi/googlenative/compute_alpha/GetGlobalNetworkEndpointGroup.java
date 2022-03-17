@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGlobalNetworkEndpointGroup {
     private GetGlobalNetworkEndpointGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetGlobalNetworkEndpointGroupArgs.Builder a);
-    }
-    private static GetGlobalNetworkEndpointGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGlobalNetworkEndpointGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetGlobalNetworkEndpointGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 

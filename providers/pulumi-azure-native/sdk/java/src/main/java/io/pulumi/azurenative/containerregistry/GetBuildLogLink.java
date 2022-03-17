@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBuildLogLink {
     private GetBuildLogLink() {}
-    public interface BuilderApplicator {
-        public void apply(GetBuildLogLinkArgs.Builder a);
-    }
-    private static GetBuildLogLinkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBuildLogLinkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The result of get log link operation.
- * API Version: 2018-02-01-preview.
- * 
-     *
-     * The result of get log link operation.
- * 
-     */
-    public static CompletableFuture<GetBuildLogLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The result of get log link operation.
      * API Version: 2018-02-01-preview.

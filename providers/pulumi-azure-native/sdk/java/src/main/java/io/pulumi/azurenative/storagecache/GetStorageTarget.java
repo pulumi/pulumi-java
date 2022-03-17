@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStorageTarget {
     private GetStorageTarget() {}
-    public interface BuilderApplicator {
-        public void apply(GetStorageTargetArgs.Builder a);
-    }
-    private static GetStorageTargetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStorageTargetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Type of the Storage Target.
- * API Version: 2021-03-01.
- * 
-     *
-     * Type of the Storage Target.
- * 
-     */
-    public static CompletableFuture<GetStorageTargetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Type of the Storage Target.
      * API Version: 2021-03-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTrafficManagerUserMetricsKey {
     private GetTrafficManagerUserMetricsKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetTrafficManagerUserMetricsKeyArgs.Builder a);
-    }
-    private static GetTrafficManagerUserMetricsKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTrafficManagerUserMetricsKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing Traffic Manager User Metrics.
- * API Version: 2018-08-01.
- * 
-     *
-     * Class representing Traffic Manager User Metrics.
- * 
-     */
-    public static CompletableFuture<GetTrafficManagerUserMetricsKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing Traffic Manager User Metrics.
      * API Version: 2018-08-01.

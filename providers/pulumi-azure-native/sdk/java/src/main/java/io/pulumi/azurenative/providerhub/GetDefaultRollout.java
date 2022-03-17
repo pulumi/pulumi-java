@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDefaultRollout {
     private GetDefaultRollout() {}
-    public interface BuilderApplicator {
-        public void apply(GetDefaultRolloutArgs.Builder a);
-    }
-    private static GetDefaultRolloutArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDefaultRolloutArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Default rollout definition.
- * API Version: 2020-11-20.
- * 
-     *
-     * Default rollout definition.
- * 
-     */
-    public static CompletableFuture<GetDefaultRolloutResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Default rollout definition.
      * API Version: 2020-11-20.

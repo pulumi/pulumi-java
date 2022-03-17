@@ -14,17 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAmi {
     private GetAmi() {}
-    public interface BuilderApplicator {
-        public void apply(GetAmiArgs.Builder a);
-    }
-    private static GetAmiArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAmiArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    public static CompletableFuture<GetAmiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     public static CompletableFuture<GetAmiResult> invokeAsync(GetAmiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args == null ? GetAmiArgs.Empty : args, Utilities.withVersion(options));
     }

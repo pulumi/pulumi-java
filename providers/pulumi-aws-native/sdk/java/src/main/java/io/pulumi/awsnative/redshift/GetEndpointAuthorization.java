@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEndpointAuthorization {
     private GetEndpointAuthorization() {}
-    public interface BuilderApplicator {
-        public void apply(GetEndpointAuthorizationArgs.Builder a);
-    }
-    private static GetEndpointAuthorizationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEndpointAuthorizationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes an endpoint authorization for authorizing Redshift-managed VPC endpoint access to a cluster across AWS accounts.
- * 
-     */
-    public static CompletableFuture<GetEndpointAuthorizationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes an endpoint authorization for authorizing Redshift-managed VPC endpoint access to a cluster across AWS accounts.
      * 

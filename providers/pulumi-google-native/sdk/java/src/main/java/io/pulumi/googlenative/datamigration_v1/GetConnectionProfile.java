@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnectionProfile {
     private GetConnectionProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectionProfileArgs.Builder a);
-    }
-    private static GetConnectionProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectionProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single connection profile.
- * 
-     */
-    public static CompletableFuture<GetConnectionProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single connection profile.
      * 

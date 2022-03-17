@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomerGatewayAssociation {
     private GetCustomerGatewayAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomerGatewayAssociationArgs.Builder a);
-    }
-    private static GetCustomerGatewayAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomerGatewayAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::NetworkManager::CustomerGatewayAssociation type associates a customer gateway with a device and optionally, with a link.
- * 
-     */
-    public static CompletableFuture<GetCustomerGatewayAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::NetworkManager::CustomerGatewayAssociation type associates a customer gateway with a device and optionally, with a link.
      * 

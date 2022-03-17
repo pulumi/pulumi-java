@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAdminRuleCollection {
     private GetAdminRuleCollection() {}
-    public interface BuilderApplicator {
-        public void apply(GetAdminRuleCollectionArgs.Builder a);
-    }
-    private static GetAdminRuleCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAdminRuleCollectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Defines the rule collection.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Defines the rule collection.
- * 
-     */
-    public static CompletableFuture<GetAdminRuleCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Defines the rule collection.
      * API Version: 2021-02-01-preview.

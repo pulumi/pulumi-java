@@ -84,22 +84,6 @@ public class WebAppDomainOwnershipIdentifierSlot extends io.pulumi.resources.Cus
         return this.value;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebAppDomainOwnershipIdentifierSlotArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppDomainOwnershipIdentifierSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppDomainOwnershipIdentifierSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppDomainOwnershipIdentifierSlot(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -131,20 +115,20 @@ public class WebAppDomainOwnershipIdentifierSlot extends io.pulumi.resources.Cus
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppDomainOwnershipIdentifierSlot").build()),
-                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppDomainOwnershipIdentifierSlot").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:web/v20160801:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20180201:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20181101:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20190801:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200601:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20200901:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201001:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20201201:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210101:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210115:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210201:WebAppDomainOwnershipIdentifierSlot").build()),
+                Output.of(Alias.builder().type("azure-native:web/v20210301:WebAppDomainOwnershipIdentifierSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

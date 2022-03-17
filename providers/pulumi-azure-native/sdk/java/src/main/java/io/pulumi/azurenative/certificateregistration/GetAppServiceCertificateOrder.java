@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAppServiceCertificateOrder {
     private GetAppServiceCertificateOrder() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppServiceCertificateOrderArgs.Builder a);
-    }
-    private static GetAppServiceCertificateOrderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppServiceCertificateOrderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * SSL certificate purchase order.
- * API Version: 2020-10-01.
- * 
-     *
-     * SSL certificate purchase order.
- * 
-     */
-    public static CompletableFuture<GetAppServiceCertificateOrderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * SSL certificate purchase order.
      * API Version: 2020-10-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerAzureADOnlyAuthentication {
     private GetServerAzureADOnlyAuthentication() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerAzureADOnlyAuthenticationArgs.Builder a);
-    }
-    private static GetServerAzureADOnlyAuthenticationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerAzureADOnlyAuthenticationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Azure Active Directory only authentication.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * Azure Active Directory only authentication.
- * 
-     */
-    public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Azure Active Directory only authentication.
      * API Version: 2020-11-01-preview.

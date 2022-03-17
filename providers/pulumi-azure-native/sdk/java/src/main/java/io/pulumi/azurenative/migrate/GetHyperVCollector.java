@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHyperVCollector {
     private GetHyperVCollector() {}
-    public interface BuilderApplicator {
-        public void apply(GetHyperVCollectorArgs.Builder a);
-    }
-    private static GetHyperVCollectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHyperVCollectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2019-10-01.
- * 
-     */
-    public static CompletableFuture<GetHyperVCollectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2019-10-01.
      * 

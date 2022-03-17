@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExtendedDatabaseBlobAuditingPolicy {
     private GetExtendedDatabaseBlobAuditingPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetExtendedDatabaseBlobAuditingPolicyArgs.Builder a);
-    }
-    private static GetExtendedDatabaseBlobAuditingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExtendedDatabaseBlobAuditingPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An extended database blob auditing policy.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An extended database blob auditing policy.
- * 
-     */
-    public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An extended database blob auditing policy.
      * API Version: 2020-11-01-preview.

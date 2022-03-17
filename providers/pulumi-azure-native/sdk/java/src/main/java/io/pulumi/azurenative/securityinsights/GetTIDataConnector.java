@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTIDataConnector {
     private GetTIDataConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetTIDataConnectorArgs.Builder a);
-    }
-    private static GetTIDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTIDataConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents threat intelligence data connector.
- * API Version: 2020-01-01.
- * 
-     *
-     * Represents threat intelligence data connector.
- * 
-     */
-    public static CompletableFuture<GetTIDataConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents threat intelligence data connector.
      * API Version: 2020-01-01.

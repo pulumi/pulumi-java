@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssetEncryptionKey {
     private GetAssetEncryptionKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssetEncryptionKeyArgs.Builder a);
-    }
-    private static GetAssetEncryptionKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssetEncryptionKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Data needed to decrypt asset files encrypted with legacy storage encryption.
- * API Version: 2020-05-01.
- * 
-     *
-     * Data needed to decrypt asset files encrypted with legacy storage encryption.
- * 
-     */
-    public static CompletableFuture<GetAssetEncryptionKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Data needed to decrypt asset files encrypted with legacy storage encryption.
      * API Version: 2020-05-01.

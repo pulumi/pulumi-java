@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: AzureCliScript, AzurePowerShellScript. */
 public class GetDeploymentScript {
     private GetDeploymentScript() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeploymentScriptArgs.Builder a);
-    }
-    private static GetDeploymentScriptArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeploymentScriptArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Deployment script object.
- * API Version: 2020-10-01.
- * 
-     *
-     * Deployment script object.
- * 
-     * @Deprecated
-     * Please use one of the variants: AzureCliScript, AzurePowerShellScript.
- * 
-     */
-    public static CompletableFuture<GetDeploymentScriptResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Deployment script object.
      * API Version: 2020-10-01.

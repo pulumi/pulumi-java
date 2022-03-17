@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPermissionSet {
     private GetPermissionSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetPermissionSetArgs.Builder a);
-    }
-    private static GetPermissionSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPermissionSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for SSO PermissionSet
- * 
-     */
-    public static CompletableFuture<GetPermissionSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for SSO PermissionSet
      * 

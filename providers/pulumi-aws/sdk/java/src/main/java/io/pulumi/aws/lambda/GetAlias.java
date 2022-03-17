@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAlias {
     private GetAlias() {}
-    public interface BuilderApplicator {
-        public void apply(GetAliasArgs.Builder a);
-    }
-    private static GetAliasArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAliasArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information about a Lambda Alias.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getAlias.
- * 
-     *
-     * A collection of values returned by getAlias.
- * 
-     */
-    public static CompletableFuture<GetAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information about a Lambda Alias.
      * 

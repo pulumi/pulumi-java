@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDdosProtectionPlan {
     private GetDdosProtectionPlan() {}
-    public interface BuilderApplicator {
-        public void apply(GetDdosProtectionPlanArgs.Builder a);
-    }
-    private static GetDdosProtectionPlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDdosProtectionPlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A DDoS protection plan in a resource group.
- * API Version: 2020-11-01.
- * 
-     *
-     * A DDoS protection plan in a resource group.
- * 
-     */
-    public static CompletableFuture<GetDdosProtectionPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A DDoS protection plan in a resource group.
      * API Version: 2020-11-01.

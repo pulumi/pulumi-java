@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventHubConnection {
     private GetEventHubConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventHubConnectionArgs.Builder a);
-    }
-    private static GetEventHubConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventHubConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing an event hub connection.
- * API Version: 2018-09-07-preview.
- * 
-     *
-     * Class representing an event hub connection.
- * 
-     */
-    public static CompletableFuture<GetEventHubConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing an event hub connection.
      * API Version: 2018-09-07-preview.

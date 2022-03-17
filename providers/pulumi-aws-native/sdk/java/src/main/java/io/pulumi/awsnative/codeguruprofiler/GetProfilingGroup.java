@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProfilingGroup {
     private GetProfilingGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetProfilingGroupArgs.Builder a);
-    }
-    private static GetProfilingGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProfilingGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This resource schema represents the Profiling Group resource in the Amazon CodeGuru Profiler service.
- * 
-     */
-    public static CompletableFuture<GetProfilingGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This resource schema represents the Profiling Group resource in the Amazon CodeGuru Profiler service.
      * 

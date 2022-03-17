@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStorageAccountCredential {
     private GetStorageAccountCredential() {}
-    public interface BuilderApplicator {
-        public void apply(GetStorageAccountCredentialArgs.Builder a);
-    }
-    private static GetStorageAccountCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStorageAccountCredentialArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The storage account credential.
- * API Version: 2020-12-01.
- * 
-     *
-     * The storage account credential.
- * 
-     */
-    public static CompletableFuture<GetStorageAccountCredentialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The storage account credential.
      * API Version: 2020-12-01.

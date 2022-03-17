@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotebookProxy {
     private GetNotebookProxy() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotebookProxyArgs.Builder a);
-    }
-    private static GetNotebookProxyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotebookProxyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A NotebookProxy resource.
- * API Version: 2019-10-11-preview.
- * 
-     *
-     * A NotebookProxy resource.
- * 
-     */
-    public static CompletableFuture<GetNotebookProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A NotebookProxy resource.
      * API Version: 2019-10-11-preview.

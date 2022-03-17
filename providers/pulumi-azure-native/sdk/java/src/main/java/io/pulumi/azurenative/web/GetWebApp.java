@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebApp {
     private GetWebApp() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppArgs.Builder a);
-    }
-    private static GetWebAppArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A web app, a mobile app backend, or an API app.
- * API Version: 2020-12-01.
- * 
-     *
-     * A web app, a mobile app backend, or an API app.
- * 
-     */
-    public static CompletableFuture<GetWebAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A web app, a mobile app backend, or an API app.
      * API Version: 2020-12-01.

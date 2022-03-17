@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocalNetworkGateway {
     private GetLocalNetworkGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocalNetworkGatewayArgs.Builder a);
-    }
-    private static GetLocalNetworkGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocalNetworkGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A common class for general resource information.
- * API Version: 2020-11-01.
- * 
-     *
-     * A common class for general resource information.
- * 
-     */
-    public static CompletableFuture<GetLocalNetworkGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A common class for general resource information.
      * API Version: 2020-11-01.

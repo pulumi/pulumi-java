@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHanaInstance {
     private GetHanaInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetHanaInstanceArgs.Builder a);
-    }
-    private static GetHanaInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHanaInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * HANA instance info on Azure (ARM properties and HANA properties)
- * API Version: 2017-11-03-preview.
- * 
-     *
-     * HANA instance info on Azure (ARM properties and HANA properties)
- * 
-     */
-    public static CompletableFuture<GetHanaInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * HANA instance info on Azure (ARM properties and HANA properties)
      * API Version: 2017-11-03-preview.

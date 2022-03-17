@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionAutoscaler {
     private GetRegionAutoscaler() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionAutoscalerArgs.Builder a);
-    }
-    private static GetRegionAutoscalerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionAutoscalerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified autoscaler.
- * 
-     */
-    public static CompletableFuture<GetRegionAutoscalerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified autoscaler.
      * 

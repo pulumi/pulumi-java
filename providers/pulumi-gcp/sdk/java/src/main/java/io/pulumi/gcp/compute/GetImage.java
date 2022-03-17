@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImage {
     private GetImage() {}
-    public interface BuilderApplicator {
-        public void apply(GetImageArgs.Builder a);
-    }
-    private static GetImageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information about a Google Compute Image. Check that your service account has the `compute.imageUser` role if you want to share [custom images](https://cloud.google.com/compute/docs/images/sharing-images-across-projects) from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
- * [the official documentation](https://cloud.google.com/compute/docs/images) and its [API](https://cloud.google.com/compute/docs/reference/latest/images).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getImage.
- * 
-     *
-     * A collection of values returned by getImage.
- * 
-     */
-    public static CompletableFuture<GetImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information about a Google Compute Image. Check that your service account has the `compute.imageUser` role if you want to share [custom images](https://cloud.google.com/compute/docs/images/sharing-images-across-projects) from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
      * [the official documentation](https://cloud.google.com/compute/docs/images) and its [API](https://cloud.google.com/compute/docs/reference/latest/images).

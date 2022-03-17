@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDashboard {
     private GetDashboard() {}
-    public interface BuilderApplicator {
-        public void apply(GetDashboardArgs.Builder a);
-    }
-    private static GetDashboardArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDashboardArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the AWS::QuickSight::Dashboard Resource Type.
- * 
-     */
-    public static CompletableFuture<GetDashboardResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the AWS::QuickSight::Dashboard Resource Type.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStandard {
     private GetStandard() {}
-    public interface BuilderApplicator {
-        public void apply(GetStandardArgs.Builder a);
-    }
-    private static GetStandardArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStandardArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Security Standard on a resource
- * API Version: 2021-08-01-preview.
- * 
-     *
-     * Security Standard on a resource
- * 
-     */
-    public static CompletableFuture<GetStandardResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Security Standard on a resource
      * API Version: 2021-08-01-preview.

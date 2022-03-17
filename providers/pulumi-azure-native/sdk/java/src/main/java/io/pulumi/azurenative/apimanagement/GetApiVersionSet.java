@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiVersionSet {
     private GetApiVersionSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiVersionSetArgs.Builder a);
-    }
-    private static GetApiVersionSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiVersionSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Api Version Set Contract details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Api Version Set Contract details.
- * 
-     */
-    public static CompletableFuture<GetApiVersionSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Api Version Set Contract details.
      * API Version: 2020-12-01.

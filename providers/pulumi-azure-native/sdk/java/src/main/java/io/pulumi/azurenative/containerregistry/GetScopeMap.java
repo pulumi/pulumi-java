@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScopeMap {
     private GetScopeMap() {}
-    public interface BuilderApplicator {
-        public void apply(GetScopeMapArgs.Builder a);
-    }
-    private static GetScopeMapArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScopeMapArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An object that represents a scope map for a container registry.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An object that represents a scope map for a container registry.
- * 
-     */
-    public static CompletableFuture<GetScopeMapResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An object that represents a scope map for a container registry.
      * API Version: 2020-11-01-preview.

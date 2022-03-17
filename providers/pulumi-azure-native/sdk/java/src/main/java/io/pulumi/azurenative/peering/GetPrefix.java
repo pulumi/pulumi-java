@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrefix {
     private GetPrefix() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrefixArgs.Builder a);
-    }
-    private static GetPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrefixArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The peering service prefix class.
- * API Version: 2021-01-01.
- * 
-     *
-     * The peering service prefix class.
- * 
-     */
-    public static CompletableFuture<GetPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The peering service prefix class.
      * API Version: 2021-01-01.

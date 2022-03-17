@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImportCollector {
     private GetImportCollector() {}
-    public interface BuilderApplicator {
-        public void apply(GetImportCollectorArgs.Builder a);
-    }
-    private static GetImportCollectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImportCollectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2019-10-01.
- * 
-     */
-    public static CompletableFuture<GetImportCollectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2019-10-01.
      * 

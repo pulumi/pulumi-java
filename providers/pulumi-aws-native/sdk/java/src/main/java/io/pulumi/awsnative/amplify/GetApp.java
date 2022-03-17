@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApp {
     private GetApp() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppArgs.Builder a);
-    }
-    private static GetAppArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::Amplify::App resource creates Apps in the Amplify Console. An App is a collection of branches.
- * 
-     */
-    public static CompletableFuture<GetAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::Amplify::App resource creates Apps in the Amplify Console. An App is a collection of branches.
      * 

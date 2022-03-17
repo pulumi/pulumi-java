@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrganizationIamPolicy {
     private GetOrganizationIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrganizationIamPolicyArgs.Builder a);
-    }
-    private static GetOrganizationIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrganizationIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for an organization resource. The policy may be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, for example: "organizations/123". Authorization requires the IAM permission `resourcemanager.organizations.getIamPolicy` on the specified organization.
- * 
-     */
-    public static CompletableFuture<GetOrganizationIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for an organization resource. The policy may be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, for example: "organizations/123". Authorization requires the IAM permission `resourcemanager.organizations.getIamPolicy` on the specified organization.
      * 

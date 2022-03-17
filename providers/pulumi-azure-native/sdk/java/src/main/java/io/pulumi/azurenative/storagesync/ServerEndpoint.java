@@ -315,22 +315,6 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
         return this.volumeFreeSpacePercent;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ServerEndpointArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.storagesync.ServerEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.storagesync.ServerEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ServerEndpoint(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -362,18 +346,18 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20170605preview:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20180402:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20180701:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20181001:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190201:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190301:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190601:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20191001:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20200301:ServerEndpoint").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20200901:ServerEndpoint").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:storagesync/v20170605preview:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20180402:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20180701:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20181001:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190201:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190301:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190601:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20191001:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20200301:ServerEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20200901:ServerEndpoint").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

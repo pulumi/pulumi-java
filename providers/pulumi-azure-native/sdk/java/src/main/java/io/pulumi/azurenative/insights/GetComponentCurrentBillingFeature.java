@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetComponentCurrentBillingFeature {
     private GetComponentCurrentBillingFeature() {}
-    public interface BuilderApplicator {
-        public void apply(GetComponentCurrentBillingFeatureArgs.Builder a);
-    }
-    private static GetComponentCurrentBillingFeatureArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetComponentCurrentBillingFeatureArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Application Insights component billing features
- * API Version: 2015-05-01.
- * 
-     *
-     * An Application Insights component billing features
- * 
-     */
-    public static CompletableFuture<GetComponentCurrentBillingFeatureResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Application Insights component billing features
      * API Version: 2015-05-01.

@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProject {
     private GetProject() {}
-    public interface BuilderApplicator {
-        public void apply(GetProjectArgs.Builder a);
-    }
-    private static GetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProjectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get project details.
- * For more information see
- * [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getProject.
- * 
-     *
-     * A collection of values returned by getProject.
- * 
-     */
-    public static CompletableFuture<GetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get project details.
      * For more information see

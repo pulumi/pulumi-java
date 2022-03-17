@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetQuery {
     private GetQuery() {}
-    public interface BuilderApplicator {
-        public void apply(GetQueryArgs.Builder a);
-    }
-    private static GetQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Log Analytics QueryPack-Query definition.
- * API Version: 2019-09-01-preview.
- * 
-     *
-     * A Log Analytics QueryPack-Query definition.
- * 
-     */
-    public static CompletableFuture<GetQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Log Analytics QueryPack-Query definition.
      * API Version: 2019-09-01-preview.

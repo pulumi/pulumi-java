@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppApplicationSettings {
     private ListWebAppApplicationSettings() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppApplicationSettingsArgs.Builder a);
-    }
-    private static ListWebAppApplicationSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppApplicationSettingsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * String dictionary resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * String dictionary resource.
- * 
-     */
-    public static CompletableFuture<ListWebAppApplicationSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * String dictionary resource.
      * API Version: 2020-12-01.

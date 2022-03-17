@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOperationalizationCluster {
     private GetOperationalizationCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetOperationalizationClusterArgs.Builder a);
-    }
-    private static GetOperationalizationClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOperationalizationClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Instance of an Azure ML Operationalization Cluster resource.
- * API Version: 2017-08-01-preview.
- * 
-     *
-     * Instance of an Azure ML Operationalization Cluster resource.
- * 
-     */
-    public static CompletableFuture<GetOperationalizationClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Instance of an Azure ML Operationalization Cluster resource.
      * API Version: 2017-08-01-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkInsightsAnalysis {
     private GetNetworkInsightsAnalysis() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkInsightsAnalysisArgs.Builder a);
-    }
-    private static GetNetworkInsightsAnalysisArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkInsightsAnalysisArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::EC2::NetworkInsightsAnalysis
- * 
-     */
-    public static CompletableFuture<GetNetworkInsightsAnalysisResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::EC2::NetworkInsightsAnalysis
      * 

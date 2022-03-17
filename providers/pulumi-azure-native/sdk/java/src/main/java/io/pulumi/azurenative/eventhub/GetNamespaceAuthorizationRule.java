@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNamespaceAuthorizationRule {
     private GetNamespaceAuthorizationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetNamespaceAuthorizationRuleArgs.Builder a);
-    }
-    private static GetNamespaceAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNamespaceAuthorizationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Single item in a List or Get AuthorizationRule operation
- * API Version: 2017-04-01.
- * 
-     *
-     * Single item in a List or Get AuthorizationRule operation
- * 
-     */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Single item in a List or Get AuthorizationRule operation
      * API Version: 2017-04-01.

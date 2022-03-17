@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDirectory {
     private GetDirectory() {}
-    public interface BuilderApplicator {
-        public void apply(GetDirectoryArgs.Builder a);
-    }
-    private static GetDirectoryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDirectoryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve information about an AWS WorkSpaces directory.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDirectory.
- * 
-     *
-     * A collection of values returned by getDirectory.
- * 
-     */
-    public static CompletableFuture<GetDirectoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve information about an AWS WorkSpaces directory.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAFDCustomDomain {
     private GetAFDCustomDomain() {}
-    public interface BuilderApplicator {
-        public void apply(GetAFDCustomDomainArgs.Builder a);
-    }
-    private static GetAFDCustomDomainArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAFDCustomDomainArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
- * API Version: 2020-09-01.
- * 
-     *
-     * Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
- * 
-     */
-    public static CompletableFuture<GetAFDCustomDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
      * API Version: 2020-09-01.

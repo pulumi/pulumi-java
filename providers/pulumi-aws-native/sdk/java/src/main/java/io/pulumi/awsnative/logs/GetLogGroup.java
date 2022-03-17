@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLogGroup {
     private GetLogGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetLogGroupArgs.Builder a);
-    }
-    private static GetLogGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLogGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Logs::LogGroup
- * 
-     */
-    public static CompletableFuture<GetLogGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Logs::LogGroup
      * 

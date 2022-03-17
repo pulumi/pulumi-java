@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGroup {
     private GetGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetGroupArgs.Builder a);
-    }
-    private static GetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A group created in a Migration project.
- * API Version: 2019-10-01.
- * 
-     *
-     * A group created in a Migration project.
- * 
-     */
-    public static CompletableFuture<GetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A group created in a Migration project.
      * API Version: 2019-10-01.

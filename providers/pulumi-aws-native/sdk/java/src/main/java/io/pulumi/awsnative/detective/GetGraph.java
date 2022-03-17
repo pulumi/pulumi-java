@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGraph {
     private GetGraph() {}
-    public interface BuilderApplicator {
-        public void apply(GetGraphArgs.Builder a);
-    }
-    private static GetGraphArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGraphArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Detective::Graph
- * 
-     */
-    public static CompletableFuture<GetGraphResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Detective::Graph
      * 

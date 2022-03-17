@@ -19,10 +19,11 @@ import (
 )
 
 type Config struct {
-	Version     string `yaml:"version"`
-	Schema      string `yaml:"schema"`
-	Out         string `yaml:"out"`
-	VersionFile string `yaml:"versionFile"`
+	Version     string      `yaml:"version"`
+	Schema      string      `yaml:"schema"`
+	Out         string      `yaml:"out"`
+	VersionFile string      `yaml:"versionFile"`
+	PackageInfo interface{} `yaml:"packageInfo"`
 }
 
 func main() {
@@ -79,6 +80,19 @@ func readPackageSchema(path string) (*pschema.PackageSpec, error) {
 	return &result, nil
 }
 
+func convertPackageInfo(mapParsedFromYaml interface{}) (jvmgen.PackageInfo, error) {
+	packageInfoJSON, err := json.Marshal(mapParsedFromYaml)
+	if err != nil {
+		return jvmgen.PackageInfo{}, err
+	}
+
+	var result jvmgen.PackageInfo
+	if err := json.Unmarshal(packageInfoJSON, &result); err != nil {
+		return jvmgen.PackageInfo{}, err
+	}
+	return result, nil
+}
+
 func generateJava(configFile string) error {
 	rootDir, err := filepath.Abs(filepath.Dir(configFile))
 	if err != nil {
@@ -100,6 +114,13 @@ func generateJava(configFile string) error {
 		return fmt.Errorf("failed to import Pulumi schema: %w", err)
 	}
 
+	pkgInfo, err := convertPackageInfo(cfg.PackageInfo)
+	if err != nil {
+		return err
+	}
+
+	pkg.Language["jvm"] = pkgInfo
+
 	// TODO handle overlays here?
 	extraFiles := map[string][]byte{}
 	files, err := jvmgen.GeneratePackage("pulumi-java-gen", pkg, extraFiles)
@@ -108,6 +129,10 @@ func generateJava(configFile string) error {
 	}
 
 	outDir := filepath.Join(rootDir, cfg.Out)
+
+	if err := cleanDir(outDir); err != nil {
+		return err
+	}
 
 	for f, bytes := range files {
 		if err := emitFile(filepath.Join(outDir, f), bytes); err != nil {
@@ -129,6 +154,10 @@ func generateJava(configFile string) error {
 	}
 
 	return nil
+}
+
+func cleanDir(path string) error {
+	return os.RemoveAll(path)
 }
 
 func emitFile(path string, bytes []byte) error {

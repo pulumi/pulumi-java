@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetService {
     private GetService() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceArgs.Builder a);
-    }
-    private static GetServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Database Migration Service resource
- * API Version: 2018-04-19.
- * 
-     *
-     * A Database Migration Service resource
- * 
-     */
-    public static CompletableFuture<GetServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Database Migration Service resource
      * API Version: 2018-04-19.

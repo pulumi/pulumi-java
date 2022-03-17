@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIngestionSetting {
     private GetIngestionSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetIngestionSettingArgs.Builder a);
-    }
-    private static GetIngestionSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIngestionSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Configures how to correlate scan data and logs with resources associated with the subscription.
- * API Version: 2021-01-15-preview.
- * 
-     *
-     * Configures how to correlate scan data and logs with resources associated with the subscription.
- * 
-     */
-    public static CompletableFuture<GetIngestionSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Configures how to correlate scan data and logs with resources associated with the subscription.
      * API Version: 2021-01-15-preview.

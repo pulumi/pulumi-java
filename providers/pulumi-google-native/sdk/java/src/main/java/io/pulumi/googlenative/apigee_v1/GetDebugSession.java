@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDebugSession {
     private GetDebugSession() {}
-    public interface BuilderApplicator {
-        public void apply(GetDebugSessionArgs.Builder a);
-    }
-    private static GetDebugSessionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDebugSessionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves a debug session.
- * 
-     */
-    public static CompletableFuture<GetDebugSessionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves a debug session.
      * 

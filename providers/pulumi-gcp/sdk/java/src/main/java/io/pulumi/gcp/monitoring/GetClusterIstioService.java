@@ -14,41 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetClusterIstioService {
     private GetClusterIstioService() {}
-    public interface BuilderApplicator {
-        public void apply(GetClusterIstioServiceArgs.Builder a);
-    }
-    private static GetClusterIstioServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetClusterIstioServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Monitoring Service is the root resource under which operational aspects of a
- * generic service are accessible. A service is some discrete, autonomous, and
- * network-accessible unit, designed to solve an individual concern
- * 
- * An Cluster Istio monitoring service is automatically created by GCP to monitor
- * Cluster Istio services.
- * 
- * To get more information about Service, see:
- * 
- * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
- * * How-to Guides
- *     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
- *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getClusterIstioService.
- * 
-     *
-     * A collection of values returned by getClusterIstioService.
- * 
-     */
-    public static CompletableFuture<GetClusterIstioServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Monitoring Service is the root resource under which operational aspects of a
      * generic service are accessible. A service is some discrete, autonomous, and

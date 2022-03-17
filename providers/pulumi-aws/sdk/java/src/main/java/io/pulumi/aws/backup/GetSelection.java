@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSelection {
     private GetSelection() {}
-    public interface BuilderApplicator {
-        public void apply(GetSelectionArgs.Builder a);
-    }
-    private static GetSelectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSelectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information on an existing backup selection.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSelection.
- * 
-     *
-     * A collection of values returned by getSelection.
- * 
-     */
-    public static CompletableFuture<GetSelectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information on an existing backup selection.
      * 

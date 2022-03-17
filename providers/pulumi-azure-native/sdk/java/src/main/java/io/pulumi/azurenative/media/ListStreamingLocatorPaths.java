@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListStreamingLocatorPaths {
     private ListStreamingLocatorPaths() {}
-    public interface BuilderApplicator {
-        public void apply(ListStreamingLocatorPathsArgs.Builder a);
-    }
-    private static ListStreamingLocatorPathsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListStreamingLocatorPathsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class of response for listPaths action
- * API Version: 2020-05-01.
- * 
-     *
-     * Class of response for listPaths action
- * 
-     */
-    public static CompletableFuture<ListStreamingLocatorPathsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class of response for listPaths action
      * API Version: 2020-05-01.

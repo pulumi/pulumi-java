@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistration {
     private GetRegistration() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistrationArgs.Builder a);
-    }
-    private static GetRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the details of a `Registration` resource.
- * 
-     */
-    public static CompletableFuture<GetRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the details of a `Registration` resource.
      * 

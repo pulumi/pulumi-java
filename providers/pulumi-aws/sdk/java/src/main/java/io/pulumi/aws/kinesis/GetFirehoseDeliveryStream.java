@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFirehoseDeliveryStream {
     private GetFirehoseDeliveryStream() {}
-    public interface BuilderApplicator {
-        public void apply(GetFirehoseDeliveryStreamArgs.Builder a);
-    }
-    private static GetFirehoseDeliveryStreamArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFirehoseDeliveryStreamArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a Kinesis Firehose Delivery Stream for use in other resources.
- * 
- * For more details, see the [Amazon Kinesis Firehose Documentation](https://aws.amazon.com/documentation/firehose/).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getFirehoseDeliveryStream.
- * 
-     *
-     * A collection of values returned by getFirehoseDeliveryStream.
- * 
-     */
-    public static CompletableFuture<GetFirehoseDeliveryStreamResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a Kinesis Firehose Delivery Stream for use in other resources.
      * 

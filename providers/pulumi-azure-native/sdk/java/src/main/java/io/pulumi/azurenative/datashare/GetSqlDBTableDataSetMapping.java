@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlDBTableDataSetMapping {
     private GetSqlDBTableDataSetMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlDBTableDataSetMappingArgs.Builder a);
-    }
-    private static GetSqlDBTableDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlDBTableDataSetMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A SQL DB Table data set mapping.
- * API Version: 2020-09-01.
- * 
-     *
-     * A SQL DB Table data set mapping.
- * 
-     */
-    public static CompletableFuture<GetSqlDBTableDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A SQL DB Table data set mapping.
      * API Version: 2020-09-01.

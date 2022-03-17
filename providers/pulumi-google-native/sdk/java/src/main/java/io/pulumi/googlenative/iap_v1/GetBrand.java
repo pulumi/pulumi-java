@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBrand {
     private GetBrand() {}
-    public interface BuilderApplicator {
-        public void apply(GetBrandArgs.Builder a);
-    }
-    private static GetBrandArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBrandArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the OAuth brand of the project.
- * 
-     */
-    public static CompletableFuture<GetBrandResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the OAuth brand of the project.
      * 

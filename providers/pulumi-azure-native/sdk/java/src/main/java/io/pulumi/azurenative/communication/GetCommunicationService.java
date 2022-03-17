@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCommunicationService {
     private GetCommunicationService() {}
-    public interface BuilderApplicator {
-        public void apply(GetCommunicationServiceArgs.Builder a);
-    }
-    private static GetCommunicationServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCommunicationServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A class representing a CommunicationService resource.
- * API Version: 2020-08-20.
- * 
-     *
-     * A class representing a CommunicationService resource.
- * 
-     */
-    public static CompletableFuture<GetCommunicationServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A class representing a CommunicationService resource.
      * API Version: 2020-08-20.

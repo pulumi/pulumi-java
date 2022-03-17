@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMigratingVm {
     private GetMigratingVm() {}
-    public interface BuilderApplicator {
-        public void apply(GetMigratingVmArgs.Builder a);
-    }
-    private static GetMigratingVmArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMigratingVmArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single MigratingVm.
- * 
-     */
-    public static CompletableFuture<GetMigratingVmResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single MigratingVm.
      * 

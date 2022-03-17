@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadClassifier {
     private GetWorkloadClassifier() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadClassifierArgs.Builder a);
-    }
-    private static GetWorkloadClassifierArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadClassifierArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Workload classifier operations for a data warehouse
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * Workload classifier operations for a data warehouse
- * 
-     */
-    public static CompletableFuture<GetWorkloadClassifierResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Workload classifier operations for a data warehouse
      * API Version: 2020-11-01-preview.

@@ -77,9 +77,10 @@ public final class MyStack extends Stack {
         // separately managed node pools. So we create the smallest possible default
         // node pool and immediately delete it.
         final var cluster = new Cluster(name,
-            $ -> $.initialNodeCount(1)
+            ClusterArgs.builder().initialNodeCount(1)
             .removeDefaultNodePool(true)
             .minMasterVersion(masterVersion)
+            .build()
         );
 
         final var nodePool = new NodePool("primary-node-pool",
@@ -105,7 +106,7 @@ public final class MyStack extends Stack {
             )
             .build(),
             CustomResourceOptions.builder()
-            .setDependsOn(List.of(cluster))
+            .dependsOn(List.of(cluster))
             .build());
         this.clusterName = cluster.getName();
 
@@ -155,10 +156,10 @@ public final class MyStack extends Stack {
                 .kubeconfig(this.kubeconfig)
                 .build(),
             CustomResourceOptions.builder()
-                .setDependsOn(List.of(nodePool, cluster))
+                .dependsOn(List.of(nodePool, cluster))
                 .build());
         final var clusterResourceOptions = CustomResourceOptions.builder()
-            .setProvider(clusterProvider)
+            .provider(clusterProvider)
             .build();
 
         // Create a Kubernetes Namespace

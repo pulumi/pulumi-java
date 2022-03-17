@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBrokerNodes {
     private GetBrokerNodes() {}
-    public interface BuilderApplicator {
-        public void apply(GetBrokerNodesArgs.Builder a);
-    }
-    private static GetBrokerNodesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBrokerNodesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on an Amazon MSK Broker Nodes.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getBrokerNodes.
- * 
-     *
-     * A collection of values returned by getBrokerNodes.
- * 
-     */
-    public static CompletableFuture<GetBrokerNodesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on an Amazon MSK Broker Nodes.
      * 

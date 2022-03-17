@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListAdminKey {
     private ListAdminKey() {}
-    public interface BuilderApplicator {
-        public void apply(ListAdminKeyArgs.Builder a);
-    }
-    private static ListAdminKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListAdminKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response containing the primary and secondary admin API keys for a given Azure Cognitive Search service.
- * API Version: 2020-08-01.
- * 
-     *
-     * Response containing the primary and secondary admin API keys for a given Azure Cognitive Search service.
- * 
-     */
-    public static CompletableFuture<ListAdminKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response containing the primary and secondary admin API keys for a given Azure Cognitive Search service.
      * API Version: 2020-08-01.

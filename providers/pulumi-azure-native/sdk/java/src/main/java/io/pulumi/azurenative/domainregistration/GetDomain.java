@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDomain {
     private GetDomain() {}
-    public interface BuilderApplicator {
-        public void apply(GetDomainArgs.Builder a);
-    }
-    private static GetDomainArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDomainArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about a domain.
- * API Version: 2020-10-01.
- * 
-     *
-     * Information about a domain.
- * 
-     */
-    public static CompletableFuture<GetDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about a domain.
      * API Version: 2020-10-01.

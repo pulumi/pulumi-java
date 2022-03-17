@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnvironment {
     private GetEnvironment() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnvironmentArgs.Builder a);
-    }
-    private static GetEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of AWS::RefactorSpaces::Environment Resource Type
- * 
-     */
-    public static CompletableFuture<GetEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of AWS::RefactorSpaces::Environment Resource Type
      * 

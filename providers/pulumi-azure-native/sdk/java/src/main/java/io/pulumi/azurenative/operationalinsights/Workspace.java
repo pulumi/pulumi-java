@@ -276,22 +276,6 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return this.workspaceCapping;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WorkspaceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.operationalinsights.WorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.operationalinsights.WorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Workspace(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -323,14 +307,14 @@ public class Workspace extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20151101preview:Workspace").build()),
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20200301preview:Workspace").build()),
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20200801:Workspace").build()),
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20201001:Workspace").build()),
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20210601:Workspace").build()),
-                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20211201preview:Workspace").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20151101preview:Workspace").build()),
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20200301preview:Workspace").build()),
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20200801:Workspace").build()),
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20201001:Workspace").build()),
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20210601:Workspace").build()),
+                Output.of(Alias.builder().type("azure-native:operationalinsights/v20211201preview:Workspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

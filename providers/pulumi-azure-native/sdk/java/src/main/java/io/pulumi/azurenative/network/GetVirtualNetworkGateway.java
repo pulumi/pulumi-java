@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGateway {
     private GetVirtualNetworkGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualNetworkGatewayArgs.Builder a);
-    }
-    private static GetVirtualNetworkGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualNetworkGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A common class for general resource information.
- * API Version: 2020-11-01.
- * 
-     *
-     * A common class for general resource information.
- * 
-     */
-    public static CompletableFuture<GetVirtualNetworkGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A common class for general resource information.
      * API Version: 2020-11-01.

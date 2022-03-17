@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnvgroup {
     private GetEnvgroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnvgroupArgs.Builder a);
-    }
-    private static GetEnvgroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnvgroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an environment group.
- * 
-     */
-    public static CompletableFuture<GetEnvgroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an environment group.
      * 

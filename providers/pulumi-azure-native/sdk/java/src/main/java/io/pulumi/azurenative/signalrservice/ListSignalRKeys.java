@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListSignalRKeys {
     private ListSignalRKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListSignalRKeysArgs.Builder a);
-    }
-    private static ListSignalRKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListSignalRKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A class represents the access keys of SignalR service.
- * API Version: 2020-05-01.
- * 
-     *
-     * A class represents the access keys of SignalR service.
- * 
-     */
-    public static CompletableFuture<ListSignalRKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A class represents the access keys of SignalR service.
      * API Version: 2020-05-01.

@@ -73,22 +73,6 @@ public class TopicAuthorizationRule extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TopicAuthorizationRuleArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.servicebus.TopicAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.servicebus.TopicAuthorizationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public TopicAuthorizationRule(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -120,15 +104,15 @@ public class TopicAuthorizationRule extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:servicebus/v20140901:TopicAuthorizationRule").build()),
-                Output.of(Alias.builder().setType("azure-native:servicebus/v20150801:TopicAuthorizationRule").build()),
-                Output.of(Alias.builder().setType("azure-native:servicebus/v20170401:TopicAuthorizationRule").build()),
-                Output.of(Alias.builder().setType("azure-native:servicebus/v20180101preview:TopicAuthorizationRule").build()),
-                Output.of(Alias.builder().setType("azure-native:servicebus/v20210101preview:TopicAuthorizationRule").build()),
-                Output.of(Alias.builder().setType("azure-native:servicebus/v20210601preview:TopicAuthorizationRule").build()),
-                Output.of(Alias.builder().setType("azure-native:servicebus/v20211101:TopicAuthorizationRule").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:servicebus/v20140901:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().type("azure-native:servicebus/v20150801:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().type("azure-native:servicebus/v20170401:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().type("azure-native:servicebus/v20180101preview:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().type("azure-native:servicebus/v20210101preview:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().type("azure-native:servicebus/v20210601preview:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().type("azure-native:servicebus/v20211101:TopicAuthorizationRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

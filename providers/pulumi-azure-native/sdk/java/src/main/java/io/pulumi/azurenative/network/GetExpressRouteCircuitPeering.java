@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExpressRouteCircuitPeering {
     private GetExpressRouteCircuitPeering() {}
-    public interface BuilderApplicator {
-        public void apply(GetExpressRouteCircuitPeeringArgs.Builder a);
-    }
-    private static GetExpressRouteCircuitPeeringArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExpressRouteCircuitPeeringArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Peering in an ExpressRouteCircuit resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Peering in an ExpressRouteCircuit resource.
- * 
-     */
-    public static CompletableFuture<GetExpressRouteCircuitPeeringResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Peering in an ExpressRouteCircuit resource.
      * API Version: 2020-11-01.

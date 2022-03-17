@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetJobTemplate {
     private GetJobTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetJobTemplateArgs.Builder a);
-    }
-    private static GetJobTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetJobTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the job template data.
- * 
-     */
-    public static CompletableFuture<GetJobTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the job template data.
      * 

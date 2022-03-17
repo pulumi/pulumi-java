@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppSitePushSettings {
     private ListWebAppSitePushSettings() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppSitePushSettingsArgs.Builder a);
-    }
-    private static ListWebAppSitePushSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppSitePushSettingsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Push settings for the App.
- * API Version: 2020-12-01.
- * 
-     *
-     * Push settings for the App.
- * 
-     */
-    public static CompletableFuture<ListWebAppSitePushSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Push settings for the App.
      * API Version: 2020-12-01.

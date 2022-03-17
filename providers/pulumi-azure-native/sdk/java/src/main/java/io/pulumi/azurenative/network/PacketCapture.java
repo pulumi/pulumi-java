@@ -161,22 +161,6 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
         return this.totalBytesPerSession;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PacketCaptureArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.PacketCaptureArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.PacketCaptureArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PacketCapture(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -208,43 +192,43 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:network/v20160901:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20161201:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20170301:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20170601:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20170801:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20170901:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20171001:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20171101:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20180101:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20180201:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20180401:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20180601:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20180701:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20180801:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20181001:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20181101:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20181201:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190201:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190401:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190601:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190701:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190801:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20190901:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20191101:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20191201:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200301:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200401:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200501:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200601:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200701:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200801:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20201101:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210201:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210301:PacketCapture").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210501:PacketCapture").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:network/v20160901:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20161201:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20170301:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20170601:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20170801:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20170901:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20171001:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20171101:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20180101:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20180201:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20180401:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20180601:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20180701:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20180801:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20181001:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20181101:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20181201:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190201:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190401:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190601:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190701:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190801:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20190901:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20191101:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20191201:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200301:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200401:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200501:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200601:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200701:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200801:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20201101:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210201:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210301:PacketCapture").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210501:PacketCapture").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

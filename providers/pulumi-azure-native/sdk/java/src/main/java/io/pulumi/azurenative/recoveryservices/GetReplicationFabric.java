@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReplicationFabric {
     private GetReplicationFabric() {}
-    public interface BuilderApplicator {
-        public void apply(GetReplicationFabricArgs.Builder a);
-    }
-    private static GetReplicationFabricArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReplicationFabricArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Fabric definition.
- * API Version: 2018-07-10.
- * 
-     *
-     * Fabric definition.
- * 
-     */
-    public static CompletableFuture<GetReplicationFabricResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Fabric definition.
      * API Version: 2018-07-10.

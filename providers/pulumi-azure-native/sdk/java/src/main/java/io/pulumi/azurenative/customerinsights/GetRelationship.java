@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRelationship {
     private GetRelationship() {}
-    public interface BuilderApplicator {
-        public void apply(GetRelationshipArgs.Builder a);
-    }
-    private static GetRelationshipArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRelationshipArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The relationship resource format.
- * API Version: 2017-04-26.
- * 
-     *
-     * The relationship resource format.
- * 
-     */
-    public static CompletableFuture<GetRelationshipResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The relationship resource format.
      * API Version: 2017-04-26.

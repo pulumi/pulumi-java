@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAutoscaler {
     private GetAutoscaler() {}
-    public interface BuilderApplicator {
-        public void apply(GetAutoscalerArgs.Builder a);
-    }
-    private static GetAutoscalerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAutoscalerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetAutoscalerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
      * 

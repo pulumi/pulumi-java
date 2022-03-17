@@ -146,22 +146,6 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SynapseWorkspaceSqlPoolTableDataSetMappingArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SynapseWorkspaceSqlPoolTableDataSetMapping(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -200,13 +184,13 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:SynapseWorkspaceSqlPoolTableDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:SynapseWorkspaceSqlPoolTableDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:SynapseWorkspaceSqlPoolTableDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:SynapseWorkspaceSqlPoolTableDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:SynapseWorkspaceSqlPoolTableDataSetMapping").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:datashare/v20181101preview:SynapseWorkspaceSqlPoolTableDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20191101:SynapseWorkspaceSqlPoolTableDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20200901:SynapseWorkspaceSqlPoolTableDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20201001preview:SynapseWorkspaceSqlPoolTableDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20210801:SynapseWorkspaceSqlPoolTableDataSetMapping").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

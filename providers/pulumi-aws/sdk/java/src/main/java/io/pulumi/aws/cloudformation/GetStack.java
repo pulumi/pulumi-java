@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStack {
     private GetStack() {}
-    public interface BuilderApplicator {
-        public void apply(GetStackArgs.Builder a);
-    }
-    private static GetStackArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStackArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The CloudFormation Stack data source allows access to stack
- * outputs and other useful data including the template body.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getStack.
- * 
-     *
-     * A collection of values returned by getStack.
- * 
-     */
-    public static CompletableFuture<GetStackResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The CloudFormation Stack data source allows access to stack
      * outputs and other useful data including the template body.

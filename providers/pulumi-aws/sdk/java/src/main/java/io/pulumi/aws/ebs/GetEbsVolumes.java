@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEbsVolumes {
     private GetEbsVolumes() {}
-    public interface BuilderApplicator {
-        public void apply(GetEbsVolumesArgs.Builder a);
-    }
-    private static GetEbsVolumesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEbsVolumesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.ebs.getEbsVolumes` provides identifying information for EBS volumes matching given criteria.
- * 
- * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
- * 
-     *
-     * A collection of arguments for invoking getEbsVolumes.
- * 
-     *
-     * A collection of values returned by getEbsVolumes.
- * 
-     */
-    public static CompletableFuture<GetEbsVolumesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.ebs.getEbsVolumes` provides identifying information for EBS volumes matching given criteria.
      * 

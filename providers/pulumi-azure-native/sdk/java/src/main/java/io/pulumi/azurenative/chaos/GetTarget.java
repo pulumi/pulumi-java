@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTarget {
     private GetTarget() {}
-    public interface BuilderApplicator {
-        public void apply(GetTargetArgs.Builder a);
-    }
-    private static GetTargetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTargetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Model that represents a Target resource.
- * API Version: 2021-09-15-preview.
- * 
-     *
-     * Model that represents a Target resource.
- * 
-     */
-    public static CompletableFuture<GetTargetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Model that represents a Target resource.
      * API Version: 2021-09-15-preview.

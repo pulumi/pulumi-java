@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNatGateway {
     private GetNatGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetNatGatewayArgs.Builder a);
-    }
-    private static GetNatGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNatGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Nat Gateway resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Nat Gateway resource.
- * 
-     */
-    public static CompletableFuture<GetNatGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Nat Gateway resource.
      * API Version: 2020-11-01.

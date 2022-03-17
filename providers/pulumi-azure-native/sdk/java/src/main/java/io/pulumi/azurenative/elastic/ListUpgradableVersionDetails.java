@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListUpgradableVersionDetails {
     private ListUpgradableVersionDetails() {}
-    public interface BuilderApplicator {
-        public void apply(ListUpgradableVersionDetailsArgs.Builder a);
-    }
-    private static ListUpgradableVersionDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListUpgradableVersionDetailsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Stack Versions that this version can upgrade to
- * API Version: 2021-10-01-preview.
- * 
-     *
-     * Stack Versions that this version can upgrade to
- * 
-     */
-    public static CompletableFuture<ListUpgradableVersionDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Stack Versions that this version can upgrade to
      * API Version: 2021-10-01-preview.

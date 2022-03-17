@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListNotificationHubKeys {
     private ListNotificationHubKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListNotificationHubKeysArgs.Builder a);
-    }
-    private static ListNotificationHubKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListNotificationHubKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Namespace/NotificationHub Connection String
- * API Version: 2017-04-01.
- * 
-     *
-     * Namespace/NotificationHub Connection String
- * 
-     */
-    public static CompletableFuture<ListNotificationHubKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Namespace/NotificationHub Connection String
      * API Version: 2017-04-01.

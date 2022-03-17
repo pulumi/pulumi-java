@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayVpnclientIpsecParameters {
     private GetVirtualNetworkGatewayVpnclientIpsecParameters() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualNetworkGatewayVpnclientIpsecParametersArgs.Builder a);
-    }
-    private static GetVirtualNetworkGatewayVpnclientIpsecParametersArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualNetworkGatewayVpnclientIpsecParametersArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An IPSec parameters for a virtual network gateway P2S connection.
- * API Version: 2020-11-01.
- * 
-     *
-     * An IPSec parameters for a virtual network gateway P2S connection.
- * 
-     */
-    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientIpsecParametersResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An IPSec parameters for a virtual network gateway P2S connection.
      * API Version: 2020-11-01.

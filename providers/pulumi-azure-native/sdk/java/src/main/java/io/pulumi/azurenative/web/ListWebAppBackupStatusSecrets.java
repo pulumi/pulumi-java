@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppBackupStatusSecrets {
     private ListWebAppBackupStatusSecrets() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppBackupStatusSecretsArgs.Builder a);
-    }
-    private static ListWebAppBackupStatusSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppBackupStatusSecretsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Backup description.
- * API Version: 2020-12-01.
- * 
-     *
-     * Backup description.
- * 
-     */
-    public static CompletableFuture<ListWebAppBackupStatusSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Backup description.
      * API Version: 2020-12-01.

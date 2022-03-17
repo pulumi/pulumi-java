@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetActionRuleByName {
     private GetActionRuleByName() {}
-    public interface BuilderApplicator {
-        public void apply(GetActionRuleByNameArgs.Builder a);
-    }
-    private static GetActionRuleByNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetActionRuleByNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Action rule object containing target scope, conditions and suppression logic
- * API Version: 2019-05-05-preview.
- * 
-     *
-     * Action rule object containing target scope, conditions and suppression logic
- * 
-     */
-    public static CompletableFuture<GetActionRuleByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Action rule object containing target scope, conditions and suppression logic
      * API Version: 2019-05-05-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetACL {
     private GetACL() {}
-    public interface BuilderApplicator {
-        public void apply(GetACLArgs.Builder a);
-    }
-    private static GetACLArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetACLArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::MemoryDB::ACL
- * 
-     */
-    public static CompletableFuture<GetACLResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::MemoryDB::ACL
      * 

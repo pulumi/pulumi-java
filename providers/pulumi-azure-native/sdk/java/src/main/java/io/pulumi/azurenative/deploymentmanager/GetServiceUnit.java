@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceUnit {
     private GetServiceUnit() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceUnitArgs.Builder a);
-    }
-    private static GetServiceUnitArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceUnitArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents the response of a service unit resource.
- * API Version: 2019-11-01-preview.
- * 
-     *
-     * Represents the response of a service unit resource.
- * 
-     */
-    public static CompletableFuture<GetServiceUnitResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents the response of a service unit resource.
      * API Version: 2019-11-01-preview.

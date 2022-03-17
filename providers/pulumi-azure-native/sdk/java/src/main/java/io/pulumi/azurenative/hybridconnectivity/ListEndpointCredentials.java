@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListEndpointCredentials {
     private ListEndpointCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(ListEndpointCredentialsArgs.Builder a);
-    }
-    private static ListEndpointCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListEndpointCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The endpoint access for the target resource.
- * API Version: 2021-10-06-preview.
- * 
-     *
-     * The endpoint access for the target resource.
- * 
-     */
-    public static CompletableFuture<ListEndpointCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The endpoint access for the target resource.
      * API Version: 2021-10-06-preview.

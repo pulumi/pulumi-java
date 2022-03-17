@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssignment {
     private GetAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssignmentArgs.Builder a);
-    }
-    private static GetAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Security Assignment on a resource group over a given scope
- * API Version: 2021-08-01-preview.
- * 
-     *
-     * Security Assignment on a resource group over a given scope
- * 
-     */
-    public static CompletableFuture<GetAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Security Assignment on a resource group over a given scope
      * API Version: 2021-08-01-preview.

@@ -116,22 +116,6 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(VirtualApplianceSiteArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.VirtualApplianceSiteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.VirtualApplianceSiteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public VirtualApplianceSite(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -163,16 +147,16 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:network/v20200501:VirtualApplianceSite").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200601:VirtualApplianceSite").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200701:VirtualApplianceSite").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20200801:VirtualApplianceSite").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20201101:VirtualApplianceSite").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210201:VirtualApplianceSite").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210301:VirtualApplianceSite").build()),
-                Output.of(Alias.builder().setType("azure-native:network/v20210501:VirtualApplianceSite").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:network/v20200501:VirtualApplianceSite").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200601:VirtualApplianceSite").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200701:VirtualApplianceSite").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20200801:VirtualApplianceSite").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualApplianceSite").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualApplianceSite").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualApplianceSite").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualApplianceSite").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

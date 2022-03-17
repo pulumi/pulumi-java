@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDomainName {
     private GetDomainName() {}
-    public interface BuilderApplicator {
-        public void apply(GetDomainNameArgs.Builder a);
-    }
-    private static GetDomainNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDomainNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the custom domain name for use with AWS API Gateway.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDomainName.
- * 
-     *
-     * A collection of values returned by getDomainName.
- * 
-     */
-    public static CompletableFuture<GetDomainNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the custom domain name for use with AWS API Gateway.
      * 

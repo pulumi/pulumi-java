@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListAssetStreamingLocators {
     private ListAssetStreamingLocators() {}
-    public interface BuilderApplicator {
-        public void apply(ListAssetStreamingLocatorsArgs.Builder a);
-    }
-    private static ListAssetStreamingLocatorsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListAssetStreamingLocatorsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Streaming Locators associated with this Asset.
- * API Version: 2020-05-01.
- * 
-     *
-     * The Streaming Locators associated with this Asset.
- * 
-     */
-    public static CompletableFuture<ListAssetStreamingLocatorsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Streaming Locators associated with this Asset.
      * API Version: 2020-05-01.

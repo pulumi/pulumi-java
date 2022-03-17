@@ -187,22 +187,6 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
         return this.userName;
     }
 
-    public interface BuilderApplicator {
-        public void apply(StorageAccountCredentialArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.databoxedge.StorageAccountCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.databoxedge.StorageAccountCredentialArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public StorageAccountCredential(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -234,19 +218,19 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190301:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190701:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190801:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:StorageAccountCredential").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:StorageAccountCredential").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190301:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190701:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190801:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200501preview:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200901:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200901preview:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20201201:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:StorageAccountCredential").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:StorageAccountCredential").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

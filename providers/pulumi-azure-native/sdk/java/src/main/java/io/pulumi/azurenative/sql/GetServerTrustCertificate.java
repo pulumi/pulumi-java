@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerTrustCertificate {
     private GetServerTrustCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerTrustCertificateArgs.Builder a);
-    }
-    private static GetServerTrustCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerTrustCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
- * 
-     */
-    public static CompletableFuture<GetServerTrustCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
      * API Version: 2021-05-01-preview.

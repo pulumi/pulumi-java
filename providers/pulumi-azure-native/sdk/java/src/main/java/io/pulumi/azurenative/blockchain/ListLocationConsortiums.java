@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListLocationConsortiums {
     private ListLocationConsortiums() {}
-    public interface BuilderApplicator {
-        public void apply(ListLocationConsortiumsArgs.Builder a);
-    }
-    private static ListLocationConsortiumsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListLocationConsortiumsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of the consortium payload.
- * API Version: 2018-06-01-preview.
- * 
-     *
-     * Collection of the consortium payload.
- * 
-     */
-    public static CompletableFuture<ListLocationConsortiumsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of the consortium payload.
      * API Version: 2018-06-01-preview.

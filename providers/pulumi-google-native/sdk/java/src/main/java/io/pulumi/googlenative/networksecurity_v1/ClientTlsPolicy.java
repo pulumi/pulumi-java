@@ -134,22 +134,6 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ClientTlsPolicyArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.networksecurity_v1.ClientTlsPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.networksecurity_v1.ClientTlsPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ClientTlsPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -181,7 +165,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
+            .version(Utilities.getVersion())
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

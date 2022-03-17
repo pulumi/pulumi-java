@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContentItem {
     private GetContentItem() {}
-    public interface BuilderApplicator {
-        public void apply(GetContentItemArgs.Builder a);
-    }
-    private static GetContentItemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContentItemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Content type contract details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Content type contract details.
- * 
-     */
-    public static CompletableFuture<GetContentItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Content type contract details.
      * API Version: 2020-12-01.

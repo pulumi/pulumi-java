@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventHubAuthorizationRule {
     private GetEventHubAuthorizationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventHubAuthorizationRuleArgs.Builder a);
-    }
-    private static GetEventHubAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventHubAuthorizationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Single item in a List or Get AuthorizationRule operation
- * API Version: 2017-04-01.
- * 
-     *
-     * Single item in a List or Get AuthorizationRule operation
- * 
-     */
-    public static CompletableFuture<GetEventHubAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Single item in a List or Get AuthorizationRule operation
      * API Version: 2017-04-01.

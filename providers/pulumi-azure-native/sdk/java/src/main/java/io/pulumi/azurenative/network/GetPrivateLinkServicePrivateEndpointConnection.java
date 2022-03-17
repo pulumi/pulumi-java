@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateLinkServicePrivateEndpointConnection {
     private GetPrivateLinkServicePrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateLinkServicePrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetPrivateLinkServicePrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateLinkServicePrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * PrivateEndpointConnection resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * PrivateEndpointConnection resource.
- * 
-     */
-    public static CompletableFuture<GetPrivateLinkServicePrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * PrivateEndpointConnection resource.
      * API Version: 2020-11-01.

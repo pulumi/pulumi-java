@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetActiveFolder {
     private GetActiveFolder() {}
-    public interface BuilderApplicator {
-        public void apply(GetActiveFolderArgs.Builder a);
-    }
-    private static GetActiveFolderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetActiveFolderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get an active folder within GCP by `display_name` and `parent`.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getActiveFolder.
- * 
-     *
-     * A collection of values returned by getActiveFolder.
- * 
-     */
-    public static CompletableFuture<GetActiveFolderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get an active folder within GCP by `display_name` and `parent`.
      * 

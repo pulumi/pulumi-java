@@ -160,22 +160,6 @@ public class BotConnection extends io.pulumi.resources.CustomResource {
         return this.zones;
     }
 
-    public interface BuilderApplicator {
-        public void apply(BotConnectionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.botservice.BotConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.botservice.BotConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public BotConnection(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -207,13 +191,13 @@ public class BotConnection extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:botservice/v20171201:BotConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:botservice/v20180712:BotConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:botservice/v20200602:BotConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:botservice/v20210301:BotConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:botservice/v20210501preview:BotConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:botservice/v20171201:BotConnection").build()),
+                Output.of(Alias.builder().type("azure-native:botservice/v20180712:BotConnection").build()),
+                Output.of(Alias.builder().type("azure-native:botservice/v20200602:BotConnection").build()),
+                Output.of(Alias.builder().type("azure-native:botservice/v20210301:BotConnection").build()),
+                Output.of(Alias.builder().type("azure-native:botservice/v20210501preview:BotConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

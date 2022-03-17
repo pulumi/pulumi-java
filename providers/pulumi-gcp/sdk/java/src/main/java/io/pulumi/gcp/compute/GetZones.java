@@ -14,28 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetZones {
     private GetZones() {}
-    public interface BuilderApplicator {
-        public void apply(GetZonesArgs.Builder a);
-    }
-    private static GetZonesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetZonesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides access to available Google Compute zones in a region for a given project.
- * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) in the upstream docs.
- * 
-     *
-     * A collection of arguments for invoking getZones.
- * 
-     *
-     * A collection of values returned by getZones.
- * 
-     */
-    public static CompletableFuture<GetZonesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides access to available Google Compute zones in a region for a given project.
      * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) in the upstream docs.

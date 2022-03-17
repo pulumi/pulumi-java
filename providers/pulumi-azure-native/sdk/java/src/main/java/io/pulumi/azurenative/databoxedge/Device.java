@@ -389,22 +389,6 @@ public class Device extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DeviceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.databoxedge.DeviceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.databoxedge.DeviceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Device(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -436,19 +420,19 @@ public class Device extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190301:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190701:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190801:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:Device").build()),
-                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:Device").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190301:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190701:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20190801:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200501preview:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200901:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20200901preview:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20201201:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:Device").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Device").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

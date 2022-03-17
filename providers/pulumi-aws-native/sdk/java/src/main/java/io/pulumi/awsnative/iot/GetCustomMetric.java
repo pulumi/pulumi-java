@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomMetric {
     private GetCustomMetric() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomMetricArgs.Builder a);
-    }
-    private static GetCustomMetricArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomMetricArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A custom metric published by your devices to Device Defender.
- * 
-     */
-    public static CompletableFuture<GetCustomMetricResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A custom metric published by your devices to Device Defender.
      * 

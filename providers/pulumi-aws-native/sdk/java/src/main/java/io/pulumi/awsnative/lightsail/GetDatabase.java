@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDatabase {
     private GetDatabase() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatabaseArgs.Builder a);
-    }
-    private static GetDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatabaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Lightsail::Database
- * 
-     */
-    public static CompletableFuture<GetDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Lightsail::Database
      * 

@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPipelineDefinition {
     private GetPipelineDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetPipelineDefinitionArgs.Builder a);
-    }
-    private static GetPipelineDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPipelineDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific DataPipeline Pipeline Definition.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getPipelineDefinition.
- * 
-     *
-     * A collection of values returned by getPipelineDefinition.
- * 
-     */
-    public static CompletableFuture<GetPipelineDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific DataPipeline Pipeline Definition.
      * 

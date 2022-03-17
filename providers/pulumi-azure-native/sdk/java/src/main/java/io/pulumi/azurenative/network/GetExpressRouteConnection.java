@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExpressRouteConnection {
     private GetExpressRouteConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetExpressRouteConnectionArgs.Builder a);
-    }
-    private static GetExpressRouteConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExpressRouteConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ExpressRouteConnection resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * ExpressRouteConnection resource.
- * 
-     */
-    public static CompletableFuture<GetExpressRouteConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ExpressRouteConnection resource.
      * API Version: 2020-11-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnectionType {
     private GetConnectionType() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectionTypeArgs.Builder a);
-    }
-    private static GetConnectionTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectionTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the connection type.
- * API Version: 2019-06-01.
- * 
-     *
-     * Definition of the connection type.
- * 
-     */
-    public static CompletableFuture<GetConnectionTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the connection type.
      * API Version: 2019-06-01.

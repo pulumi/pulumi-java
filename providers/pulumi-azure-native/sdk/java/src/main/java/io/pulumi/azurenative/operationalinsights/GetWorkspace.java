@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkspace {
     private GetWorkspace() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkspaceArgs.Builder a);
-    }
-    private static GetWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The top level Workspace resource container.
- * API Version: 2020-10-01.
- * 
-     *
-     * The top level Workspace resource container.
- * 
-     */
-    public static CompletableFuture<GetWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The top level Workspace resource container.
      * API Version: 2020-10-01.

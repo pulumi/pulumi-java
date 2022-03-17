@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceType {
     private GetInstanceType() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceTypeArgs.Builder a);
-    }
-    private static GetInstanceTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get characteristics for a single EC2 Instance Type.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getInstanceType.
- * 
-     *
-     * A collection of values returned by getInstanceType.
- * 
-     */
-    public static CompletableFuture<GetInstanceTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get characteristics for a single EC2 Instance Type.
      * 

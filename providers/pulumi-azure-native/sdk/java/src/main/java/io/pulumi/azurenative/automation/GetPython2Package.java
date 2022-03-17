@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPython2Package {
     private GetPython2Package() {}
-    public interface BuilderApplicator {
-        public void apply(GetPython2PackageArgs.Builder a);
-    }
-    private static GetPython2PackageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPython2PackageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the module type.
- * API Version: 2019-06-01.
- * 
-     *
-     * Definition of the module type.
- * 
-     */
-    public static CompletableFuture<GetPython2PackageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the module type.
      * API Version: 2019-06-01.

@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIpset {
     private GetIpset() {}
-    public interface BuilderApplicator {
-        public void apply(GetIpsetArgs.Builder a);
-    }
-    private static GetIpsetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIpsetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.wafregional.IpSet` Retrieves a WAF Regional IP Set Resource Id.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getIpset.
- * 
-     *
-     * A collection of values returned by getIpset.
- * 
-     */
-    public static CompletableFuture<GetIpsetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.wafregional.IpSet` Retrieves a WAF Regional IP Set Resource Id.
      * 

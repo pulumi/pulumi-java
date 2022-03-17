@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecuritySetting {
     private GetSecuritySetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecuritySettingArgs.Builder a);
-    }
-    private static GetSecuritySettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecuritySettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
- * 
-     */
-    public static CompletableFuture<GetSecuritySettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
      * 

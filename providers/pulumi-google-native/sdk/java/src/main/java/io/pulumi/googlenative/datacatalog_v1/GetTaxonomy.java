@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTaxonomy {
     private GetTaxonomy() {}
-    public interface BuilderApplicator {
-        public void apply(GetTaxonomyArgs.Builder a);
-    }
-    private static GetTaxonomyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTaxonomyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a taxonomy.
- * 
-     */
-    public static CompletableFuture<GetTaxonomyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a taxonomy.
      * 

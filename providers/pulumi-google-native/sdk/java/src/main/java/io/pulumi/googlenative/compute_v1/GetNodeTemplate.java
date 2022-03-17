@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNodeTemplate {
     private GetNodeTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetNodeTemplateArgs.Builder a);
-    }
-    private static GetNodeTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNodeTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified node template. Gets a list of available node templates by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetNodeTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified node template. Gets a list of available node templates by making a list() request.
      * 

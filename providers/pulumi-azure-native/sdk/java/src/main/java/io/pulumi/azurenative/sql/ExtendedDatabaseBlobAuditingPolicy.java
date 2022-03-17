@@ -321,22 +321,6 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ExtendedDatabaseBlobAuditingPolicyArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.sql.ExtendedDatabaseBlobAuditingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.sql.ExtendedDatabaseBlobAuditingPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ExtendedDatabaseBlobAuditingPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -368,15 +352,15 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:sql/v20170301preview:ExtendedDatabaseBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ExtendedDatabaseBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ExtendedDatabaseBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ExtendedDatabaseBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ExtendedDatabaseBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ExtendedDatabaseBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ExtendedDatabaseBlobAuditingPolicy").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:sql/v20170301preview:ExtendedDatabaseBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200202preview:ExtendedDatabaseBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200801preview:ExtendedDatabaseBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ExtendedDatabaseBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ExtendedDatabaseBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ExtendedDatabaseBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ExtendedDatabaseBlobAuditingPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

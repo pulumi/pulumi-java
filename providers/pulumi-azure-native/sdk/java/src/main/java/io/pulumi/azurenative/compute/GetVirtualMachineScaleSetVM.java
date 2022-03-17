@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetVM {
     private GetVirtualMachineScaleSetVM() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualMachineScaleSetVMArgs.Builder a);
-    }
-    private static GetVirtualMachineScaleSetVMArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualMachineScaleSetVMArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a virtual machine scale set virtual machine.
- * API Version: 2021-03-01.
- * 
-     *
-     * Describes a virtual machine scale set virtual machine.
- * 
-     */
-    public static CompletableFuture<GetVirtualMachineScaleSetVMResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a virtual machine scale set virtual machine.
      * API Version: 2021-03-01.

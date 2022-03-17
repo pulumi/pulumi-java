@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRelease {
     private GetRelease() {}
-    public interface BuilderApplicator {
-        public void apply(GetReleaseArgs.Builder a);
-    }
-    private static GetReleaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReleaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a `Release` by name.
- * 
-     */
-    public static CompletableFuture<GetReleaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a `Release` by name.
      * 

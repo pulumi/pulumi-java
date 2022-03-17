@@ -74,22 +74,6 @@ public class BackupShortTermRetentionPolicy extends io.pulumi.resources.CustomRe
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(BackupShortTermRetentionPolicyArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.sql.BackupShortTermRetentionPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.sql.BackupShortTermRetentionPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public BackupShortTermRetentionPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -121,15 +105,15 @@ public class BackupShortTermRetentionPolicy extends io.pulumi.resources.CustomRe
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:sql/v20171001preview:BackupShortTermRetentionPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:BackupShortTermRetentionPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:BackupShortTermRetentionPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:BackupShortTermRetentionPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:BackupShortTermRetentionPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:BackupShortTermRetentionPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:BackupShortTermRetentionPolicy").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:sql/v20171001preview:BackupShortTermRetentionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200202preview:BackupShortTermRetentionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200801preview:BackupShortTermRetentionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20201101preview:BackupShortTermRetentionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210201preview:BackupShortTermRetentionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210501preview:BackupShortTermRetentionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:BackupShortTermRetentionPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

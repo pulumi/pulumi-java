@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListMonitoredResource {
     private ListMonitoredResource() {}
-    public interface BuilderApplicator {
-        public void apply(ListMonitoredResourceArgs.Builder a);
-    }
-    private static ListMonitoredResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListMonitoredResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response of a list operation.
- * API Version: 2020-07-01.
- * 
-     *
-     * Response of a list operation.
- * 
-     */
-    public static CompletableFuture<ListMonitoredResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response of a list operation.
      * API Version: 2020-07-01.

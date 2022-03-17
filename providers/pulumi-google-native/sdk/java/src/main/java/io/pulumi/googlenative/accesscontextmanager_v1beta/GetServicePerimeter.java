@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServicePerimeter {
     private GetServicePerimeter() {}
-    public interface BuilderApplicator {
-        public void apply(GetServicePerimeterArgs.Builder a);
-    }
-    private static GetServicePerimeterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServicePerimeterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a Service Perimeter by resource name.
- * 
-     */
-    public static CompletableFuture<GetServicePerimeterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a Service Perimeter by resource name.
      * 

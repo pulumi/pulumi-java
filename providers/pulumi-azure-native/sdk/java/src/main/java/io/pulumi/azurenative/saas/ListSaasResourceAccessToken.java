@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListSaasResourceAccessToken {
     private ListSaasResourceAccessToken() {}
-    public interface BuilderApplicator {
-        public void apply(ListSaasResourceAccessTokenArgs.Builder a);
-    }
-    private static ListSaasResourceAccessTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListSaasResourceAccessTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * the ISV access token result response.
- * API Version: 2018-03-01-beta.
- * 
-     *
-     * the ISV access token result response.
- * 
-     */
-    public static CompletableFuture<ListSaasResourceAccessTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * the ISV access token result response.
      * API Version: 2018-03-01-beta.

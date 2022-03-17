@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGroups {
     private GetGroups() {}
-    public interface BuilderApplicator {
-        public void apply(GetGroupsArgs.Builder a);
-    }
-    private static GetGroupsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGroupsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get list of the Cloud Identity Groups under a customer or namespace.
- * 
- * https://cloud.google.com/identity/docs/concepts/overview#groups
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getGroups.
- * 
-     *
-     * A collection of values returned by getGroups.
- * 
-     */
-    public static CompletableFuture<GetGroupsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get list of the Cloud Identity Groups under a customer or namespace.
      * 

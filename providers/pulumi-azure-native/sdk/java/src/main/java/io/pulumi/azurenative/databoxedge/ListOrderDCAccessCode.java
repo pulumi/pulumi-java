@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListOrderDCAccessCode {
     private ListOrderDCAccessCode() {}
-    public interface BuilderApplicator {
-        public void apply(ListOrderDCAccessCodeArgs.Builder a);
-    }
-    private static ListOrderDCAccessCodeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListOrderDCAccessCodeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * DC Access code in the case of Self Managed Shipping.
- * API Version: 2020-12-01.
- * 
-     *
-     * DC Access code in the case of Self Managed Shipping.
- * 
-     */
-    public static CompletableFuture<ListOrderDCAccessCodeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * DC Access code in the case of Self Managed Shipping.
      * API Version: 2020-12-01.

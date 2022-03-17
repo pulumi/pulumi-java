@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateStoreCollection {
     private GetPrivateStoreCollection() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateStoreCollectionArgs.Builder a);
-    }
-    private static GetPrivateStoreCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateStoreCollectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Collection data structure.
- * API Version: 2021-06-01.
- * 
-     *
-     * The Collection data structure.
- * 
-     */
-    public static CompletableFuture<GetPrivateStoreCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Collection data structure.
      * API Version: 2021-06-01.

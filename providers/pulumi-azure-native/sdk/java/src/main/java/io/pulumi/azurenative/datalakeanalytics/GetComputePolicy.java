@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetComputePolicy {
     private GetComputePolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetComputePolicyArgs.Builder a);
-    }
-    private static GetComputePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetComputePolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Data Lake Analytics compute policy information.
- * API Version: 2016-11-01.
- * 
-     *
-     * Data Lake Analytics compute policy information.
- * 
-     */
-    public static CompletableFuture<GetComputePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Data Lake Analytics compute policy information.
      * API Version: 2016-11-01.

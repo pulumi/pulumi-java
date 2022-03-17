@@ -216,22 +216,6 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ADLSGen2FileDataSetMappingArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.datashare.ADLSGen2FileDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.datashare.ADLSGen2FileDataSetMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ADLSGen2FileDataSetMapping(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -270,13 +254,13 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:ADLSGen2FileDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:ADLSGen2FileDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:ADLSGen2FileDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:ADLSGen2FileDataSetMapping").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:ADLSGen2FileDataSetMapping").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:datashare/v20181101preview:ADLSGen2FileDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20191101:ADLSGen2FileDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20200901:ADLSGen2FileDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20201001preview:ADLSGen2FileDataSetMapping").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20210801:ADLSGen2FileDataSetMapping").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

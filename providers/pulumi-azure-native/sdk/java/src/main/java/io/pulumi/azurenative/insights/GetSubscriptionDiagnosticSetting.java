@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubscriptionDiagnosticSetting {
     private GetSubscriptionDiagnosticSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubscriptionDiagnosticSettingArgs.Builder a);
-    }
-    private static GetSubscriptionDiagnosticSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubscriptionDiagnosticSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The subscription diagnostic setting resource.
- * API Version: 2017-05-01-preview.
- * 
-     *
-     * The subscription diagnostic setting resource.
- * 
-     */
-    public static CompletableFuture<GetSubscriptionDiagnosticSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The subscription diagnostic setting resource.
      * API Version: 2017-05-01-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTrackerConsumer {
     private GetTrackerConsumer() {}
-    public interface BuilderApplicator {
-        public void apply(GetTrackerConsumerArgs.Builder a);
-    }
-    private static GetTrackerConsumerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTrackerConsumerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of AWS::Location::TrackerConsumer Resource Type
- * 
-     */
-    public static CompletableFuture<GetTrackerConsumerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of AWS::Location::TrackerConsumer Resource Type
      * 

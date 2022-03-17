@@ -176,22 +176,6 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
         return this.virtualMachines;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AvailabilitySetArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.compute.AvailabilitySetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.compute.AvailabilitySetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AvailabilitySet(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -223,25 +207,25 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20150615:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20160330:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20160430preview:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20170330:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20171201:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180401:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180601:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20181001:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190301:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190701:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20191201:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200601:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210301:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:AvailabilitySet").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20211101:AvailabilitySet").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20150615:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20160330:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20160430preview:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20170330:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20171201:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180401:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180601:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20181001:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190301:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190701:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20191201:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200601:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210301:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:AvailabilitySet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211101:AvailabilitySet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

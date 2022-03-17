@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPolicyAssignmentArtifact {
     private GetPolicyAssignmentArtifact() {}
-    public interface BuilderApplicator {
-        public void apply(GetPolicyAssignmentArtifactArgs.Builder a);
-    }
-    private static GetPolicyAssignmentArtifactArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPolicyAssignmentArtifactArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Blueprint artifact that applies a Policy assignment.
- * API Version: 2018-11-01-preview.
- * 
-     *
-     * Blueprint artifact that applies a Policy assignment.
- * 
-     */
-    public static CompletableFuture<GetPolicyAssignmentArtifactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Blueprint artifact that applies a Policy assignment.
      * API Version: 2018-11-01-preview.

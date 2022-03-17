@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransitGateway {
     private GetTransitGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransitGatewayArgs.Builder a);
-    }
-    private static GetTransitGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransitGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on an EC2 Transit Gateway.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getTransitGateway.
- * 
-     *
-     * A collection of values returned by getTransitGateway.
- * 
-     */
-    public static CompletableFuture<GetTransitGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on an EC2 Transit Gateway.
      * 

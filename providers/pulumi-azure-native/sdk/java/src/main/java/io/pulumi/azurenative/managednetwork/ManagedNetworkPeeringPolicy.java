@@ -88,22 +88,6 @@ public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResou
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ManagedNetworkPeeringPolicyArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.managednetwork.ManagedNetworkPeeringPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.managednetwork.ManagedNetworkPeeringPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ManagedNetworkPeeringPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -135,9 +119,9 @@ public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResou
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:managednetwork/v20190601preview:ManagedNetworkPeeringPolicy").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:managednetwork/v20190601preview:ManagedNetworkPeeringPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

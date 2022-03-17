@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLogAnalyticExportThrottledRequests {
     private GetLogAnalyticExportThrottledRequests() {}
-    public interface BuilderApplicator {
-        public void apply(GetLogAnalyticExportThrottledRequestsArgs.Builder a);
-    }
-    private static GetLogAnalyticExportThrottledRequestsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLogAnalyticExportThrottledRequestsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * LogAnalytics operation status response
- * API Version: 2020-12-01.
- * 
-     *
-     * LogAnalytics operation status response
- * 
-     */
-    public static CompletableFuture<GetLogAnalyticExportThrottledRequestsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * LogAnalytics operation status response
      * API Version: 2020-12-01.

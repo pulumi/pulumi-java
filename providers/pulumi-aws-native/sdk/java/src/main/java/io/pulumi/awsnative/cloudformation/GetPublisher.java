@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPublisher {
     private GetPublisher() {}
-    public interface BuilderApplicator {
-        public void apply(GetPublisherArgs.Builder a);
-    }
-    private static GetPublisherArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPublisherArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Register as a publisher in the CloudFormation Registry.
- * 
-     */
-    public static CompletableFuture<GetPublisherResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Register as a publisher in the CloudFormation Registry.
      * 

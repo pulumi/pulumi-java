@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLambdaFunctionAssociation {
     private GetLambdaFunctionAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetLambdaFunctionAssociationArgs.Builder a);
-    }
-    private static GetLambdaFunctionAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLambdaFunctionAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific Connect Lambda Function Association.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getLambdaFunctionAssociation.
- * 
-     *
-     * A collection of values returned by getLambdaFunctionAssociation.
- * 
-     */
-    public static CompletableFuture<GetLambdaFunctionAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific Connect Lambda Function Association.
      * 

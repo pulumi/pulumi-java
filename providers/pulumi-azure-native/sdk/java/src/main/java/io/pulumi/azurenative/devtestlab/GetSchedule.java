@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSchedule {
     private GetSchedule() {}
-    public interface BuilderApplicator {
-        public void apply(GetScheduleArgs.Builder a);
-    }
-    private static GetScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScheduleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A schedule.
- * API Version: 2018-09-15.
- * 
-     *
-     * A schedule.
- * 
-     */
-    public static CompletableFuture<GetScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A schedule.
      * API Version: 2018-09-15.

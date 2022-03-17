@@ -14,39 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
     private GetNotificationChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationChannelArgs.Builder a);
-    }
-    private static GetNotificationChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A NotificationChannel is a medium through which an alert is delivered
- * when a policy violation is detected. Examples of channels include email, SMS,
- * and third-party messaging applications. Fields containing sensitive information
- * like authentication tokens or contact info are only partially populated on retrieval.
- * 
- * To get more information about NotificationChannel, see:
- * 
- * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels)
- * * How-to Guides
- *     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
- *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getNotificationChannel.
- * 
-     *
-     * A collection of values returned by getNotificationChannel.
- * 
-     */
-    public static CompletableFuture<GetNotificationChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A NotificationChannel is a medium through which an alert is delivered
      * when a policy violation is detected. Examples of channels include email, SMS,

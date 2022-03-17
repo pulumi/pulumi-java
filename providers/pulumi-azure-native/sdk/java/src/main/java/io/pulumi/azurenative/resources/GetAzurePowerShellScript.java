@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAzurePowerShellScript {
     private GetAzurePowerShellScript() {}
-    public interface BuilderApplicator {
-        public void apply(GetAzurePowerShellScriptArgs.Builder a);
-    }
-    private static GetAzurePowerShellScriptArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAzurePowerShellScriptArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Object model for the Azure PowerShell script.
- * API Version: 2020-10-01.
- * 
-     *
-     * Object model for the Azure PowerShell script.
- * 
-     */
-    public static CompletableFuture<GetAzurePowerShellScriptResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Object model for the Azure PowerShell script.
      * API Version: 2020-10-01.

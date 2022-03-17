@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCertificateAuthority {
     private GetCertificateAuthority() {}
-    public interface BuilderApplicator {
-        public void apply(GetCertificateAuthorityArgs.Builder a);
-    }
-    private static GetCertificateAuthorityArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCertificateAuthorityArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Private certificate authority.
- * 
-     */
-    public static CompletableFuture<GetCertificateAuthorityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Private certificate authority.
      * 

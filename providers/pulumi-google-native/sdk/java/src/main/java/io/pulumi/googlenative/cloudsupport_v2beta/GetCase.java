@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCase {
     private GetCase() {}
-    public interface BuilderApplicator {
-        public void apply(GetCaseArgs.Builder a);
-    }
-    private static GetCaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve the specified case.
- * 
-     */
-    public static CompletableFuture<GetCaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve the specified case.
      * 

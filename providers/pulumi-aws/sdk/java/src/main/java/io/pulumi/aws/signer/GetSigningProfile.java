@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSigningProfile {
     private GetSigningProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetSigningProfileArgs.Builder a);
-    }
-    private static GetSigningProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSigningProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information about a Signer Signing Profile.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSigningProfile.
- * 
-     *
-     * A collection of values returned by getSigningProfile.
- * 
-     */
-    public static CompletableFuture<GetSigningProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information about a Signer Signing Profile.
      * 

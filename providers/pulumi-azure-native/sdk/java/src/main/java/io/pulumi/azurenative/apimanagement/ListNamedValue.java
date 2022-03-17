@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListNamedValue {
     private ListNamedValue() {}
-    public interface BuilderApplicator {
-        public void apply(ListNamedValueArgs.Builder a);
-    }
-    private static ListNamedValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListNamedValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
- * API Version: 2020-12-01.
- * 
-     *
-     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
- * 
-     */
-    public static CompletableFuture<ListNamedValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
      * API Version: 2020-12-01.

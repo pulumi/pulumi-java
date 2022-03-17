@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccessPoint {
     private GetAccessPoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccessPointArgs.Builder a);
-    }
-    private static GetAccessPointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccessPointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::S3::AccessPoint resource is an Amazon S3 resource type that you can use to access buckets.
- * 
-     */
-    public static CompletableFuture<GetAccessPointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::S3::AccessPoint resource is an Amazon S3 resource type that you can use to access buckets.
      * 

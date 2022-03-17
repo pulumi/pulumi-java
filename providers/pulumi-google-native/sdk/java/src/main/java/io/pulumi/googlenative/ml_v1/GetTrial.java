@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTrial {
     private GetTrial() {}
-    public interface BuilderApplicator {
-        public void apply(GetTrialArgs.Builder a);
-    }
-    private static GetTrialArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTrialArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a trial.
- * 
-     */
-    public static CompletableFuture<GetTrialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a trial.
      * 

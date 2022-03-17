@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListGlobalUserEnvironments {
     private ListGlobalUserEnvironments() {}
-    public interface BuilderApplicator {
-        public void apply(ListGlobalUserEnvironmentsArgs.Builder a);
-    }
-    private static ListGlobalUserEnvironmentsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListGlobalUserEnvironmentsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents the list of environments owned by a user
- * API Version: 2018-10-15.
- * 
-     *
-     * Represents the list of environments owned by a user
- * 
-     */
-    public static CompletableFuture<ListGlobalUserEnvironmentsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents the list of environments owned by a user
      * API Version: 2018-10-15.

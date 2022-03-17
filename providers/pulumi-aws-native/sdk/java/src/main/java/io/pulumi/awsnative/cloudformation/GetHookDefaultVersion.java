@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHookDefaultVersion {
     private GetHookDefaultVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetHookDefaultVersionArgs.Builder a);
-    }
-    private static GetHookDefaultVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHookDefaultVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Set a version as default version for a hook in CloudFormation Registry.
- * 
-     */
-    public static CompletableFuture<GetHookDefaultVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Set a version as default version for a hook in CloudFormation Registry.
      * 

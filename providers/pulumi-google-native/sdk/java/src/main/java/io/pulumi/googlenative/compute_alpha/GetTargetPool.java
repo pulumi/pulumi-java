@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTargetPool {
     private GetTargetPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetTargetPoolArgs.Builder a);
-    }
-    private static GetTargetPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTargetPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified target pool. Gets a list of available target pools by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetTargetPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified target pool. Gets a list of available target pools by making a list() request.
      * 

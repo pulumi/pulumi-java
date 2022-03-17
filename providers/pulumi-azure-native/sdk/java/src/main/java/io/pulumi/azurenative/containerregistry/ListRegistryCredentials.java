@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListRegistryCredentials {
     private ListRegistryCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(ListRegistryCredentialsArgs.Builder a);
-    }
-    private static ListRegistryCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListRegistryCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The response from the ListCredentials operation.
- * API Version: 2019-05-01.
- * 
-     *
-     * The response from the ListCredentials operation.
- * 
-     */
-    public static CompletableFuture<ListRegistryCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The response from the ListCredentials operation.
      * API Version: 2019-05-01.

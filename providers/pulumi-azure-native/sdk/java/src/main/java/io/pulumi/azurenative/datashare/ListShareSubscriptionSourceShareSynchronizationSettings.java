@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListShareSubscriptionSourceShareSynchronizationSettings {
     private ListShareSubscriptionSourceShareSynchronizationSettings() {}
-    public interface BuilderApplicator {
-        public void apply(ListShareSubscriptionSourceShareSynchronizationSettingsArgs.Builder a);
-    }
-    private static ListShareSubscriptionSourceShareSynchronizationSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListShareSubscriptionSourceShareSynchronizationSettingsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * List response for get source share Synchronization settings
- * API Version: 2020-09-01.
- * 
-     *
-     * List response for get source share Synchronization settings
- * 
-     */
-    public static CompletableFuture<ListShareSubscriptionSourceShareSynchronizationSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * List response for get source share Synchronization settings
      * API Version: 2020-09-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListKustoPoolLanguageExtensions {
     private ListKustoPoolLanguageExtensions() {}
-    public interface BuilderApplicator {
-        public void apply(ListKustoPoolLanguageExtensionsArgs.Builder a);
-    }
-    private static ListKustoPoolLanguageExtensionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListKustoPoolLanguageExtensionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of language extension objects.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * The list of language extension objects.
- * 
-     */
-    public static CompletableFuture<ListKustoPoolLanguageExtensionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of language extension objects.
      * API Version: 2021-06-01-preview.

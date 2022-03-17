@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListManagerPublicEncryptionKey {
     private ListManagerPublicEncryptionKey() {}
-    public interface BuilderApplicator {
-        public void apply(ListManagerPublicEncryptionKeyArgs.Builder a);
-    }
-    private static ListManagerPublicEncryptionKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListManagerPublicEncryptionKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents the secrets encrypted using Symmetric Encryption Key.
- * API Version: 2017-06-01.
- * 
-     *
-     * Represents the secrets encrypted using Symmetric Encryption Key.
- * 
-     */
-    public static CompletableFuture<ListManagerPublicEncryptionKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents the secrets encrypted using Symmetric Encryption Key.
      * API Version: 2017-06-01.

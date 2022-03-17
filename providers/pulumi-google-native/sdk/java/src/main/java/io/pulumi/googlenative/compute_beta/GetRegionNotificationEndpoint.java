@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionNotificationEndpoint {
     private GetRegionNotificationEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionNotificationEndpointArgs.Builder a);
-    }
-    private static GetRegionNotificationEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionNotificationEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified NotificationEndpoint resource in the given region.
- * 
-     */
-    public static CompletableFuture<GetRegionNotificationEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified NotificationEndpoint resource in the given region.
      * 

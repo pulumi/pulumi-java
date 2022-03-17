@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLinker {
     private GetLinker() {}
-    public interface BuilderApplicator {
-        public void apply(GetLinkerArgs.Builder a);
-    }
-    private static GetLinkerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLinkerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Linker of source and target resource
- * API Version: 2021-11-01-preview.
- * 
-     *
-     * Linker of source and target resource
- * 
-     */
-    public static CompletableFuture<GetLinkerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Linker of source and target resource
      * API Version: 2021-11-01-preview.

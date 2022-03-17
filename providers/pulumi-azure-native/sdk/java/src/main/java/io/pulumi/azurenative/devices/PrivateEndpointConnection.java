@@ -74,22 +74,6 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PrivateEndpointConnectionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.devices.PrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.devices.PrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PrivateEndpointConnection(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -121,22 +105,22 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:devices/v20200301:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200401:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200615:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200710preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200801:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200831:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200831preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210201preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210303preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210331:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210701:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210701preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210702:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210702preview:PrivateEndpointConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:devices/v20200301:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200401:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200615:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200710preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200801:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200831:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200831preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210201preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210303preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210331:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210701:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210701preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210702:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210702preview:PrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

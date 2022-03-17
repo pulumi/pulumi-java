@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGuestConfigurationHCRPAssignment {
     private GetGuestConfigurationHCRPAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetGuestConfigurationHCRPAssignmentArgs.Builder a);
-    }
-    private static GetGuestConfigurationHCRPAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGuestConfigurationHCRPAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Guest configuration assignment is an association between a machine and guest configuration.
- * API Version: 2020-06-25.
- * 
-     *
-     * Guest configuration assignment is an association between a machine and guest configuration.
- * 
-     */
-    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Guest configuration assignment is an association between a machine and guest configuration.
      * API Version: 2020-06-25.

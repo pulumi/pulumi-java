@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAlertPolicy {
     private GetAlertPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetAlertPolicyArgs.Builder a);
-    }
-    private static GetAlertPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAlertPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a single alerting policy.
- * 
-     */
-    public static CompletableFuture<GetAlertPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a single alerting policy.
      * 

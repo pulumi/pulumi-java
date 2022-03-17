@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProviderInstance {
     private GetProviderInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetProviderInstanceArgs.Builder a);
-    }
-    private static GetProviderInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProviderInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A provider instance associated with a SAP monitor.
- * API Version: 2020-02-07-preview.
- * 
-     *
-     * A provider instance associated with a SAP monitor.
- * 
-     */
-    public static CompletableFuture<GetProviderInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A provider instance associated with a SAP monitor.
      * API Version: 2020-02-07-preview.

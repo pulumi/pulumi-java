@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayLearnedRoutes {
     private GetVirtualNetworkGatewayLearnedRoutes() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualNetworkGatewayLearnedRoutesArgs.Builder a);
-    }
-    private static GetVirtualNetworkGatewayLearnedRoutesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualNetworkGatewayLearnedRoutesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * List of virtual network gateway routes.
- * API Version: 2020-11-01.
- * 
-     *
-     * List of virtual network gateway routes.
- * 
-     */
-    public static CompletableFuture<GetVirtualNetworkGatewayLearnedRoutesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * List of virtual network gateway routes.
      * API Version: 2020-11-01.

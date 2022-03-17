@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLinkedStorageAccount {
     private GetLinkedStorageAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetLinkedStorageAccountArgs.Builder a);
-    }
-    private static GetLinkedStorageAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLinkedStorageAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Linked storage accounts top level resource container.
- * API Version: 2020-08-01.
- * 
-     *
-     * Linked storage accounts top level resource container.
- * 
-     */
-    public static CompletableFuture<GetLinkedStorageAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Linked storage accounts top level resource container.
      * API Version: 2020-08-01.

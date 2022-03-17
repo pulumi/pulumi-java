@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListLocalUserKeys {
     private ListLocalUserKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListLocalUserKeysArgs.Builder a);
-    }
-    private static ListLocalUserKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListLocalUserKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Storage Account Local User keys.
- * API Version: 2021-08-01.
- * 
-     *
-     * The Storage Account Local User keys.
- * 
-     */
-    public static CompletableFuture<ListLocalUserKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Storage Account Local User keys.
      * API Version: 2021-08-01.

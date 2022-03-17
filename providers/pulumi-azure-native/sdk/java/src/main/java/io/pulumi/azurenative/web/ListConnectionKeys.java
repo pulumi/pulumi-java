@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListConnectionKeys {
     private ListConnectionKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListConnectionKeysArgs.Builder a);
-    }
-    private static ListConnectionKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListConnectionKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2015-08-01-preview.
- * 
-     */
-    public static CompletableFuture<ListConnectionKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2015-08-01-preview.
      * 

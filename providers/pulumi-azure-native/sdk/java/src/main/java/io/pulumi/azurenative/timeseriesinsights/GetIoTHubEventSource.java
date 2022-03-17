@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIoTHubEventSource {
     private GetIoTHubEventSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetIoTHubEventSourceArgs.Builder a);
-    }
-    private static GetIoTHubEventSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIoTHubEventSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An event source that receives its data from an Azure IoTHub.
- * API Version: 2020-05-15.
- * 
-     *
-     * An event source that receives its data from an Azure IoTHub.
- * 
-     */
-    public static CompletableFuture<GetIoTHubEventSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An event source that receives its data from an Azure IoTHub.
      * API Version: 2020-05-15.

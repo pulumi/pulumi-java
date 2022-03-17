@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkspace {
     private GetWorkspace() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkspaceArgs.Builder a);
-    }
-    private static GetWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An object that represents a machine learning workspace.
- * API Version: 2021-01-01.
- * 
-     *
-     * An object that represents a machine learning workspace.
- * 
-     */
-    public static CompletableFuture<GetWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An object that represents a machine learning workspace.
      * API Version: 2021-01-01.

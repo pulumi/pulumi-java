@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeployment {
     private GetDeployment() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeploymentArgs.Builder a);
-    }
-    private static GetDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeploymentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::ApiGateway::Deployment
- * 
-     */
-    public static CompletableFuture<GetDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::ApiGateway::Deployment
      * 

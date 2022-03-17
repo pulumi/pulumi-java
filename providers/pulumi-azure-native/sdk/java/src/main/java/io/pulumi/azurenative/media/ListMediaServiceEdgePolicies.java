@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListMediaServiceEdgePolicies {
     private ListMediaServiceEdgePolicies() {}
-    public interface BuilderApplicator {
-        public void apply(ListMediaServiceEdgePoliciesArgs.Builder a);
-    }
-    private static ListMediaServiceEdgePoliciesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListMediaServiceEdgePoliciesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2020-05-01.
- * 
-     */
-    public static CompletableFuture<ListMediaServiceEdgePoliciesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2020-05-01.
      * 

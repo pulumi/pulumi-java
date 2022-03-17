@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProjectKeys {
     private GetProjectKeys() {}
-    public interface BuilderApplicator {
-        public void apply(GetProjectKeysArgs.Builder a);
-    }
-    private static GetProjectKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProjectKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ID and Key for Migration Project.
- * API Version: 2018-02-02.
- * 
-     *
-     * ID and Key for Migration Project.
- * 
-     */
-    public static CompletableFuture<GetProjectKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ID and Key for Migration Project.
      * API Version: 2018-02-02.

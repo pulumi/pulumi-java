@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTopicRule {
     private GetTopicRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetTopicRuleArgs.Builder a);
-    }
-    private static GetTopicRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTopicRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::IoT::TopicRule
- * 
-     */
-    public static CompletableFuture<GetTopicRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::IoT::TopicRule
      * 

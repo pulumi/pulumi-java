@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPeriodicTimerEventTrigger {
     private GetPeriodicTimerEventTrigger() {}
-    public interface BuilderApplicator {
-        public void apply(GetPeriodicTimerEventTriggerArgs.Builder a);
-    }
-    private static GetPeriodicTimerEventTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPeriodicTimerEventTriggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Trigger details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Trigger details.
- * 
-     */
-    public static CompletableFuture<GetPeriodicTimerEventTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Trigger details.
      * API Version: 2020-12-01.

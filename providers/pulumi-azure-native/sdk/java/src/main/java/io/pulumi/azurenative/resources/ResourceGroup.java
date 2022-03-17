@@ -117,22 +117,6 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable ResourceGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.resources.ResourceGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.resources.ResourceGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ResourceGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -164,26 +148,26 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:resources/v20151101:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20160201:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20160701:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20160901:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20170510:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20180201:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20180501:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190301:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190501:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190510:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190701:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190801:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20191001:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20200601:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20200801:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20201001:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20210101:ResourceGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20210401:ResourceGroup").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:resources/v20151101:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20160201:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20160701:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20160901:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20170510:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20180201:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20180501:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190301:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190501:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190510:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190701:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190801:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20191001:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20200601:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20200801:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20201001:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20210101:ResourceGroup").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20210401:ResourceGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

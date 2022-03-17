@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNote {
     private GetNote() {}
-    public interface BuilderApplicator {
-        public void apply(GetNoteArgs.Builder a);
-    }
-    private static GetNoteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNoteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified note.
- * 
-     */
-    public static CompletableFuture<GetNoteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified note.
      * 

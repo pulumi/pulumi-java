@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAFDEndpoint {
     private GetAFDEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetAFDEndpointArgs.Builder a);
-    }
-    private static GetAFDEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAFDEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
- * API Version: 2020-09-01.
- * 
-     *
-     * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
- * 
-     */
-    public static CompletableFuture<GetAFDEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
      * API Version: 2020-09-01.

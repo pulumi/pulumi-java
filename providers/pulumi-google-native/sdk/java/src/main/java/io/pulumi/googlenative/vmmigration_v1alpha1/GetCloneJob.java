@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCloneJob {
     private GetCloneJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetCloneJobArgs.Builder a);
-    }
-    private static GetCloneJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCloneJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single CloneJob.
- * 
-     */
-    public static CompletableFuture<GetCloneJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single CloneJob.
      * 

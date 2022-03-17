@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecurityAdminConfiguration {
     private GetSecurityAdminConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecurityAdminConfigurationArgs.Builder a);
-    }
-    private static GetSecurityAdminConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecurityAdminConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Defines the security configuration
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Defines the security configuration
- * 
-     */
-    public static CompletableFuture<GetSecurityAdminConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Defines the security configuration
      * API Version: 2021-02-01-preview.

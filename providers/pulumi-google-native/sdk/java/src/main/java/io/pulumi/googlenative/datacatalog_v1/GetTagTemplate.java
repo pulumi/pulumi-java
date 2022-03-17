@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTagTemplate {
     private GetTagTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetTagTemplateArgs.Builder a);
-    }
-    private static GetTagTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTagTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a tag template.
- * 
-     */
-    public static CompletableFuture<GetTagTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a tag template.
      * 

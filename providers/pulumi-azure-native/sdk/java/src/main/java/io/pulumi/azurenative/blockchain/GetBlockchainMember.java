@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBlockchainMember {
     private GetBlockchainMember() {}
-    public interface BuilderApplicator {
-        public void apply(GetBlockchainMemberArgs.Builder a);
-    }
-    private static GetBlockchainMemberArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBlockchainMemberArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Payload of the blockchain member which is exposed in the request/response of the resource provider.
- * API Version: 2018-06-01-preview.
- * 
-     *
-     * Payload of the blockchain member which is exposed in the request/response of the resource provider.
- * 
-     */
-    public static CompletableFuture<GetBlockchainMemberResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Payload of the blockchain member which is exposed in the request/response of the resource provider.
      * API Version: 2018-06-01-preview.

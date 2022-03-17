@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateRecordSet {
     private GetPrivateRecordSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateRecordSetArgs.Builder a);
-    }
-    private static GetPrivateRecordSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateRecordSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
- * API Version: 2020-06-01.
- * 
-     *
-     * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
- * 
-     */
-    public static CompletableFuture<GetPrivateRecordSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
      * API Version: 2020-06-01.

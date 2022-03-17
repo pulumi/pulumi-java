@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBuildServiceBuilder {
     private GetBuildServiceBuilder() {}
-    public interface BuilderApplicator {
-        public void apply(GetBuildServiceBuilderArgs.Builder a);
-    }
-    private static GetBuildServiceBuilderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBuildServiceBuilderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * KPack Builder resource
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * KPack Builder resource
- * 
-     */
-    public static CompletableFuture<GetBuildServiceBuilderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * KPack Builder resource
      * API Version: 2022-01-01-preview.

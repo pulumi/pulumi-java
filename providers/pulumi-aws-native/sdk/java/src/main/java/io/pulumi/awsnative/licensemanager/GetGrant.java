@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGrant {
     private GetGrant() {}
-    public interface BuilderApplicator {
-        public void apply(GetGrantArgs.Builder a);
-    }
-    private static GetGrantArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGrantArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An example resource schema demonstrating some basic constructs and validation rules.
- * 
-     */
-    public static CompletableFuture<GetGrantResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An example resource schema demonstrating some basic constructs and validation rules.
      * 

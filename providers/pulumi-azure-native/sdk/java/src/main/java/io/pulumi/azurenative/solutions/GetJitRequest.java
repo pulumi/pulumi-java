@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetJitRequest {
     private GetJitRequest() {}
-    public interface BuilderApplicator {
-        public void apply(GetJitRequestArgs.Builder a);
-    }
-    private static GetJitRequestArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetJitRequestArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about JIT request definition.
- * API Version: 2019-07-01.
- * 
-     *
-     * Information about JIT request definition.
- * 
-     */
-    public static CompletableFuture<GetJitRequestResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about JIT request definition.
      * API Version: 2019-07-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRoutine {
     private GetRoutine() {}
-    public interface BuilderApplicator {
-        public void apply(GetRoutineArgs.Builder a);
-    }
-    private static GetRoutineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRoutineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified routine resource by routine ID.
- * 
-     */
-    public static CompletableFuture<GetRoutineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified routine resource by routine ID.
      * 

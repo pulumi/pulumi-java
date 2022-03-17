@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListOperationalizationClusterKeys {
     private ListOperationalizationClusterKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListOperationalizationClusterKeysArgs.Builder a);
-    }
-    private static ListOperationalizationClusterKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListOperationalizationClusterKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Credentials to resources in the cluster.
- * API Version: 2017-08-01-preview.
- * 
-     *
-     * Credentials to resources in the cluster.
- * 
-     */
-    public static CompletableFuture<ListOperationalizationClusterKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Credentials to resources in the cluster.
      * API Version: 2017-08-01-preview.

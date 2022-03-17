@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListConnectionConsentLinks {
     private ListConnectionConsentLinks() {}
-    public interface BuilderApplicator {
-        public void apply(ListConnectionConsentLinksArgs.Builder a);
-    }
-    private static ListConnectionConsentLinksArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListConnectionConsentLinksArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of consent links
- * API Version: 2016-06-01.
- * 
-     *
-     * Collection of consent links
- * 
-     */
-    public static CompletableFuture<ListConnectionConsentLinksResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of consent links
      * API Version: 2016-06-01.

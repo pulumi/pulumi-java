@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSkus {
     private GetSkus() {}
-    public interface BuilderApplicator {
-        public void apply(GetSkusArgs.Builder a);
-    }
-    private static GetSkusArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSkusArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2020-11-20.
- * 
-     */
-    public static CompletableFuture<GetSkusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2020-11-20.
      * 

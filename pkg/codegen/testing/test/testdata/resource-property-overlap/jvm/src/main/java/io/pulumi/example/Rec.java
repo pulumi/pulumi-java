@@ -19,22 +19,6 @@ public class Rec extends io.pulumi.resources.CustomResource {
         return this.rec;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable RecArgs.Builder a);
-    }
-    private static io.pulumi.example.RecArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.example.RecArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Rec(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -66,7 +50,7 @@ public class Rec extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
+            .version(Utilities.getVersion())
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

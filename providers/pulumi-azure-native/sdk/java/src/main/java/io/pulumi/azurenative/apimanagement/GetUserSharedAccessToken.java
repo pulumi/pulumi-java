@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserSharedAccessToken {
     private GetUserSharedAccessToken() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserSharedAccessTokenArgs.Builder a);
-    }
-    private static GetUserSharedAccessTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserSharedAccessTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get User Token response details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Get User Token response details.
- * 
-     */
-    public static CompletableFuture<GetUserSharedAccessTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get User Token response details.
      * API Version: 2020-12-01.

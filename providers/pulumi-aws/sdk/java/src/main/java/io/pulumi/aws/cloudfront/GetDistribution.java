@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDistribution {
     private GetDistribution() {}
-    public interface BuilderApplicator {
-        public void apply(GetDistributionArgs.Builder a);
-    }
-    private static GetDistributionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDistributionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to retrieve information about a CloudFront distribution.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDistribution.
- * 
-     *
-     * A collection of values returned by getDistribution.
- * 
-     */
-    public static CompletableFuture<GetDistributionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to retrieve information about a CloudFront distribution.
      * 

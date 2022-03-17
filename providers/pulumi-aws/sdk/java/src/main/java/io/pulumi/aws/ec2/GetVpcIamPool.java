@@ -14,33 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpcIamPool {
     private GetVpcIamPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpcIamPoolArgs.Builder a);
-    }
-    private static GetVpcIamPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpcIamPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.ec2.VpcIpamPool` provides details about an IPAM pool.
- * 
- * This resource can prove useful when an ipam pool was created in another root
- * module and you need the pool's id as an input variable. For example, pools
- * can be shared via RAM and used to create vpcs with CIDRs from that pool.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getVpcIamPool.
- * 
-     *
-     * A collection of values returned by getVpcIamPool.
- * 
-     */
-    public static CompletableFuture<GetVpcIamPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.ec2.VpcIpamPool` provides details about an IPAM pool.
      * 

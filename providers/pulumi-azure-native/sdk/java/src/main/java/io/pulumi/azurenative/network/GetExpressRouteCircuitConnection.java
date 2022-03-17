@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExpressRouteCircuitConnection {
     private GetExpressRouteCircuitConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetExpressRouteCircuitConnectionArgs.Builder a);
-    }
-    private static GetExpressRouteCircuitConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExpressRouteCircuitConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
- * 
-     */
-    public static CompletableFuture<GetExpressRouteCircuitConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
      * API Version: 2020-11-01.

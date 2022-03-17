@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateZone {
     private GetPrivateZone() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateZoneArgs.Builder a);
-    }
-    private static GetPrivateZoneArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateZoneArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a Private DNS zone.
- * API Version: 2020-06-01.
- * 
-     *
-     * Describes a Private DNS zone.
- * 
-     */
-    public static CompletableFuture<GetPrivateZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a Private DNS zone.
      * API Version: 2020-06-01.

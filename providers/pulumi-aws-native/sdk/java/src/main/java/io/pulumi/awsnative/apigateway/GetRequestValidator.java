@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRequestValidator {
     private GetRequestValidator() {}
-    public interface BuilderApplicator {
-        public void apply(GetRequestValidatorArgs.Builder a);
-    }
-    private static GetRequestValidatorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRequestValidatorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::ApiGateway::RequestValidator
- * 
-     */
-    public static CompletableFuture<GetRequestValidatorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::ApiGateway::RequestValidator
      * 

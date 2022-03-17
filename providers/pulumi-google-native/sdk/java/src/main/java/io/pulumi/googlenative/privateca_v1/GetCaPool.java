@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCaPool {
     private GetCaPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetCaPoolArgs.Builder a);
-    }
-    private static GetCaPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCaPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns a CaPool.
- * 
-     */
-    public static CompletableFuture<GetCaPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns a CaPool.
      * 

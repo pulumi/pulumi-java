@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResolverRuleAssociation {
     private GetResolverRuleAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetResolverRuleAssociationArgs.Builder a);
-    }
-    private static GetResolverRuleAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResolverRuleAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Route53Resolver::ResolverRuleAssociation
- * 
-     */
-    public static CompletableFuture<GetResolverRuleAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Route53Resolver::ResolverRuleAssociation
      * 

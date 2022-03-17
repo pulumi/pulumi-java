@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSmartDetectorAlertRule {
     private GetSmartDetectorAlertRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetSmartDetectorAlertRuleArgs.Builder a);
-    }
-    private static GetSmartDetectorAlertRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSmartDetectorAlertRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The alert rule information
- * API Version: 2019-06-01.
- * 
-     *
-     * The alert rule information
- * 
-     */
-    public static CompletableFuture<GetSmartDetectorAlertRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The alert rule information
      * API Version: 2019-06-01.

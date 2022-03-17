@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTableResourceTable {
     private GetTableResourceTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetTableResourceTableArgs.Builder a);
-    }
-    private static GetTableResourceTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTableResourceTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB Table.
- * API Version: 2021-03-15.
- * 
-     *
-     * An Azure Cosmos DB Table.
- * 
-     */
-    public static CompletableFuture<GetTableResourceTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB Table.
      * API Version: 2021-03-15.

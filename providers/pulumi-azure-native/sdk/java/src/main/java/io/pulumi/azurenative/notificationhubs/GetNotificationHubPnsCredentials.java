@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationHubPnsCredentials {
     private GetNotificationHubPnsCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationHubPnsCredentialsArgs.Builder a);
-    }
-    private static GetNotificationHubPnsCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationHubPnsCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Description of a NotificationHub PNS Credentials.
- * API Version: 2017-04-01.
- * 
-     *
-     * Description of a NotificationHub PNS Credentials.
- * 
-     */
-    public static CompletableFuture<GetNotificationHubPnsCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Description of a NotificationHub PNS Credentials.
      * API Version: 2017-04-01.

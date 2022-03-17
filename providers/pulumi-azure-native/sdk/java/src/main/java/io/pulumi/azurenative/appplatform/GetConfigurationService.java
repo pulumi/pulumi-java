@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfigurationService {
     private GetConfigurationService() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationServiceArgs.Builder a);
-    }
-    private static GetConfigurationServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Application Configuration Service resource
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Application Configuration Service resource
- * 
-     */
-    public static CompletableFuture<GetConfigurationServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Application Configuration Service resource
      * API Version: 2022-01-01-preview.

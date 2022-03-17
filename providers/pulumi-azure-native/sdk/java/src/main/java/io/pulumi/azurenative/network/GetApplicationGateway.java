@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplicationGateway {
     private GetApplicationGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationGatewayArgs.Builder a);
-    }
-    private static GetApplicationGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Application gateway resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Application gateway resource.
- * 
-     */
-    public static CompletableFuture<GetApplicationGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Application gateway resource.
      * API Version: 2020-11-01.

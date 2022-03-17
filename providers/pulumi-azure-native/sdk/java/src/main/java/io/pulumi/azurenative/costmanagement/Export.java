@@ -160,22 +160,6 @@ public class Export extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ExportArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.costmanagement.ExportArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.costmanagement.ExportArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Export(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -207,16 +191,16 @@ public class Export extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:costmanagement/v20190101:Export").build()),
-                Output.of(Alias.builder().setType("azure-native:costmanagement/v20190901:Export").build()),
-                Output.of(Alias.builder().setType("azure-native:costmanagement/v20191001:Export").build()),
-                Output.of(Alias.builder().setType("azure-native:costmanagement/v20191101:Export").build()),
-                Output.of(Alias.builder().setType("azure-native:costmanagement/v20200601:Export").build()),
-                Output.of(Alias.builder().setType("azure-native:costmanagement/v20201201preview:Export").build()),
-                Output.of(Alias.builder().setType("azure-native:costmanagement/v20210101:Export").build()),
-                Output.of(Alias.builder().setType("azure-native:costmanagement/v20211001:Export").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:costmanagement/v20190101:Export").build()),
+                Output.of(Alias.builder().type("azure-native:costmanagement/v20190901:Export").build()),
+                Output.of(Alias.builder().type("azure-native:costmanagement/v20191001:Export").build()),
+                Output.of(Alias.builder().type("azure-native:costmanagement/v20191101:Export").build()),
+                Output.of(Alias.builder().type("azure-native:costmanagement/v20200601:Export").build()),
+                Output.of(Alias.builder().type("azure-native:costmanagement/v20201201preview:Export").build()),
+                Output.of(Alias.builder().type("azure-native:costmanagement/v20210101:Export").build()),
+                Output.of(Alias.builder().type("azure-native:costmanagement/v20211001:Export").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

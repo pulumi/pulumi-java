@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistryCredentials {
     private GetRegistryCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistryCredentialsArgs.Builder a);
-    }
-    private static GetRegistryCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistryCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The result of a request to get the administrator login credentials for a container registry.
- * API Version: 2016-06-27-preview.
- * 
-     *
-     * The result of a request to get the administrator login credentials for a container registry.
- * 
-     */
-    public static CompletableFuture<GetRegistryCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The result of a request to get the administrator login credentials for a container registry.
      * API Version: 2016-06-27-preview.

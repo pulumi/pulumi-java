@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebPubSubKeys {
     private ListWebPubSubKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebPubSubKeysArgs.Builder a);
-    }
-    private static ListWebPubSubKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebPubSubKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A class represents the access keys of the resource.
- * API Version: 2021-04-01-preview.
- * 
-     *
-     * A class represents the access keys of the resource.
- * 
-     */
-    public static CompletableFuture<ListWebPubSubKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A class represents the access keys of the resource.
      * API Version: 2021-04-01-preview.

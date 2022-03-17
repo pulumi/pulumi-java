@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSerialPort {
     private GetSerialPort() {}
-    public interface BuilderApplicator {
-        public void apply(GetSerialPortArgs.Builder a);
-    }
-    private static GetSerialPortArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSerialPortArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents the serial port of the parent resource.
- * API Version: 2018-05-01.
- * 
-     *
-     * Represents the serial port of the parent resource.
- * 
-     */
-    public static CompletableFuture<GetSerialPortResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents the serial port of the parent resource.
      * API Version: 2018-05-01.

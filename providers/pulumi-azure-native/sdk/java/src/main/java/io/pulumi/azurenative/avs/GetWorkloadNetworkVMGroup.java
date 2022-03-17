@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkVMGroup {
     private GetWorkloadNetworkVMGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadNetworkVMGroupArgs.Builder a);
-    }
-    private static GetWorkloadNetworkVMGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadNetworkVMGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NSX VM Group
- * API Version: 2020-07-17-preview.
- * 
-     *
-     * NSX VM Group
- * 
-     */
-    public static CompletableFuture<GetWorkloadNetworkVMGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NSX VM Group
      * API Version: 2020-07-17-preview.

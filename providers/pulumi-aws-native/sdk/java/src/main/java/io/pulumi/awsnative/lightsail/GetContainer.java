@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContainer {
     private GetContainer() {}
-    public interface BuilderApplicator {
-        public void apply(GetContainerArgs.Builder a);
-    }
-    private static GetContainerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContainerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Lightsail::Container
- * 
-     */
-    public static CompletableFuture<GetContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Lightsail::Container
      * 

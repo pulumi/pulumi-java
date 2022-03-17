@@ -233,22 +233,6 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ConnectedRegistryArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.containerregistry.ConnectedRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.containerregistry.ConnectedRegistryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ConnectedRegistry(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -280,12 +264,12 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20201101preview:ConnectedRegistry").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210601preview:ConnectedRegistry").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210801preview:ConnectedRegistry").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20211201preview:ConnectedRegistry").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20201101preview:ConnectedRegistry").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210601preview:ConnectedRegistry").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210801preview:ConnectedRegistry").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20211201preview:ConnectedRegistry").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

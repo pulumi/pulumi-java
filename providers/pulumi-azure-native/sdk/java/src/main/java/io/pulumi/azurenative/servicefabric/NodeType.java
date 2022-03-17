@@ -289,22 +289,6 @@ public class NodeType extends io.pulumi.resources.CustomResource {
         return this.vmSize;
     }
 
-    public interface BuilderApplicator {
-        public void apply(NodeTypeArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.servicefabric.NodeTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.servicefabric.NodeTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public NodeType(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -336,14 +320,14 @@ public class NodeType extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:servicefabric/v20200101preview:NodeType").build()),
-                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210101preview:NodeType").build()),
-                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210501:NodeType").build()),
-                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210701preview:NodeType").build()),
-                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210901privatepreview:NodeType").build()),
-                Output.of(Alias.builder().setType("azure-native:servicefabric/v20211101preview:NodeType").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20200101preview:NodeType").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20210101preview:NodeType").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20210501:NodeType").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20210701preview:NodeType").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20210901privatepreview:NodeType").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20211101preview:NodeType").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

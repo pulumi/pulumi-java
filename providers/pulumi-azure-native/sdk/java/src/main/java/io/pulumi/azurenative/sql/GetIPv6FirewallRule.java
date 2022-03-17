@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIPv6FirewallRule {
     private GetIPv6FirewallRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetIPv6FirewallRuleArgs.Builder a);
-    }
-    private static GetIPv6FirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIPv6FirewallRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An IPv6 server firewall rule.
- * API Version: 2021-08-01-preview.
- * 
-     *
-     * An IPv6 server firewall rule.
- * 
-     */
-    public static CompletableFuture<GetIPv6FirewallRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An IPv6 server firewall rule.
      * API Version: 2021-08-01-preview.

@@ -102,22 +102,6 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ApiSchemaArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.apimanagement.ApiSchemaArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.apimanagement.ApiSchemaArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ApiSchema(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -149,19 +133,19 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiSchema").build()),
-                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiSchema").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20170301:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20180101:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20180601preview:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20190101:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20191201preview:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20200601preview:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiSchema").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiSchema").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -146,22 +146,6 @@ public class KustoClusterDataSet extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(KustoClusterDataSetArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.datashare.KustoClusterDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.datashare.KustoClusterDataSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public KustoClusterDataSet(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -200,13 +184,13 @@ public class KustoClusterDataSet extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:KustoClusterDataSet").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:KustoClusterDataSet").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:KustoClusterDataSet").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:KustoClusterDataSet").build()),
-                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:KustoClusterDataSet").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:datashare/v20181101preview:KustoClusterDataSet").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20191101:KustoClusterDataSet").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20200901:KustoClusterDataSet").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20201001preview:KustoClusterDataSet").build()),
+                Output.of(Alias.builder().type("azure-native:datashare/v20210801:KustoClusterDataSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

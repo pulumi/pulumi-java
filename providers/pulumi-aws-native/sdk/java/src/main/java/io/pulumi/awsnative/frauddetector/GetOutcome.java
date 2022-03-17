@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOutcome {
     private GetOutcome() {}
-    public interface BuilderApplicator {
-        public void apply(GetOutcomeArgs.Builder a);
-    }
-    private static GetOutcomeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOutcomeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An outcome for rule evaluation.
- * 
-     */
-    public static CompletableFuture<GetOutcomeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An outcome for rule evaluation.
      * 

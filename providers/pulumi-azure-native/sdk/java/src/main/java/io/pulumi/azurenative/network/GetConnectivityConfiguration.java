@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnectivityConfiguration {
     private GetConnectivityConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectivityConfigurationArgs.Builder a);
-    }
-    private static GetConnectivityConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectivityConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The network manager connectivity configuration resource
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * The network manager connectivity configuration resource
- * 
-     */
-    public static CompletableFuture<GetConnectivityConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The network manager connectivity configuration resource
      * API Version: 2021-02-01-preview.

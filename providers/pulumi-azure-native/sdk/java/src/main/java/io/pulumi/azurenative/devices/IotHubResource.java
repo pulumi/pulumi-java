@@ -132,22 +132,6 @@ public class IotHubResource extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(IotHubResourceArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.devices.IotHubResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.devices.IotHubResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public IotHubResource(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -179,32 +163,32 @@ public class IotHubResource extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:devices/v20160203:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20170119:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20170701:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20180122:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20180401:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20181201preview:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20190322:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20190322preview:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20190701preview:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20191104:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200301:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200401:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200615:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200710preview:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200801:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200831:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20200831preview:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210201preview:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210303preview:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210331:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210701:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210701preview:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210702:IotHubResource").build()),
-                Output.of(Alias.builder().setType("azure-native:devices/v20210702preview:IotHubResource").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:devices/v20160203:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20170119:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20170701:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20180122:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20180401:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20181201preview:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20190322:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20190322preview:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20190701preview:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20191104:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200301:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200401:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200615:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200710preview:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200801:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200831:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20200831preview:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210201preview:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210303preview:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210331:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210701:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210701preview:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210702:IotHubResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20210702preview:IotHubResource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

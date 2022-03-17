@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDBProxyTargetGroup {
     private GetDBProxyTargetGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetDBProxyTargetGroupArgs.Builder a);
-    }
-    private static GetDBProxyTargetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDBProxyTargetGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::RDS::DBProxyTargetGroup
- * 
-     */
-    public static CompletableFuture<GetDBProxyTargetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::RDS::DBProxyTargetGroup
      * 

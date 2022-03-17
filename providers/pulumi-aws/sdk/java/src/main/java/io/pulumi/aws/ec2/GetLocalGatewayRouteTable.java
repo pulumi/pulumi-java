@@ -14,32 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocalGatewayRouteTable {
     private GetLocalGatewayRouteTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocalGatewayRouteTableArgs.Builder a);
-    }
-    private static GetLocalGatewayRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocalGatewayRouteTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about an EC2 Local Gateway Route Table.
- * 
- * This data source can prove useful when a module accepts a local gateway route table id as
- * an input variable and needs to, for example, find the associated Outpost or Local Gateway.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getLocalGatewayRouteTable.
- * 
-     *
-     * A collection of values returned by getLocalGatewayRouteTable.
- * 
-     */
-    public static CompletableFuture<GetLocalGatewayRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about an EC2 Local Gateway Route Table.
      * 

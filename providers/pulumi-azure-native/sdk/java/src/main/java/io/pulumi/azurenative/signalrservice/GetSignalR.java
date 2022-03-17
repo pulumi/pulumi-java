@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSignalR {
     private GetSignalR() {}
-    public interface BuilderApplicator {
-        public void apply(GetSignalRArgs.Builder a);
-    }
-    private static GetSignalRArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSignalRArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A class represent a SignalR service resource.
- * API Version: 2020-05-01.
- * 
-     *
-     * A class represent a SignalR service resource.
- * 
-     */
-    public static CompletableFuture<GetSignalRResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A class represent a SignalR service resource.
      * API Version: 2020-05-01.

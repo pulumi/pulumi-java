@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserPoolSigningCertificate {
     private GetUserPoolSigningCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserPoolSigningCertificateArgs.Builder a);
-    }
-    private static GetUserPoolSigningCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserPoolSigningCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the signing certificate for a Cognito IdP user pool.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getUserPoolSigningCertificate.
- * 
-     *
-     * A collection of values returned by getUserPoolSigningCertificate.
- * 
-     */
-    public static CompletableFuture<GetUserPoolSigningCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the signing certificate for a Cognito IdP user pool.
      * 

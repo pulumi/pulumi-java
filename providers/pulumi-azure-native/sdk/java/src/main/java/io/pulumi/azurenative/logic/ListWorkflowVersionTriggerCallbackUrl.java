@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWorkflowVersionTriggerCallbackUrl {
     private ListWorkflowVersionTriggerCallbackUrl() {}
-    public interface BuilderApplicator {
-        public void apply(ListWorkflowVersionTriggerCallbackUrlArgs.Builder a);
-    }
-    private static ListWorkflowVersionTriggerCallbackUrlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWorkflowVersionTriggerCallbackUrlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The workflow trigger callback URL.
- * API Version: 2019-05-01.
- * 
-     *
-     * The workflow trigger callback URL.
- * 
-     */
-    public static CompletableFuture<ListWorkflowVersionTriggerCallbackUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The workflow trigger callback URL.
      * API Version: 2019-05-01.

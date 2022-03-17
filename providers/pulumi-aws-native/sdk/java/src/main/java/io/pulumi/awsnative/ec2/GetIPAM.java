@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIPAM {
     private GetIPAM() {}
-    public interface BuilderApplicator {
-        public void apply(GetIPAMArgs.Builder a);
-    }
-    private static GetIPAMArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIPAMArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema of AWS::EC2::IPAM Type
- * 
-     */
-    public static CompletableFuture<GetIPAMResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema of AWS::EC2::IPAM Type
      * 

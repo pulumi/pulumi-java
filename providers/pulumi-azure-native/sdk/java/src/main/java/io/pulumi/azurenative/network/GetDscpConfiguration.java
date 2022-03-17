@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDscpConfiguration {
     private GetDscpConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetDscpConfigurationArgs.Builder a);
-    }
-    private static GetDscpConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDscpConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * DSCP Configuration in a resource group.
- * API Version: 2020-11-01.
- * 
-     *
-     * DSCP Configuration in a resource group.
- * 
-     */
-    public static CompletableFuture<GetDscpConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * DSCP Configuration in a resource group.
      * API Version: 2020-11-01.

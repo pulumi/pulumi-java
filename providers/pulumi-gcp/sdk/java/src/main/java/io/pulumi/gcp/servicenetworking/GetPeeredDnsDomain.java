@@ -14,17 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPeeredDnsDomain {
     private GetPeeredDnsDomain() {}
-    public interface BuilderApplicator {
-        public void apply(GetPeeredDnsDomainArgs.Builder a);
-    }
-    private static GetPeeredDnsDomainArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPeeredDnsDomainArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    public static CompletableFuture<GetPeeredDnsDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     public static CompletableFuture<GetPeeredDnsDomainResult> invokeAsync(GetPeeredDnsDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:servicenetworking/getPeeredDnsDomain:getPeeredDnsDomain", TypeShape.of(GetPeeredDnsDomainResult.class), args == null ? GetPeeredDnsDomainArgs.Empty : args, Utilities.withVersion(options));
     }

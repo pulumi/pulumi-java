@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualMFADevice {
     private GetVirtualMFADevice() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualMFADeviceArgs.Builder a);
-    }
-    private static GetVirtualMFADeviceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualMFADeviceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::IAM::VirtualMFADevice
- * 
-     */
-    public static CompletableFuture<GetVirtualMFADeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::IAM::VirtualMFADevice
      * 

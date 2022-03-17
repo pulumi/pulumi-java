@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkspace {
     private GetWorkspace() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkspaceArgs.Builder a);
-    }
-    private static GetWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a workspace in [AWS Workspaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) Service.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getWorkspace.
- * 
-     *
-     * A collection of values returned by getWorkspace.
- * 
-     */
-    public static CompletableFuture<GetWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a workspace in [AWS Workspaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) Service.
      * 

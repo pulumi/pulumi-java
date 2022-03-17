@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProtectionIntent {
     private GetProtectionIntent() {}
-    public interface BuilderApplicator {
-        public void apply(GetProtectionIntentArgs.Builder a);
-    }
-    private static GetProtectionIntentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProtectionIntentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Base class for backup ProtectionIntent.
- * API Version: 2021-02-01.
- * 
-     *
-     * Base class for backup ProtectionIntent.
- * 
-     */
-    public static CompletableFuture<GetProtectionIntentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Base class for backup ProtectionIntent.
      * API Version: 2021-02-01.

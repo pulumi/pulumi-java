@@ -131,22 +131,6 @@ public class IntegrationAccountSession extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(IntegrationAccountSessionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.logic.IntegrationAccountSessionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.logic.IntegrationAccountSessionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public IntegrationAccountSession(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -178,11 +162,11 @@ public class IntegrationAccountSession extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:logic/v20160601:IntegrationAccountSession").build()),
-                Output.of(Alias.builder().setType("azure-native:logic/v20180701preview:IntegrationAccountSession").build()),
-                Output.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationAccountSession").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:logic/v20160601:IntegrationAccountSession").build()),
+                Output.of(Alias.builder().type("azure-native:logic/v20180701preview:IntegrationAccountSession").build()),
+                Output.of(Alias.builder().type("azure-native:logic/v20190501:IntegrationAccountSession").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

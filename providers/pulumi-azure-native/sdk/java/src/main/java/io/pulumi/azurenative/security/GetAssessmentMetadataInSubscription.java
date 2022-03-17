@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssessmentMetadataInSubscription {
     private GetAssessmentMetadataInSubscription() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssessmentMetadataInSubscriptionArgs.Builder a);
-    }
-    private static GetAssessmentMetadataInSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssessmentMetadataInSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Security assessment metadata
- * API Version: 2020-01-01.
- * 
-     *
-     * Security assessment metadata
- * 
-     */
-    public static CompletableFuture<GetAssessmentMetadataInSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Security assessment metadata
      * API Version: 2020-01-01.

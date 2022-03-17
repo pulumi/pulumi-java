@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVault {
     private GetVault() {}
-    public interface BuilderApplicator {
-        public void apply(GetVaultArgs.Builder a);
-    }
-    private static GetVaultArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVaultArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information on an existing backup vault.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getVault.
- * 
-     *
-     * A collection of values returned by getVault.
- * 
-     */
-    public static CompletableFuture<GetVaultResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information on an existing backup vault.
      * 

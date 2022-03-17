@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVideoAnalyzer {
     private GetVideoAnalyzer() {}
-    public interface BuilderApplicator {
-        public void apply(GetVideoAnalyzerArgs.Builder a);
-    }
-    private static GetVideoAnalyzerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVideoAnalyzerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Video Analyzer account.
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * A Video Analyzer account.
- * 
-     */
-    public static CompletableFuture<GetVideoAnalyzerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Video Analyzer account.
      * API Version: 2021-05-01-preview.

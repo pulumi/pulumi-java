@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubnet {
     private GetSubnet() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubnetArgs.Builder a);
-    }
-    private static GetSubnetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubnetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::Subnet
- * 
-     */
-    public static CompletableFuture<GetSubnetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::Subnet
      * 

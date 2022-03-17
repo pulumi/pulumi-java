@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetguestDiagnosticsSetting {
     private GetguestDiagnosticsSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetguestDiagnosticsSettingArgs.Builder a);
-    }
-    private static GetguestDiagnosticsSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetguestDiagnosticsSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Virtual machine guest diagnostics settings resource.
- * API Version: 2018-06-01-preview.
- * 
-     *
-     * Virtual machine guest diagnostics settings resource.
- * 
-     */
-    public static CompletableFuture<GetguestDiagnosticsSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Virtual machine guest diagnostics settings resource.
      * API Version: 2018-06-01-preview.

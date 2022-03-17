@@ -118,22 +118,6 @@ public class ASCDataConnector extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ASCDataConnectorArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.securityinsights.ASCDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.securityinsights.ASCDataConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ASCDataConnector(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -172,12 +156,12 @@ public class ASCDataConnector extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:ASCDataConnector").build()),
-                Output.of(Alias.builder().setType("azure-native:securityinsights/v20200101:ASCDataConnector").build()),
-                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:ASCDataConnector").build()),
-                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:ASCDataConnector").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:ASCDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:ASCDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:ASCDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:ASCDataConnector").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

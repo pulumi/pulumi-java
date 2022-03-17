@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceAttachment {
     private GetServiceAttachment() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceAttachmentArgs.Builder a);
-    }
-    private static GetServiceAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceAttachmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified ServiceAttachment resource in the given scope.
- * 
-     */
-    public static CompletableFuture<GetServiceAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified ServiceAttachment resource in the given scope.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCassandraDataCenter {
     private GetCassandraDataCenter() {}
-    public interface BuilderApplicator {
-        public void apply(GetCassandraDataCenterArgs.Builder a);
-    }
-    private static GetCassandraDataCenterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCassandraDataCenterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A managed Cassandra data center.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * A managed Cassandra data center.
- * 
-     */
-    public static CompletableFuture<GetCassandraDataCenterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A managed Cassandra data center.
      * API Version: 2021-03-01-preview.

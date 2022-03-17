@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserPools {
     private GetUserPools() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserPoolsArgs.Builder a);
-    }
-    private static GetUserPoolsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserPoolsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get a list of cognito user pools.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getUserPools.
- * 
-     *
-     * A collection of values returned by getUserPools.
- * 
-     */
-    public static CompletableFuture<GetUserPoolsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get a list of cognito user pools.
      * 

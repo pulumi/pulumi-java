@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEndpoint {
     private GetEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetEndpointArgs.Builder a);
-    }
-    private static GetEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single Endpoint.
- * 
-     */
-    public static CompletableFuture<GetEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single Endpoint.
      * 

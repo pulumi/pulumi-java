@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpnServerConfiguration {
     private GetVpnServerConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpnServerConfigurationArgs.Builder a);
-    }
-    private static GetVpnServerConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpnServerConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * VpnServerConfiguration Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * VpnServerConfiguration Resource.
- * 
-     */
-    public static CompletableFuture<GetVpnServerConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * VpnServerConfiguration Resource.
      * API Version: 2020-11-01.

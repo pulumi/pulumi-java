@@ -87,22 +87,6 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
         return this.uniqueId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SyncGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.storagesync.SyncGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.storagesync.SyncGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SyncGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
@@ -134,18 +118,18 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20170605preview:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20180402:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20180701:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20181001:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190201:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190301:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20190601:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20191001:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20200301:SyncGroup").build()),
-                Output.of(Alias.builder().setType("azure-native:storagesync/v20200901:SyncGroup").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:storagesync/v20170605preview:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20180402:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20180701:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20181001:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190201:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190301:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20190601:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20191001:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20200301:SyncGroup").build()),
+                Output.of(Alias.builder().type("azure-native:storagesync/v20200901:SyncGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkProfile {
     private GetNetworkProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkProfileArgs.Builder a);
-    }
-    private static GetNetworkProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS::DeviceFarm::NetworkProfile creates a new DF Network Profile
- * 
-     */
-    public static CompletableFuture<GetNetworkProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS::DeviceFarm::NetworkProfile creates a new DF Network Profile
      * 

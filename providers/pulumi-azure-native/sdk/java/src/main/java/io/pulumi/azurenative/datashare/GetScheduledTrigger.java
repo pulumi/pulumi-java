@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScheduledTrigger {
     private GetScheduledTrigger() {}
-    public interface BuilderApplicator {
-        public void apply(GetScheduledTriggerArgs.Builder a);
-    }
-    private static GetScheduledTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScheduledTriggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A type of trigger based on schedule
- * API Version: 2020-09-01.
- * 
-     *
-     * A type of trigger based on schedule
- * 
-     */
-    public static CompletableFuture<GetScheduledTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A type of trigger based on schedule
      * API Version: 2020-09-01.

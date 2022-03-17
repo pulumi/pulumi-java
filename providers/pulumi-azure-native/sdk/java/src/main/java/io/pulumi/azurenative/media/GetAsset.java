@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAsset {
     private GetAsset() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssetArgs.Builder a);
-    }
-    private static GetAssetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Asset.
- * API Version: 2020-05-01.
- * 
-     *
-     * An Asset.
- * 
-     */
-    public static CompletableFuture<GetAssetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Asset.
      * API Version: 2020-05-01.

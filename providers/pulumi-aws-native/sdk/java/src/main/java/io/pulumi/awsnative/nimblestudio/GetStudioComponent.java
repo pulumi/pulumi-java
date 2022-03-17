@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStudioComponent {
     private GetStudioComponent() {}
-    public interface BuilderApplicator {
-        public void apply(GetStudioComponentArgs.Builder a);
-    }
-    private static GetStudioComponentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStudioComponentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
- * 
-     */
-    public static CompletableFuture<GetStudioComponentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
      * 

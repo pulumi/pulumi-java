@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUeba {
     private GetUeba() {}
-    public interface BuilderApplicator {
-        public void apply(GetUebaArgs.Builder a);
-    }
-    private static GetUebaArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUebaArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Settings with single toggle.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Settings with single toggle.
- * 
-     */
-    public static CompletableFuture<GetUebaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Settings with single toggle.
      * API Version: 2021-03-01-preview.

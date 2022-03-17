@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReservation {
     private GetReservation() {}
-    public interface BuilderApplicator {
-        public void apply(GetReservationArgs.Builder a);
-    }
-    private static GetReservationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReservationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns information about the reservation.
- * 
-     */
-    public static CompletableFuture<GetReservationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns information about the reservation.
      * 
