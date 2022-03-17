@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCloudLink {
     private GetCloudLink() {}
-    public interface BuilderApplicator {
-        public void apply(GetCloudLinkArgs.Builder a);
-    }
-    private static GetCloudLinkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCloudLinkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A cloud link resource
- * API Version: 2021-06-01.
- * 
-     *
-     * A cloud link resource
- * 
-     */
-    public static CompletableFuture<GetCloudLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A cloud link resource
      * API Version: 2021-06-01.

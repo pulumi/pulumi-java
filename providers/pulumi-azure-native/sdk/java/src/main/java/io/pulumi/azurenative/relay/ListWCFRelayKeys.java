@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWCFRelayKeys {
     private ListWCFRelayKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListWCFRelayKeysArgs.Builder a);
-    }
-    private static ListWCFRelayKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWCFRelayKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Namespace/Relay Connection String
- * API Version: 2017-04-01.
- * 
-     *
-     * Namespace/Relay Connection String
- * 
-     */
-    public static CompletableFuture<ListWCFRelayKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Namespace/Relay Connection String
      * API Version: 2017-04-01.

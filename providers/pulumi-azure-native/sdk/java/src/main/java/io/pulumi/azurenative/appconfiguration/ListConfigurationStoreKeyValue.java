@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListConfigurationStoreKeyValue {
     private ListConfigurationStoreKeyValue() {}
-    public interface BuilderApplicator {
-        public void apply(ListConfigurationStoreKeyValueArgs.Builder a);
-    }
-    private static ListConfigurationStoreKeyValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListConfigurationStoreKeyValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The result of a request to retrieve a key-value from the specified configuration store.
- * API Version: 2020-06-01.
- * 
-     *
-     * The result of a request to retrieve a key-value from the specified configuration store.
- * 
-     */
-    public static CompletableFuture<ListConfigurationStoreKeyValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The result of a request to retrieve a key-value from the specified configuration store.
      * API Version: 2020-06-01.

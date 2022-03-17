@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole. */
 public class GetRole {
     private GetRole() {}
-    public interface BuilderApplicator {
-        public void apply(GetRoleArgs.Builder a);
-    }
-    private static GetRoleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRoleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Compute role.
- * API Version: 2020-12-01.
- * 
-     *
-     * Compute role.
- * 
-     * @Deprecated
-     * Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole.
- * 
-     */
-    public static CompletableFuture<GetRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Compute role.
      * API Version: 2020-12-01.

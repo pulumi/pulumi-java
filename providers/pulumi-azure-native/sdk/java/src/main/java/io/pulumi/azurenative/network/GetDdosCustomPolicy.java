@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDdosCustomPolicy {
     private GetDdosCustomPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetDdosCustomPolicyArgs.Builder a);
-    }
-    private static GetDdosCustomPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDdosCustomPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A DDoS custom policy in a resource group.
- * API Version: 2020-11-01.
- * 
-     *
-     * A DDoS custom policy in a resource group.
- * 
-     */
-    public static CompletableFuture<GetDdosCustomPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A DDoS custom policy in a resource group.
      * API Version: 2020-11-01.

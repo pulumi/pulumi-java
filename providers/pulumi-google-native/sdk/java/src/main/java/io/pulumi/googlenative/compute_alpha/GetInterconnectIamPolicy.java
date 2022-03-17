@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInterconnectIamPolicy {
     private GetInterconnectIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetInterconnectIamPolicyArgs.Builder a);
-    }
-    private static GetInterconnectIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInterconnectIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- * 
-     */
-    public static CompletableFuture<GetInterconnectIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 

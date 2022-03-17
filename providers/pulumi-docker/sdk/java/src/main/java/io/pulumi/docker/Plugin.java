@@ -203,22 +203,6 @@ public class Plugin extends io.pulumi.resources.CustomResource {
         return this.pluginReference;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable PluginArgs.Builder a);
-    }
-    private static io.pulumi.docker.PluginArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.docker.PluginArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Plugin(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

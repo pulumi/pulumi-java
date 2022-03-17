@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPipeline {
     private GetPipeline() {}
-    public interface BuilderApplicator {
-        public void apply(GetPipelineArgs.Builder a);
-    }
-    private static GetPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPipelineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Looks up a single pipeline. Returns a "NOT_FOUND" error if no such pipeline exists. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
- * 
-     */
-    public static CompletableFuture<GetPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Looks up a single pipeline. Returns a "NOT_FOUND" error if no such pipeline exists. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
      * 

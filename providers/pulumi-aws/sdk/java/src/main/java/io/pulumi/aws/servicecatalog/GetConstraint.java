@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConstraint {
     private GetConstraint() {}
-    public interface BuilderApplicator {
-        public void apply(GetConstraintArgs.Builder a);
-    }
-    private static GetConstraintArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConstraintArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information on a Service Catalog Constraint.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getConstraint.
- * 
-     *
-     * A collection of values returned by getConstraint.
- * 
-     */
-    public static CompletableFuture<GetConstraintResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information on a Service Catalog Constraint.
      * 

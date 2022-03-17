@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCapacityReservation {
     private GetCapacityReservation() {}
-    public interface BuilderApplicator {
-        public void apply(GetCapacityReservationArgs.Builder a);
-    }
-    private static GetCapacityReservationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCapacityReservationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specifies information about the capacity reservation.
- * API Version: 2021-04-01.
- * 
-     *
-     * Specifies information about the capacity reservation.
- * 
-     */
-    public static CompletableFuture<GetCapacityReservationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specifies information about the capacity reservation.
      * API Version: 2021-04-01.

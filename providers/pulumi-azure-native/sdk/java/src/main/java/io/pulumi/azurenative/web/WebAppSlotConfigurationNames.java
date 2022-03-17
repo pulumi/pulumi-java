@@ -112,22 +112,6 @@ public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomReso
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebAppSlotConfigurationNamesArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppSlotConfigurationNamesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppSlotConfigurationNamesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppSlotConfigurationNames(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

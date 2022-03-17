@@ -315,22 +315,6 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
         return this.volumes;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ContainerGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.containerinstance.ContainerGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.containerinstance.ContainerGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ContainerGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGeoBackupPolicy {
     private GetGeoBackupPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetGeoBackupPolicyArgs.Builder a);
-    }
-    private static GetGeoBackupPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGeoBackupPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A database geo backup policy.
- * API Version: 2014-04-01.
- * 
-     *
-     * A database geo backup policy.
- * 
-     */
-    public static CompletableFuture<GetGeoBackupPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A database geo backup policy.
      * API Version: 2014-04-01.

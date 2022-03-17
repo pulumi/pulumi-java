@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDisk {
     private GetDisk() {}
-    public interface BuilderApplicator {
-        public void apply(GetDiskArgs.Builder a);
-    }
-    private static GetDiskArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDiskArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Disk resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * Disk resource.
- * 
-     */
-    public static CompletableFuture<GetDiskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Disk resource.
      * API Version: 2020-12-01.

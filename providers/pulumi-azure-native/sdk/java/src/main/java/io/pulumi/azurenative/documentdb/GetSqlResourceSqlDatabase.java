@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlDatabase {
     private GetSqlResourceSqlDatabase() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlResourceSqlDatabaseArgs.Builder a);
-    }
-    private static GetSqlResourceSqlDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlResourceSqlDatabaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB SQL database.
- * API Version: 2021-03-15.
- * 
-     *
-     * An Azure Cosmos DB SQL database.
- * 
-     */
-    public static CompletableFuture<GetSqlResourceSqlDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB SQL database.
      * API Version: 2021-03-15.

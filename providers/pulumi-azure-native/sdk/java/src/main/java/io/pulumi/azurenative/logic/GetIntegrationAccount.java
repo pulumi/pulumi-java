@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegrationAccount {
     private GetIntegrationAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationAccountArgs.Builder a);
-    }
-    private static GetIntegrationAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The integration account.
- * API Version: 2019-05-01.
- * 
-     *
-     * The integration account.
- * 
-     */
-    public static CompletableFuture<GetIntegrationAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The integration account.
      * API Version: 2019-05-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPhraseMatcher {
     private GetPhraseMatcher() {}
-    public interface BuilderApplicator {
-        public void apply(GetPhraseMatcherArgs.Builder a);
-    }
-    private static GetPhraseMatcherArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPhraseMatcherArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a phrase matcher.
- * 
-     */
-    public static CompletableFuture<GetPhraseMatcherResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a phrase matcher.
      * 

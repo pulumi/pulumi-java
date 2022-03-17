@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOnPremiseSensor {
     private GetOnPremiseSensor() {}
-    public interface BuilderApplicator {
-        public void apply(GetOnPremiseSensorArgs.Builder a);
-    }
-    private static GetOnPremiseSensorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOnPremiseSensorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * On-premise IoT sensor
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * On-premise IoT sensor
- * 
-     */
-    public static CompletableFuture<GetOnPremiseSensorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * On-premise IoT sensor
      * API Version: 2021-02-01-preview.

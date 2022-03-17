@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagedPrivateEndpoint {
     private GetManagedPrivateEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagedPrivateEndpointArgs.Builder a);
-    }
-    private static GetManagedPrivateEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagedPrivateEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing a managed private endpoint.
- * API Version: 2021-08-27.
- * 
-     *
-     * Class representing a managed private endpoint.
- * 
-     */
-    public static CompletableFuture<GetManagedPrivateEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing a managed private endpoint.
      * API Version: 2021-08-27.

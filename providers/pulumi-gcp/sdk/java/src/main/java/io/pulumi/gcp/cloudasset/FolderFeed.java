@@ -214,22 +214,6 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    public interface BuilderApplicator {
-        public void apply(FolderFeedArgs.Builder a);
-    }
-    private static io.pulumi.gcp.cloudasset.FolderFeedArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.cloudasset.FolderFeedArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public FolderFeed(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

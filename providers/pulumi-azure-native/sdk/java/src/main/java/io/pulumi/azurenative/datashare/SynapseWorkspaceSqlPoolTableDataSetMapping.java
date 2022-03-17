@@ -146,22 +146,6 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SynapseWorkspaceSqlPoolTableDataSetMappingArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SynapseWorkspaceSqlPoolTableDataSetMapping(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

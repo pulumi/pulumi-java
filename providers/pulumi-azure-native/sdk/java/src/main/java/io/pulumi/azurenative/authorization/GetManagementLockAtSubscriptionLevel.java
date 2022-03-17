@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagementLockAtSubscriptionLevel {
     private GetManagementLockAtSubscriptionLevel() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagementLockAtSubscriptionLevelArgs.Builder a);
-    }
-    private static GetManagementLockAtSubscriptionLevelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagementLockAtSubscriptionLevelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The lock information.
- * API Version: 2017-04-01.
- * 
-     *
-     * The lock information.
- * 
-     */
-    public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The lock information.
      * API Version: 2017-04-01.

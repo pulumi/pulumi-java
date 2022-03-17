@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBatchAccount {
     private GetBatchAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetBatchAccountArgs.Builder a);
-    }
-    private static GetBatchAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBatchAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Contains information about an Azure Batch account.
- * API Version: 2021-01-01.
- * 
-     *
-     * Contains information about an Azure Batch account.
- * 
-     */
-    public static CompletableFuture<GetBatchAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Contains information about an Azure Batch account.
      * API Version: 2021-01-01.

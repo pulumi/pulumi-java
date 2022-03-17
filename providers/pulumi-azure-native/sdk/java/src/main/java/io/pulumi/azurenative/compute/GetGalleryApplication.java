@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGalleryApplication {
     private GetGalleryApplication() {}
-    public interface BuilderApplicator {
-        public void apply(GetGalleryApplicationArgs.Builder a);
-    }
-    private static GetGalleryApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGalleryApplicationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specifies information about the gallery Application Definition that you want to create or update.
- * API Version: 2020-09-30.
- * 
-     *
-     * Specifies information about the gallery Application Definition that you want to create or update.
- * 
-     */
-    public static CompletableFuture<GetGalleryApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specifies information about the gallery Application Definition that you want to create or update.
      * API Version: 2020-09-30.

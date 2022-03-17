@@ -59,22 +59,6 @@ public class RegionSettings extends io.pulumi.resources.CustomResource {
         return this.resourceTypeOptInPreference;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RegionSettingsArgs.Builder a);
-    }
-    private static io.pulumi.aws.backup.RegionSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.backup.RegionSettingsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RegionSettings(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

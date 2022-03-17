@@ -67,22 +67,6 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
         return this.repositoryName;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RepositoryPolicyArgs.Builder a);
-    }
-    private static io.pulumi.aws.ecrpublic.RepositoryPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ecrpublic.RepositoryPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RepositoryPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

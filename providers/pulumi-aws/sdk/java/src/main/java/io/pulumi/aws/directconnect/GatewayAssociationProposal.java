@@ -122,22 +122,6 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
         return this.dxGatewayOwnerAccountId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(GatewayAssociationProposalArgs.Builder a);
-    }
-    private static io.pulumi.aws.directconnect.GatewayAssociationProposalArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.directconnect.GatewayAssociationProposalArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public GatewayAssociationProposal(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

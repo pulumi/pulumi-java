@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataset {
     private GetDataset() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatasetArgs.Builder a);
-    }
-    private static GetDatasetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatasetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets dataset by resource name.
- * 
-     */
-    public static CompletableFuture<GetDatasetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets dataset by resource name.
      * 

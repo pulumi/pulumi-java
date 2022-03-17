@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomer {
     private GetCustomer() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomerArgs.Builder a);
-    }
-    private static GetCustomerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer resource doesn't exist. Usually the result of an invalid name parameter. Return value: The Customer resource.
- * 
-     */
-    public static CompletableFuture<GetCustomerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer resource doesn't exist. Usually the result of an invalid name parameter. Return value: The Customer resource.
      * 

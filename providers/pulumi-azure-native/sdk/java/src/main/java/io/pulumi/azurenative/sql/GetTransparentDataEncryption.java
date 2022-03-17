@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransparentDataEncryption {
     private GetTransparentDataEncryption() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransparentDataEncryptionArgs.Builder a);
-    }
-    private static GetTransparentDataEncryptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransparentDataEncryptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a database transparent data encryption configuration.
- * API Version: 2014-04-01.
- * 
-     *
-     * Represents a database transparent data encryption configuration.
- * 
-     */
-    public static CompletableFuture<GetTransparentDataEncryptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a database transparent data encryption configuration.
      * API Version: 2014-04-01.

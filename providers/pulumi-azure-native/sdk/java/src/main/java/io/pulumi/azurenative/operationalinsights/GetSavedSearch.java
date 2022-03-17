@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSavedSearch {
     private GetSavedSearch() {}
-    public interface BuilderApplicator {
-        public void apply(GetSavedSearchArgs.Builder a);
-    }
-    private static GetSavedSearchArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSavedSearchArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Value object for saved search results.
- * API Version: 2020-08-01.
- * 
-     *
-     * Value object for saved search results.
- * 
-     */
-    public static CompletableFuture<GetSavedSearchResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Value object for saved search results.
      * API Version: 2020-08-01.

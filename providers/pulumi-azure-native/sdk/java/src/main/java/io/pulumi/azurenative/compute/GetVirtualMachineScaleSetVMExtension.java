@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetVMExtension {
     private GetVirtualMachineScaleSetVMExtension() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualMachineScaleSetVMExtensionArgs.Builder a);
-    }
-    private static GetVirtualMachineScaleSetVMExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualMachineScaleSetVMExtensionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a VMSS VM Extension.
- * API Version: 2021-03-01.
- * 
-     *
-     * Describes a VMSS VM Extension.
- * 
-     */
-    public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a VMSS VM Extension.
      * API Version: 2021-03-01.

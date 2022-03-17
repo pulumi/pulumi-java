@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetService {
     private GetService() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceArgs.Builder a);
-    }
-    private static GetServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The description of the Windows IoT Device Service.
- * API Version: 2019-06-01.
- * 
-     *
-     * The description of the Windows IoT Device Service.
- * 
-     */
-    public static CompletableFuture<GetServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The description of the Windows IoT Device Service.
      * API Version: 2019-06-01.

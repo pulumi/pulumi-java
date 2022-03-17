@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationRegistration {
     private GetNotificationRegistration() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationRegistrationArgs.Builder a);
-    }
-    private static GetNotificationRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationRegistrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The notification registration definition.
- * API Version: 2020-11-20.
- * 
-     *
-     * The notification registration definition.
- * 
-     */
-    public static CompletableFuture<GetNotificationRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The notification registration definition.
      * API Version: 2020-11-20.

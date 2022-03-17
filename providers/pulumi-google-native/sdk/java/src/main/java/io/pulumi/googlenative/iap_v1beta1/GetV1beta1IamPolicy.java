@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetV1beta1IamPolicy {
     private GetV1beta1IamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetV1beta1IamPolicyArgs.Builder a);
-    }
-    private static GetV1beta1IamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetV1beta1IamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
- * 
-     */
-    public static CompletableFuture<GetV1beta1IamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
      * 

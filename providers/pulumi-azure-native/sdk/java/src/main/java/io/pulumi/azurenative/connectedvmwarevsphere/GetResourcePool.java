@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourcePool {
     private GetResourcePool() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourcePoolArgs.Builder a);
-    }
-    private static GetResourcePoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourcePoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Define the resourcePool.
- * API Version: 2020-10-01-preview.
- * 
-     *
-     * Define the resourcePool.
- * 
-     */
-    public static CompletableFuture<GetResourcePoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Define the resourcePool.
      * API Version: 2020-10-01-preview.

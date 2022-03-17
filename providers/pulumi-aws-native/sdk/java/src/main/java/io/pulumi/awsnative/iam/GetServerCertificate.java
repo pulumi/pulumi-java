@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerCertificate {
     private GetServerCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerCertificateArgs.Builder a);
-    }
-    private static GetServerCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::IAM::ServerCertificate
- * 
-     */
-    public static CompletableFuture<GetServerCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::IAM::ServerCertificate
      * 

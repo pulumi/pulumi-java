@@ -106,22 +106,6 @@ public class SmsPreferences extends io.pulumi.resources.CustomResource {
         return this.usageReportS3Bucket;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable SmsPreferencesArgs.Builder a);
-    }
-    private static io.pulumi.aws.sns.SmsPreferencesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.sns.SmsPreferencesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SmsPreferences(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

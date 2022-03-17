@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplicationDefinition {
     private GetApplicationDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationDefinitionArgs.Builder a);
-    }
-    private static GetApplicationDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about managed application definition.
- * API Version: 2019-07-01.
- * 
-     *
-     * Information about managed application definition.
- * 
-     */
-    public static CompletableFuture<GetApplicationDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about managed application definition.
      * API Version: 2019-07-01.

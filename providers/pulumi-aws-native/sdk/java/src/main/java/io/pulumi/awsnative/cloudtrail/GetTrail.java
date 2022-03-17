@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTrail {
     private GetTrail() {}
-    public interface BuilderApplicator {
-        public void apply(GetTrailArgs.Builder a);
-    }
-    private static GetTrailArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTrailArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails can exist in a region, irrespective of the region in which they were created.
- * 
-     */
-    public static CompletableFuture<GetTrailResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails can exist in a region, irrespective of the region in which they were created.
      * 

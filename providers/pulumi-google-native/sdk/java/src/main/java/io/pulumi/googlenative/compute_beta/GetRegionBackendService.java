@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionBackendService {
     private GetRegionBackendService() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionBackendServiceArgs.Builder a);
-    }
-    private static GetRegionBackendServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionBackendServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified regional BackendService resource.
- * 
-     */
-    public static CompletableFuture<GetRegionBackendServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified regional BackendService resource.
      * 

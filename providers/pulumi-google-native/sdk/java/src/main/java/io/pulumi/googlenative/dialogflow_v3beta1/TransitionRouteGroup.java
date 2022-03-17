@@ -62,22 +62,6 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
         return this.transitionRoutes;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TransitionRouteGroupArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.dialogflow_v3beta1.TransitionRouteGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.dialogflow_v3beta1.TransitionRouteGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public TransitionRouteGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayBgpPeerStatus {
     private GetVirtualNetworkGatewayBgpPeerStatus() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualNetworkGatewayBgpPeerStatusArgs.Builder a);
-    }
-    private static GetVirtualNetworkGatewayBgpPeerStatusArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualNetworkGatewayBgpPeerStatusArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response for list BGP peer status API service call.
- * API Version: 2020-11-01.
- * 
-     *
-     * Response for list BGP peer status API service call.
- * 
-     */
-    public static CompletableFuture<GetVirtualNetworkGatewayBgpPeerStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response for list BGP peer status API service call.
      * API Version: 2020-11-01.

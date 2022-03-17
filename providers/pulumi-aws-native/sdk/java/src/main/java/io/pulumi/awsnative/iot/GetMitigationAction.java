@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMitigationAction {
     private GetMitigationAction() {}
-    public interface BuilderApplicator {
-        public void apply(GetMitigationActionArgs.Builder a);
-    }
-    private static GetMitigationActionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMitigationActionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Mitigation actions can be used to take actions to mitigate issues that were found in an Audit finding or Detect violation.
- * 
-     */
-    public static CompletableFuture<GetMitigationActionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Mitigation actions can be used to take actions to mitigate issues that were found in an Audit finding or Detect violation.
      * 

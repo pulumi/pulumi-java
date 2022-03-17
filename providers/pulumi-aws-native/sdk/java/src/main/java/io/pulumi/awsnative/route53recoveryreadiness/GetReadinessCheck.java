@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReadinessCheck {
     private GetReadinessCheck() {}
-    public interface BuilderApplicator {
-        public void apply(GetReadinessCheckArgs.Builder a);
-    }
-    private static GetReadinessCheckArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReadinessCheckArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Aws Route53 Recovery Readiness Check Schema and API specification.
- * 
-     */
-    public static CompletableFuture<GetReadinessCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Aws Route53 Recovery Readiness Check Schema and API specification.
      * 

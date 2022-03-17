@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDistributedAvailabilityGroup {
     private GetDistributedAvailabilityGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetDistributedAvailabilityGroupArgs.Builder a);
-    }
-    private static GetDistributedAvailabilityGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDistributedAvailabilityGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Distributed availability group between box and Sql Managed Instance.
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * Distributed availability group between box and Sql Managed Instance.
- * 
-     */
-    public static CompletableFuture<GetDistributedAvailabilityGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Distributed availability group between box and Sql Managed Instance.
      * API Version: 2021-05-01-preview.

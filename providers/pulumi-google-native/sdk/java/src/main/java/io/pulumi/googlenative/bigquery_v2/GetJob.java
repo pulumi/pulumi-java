@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetJob {
     private GetJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetJobArgs.Builder a);
-    }
-    private static GetJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns information about a specific job. Job information is available for a six month period after creation. Requires that you're the person who ran the job, or have the Is Owner project role.
- * 
-     */
-    public static CompletableFuture<GetJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns information about a specific job. Job information is available for a six month period after creation. Requires that you're the person who ran the job, or have the Is Owner project role.
      * 

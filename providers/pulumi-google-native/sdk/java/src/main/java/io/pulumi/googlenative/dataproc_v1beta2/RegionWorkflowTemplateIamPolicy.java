@@ -65,22 +65,6 @@ public class RegionWorkflowTemplateIamPolicy extends io.pulumi.resources.CustomR
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RegionWorkflowTemplateIamPolicyArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.dataproc_v1beta2.RegionWorkflowTemplateIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.dataproc_v1beta2.RegionWorkflowTemplateIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RegionWorkflowTemplateIamPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

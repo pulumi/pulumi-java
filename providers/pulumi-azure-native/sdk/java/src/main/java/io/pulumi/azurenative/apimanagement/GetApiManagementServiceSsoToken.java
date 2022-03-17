@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiManagementServiceSsoToken {
     private GetApiManagementServiceSsoToken() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiManagementServiceSsoTokenArgs.Builder a);
-    }
-    private static GetApiManagementServiceSsoTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiManagementServiceSsoTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The response of the GetSsoToken operation.
- * API Version: 2020-12-01.
- * 
-     *
-     * The response of the GetSsoToken operation.
- * 
-     */
-    public static CompletableFuture<GetApiManagementServiceSsoTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The response of the GetSsoToken operation.
      * API Version: 2020-12-01.

@@ -145,22 +145,6 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(IotConnectorFhirDestinationArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.healthcareapis.IotConnectorFhirDestinationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.healthcareapis.IotConnectorFhirDestinationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public IotConnectorFhirDestination(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationRule {
     private GetNotificationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationRuleArgs.Builder a);
-    }
-    private static GetNotificationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
- * 
-     */
-    public static CompletableFuture<GetNotificationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
      * 

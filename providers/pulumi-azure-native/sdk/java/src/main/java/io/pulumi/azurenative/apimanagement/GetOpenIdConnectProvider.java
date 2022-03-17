@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOpenIdConnectProvider {
     private GetOpenIdConnectProvider() {}
-    public interface BuilderApplicator {
-        public void apply(GetOpenIdConnectProviderArgs.Builder a);
-    }
-    private static GetOpenIdConnectProviderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOpenIdConnectProviderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * OpenId Connect Provider details.
- * API Version: 2020-12-01.
- * 
-     *
-     * OpenId Connect Provider details.
- * 
-     */
-    public static CompletableFuture<GetOpenIdConnectProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * OpenId Connect Provider details.
      * API Version: 2020-12-01.

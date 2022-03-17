@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHmacKey {
     private GetHmacKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetHmacKeyArgs.Builder a);
-    }
-    private static GetHmacKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHmacKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves an HMAC key's metadata
- * 
-     */
-    public static CompletableFuture<GetHmacKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves an HMAC key's metadata
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomResourceProvider {
     private GetCustomResourceProvider() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomResourceProviderArgs.Builder a);
-    }
-    private static GetCustomResourceProviderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomResourceProviderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A manifest file that defines the custom resource provider resources.
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * A manifest file that defines the custom resource provider resources.
- * 
-     */
-    public static CompletableFuture<GetCustomResourceProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A manifest file that defines the custom resource provider resources.
      * API Version: 2018-09-01-preview.

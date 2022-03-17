@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBookmark {
     private GetBookmark() {}
-    public interface BuilderApplicator {
-        public void apply(GetBookmarkArgs.Builder a);
-    }
-    private static GetBookmarkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBookmarkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a bookmark in Azure Security Insights.
- * API Version: 2020-01-01.
- * 
-     *
-     * Represents a bookmark in Azure Security Insights.
- * 
-     */
-    public static CompletableFuture<GetBookmarkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a bookmark in Azure Security Insights.
      * API Version: 2020-01-01.

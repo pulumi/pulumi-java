@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAttributeDefinition {
     private GetAttributeDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetAttributeDefinitionArgs.Builder a);
-    }
-    private static GetAttributeDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAttributeDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified Attribute definition.
- * 
-     */
-    public static CompletableFuture<GetAttributeDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified Attribute definition.
      * 

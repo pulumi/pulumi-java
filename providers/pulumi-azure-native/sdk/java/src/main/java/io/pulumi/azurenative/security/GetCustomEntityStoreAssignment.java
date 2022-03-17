@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomEntityStoreAssignment {
     private GetCustomEntityStoreAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomEntityStoreAssignmentArgs.Builder a);
-    }
-    private static GetCustomEntityStoreAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomEntityStoreAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Custom entity store assignment
- * API Version: 2021-07-01-preview.
- * 
-     *
-     * Custom entity store assignment
- * 
-     */
-    public static CompletableFuture<GetCustomEntityStoreAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Custom entity store assignment
      * API Version: 2021-07-01-preview.

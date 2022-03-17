@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReadOnlyFollowingDatabase {
     private GetReadOnlyFollowingDatabase() {}
-    public interface BuilderApplicator {
-        public void apply(GetReadOnlyFollowingDatabaseArgs.Builder a);
-    }
-    private static GetReadOnlyFollowingDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReadOnlyFollowingDatabaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing a read only following database.
- * API Version: 2021-01-01.
- * 
-     *
-     * Class representing a read only following database.
- * 
-     */
-    public static CompletableFuture<GetReadOnlyFollowingDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing a read only following database.
      * API Version: 2021-01-01.

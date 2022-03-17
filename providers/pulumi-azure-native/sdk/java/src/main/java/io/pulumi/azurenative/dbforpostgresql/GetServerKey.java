@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerKey {
     private GetServerKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerKeyArgs.Builder a);
-    }
-    private static GetServerKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A PostgreSQL Server key.
- * API Version: 2020-01-01.
- * 
-     *
-     * A PostgreSQL Server key.
- * 
-     */
-    public static CompletableFuture<GetServerKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A PostgreSQL Server key.
      * API Version: 2020-01-01.

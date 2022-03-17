@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualHubRouteTableV2 {
     private GetVirtualHubRouteTableV2() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualHubRouteTableV2Args.Builder a);
-    }
-    private static GetVirtualHubRouteTableV2Args buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualHubRouteTableV2Args.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * VirtualHubRouteTableV2 Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * VirtualHubRouteTableV2 Resource.
- * 
-     */
-    public static CompletableFuture<GetVirtualHubRouteTableV2Result> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * VirtualHubRouteTableV2 Resource.
      * API Version: 2020-11-01.

@@ -78,22 +78,6 @@ public class PodSecurityPolicy extends io.pulumi.resources.CustomResource {
         return this.spec;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable PodSecurityPolicyArgs.Builder a);
-    }
-    private static io.pulumi.kubernetes.extensions_v1beta1.PodSecurityPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.kubernetes.extensions_v1beta1.PodSecurityPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PodSecurityPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

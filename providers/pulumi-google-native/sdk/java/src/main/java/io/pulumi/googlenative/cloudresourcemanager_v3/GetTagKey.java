@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTagKey {
     private GetTagKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetTagKeyArgs.Builder a);
-    }
-    private static GetTagKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTagKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
- * 
-     */
-    public static CompletableFuture<GetTagKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGalleryImageVersion {
     private GetGalleryImageVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetGalleryImageVersionArgs.Builder a);
-    }
-    private static GetGalleryImageVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGalleryImageVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specifies information about the gallery image version that you want to create or update.
- * API Version: 2020-09-30.
- * 
-     *
-     * Specifies information about the gallery image version that you want to create or update.
- * 
-     */
-    public static CompletableFuture<GetGalleryImageVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specifies information about the gallery image version that you want to create or update.
      * API Version: 2020-09-30.

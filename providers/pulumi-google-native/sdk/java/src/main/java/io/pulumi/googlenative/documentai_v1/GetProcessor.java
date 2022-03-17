@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProcessor {
     private GetProcessor() {}
-    public interface BuilderApplicator {
-        public void apply(GetProcessorArgs.Builder a);
-    }
-    private static GetProcessorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProcessorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a processor detail.
- * 
-     */
-    public static CompletableFuture<GetProcessorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a processor detail.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRole {
     private GetRole() {}
-    public interface BuilderApplicator {
-        public void apply(GetRoleArgs.Builder a);
-    }
-    private static GetRoleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRoleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::IAM::Role
- * 
-     */
-    public static CompletableFuture<GetRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::IAM::Role
      * 

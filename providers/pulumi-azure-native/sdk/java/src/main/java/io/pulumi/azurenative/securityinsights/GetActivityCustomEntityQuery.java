@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetActivityCustomEntityQuery {
     private GetActivityCustomEntityQuery() {}
-    public interface BuilderApplicator {
-        public void apply(GetActivityCustomEntityQueryArgs.Builder a);
-    }
-    private static GetActivityCustomEntityQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetActivityCustomEntityQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents Activity entity query.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Represents Activity entity query.
- * 
-     */
-    public static CompletableFuture<GetActivityCustomEntityQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents Activity entity query.
      * API Version: 2021-03-01-preview.

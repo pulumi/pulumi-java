@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDedicatedHostGroup {
     private GetDedicatedHostGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetDedicatedHostGroupArgs.Builder a);
-    }
-    private static GetDedicatedHostGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDedicatedHostGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
- * API Version: 2020-12-01.
- * 
-     *
-     * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
- * 
-     */
-    public static CompletableFuture<GetDedicatedHostGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
      * API Version: 2020-12-01.

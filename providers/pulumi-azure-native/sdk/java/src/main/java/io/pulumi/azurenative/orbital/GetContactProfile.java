@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContactProfile {
     private GetContactProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetContactProfileArgs.Builder a);
-    }
-    private static GetContactProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContactProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Customer creates a Contact Profile Resource, which will contain all of the configurations required for scheduling a contact.
- * API Version: 2021-04-04-preview.
- * 
-     *
-     * Customer creates a Contact Profile Resource, which will contain all of the configurations required for scheduling a contact.
- * 
-     */
-    public static CompletableFuture<GetContactProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Customer creates a Contact Profile Resource, which will contain all of the configurations required for scheduling a contact.
      * API Version: 2021-04-04-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWorkspaceCollectionAccessKeys {
     private ListWorkspaceCollectionAccessKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListWorkspaceCollectionAccessKeysArgs.Builder a);
-    }
-    private static ListWorkspaceCollectionAccessKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWorkspaceCollectionAccessKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2016-01-29.
- * 
-     */
-    public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2016-01-29.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserSettings {
     private GetUserSettings() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserSettingsArgs.Builder a);
-    }
-    private static GetUserSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserSettingsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response to get user settings
- * API Version: 2018-10-01.
- * 
-     *
-     * Response to get user settings
- * 
-     */
-    public static CompletableFuture<GetUserSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response to get user settings
      * API Version: 2018-10-01.

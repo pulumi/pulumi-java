@@ -99,22 +99,6 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DomainOwnershipIdentifierArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.domainregistration.DomainOwnershipIdentifierArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.domainregistration.DomainOwnershipIdentifierArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DomainOwnershipIdentifier(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

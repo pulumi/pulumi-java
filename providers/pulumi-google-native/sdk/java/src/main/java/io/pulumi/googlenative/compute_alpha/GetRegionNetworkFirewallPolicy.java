@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionNetworkFirewallPolicy {
     private GetRegionNetworkFirewallPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionNetworkFirewallPolicyArgs.Builder a);
-    }
-    private static GetRegionNetworkFirewallPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionNetworkFirewallPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified network firewall policy.
- * 
-     */
-    public static CompletableFuture<GetRegionNetworkFirewallPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified network firewall policy.
      * 

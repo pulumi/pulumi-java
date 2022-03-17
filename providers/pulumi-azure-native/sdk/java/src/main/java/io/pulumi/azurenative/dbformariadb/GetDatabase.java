@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDatabase {
     private GetDatabase() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatabaseArgs.Builder a);
-    }
-    private static GetDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatabaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a Database.
- * API Version: 2018-06-01.
- * 
-     *
-     * Represents a Database.
- * 
-     */
-    public static CompletableFuture<GetDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a Database.
      * API Version: 2018-06-01.

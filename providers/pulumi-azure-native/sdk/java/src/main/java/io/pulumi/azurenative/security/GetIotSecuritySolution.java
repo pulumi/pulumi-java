@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIotSecuritySolution {
     private GetIotSecuritySolution() {}
-    public interface BuilderApplicator {
-        public void apply(GetIotSecuritySolutionArgs.Builder a);
-    }
-    private static GetIotSecuritySolutionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIotSecuritySolutionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * IoT Security solution configuration and resource information.
- * API Version: 2019-08-01.
- * 
-     *
-     * IoT Security solution configuration and resource information.
- * 
-     */
-    public static CompletableFuture<GetIotSecuritySolutionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * IoT Security solution configuration and resource information.
      * API Version: 2019-08-01.

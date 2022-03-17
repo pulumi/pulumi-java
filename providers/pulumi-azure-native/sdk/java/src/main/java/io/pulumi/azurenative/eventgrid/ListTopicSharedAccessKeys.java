@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListTopicSharedAccessKeys {
     private ListTopicSharedAccessKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListTopicSharedAccessKeysArgs.Builder a);
-    }
-    private static ListTopicSharedAccessKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListTopicSharedAccessKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Shared access keys of the Topic
- * API Version: 2020-06-01.
- * 
-     *
-     * Shared access keys of the Topic
- * 
-     */
-    public static CompletableFuture<ListTopicSharedAccessKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Shared access keys of the Topic
      * API Version: 2020-06-01.

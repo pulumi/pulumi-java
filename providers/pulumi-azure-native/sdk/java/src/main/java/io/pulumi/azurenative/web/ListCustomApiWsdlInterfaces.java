@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListCustomApiWsdlInterfaces {
     private ListCustomApiWsdlInterfaces() {}
-    public interface BuilderApplicator {
-        public void apply(ListCustomApiWsdlInterfacesArgs.Builder a);
-    }
-    private static ListCustomApiWsdlInterfacesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListCustomApiWsdlInterfacesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A list of custom API WSDL interfaces
- * API Version: 2016-06-01.
- * 
-     *
-     * A list of custom API WSDL interfaces
- * 
-     */
-    public static CompletableFuture<ListCustomApiWsdlInterfacesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A list of custom API WSDL interfaces
      * API Version: 2016-06-01.

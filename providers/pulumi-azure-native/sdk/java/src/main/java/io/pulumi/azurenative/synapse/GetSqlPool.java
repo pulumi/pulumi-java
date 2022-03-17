@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlPool {
     private GetSqlPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlPoolArgs.Builder a);
-    }
-    private static GetSqlPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A SQL Analytics pool
- * API Version: 2021-03-01.
- * 
-     *
-     * A SQL Analytics pool
- * 
-     */
-    public static CompletableFuture<GetSqlPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A SQL Analytics pool
      * API Version: 2021-03-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAppProfile {
     private GetAppProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppProfileArgs.Builder a);
-    }
-    private static GetAppProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets information about an app profile.
- * 
-     */
-    public static CompletableFuture<GetAppProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets information about an app profile.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPreparedStatement {
     private GetPreparedStatement() {}
-    public interface BuilderApplicator {
-        public void apply(GetPreparedStatementArgs.Builder a);
-    }
-    private static GetPreparedStatementArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPreparedStatementArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Athena::PreparedStatement
- * 
-     */
-    public static CompletableFuture<GetPreparedStatementResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Athena::PreparedStatement
      * 

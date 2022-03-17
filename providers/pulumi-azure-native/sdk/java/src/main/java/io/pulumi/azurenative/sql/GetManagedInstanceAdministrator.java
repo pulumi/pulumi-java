@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagedInstanceAdministrator {
     private GetManagedInstanceAdministrator() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagedInstanceAdministratorArgs.Builder a);
-    }
-    private static GetManagedInstanceAdministratorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagedInstanceAdministratorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure SQL managed instance administrator.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An Azure SQL managed instance administrator.
- * 
-     */
-    public static CompletableFuture<GetManagedInstanceAdministratorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure SQL managed instance administrator.
      * API Version: 2020-11-01-preview.

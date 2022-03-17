@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSyncAgent {
     private GetSyncAgent() {}
-    public interface BuilderApplicator {
-        public void apply(GetSyncAgentArgs.Builder a);
-    }
-    private static GetSyncAgentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSyncAgentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure SQL Database sync agent.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An Azure SQL Database sync agent.
- * 
-     */
-    public static CompletableFuture<GetSyncAgentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure SQL Database sync agent.
      * API Version: 2020-11-01-preview.

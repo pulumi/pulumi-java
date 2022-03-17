@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTask {
     private GetTask() {}
-    public interface BuilderApplicator {
-        public void apply(GetTaskArgs.Builder a);
-    }
-    private static GetTaskArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTaskArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a task.
- * 
-     */
-    public static CompletableFuture<GetTaskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a task.
      * 

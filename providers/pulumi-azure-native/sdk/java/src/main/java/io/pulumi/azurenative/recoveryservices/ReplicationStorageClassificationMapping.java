@@ -88,22 +88,6 @@ public class ReplicationStorageClassificationMapping extends io.pulumi.resources
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ReplicationStorageClassificationMappingArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.recoveryservices.ReplicationStorageClassificationMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.recoveryservices.ReplicationStorageClassificationMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ReplicationStorageClassificationMapping(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

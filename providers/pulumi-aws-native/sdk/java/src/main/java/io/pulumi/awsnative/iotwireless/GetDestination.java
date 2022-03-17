@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDestination {
     private GetDestination() {}
-    public interface BuilderApplicator {
-        public void apply(GetDestinationArgs.Builder a);
-    }
-    private static GetDestinationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDestinationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Destination's resource schema demonstrating some basic constructs and validation rules.
- * 
-     */
-    public static CompletableFuture<GetDestinationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Destination's resource schema demonstrating some basic constructs and validation rules.
      * 

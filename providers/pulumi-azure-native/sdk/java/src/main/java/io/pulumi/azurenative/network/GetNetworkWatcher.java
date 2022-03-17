@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkWatcher {
     private GetNetworkWatcher() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkWatcherArgs.Builder a);
-    }
-    private static GetNetworkWatcherArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkWatcherArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Network watcher in a resource group.
- * API Version: 2020-11-01.
- * 
-     *
-     * Network watcher in a resource group.
- * 
-     */
-    public static CompletableFuture<GetNetworkWatcherResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Network watcher in a resource group.
      * API Version: 2020-11-01.

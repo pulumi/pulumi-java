@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSourceControl {
     private GetSourceControl() {}
-    public interface BuilderApplicator {
-        public void apply(GetSourceControlArgs.Builder a);
-    }
-    private static GetSourceControlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSourceControlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a SourceControl in Azure Security Insights.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Represents a SourceControl in Azure Security Insights.
- * 
-     */
-    public static CompletableFuture<GetSourceControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a SourceControl in Azure Security Insights.
      * API Version: 2021-03-01-preview.

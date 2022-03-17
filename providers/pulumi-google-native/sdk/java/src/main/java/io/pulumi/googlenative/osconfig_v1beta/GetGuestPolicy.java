@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGuestPolicy {
     private GetGuestPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetGuestPolicyArgs.Builder a);
-    }
-    private static GetGuestPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGuestPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get an OS Config guest policy.
- * 
-     */
-    public static CompletableFuture<GetGuestPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get an OS Config guest policy.
      * 

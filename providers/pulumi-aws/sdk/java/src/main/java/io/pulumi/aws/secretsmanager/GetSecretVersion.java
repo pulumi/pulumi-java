@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecretVersion {
     private GetSecretVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecretVersionArgs.Builder a);
-    }
-    private static GetSecretVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecretVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSecretVersion.
- * 
-     *
-     * A collection of values returned by getSecretVersion.
- * 
-     */
-    public static CompletableFuture<GetSecretVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source.
      * 

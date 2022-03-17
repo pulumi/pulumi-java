@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourcePolicy {
     private GetResourcePolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourcePolicyArgs.Builder a);
-    }
-    private static GetResourcePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourcePolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
- * 
-     *
-     * A collection of arguments for invoking getResourcePolicy.
- * 
-     *
-     * A collection of values returned by getResourcePolicy.
- * 
-     */
-    public static CompletableFuture<GetResourcePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
      * 

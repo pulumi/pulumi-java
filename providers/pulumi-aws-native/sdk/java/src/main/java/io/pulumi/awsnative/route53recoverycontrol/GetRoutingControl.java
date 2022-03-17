@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRoutingControl {
     private GetRoutingControl() {}
-    public interface BuilderApplicator {
-        public void apply(GetRoutingControlArgs.Builder a);
-    }
-    private static GetRoutingControlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRoutingControlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS Route53 Recovery Control Routing Control resource schema .
- * 
-     */
-    public static CompletableFuture<GetRoutingControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS Route53 Recovery Control Routing Control resource schema .
      * 

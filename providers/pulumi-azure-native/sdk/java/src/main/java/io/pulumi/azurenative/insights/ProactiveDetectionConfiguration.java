@@ -117,22 +117,6 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
         return this.sendEmailsToSubscriptionOwners;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ProactiveDetectionConfigurationArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.insights.ProactiveDetectionConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.insights.ProactiveDetectionConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ProactiveDetectionConfiguration(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

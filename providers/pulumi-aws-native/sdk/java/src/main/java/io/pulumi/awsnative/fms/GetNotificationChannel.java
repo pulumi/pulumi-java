@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
     private GetNotificationChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationChannelArgs.Builder a);
-    }
-    private static GetNotificationChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
- * 
-     */
-    public static CompletableFuture<GetNotificationChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
      * 

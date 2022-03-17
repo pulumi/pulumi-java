@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeviceGroup {
     private GetDeviceGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeviceGroupArgs.Builder a);
-    }
-    private static GetDeviceGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeviceGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Device group
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Device group
- * 
-     */
-    public static CompletableFuture<GetDeviceGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Device group
      * API Version: 2021-02-01-preview.

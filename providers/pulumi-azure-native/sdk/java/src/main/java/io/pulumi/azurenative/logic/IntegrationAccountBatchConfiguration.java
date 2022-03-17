@@ -103,22 +103,6 @@ public class IntegrationAccountBatchConfiguration extends io.pulumi.resources.Cu
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(IntegrationAccountBatchConfigurationArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.logic.IntegrationAccountBatchConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.logic.IntegrationAccountBatchConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public IntegrationAccountBatchConfiguration(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

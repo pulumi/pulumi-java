@@ -77,22 +77,6 @@ public class Secret extends io.pulumi.resources.CustomResource {
         return this.replication;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SecretArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.secretmanager_v1beta1.SecretArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.secretmanager_v1beta1.SecretArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Secret(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

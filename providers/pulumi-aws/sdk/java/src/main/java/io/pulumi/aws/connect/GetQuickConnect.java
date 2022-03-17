@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetQuickConnect {
     private GetQuickConnect() {}
-    public interface BuilderApplicator {
-        public void apply(GetQuickConnectArgs.Builder a);
-    }
-    private static GetQuickConnectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetQuickConnectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific Amazon Connect Quick Connect.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getQuickConnect.
- * 
-     *
-     * A collection of values returned by getQuickConnect.
- * 
-     */
-    public static CompletableFuture<GetQuickConnectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific Amazon Connect Quick Connect.
      * 

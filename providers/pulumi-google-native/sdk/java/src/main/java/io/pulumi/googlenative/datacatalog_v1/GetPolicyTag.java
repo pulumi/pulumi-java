@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPolicyTag {
     private GetPolicyTag() {}
-    public interface BuilderApplicator {
-        public void apply(GetPolicyTagArgs.Builder a);
-    }
-    private static GetPolicyTagArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPolicyTagArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a policy tag.
- * 
-     */
-    public static CompletableFuture<GetPolicyTagResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a policy tag.
      * 

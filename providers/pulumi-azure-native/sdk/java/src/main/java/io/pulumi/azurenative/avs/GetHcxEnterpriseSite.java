@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHcxEnterpriseSite {
     private GetHcxEnterpriseSite() {}
-    public interface BuilderApplicator {
-        public void apply(GetHcxEnterpriseSiteArgs.Builder a);
-    }
-    private static GetHcxEnterpriseSiteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHcxEnterpriseSiteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An HCX Enterprise Site resource
- * API Version: 2020-03-20.
- * 
-     *
-     * An HCX Enterprise Site resource
- * 
-     */
-    public static CompletableFuture<GetHcxEnterpriseSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An HCX Enterprise Site resource
      * API Version: 2020-03-20.

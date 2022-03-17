@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBlobDataSet {
     private GetBlobDataSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetBlobDataSetArgs.Builder a);
-    }
-    private static GetBlobDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBlobDataSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure storage blob data set.
- * API Version: 2020-09-01.
- * 
-     *
-     * An Azure storage blob data set.
- * 
-     */
-    public static CompletableFuture<GetBlobDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure storage blob data set.
      * API Version: 2020-09-01.

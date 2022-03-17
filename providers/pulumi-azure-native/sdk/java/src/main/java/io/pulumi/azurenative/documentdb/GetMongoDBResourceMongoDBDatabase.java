@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMongoDBResourceMongoDBDatabase {
     private GetMongoDBResourceMongoDBDatabase() {}
-    public interface BuilderApplicator {
-        public void apply(GetMongoDBResourceMongoDBDatabaseArgs.Builder a);
-    }
-    private static GetMongoDBResourceMongoDBDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMongoDBResourceMongoDBDatabaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB MongoDB database.
- * API Version: 2021-03-15.
- * 
-     *
-     * An Azure Cosmos DB MongoDB database.
- * 
-     */
-    public static CompletableFuture<GetMongoDBResourceMongoDBDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB MongoDB database.
      * API Version: 2021-03-15.

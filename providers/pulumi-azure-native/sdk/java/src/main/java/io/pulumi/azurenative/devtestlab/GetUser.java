@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUser {
     private GetUser() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserArgs.Builder a);
-    }
-    private static GetUserArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Profile of a lab user.
- * API Version: 2018-09-15.
- * 
-     *
-     * Profile of a lab user.
- * 
-     */
-    public static CompletableFuture<GetUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Profile of a lab user.
      * API Version: 2018-09-15.

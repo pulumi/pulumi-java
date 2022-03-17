@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetADLSGen2FileSystemDataSet {
     private GetADLSGen2FileSystemDataSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetADLSGen2FileSystemDataSetArgs.Builder a);
-    }
-    private static GetADLSGen2FileSystemDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetADLSGen2FileSystemDataSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An ADLS Gen 2 file system data set.
- * API Version: 2020-09-01.
- * 
-     *
-     * An ADLS Gen 2 file system data set.
- * 
-     */
-    public static CompletableFuture<GetADLSGen2FileSystemDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An ADLS Gen 2 file system data set.
      * API Version: 2020-09-01.

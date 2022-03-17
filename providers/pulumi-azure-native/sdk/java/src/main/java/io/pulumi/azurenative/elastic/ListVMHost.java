@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListVMHost {
     private ListVMHost() {}
-    public interface BuilderApplicator {
-        public void apply(ListVMHostArgs.Builder a);
-    }
-    private static ListVMHostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListVMHostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response of a list operation.
- * API Version: 2020-07-01.
- * 
-     *
-     * Response of a list operation.
- * 
-     */
-    public static CompletableFuture<ListVMHostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response of a list operation.
      * API Version: 2020-07-01.

@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSpotPrice {
     private GetSpotPrice() {}
-    public interface BuilderApplicator {
-        public void apply(GetSpotPriceArgs.Builder a);
-    }
-    private static GetSpotPriceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSpotPriceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about most recent Spot Price for a given EC2 instance.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSpotPrice.
- * 
-     *
-     * A collection of values returned by getSpotPrice.
- * 
-     */
-    public static CompletableFuture<GetSpotPriceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about most recent Spot Price for a given EC2 instance.
      * 

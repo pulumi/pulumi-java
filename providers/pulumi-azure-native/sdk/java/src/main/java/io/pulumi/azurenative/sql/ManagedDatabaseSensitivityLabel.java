@@ -192,22 +192,6 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ManagedDatabaseSensitivityLabelArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.sql.ManagedDatabaseSensitivityLabelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.sql.ManagedDatabaseSensitivityLabelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ManagedDatabaseSensitivityLabel(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

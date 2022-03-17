@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReplicationMigrationItem {
     private GetReplicationMigrationItem() {}
-    public interface BuilderApplicator {
-        public void apply(GetReplicationMigrationItemArgs.Builder a);
-    }
-    private static GetReplicationMigrationItemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReplicationMigrationItemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Migration item.
- * API Version: 2018-07-10.
- * 
-     *
-     * Migration item.
- * 
-     */
-    public static CompletableFuture<GetReplicationMigrationItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Migration item.
      * API Version: 2018-07-10.

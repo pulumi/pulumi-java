@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPublicTypeVersion {
     private GetPublicTypeVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetPublicTypeVersionArgs.Builder a);
-    }
-    private static GetPublicTypeVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPublicTypeVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Test and Publish a resource that has been registered in the CloudFormation Registry.
- * 
-     */
-    public static CompletableFuture<GetPublicTypeVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Test and Publish a resource that has been registered in the CloudFormation Registry.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserDataMapping {
     private GetUserDataMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserDataMappingArgs.Builder a);
-    }
-    private static GetUserDataMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserDataMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified User data mapping.
- * 
-     */
-    public static CompletableFuture<GetUserDataMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified User data mapping.
      * 

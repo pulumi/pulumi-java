@@ -127,22 +127,6 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
         return this.publicKeys;
     }
 
-    public interface BuilderApplicator {
-        public void apply(EdgeCacheKeysetArgs.Builder a);
-    }
-    private static io.pulumi.gcp.networkservices.EdgeCacheKeysetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.networkservices.EdgeCacheKeysetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public EdgeCacheKeyset(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

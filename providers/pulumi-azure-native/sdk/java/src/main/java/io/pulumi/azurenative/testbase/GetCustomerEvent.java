@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomerEvent {
     private GetCustomerEvent() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomerEventArgs.Builder a);
-    }
-    private static GetCustomerEventArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomerEventArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Customer Notification Event resource.
- * API Version: 2020-12-16-preview.
- * 
-     *
-     * The Customer Notification Event resource.
- * 
-     */
-    public static CompletableFuture<GetCustomerEventResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Customer Notification Event resource.
      * API Version: 2020-12-16-preview.

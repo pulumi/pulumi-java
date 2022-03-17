@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourceRecordSet {
     private GetResourceRecordSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceRecordSetArgs.Builder a);
-    }
-    private static GetResourceRecordSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceRecordSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Fetches the representation of an existing ResourceRecordSet.
- * 
-     */
-    public static CompletableFuture<GetResourceRecordSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Fetches the representation of an existing ResourceRecordSet.
      * 

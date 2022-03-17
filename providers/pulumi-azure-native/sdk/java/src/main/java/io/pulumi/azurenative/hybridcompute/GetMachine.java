@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMachine {
     private GetMachine() {}
-    public interface BuilderApplicator {
-        public void apply(GetMachineArgs.Builder a);
-    }
-    private static GetMachineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMachineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a hybrid machine.
- * API Version: 2020-08-02.
- * 
-     *
-     * Describes a hybrid machine.
- * 
-     */
-    public static CompletableFuture<GetMachineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a hybrid machine.
      * API Version: 2020-08-02.

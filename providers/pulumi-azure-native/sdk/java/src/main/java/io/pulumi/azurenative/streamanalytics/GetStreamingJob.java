@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStreamingJob {
     private GetStreamingJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetStreamingJobArgs.Builder a);
-    }
-    private static GetStreamingJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStreamingJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A streaming job object, containing all information associated with the named streaming job.
- * API Version: 2016-03-01.
- * 
-     *
-     * A streaming job object, containing all information associated with the named streaming job.
- * 
-     */
-    public static CompletableFuture<GetStreamingJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A streaming job object, containing all information associated with the named streaming job.
      * API Version: 2016-03-01.

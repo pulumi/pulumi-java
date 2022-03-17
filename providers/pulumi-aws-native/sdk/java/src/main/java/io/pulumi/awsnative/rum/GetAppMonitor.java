@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAppMonitor {
     private GetAppMonitor() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppMonitorArgs.Builder a);
-    }
-    private static GetAppMonitorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppMonitorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::RUM::AppMonitor
- * 
-     */
-    public static CompletableFuture<GetAppMonitorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::RUM::AppMonitor
      * 

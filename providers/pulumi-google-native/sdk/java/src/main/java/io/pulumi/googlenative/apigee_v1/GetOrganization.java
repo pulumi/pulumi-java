@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrganization {
     private GetOrganization() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrganizationArgs.Builder a);
-    }
-    private static GetOrganizationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrganizationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the profile for an Apigee organization. See [Understanding organizations](https://cloud.google.com/apigee/docs/api-platform/fundamentals/organization-structure).
- * 
-     */
-    public static CompletableFuture<GetOrganizationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the profile for an Apigee organization. See [Understanding organizations](https://cloud.google.com/apigee/docs/api-platform/fundamentals/organization-structure).
      * 

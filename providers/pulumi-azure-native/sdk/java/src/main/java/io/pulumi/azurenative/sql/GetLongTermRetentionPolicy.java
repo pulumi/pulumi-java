@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLongTermRetentionPolicy {
     private GetLongTermRetentionPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetLongTermRetentionPolicyArgs.Builder a);
-    }
-    private static GetLongTermRetentionPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLongTermRetentionPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A long term retention policy.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A long term retention policy.
- * 
-     */
-    public static CompletableFuture<GetLongTermRetentionPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A long term retention policy.
      * API Version: 2020-11-01-preview.

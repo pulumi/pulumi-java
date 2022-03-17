@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubscriptionNetworkManagerConnection {
     private GetSubscriptionNetworkManagerConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubscriptionNetworkManagerConnectionArgs.Builder a);
-    }
-    private static GetSubscriptionNetworkManagerConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubscriptionNetworkManagerConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Network Manager Connection resource
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * The Network Manager Connection resource
- * 
-     */
-    public static CompletableFuture<GetSubscriptionNetworkManagerConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Network Manager Connection resource
      * API Version: 2021-05-01-preview.

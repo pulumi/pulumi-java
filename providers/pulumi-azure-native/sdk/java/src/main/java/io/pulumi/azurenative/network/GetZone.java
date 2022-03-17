@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetZone {
     private GetZone() {}
-    public interface BuilderApplicator {
-        public void apply(GetZoneArgs.Builder a);
-    }
-    private static GetZoneArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetZoneArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a DNS zone.
- * API Version: 2018-05-01.
- * 
-     *
-     * Describes a DNS zone.
- * 
-     */
-    public static CompletableFuture<GetZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a DNS zone.
      * API Version: 2018-05-01.

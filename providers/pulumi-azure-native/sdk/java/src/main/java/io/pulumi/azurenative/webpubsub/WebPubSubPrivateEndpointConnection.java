@@ -118,22 +118,6 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebPubSubPrivateEndpointConnectionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.webpubsub.WebPubSubPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.webpubsub.WebPubSubPrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebPubSubPrivateEndpointConnection(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

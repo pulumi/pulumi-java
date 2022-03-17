@@ -102,22 +102,6 @@ public class ManagementLockAtResourceGroupLevel extends io.pulumi.resources.Cust
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ManagementLockAtResourceGroupLevelArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.authorization.ManagementLockAtResourceGroupLevelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.authorization.ManagementLockAtResourceGroupLevelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ManagementLockAtResourceGroupLevel(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

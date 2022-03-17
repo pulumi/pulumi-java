@@ -49,22 +49,6 @@ public class PatchGroup extends io.pulumi.resources.CustomResource {
         return this.patchGroup;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PatchGroupArgs.Builder a);
-    }
-    private static io.pulumi.aws.ssm.PatchGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ssm.PatchGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PatchGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

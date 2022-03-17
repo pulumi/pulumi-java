@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMemberInvitation {
     private GetMemberInvitation() {}
-    public interface BuilderApplicator {
-        public void apply(GetMemberInvitationArgs.Builder a);
-    }
-    private static GetMemberInvitationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMemberInvitationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Detective::MemberInvitation
- * 
-     */
-    public static CompletableFuture<GetMemberInvitationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Detective::MemberInvitation
      * 

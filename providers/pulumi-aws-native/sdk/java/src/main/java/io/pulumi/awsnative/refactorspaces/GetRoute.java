@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRoute {
     private GetRoute() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouteArgs.Builder a);
-    }
-    private static GetRouteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of AWS::RefactorSpaces::Route Resource Type
- * 
-     */
-    public static CompletableFuture<GetRouteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of AWS::RefactorSpaces::Route Resource Type
      * 

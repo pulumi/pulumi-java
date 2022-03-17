@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDistributionConfigurations {
     private GetDistributionConfigurations() {}
-    public interface BuilderApplicator {
-        public void apply(GetDistributionConfigurationsArgs.Builder a);
-    }
-    private static GetDistributionConfigurationsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDistributionConfigurationsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDistributionConfigurations.
- * 
-     *
-     * A collection of values returned by getDistributionConfigurations.
- * 
-     */
-    public static CompletableFuture<GetDistributionConfigurationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
      * 

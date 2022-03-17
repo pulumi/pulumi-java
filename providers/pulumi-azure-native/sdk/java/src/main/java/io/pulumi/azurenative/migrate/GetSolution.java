@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSolution {
     private GetSolution() {}
-    public interface BuilderApplicator {
-        public void apply(GetSolutionArgs.Builder a);
-    }
-    private static GetSolutionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSolutionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Solution REST Resource.
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * Solution REST Resource.
- * 
-     */
-    public static CompletableFuture<GetSolutionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Solution REST Resource.
      * API Version: 2018-09-01-preview.

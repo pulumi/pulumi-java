@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPolicy {
     private GetPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetPolicyArgs.Builder a);
-    }
-    private static GetPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Policy.
- * API Version: 2018-09-15.
- * 
-     *
-     * A Policy.
- * 
-     */
-    public static CompletableFuture<GetPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Policy.
      * API Version: 2018-09-15.

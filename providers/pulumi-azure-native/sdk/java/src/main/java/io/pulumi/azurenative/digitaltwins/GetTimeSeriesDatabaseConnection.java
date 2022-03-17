@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTimeSeriesDatabaseConnection {
     private GetTimeSeriesDatabaseConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetTimeSeriesDatabaseConnectionArgs.Builder a);
-    }
-    private static GetTimeSeriesDatabaseConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTimeSeriesDatabaseConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a time series database connection resource.
- * API Version: 2021-06-30-preview.
- * 
-     *
-     * Describes a time series database connection resource.
- * 
-     */
-    public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a time series database connection resource.
      * API Version: 2021-06-30-preview.

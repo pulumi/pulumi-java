@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsForMIPPolicySync {
     private GetPrivateEndpointConnectionsForMIPPolicySync() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateEndpointConnectionsForMIPPolicySyncArgs.Builder a);
-    }
-    private static GetPrivateEndpointConnectionsForMIPPolicySyncArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateEndpointConnectionsForMIPPolicySyncArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Private Endpoint Connection resource.
- * API Version: 2021-03-08.
- * 
-     *
-     * The Private Endpoint Connection resource.
- * 
-     */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForMIPPolicySyncResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Private Endpoint Connection resource.
      * API Version: 2021-03-08.

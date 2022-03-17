@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCompany {
     private GetCompany() {}
-    public interface BuilderApplicator {
-        public void apply(GetCompanyArgs.Builder a);
-    }
-    private static GetCompanyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCompanyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves specified company.
- * 
-     */
-    public static CompletableFuture<GetCompanyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves specified company.
      * 

@@ -203,22 +203,6 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
         return this.upper;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RandomPasswordArgs.Builder a);
-    }
-    private static io.pulumi.random.RandomPasswordArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.random.RandomPasswordArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RandomPassword(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

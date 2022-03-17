@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRateBasedMod {
     private GetRateBasedMod() {}
-    public interface BuilderApplicator {
-        public void apply(GetRateBasedModArgs.Builder a);
-    }
-    private static GetRateBasedModArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRateBasedModArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getRateBasedMod.
- * 
-     *
-     * A collection of values returned by getRateBasedMod.
- * 
-     */
-    public static CompletableFuture<GetRateBasedModResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
      * 

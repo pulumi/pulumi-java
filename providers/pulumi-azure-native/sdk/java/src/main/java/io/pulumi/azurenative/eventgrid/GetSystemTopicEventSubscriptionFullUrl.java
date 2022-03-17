@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSystemTopicEventSubscriptionFullUrl {
     private GetSystemTopicEventSubscriptionFullUrl() {}
-    public interface BuilderApplicator {
-        public void apply(GetSystemTopicEventSubscriptionFullUrlArgs.Builder a);
-    }
-    private static GetSystemTopicEventSubscriptionFullUrlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSystemTopicEventSubscriptionFullUrlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Full endpoint url of an event subscription
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * Full endpoint url of an event subscription
- * 
-     */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Full endpoint url of an event subscription
      * API Version: 2021-06-01-preview.

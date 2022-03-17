@@ -207,22 +207,6 @@ public class Stack extends io.pulumi.resources.CustomResource {
         return this.userSettings;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable StackArgs.Builder a);
-    }
-    private static io.pulumi.aws.appstream.StackArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.appstream.StackArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Stack(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

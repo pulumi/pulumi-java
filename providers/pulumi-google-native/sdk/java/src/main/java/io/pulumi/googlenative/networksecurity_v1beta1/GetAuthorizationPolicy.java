@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAuthorizationPolicy {
     private GetAuthorizationPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetAuthorizationPolicyArgs.Builder a);
-    }
-    private static GetAuthorizationPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAuthorizationPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single AuthorizationPolicy.
- * 
-     */
-    public static CompletableFuture<GetAuthorizationPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single AuthorizationPolicy.
      * 

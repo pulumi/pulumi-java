@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagedPrefixList {
     private GetManagedPrefixList() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagedPrefixListArgs.Builder a);
-    }
-    private static GetManagedPrefixListArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagedPrefixListArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.ec2.ManagedPrefixList` provides details about a specific AWS prefix list or
- * customer-managed prefix list in the current region.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getManagedPrefixList.
- * 
-     *
-     * A collection of values returned by getManagedPrefixList.
- * 
-     */
-    public static CompletableFuture<GetManagedPrefixListResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.ec2.ManagedPrefixList` provides details about a specific AWS prefix list or
      * customer-managed prefix list in the current region.

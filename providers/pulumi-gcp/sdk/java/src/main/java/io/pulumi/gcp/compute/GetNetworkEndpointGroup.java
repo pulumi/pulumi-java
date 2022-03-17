@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkEndpointGroup {
     private GetNetworkEndpointGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkEndpointGroupArgs.Builder a);
-    }
-    private static GetNetworkEndpointGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkEndpointGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to access a Network Endpoint Group's attributes.
- * 
- * The NEG may be found by providing either a `self_link`, or a `name` and a `zone`.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getNetworkEndpointGroup.
- * 
-     *
-     * A collection of values returned by getNetworkEndpointGroup.
- * 
-     */
-    public static CompletableFuture<GetNetworkEndpointGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to access a Network Endpoint Group's attributes.
      * 

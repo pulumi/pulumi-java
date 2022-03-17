@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStaticMember {
     private GetStaticMember() {}
-    public interface BuilderApplicator {
-        public void apply(GetStaticMemberArgs.Builder a);
-    }
-    private static GetStaticMemberArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStaticMemberArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * StaticMember Item.
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * StaticMember Item.
- * 
-     */
-    public static CompletableFuture<GetStaticMemberResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * StaticMember Item.
      * API Version: 2021-05-01-preview.

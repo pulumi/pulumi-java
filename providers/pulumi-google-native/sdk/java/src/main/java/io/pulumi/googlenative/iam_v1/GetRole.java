@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRole {
     private GetRole() {}
-    public interface BuilderApplicator {
-        public void apply(GetRoleArgs.Builder a);
-    }
-    private static GetRoleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRoleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the definition of a Role.
- * 
-     */
-    public static CompletableFuture<GetRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the definition of a Role.
      * 

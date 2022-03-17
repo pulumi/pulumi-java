@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTaskDefinition {
     private GetTaskDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetTaskDefinitionArgs.Builder a);
-    }
-    private static GetTaskDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTaskDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Creates a gateway task definition.
- * 
-     */
-    public static CompletableFuture<GetTaskDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Creates a gateway task definition.
      * 

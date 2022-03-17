@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataIntegration {
     private GetDataIntegration() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataIntegrationArgs.Builder a);
-    }
-    private static GetDataIntegrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataIntegrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::AppIntegrations::DataIntegration
- * 
-     */
-    public static CompletableFuture<GetDataIntegrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::AppIntegrations::DataIntegration
      * 

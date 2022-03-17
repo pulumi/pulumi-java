@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAndroidApp {
     private GetAndroidApp() {}
-    public interface BuilderApplicator {
-        public void apply(GetAndroidAppArgs.Builder a);
-    }
-    private static GetAndroidAppArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAndroidAppArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified AndroidApp.
- * 
-     */
-    public static CompletableFuture<GetAndroidAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified AndroidApp.
      * 

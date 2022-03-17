@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListEASubscriptionListMigrationDatePost {
     private ListEASubscriptionListMigrationDatePost() {}
-    public interface BuilderApplicator {
-        public void apply(ListEASubscriptionListMigrationDatePostArgs.Builder a);
-    }
-    private static ListEASubscriptionListMigrationDatePostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListEASubscriptionListMigrationDatePostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Subscription migrate date information properties
- * API Version: 2017-10-01.
- * 
-     *
-     * Subscription migrate date information properties
- * 
-     */
-    public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Subscription migrate date information properties
      * API Version: 2017-10-01.

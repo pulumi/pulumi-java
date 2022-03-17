@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVPC {
     private GetVPC() {}
-    public interface BuilderApplicator {
-        public void apply(GetVPCArgs.Builder a);
-    }
-    private static GetVPCArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVPCArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::VPC
- * 
-     */
-    public static CompletableFuture<GetVPCResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::VPC
      * 

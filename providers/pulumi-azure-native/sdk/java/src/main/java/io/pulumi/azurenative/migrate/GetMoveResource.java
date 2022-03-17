@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMoveResource {
     private GetMoveResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetMoveResourceArgs.Builder a);
-    }
-    private static GetMoveResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMoveResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Defines the move resource.
- * API Version: 2021-01-01.
- * 
-     *
-     * Defines the move resource.
- * 
-     */
-    public static CompletableFuture<GetMoveResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Defines the move resource.
      * API Version: 2021-01-01.

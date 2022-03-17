@@ -76,22 +76,6 @@ public class RoleAssociation extends io.pulumi.resources.CustomResource {
         return this.roleArn;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RoleAssociationArgs.Builder a);
-    }
-    private static io.pulumi.aws.rds.RoleAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.rds.RoleAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RoleAssociation(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

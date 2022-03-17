@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCodeVersion {
     private GetCodeVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetCodeVersionArgs.Builder a);
-    }
-    private static GetCodeVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCodeVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Azure Resource Manager resource envelope.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Azure Resource Manager resource envelope.
- * 
-     */
-    public static CompletableFuture<GetCodeVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.

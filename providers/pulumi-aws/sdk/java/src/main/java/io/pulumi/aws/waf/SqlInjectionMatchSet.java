@@ -59,22 +59,6 @@ public class SqlInjectionMatchSet extends io.pulumi.resources.CustomResource {
         return this.sqlInjectionMatchTuples;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable SqlInjectionMatchSetArgs.Builder a);
-    }
-    private static io.pulumi.aws.waf.SqlInjectionMatchSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.waf.SqlInjectionMatchSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SqlInjectionMatchSet(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

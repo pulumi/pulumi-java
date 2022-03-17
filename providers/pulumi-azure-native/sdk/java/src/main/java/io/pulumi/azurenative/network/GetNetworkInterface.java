@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkInterface {
     private GetNetworkInterface() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkInterfaceArgs.Builder a);
-    }
-    private static GetNetworkInterfaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkInterfaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A network interface in a resource group.
- * API Version: 2020-11-01.
- * 
-     *
-     * A network interface in a resource group.
- * 
-     */
-    public static CompletableFuture<GetNetworkInterfaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A network interface in a resource group.
      * API Version: 2020-11-01.

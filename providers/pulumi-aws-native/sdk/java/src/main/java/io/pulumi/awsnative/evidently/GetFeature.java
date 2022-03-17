@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFeature {
     private GetFeature() {}
-    public interface BuilderApplicator {
-        public void apply(GetFeatureArgs.Builder a);
-    }
-    private static GetFeatureArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFeatureArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Evidently::Feature.
- * 
-     */
-    public static CompletableFuture<GetFeatureResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Evidently::Feature.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFileSystem {
     private GetFileSystem() {}
-    public interface BuilderApplicator {
-        public void apply(GetFileSystemArgs.Builder a);
-    }
-    private static GetFileSystemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFileSystemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EFS::FileSystem
- * 
-     */
-    public static CompletableFuture<GetFileSystemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EFS::FileSystem
      * 

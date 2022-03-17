@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIngressRule {
     private GetIngressRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetIngressRuleArgs.Builder a);
-    }
-    private static GetIngressRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIngressRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified firewall rule.
- * 
-     */
-    public static CompletableFuture<GetIngressRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified firewall rule.
      * 

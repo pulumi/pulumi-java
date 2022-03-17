@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGateway {
     private GetGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetGatewayArgs.Builder a);
-    }
-    private static GetGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Spring Cloud Gateway resource
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Spring Cloud Gateway resource
- * 
-     */
-    public static CompletableFuture<GetGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Spring Cloud Gateway resource
      * API Version: 2022-01-01-preview.

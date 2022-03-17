@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIncidentRelation {
     private GetIncidentRelation() {}
-    public interface BuilderApplicator {
-        public void apply(GetIncidentRelationArgs.Builder a);
-    }
-    private static GetIncidentRelationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIncidentRelationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a relation between two resources
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Represents a relation between two resources
- * 
-     */
-    public static CompletableFuture<GetIncidentRelationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a relation between two resources
      * API Version: 2021-03-01-preview.

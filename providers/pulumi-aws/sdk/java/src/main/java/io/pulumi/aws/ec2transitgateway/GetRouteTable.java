@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRouteTable {
     private GetRouteTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouteTableArgs.Builder a);
-    }
-    private static GetRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouteTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on an EC2 Transit Gateway Route Table.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getRouteTable.
- * 
-     *
-     * A collection of values returned by getRouteTable.
- * 
-     */
-    public static CompletableFuture<GetRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on an EC2 Transit Gateway Route Table.
      * 

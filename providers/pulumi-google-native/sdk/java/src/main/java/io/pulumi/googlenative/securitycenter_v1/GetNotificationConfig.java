@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationConfig {
     private GetNotificationConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationConfigArgs.Builder a);
-    }
-    private static GetNotificationConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a notification config.
- * 
-     */
-    public static CompletableFuture<GetNotificationConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a notification config.
      * 

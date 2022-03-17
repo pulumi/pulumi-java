@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListIotDpsResourceKeysForKeyName {
     private ListIotDpsResourceKeysForKeyName() {}
-    public interface BuilderApplicator {
-        public void apply(ListIotDpsResourceKeysForKeyNameArgs.Builder a);
-    }
-    private static ListIotDpsResourceKeysForKeyNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListIotDpsResourceKeysForKeyNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Description of the shared access key.
- * API Version: 2020-03-01.
- * 
-     *
-     * Description of the shared access key.
- * 
-     */
-    public static CompletableFuture<ListIotDpsResourceKeysForKeyNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Description of the shared access key.
      * API Version: 2020-03-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSchemaVersionMetadata {
     private GetSchemaVersionMetadata() {}
-    public interface BuilderApplicator {
-        public void apply(GetSchemaVersionMetadataArgs.Builder a);
-    }
-    private static GetSchemaVersionMetadataArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSchemaVersionMetadataArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This resource adds Key-Value metadata to a Schema version of Glue Schema Registry.
- * 
-     */
-    public static CompletableFuture<GetSchemaVersionMetadataResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This resource adds Key-Value metadata to a Schema version of Glue Schema Registry.
      * 

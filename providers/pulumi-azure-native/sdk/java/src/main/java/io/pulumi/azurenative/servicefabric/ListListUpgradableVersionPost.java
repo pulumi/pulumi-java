@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListListUpgradableVersionPost {
     private ListListUpgradableVersionPost() {}
-    public interface BuilderApplicator {
-        public void apply(ListListUpgradableVersionPostArgs.Builder a);
-    }
-    private static ListListUpgradableVersionPostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListListUpgradableVersionPostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
- * API Version: 2020-12-01-preview.
- * 
-     *
-     * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
- * 
-     */
-    public static CompletableFuture<ListListUpgradableVersionPostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
      * API Version: 2020-12-01-preview.

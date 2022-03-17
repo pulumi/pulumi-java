@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStep {
     private GetStep() {}
-    public interface BuilderApplicator {
-        public void apply(GetStepArgs.Builder a);
-    }
-    private static GetStepArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStepArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The resource representation of a rollout step.
- * API Version: 2019-11-01-preview.
- * 
-     *
-     * The resource representation of a rollout step.
- * 
-     */
-    public static CompletableFuture<GetStepResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The resource representation of a rollout step.
      * API Version: 2019-11-01-preview.

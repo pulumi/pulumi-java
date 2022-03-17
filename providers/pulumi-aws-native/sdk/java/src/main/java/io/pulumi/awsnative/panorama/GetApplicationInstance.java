@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplicationInstance {
     private GetApplicationInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationInstanceArgs.Builder a);
-    }
-    private static GetApplicationInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schema for ApplicationInstance CloudFormation Resource
- * 
-     */
-    public static CompletableFuture<GetApplicationInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schema for ApplicationInstance CloudFormation Resource
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTheme {
     private GetTheme() {}
-    public interface BuilderApplicator {
-        public void apply(GetThemeArgs.Builder a);
-    }
-    private static GetThemeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetThemeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
- * 
-     */
-    public static CompletableFuture<GetThemeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
      * 

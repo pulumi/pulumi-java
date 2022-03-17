@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKeyRing {
     private GetKeyRing() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeyRingArgs.Builder a);
-    }
-    private static GetKeyRingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeyRingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns metadata for a given KeyRing.
- * 
-     */
-    public static CompletableFuture<GetKeyRingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns metadata for a given KeyRing.
      * 

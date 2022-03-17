@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFeature {
     private GetFeature() {}
-    public interface BuilderApplicator {
-        public void apply(GetFeatureArgs.Builder a);
-    }
-    private static GetFeatureArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFeatureArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single Feature.
- * 
-     */
-    public static CompletableFuture<GetFeatureResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single Feature.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStream {
     private GetStream() {}
-    public interface BuilderApplicator {
-        public void apply(GetStreamArgs.Builder a);
-    }
-    private static GetStreamArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStreamArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this method to get details about a stream.
- * 
-     */
-    public static CompletableFuture<GetStreamResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this method to get details about a stream.
      * 

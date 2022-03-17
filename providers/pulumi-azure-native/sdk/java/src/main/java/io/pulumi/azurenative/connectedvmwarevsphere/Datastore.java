@@ -245,22 +245,6 @@ public class Datastore extends io.pulumi.resources.CustomResource {
         return this.vCenterId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DatastoreArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.connectedvmwarevsphere.DatastoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.connectedvmwarevsphere.DatastoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Datastore(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

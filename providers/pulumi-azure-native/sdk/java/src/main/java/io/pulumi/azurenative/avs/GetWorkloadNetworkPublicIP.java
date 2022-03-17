@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkPublicIP {
     private GetWorkloadNetworkPublicIP() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadNetworkPublicIPArgs.Builder a);
-    }
-    private static GetWorkloadNetworkPublicIPArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadNetworkPublicIPArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NSX Public IP Block
- * API Version: 2021-06-01.
- * 
-     *
-     * NSX Public IP Block
- * 
-     */
-    public static CompletableFuture<GetWorkloadNetworkPublicIPResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NSX Public IP Block
      * API Version: 2021-06-01.

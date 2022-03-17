@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSensitivityLabel {
     private GetSensitivityLabel() {}
-    public interface BuilderApplicator {
-        public void apply(GetSensitivityLabelArgs.Builder a);
-    }
-    private static GetSensitivityLabelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSensitivityLabelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A sensitivity label.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A sensitivity label.
- * 
-     */
-    public static CompletableFuture<GetSensitivityLabelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A sensitivity label.
      * API Version: 2020-11-01-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAddon {
     private GetAddon() {}
-    public interface BuilderApplicator {
-        public void apply(GetAddonArgs.Builder a);
-    }
-    private static GetAddonArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAddonArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema for AWS::EKS::Addon
- * 
-     */
-    public static CompletableFuture<GetAddonResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema for AWS::EKS::Addon
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCassandraResourceCassandraKeyspace {
     private GetCassandraResourceCassandraKeyspace() {}
-    public interface BuilderApplicator {
-        public void apply(GetCassandraResourceCassandraKeyspaceArgs.Builder a);
-    }
-    private static GetCassandraResourceCassandraKeyspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCassandraResourceCassandraKeyspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB Cassandra keyspace.
- * API Version: 2021-03-15.
- * 
-     *
-     * An Azure Cosmos DB Cassandra keyspace.
- * 
-     */
-    public static CompletableFuture<GetCassandraResourceCassandraKeyspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB Cassandra keyspace.
      * API Version: 2021-03-15.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRepositoryIamPolicy {
     private GetRepositoryIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRepositoryIamPolicyArgs.Builder a);
-    }
-    private static GetRepositoryIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRepositoryIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the IAM policy for a given resource.
- * 
-     */
-    public static CompletableFuture<GetRepositoryIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the IAM policy for a given resource.
      * 

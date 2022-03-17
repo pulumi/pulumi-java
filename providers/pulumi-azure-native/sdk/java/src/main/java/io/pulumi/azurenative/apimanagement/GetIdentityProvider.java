@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIdentityProvider {
     private GetIdentityProvider() {}
-    public interface BuilderApplicator {
-        public void apply(GetIdentityProviderArgs.Builder a);
-    }
-    private static GetIdentityProviderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIdentityProviderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Identity Provider details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Identity Provider details.
- * 
-     */
-    public static CompletableFuture<GetIdentityProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Identity Provider details.
      * API Version: 2020-12-01.

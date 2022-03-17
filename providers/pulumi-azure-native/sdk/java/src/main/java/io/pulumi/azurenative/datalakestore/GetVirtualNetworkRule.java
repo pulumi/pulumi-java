@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualNetworkRule {
     private GetVirtualNetworkRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualNetworkRuleArgs.Builder a);
-    }
-    private static GetVirtualNetworkRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualNetworkRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Data Lake Store virtual network rule information.
- * API Version: 2016-11-01.
- * 
-     *
-     * Data Lake Store virtual network rule information.
- * 
-     */
-    public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Data Lake Store virtual network rule information.
      * API Version: 2016-11-01.

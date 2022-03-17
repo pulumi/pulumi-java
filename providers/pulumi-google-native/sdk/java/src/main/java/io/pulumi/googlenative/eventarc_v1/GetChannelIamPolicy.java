@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetChannelIamPolicy {
     private GetChannelIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetChannelIamPolicyArgs.Builder a);
-    }
-    private static GetChannelIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetChannelIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetChannelIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 

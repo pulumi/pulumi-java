@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPartnerTopicEventSubscription {
     private GetPartnerTopicEventSubscription() {}
-    public interface BuilderApplicator {
-        public void apply(GetPartnerTopicEventSubscriptionArgs.Builder a);
-    }
-    private static GetPartnerTopicEventSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPartnerTopicEventSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Event Subscription
- * API Version: 2020-04-01-preview.
- * 
-     *
-     * Event Subscription
- * 
-     */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Event Subscription
      * API Version: 2020-04-01-preview.

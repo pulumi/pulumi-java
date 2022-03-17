@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLoadBalancerBackendAddressPool {
     private GetLoadBalancerBackendAddressPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetLoadBalancerBackendAddressPoolArgs.Builder a);
-    }
-    private static GetLoadBalancerBackendAddressPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLoadBalancerBackendAddressPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Pool of backend IP addresses.
- * API Version: 2020-11-01.
- * 
-     *
-     * Pool of backend IP addresses.
- * 
-     */
-    public static CompletableFuture<GetLoadBalancerBackendAddressPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Pool of backend IP addresses.
      * API Version: 2020-11-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlPoolWorkloadGroup {
     private GetSqlPoolWorkloadGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlPoolWorkloadGroupArgs.Builder a);
-    }
-    private static GetSqlPoolWorkloadGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlPoolWorkloadGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Workload group operations for a sql pool
- * API Version: 2021-03-01.
- * 
-     *
-     * Workload group operations for a sql pool
- * 
-     */
-    public static CompletableFuture<GetSqlPoolWorkloadGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Workload group operations for a sql pool
      * API Version: 2021-03-01.

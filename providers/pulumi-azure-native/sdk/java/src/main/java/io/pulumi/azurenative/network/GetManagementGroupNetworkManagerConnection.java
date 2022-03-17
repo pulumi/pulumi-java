@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagementGroupNetworkManagerConnection {
     private GetManagementGroupNetworkManagerConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagementGroupNetworkManagerConnectionArgs.Builder a);
-    }
-    private static GetManagementGroupNetworkManagerConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagementGroupNetworkManagerConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Network Manager Connection resource
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * The Network Manager Connection resource
- * 
-     */
-    public static CompletableFuture<GetManagementGroupNetworkManagerConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Network Manager Connection resource
      * API Version: 2021-05-01-preview.

@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApi {
     private GetApi() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiArgs.Builder a);
-    }
-    private static GetApiArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific Amazon API Gateway Version 2 API.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getApi.
- * 
-     *
-     * A collection of values returned by getApi.
- * 
-     */
-    public static CompletableFuture<GetApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific Amazon API Gateway Version 2 API.
      * 

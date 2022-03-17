@@ -105,22 +105,6 @@ public class EC2Fleet extends io.pulumi.resources.CustomResource {
         return this.validUntil;
     }
 
-    public interface BuilderApplicator {
-        public void apply(EC2FleetArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.ec2.EC2FleetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.ec2.EC2FleetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public EC2Fleet(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMountTarget {
     private GetMountTarget() {}
-    public interface BuilderApplicator {
-        public void apply(GetMountTargetArgs.Builder a);
-    }
-    private static GetMountTargetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMountTargetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information about an Elastic File System Mount Target (EFS).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getMountTarget.
- * 
-     *
-     * A collection of values returned by getMountTarget.
- * 
-     */
-    public static CompletableFuture<GetMountTargetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information about an Elastic File System Mount Target (EFS).
      * 

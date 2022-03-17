@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDiagnosticServiceTokenReadWrite {
     private GetDiagnosticServiceTokenReadWrite() {}
-    public interface BuilderApplicator {
-        public void apply(GetDiagnosticServiceTokenReadWriteArgs.Builder a);
-    }
-    private static GetDiagnosticServiceTokenReadWriteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDiagnosticServiceTokenReadWriteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The response to a diagnostic services token query.
- * API Version: 2021-03-03-preview.
- * 
-     *
-     * The response to a diagnostic services token query.
- * 
-     */
-    public static CompletableFuture<GetDiagnosticServiceTokenReadWriteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The response to a diagnostic services token query.
      * API Version: 2021-03-03-preview.

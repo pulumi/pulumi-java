@@ -344,22 +344,6 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebAppSiteExtensionSlotArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppSiteExtensionSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppSiteExtensionSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppSiteExtensionSlot(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

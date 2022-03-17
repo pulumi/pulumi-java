@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPlaceIndex {
     private GetPlaceIndex() {}
-    public interface BuilderApplicator {
-        public void apply(GetPlaceIndexArgs.Builder a);
-    }
-    private static GetPlaceIndexArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPlaceIndexArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of AWS::Location::PlaceIndex Resource Type
- * 
-     */
-    public static CompletableFuture<GetPlaceIndexResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of AWS::Location::PlaceIndex Resource Type
      * 

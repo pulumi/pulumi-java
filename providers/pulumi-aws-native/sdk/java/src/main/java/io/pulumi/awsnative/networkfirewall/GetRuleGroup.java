@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRuleGroup {
     private GetRuleGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetRuleGroupArgs.Builder a);
-    }
-    private static GetRuleGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRuleGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource type definition for AWS::NetworkFirewall::RuleGroup
- * 
-     */
-    public static CompletableFuture<GetRuleGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource type definition for AWS::NetworkFirewall::RuleGroup
      * 

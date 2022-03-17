@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnclaveCertificateIamRoleAssociation {
     private GetEnclaveCertificateIamRoleAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnclaveCertificateIamRoleAssociationArgs.Builder a);
-    }
-    private static GetEnclaveCertificateIamRoleAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnclaveCertificateIamRoleAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This association is based on Amazon Resource Names and it enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave.
- * 
-     */
-    public static CompletableFuture<GetEnclaveCertificateIamRoleAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This association is based on Amazon Resource Names and it enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave.
      * 

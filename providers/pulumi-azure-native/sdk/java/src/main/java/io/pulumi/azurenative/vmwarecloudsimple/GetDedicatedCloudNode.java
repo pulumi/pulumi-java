@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDedicatedCloudNode {
     private GetDedicatedCloudNode() {}
-    public interface BuilderApplicator {
-        public void apply(GetDedicatedCloudNodeArgs.Builder a);
-    }
-    private static GetDedicatedCloudNodeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDedicatedCloudNodeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Dedicated cloud node model
- * API Version: 2019-04-01.
- * 
-     *
-     * Dedicated cloud node model
- * 
-     */
-    public static CompletableFuture<GetDedicatedCloudNodeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Dedicated cloud node model
      * API Version: 2019-04-01.

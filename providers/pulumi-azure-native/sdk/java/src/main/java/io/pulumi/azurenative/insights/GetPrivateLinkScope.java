@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateLinkScope {
     private GetPrivateLinkScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateLinkScopeArgs.Builder a);
-    }
-    private static GetPrivateLinkScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateLinkScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Monitor PrivateLinkScope definition.
- * API Version: 2019-10-17-preview.
- * 
-     *
-     * An Azure Monitor PrivateLinkScope definition.
- * 
-     */
-    public static CompletableFuture<GetPrivateLinkScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Monitor PrivateLinkScope definition.
      * API Version: 2019-10-17-preview.

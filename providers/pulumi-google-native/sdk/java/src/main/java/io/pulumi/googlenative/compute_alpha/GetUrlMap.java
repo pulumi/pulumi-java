@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUrlMap {
     private GetUrlMap() {}
-    public interface BuilderApplicator {
-        public void apply(GetUrlMapArgs.Builder a);
-    }
-    private static GetUrlMapArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUrlMapArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetUrlMapResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
      * 

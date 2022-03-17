@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAddressByName {
     private GetAddressByName() {}
-    public interface BuilderApplicator {
-        public void apply(GetAddressByNameArgs.Builder a);
-    }
-    private static GetAddressByNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAddressByNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Address Resource.
- * API Version: 2021-12-01.
- * 
-     *
-     * Address Resource.
- * 
-     */
-    public static CompletableFuture<GetAddressByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Address Resource.
      * API Version: 2021-12-01.

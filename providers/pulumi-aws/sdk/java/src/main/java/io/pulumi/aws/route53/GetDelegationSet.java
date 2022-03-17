@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDelegationSet {
     private GetDelegationSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetDelegationSetArgs.Builder a);
-    }
-    private static GetDelegationSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDelegationSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.route53.DelegationSet` provides details about a specific Route 53 Delegation Set.
- * 
- * This data source allows to find a list of name servers associated with a specific delegation set.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDelegationSet.
- * 
-     *
-     * A collection of values returned by getDelegationSet.
- * 
-     */
-    public static CompletableFuture<GetDelegationSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.route53.DelegationSet` provides details about a specific Route 53 Delegation Set.
      * 

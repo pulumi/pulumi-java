@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionNetworkFirewallPolicyIamPolicy {
     private GetRegionNetworkFirewallPolicyIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionNetworkFirewallPolicyIamPolicyArgs.Builder a);
-    }
-    private static GetRegionNetworkFirewallPolicyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionNetworkFirewallPolicyIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- * 
-     */
-    public static CompletableFuture<GetRegionNetworkFirewallPolicyIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 

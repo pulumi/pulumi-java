@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEmailIdentity {
     private GetEmailIdentity() {}
-    public interface BuilderApplicator {
-        public void apply(GetEmailIdentityArgs.Builder a);
-    }
-    private static GetEmailIdentityArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEmailIdentityArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve the active SES email identity
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getEmailIdentity.
- * 
-     *
-     * A collection of values returned by getEmailIdentity.
- * 
-     */
-    public static CompletableFuture<GetEmailIdentityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve the active SES email identity
      * 

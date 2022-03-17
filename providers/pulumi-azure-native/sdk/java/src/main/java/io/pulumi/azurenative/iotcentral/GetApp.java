@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApp {
     private GetApp() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppArgs.Builder a);
-    }
-    private static GetAppArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The IoT Central application.
- * API Version: 2018-09-01.
- * 
-     *
-     * The IoT Central application.
- * 
-     */
-    public static CompletableFuture<GetAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The IoT Central application.
      * API Version: 2018-09-01.

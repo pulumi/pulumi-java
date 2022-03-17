@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReferenceDataSet {
     private GetReferenceDataSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetReferenceDataSetArgs.Builder a);
-    }
-    private static GetReferenceDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReferenceDataSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
- * API Version: 2020-05-15.
- * 
-     *
-     * A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
- * 
-     */
-    public static CompletableFuture<GetReferenceDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
      * API Version: 2020-05-15.

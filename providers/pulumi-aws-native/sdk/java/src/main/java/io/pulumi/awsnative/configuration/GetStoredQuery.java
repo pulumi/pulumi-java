@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStoredQuery {
     private GetStoredQuery() {}
-    public interface BuilderApplicator {
-        public void apply(GetStoredQueryArgs.Builder a);
-    }
-    private static GetStoredQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStoredQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Config::StoredQuery
- * 
-     */
-    public static CompletableFuture<GetStoredQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Config::StoredQuery
      * 

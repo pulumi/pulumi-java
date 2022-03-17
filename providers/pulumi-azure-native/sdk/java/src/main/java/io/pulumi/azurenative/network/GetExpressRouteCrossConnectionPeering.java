@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExpressRouteCrossConnectionPeering {
     private GetExpressRouteCrossConnectionPeering() {}
-    public interface BuilderApplicator {
-        public void apply(GetExpressRouteCrossConnectionPeeringArgs.Builder a);
-    }
-    private static GetExpressRouteCrossConnectionPeeringArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExpressRouteCrossConnectionPeeringArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Peering in an ExpressRoute Cross Connection resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Peering in an ExpressRoute Cross Connection resource.
- * 
-     */
-    public static CompletableFuture<GetExpressRouteCrossConnectionPeeringResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Peering in an ExpressRoute Cross Connection resource.
      * API Version: 2020-11-01.

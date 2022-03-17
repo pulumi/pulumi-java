@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetObjectAnchorsAccount {
     private GetObjectAnchorsAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetObjectAnchorsAccountArgs.Builder a);
-    }
-    private static GetObjectAnchorsAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetObjectAnchorsAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ObjectAnchorsAccount Response.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * ObjectAnchorsAccount Response.
- * 
-     */
-    public static CompletableFuture<GetObjectAnchorsAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ObjectAnchorsAccount Response.
      * API Version: 2021-03-01-preview.

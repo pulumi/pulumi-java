@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFeedbackMessage {
     private GetFeedbackMessage() {}
-    public interface BuilderApplicator {
-        public void apply(GetFeedbackMessageArgs.Builder a);
-    }
-    private static GetFeedbackMessageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFeedbackMessageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a FeedbackMessage object.
- * 
-     */
-    public static CompletableFuture<GetFeedbackMessageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a FeedbackMessage object.
      * 

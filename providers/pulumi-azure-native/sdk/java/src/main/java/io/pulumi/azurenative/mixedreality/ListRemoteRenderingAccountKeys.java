@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListRemoteRenderingAccountKeys {
     private ListRemoteRenderingAccountKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListRemoteRenderingAccountKeysArgs.Builder a);
-    }
-    private static ListRemoteRenderingAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListRemoteRenderingAccountKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Developer Keys of account
- * API Version: 2021-01-01.
- * 
-     *
-     * Developer Keys of account
- * 
-     */
-    public static CompletableFuture<ListRemoteRenderingAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Developer Keys of account
      * API Version: 2021-01-01.

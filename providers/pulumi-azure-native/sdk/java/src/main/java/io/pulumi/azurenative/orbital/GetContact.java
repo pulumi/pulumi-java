@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContact {
     private GetContact() {}
-    public interface BuilderApplicator {
-        public void apply(GetContactArgs.Builder a);
-    }
-    private static GetContactArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContactArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Customer creates a contact resource for a spacecraft resource.
- * API Version: 2021-04-04-preview.
- * 
-     *
-     * Customer creates a contact resource for a spacecraft resource.
- * 
-     */
-    public static CompletableFuture<GetContactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Customer creates a contact resource for a spacecraft resource.
      * API Version: 2021-04-04-preview.

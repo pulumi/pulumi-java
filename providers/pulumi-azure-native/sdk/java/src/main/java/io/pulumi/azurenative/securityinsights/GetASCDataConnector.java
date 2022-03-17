@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetASCDataConnector {
     private GetASCDataConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetASCDataConnectorArgs.Builder a);
-    }
-    private static GetASCDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetASCDataConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents ASC (Azure Security Center) data connector.
- * API Version: 2020-01-01.
- * 
-     *
-     * Represents ASC (Azure Security Center) data connector.
- * 
-     */
-    public static CompletableFuture<GetASCDataConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents ASC (Azure Security Center) data connector.
      * API Version: 2020-01-01.

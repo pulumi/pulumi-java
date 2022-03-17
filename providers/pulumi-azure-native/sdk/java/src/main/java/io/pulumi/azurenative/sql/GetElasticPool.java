@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetElasticPool {
     private GetElasticPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetElasticPoolArgs.Builder a);
-    }
-    private static GetElasticPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetElasticPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An elastic pool.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An elastic pool.
- * 
-     */
-    public static CompletableFuture<GetElasticPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An elastic pool.
      * API Version: 2020-11-01-preview.

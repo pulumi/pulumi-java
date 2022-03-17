@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsForSCCPowershell {
     private GetPrivateEndpointConnectionsForSCCPowershell() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateEndpointConnectionsForSCCPowershellArgs.Builder a);
-    }
-    private static GetPrivateEndpointConnectionsForSCCPowershellArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateEndpointConnectionsForSCCPowershellArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Private Endpoint Connection resource.
- * API Version: 2021-03-08.
- * 
-     *
-     * The Private Endpoint Connection resource.
- * 
-     */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForSCCPowershellResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Private Endpoint Connection resource.
      * API Version: 2021-03-08.

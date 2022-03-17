@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTestGridProject {
     private GetTestGridProject() {}
-    public interface BuilderApplicator {
-        public void apply(GetTestGridProjectArgs.Builder a);
-    }
-    private static GetTestGridProjectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTestGridProjectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS::DeviceFarm::TestGridProject creates a new TestGrid Project
- * 
-     */
-    public static CompletableFuture<GetTestGridProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS::DeviceFarm::TestGridProject creates a new TestGrid Project
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomClass {
     private GetCustomClass() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomClassArgs.Builder a);
-    }
-    private static GetCustomClassArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomClassArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a custom class.
- * 
-     */
-    public static CompletableFuture<GetCustomClassResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a custom class.
      * 

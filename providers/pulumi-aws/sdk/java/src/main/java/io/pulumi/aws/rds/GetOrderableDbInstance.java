@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrderableDbInstance {
     private GetOrderableDbInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrderableDbInstanceArgs.Builder a);
-    }
-    private static GetOrderableDbInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrderableDbInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about RDS orderable DB instances and valid parameter combinations.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getOrderableDbInstance.
- * 
-     *
-     * A collection of values returned by getOrderableDbInstance.
- * 
-     */
-    public static CompletableFuture<GetOrderableDbInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about RDS orderable DB instances and valid parameter combinations.
      * 

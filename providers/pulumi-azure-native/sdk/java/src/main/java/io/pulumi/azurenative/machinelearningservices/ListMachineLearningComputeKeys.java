@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListMachineLearningComputeKeys {
     private ListMachineLearningComputeKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListMachineLearningComputeKeysArgs.Builder a);
-    }
-    private static ListMachineLearningComputeKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListMachineLearningComputeKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Secrets related to a Machine Learning compute. Might differ for every type of compute.
- * API Version: 2021-01-01.
- * 
-     *
-     * Secrets related to a Machine Learning compute. Might differ for every type of compute.
- * 
-     */
-    public static CompletableFuture<ListMachineLearningComputeKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Secrets related to a Machine Learning compute. Might differ for every type of compute.
      * API Version: 2021-01-01.

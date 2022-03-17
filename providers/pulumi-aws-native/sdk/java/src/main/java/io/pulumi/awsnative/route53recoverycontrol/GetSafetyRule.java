@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSafetyRule {
     private GetSafetyRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetSafetyRuleArgs.Builder a);
-    }
-    private static GetSafetyRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSafetyRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
- * 
-     */
-    public static CompletableFuture<GetSafetyRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
      * 

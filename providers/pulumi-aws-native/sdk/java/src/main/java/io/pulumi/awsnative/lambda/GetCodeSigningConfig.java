@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCodeSigningConfig {
     private GetCodeSigningConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetCodeSigningConfigArgs.Builder a);
-    }
-    private static GetCodeSigningConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCodeSigningConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Lambda::CodeSigningConfig.
- * 
-     */
-    public static CompletableFuture<GetCodeSigningConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Lambda::CodeSigningConfig.
      * 

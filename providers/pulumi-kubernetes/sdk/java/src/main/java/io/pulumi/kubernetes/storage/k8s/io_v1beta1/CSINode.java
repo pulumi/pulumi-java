@@ -82,22 +82,6 @@ public class CSINode extends io.pulumi.resources.CustomResource {
         return this.spec;
     }
 
-    public interface BuilderApplicator {
-        public void apply(CSINodeArgs.Builder a);
-    }
-    private static io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSINodeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSINodeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public CSINode(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

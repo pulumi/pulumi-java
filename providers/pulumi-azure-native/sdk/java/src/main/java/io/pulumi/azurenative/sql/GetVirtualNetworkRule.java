@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualNetworkRule {
     private GetVirtualNetworkRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualNetworkRuleArgs.Builder a);
-    }
-    private static GetVirtualNetworkRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualNetworkRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A virtual network rule.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A virtual network rule.
- * 
-     */
-    public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A virtual network rule.
      * API Version: 2020-11-01-preview.

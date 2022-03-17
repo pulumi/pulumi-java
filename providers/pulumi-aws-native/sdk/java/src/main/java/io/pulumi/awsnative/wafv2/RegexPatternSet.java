@@ -89,22 +89,6 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RegexPatternSetArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.wafv2.RegexPatternSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.wafv2.RegexPatternSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RegexPatternSet(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiSchema {
     private GetApiSchema() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiSchemaArgs.Builder a);
-    }
-    private static GetApiSchemaArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiSchemaArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schema Contract details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Schema Contract details.
- * 
-     */
-    public static CompletableFuture<GetApiSchemaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schema Contract details.
      * API Version: 2020-12-01.

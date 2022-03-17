@@ -315,22 +315,6 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
         return this.volumeFreeSpacePercent;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ServerEndpointArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.storagesync.ServerEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.storagesync.ServerEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ServerEndpoint(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMetricsSource {
     private GetMetricsSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetMetricsSourceArgs.Builder a);
-    }
-    private static GetMetricsSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMetricsSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2022-01-01-preview.
- * 
-     */
-    public static CompletableFuture<GetMetricsSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2022-01-01-preview.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMonitoringConfig {
     private GetMonitoringConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetMonitoringConfigArgs.Builder a);
-    }
-    private static GetMonitoringConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMonitoringConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The metric setting details for the role
- * API Version: 2020-12-01.
- * 
-     *
-     * The metric setting details for the role
- * 
-     */
-    public static CompletableFuture<GetMonitoringConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The metric setting details for the role
      * API Version: 2020-12-01.

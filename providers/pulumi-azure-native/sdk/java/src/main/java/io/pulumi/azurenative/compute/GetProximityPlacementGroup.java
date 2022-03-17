@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProximityPlacementGroup {
     private GetProximityPlacementGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetProximityPlacementGroupArgs.Builder a);
-    }
-    private static GetProximityPlacementGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProximityPlacementGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specifies information about the proximity placement group.
- * API Version: 2020-12-01.
- * 
-     *
-     * Specifies information about the proximity placement group.
- * 
-     */
-    public static CompletableFuture<GetProximityPlacementGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specifies information about the proximity placement group.
      * API Version: 2020-12-01.

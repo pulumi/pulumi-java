@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCapacityCommitment {
     private GetCapacityCommitment() {}
-    public interface BuilderApplicator {
-        public void apply(GetCapacityCommitmentArgs.Builder a);
-    }
-    private static GetCapacityCommitmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCapacityCommitmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns information about the capacity commitment.
- * 
-     */
-    public static CompletableFuture<GetCapacityCommitmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns information about the capacity commitment.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLiveToken {
     private GetLiveToken() {}
-    public interface BuilderApplicator {
-        public void apply(GetLiveTokenArgs.Builder a);
-    }
-    private static GetLiveTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLiveTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The response to a live token query.
- * API Version: 2020-06-02-preview.
- * 
-     *
-     * The response to a live token query.
- * 
-     */
-    public static CompletableFuture<GetLiveTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The response to a live token query.
      * API Version: 2020-06-02-preview.

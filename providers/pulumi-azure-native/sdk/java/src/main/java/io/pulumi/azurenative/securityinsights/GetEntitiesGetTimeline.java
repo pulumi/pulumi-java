@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEntitiesGetTimeline {
     private GetEntitiesGetTimeline() {}
-    public interface BuilderApplicator {
-        public void apply(GetEntitiesGetTimelineArgs.Builder a);
-    }
-    private static GetEntitiesGetTimelineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEntitiesGetTimelineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The entity timeline result operation response.
- * API Version: 2019-01-01-preview.
- * 
-     *
-     * The entity timeline result operation response.
- * 
-     */
-    public static CompletableFuture<GetEntitiesGetTimelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The entity timeline result operation response.
      * API Version: 2019-01-01-preview.

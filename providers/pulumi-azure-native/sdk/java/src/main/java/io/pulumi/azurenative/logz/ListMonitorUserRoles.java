@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListMonitorUserRoles {
     private ListMonitorUserRoles() {}
-    public interface BuilderApplicator {
-        public void apply(ListMonitorUserRolesArgs.Builder a);
-    }
-    private static ListMonitorUserRolesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListMonitorUserRolesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response for list of user's role for Logz.io account.
- * API Version: 2020-10-01.
- * 
-     *
-     * Response for list of user's role for Logz.io account.
- * 
-     */
-    public static CompletableFuture<ListMonitorUserRolesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response for list of user's role for Logz.io account.
      * API Version: 2020-10-01.

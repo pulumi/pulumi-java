@@ -189,22 +189,6 @@ public class Backup extends io.pulumi.resources.CustomResource {
         return this.storageBytes;
     }
 
-    public interface BuilderApplicator {
-        public void apply(BackupArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.file_v1.BackupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.file_v1.BackupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Backup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

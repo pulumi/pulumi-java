@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNatRule {
     private GetNatRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetNatRuleArgs.Builder a);
-    }
-    private static GetNatRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNatRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * VpnGatewayNatRule Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * VpnGatewayNatRule Resource.
- * 
-     */
-    public static CompletableFuture<GetNatRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * VpnGatewayNatRule Resource.
      * API Version: 2020-11-01.

@@ -206,22 +206,6 @@ public class Target extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TargetArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.clouddeploy_v1.TargetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.clouddeploy_v1.TargetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Target(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

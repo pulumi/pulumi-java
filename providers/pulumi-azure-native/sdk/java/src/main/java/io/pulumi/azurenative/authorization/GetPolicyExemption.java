@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPolicyExemption {
     private GetPolicyExemption() {}
-    public interface BuilderApplicator {
-        public void apply(GetPolicyExemptionArgs.Builder a);
-    }
-    private static GetPolicyExemptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPolicyExemptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The policy exemption.
- * API Version: 2020-07-01-preview.
- * 
-     *
-     * The policy exemption.
- * 
-     */
-    public static CompletableFuture<GetPolicyExemptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The policy exemption.
      * API Version: 2020-07-01-preview.

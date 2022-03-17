@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForO365ManagementActivityAPI {
     private GetprivateLinkServicesForO365ManagementActivityAPI() {}
-    public interface BuilderApplicator {
-        public void apply(GetprivateLinkServicesForO365ManagementActivityAPIArgs.Builder a);
-    }
-    private static GetprivateLinkServicesForO365ManagementActivityAPIArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetprivateLinkServicesForO365ManagementActivityAPIArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The description of the service.
- * API Version: 2021-03-25-preview.
- * 
-     *
-     * The description of the service.
- * 
-     */
-    public static CompletableFuture<GetprivateLinkServicesForO365ManagementActivityAPIResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The description of the service.
      * API Version: 2021-03-25-preview.

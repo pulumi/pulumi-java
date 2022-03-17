@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBasePathMapping {
     private GetBasePathMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetBasePathMappingArgs.Builder a);
-    }
-    private static GetBasePathMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBasePathMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::ApiGateway::BasePathMapping
- * 
-     */
-    public static CompletableFuture<GetBasePathMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::ApiGateway::BasePathMapping
      * 

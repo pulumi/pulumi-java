@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualHub {
     private GetVirtualHub() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualHubArgs.Builder a);
-    }
-    private static GetVirtualHubArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualHubArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * VirtualHub Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * VirtualHub Resource.
- * 
-     */
-    public static CompletableFuture<GetVirtualHubResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * VirtualHub Resource.
      * API Version: 2020-11-01.

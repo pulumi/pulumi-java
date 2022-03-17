@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlPoolWorkloadClassifier {
     private GetSqlPoolWorkloadClassifier() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlPoolWorkloadClassifierArgs.Builder a);
-    }
-    private static GetSqlPoolWorkloadClassifierArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlPoolWorkloadClassifierArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Workload classifier operations for a data warehouse
- * API Version: 2021-03-01.
- * 
-     *
-     * Workload classifier operations for a data warehouse
- * 
-     */
-    public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Workload classifier operations for a data warehouse
      * API Version: 2021-03-01.

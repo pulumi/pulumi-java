@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntent {
     private GetIntent() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntentArgs.Builder a);
-    }
-    private static GetIntentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified intent.
- * 
-     */
-    public static CompletableFuture<GetIntentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified intent.
      * 

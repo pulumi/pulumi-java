@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssociation {
     private GetAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssociationArgs.Builder a);
-    }
-    private static GetAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::SSM::Association resource associates an SSM document in AWS Systems Manager with EC2 instances that contain a configuration agent to process the document.
- * 
-     */
-    public static CompletableFuture<GetAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::SSM::Association resource associates an SSM document in AWS Systems Manager with EC2 instances that contain a configuration agent to process the document.
      * 

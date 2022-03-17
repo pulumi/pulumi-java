@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSolutionConfig {
     private GetSolutionConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetSolutionConfigArgs.Builder a);
-    }
-    private static GetSolutionConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSolutionConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing the config for the solution in the migrate project.
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * Class representing the config for the solution in the migrate project.
- * 
-     */
-    public static CompletableFuture<GetSolutionConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing the config for the solution in the migrate project.
      * API Version: 2018-09-01-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPeeringService {
     private GetPeeringService() {}
-    public interface BuilderApplicator {
-        public void apply(GetPeeringServiceArgs.Builder a);
-    }
-    private static GetPeeringServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPeeringServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Peering Service
- * API Version: 2021-01-01.
- * 
-     *
-     * Peering Service
- * 
-     */
-    public static CompletableFuture<GetPeeringServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Peering Service
      * API Version: 2021-01-01.

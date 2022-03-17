@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocalGatewayRoute {
     private GetLocalGatewayRoute() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocalGatewayRouteArgs.Builder a);
-    }
-    private static GetLocalGatewayRouteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocalGatewayRouteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a route for a local gateway route table.
- * 
-     */
-    public static CompletableFuture<GetLocalGatewayRouteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a route for a local gateway route table.
      * 

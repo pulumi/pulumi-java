@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAzureFirewall {
     private GetAzureFirewall() {}
-    public interface BuilderApplicator {
-        public void apply(GetAzureFirewallArgs.Builder a);
-    }
-    private static GetAzureFirewallArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAzureFirewallArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Azure Firewall resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Azure Firewall resource.
- * 
-     */
-    public static CompletableFuture<GetAzureFirewallResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Azure Firewall resource.
      * API Version: 2020-11-01.

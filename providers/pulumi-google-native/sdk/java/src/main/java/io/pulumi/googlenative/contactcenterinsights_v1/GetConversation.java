@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConversation {
     private GetConversation() {}
-    public interface BuilderApplicator {
-        public void apply(GetConversationArgs.Builder a);
-    }
-    private static GetConversationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConversationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a conversation.
- * 
-     */
-    public static CompletableFuture<GetConversationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a conversation.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImportPipeline {
     private GetImportPipeline() {}
-    public interface BuilderApplicator {
-        public void apply(GetImportPipelineArgs.Builder a);
-    }
-    private static GetImportPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImportPipelineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An object that represents an import pipeline for a container registry.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An object that represents an import pipeline for a container registry.
- * 
-     */
-    public static CompletableFuture<GetImportPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An object that represents an import pipeline for a container registry.
      * API Version: 2020-11-01-preview.

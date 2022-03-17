@@ -122,22 +122,6 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
         return this.parent;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PreventionInspectTemplateArgs.Builder a);
-    }
-    private static io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PreventionInspectTemplate(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

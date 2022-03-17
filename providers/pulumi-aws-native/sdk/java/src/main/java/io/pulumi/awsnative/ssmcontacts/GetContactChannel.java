@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContactChannel {
     private GetContactChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetContactChannelArgs.Builder a);
-    }
-    private static GetContactChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContactChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::SSMContacts::ContactChannel
- * 
-     */
-    public static CompletableFuture<GetContactChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::SSMContacts::ContactChannel
      * 

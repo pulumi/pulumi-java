@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccessPoint {
     private GetAccessPoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccessPointArgs.Builder a);
-    }
-    private static GetAccessPointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccessPointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EFS::AccessPoint
- * 
-     */
-    public static CompletableFuture<GetAccessPointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EFS::AccessPoint
      * 

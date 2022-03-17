@@ -111,22 +111,6 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
         return this.scheduling;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RuntimeClassArgs.Builder a);
-    }
-    private static io.pulumi.kubernetes.node.k8s.io_v1.RuntimeClassArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.kubernetes.node.k8s.io_v1.RuntimeClassArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RuntimeClass(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

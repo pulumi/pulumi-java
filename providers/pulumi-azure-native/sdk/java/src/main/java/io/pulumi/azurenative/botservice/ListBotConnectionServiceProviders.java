@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListBotConnectionServiceProviders {
     private ListBotConnectionServiceProviders() {}
-    public interface BuilderApplicator {
-        public void apply(ListBotConnectionServiceProvidersArgs.Builder a);
-    }
-    private static ListBotConnectionServiceProvidersArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListBotConnectionServiceProvidersArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of bot service providers response.
- * API Version: 2021-03-01.
- * 
-     *
-     * The list of bot service providers response.
- * 
-     */
-    public static CompletableFuture<ListBotConnectionServiceProvidersResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of bot service providers response.
      * API Version: 2021-03-01.

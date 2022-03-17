@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFirewallRuleGroupAssociation {
     private GetFirewallRuleGroupAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetFirewallRuleGroupAssociationArgs.Builder a);
-    }
-    private static GetFirewallRuleGroupAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFirewallRuleGroupAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Route53Resolver::FirewallRuleGroupAssociation.
- * 
-     */
-    public static CompletableFuture<GetFirewallRuleGroupAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Route53Resolver::FirewallRuleGroupAssociation.
      * 

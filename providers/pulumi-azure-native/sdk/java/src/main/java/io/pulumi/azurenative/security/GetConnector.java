@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnector {
     private GetConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectorArgs.Builder a);
-    }
-    private static GetConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The connector setting
- * API Version: 2020-01-01-preview.
- * 
-     *
-     * The connector setting
- * 
-     */
-    public static CompletableFuture<GetConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The connector setting
      * API Version: 2020-01-01-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScheduledQuery {
     private GetScheduledQuery() {}
-    public interface BuilderApplicator {
-        public void apply(GetScheduledQueryArgs.Builder a);
-    }
-    private static GetScheduledQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScheduledQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
- * 
-     */
-    public static CompletableFuture<GetScheduledQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
      * 

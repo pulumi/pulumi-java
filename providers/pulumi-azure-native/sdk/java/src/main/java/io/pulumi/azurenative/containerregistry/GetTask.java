@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTask {
     private GetTask() {}
-    public interface BuilderApplicator {
-        public void apply(GetTaskArgs.Builder a);
-    }
-    private static GetTaskArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTaskArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The task that has the ARM resource and task properties.
- * The task will have all information to schedule a run against it.
- * API Version: 2019-06-01-preview.
- * 
-     *
-     * The task that has the ARM resource and task properties.
- * The task will have all information to schedule a run against it.
- * 
-     */
-    public static CompletableFuture<GetTaskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The task that has the ARM resource and task properties.
      * The task will have all information to schedule a run against it.

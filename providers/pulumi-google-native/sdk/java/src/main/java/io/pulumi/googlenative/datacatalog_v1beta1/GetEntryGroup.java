@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEntryGroup {
     private GetEntryGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetEntryGroupArgs.Builder a);
-    }
-    private static GetEntryGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEntryGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an EntryGroup.
- * 
-     */
-    public static CompletableFuture<GetEntryGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an EntryGroup.
      * 

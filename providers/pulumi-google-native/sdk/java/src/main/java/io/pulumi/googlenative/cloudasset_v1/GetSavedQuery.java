@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSavedQuery {
     private GetSavedQuery() {}
-    public interface BuilderApplicator {
-        public void apply(GetSavedQueryArgs.Builder a);
-    }
-    private static GetSavedQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSavedQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details about a saved query.
- * 
-     */
-    public static CompletableFuture<GetSavedQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details about a saved query.
      * 

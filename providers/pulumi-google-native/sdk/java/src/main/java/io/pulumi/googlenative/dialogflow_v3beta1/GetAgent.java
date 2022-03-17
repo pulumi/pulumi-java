@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAgent {
     private GetAgent() {}
-    public interface BuilderApplicator {
-        public void apply(GetAgentArgs.Builder a);
-    }
-    private static GetAgentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAgentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified agent.
- * 
-     */
-    public static CompletableFuture<GetAgentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified agent.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFrontDoor {
     private GetFrontDoor() {}
-    public interface BuilderApplicator {
-        public void apply(GetFrontDoorArgs.Builder a);
-    }
-    private static GetFrontDoorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFrontDoorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
- * API Version: 2020-05-01.
- * 
-     *
-     * Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
- * 
-     */
-    public static CompletableFuture<GetFrontDoorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
      * API Version: 2020-05-01.

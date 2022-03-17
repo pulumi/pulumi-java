@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocalGatewayVirtualInterfaceGroup {
     private GetLocalGatewayVirtualInterfaceGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocalGatewayVirtualInterfaceGroupArgs.Builder a);
-    }
-    private static GetLocalGatewayVirtualInterfaceGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocalGatewayVirtualInterfaceGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about an EC2 Local Gateway Virtual Interface Group. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getLocalGatewayVirtualInterfaceGroup.
- * 
-     *
-     * A collection of values returned by getLocalGatewayVirtualInterfaceGroup.
- * 
-     */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about an EC2 Local Gateway Virtual Interface Group. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
      * 

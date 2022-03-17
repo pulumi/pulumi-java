@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRouter {
     private GetRouter() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouterArgs.Builder a);
-    }
-    private static GetRouterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a router within GCE from its name and VPC.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getRouter.
- * 
-     *
-     * A collection of values returned by getRouter.
- * 
-     */
-    public static CompletableFuture<GetRouterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a router within GCE from its name and VPC.
      * 

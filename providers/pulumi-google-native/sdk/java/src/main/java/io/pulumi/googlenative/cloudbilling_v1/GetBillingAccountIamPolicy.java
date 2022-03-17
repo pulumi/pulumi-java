@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBillingAccountIamPolicy {
     private GetBillingAccountIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetBillingAccountIamPolicyArgs.Builder a);
-    }
-    private static GetBillingAccountIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBillingAccountIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a billing account. The caller must have the `billing.accounts.getIamPolicy` permission on the account, which is often given to billing account [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
- * 
-     */
-    public static CompletableFuture<GetBillingAccountIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a billing account. The caller must have the `billing.accounts.getIamPolicy` permission on the account, which is often given to billing account [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnvironmentSpecificationVersion {
     private GetEnvironmentSpecificationVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnvironmentSpecificationVersionArgs.Builder a);
-    }
-    private static GetEnvironmentSpecificationVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnvironmentSpecificationVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Azure Resource Manager resource envelope.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Azure Resource Manager resource envelope.
- * 
-     */
-    public static CompletableFuture<GetEnvironmentSpecificationVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.

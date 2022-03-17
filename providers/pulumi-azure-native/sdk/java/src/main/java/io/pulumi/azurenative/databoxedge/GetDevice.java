@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDevice {
     private GetDevice() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeviceArgs.Builder a);
-    }
-    private static GetDeviceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeviceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Data Box Edge/Gateway device.
- * API Version: 2020-12-01.
- * 
-     *
-     * The Data Box Edge/Gateway device.
- * 
-     */
-    public static CompletableFuture<GetDeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Data Box Edge/Gateway device.
      * API Version: 2020-12-01.

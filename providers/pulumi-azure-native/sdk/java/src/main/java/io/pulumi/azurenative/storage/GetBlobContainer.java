@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBlobContainer {
     private GetBlobContainer() {}
-    public interface BuilderApplicator {
-        public void apply(GetBlobContainerArgs.Builder a);
-    }
-    private static GetBlobContainerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBlobContainerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Properties of the blob container, including Id, resource name, resource type, Etag.
- * API Version: 2021-02-01.
- * 
-     *
-     * Properties of the blob container, including Id, resource name, resource type, Etag.
- * 
-     */
-    public static CompletableFuture<GetBlobContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Properties of the blob container, including Id, resource name, resource type, Etag.
      * API Version: 2021-02-01.

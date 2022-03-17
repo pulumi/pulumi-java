@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpnSite {
     private GetVpnSite() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpnSiteArgs.Builder a);
-    }
-    private static GetVpnSiteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpnSiteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * VpnSite Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * VpnSite Resource.
- * 
-     */
-    public static CompletableFuture<GetVpnSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * VpnSite Resource.
      * API Version: 2020-11-01.

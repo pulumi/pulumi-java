@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAttributeGroup {
     private GetAttributeGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetAttributeGroupArgs.Builder a);
-    }
-    private static GetAttributeGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAttributeGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
- * 
-     */
-    public static CompletableFuture<GetAttributeGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
      * 

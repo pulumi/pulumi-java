@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocalGatewayRouteTables {
     private GetLocalGatewayRouteTables() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocalGatewayRouteTablesArgs.Builder a);
-    }
-    private static GetLocalGatewayRouteTablesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocalGatewayRouteTablesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
- * 
-     *
-     * A collection of arguments for invoking getLocalGatewayRouteTables.
- * 
-     *
-     * A collection of values returned by getLocalGatewayRouteTables.
- * 
-     */
-    public static CompletableFuture<GetLocalGatewayRouteTablesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProject {
     private GetProject() {}
-    public interface BuilderApplicator {
-        public void apply(GetProjectArgs.Builder a);
-    }
-    private static GetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProjectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::LookoutVision::Project type creates an Amazon Lookout for Vision project. A project is a grouping of the resources needed to create and manage a Lookout for Vision model.
- * 
-     */
-    public static CompletableFuture<GetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::LookoutVision::Project type creates an Amazon Lookout for Vision project. A project is a grouping of the resources needed to create and manage a Lookout for Vision model.
      * 

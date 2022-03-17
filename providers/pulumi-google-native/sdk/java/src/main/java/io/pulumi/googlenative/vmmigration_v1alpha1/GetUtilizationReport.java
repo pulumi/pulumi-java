@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUtilizationReport {
     private GetUtilizationReport() {}
-    public interface BuilderApplicator {
-        public void apply(GetUtilizationReportArgs.Builder a);
-    }
-    private static GetUtilizationReportArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUtilizationReportArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a single Utilization Report.
- * 
-     */
-    public static CompletableFuture<GetUtilizationReportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a single Utilization Report.
      * 

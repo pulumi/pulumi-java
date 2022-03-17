@@ -160,22 +160,6 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
         return this.workerCount;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable WorkerPoolArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.cloudbuild_v1alpha1.WorkerPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.cloudbuild_v1alpha1.WorkerPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WorkerPool(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

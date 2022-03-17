@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetModuleDefaultVersion {
     private GetModuleDefaultVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetModuleDefaultVersionArgs.Builder a);
-    }
-    private static GetModuleDefaultVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetModuleDefaultVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A module that has been registered in the CloudFormation registry as the default version
- * 
-     */
-    public static CompletableFuture<GetModuleDefaultVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A module that has been registered in the CloudFormation registry as the default version
      * 

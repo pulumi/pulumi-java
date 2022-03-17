@@ -70,22 +70,6 @@ public class DomainDkim extends io.pulumi.resources.CustomResource {
         return this.domain;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DomainDkimArgs.Builder a);
-    }
-    private static io.pulumi.aws.ses.DomainDkimArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ses.DomainDkimArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DomainDkim(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

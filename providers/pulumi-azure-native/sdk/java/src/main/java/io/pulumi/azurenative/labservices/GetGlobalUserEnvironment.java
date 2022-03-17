@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGlobalUserEnvironment {
     private GetGlobalUserEnvironment() {}
-    public interface BuilderApplicator {
-        public void apply(GetGlobalUserEnvironmentArgs.Builder a);
-    }
-    private static GetGlobalUserEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGlobalUserEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents the environments details
- * API Version: 2018-10-15.
- * 
-     *
-     * Represents the environments details
- * 
-     */
-    public static CompletableFuture<GetGlobalUserEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents the environments details
      * API Version: 2018-10-15.

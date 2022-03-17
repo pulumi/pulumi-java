@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAlertsSuppressionRule {
     private GetAlertsSuppressionRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetAlertsSuppressionRuleArgs.Builder a);
-    }
-    private static GetAlertsSuppressionRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAlertsSuppressionRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes the suppression rule
- * API Version: 2019-01-01-preview.
- * 
-     *
-     * Describes the suppression rule
- * 
-     */
-    public static CompletableFuture<GetAlertsSuppressionRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes the suppression rule
      * API Version: 2019-01-01-preview.

@@ -95,22 +95,6 @@ public class GameServerDeploymentIamPolicy extends io.pulumi.resources.CustomRes
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(GameServerDeploymentIamPolicyArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.gameservices_v1.GameServerDeploymentIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.gameservices_v1.GameServerDeploymentIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public GameServerDeploymentIamPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

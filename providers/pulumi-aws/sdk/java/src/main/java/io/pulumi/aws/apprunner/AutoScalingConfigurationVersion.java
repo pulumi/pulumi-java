@@ -172,22 +172,6 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
         return this.tagsAll;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AutoScalingConfigurationVersionArgs.Builder a);
-    }
-    private static io.pulumi.aws.apprunner.AutoScalingConfigurationVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.apprunner.AutoScalingConfigurationVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AutoScalingConfigurationVersion(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

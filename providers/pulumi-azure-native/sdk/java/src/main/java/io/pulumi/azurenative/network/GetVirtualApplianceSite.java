@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualApplianceSite {
     private GetVirtualApplianceSite() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualApplianceSiteArgs.Builder a);
-    }
-    private static GetVirtualApplianceSiteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualApplianceSiteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Virtual Appliance Site resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Virtual Appliance Site resource.
- * 
-     */
-    public static CompletableFuture<GetVirtualApplianceSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Virtual Appliance Site resource.
      * API Version: 2020-11-01.

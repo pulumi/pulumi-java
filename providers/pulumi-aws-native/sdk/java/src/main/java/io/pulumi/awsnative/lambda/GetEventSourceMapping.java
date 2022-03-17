@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventSourceMapping {
     private GetEventSourceMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventSourceMappingArgs.Builder a);
-    }
-    private static GetEventSourceMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventSourceMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Lambda::EventSourceMapping
- * 
-     */
-    public static CompletableFuture<GetEventSourceMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Lambda::EventSourceMapping
      * 

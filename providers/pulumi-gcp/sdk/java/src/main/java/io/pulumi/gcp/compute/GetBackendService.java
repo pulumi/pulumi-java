@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBackendService {
     private GetBackendService() {}
-    public interface BuilderApplicator {
-        public void apply(GetBackendServiceArgs.Builder a);
-    }
-    private static GetBackendServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBackendServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provide access to a Backend Service's attribute. For more information
- * see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
- * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
- * 
-     *
-     * A collection of arguments for invoking getBackendService.
- * 
-     *
-     * A collection of values returned by getBackendService.
- * 
-     */
-    public static CompletableFuture<GetBackendServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provide access to a Backend Service's attribute. For more information
      * see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)

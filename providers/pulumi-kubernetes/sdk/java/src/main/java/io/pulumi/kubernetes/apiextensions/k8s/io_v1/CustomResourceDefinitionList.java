@@ -77,22 +77,6 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
         return this.metadata;
     }
 
-    public interface BuilderApplicator {
-        public void apply(CustomResourceDefinitionListArgs.Builder a);
-    }
-    private static io.pulumi.kubernetes.apiextensions.k8s.io_v1.CustomResourceDefinitionListArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.kubernetes.apiextensions.k8s.io_v1.CustomResourceDefinitionListArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public CustomResourceDefinitionList(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

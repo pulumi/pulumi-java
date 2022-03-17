@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourceTypeRegistration {
     private GetResourceTypeRegistration() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceTypeRegistrationArgs.Builder a);
-    }
-    private static GetResourceTypeRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceTypeRegistrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2020-11-20.
- * 
-     */
-    public static CompletableFuture<GetResourceTypeRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2020-11-20.
      * 

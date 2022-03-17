@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAndroidMAMPolicyByName {
     private GetAndroidMAMPolicyByName() {}
-    public interface BuilderApplicator {
-        public void apply(GetAndroidMAMPolicyByNameArgs.Builder a);
-    }
-    private static GetAndroidMAMPolicyByNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAndroidMAMPolicyByNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Android Policy entity for Intune MAM.
- * API Version: 2015-01-14-preview.
- * 
-     *
-     * Android Policy entity for Intune MAM.
- * 
-     */
-    public static CompletableFuture<GetAndroidMAMPolicyByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Android Policy entity for Intune MAM.
      * API Version: 2015-01-14-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEntityType {
     private GetEntityType() {}
-    public interface BuilderApplicator {
-        public void apply(GetEntityTypeArgs.Builder a);
-    }
-    private static GetEntityTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEntityTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An entity type for fraud detector.
- * 
-     */
-    public static CompletableFuture<GetEntityTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An entity type for fraud detector.
      * 

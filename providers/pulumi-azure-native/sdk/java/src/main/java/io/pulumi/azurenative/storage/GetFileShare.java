@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFileShare {
     private GetFileShare() {}
-    public interface BuilderApplicator {
-        public void apply(GetFileShareArgs.Builder a);
-    }
-    private static GetFileShareArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFileShareArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Properties of the file share, including Id, resource name, resource type, Etag.
- * API Version: 2021-02-01.
- * 
-     *
-     * Properties of the file share, including Id, resource name, resource type, Etag.
- * 
-     */
-    public static CompletableFuture<GetFileShareResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Properties of the file share, including Id, resource name, resource type, Etag.
      * API Version: 2021-02-01.

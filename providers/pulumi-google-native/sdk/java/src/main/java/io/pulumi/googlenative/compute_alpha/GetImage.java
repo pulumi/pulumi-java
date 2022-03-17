@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImage {
     private GetImage() {}
-    public interface BuilderApplicator {
-        public void apply(GetImageArgs.Builder a);
-    }
-    private static GetImageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified image. Gets a list of available images by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified image. Gets a list of available images by making a list() request.
      * 

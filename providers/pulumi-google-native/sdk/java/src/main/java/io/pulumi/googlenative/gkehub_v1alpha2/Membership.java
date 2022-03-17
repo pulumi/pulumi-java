@@ -205,22 +205,6 @@ public class Membership extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    public interface BuilderApplicator {
-        public void apply(MembershipArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.gkehub_v1alpha2.MembershipArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.gkehub_v1alpha2.MembershipArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Membership(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

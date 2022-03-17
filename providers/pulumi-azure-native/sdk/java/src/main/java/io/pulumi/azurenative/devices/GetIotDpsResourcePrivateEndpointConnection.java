@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIotDpsResourcePrivateEndpointConnection {
     private GetIotDpsResourcePrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetIotDpsResourcePrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetIotDpsResourcePrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIotDpsResourcePrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The private endpoint connection of a provisioning service
- * API Version: 2020-03-01.
- * 
-     *
-     * The private endpoint connection of a provisioning service
- * 
-     */
-    public static CompletableFuture<GetIotDpsResourcePrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The private endpoint connection of a provisioning service
      * API Version: 2020-03-01.

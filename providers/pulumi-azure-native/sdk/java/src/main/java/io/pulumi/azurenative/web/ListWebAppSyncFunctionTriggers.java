@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppSyncFunctionTriggers {
     private ListWebAppSyncFunctionTriggers() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppSyncFunctionTriggersArgs.Builder a);
-    }
-    private static ListWebAppSyncFunctionTriggersArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppSyncFunctionTriggersArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Function secrets.
- * API Version: 2020-12-01.
- * 
-     *
-     * Function secrets.
- * 
-     */
-    public static CompletableFuture<ListWebAppSyncFunctionTriggersResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Function secrets.
      * API Version: 2020-12-01.

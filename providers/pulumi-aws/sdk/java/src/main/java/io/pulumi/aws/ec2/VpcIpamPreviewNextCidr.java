@@ -79,22 +79,6 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
         return this.netmaskLength;
     }
 
-    public interface BuilderApplicator {
-        public void apply(VpcIpamPreviewNextCidrArgs.Builder a);
-    }
-    private static io.pulumi.aws.ec2.VpcIpamPreviewNextCidrArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ec2.VpcIpamPreviewNextCidrArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public VpcIpamPreviewNextCidr(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

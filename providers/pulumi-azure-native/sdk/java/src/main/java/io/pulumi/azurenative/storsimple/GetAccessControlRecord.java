@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccessControlRecord {
     private GetAccessControlRecord() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccessControlRecordArgs.Builder a);
-    }
-    private static GetAccessControlRecordArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccessControlRecordArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The access control record.
- * API Version: 2017-06-01.
- * 
-     *
-     * The access control record.
- * 
-     */
-    public static CompletableFuture<GetAccessControlRecordResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The access control record.
      * API Version: 2017-06-01.

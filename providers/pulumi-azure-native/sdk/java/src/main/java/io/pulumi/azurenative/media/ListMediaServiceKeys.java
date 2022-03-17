@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListMediaServiceKeys {
     private ListMediaServiceKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListMediaServiceKeysArgs.Builder a);
-    }
-    private static ListMediaServiceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListMediaServiceKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The response body for a ListKeys API.
- * API Version: 2015-10-01.
- * 
-     *
-     * The response body for a ListKeys API.
- * 
-     */
-    public static CompletableFuture<ListMediaServiceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The response body for a ListKeys API.
      * API Version: 2015-10-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListListTenantConfigurationViolation {
     private ListListTenantConfigurationViolation() {}
-    public interface BuilderApplicator {
-        public void apply(ListListTenantConfigurationViolationArgs.Builder a);
-    }
-    private static ListListTenantConfigurationViolationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListListTenantConfigurationViolationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * List of list of items that violate tenant's configuration.
- * API Version: 2020-09-01-preview.
- * 
-     *
-     * List of list of items that violate tenant's configuration.
- * 
-     */
-    public static CompletableFuture<ListListTenantConfigurationViolationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * List of list of items that violate tenant's configuration.
      * API Version: 2020-09-01-preview.

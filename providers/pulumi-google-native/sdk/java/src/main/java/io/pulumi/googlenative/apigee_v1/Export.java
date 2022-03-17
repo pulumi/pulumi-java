@@ -145,22 +145,6 @@ public class Export extends io.pulumi.resources.CustomResource {
         return this.updated;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ExportArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.apigee_v1.ExportArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.apigee_v1.ExportArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Export(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

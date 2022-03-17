@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerBlobAuditingPolicy {
     private GetServerBlobAuditingPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerBlobAuditingPolicyArgs.Builder a);
-    }
-    private static GetServerBlobAuditingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerBlobAuditingPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A server blob auditing policy.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A server blob auditing policy.
- * 
-     */
-    public static CompletableFuture<GetServerBlobAuditingPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A server blob auditing policy.
      * API Version: 2020-11-01-preview.

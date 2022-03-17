@@ -136,22 +136,6 @@ public class TestCase extends io.pulumi.resources.CustomResource {
         return this.testConfig;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TestCaseArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.dialogflow_v3beta1.TestCaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.dialogflow_v3beta1.TestCaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public TestCase(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

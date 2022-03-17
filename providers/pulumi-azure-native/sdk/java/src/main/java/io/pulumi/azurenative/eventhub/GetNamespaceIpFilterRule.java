@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNamespaceIpFilterRule {
     private GetNamespaceIpFilterRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetNamespaceIpFilterRuleArgs.Builder a);
-    }
-    private static GetNamespaceIpFilterRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNamespaceIpFilterRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Single item in a List or Get IpFilterRules operation
- * API Version: 2018-01-01-preview.
- * 
-     *
-     * Single item in a List or Get IpFilterRules operation
- * 
-     */
-    public static CompletableFuture<GetNamespaceIpFilterRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Single item in a List or Get IpFilterRules operation
      * API Version: 2018-01-01-preview.

@@ -96,22 +96,6 @@ public class BackendServiceSignedUrlKey extends io.pulumi.resources.CustomResour
         return this.project;
     }
 
-    public interface BuilderApplicator {
-        public void apply(BackendServiceSignedUrlKeyArgs.Builder a);
-    }
-    private static io.pulumi.gcp.compute.BackendServiceSignedUrlKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.compute.BackendServiceSignedUrlKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public BackendServiceSignedUrlKey(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

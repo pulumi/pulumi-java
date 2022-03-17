@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegration {
     private GetIntegration() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationArgs.Builder a);
-    }
-    private static GetIntegrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The resource schema for creating an Amazon Connect Customer Profiles Integration.
- * 
-     */
-    public static CompletableFuture<GetIntegrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The resource schema for creating an Amazon Connect Customer Profiles Integration.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFlowLog {
     private GetFlowLog() {}
-    public interface BuilderApplicator {
-        public void apply(GetFlowLogArgs.Builder a);
-    }
-    private static GetFlowLogArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFlowLogArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specifies a VPC flow log, which enables you to capture IP traffic for a specific network interface, subnet, or VPC.
- * 
-     */
-    public static CompletableFuture<GetFlowLogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specifies a VPC flow log, which enables you to capture IP traffic for a specific network interface, subnet, or VPC.
      * 

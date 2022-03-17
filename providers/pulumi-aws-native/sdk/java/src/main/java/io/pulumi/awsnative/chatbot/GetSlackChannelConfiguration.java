@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSlackChannelConfiguration {
     private GetSlackChannelConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetSlackChannelConfigurationArgs.Builder a);
-    }
-    private static GetSlackChannelConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSlackChannelConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Chatbot::SlackChannelConfiguration.
- * 
-     */
-    public static CompletableFuture<GetSlackChannelConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Chatbot::SlackChannelConfiguration.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegrationAccountCertificate {
     private GetIntegrationAccountCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationAccountCertificateArgs.Builder a);
-    }
-    private static GetIntegrationAccountCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationAccountCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The integration account certificate.
- * API Version: 2019-05-01.
- * 
-     *
-     * The integration account certificate.
- * 
-     */
-    public static CompletableFuture<GetIntegrationAccountCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The integration account certificate.
      * API Version: 2019-05-01.

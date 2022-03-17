@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSharedKeys {
     private GetSharedKeys() {}
-    public interface BuilderApplicator {
-        public void apply(GetSharedKeysArgs.Builder a);
-    }
-    private static GetSharedKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSharedKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The shared keys for a workspace.
- * API Version: 2020-08-01.
- * 
-     *
-     * The shared keys for a workspace.
- * 
-     */
-    public static CompletableFuture<GetSharedKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The shared keys for a workspace.
      * API Version: 2020-08-01.

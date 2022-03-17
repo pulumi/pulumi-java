@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContainer {
     private GetContainer() {}
-    public interface BuilderApplicator {
-        public void apply(GetContainerArgs.Builder a);
-    }
-    private static GetContainerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContainerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a container on the  Data Box Edge/Gateway device.
- * API Version: 2020-12-01.
- * 
-     *
-     * Represents a container on the  Data Box Edge/Gateway device.
- * 
-     */
-    public static CompletableFuture<GetContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a container on the  Data Box Edge/Gateway device.
      * API Version: 2020-12-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEmailTemplate {
     private GetEmailTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetEmailTemplateArgs.Builder a);
-    }
-    private static GetEmailTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEmailTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Email Template details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Email Template details.
- * 
-     */
-    public static CompletableFuture<GetEmailTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Email Template details.
      * API Version: 2020-12-01.

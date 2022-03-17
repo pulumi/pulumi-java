@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrganizationMuteConfig {
     private GetOrganizationMuteConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrganizationMuteConfigArgs.Builder a);
-    }
-    private static GetOrganizationMuteConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrganizationMuteConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a mute config.
- * 
-     */
-    public static CompletableFuture<GetOrganizationMuteConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a mute config.
      * 

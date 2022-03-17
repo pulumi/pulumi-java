@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRouteTable {
     private GetRouteTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouteTableArgs.Builder a);
-    }
-    private static GetRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouteTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::RouteTable
- * 
-     */
-    public static CompletableFuture<GetRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::RouteTable
      * 

@@ -162,22 +162,6 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
         return this.tokenKeyId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ApnsSandboxChannelArgs.Builder a);
-    }
-    private static io.pulumi.aws.pinpoint.ApnsSandboxChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.pinpoint.ApnsSandboxChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ApnsSandboxChannel(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

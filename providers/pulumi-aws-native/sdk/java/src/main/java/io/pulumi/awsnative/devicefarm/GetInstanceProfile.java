@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceProfile {
     private GetInstanceProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceProfileArgs.Builder a);
-    }
-    private static GetInstanceProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS::DeviceFarm::InstanceProfile creates a new Device Farm Instance Profile
- * 
-     */
-    public static CompletableFuture<GetInstanceProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS::DeviceFarm::InstanceProfile creates a new Device Farm Instance Profile
      * 

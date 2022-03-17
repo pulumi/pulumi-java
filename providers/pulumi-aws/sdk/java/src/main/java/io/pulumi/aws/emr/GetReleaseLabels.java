@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReleaseLabels {
     private GetReleaseLabels() {}
-    public interface BuilderApplicator {
-        public void apply(GetReleaseLabelsArgs.Builder a);
-    }
-    private static GetReleaseLabelsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReleaseLabelsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve information about EMR Release Labels.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getReleaseLabels.
- * 
-     *
-     * A collection of values returned by getReleaseLabels.
- * 
-     */
-    public static CompletableFuture<GetReleaseLabelsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve information about EMR Release Labels.
      * 

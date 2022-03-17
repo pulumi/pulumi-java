@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadGroup {
     private GetWorkloadGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadGroupArgs.Builder a);
-    }
-    private static GetWorkloadGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Workload group operations for a data warehouse
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * Workload group operations for a data warehouse
- * 
-     */
-    public static CompletableFuture<GetWorkloadGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Workload group operations for a data warehouse
      * API Version: 2020-11-01-preview.

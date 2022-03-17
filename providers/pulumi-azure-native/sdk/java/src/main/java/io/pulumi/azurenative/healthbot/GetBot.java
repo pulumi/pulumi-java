@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBot {
     private GetBot() {}
-    public interface BuilderApplicator {
-        public void apply(GetBotArgs.Builder a);
-    }
-    private static GetBotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * HealthBot resource definition
- * API Version: 2020-12-08.
- * 
-     *
-     * HealthBot resource definition
- * 
-     */
-    public static CompletableFuture<GetBotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * HealthBot resource definition
      * API Version: 2020-12-08.

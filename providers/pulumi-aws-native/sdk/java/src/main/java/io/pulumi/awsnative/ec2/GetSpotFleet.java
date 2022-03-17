@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSpotFleet {
     private GetSpotFleet() {}
-    public interface BuilderApplicator {
-        public void apply(GetSpotFleetArgs.Builder a);
-    }
-    private static GetSpotFleetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSpotFleetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::SpotFleet
- * 
-     */
-    public static CompletableFuture<GetSpotFleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::SpotFleet
      * 

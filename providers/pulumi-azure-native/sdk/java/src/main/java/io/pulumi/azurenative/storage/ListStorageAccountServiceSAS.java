@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListStorageAccountServiceSAS {
     private ListStorageAccountServiceSAS() {}
-    public interface BuilderApplicator {
-        public void apply(ListStorageAccountServiceSASArgs.Builder a);
-    }
-    private static ListStorageAccountServiceSASArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListStorageAccountServiceSASArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The List service SAS credentials operation response.
- * API Version: 2021-02-01.
- * 
-     *
-     * The List service SAS credentials operation response.
- * 
-     */
-    public static CompletableFuture<ListStorageAccountServiceSASResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The List service SAS credentials operation response.
      * API Version: 2021-02-01.

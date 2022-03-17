@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResource {
     private GetResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceArgs.Builder a);
-    }
-    private static GetResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the id of a Resource in API Gateway.
- * To fetch the Resource, you must provide the REST API id as well as the full path.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getResource.
- * 
-     *
-     * A collection of values returned by getResource.
- * 
-     */
-    public static CompletableFuture<GetResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the id of a Resource in API Gateway.
      * To fetch the Resource, you must provide the REST API id as well as the full path.

@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSdk {
     private GetSdk() {}
-    public interface BuilderApplicator {
-        public void apply(GetSdkArgs.Builder a);
-    }
-    private static GetSdkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSdkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSdk.
- * 
-     *
-     * A collection of values returned by getSdk.
- * 
-     */
-    public static CompletableFuture<GetSdkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ## Example Usage
      * 

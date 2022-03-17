@@ -67,22 +67,6 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
         return this.indexDocument;
     }
 
-    public interface BuilderApplicator {
-        public void apply(StorageAccountStaticWebsiteArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public StorageAccountStaticWebsite(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

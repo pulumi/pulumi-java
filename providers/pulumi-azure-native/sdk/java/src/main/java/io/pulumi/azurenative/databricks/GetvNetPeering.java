@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetvNetPeering {
     private GetvNetPeering() {}
-    public interface BuilderApplicator {
-        public void apply(GetvNetPeeringArgs.Builder a);
-    }
-    private static GetvNetPeeringArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetvNetPeeringArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Peerings in a VirtualNetwork resource
- * API Version: 2018-04-01.
- * 
-     *
-     * Peerings in a VirtualNetwork resource
- * 
-     */
-    public static CompletableFuture<GetvNetPeeringResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Peerings in a VirtualNetwork resource
      * API Version: 2018-04-01.

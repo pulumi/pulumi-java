@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWorkflowAccessKeySecretKeys {
     private ListWorkflowAccessKeySecretKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListWorkflowAccessKeySecretKeysArgs.Builder a);
-    }
-    private static ListWorkflowAccessKeySecretKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWorkflowAccessKeySecretKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2015-02-01-preview.
- * 
-     */
-    public static CompletableFuture<ListWorkflowAccessKeySecretKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2015-02-01-preview.
      * 

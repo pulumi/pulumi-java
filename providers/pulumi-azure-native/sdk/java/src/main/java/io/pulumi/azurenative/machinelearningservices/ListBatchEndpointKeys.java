@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListBatchEndpointKeys {
     private ListBatchEndpointKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListBatchEndpointKeysArgs.Builder a);
-    }
-    private static ListBatchEndpointKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListBatchEndpointKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Keys for endpoint authentication.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Keys for endpoint authentication.
- * 
-     */
-    public static CompletableFuture<ListBatchEndpointKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Keys for endpoint authentication.
      * API Version: 2021-03-01-preview.

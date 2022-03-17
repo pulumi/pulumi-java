@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceBinding {
     private GetServiceBinding() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceBindingArgs.Builder a);
-    }
-    private static GetServiceBindingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceBindingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single ServiceBinding.
- * 
-     */
-    public static CompletableFuture<GetServiceBindingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single ServiceBinding.
      * 

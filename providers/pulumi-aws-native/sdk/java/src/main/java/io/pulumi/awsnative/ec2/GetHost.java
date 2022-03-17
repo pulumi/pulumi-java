@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHost {
     private GetHost() {}
-    public interface BuilderApplicator {
-        public void apply(GetHostArgs.Builder a);
-    }
-    private static GetHostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::Host
- * 
-     */
-    public static CompletableFuture<GetHostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::Host
      * 

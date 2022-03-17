@@ -199,22 +199,6 @@ public class BillingRoleAssignmentByEnrollmentAccount extends io.pulumi.resource
         return this.userEmailAddress;
     }
 
-    public interface BuilderApplicator {
-        public void apply(BillingRoleAssignmentByEnrollmentAccountArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.billing.BillingRoleAssignmentByEnrollmentAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.billing.BillingRoleAssignmentByEnrollmentAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public BillingRoleAssignmentByEnrollmentAccount(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

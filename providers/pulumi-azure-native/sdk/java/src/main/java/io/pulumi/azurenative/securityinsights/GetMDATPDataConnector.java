@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMDATPDataConnector {
     private GetMDATPDataConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetMDATPDataConnectorArgs.Builder a);
-    }
-    private static GetMDATPDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMDATPDataConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
- * API Version: 2020-01-01.
- * 
-     *
-     * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
- * 
-     */
-    public static CompletableFuture<GetMDATPDataConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
      * API Version: 2020-01-01.

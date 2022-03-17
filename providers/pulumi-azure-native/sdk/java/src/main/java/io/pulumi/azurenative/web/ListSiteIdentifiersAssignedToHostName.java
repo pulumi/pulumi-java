@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListSiteIdentifiersAssignedToHostName {
     private ListSiteIdentifiersAssignedToHostName() {}
-    public interface BuilderApplicator {
-        public void apply(ListSiteIdentifiersAssignedToHostNameArgs.Builder a);
-    }
-    private static ListSiteIdentifiersAssignedToHostNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListSiteIdentifiersAssignedToHostNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of identifiers.
- * API Version: 2020-12-01.
- * 
-     *
-     * Collection of identifiers.
- * 
-     */
-    public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of identifiers.
      * API Version: 2020-12-01.

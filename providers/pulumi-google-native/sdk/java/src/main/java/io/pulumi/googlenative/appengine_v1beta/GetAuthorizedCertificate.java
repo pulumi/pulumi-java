@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAuthorizedCertificate {
     private GetAuthorizedCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetAuthorizedCertificateArgs.Builder a);
-    }
-    private static GetAuthorizedCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAuthorizedCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified SSL certificate.
- * 
-     */
-    public static CompletableFuture<GetAuthorizedCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified SSL certificate.
      * 

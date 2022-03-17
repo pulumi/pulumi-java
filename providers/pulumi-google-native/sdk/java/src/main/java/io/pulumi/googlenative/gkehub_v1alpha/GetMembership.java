@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMembership {
     private GetMembership() {}
-    public interface BuilderApplicator {
-        public void apply(GetMembershipArgs.Builder a);
-    }
-    private static GetMembershipArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMembershipArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the details of a Membership.
- * 
-     */
-    public static CompletableFuture<GetMembershipResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the details of a Membership.
      * 

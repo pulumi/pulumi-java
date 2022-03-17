@@ -14,38 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKMSSecretCiphertext {
     private GetKMSSecretCiphertext() {}
-    public interface BuilderApplicator {
-        public void apply(GetKMSSecretCiphertextArgs.Builder a);
-    }
-    private static GetKMSSecretCiphertextArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKMSSecretCiphertextArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * !> **Warning:** This data source is deprecated. Use the `gcp.kms.SecretCiphertext` **resource** instead.
- * 
- * This data source allows you to encrypt data with Google Cloud KMS and use the
- * ciphertext within your resource definitions.
- * 
- * For more information see
- * [the official documentation](https://cloud.google.com/kms/docs/encrypt-decrypt).
- * 
- * > **NOTE:** Using this data source will allow you to conceal secret data within your
- * resource definitions, but it does not take care of protecting that data in the
- * logging output, plan output, or state output.  Please take care to secure your secret
- * data outside of resource definitions.
- * 
-     *
-     * A collection of arguments for invoking getKMSSecretCiphertext.
- * 
-     *
-     * A collection of values returned by getKMSSecretCiphertext.
- * 
-     */
-    public static CompletableFuture<GetKMSSecretCiphertextResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * !> **Warning:** This data source is deprecated. Use the `gcp.kms.SecretCiphertext` **resource** instead.
      * 

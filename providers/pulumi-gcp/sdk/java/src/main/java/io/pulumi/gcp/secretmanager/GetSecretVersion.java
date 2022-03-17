@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecretVersion {
     private GetSecretVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecretVersionArgs.Builder a);
-    }
-    private static GetSecretVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecretVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a Secret Manager secret's version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSecretVersion.
- * 
-     *
-     * A collection of values returned by getSecretVersion.
- * 
-     */
-    public static CompletableFuture<GetSecretVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a Secret Manager secret's version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
      * 

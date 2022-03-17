@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTraceSink {
     private GetTraceSink() {}
-    public interface BuilderApplicator {
-        public void apply(GetTraceSinkArgs.Builder a);
-    }
-    private static GetTraceSinkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTraceSinkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a trace sink by name under the parent resource (GCP project).
- * 
-     */
-    public static CompletableFuture<GetTraceSinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a trace sink by name under the parent resource (GCP project).
      * 

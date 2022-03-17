@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSpoke {
     private GetSpoke() {}
-    public interface BuilderApplicator {
-        public void apply(GetSpokeArgs.Builder a);
-    }
-    private static GetSpokeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSpokeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details about the specified spoke.
- * 
-     */
-    public static CompletableFuture<GetSpokeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details about the specified spoke.
      * 

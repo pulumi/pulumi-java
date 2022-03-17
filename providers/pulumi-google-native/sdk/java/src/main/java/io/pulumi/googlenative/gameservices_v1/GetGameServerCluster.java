@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGameServerCluster {
     private GetGameServerCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetGameServerClusterArgs.Builder a);
-    }
-    private static GetGameServerClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGameServerClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single game server cluster.
- * 
-     */
-    public static CompletableFuture<GetGameServerClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single game server cluster.
      * 

@@ -46,22 +46,6 @@ public class Tenant extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TenantArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.jobs_v4.TenantArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.jobs_v4.TenantArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Tenant(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

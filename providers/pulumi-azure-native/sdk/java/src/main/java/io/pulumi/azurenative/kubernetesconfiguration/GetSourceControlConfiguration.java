@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSourceControlConfiguration {
     private GetSourceControlConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetSourceControlConfigurationArgs.Builder a);
-    }
-    private static GetSourceControlConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSourceControlConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The SourceControl Configuration object returned in Get & Put response.
- * API Version: 2021-03-01.
- * 
-     *
-     * The SourceControl Configuration object returned in Get & Put response.
- * 
-     */
-    public static CompletableFuture<GetSourceControlConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The SourceControl Configuration object returned in Get & Put response.
      * API Version: 2021-03-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKeyValue {
     private GetKeyValue() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeyValueArgs.Builder a);
-    }
-    private static GetKeyValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeyValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The key-value resource along with all resource properties.
- * API Version: 2020-07-01-preview.
- * 
-     *
-     * The key-value resource along with all resource properties.
- * 
-     */
-    public static CompletableFuture<GetKeyValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The key-value resource along with all resource properties.
      * API Version: 2020-07-01-preview.

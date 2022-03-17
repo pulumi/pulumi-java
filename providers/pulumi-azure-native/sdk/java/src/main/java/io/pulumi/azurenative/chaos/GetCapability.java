@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCapability {
     private GetCapability() {}
-    public interface BuilderApplicator {
-        public void apply(GetCapabilityArgs.Builder a);
-    }
-    private static GetCapabilityArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCapabilityArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Model that represents a Capability resource.
- * API Version: 2021-09-15-preview.
- * 
-     *
-     * Model that represents a Capability resource.
- * 
-     */
-    public static CompletableFuture<GetCapabilityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Model that represents a Capability resource.
      * API Version: 2021-09-15-preview.

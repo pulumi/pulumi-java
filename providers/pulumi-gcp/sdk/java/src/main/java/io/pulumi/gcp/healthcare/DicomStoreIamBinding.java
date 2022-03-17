@@ -125,22 +125,6 @@ public class DicomStoreIamBinding extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DicomStoreIamBindingArgs.Builder a);
-    }
-    private static io.pulumi.gcp.healthcare.DicomStoreIamBindingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.healthcare.DicomStoreIamBindingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DicomStoreIamBinding(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

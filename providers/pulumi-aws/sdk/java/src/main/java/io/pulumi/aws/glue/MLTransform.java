@@ -260,22 +260,6 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
         return this.workerType;
     }
 
-    public interface BuilderApplicator {
-        public void apply(MLTransformArgs.Builder a);
-    }
-    private static io.pulumi.aws.glue.MLTransformArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.glue.MLTransformArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public MLTransform(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCertificateTemplateIamPolicy {
     private GetCertificateTemplateIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetCertificateTemplateIamPolicyArgs.Builder a);
-    }
-    private static GetCertificateTemplateIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCertificateTemplateIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetCertificateTemplateIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 

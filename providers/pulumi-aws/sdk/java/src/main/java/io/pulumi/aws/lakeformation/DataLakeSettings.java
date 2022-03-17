@@ -96,22 +96,6 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
         return this.trustedResourceOwners;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable DataLakeSettingsArgs.Builder a);
-    }
-    private static io.pulumi.aws.lakeformation.DataLakeSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.lakeformation.DataLakeSettingsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DataLakeSettings(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

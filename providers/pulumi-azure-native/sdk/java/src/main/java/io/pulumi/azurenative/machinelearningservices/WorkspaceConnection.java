@@ -129,22 +129,6 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
         return this.valueFormat;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WorkspaceConnectionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.machinelearningservices.WorkspaceConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.machinelearningservices.WorkspaceConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WorkspaceConnection(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

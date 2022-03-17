@@ -161,22 +161,6 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PrivateLinkServicesForEDMUploadArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.m365securityandcompliance.PrivateLinkServicesForEDMUploadArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.m365securityandcompliance.PrivateLinkServicesForEDMUploadArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PrivateLinkServicesForEDMUpload(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

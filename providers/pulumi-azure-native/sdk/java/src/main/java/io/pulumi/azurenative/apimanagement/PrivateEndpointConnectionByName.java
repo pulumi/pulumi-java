@@ -103,22 +103,6 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PrivateEndpointConnectionByNameArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.apimanagement.PrivateEndpointConnectionByNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.apimanagement.PrivateEndpointConnectionByNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PrivateEndpointConnectionByName(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

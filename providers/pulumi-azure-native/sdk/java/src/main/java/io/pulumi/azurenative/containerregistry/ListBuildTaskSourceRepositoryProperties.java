@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListBuildTaskSourceRepositoryProperties {
     private ListBuildTaskSourceRepositoryProperties() {}
-    public interface BuilderApplicator {
-        public void apply(ListBuildTaskSourceRepositoryPropertiesArgs.Builder a);
-    }
-    private static ListBuildTaskSourceRepositoryPropertiesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListBuildTaskSourceRepositoryPropertiesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The properties of the source code repository.
- * API Version: 2018-02-01-preview.
- * 
-     *
-     * The properties of the source code repository.
- * 
-     */
-    public static CompletableFuture<ListBuildTaskSourceRepositoryPropertiesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The properties of the source code repository.
      * API Version: 2018-02-01-preview.

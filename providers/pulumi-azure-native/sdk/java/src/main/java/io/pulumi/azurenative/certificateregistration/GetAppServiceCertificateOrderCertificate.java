@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAppServiceCertificateOrderCertificate {
     private GetAppServiceCertificateOrderCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppServiceCertificateOrderCertificateArgs.Builder a);
-    }
-    private static GetAppServiceCertificateOrderCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppServiceCertificateOrderCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Key Vault container ARM resource for a certificate that is purchased through Azure.
- * API Version: 2020-10-01.
- * 
-     *
-     * Key Vault container ARM resource for a certificate that is purchased through Azure.
- * 
-     */
-    public static CompletableFuture<GetAppServiceCertificateOrderCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Key Vault container ARM resource for a certificate that is purchased through Azure.
      * API Version: 2020-10-01.

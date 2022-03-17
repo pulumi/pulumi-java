@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetClient {
     private GetClient() {}
-    public interface BuilderApplicator {
-        public void apply(GetClientArgs.Builder a);
-    }
-    private static GetClientArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetClientArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get info about a Google Cloud IAP Client.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getClient.
- * 
-     *
-     * A collection of values returned by getClient.
- * 
-     */
-    public static CompletableFuture<GetClientResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get info about a Google Cloud IAP Client.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAuthorization {
     private GetAuthorization() {}
-    public interface BuilderApplicator {
-        public void apply(GetAuthorizationArgs.Builder a);
-    }
-    private static GetAuthorizationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAuthorizationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ExpressRoute Circuit Authorization
- * API Version: 2020-03-20.
- * 
-     *
-     * ExpressRoute Circuit Authorization
- * 
-     */
-    public static CompletableFuture<GetAuthorizationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ExpressRoute Circuit Authorization
      * API Version: 2020-03-20.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTaskDefinition {
     private GetTaskDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetTaskDefinitionArgs.Builder a);
-    }
-    private static GetTaskDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTaskDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema describing various properties for ECS TaskDefinition
- * 
-     */
-    public static CompletableFuture<GetTaskDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema describing various properties for ECS TaskDefinition
      * 

@@ -166,22 +166,6 @@ public class SubnetworkIAMMember extends io.pulumi.resources.CustomResource {
         return this.subnetwork;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SubnetworkIAMMemberArgs.Builder a);
-    }
-    private static io.pulumi.gcp.compute.SubnetworkIAMMemberArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.compute.SubnetworkIAMMemberArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SubnetworkIAMMember(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

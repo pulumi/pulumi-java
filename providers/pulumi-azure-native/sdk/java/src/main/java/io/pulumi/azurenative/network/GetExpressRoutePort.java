@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExpressRoutePort {
     private GetExpressRoutePort() {}
-    public interface BuilderApplicator {
-        public void apply(GetExpressRoutePortArgs.Builder a);
-    }
-    private static GetExpressRoutePortArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExpressRoutePortArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ExpressRoutePort resource definition.
- * API Version: 2020-11-01.
- * 
-     *
-     * ExpressRoutePort resource definition.
- * 
-     */
-    public static CompletableFuture<GetExpressRoutePortResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ExpressRoutePort resource definition.
      * API Version: 2020-11-01.

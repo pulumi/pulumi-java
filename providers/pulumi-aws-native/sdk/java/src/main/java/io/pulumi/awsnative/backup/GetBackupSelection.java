@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBackupSelection {
     private GetBackupSelection() {}
-    public interface BuilderApplicator {
-        public void apply(GetBackupSelectionArgs.Builder a);
-    }
-    private static GetBackupSelectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBackupSelectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Backup::BackupSelection
- * 
-     */
-    public static CompletableFuture<GetBackupSelectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Backup::BackupSelection
      * 

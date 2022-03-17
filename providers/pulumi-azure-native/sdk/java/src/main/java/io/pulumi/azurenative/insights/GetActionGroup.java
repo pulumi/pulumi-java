@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetActionGroup {
     private GetActionGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetActionGroupArgs.Builder a);
-    }
-    private static GetActionGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetActionGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An action group resource.
- * API Version: 2019-06-01.
- * 
-     *
-     * An action group resource.
- * 
-     */
-    public static CompletableFuture<GetActionGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An action group resource.
      * API Version: 2019-06-01.
