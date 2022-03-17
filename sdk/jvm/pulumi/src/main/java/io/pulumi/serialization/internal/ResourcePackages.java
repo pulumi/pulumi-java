@@ -151,10 +151,20 @@ public class ResourcePackages {
         var urnParts = urn.split("::");
         var urnName = urnParts[3];
 
-        Constructor<?> constructorInfo = Arrays.stream(resourceType.get().getDeclaredConstructors())
-                .filter(c -> c.getParameterCount() == 3)
-                .peek(c -> c.setAccessible(true))
-                .collect(toSingleton());
+        var constructorCandidates = Arrays.stream(resourceType.get().getDeclaredConstructors())
+                .filter(c -> c.getParameterCount() == 3).collect(Collectors.toList());
+
+        if (constructorCandidates.size() > 1) {
+            constructorCandidates.removeIf(c -> !c.getParameterTypes()[1].getCanonicalName().endsWith("Args"));
+        }
+
+        if (constructorCandidates.size() != 1) {
+            throw new IllegalArgumentException(String.format("Could not identify the right constructor for %s",
+                    resourceType.get()));
+        }
+
+        Constructor<?> constructorInfo = constructorCandidates.get(0);
+        constructorInfo.setAccessible(true);
 
         var resourceOptions = resolveResourceOptions(resourceType.get(), urn);
         try {
