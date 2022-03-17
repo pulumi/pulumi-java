@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFlowLog {
     private GetFlowLog() {}
-    public interface BuilderApplicator {
-        public void apply(GetFlowLogArgs.Builder a);
-    }
-    private static GetFlowLogArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFlowLogArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A flow log resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * A flow log resource.
- * 
-     */
-    public static CompletableFuture<GetFlowLogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A flow log resource.
      * API Version: 2020-11-01.

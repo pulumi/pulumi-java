@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBatch {
     private GetBatch() {}
-    public interface BuilderApplicator {
-        public void apply(GetBatchArgs.Builder a);
-    }
-    private static GetBatchArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBatchArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the batch workload resource representation.
- * 
-     */
-    public static CompletableFuture<GetBatchResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the batch workload resource representation.
      * 

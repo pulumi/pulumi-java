@@ -63,22 +63,6 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
         return this.pendingVersions;
     }
 
-    public interface BuilderApplicator {
-        public void apply(StoredInfoTypeArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.dlp_v2.StoredInfoTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.dlp_v2.StoredInfoTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public StoredInfoType(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

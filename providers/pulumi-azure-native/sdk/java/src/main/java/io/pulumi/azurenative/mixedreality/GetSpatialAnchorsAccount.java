@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSpatialAnchorsAccount {
     private GetSpatialAnchorsAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetSpatialAnchorsAccountArgs.Builder a);
-    }
-    private static GetSpatialAnchorsAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSpatialAnchorsAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * SpatialAnchorsAccount Response.
- * API Version: 2021-01-01.
- * 
-     *
-     * SpatialAnchorsAccount Response.
- * 
-     */
-    public static CompletableFuture<GetSpatialAnchorsAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * SpatialAnchorsAccount Response.
      * API Version: 2021-01-01.

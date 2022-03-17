@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionSslPolicy {
     private GetRegionSslPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionSslPolicyArgs.Builder a);
-    }
-    private static GetRegionSslPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionSslPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Lists all of the ordered rules present in a single specified policy.
- * 
-     */
-    public static CompletableFuture<GetRegionSslPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Lists all of the ordered rules present in a single specified policy.
      * 

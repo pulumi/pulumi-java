@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTable {
     private GetTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetTableArgs.Builder a);
-    }
-    private static GetTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::Timestream::Table resource creates a Timestream Table.
- * 
-     */
-    public static CompletableFuture<GetTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::Timestream::Table resource creates a Timestream Table.
      * 

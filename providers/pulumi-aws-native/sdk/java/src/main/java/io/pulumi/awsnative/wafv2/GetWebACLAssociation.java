@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebACLAssociation {
     private GetWebACLAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebACLAssociationArgs.Builder a);
-    }
-    private static GetWebACLAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebACLAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
- * 
-     */
-    public static CompletableFuture<GetWebACLAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
      * 

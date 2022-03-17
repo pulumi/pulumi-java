@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProperty {
     private GetProperty() {}
-    public interface BuilderApplicator {
-        public void apply(GetPropertyArgs.Builder a);
-    }
-    private static GetPropertyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPropertyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Property details.
- * API Version: 2019-01-01.
- * 
-     *
-     * Property details.
- * 
-     */
-    public static CompletableFuture<GetPropertyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Property details.
      * API Version: 2019-01-01.

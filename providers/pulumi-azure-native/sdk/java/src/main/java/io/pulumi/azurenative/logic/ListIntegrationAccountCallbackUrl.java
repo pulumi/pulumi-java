@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListIntegrationAccountCallbackUrl {
     private ListIntegrationAccountCallbackUrl() {}
-    public interface BuilderApplicator {
-        public void apply(ListIntegrationAccountCallbackUrlArgs.Builder a);
-    }
-    private static ListIntegrationAccountCallbackUrlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListIntegrationAccountCallbackUrlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The callback url.
- * API Version: 2019-05-01.
- * 
-     *
-     * The callback url.
- * 
-     */
-    public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The callback url.
      * API Version: 2019-05-01.

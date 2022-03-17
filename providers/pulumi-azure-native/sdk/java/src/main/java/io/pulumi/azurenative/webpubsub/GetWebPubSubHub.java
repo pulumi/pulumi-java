@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebPubSubHub {
     private GetWebPubSubHub() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebPubSubHubArgs.Builder a);
-    }
-    private static GetWebPubSubHubArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebPubSubHubArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A hub setting
- * API Version: 2021-10-01.
- * 
-     *
-     * A hub setting
- * 
-     */
-    public static CompletableFuture<GetWebPubSubHubResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A hub setting
      * API Version: 2021-10-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInterconnect {
     private GetInterconnect() {}
-    public interface BuilderApplicator {
-        public void apply(GetInterconnectArgs.Builder a);
-    }
-    private static GetInterconnectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInterconnectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetInterconnectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
      * 

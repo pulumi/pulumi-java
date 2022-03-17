@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCluster {
     private GetCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetClusterArgs.Builder a);
-    }
-    private static GetClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS Route53 Recovery Control Cluster resource schema
- * 
-     */
-    public static CompletableFuture<GetClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS Route53 Recovery Control Cluster resource schema
      * 

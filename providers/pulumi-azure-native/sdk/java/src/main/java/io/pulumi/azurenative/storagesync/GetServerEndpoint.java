@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerEndpoint {
     private GetServerEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerEndpointArgs.Builder a);
-    }
-    private static GetServerEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Server Endpoint object.
- * API Version: 2020-03-01.
- * 
-     *
-     * Server Endpoint object.
- * 
-     */
-    public static CompletableFuture<GetServerEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Server Endpoint object.
      * API Version: 2020-03-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMachineLearningDataset {
     private GetMachineLearningDataset() {}
-    public interface BuilderApplicator {
-        public void apply(GetMachineLearningDatasetArgs.Builder a);
-    }
-    private static GetMachineLearningDatasetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMachineLearningDatasetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Machine Learning dataset object wrapped into ARM resource envelope.
- * API Version: 2020-05-01-preview.
- * 
-     *
-     * Machine Learning dataset object wrapped into ARM resource envelope.
- * 
-     */
-    public static CompletableFuture<GetMachineLearningDatasetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Machine Learning dataset object wrapped into ARM resource envelope.
      * API Version: 2020-05-01-preview.

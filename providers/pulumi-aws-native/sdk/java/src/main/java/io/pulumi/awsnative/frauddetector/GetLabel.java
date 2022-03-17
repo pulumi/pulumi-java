@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLabel {
     private GetLabel() {}
-    public interface BuilderApplicator {
-        public void apply(GetLabelArgs.Builder a);
-    }
-    private static GetLabelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLabelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An label for fraud detector.
- * 
-     */
-    public static CompletableFuture<GetLabelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An label for fraud detector.
      * 

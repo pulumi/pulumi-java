@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppSwiftVirtualNetworkConnection {
     private GetWebAppSwiftVirtualNetworkConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppSwiftVirtualNetworkConnectionArgs.Builder a);
-    }
-    private static GetWebAppSwiftVirtualNetworkConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppSwiftVirtualNetworkConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
- * API Version: 2020-10-01.
- * 
-     *
-     * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
- * 
-     */
-    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
      * API Version: 2020-10-01.

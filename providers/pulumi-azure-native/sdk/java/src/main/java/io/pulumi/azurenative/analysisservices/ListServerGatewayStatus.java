@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListServerGatewayStatus {
     private ListServerGatewayStatus() {}
-    public interface BuilderApplicator {
-        public void apply(ListServerGatewayStatusArgs.Builder a);
-    }
-    private static ListServerGatewayStatusArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListServerGatewayStatusArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Status of gateway is live.
- * API Version: 2017-08-01.
- * 
-     *
-     * Status of gateway is live.
- * 
-     */
-    public static CompletableFuture<ListServerGatewayStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Status of gateway is live.
      * API Version: 2017-08-01.

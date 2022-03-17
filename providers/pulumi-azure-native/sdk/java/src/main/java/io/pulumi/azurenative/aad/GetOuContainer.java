@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOuContainer {
     private GetOuContainer() {}
-    public interface BuilderApplicator {
-        public void apply(GetOuContainerArgs.Builder a);
-    }
-    private static GetOuContainerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOuContainerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource for OuContainer.
- * API Version: 2021-03-01.
- * 
-     *
-     * Resource for OuContainer.
- * 
-     */
-    public static CompletableFuture<GetOuContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource for OuContainer.
      * API Version: 2021-03-01.

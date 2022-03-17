@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFavorite {
     private GetFavorite() {}
-    public interface BuilderApplicator {
-        public void apply(GetFavoriteArgs.Builder a);
-    }
-    private static GetFavoriteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFavoriteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Properties that define a favorite that is associated to an Application Insights component.
- * API Version: 2015-05-01.
- * 
-     *
-     * Properties that define a favorite that is associated to an Application Insights component.
- * 
-     */
-    public static CompletableFuture<GetFavoriteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Properties that define a favorite that is associated to an Application Insights component.
      * API Version: 2015-05-01.

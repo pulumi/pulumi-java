@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHealthCheck {
     private GetHealthCheck() {}
-    public interface BuilderApplicator {
-        public void apply(GetHealthCheckArgs.Builder a);
-    }
-    private static GetHealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHealthCheckArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetHealthCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
      * 

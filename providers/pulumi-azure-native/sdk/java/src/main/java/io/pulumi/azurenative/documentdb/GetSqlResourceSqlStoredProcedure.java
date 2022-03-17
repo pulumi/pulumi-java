@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlStoredProcedure {
     private GetSqlResourceSqlStoredProcedure() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlResourceSqlStoredProcedureArgs.Builder a);
-    }
-    private static GetSqlResourceSqlStoredProcedureArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlResourceSqlStoredProcedureArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB storedProcedure.
- * API Version: 2021-03-15.
- * 
-     *
-     * An Azure Cosmos DB storedProcedure.
- * 
-     */
-    public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB storedProcedure.
      * API Version: 2021-03-15.

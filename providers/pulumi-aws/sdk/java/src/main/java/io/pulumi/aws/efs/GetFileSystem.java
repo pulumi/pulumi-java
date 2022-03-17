@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFileSystem {
     private GetFileSystem() {}
-    public interface BuilderApplicator {
-        public void apply(GetFileSystemArgs.Builder a);
-    }
-    private static GetFileSystemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFileSystemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information about an Elastic File System (EFS) File System.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getFileSystem.
- * 
-     *
-     * A collection of values returned by getFileSystem.
- * 
-     */
-    public static CompletableFuture<GetFileSystemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information about an Elastic File System (EFS) File System.
      * 

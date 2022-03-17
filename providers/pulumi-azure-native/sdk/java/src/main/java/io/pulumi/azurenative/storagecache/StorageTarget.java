@@ -191,22 +191,6 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
         return this.unknown;
     }
 
-    public interface BuilderApplicator {
-        public void apply(StorageTargetArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.storagecache.StorageTargetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.storagecache.StorageTargetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public StorageTarget(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

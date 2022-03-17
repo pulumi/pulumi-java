@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForM365ComplianceCenter {
     private GetprivateLinkServicesForM365ComplianceCenter() {}
-    public interface BuilderApplicator {
-        public void apply(GetprivateLinkServicesForM365ComplianceCenterArgs.Builder a);
-    }
-    private static GetprivateLinkServicesForM365ComplianceCenterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetprivateLinkServicesForM365ComplianceCenterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The description of the service.
- * API Version: 2021-03-25-preview.
- * 
-     *
-     * The description of the service.
- * 
-     */
-    public static CompletableFuture<GetprivateLinkServicesForM365ComplianceCenterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The description of the service.
      * API Version: 2021-03-25-preview.

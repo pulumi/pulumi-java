@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFirewallPolicyRuleGroup {
     private GetFirewallPolicyRuleGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetFirewallPolicyRuleGroupArgs.Builder a);
-    }
-    private static GetFirewallPolicyRuleGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFirewallPolicyRuleGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Rule Group resource.
- * API Version: 2020-04-01.
- * 
-     *
-     * Rule Group resource.
- * 
-     */
-    public static CompletableFuture<GetFirewallPolicyRuleGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Rule Group resource.
      * API Version: 2020-04-01.

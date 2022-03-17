@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResolverEndpoint {
     private GetResolverEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetResolverEndpointArgs.Builder a);
-    }
-    private static GetResolverEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResolverEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.route53.ResolverEndpoint` provides details about a specific Route53 Resolver Endpoint.
- * 
- * This data source allows to find a list of IPaddresses associated with a specific Route53 Resolver Endpoint.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getResolverEndpoint.
- * 
-     *
-     * A collection of values returned by getResolverEndpoint.
- * 
-     */
-    public static CompletableFuture<GetResolverEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.route53.ResolverEndpoint` provides details about a specific Route53 Resolver Endpoint.
      * 

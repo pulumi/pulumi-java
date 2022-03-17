@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSuiteDefinition {
     private GetSuiteDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetSuiteDefinitionArgs.Builder a);
-    }
-    private static GetSuiteDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSuiteDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An example resource schema demonstrating some basic constructs and validation rules.
- * 
-     */
-    public static CompletableFuture<GetSuiteDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An example resource schema demonstrating some basic constructs and validation rules.
      * 

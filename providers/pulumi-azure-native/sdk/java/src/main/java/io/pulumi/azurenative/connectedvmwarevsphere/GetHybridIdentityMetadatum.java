@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHybridIdentityMetadatum {
     private GetHybridIdentityMetadatum() {}
-    public interface BuilderApplicator {
-        public void apply(GetHybridIdentityMetadatumArgs.Builder a);
-    }
-    private static GetHybridIdentityMetadatumArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHybridIdentityMetadatumArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Defines the HybridIdentityMetadata.
- * API Version: 2020-10-01-preview.
- * 
-     *
-     * Defines the HybridIdentityMetadata.
- * 
-     */
-    public static CompletableFuture<GetHybridIdentityMetadatumResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Defines the HybridIdentityMetadata.
      * API Version: 2020-10-01-preview.

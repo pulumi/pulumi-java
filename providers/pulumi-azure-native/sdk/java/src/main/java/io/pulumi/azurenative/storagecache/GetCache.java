@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCache {
     private GetCache() {}
-    public interface BuilderApplicator {
-        public void apply(GetCacheArgs.Builder a);
-    }
-    private static GetCacheArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCacheArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
- * API Version: 2021-03-01.
- * 
-     *
-     * A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
- * 
-     */
-    public static CompletableFuture<GetCacheResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
      * API Version: 2021-03-01.

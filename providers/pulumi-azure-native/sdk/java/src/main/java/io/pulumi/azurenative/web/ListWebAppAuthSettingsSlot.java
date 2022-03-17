@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppAuthSettingsSlot {
     private ListWebAppAuthSettingsSlot() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppAuthSettingsSlotArgs.Builder a);
-    }
-    private static ListWebAppAuthSettingsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppAuthSettingsSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Configuration settings for the Azure App Service Authentication / Authorization feature.
- * API Version: 2020-12-01.
- * 
-     *
-     * Configuration settings for the Azure App Service Authentication / Authorization feature.
- * 
-     */
-    public static CompletableFuture<ListWebAppAuthSettingsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Configuration settings for the Azure App Service Authentication / Authorization feature.
      * API Version: 2020-12-01.

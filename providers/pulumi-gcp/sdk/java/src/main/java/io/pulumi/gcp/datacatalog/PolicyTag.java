@@ -136,22 +136,6 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
         return this.taxonomy;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PolicyTagArgs.Builder a);
-    }
-    private static io.pulumi.gcp.datacatalog.PolicyTagArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.datacatalog.PolicyTagArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PolicyTag(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

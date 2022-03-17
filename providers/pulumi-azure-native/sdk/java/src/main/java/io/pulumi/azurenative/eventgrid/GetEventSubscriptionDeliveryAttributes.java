@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventSubscriptionDeliveryAttributes {
     private GetEventSubscriptionDeliveryAttributes() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventSubscriptionDeliveryAttributesArgs.Builder a);
-    }
-    private static GetEventSubscriptionDeliveryAttributesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventSubscriptionDeliveryAttributesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Result of the Get delivery attributes operation.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * Result of the Get delivery attributes operation.
- * 
-     */
-    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Result of the Get delivery attributes operation.
      * API Version: 2021-06-01-preview.

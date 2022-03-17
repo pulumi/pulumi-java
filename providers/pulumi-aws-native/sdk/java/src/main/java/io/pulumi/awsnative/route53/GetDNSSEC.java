@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDNSSEC {
     private GetDNSSEC() {}
-    public interface BuilderApplicator {
-        public void apply(GetDNSSECArgs.Builder a);
-    }
-    private static GetDNSSECArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDNSSECArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource used to control (enable/disable) DNSSEC in a specific hosted zone.
- * 
-     */
-    public static CompletableFuture<GetDNSSECResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource used to control (enable/disable) DNSSEC in a specific hosted zone.
      * 

@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImageRecipe {
     private GetImageRecipe() {}
-    public interface BuilderApplicator {
-        public void apply(GetImageRecipeArgs.Builder a);
-    }
-    private static GetImageRecipeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImageRecipeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about an Image Builder Image Recipe.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getImageRecipe.
- * 
-     *
-     * A collection of values returned by getImageRecipe.
- * 
-     */
-    public static CompletableFuture<GetImageRecipeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about an Image Builder Image Recipe.
      * 

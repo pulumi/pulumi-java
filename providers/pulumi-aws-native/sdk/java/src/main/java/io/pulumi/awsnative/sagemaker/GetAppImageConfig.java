@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAppImageConfig {
     private GetAppImageConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppImageConfigArgs.Builder a);
-    }
-    private static GetAppImageConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppImageConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::SageMaker::AppImageConfig
- * 
-     */
-    public static CompletableFuture<GetAppImageConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::SageMaker::AppImageConfig
      * 

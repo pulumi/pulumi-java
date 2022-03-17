@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSynapseWorkspaceSqlPoolTableDataSetMapping {
     private GetSynapseWorkspaceSqlPoolTableDataSetMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs.Builder a);
-    }
-    private static GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Synapse Workspace Sql Pool Table data set mapping
- * API Version: 2020-09-01.
- * 
-     *
-     * A Synapse Workspace Sql Pool Table data set mapping
- * 
-     */
-    public static CompletableFuture<GetSynapseWorkspaceSqlPoolTableDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Synapse Workspace Sql Pool Table data set mapping
      * API Version: 2020-09-01.

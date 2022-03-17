@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceFabric {
     private GetServiceFabric() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceFabricArgs.Builder a);
-    }
-    private static GetServiceFabricArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceFabricArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Service Fabric.
- * API Version: 2018-09-15.
- * 
-     *
-     * A Service Fabric.
- * 
-     */
-    public static CompletableFuture<GetServiceFabricResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Service Fabric.
      * API Version: 2018-09-15.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetQueryDefinition {
     private GetQueryDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetQueryDefinitionArgs.Builder a);
-    }
-    private static GetQueryDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetQueryDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The resource schema for AWSLogs QueryDefinition
- * 
-     */
-    public static CompletableFuture<GetQueryDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The resource schema for AWSLogs QueryDefinition
      * 

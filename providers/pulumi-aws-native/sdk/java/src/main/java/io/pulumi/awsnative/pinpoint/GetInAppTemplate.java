@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInAppTemplate {
     private GetInAppTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetInAppTemplateArgs.Builder a);
-    }
-    private static GetInAppTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInAppTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Pinpoint::InAppTemplate
- * 
-     */
-    public static CompletableFuture<GetInAppTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Pinpoint::InAppTemplate
      * 

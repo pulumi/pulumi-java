@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContainerDefinition {
     private GetContainerDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetContainerDefinitionArgs.Builder a);
-    }
-    private static GetContainerDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContainerDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The ECS container definition data source allows access to details of
- * a specific container within an AWS ECS service.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getContainerDefinition.
- * 
-     *
-     * A collection of values returned by getContainerDefinition.
- * 
-     */
-    public static CompletableFuture<GetContainerDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The ECS container definition data source allows access to details of
      * a specific container within an AWS ECS service.

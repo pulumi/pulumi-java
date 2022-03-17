@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProduct {
     private GetProduct() {}
-    public interface BuilderApplicator {
-        public void apply(GetProductArgs.Builder a);
-    }
-    private static GetProductArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProductArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Product information.
- * API Version: 2017-06-01.
- * 
-     *
-     * Product information.
- * 
-     */
-    public static CompletableFuture<GetProductResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Product information.
      * API Version: 2017-06-01.

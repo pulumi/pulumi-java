@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntent {
     private GetIntent() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntentArgs.Builder a);
-    }
-    private static GetIntentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific Amazon Lex Intent.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getIntent.
- * 
-     *
-     * A collection of values returned by getIntent.
- * 
-     */
-    public static CompletableFuture<GetIntentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific Amazon Lex Intent.
      * 

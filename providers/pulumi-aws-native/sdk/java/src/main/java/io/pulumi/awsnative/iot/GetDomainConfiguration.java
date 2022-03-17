@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDomainConfiguration {
     private GetDomainConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetDomainConfigurationArgs.Builder a);
-    }
-    private static GetDomainConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDomainConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Create and manage a Domain Configuration
- * 
-     */
-    public static CompletableFuture<GetDomainConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Create and manage a Domain Configuration
      * 

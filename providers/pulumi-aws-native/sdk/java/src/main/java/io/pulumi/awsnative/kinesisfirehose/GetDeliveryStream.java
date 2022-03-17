@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeliveryStream {
     private GetDeliveryStream() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeliveryStreamArgs.Builder a);
-    }
-    private static GetDeliveryStreamArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeliveryStreamArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
- * 
-     */
-    public static CompletableFuture<GetDeliveryStreamResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
      * 

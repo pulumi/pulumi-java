@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBuildpackBinding {
     private GetBuildpackBinding() {}
-    public interface BuilderApplicator {
-        public void apply(GetBuildpackBindingArgs.Builder a);
-    }
-    private static GetBuildpackBindingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBuildpackBindingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Buildpack Binding Resource object
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Buildpack Binding Resource object
- * 
-     */
-    public static CompletableFuture<GetBuildpackBindingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Buildpack Binding Resource object
      * API Version: 2022-01-01-preview.

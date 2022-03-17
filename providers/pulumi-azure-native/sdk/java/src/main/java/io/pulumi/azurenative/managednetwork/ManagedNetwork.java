@@ -146,22 +146,6 @@ public class ManagedNetwork extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ManagedNetworkArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.managednetwork.ManagedNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.managednetwork.ManagedNetworkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ManagedNetwork(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

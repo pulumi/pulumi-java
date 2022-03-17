@@ -230,22 +230,6 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
         return this.unhealthyThreshold;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable HealthCheckArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.compute_v1.HealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.compute_v1.HealthCheckArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public HealthCheck(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

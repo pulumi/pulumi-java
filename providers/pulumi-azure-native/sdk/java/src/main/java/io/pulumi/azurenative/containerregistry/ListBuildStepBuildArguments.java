@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListBuildStepBuildArguments {
     private ListBuildStepBuildArguments() {}
-    public interface BuilderApplicator {
-        public void apply(ListBuildStepBuildArgumentsArgs.Builder a);
-    }
-    private static ListBuildStepBuildArgumentsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListBuildStepBuildArgumentsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of build arguments for a build step.
- * API Version: 2018-02-01-preview.
- * 
-     *
-     * The list of build arguments for a build step.
- * 
-     */
-    public static CompletableFuture<ListBuildStepBuildArgumentsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of build arguments for a build step.
      * API Version: 2018-02-01-preview.

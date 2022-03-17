@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFeed {
     private GetFeed() {}
-    public interface BuilderApplicator {
-        public void apply(GetFeedArgs.Builder a);
-    }
-    private static GetFeedArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFeedArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details about an asset feed.
- * 
-     */
-    public static CompletableFuture<GetFeedResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details about an asset feed.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReportByDepartment {
     private GetReportByDepartment() {}
-    public interface BuilderApplicator {
-        public void apply(GetReportByDepartmentArgs.Builder a);
-    }
-    private static GetReportByDepartmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReportByDepartmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A report resource.
- * API Version: 2018-08-01-preview.
- * 
-     *
-     * A report resource.
- * 
-     */
-    public static CompletableFuture<GetReportByDepartmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A report resource.
      * API Version: 2018-08-01-preview.

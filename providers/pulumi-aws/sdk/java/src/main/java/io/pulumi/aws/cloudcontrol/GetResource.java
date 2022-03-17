@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResource {
     private GetResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceArgs.Builder a);
-    }
-    private static GetResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details for a Cloud Control API Resource. The reading of these resources is proxied through Cloud Control API handlers to the backend service.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getResource.
- * 
-     *
-     * A collection of values returned by getResource.
- * 
-     */
-    public static CompletableFuture<GetResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details for a Cloud Control API Resource. The reading of these resources is proxied through Cloud Control API handlers to the backend service.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceDetails {
     private GetInstanceDetails() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceDetailsArgs.Builder a);
-    }
-    private static GetInstanceDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceDetailsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents an instance of a DFP instance resource.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Represents an instance of a DFP instance resource.
- * 
-     */
-    public static CompletableFuture<GetInstanceDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents an instance of a DFP instance resource.
      * API Version: 2021-02-01-preview.

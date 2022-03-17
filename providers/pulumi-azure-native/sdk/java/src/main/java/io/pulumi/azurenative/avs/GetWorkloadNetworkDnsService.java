@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkDnsService {
     private GetWorkloadNetworkDnsService() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadNetworkDnsServiceArgs.Builder a);
-    }
-    private static GetWorkloadNetworkDnsServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadNetworkDnsServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NSX DNS Service
- * API Version: 2020-07-17-preview.
- * 
-     *
-     * NSX DNS Service
- * 
-     */
-    public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NSX DNS Service
      * API Version: 2020-07-17-preview.

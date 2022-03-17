@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGatewayRouteConfig {
     private GetGatewayRouteConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetGatewayRouteConfigArgs.Builder a);
-    }
-    private static GetGatewayRouteConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGatewayRouteConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Spring Cloud Gateway route config resource
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Spring Cloud Gateway route config resource
- * 
-     */
-    public static CompletableFuture<GetGatewayRouteConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Spring Cloud Gateway route config resource
      * API Version: 2022-01-01-preview.

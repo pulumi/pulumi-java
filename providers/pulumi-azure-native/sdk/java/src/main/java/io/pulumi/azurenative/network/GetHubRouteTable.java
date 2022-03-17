@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHubRouteTable {
     private GetHubRouteTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetHubRouteTableArgs.Builder a);
-    }
-    private static GetHubRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHubRouteTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * RouteTable resource in a virtual hub.
- * API Version: 2020-11-01.
- * 
-     *
-     * RouteTable resource in a virtual hub.
- * 
-     */
-    public static CompletableFuture<GetHubRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * RouteTable resource in a virtual hub.
      * API Version: 2020-11-01.

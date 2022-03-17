@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExperiment {
     private GetExperiment() {}
-    public interface BuilderApplicator {
-        public void apply(GetExperimentArgs.Builder a);
-    }
-    private static GetExperimentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExperimentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified Experiment.
- * 
-     */
-    public static CompletableFuture<GetExperimentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified Experiment.
      * 

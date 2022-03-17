@@ -14,35 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocations {
     private GetLocations() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocationsArgs.Builder a);
-    }
-    private static GetLocationsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocationsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get Cloud Run locations available for a project.
- * 
- * To get more information about Cloud Run, see:
- * 
- * * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations)
- * * How-to Guides
- *     * [Official Documentation](https://cloud.google.com/run/docs/)
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getLocations.
- * 
-     *
-     * A collection of values returned by getLocations.
- * 
-     */
-    public static CompletableFuture<GetLocationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get Cloud Run locations available for a project.
      * 

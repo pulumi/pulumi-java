@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExportConfiguration {
     private GetExportConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetExportConfigurationArgs.Builder a);
-    }
-    private static GetExportConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExportConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Properties that define a Continuous Export configuration.
- * API Version: 2015-05-01.
- * 
-     *
-     * Properties that define a Continuous Export configuration.
- * 
-     */
-    public static CompletableFuture<GetExportConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Properties that define a Continuous Export configuration.
      * API Version: 2015-05-01.

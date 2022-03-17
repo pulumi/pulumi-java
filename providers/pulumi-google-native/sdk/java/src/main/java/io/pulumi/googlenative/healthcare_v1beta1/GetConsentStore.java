@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConsentStore {
     private GetConsentStore() {}
-    public interface BuilderApplicator {
-        public void apply(GetConsentStoreArgs.Builder a);
-    }
-    private static GetConsentStoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConsentStoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified consent store.
- * 
-     */
-    public static CompletableFuture<GetConsentStoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified consent store.
      * 

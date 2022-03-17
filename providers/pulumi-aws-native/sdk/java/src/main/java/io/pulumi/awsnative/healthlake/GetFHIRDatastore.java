@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFHIRDatastore {
     private GetFHIRDatastore() {}
-    public interface BuilderApplicator {
-        public void apply(GetFHIRDatastoreArgs.Builder a);
-    }
-    private static GetFHIRDatastoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFHIRDatastoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * HealthLake FHIR Datastore
- * 
-     */
-    public static CompletableFuture<GetFHIRDatastoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * HealthLake FHIR Datastore
      * 

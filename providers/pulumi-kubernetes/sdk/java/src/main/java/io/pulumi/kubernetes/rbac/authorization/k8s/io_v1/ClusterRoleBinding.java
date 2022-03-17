@@ -93,22 +93,6 @@ public class ClusterRoleBinding extends io.pulumi.resources.CustomResource {
         return this.subjects;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ClusterRoleBindingArgs.Builder a);
-    }
-    private static io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.ClusterRoleBindingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.ClusterRoleBindingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ClusterRoleBinding(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

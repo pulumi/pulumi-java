@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIotConnectorFhirDestination {
     private GetIotConnectorFhirDestination() {}
-    public interface BuilderApplicator {
-        public void apply(GetIotConnectorFhirDestinationArgs.Builder a);
-    }
-    private static GetIotConnectorFhirDestinationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIotConnectorFhirDestinationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * IoT Connector FHIR destination definition.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * IoT Connector FHIR destination definition.
- * 
-     */
-    public static CompletableFuture<GetIotConnectorFhirDestinationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * IoT Connector FHIR destination definition.
      * API Version: 2021-06-01-preview.

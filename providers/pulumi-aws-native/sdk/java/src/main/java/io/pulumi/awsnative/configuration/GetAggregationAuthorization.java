@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAggregationAuthorization {
     private GetAggregationAuthorization() {}
-    public interface BuilderApplicator {
-        public void apply(GetAggregationAuthorizationArgs.Builder a);
-    }
-    private static GetAggregationAuthorizationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAggregationAuthorizationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Config::AggregationAuthorization
- * 
-     */
-    public static CompletableFuture<GetAggregationAuthorizationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Config::AggregationAuthorization
      * 

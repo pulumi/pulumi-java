@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiProduct {
     private GetApiProduct() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiProductArgs.Builder a);
-    }
-    private static GetApiProductArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiProductArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets configuration details for an API product. The API product name required in the request URL is the internal name of the product, not the display name. While they may be the same, it depends on whether the API product was created via the UI or the API. View the list of API products to verify the internal name.
- * 
-     */
-    public static CompletableFuture<GetApiProductResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets configuration details for an API product. The API product name required in the request URL is the internal name of the product, not the display name. While they may be the same, it depends on whether the API product was created via the UI or the API. View the list of API products to verify the internal name.
      * 

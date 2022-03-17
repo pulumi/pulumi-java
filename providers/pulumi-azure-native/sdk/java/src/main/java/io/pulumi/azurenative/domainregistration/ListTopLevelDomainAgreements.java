@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListTopLevelDomainAgreements {
     private ListTopLevelDomainAgreements() {}
-    public interface BuilderApplicator {
-        public void apply(ListTopLevelDomainAgreementsArgs.Builder a);
-    }
-    private static ListTopLevelDomainAgreementsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListTopLevelDomainAgreementsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of top-level domain legal agreements.
- * API Version: 2020-10-01.
- * 
-     *
-     * Collection of top-level domain legal agreements.
- * 
-     */
-    public static CompletableFuture<ListTopLevelDomainAgreementsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of top-level domain legal agreements.
      * API Version: 2020-10-01.

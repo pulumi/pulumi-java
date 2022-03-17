@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecretIamPolicy {
     private GetSecretIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecretIamPolicyArgs.Builder a);
-    }
-    private static GetSecretIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecretIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetSecretIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
      * 

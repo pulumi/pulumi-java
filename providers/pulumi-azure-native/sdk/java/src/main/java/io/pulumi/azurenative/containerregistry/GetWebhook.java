@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebhook {
     private GetWebhook() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebhookArgs.Builder a);
-    }
-    private static GetWebhookArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebhookArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An object that represents a webhook for a container registry.
- * API Version: 2019-05-01.
- * 
-     *
-     * An object that represents a webhook for a container registry.
- * 
-     */
-    public static CompletableFuture<GetWebhookResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An object that represents a webhook for a container registry.
      * API Version: 2019-05-01.

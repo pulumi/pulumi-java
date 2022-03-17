@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVendorSkuPreview {
     private GetVendorSkuPreview() {}
-    public interface BuilderApplicator {
-        public void apply(GetVendorSkuPreviewArgs.Builder a);
-    }
-    private static GetVendorSkuPreviewArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVendorSkuPreviewArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Customer subscription which can use a sku.
- * API Version: 2020-01-01-preview.
- * 
-     *
-     * Customer subscription which can use a sku.
- * 
-     */
-    public static CompletableFuture<GetVendorSkuPreviewResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Customer subscription which can use a sku.
      * API Version: 2020-01-01-preview.

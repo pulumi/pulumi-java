@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBucketPolicy {
     private GetBucketPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetBucketPolicyArgs.Builder a);
-    }
-    private static GetBucketPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBucketPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type Definition for AWS::S3Outposts::BucketPolicy
- * 
-     */
-    public static CompletableFuture<GetBucketPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type Definition for AWS::S3Outposts::BucketPolicy
      * 

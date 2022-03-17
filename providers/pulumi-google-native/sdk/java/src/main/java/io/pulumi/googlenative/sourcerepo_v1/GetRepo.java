@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRepo {
     private GetRepo() {}
-    public interface BuilderApplicator {
-        public void apply(GetRepoArgs.Builder a);
-    }
-    private static GetRepoArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRepoArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns information about a repo.
- * 
-     */
-    public static CompletableFuture<GetRepoResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns information about a repo.
      * 

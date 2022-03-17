@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataMaskingPolicy {
     private GetDataMaskingPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataMaskingPolicyArgs.Builder a);
-    }
-    private static GetDataMaskingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataMaskingPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a database data masking policy.
- * API Version: 2014-04-01.
- * 
-     *
-     * Represents a database data masking policy.
- * 
-     */
-    public static CompletableFuture<GetDataMaskingPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a database data masking policy.
      * API Version: 2014-04-01.

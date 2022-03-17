@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTaxonomyIamPolicy {
     private GetTaxonomyIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetTaxonomyIamPolicyArgs.Builder a);
-    }
-    private static GetTaxonomyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTaxonomyIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the IAM policy for a taxonomy or a policy tag.
- * 
-     */
-    public static CompletableFuture<GetTaxonomyIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the IAM policy for a taxonomy or a policy tag.
      * 

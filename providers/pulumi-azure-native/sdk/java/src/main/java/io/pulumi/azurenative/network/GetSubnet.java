@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubnet {
     private GetSubnet() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubnetArgs.Builder a);
-    }
-    private static GetSubnetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubnetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Subnet in a virtual network resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Subnet in a virtual network resource.
- * 
-     */
-    public static CompletableFuture<GetSubnetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Subnet in a virtual network resource.
      * API Version: 2020-11-01.

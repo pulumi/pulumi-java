@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGremlinResourceGremlinDatabase {
     private GetGremlinResourceGremlinDatabase() {}
-    public interface BuilderApplicator {
-        public void apply(GetGremlinResourceGremlinDatabaseArgs.Builder a);
-    }
-    private static GetGremlinResourceGremlinDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGremlinResourceGremlinDatabaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB Gremlin database.
- * API Version: 2021-03-15.
- * 
-     *
-     * An Azure Cosmos DB Gremlin database.
- * 
-     */
-    public static CompletableFuture<GetGremlinResourceGremlinDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB Gremlin database.
      * API Version: 2021-03-15.

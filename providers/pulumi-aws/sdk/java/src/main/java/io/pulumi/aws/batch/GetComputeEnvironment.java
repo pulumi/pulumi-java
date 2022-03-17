@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetComputeEnvironment {
     private GetComputeEnvironment() {}
-    public interface BuilderApplicator {
-        public void apply(GetComputeEnvironmentArgs.Builder a);
-    }
-    private static GetComputeEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetComputeEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Batch Compute Environment data source allows access to details of a specific
- * compute environment within AWS Batch.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getComputeEnvironment.
- * 
-     *
-     * A collection of values returned by getComputeEnvironment.
- * 
-     */
-    public static CompletableFuture<GetComputeEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Batch Compute Environment data source allows access to details of a specific
      * compute environment within AWS Batch.

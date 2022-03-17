@@ -137,22 +137,6 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable LogGroupArgs.Builder a);
-    }
-    private static io.pulumi.aws.cloudwatch.LogGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.cloudwatch.LogGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public LogGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

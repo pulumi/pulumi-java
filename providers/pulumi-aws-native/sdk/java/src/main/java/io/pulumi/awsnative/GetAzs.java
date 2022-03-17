@@ -14,17 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAzs {
     private GetAzs() {}
-    public interface BuilderApplicator {
-        public void apply(GetAzsArgs.Builder a);
-    }
-    private static GetAzsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAzsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    public static CompletableFuture<GetAzsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     public static CompletableFuture<GetAzsResult> invokeAsync(@Nullable GetAzsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getAzs", TypeShape.of(GetAzsResult.class), args == null ? GetAzsArgs.Empty : args, Utilities.withVersion(options));
     }

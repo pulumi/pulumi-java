@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubscriptionFeatureRegistration {
     private GetSubscriptionFeatureRegistration() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubscriptionFeatureRegistrationArgs.Builder a);
-    }
-    private static GetSubscriptionFeatureRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubscriptionFeatureRegistrationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Subscription feature registration details
- * API Version: 2021-07-01.
- * 
-     *
-     * Subscription feature registration details
- * 
-     */
-    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Subscription feature registration details
      * API Version: 2021-07-01.

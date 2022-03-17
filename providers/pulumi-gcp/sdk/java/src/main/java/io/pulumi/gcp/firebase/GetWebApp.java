@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebApp {
     private GetWebApp() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppArgs.Builder a);
-    }
-    private static GetWebAppArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Google Cloud Firebase web application instance
- * 
-     *
-     * A collection of arguments for invoking getWebApp.
- * 
-     *
-     * A collection of values returned by getWebApp.
- * 
-     */
-    public static CompletableFuture<GetWebAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Google Cloud Firebase web application instance
      * 

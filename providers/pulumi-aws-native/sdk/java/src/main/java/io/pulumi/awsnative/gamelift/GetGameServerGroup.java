@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGameServerGroup {
     private GetGameServerGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetGameServerGroupArgs.Builder a);
-    }
-    private static GetGameServerGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGameServerGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
- * 
-     */
-    public static CompletableFuture<GetGameServerGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLedger {
     private GetLedger() {}
-    public interface BuilderApplicator {
-        public void apply(GetLedgerArgs.Builder a);
-    }
-    private static GetLedgerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLedgerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
- * API Version: 2020-12-01-preview.
- * 
-     *
-     * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
- * 
-     */
-    public static CompletableFuture<GetLedgerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
      * API Version: 2020-12-01-preview.

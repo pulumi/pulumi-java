@@ -131,22 +131,6 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
         return this.tags;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ModelQualityJobDefinitionArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.sagemaker.ModelQualityJobDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.sagemaker.ModelQualityJobDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ModelQualityJobDefinition(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

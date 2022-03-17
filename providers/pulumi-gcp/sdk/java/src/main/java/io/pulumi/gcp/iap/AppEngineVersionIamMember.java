@@ -174,22 +174,6 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
         return this.versionId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AppEngineVersionIamMemberArgs.Builder a);
-    }
-    private static io.pulumi.gcp.iap.AppEngineVersionIamMemberArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.iap.AppEngineVersionIamMemberArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AppEngineVersionIamMember(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

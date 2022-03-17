@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDatacenterConnector {
     private GetDatacenterConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatacenterConnectorArgs.Builder a);
-    }
-    private static GetDatacenterConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatacenterConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single DatacenterConnector.
- * 
-     */
-    public static CompletableFuture<GetDatacenterConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single DatacenterConnector.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSyncMember {
     private GetSyncMember() {}
-    public interface BuilderApplicator {
-        public void apply(GetSyncMemberArgs.Builder a);
-    }
-    private static GetSyncMemberArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSyncMemberArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure SQL Database sync member.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An Azure SQL Database sync member.
- * 
-     */
-    public static CompletableFuture<GetSyncMemberResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure SQL Database sync member.
      * API Version: 2020-11-01-preview.

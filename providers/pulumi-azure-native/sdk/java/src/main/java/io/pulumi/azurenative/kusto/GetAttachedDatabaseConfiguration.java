@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAttachedDatabaseConfiguration {
     private GetAttachedDatabaseConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetAttachedDatabaseConfigurationArgs.Builder a);
-    }
-    private static GetAttachedDatabaseConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAttachedDatabaseConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing an attached database configuration.
- * API Version: 2021-01-01.
- * 
-     *
-     * Class representing an attached database configuration.
- * 
-     */
-    public static CompletableFuture<GetAttachedDatabaseConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing an attached database configuration.
      * API Version: 2021-01-01.

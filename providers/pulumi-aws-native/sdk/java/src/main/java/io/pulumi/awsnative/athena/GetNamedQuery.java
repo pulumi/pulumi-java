@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNamedQuery {
     private GetNamedQuery() {}
-    public interface BuilderApplicator {
-        public void apply(GetNamedQueryArgs.Builder a);
-    }
-    private static GetNamedQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNamedQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Athena::NamedQuery
- * 
-     */
-    public static CompletableFuture<GetNamedQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Athena::NamedQuery
      * 

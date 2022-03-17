@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetComponent {
     private GetComponent() {}
-    public interface BuilderApplicator {
-        public void apply(GetComponentArgs.Builder a);
-    }
-    private static GetComponentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetComponentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Application Insights component definition.
- * API Version: 2015-05-01.
- * 
-     *
-     * An Application Insights component definition.
- * 
-     */
-    public static CompletableFuture<GetComponentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Application Insights component definition.
      * API Version: 2015-05-01.

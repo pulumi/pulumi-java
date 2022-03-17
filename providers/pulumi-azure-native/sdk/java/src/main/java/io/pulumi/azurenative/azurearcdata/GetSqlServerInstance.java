@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlServerInstance {
     private GetSqlServerInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlServerInstanceArgs.Builder a);
-    }
-    private static GetSqlServerInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlServerInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A SqlServerInstance.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * A SqlServerInstance.
- * 
-     */
-    public static CompletableFuture<GetSqlServerInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A SqlServerInstance.
      * API Version: 2021-06-01-preview.

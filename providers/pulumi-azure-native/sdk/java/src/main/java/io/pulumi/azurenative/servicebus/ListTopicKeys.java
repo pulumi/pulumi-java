@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListTopicKeys {
     private ListTopicKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListTopicKeysArgs.Builder a);
-    }
-    private static ListTopicKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListTopicKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Namespace/ServiceBus Connection String
- * API Version: 2017-04-01.
- * 
-     *
-     * Namespace/ServiceBus Connection String
- * 
-     */
-    public static CompletableFuture<ListTopicKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Namespace/ServiceBus Connection String
      * API Version: 2017-04-01.

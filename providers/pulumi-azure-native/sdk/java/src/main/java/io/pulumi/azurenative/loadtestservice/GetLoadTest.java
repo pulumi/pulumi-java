@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLoadTest {
     private GetLoadTest() {}
-    public interface BuilderApplicator {
-        public void apply(GetLoadTestArgs.Builder a);
-    }
-    private static GetLoadTestArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLoadTestArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * LoadTest details
- * API Version: 2021-12-01-preview.
- * 
-     *
-     * LoadTest details
- * 
-     */
-    public static CompletableFuture<GetLoadTestResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * LoadTest details
      * API Version: 2021-12-01-preview.

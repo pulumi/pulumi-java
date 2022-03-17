@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResponsePolicy {
     private GetResponsePolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetResponsePolicyArgs.Builder a);
-    }
-    private static GetResponsePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResponsePolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Fetches the representation of an existing Response Policy.
- * 
-     */
-    public static CompletableFuture<GetResponsePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Fetches the representation of an existing Response Policy.
      * 

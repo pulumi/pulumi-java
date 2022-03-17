@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAppServiceEnvironment {
     private GetAppServiceEnvironment() {}
-    public interface BuilderApplicator {
-        public void apply(GetAppServiceEnvironmentArgs.Builder a);
-    }
-    private static GetAppServiceEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAppServiceEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * App Service Environment ARM resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * App Service Environment ARM resource.
- * 
-     */
-    public static CompletableFuture<GetAppServiceEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * App Service Environment ARM resource.
      * API Version: 2020-12-01.

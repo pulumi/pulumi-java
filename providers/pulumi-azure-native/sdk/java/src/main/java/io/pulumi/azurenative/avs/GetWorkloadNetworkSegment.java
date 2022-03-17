@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkSegment {
     private GetWorkloadNetworkSegment() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadNetworkSegmentArgs.Builder a);
-    }
-    private static GetWorkloadNetworkSegmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadNetworkSegmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NSX Segment
- * API Version: 2020-07-17-preview.
- * 
-     *
-     * NSX Segment
- * 
-     */
-    public static CompletableFuture<GetWorkloadNetworkSegmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NSX Segment
      * API Version: 2020-07-17-preview.

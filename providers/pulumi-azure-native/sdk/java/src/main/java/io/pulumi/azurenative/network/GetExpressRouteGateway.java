@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExpressRouteGateway {
     private GetExpressRouteGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetExpressRouteGatewayArgs.Builder a);
-    }
-    private static GetExpressRouteGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExpressRouteGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ExpressRoute gateway resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * ExpressRoute gateway resource.
- * 
-     */
-    public static CompletableFuture<GetExpressRouteGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ExpressRoute gateway resource.
      * API Version: 2020-11-01.

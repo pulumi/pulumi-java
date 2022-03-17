@@ -102,22 +102,6 @@ public class SqlResourceSqlRoleDefinition extends io.pulumi.resources.CustomReso
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SqlResourceSqlRoleDefinitionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.documentdb.SqlResourceSqlRoleDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.documentdb.SqlResourceSqlRoleDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SqlResourceSqlRoleDefinition(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

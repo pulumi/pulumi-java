@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFilter {
     private GetFilter() {}
-    public interface BuilderApplicator {
-        public void apply(GetFilterArgs.Builder a);
-    }
-    private static GetFilterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFilterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Inspector Filter resource schema
- * 
-     */
-    public static CompletableFuture<GetFilterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Inspector Filter resource schema
      * 

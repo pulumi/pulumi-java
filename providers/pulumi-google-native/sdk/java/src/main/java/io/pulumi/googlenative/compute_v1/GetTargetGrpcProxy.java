@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTargetGrpcProxy {
     private GetTargetGrpcProxy() {}
-    public interface BuilderApplicator {
-        public void apply(GetTargetGrpcProxyArgs.Builder a);
-    }
-    private static GetTargetGrpcProxyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTargetGrpcProxyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified TargetGrpcProxy resource in the given scope.
- * 
-     */
-    public static CompletableFuture<GetTargetGrpcProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified TargetGrpcProxy resource in the given scope.
      * 

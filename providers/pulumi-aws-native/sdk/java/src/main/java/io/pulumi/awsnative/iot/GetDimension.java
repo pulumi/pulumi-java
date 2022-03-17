@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDimension {
     private GetDimension() {}
-    public interface BuilderApplicator {
-        public void apply(GetDimensionArgs.Builder a);
-    }
-    private static GetDimensionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDimensionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A dimension can be used to limit the scope of a metric used in a security profile for AWS IoT Device Defender.
- * 
-     */
-    public static CompletableFuture<GetDimensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A dimension can be used to limit the scope of a metric used in a security profile for AWS IoT Device Defender.
      * 

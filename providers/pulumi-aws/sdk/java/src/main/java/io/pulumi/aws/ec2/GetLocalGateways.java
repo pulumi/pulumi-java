@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocalGateways {
     private GetLocalGateways() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocalGatewaysArgs.Builder a);
-    }
-    private static GetLocalGatewaysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocalGatewaysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information for multiple EC2 Local Gateways, such as their identifiers.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getLocalGateways.
- * 
-     *
-     * A collection of values returned by getLocalGateways.
- * 
-     */
-    public static CompletableFuture<GetLocalGatewaysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information for multiple EC2 Local Gateways, such as their identifiers.
      * 

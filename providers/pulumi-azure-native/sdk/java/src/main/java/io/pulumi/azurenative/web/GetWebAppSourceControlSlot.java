@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppSourceControlSlot {
     private GetWebAppSourceControlSlot() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppSourceControlSlotArgs.Builder a);
-    }
-    private static GetWebAppSourceControlSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppSourceControlSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Source control configuration for an app.
- * API Version: 2020-12-01.
- * 
-     *
-     * Source control configuration for an app.
- * 
-     */
-    public static CompletableFuture<GetWebAppSourceControlSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Source control configuration for an app.
      * API Version: 2020-12-01.

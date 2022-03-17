@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIoMAMPolicyByName {
     private GetIoMAMPolicyByName() {}
-    public interface BuilderApplicator {
-        public void apply(GetIoMAMPolicyByNameArgs.Builder a);
-    }
-    private static GetIoMAMPolicyByNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIoMAMPolicyByNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * iOS Policy entity for Intune MAM.
- * API Version: 2015-01-14-preview.
- * 
-     *
-     * iOS Policy entity for Intune MAM.
- * 
-     */
-    public static CompletableFuture<GetIoMAMPolicyByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * iOS Policy entity for Intune MAM.
      * API Version: 2015-01-14-preview.

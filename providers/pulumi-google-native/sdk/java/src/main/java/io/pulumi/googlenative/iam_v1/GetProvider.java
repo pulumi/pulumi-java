@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProvider {
     private GetProvider() {}
-    public interface BuilderApplicator {
-        public void apply(GetProviderArgs.Builder a);
-    }
-    private static GetProviderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProviderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an individual WorkloadIdentityPoolProvider.
- * 
-     */
-    public static CompletableFuture<GetProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an individual WorkloadIdentityPoolProvider.
      * 

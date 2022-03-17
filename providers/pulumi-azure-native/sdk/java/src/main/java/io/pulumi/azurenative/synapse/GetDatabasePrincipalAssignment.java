@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDatabasePrincipalAssignment {
     private GetDatabasePrincipalAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatabasePrincipalAssignmentArgs.Builder a);
-    }
-    private static GetDatabasePrincipalAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatabasePrincipalAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing a database principal assignment.
- * API Version: 2021-04-01-preview.
- * 
-     *
-     * Class representing a database principal assignment.
- * 
-     */
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing a database principal assignment.
      * API Version: 2021-04-01-preview.

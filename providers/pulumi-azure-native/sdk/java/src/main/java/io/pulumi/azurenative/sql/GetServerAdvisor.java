@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerAdvisor {
     private GetServerAdvisor() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerAdvisorArgs.Builder a);
-    }
-    private static GetServerAdvisorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerAdvisorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Database, Server or Elastic Pool Advisor.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * Database, Server or Elastic Pool Advisor.
- * 
-     */
-    public static CompletableFuture<GetServerAdvisorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Database, Server or Elastic Pool Advisor.
      * API Version: 2020-11-01-preview.

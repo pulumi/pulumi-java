@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetComponentVersion {
     private GetComponentVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetComponentVersionArgs.Builder a);
-    }
-    private static GetComponentVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetComponentVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource for Greengrass component version.
- * 
-     */
-    public static CompletableFuture<GetComponentVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource for Greengrass component version.
      * 

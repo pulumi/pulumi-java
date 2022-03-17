@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDscNodeConfiguration {
     private GetDscNodeConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetDscNodeConfigurationArgs.Builder a);
-    }
-    private static GetDscNodeConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDscNodeConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the dsc node configuration.
- * API Version: 2019-06-01.
- * 
-     *
-     * Definition of the dsc node configuration.
- * 
-     */
-    public static CompletableFuture<GetDscNodeConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the dsc node configuration.
      * API Version: 2019-06-01.

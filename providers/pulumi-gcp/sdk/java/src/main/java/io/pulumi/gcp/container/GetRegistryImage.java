@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistryImage {
     private GetRegistryImage() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistryImageArgs.Builder a);
-    }
-    private static GetRegistryImageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistryImageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
- * 
- * The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getRegistryImage.
- * 
-     *
-     * A collection of values returned by getRegistryImage.
- * 
-     */
-    public static CompletableFuture<GetRegistryImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
      * 

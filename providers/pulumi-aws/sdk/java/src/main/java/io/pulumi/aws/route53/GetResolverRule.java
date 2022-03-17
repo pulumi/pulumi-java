@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResolverRule {
     private GetResolverRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetResolverRuleArgs.Builder a);
-    }
-    private static GetResolverRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResolverRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getResolverRule.
- * 
-     *
-     * A collection of values returned by getResolverRule.
- * 
-     */
-    public static CompletableFuture<GetResolverRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMetricsSourceTagRule {
     private GetMetricsSourceTagRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetMetricsSourceTagRuleArgs.Builder a);
-    }
-    private static GetMetricsSourceTagRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMetricsSourceTagRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Capture metrics of Azure resources based on ARM tags.
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Capture metrics of Azure resources based on ARM tags.
- * 
-     */
-    public static CompletableFuture<GetMetricsSourceTagRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Capture metrics of Azure resources based on ARM tags.
      * API Version: 2022-01-01-preview.

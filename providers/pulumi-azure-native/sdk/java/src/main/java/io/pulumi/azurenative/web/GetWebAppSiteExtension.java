@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppSiteExtension {
     private GetWebAppSiteExtension() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppSiteExtensionArgs.Builder a);
-    }
-    private static GetWebAppSiteExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppSiteExtensionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Site Extension Information.
- * API Version: 2020-12-01.
- * 
-     *
-     * Site Extension Information.
- * 
-     */
-    public static CompletableFuture<GetWebAppSiteExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Site Extension Information.
      * API Version: 2020-12-01.

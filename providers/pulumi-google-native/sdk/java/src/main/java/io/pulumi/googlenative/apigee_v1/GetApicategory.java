@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApicategory {
     private GetApicategory() {}
-    public interface BuilderApplicator {
-        public void apply(GetApicategoryArgs.Builder a);
-    }
-    private static GetApicategoryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApicategoryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a category on the portal.
- * 
-     */
-    public static CompletableFuture<GetApicategoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a category on the portal.
      * 

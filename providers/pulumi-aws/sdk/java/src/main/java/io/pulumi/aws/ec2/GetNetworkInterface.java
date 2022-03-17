@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkInterface {
     private GetNetworkInterface() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkInterfaceArgs.Builder a);
-    }
-    private static GetNetworkInterfaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkInterfaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a Network Interface.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getNetworkInterface.
- * 
-     *
-     * A collection of values returned by getNetworkInterface.
- * 
-     */
-    public static CompletableFuture<GetNetworkInterfaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a Network Interface.
      * 

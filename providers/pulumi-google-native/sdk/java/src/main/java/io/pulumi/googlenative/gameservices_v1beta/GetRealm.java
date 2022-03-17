@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRealm {
     private GetRealm() {}
-    public interface BuilderApplicator {
-        public void apply(GetRealmArgs.Builder a);
-    }
-    private static GetRealmArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRealmArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single realm.
- * 
-     */
-    public static CompletableFuture<GetRealmResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single realm.
      * 

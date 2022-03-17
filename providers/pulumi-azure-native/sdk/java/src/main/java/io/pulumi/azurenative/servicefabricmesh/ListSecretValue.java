@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListSecretValue {
     private ListSecretValue() {}
-    public interface BuilderApplicator {
-        public void apply(ListSecretValueArgs.Builder a);
-    }
-    private static ListSecretValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListSecretValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This type represents the unencrypted value of the secret.
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * This type represents the unencrypted value of the secret.
- * 
-     */
-    public static CompletableFuture<ListSecretValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This type represents the unencrypted value of the secret.
      * API Version: 2018-09-01-preview.

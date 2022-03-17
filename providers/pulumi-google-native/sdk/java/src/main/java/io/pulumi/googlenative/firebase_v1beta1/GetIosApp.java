@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIosApp {
     private GetIosApp() {}
-    public interface BuilderApplicator {
-        public void apply(GetIosAppArgs.Builder a);
-    }
-    private static GetIosAppArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIosAppArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified IosApp.
- * 
-     */
-    public static CompletableFuture<GetIosAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified IosApp.
      * 

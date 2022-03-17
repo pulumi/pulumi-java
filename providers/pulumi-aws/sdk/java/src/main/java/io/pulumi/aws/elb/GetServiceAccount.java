@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceAccount {
     private GetServiceAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceAccountArgs.Builder a);
-    }
-    private static GetServiceAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the Account ID of the [AWS Elastic Load Balancing Service Account](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy)
- * in a given region for the purpose of permitting in S3 bucket policy.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getServiceAccount.
- * 
-     *
-     * A collection of values returned by getServiceAccount.
- * 
-     */
-    public static CompletableFuture<GetServiceAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the Account ID of the [AWS Elastic Load Balancing Service Account](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy)
      * in a given region for the purpose of permitting in S3 bucket policy.

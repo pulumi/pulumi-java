@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExport {
     private GetExport() {}
-    public interface BuilderApplicator {
-        public void apply(GetExportArgs.Builder a);
-    }
-    private static GetExportArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExportArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the details and status of an analytics export job. If the export job is still in progress, its `state` is set to "running". After the export job has completed successfully, its `state` is set to "completed". If the export job fails, its `state` is set to `failed`.
- * 
-     */
-    public static CompletableFuture<GetExportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the details and status of an analytics export job. If the export job is still in progress, its `state` is set to "running". After the export job has completed successfully, its `state` is set to "completed". If the export job fails, its `state` is set to `failed`.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServer {
     private GetServer() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerArgs.Builder a);
-    }
-    private static GetServerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::OpsWorksCM::Server
- * 
-     */
-    public static CompletableFuture<GetServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::OpsWorksCM::Server
      * 

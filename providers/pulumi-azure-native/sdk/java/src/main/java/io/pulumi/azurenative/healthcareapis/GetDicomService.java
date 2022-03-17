@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDicomService {
     private GetDicomService() {}
-    public interface BuilderApplicator {
-        public void apply(GetDicomServiceArgs.Builder a);
-    }
-    private static GetDicomServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDicomServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The description of Dicom Service
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * The description of Dicom Service
- * 
-     */
-    public static CompletableFuture<GetDicomServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The description of Dicom Service
      * API Version: 2021-06-01-preview.

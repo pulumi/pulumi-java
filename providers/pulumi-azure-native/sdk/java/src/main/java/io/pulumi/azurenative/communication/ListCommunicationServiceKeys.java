@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListCommunicationServiceKeys {
     private ListCommunicationServiceKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListCommunicationServiceKeysArgs.Builder a);
-    }
-    private static ListCommunicationServiceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListCommunicationServiceKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A class representing the access keys of a CommunicationService.
- * API Version: 2020-08-20.
- * 
-     *
-     * A class representing the access keys of a CommunicationService.
- * 
-     */
-    public static CompletableFuture<ListCommunicationServiceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A class representing the access keys of a CommunicationService.
      * API Version: 2020-08-20.

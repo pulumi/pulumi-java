@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDelegatedAdministrators {
     private GetDelegatedAdministrators() {}
-    public interface BuilderApplicator {
-        public void apply(GetDelegatedAdministratorsArgs.Builder a);
-    }
-    private static GetDelegatedAdministratorsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDelegatedAdministratorsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a list the AWS accounts that are designated as delegated administrators in this organization
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDelegatedAdministrators.
- * 
-     *
-     * A collection of values returned by getDelegatedAdministrators.
- * 
-     */
-    public static CompletableFuture<GetDelegatedAdministratorsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a list the AWS accounts that are designated as delegated administrators in this organization
      * 

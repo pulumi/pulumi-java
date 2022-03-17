@@ -202,22 +202,6 @@ public class Formula extends io.pulumi.resources.CustomResource {
         return this.vm;
     }
 
-    public interface BuilderApplicator {
-        public void apply(FormulaArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.devtestlab.FormulaArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.devtestlab.FormulaArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Formula(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

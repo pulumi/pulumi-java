@@ -189,22 +189,6 @@ public class GlobalPublicDelegatedPrefix extends io.pulumi.resources.CustomResou
         return this.status;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable GlobalPublicDelegatedPrefixArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.compute_beta.GlobalPublicDelegatedPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.compute_beta.GlobalPublicDelegatedPrefixArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public GlobalPublicDelegatedPrefix(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

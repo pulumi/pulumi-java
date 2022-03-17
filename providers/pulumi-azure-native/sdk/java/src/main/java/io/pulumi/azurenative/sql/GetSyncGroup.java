@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSyncGroup {
     private GetSyncGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetSyncGroupArgs.Builder a);
-    }
-    private static GetSyncGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSyncGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure SQL Database sync group.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * An Azure SQL Database sync group.
- * 
-     */
-    public static CompletableFuture<GetSyncGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure SQL Database sync group.
      * API Version: 2020-11-01-preview.

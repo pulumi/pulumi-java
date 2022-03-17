@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDatasetAnnotationStoreIamPolicy {
     private GetDatasetAnnotationStoreIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatasetAnnotationStoreIamPolicyArgs.Builder a);
-    }
-    private static GetDatasetAnnotationStoreIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatasetAnnotationStoreIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetDatasetAnnotationStoreIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 

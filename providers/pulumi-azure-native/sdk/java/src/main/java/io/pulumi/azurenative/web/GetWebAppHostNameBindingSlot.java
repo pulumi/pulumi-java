@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppHostNameBindingSlot {
     private GetWebAppHostNameBindingSlot() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppHostNameBindingSlotArgs.Builder a);
-    }
-    private static GetWebAppHostNameBindingSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppHostNameBindingSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A hostname binding object.
- * API Version: 2020-12-01.
- * 
-     *
-     * A hostname binding object.
- * 
-     */
-    public static CompletableFuture<GetWebAppHostNameBindingSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A hostname binding object.
      * API Version: 2020-12-01.

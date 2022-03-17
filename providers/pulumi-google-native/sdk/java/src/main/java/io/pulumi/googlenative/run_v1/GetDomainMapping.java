@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDomainMapping {
     private GetDomainMapping() {}
-    public interface BuilderApplicator {
-        public void apply(GetDomainMappingArgs.Builder a);
-    }
-    private static GetDomainMappingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDomainMappingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information about a domain mapping.
- * 
-     */
-    public static CompletableFuture<GetDomainMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information about a domain mapping.
      * 

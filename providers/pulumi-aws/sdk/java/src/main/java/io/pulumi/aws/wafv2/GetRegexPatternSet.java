@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegexPatternSet {
     private GetRegexPatternSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegexPatternSetArgs.Builder a);
-    }
-    private static GetRegexPatternSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegexPatternSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the summary of a WAFv2 Regex Pattern Set.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getRegexPatternSet.
- * 
-     *
-     * A collection of values returned by getRegexPatternSet.
- * 
-     */
-    public static CompletableFuture<GetRegexPatternSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the summary of a WAFv2 Regex Pattern Set.
      * 

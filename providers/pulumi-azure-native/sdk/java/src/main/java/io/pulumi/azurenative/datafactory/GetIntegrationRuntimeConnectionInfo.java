@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegrationRuntimeConnectionInfo {
     private GetIntegrationRuntimeConnectionInfo() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationRuntimeConnectionInfoArgs.Builder a);
-    }
-    private static GetIntegrationRuntimeConnectionInfoArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationRuntimeConnectionInfoArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Connection information for encrypting the on-premises data source credentials.
- * API Version: 2018-06-01.
- * 
-     *
-     * Connection information for encrypting the on-premises data source credentials.
- * 
-     */
-    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Connection information for encrypting the on-premises data source credentials.
      * API Version: 2018-06-01.

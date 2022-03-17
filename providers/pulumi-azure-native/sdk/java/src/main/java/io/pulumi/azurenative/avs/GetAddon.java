@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAddon {
     private GetAddon() {}
-    public interface BuilderApplicator {
-        public void apply(GetAddonArgs.Builder a);
-    }
-    private static GetAddonArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAddonArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An addon resource
- * API Version: 2020-07-17-preview.
- * 
-     *
-     * An addon resource
- * 
-     */
-    public static CompletableFuture<GetAddonResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An addon resource
      * API Version: 2020-07-17-preview.

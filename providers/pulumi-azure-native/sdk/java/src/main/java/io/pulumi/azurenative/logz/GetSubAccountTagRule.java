@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubAccountTagRule {
     private GetSubAccountTagRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubAccountTagRuleArgs.Builder a);
-    }
-    private static GetSubAccountTagRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubAccountTagRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Capture logs and metrics of Azure resources based on ARM tags.
- * API Version: 2020-10-01.
- * 
-     *
-     * Capture logs and metrics of Azure resources based on ARM tags.
- * 
-     */
-    public static CompletableFuture<GetSubAccountTagRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Capture logs and metrics of Azure resources based on ARM tags.
      * API Version: 2020-10-01.

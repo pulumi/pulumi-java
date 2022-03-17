@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTagByApi {
     private GetTagByApi() {}
-    public interface BuilderApplicator {
-        public void apply(GetTagByApiArgs.Builder a);
-    }
-    private static GetTagByApiArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTagByApiArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Tag Contract details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Tag Contract details.
- * 
-     */
-    public static CompletableFuture<GetTagByApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Tag Contract details.
      * API Version: 2020-12-01.

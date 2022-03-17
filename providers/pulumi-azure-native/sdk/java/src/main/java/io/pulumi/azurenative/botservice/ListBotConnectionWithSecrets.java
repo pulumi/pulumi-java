@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListBotConnectionWithSecrets {
     private ListBotConnectionWithSecrets() {}
-    public interface BuilderApplicator {
-        public void apply(ListBotConnectionWithSecretsArgs.Builder a);
-    }
-    private static ListBotConnectionWithSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListBotConnectionWithSecretsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Bot channel resource definition
- * API Version: 2021-03-01.
- * 
-     *
-     * Bot channel resource definition
- * 
-     */
-    public static CompletableFuture<ListBotConnectionWithSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Bot channel resource definition
      * API Version: 2021-03-01.

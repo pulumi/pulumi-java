@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInternalRangeIamPolicy {
     private GetInternalRangeIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetInternalRangeIamPolicyArgs.Builder a);
-    }
-    private static GetInternalRangeIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInternalRangeIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetInternalRangeIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 

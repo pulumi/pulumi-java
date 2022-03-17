@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkInsightsAccessScope {
     private GetNetworkInsightsAccessScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkInsightsAccessScopeArgs.Builder a);
-    }
-    private static GetNetworkInsightsAccessScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkInsightsAccessScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::EC2::NetworkInsightsAccessScope
- * 
-     */
-    public static CompletableFuture<GetNetworkInsightsAccessScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::EC2::NetworkInsightsAccessScope
      * 

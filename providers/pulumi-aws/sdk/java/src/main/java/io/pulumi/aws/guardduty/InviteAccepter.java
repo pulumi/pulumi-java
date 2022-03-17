@@ -57,22 +57,6 @@ public class InviteAccepter extends io.pulumi.resources.CustomResource {
         return this.masterAccountId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(InviteAccepterArgs.Builder a);
-    }
-    private static io.pulumi.aws.guardduty.InviteAccepterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.guardduty.InviteAccepterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public InviteAccepter(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

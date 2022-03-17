@@ -81,22 +81,6 @@ public class Ciphertext extends io.pulumi.resources.CustomResource {
         return this.plaintext;
     }
 
-    public interface BuilderApplicator {
-        public void apply(CiphertextArgs.Builder a);
-    }
-    private static io.pulumi.aws.kms.CiphertextArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.kms.CiphertextArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Ciphertext(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

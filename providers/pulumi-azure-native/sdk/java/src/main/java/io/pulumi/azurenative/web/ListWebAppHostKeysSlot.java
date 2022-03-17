@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppHostKeysSlot {
     private ListWebAppHostKeysSlot() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppHostKeysSlotArgs.Builder a);
-    }
-    private static ListWebAppHostKeysSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppHostKeysSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Functions host level keys.
- * API Version: 2020-12-01.
- * 
-     *
-     * Functions host level keys.
- * 
-     */
-    public static CompletableFuture<ListWebAppHostKeysSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Functions host level keys.
      * API Version: 2020-12-01.

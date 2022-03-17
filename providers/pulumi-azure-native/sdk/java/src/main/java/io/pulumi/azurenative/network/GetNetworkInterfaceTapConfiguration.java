@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkInterfaceTapConfiguration {
     private GetNetworkInterfaceTapConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkInterfaceTapConfigurationArgs.Builder a);
-    }
-    private static GetNetworkInterfaceTapConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkInterfaceTapConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Tap configuration in a Network Interface.
- * API Version: 2020-11-01.
- * 
-     *
-     * Tap configuration in a Network Interface.
- * 
-     */
-    public static CompletableFuture<GetNetworkInterfaceTapConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Tap configuration in a Network Interface.
      * API Version: 2020-11-01.

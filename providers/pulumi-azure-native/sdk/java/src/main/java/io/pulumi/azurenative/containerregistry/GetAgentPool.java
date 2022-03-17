@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAgentPool {
     private GetAgentPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetAgentPoolArgs.Builder a);
-    }
-    private static GetAgentPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAgentPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The agentpool that has the ARM resource and properties.
- * The agentpool will have all information to create an agent pool.
- * API Version: 2019-06-01-preview.
- * 
-     *
-     * The agentpool that has the ARM resource and properties.
- * The agentpool will have all information to create an agent pool.
- * 
-     */
-    public static CompletableFuture<GetAgentPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The agentpool that has the ARM resource and properties.
      * The agentpool will have all information to create an agent pool.

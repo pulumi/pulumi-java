@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListStaticSiteUsers {
     private ListStaticSiteUsers() {}
-    public interface BuilderApplicator {
-        public void apply(ListStaticSiteUsersArgs.Builder a);
-    }
-    private static ListStaticSiteUsersArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListStaticSiteUsersArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of static site custom users.
- * API Version: 2020-12-01.
- * 
-     *
-     * Collection of static site custom users.
- * 
-     */
-    public static CompletableFuture<ListStaticSiteUsersResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of static site custom users.
      * API Version: 2020-12-01.

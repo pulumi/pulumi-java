@@ -73,22 +73,6 @@ public class TagByApi extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TagByApiArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.apimanagement.TagByApiArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.apimanagement.TagByApiArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public TagByApi(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

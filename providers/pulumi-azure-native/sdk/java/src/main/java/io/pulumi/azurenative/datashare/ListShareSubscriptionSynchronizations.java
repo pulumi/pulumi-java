@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListShareSubscriptionSynchronizations {
     private ListShareSubscriptionSynchronizations() {}
-    public interface BuilderApplicator {
-        public void apply(ListShareSubscriptionSynchronizationsArgs.Builder a);
-    }
-    private static ListShareSubscriptionSynchronizationsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListShareSubscriptionSynchronizationsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A consumer side list of share subscription synchronizations
- * API Version: 2020-09-01.
- * 
-     *
-     * A consumer side list of share subscription synchronizations
- * 
-     */
-    public static CompletableFuture<ListShareSubscriptionSynchronizationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A consumer side list of share subscription synchronizations
      * API Version: 2020-09-01.

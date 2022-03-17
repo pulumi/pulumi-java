@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecurityProfile {
     private GetSecurityProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecurityProfileArgs.Builder a);
-    }
-    private static GetSecurityProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecurityProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A security profile defines a set of expected behaviors for devices in your account.
- * 
-     */
-    public static CompletableFuture<GetSecurityProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A security profile defines a set of expected behaviors for devices in your account.
      * 

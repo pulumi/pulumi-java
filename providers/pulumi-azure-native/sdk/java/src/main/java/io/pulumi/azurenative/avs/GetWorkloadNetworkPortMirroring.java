@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkPortMirroring {
     private GetWorkloadNetworkPortMirroring() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadNetworkPortMirroringArgs.Builder a);
-    }
-    private static GetWorkloadNetworkPortMirroringArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadNetworkPortMirroringArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NSX Port Mirroring
- * API Version: 2020-07-17-preview.
- * 
-     *
-     * NSX Port Mirroring
- * 
-     */
-    public static CompletableFuture<GetWorkloadNetworkPortMirroringResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NSX Port Mirroring
      * API Version: 2020-07-17-preview.

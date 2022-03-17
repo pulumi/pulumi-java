@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBandwidthSetting {
     private GetBandwidthSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetBandwidthSettingArgs.Builder a);
-    }
-    private static GetBandwidthSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBandwidthSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The bandwidth setting.
- * API Version: 2017-06-01.
- * 
-     *
-     * The bandwidth setting.
- * 
-     */
-    public static CompletableFuture<GetBandwidthSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The bandwidth setting.
      * API Version: 2017-06-01.

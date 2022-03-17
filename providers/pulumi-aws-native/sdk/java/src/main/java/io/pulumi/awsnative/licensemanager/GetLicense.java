@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLicense {
     private GetLicense() {}
-    public interface BuilderApplicator {
-        public void apply(GetLicenseArgs.Builder a);
-    }
-    private static GetLicenseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLicenseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::LicenseManager::License
- * 
-     */
-    public static CompletableFuture<GetLicenseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::LicenseManager::License
      * 

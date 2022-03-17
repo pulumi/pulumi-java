@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSignalRSharedPrivateLinkResource {
     private GetSignalRSharedPrivateLinkResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetSignalRSharedPrivateLinkResourceArgs.Builder a);
-    }
-    private static GetSignalRSharedPrivateLinkResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSignalRSharedPrivateLinkResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a Shared Private Link Resource
- * API Version: 2021-04-01-preview.
- * 
-     *
-     * Describes a Shared Private Link Resource
- * 
-     */
-    public static CompletableFuture<GetSignalRSharedPrivateLinkResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a Shared Private Link Resource
      * API Version: 2021-04-01-preview.

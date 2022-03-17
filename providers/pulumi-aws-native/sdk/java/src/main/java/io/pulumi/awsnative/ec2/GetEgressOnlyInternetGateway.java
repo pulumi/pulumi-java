@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEgressOnlyInternetGateway {
     private GetEgressOnlyInternetGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetEgressOnlyInternetGatewayArgs.Builder a);
-    }
-    private static GetEgressOnlyInternetGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEgressOnlyInternetGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::EgressOnlyInternetGateway
- * 
-     */
-    public static CompletableFuture<GetEgressOnlyInternetGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::EgressOnlyInternetGateway
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecretValue {
     private GetSecretValue() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecretValueArgs.Builder a);
-    }
-    private static GetSecretValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecretValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
- * 
-     */
-    public static CompletableFuture<GetSecretValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
      * API Version: 2018-09-01-preview.

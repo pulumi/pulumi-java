@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGlobalUserOperationBatchStatus {
     private GetGlobalUserOperationBatchStatus() {}
-    public interface BuilderApplicator {
-        public void apply(GetGlobalUserOperationBatchStatusArgs.Builder a);
-    }
-    private static GetGlobalUserOperationBatchStatusArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGlobalUserOperationBatchStatusArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Status Details of the long running operation for an environment
- * API Version: 2018-10-15.
- * 
-     *
-     * Status Details of the long running operation for an environment
- * 
-     */
-    public static CompletableFuture<GetGlobalUserOperationBatchStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Status Details of the long running operation for an environment
      * API Version: 2018-10-15.

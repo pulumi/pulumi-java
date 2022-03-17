@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppPublicCertificateSlot {
     private GetWebAppPublicCertificateSlot() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppPublicCertificateSlotArgs.Builder a);
-    }
-    private static GetWebAppPublicCertificateSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppPublicCertificateSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Public certificate object
- * API Version: 2020-12-01.
- * 
-     *
-     * Public certificate object
- * 
-     */
-    public static CompletableFuture<GetWebAppPublicCertificateSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Public certificate object
      * API Version: 2020-12-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfigurationProfileAssignment {
     private GetConfigurationProfileAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationProfileAssignmentArgs.Builder a);
-    }
-    private static GetConfigurationProfileAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationProfileAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Configuration profile assignment is an association between a VM and automanage profile configuration.
- * API Version: 2020-06-30-preview.
- * 
-     *
-     * Configuration profile assignment is an association between a VM and automanage profile configuration.
- * 
-     */
-    public static CompletableFuture<GetConfigurationProfileAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Configuration profile assignment is an association between a VM and automanage profile configuration.
      * API Version: 2020-06-30-preview.

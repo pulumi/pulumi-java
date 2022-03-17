@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBuildServiceBuildResultLog {
     private GetBuildServiceBuildResultLog() {}
-    public interface BuilderApplicator {
-        public void apply(GetBuildServiceBuildResultLogArgs.Builder a);
-    }
-    private static GetBuildServiceBuildResultLogArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBuildServiceBuildResultLogArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Build result log resource properties payload
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Build result log resource properties payload
- * 
-     */
-    public static CompletableFuture<GetBuildServiceBuildResultLogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Build result log resource properties payload
      * API Version: 2022-01-01-preview.

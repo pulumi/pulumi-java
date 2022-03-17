@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRepository {
     private GetRepository() {}
-    public interface BuilderApplicator {
-        public void apply(GetRepositoryArgs.Builder a);
-    }
-    private static GetRepositoryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRepositoryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getRepository.
- * 
-     *
-     * A collection of values returned by getRepository.
- * 
-     */
-    public static CompletableFuture<GetRepositoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.
      * 

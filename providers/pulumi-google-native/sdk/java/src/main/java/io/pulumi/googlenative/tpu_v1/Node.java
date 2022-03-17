@@ -263,22 +263,6 @@ public class Node extends io.pulumi.resources.CustomResource {
         return this.useServiceNetworking;
     }
 
-    public interface BuilderApplicator {
-        public void apply(NodeArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.tpu_v1.NodeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.tpu_v1.NodeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Node(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

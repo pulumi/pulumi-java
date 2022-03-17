@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDatabaseSecurityAlertPolicy {
     private GetDatabaseSecurityAlertPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatabaseSecurityAlertPolicyArgs.Builder a);
-    }
-    private static GetDatabaseSecurityAlertPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatabaseSecurityAlertPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A database security alert policy.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A database security alert policy.
- * 
-     */
-    public static CompletableFuture<GetDatabaseSecurityAlertPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A database security alert policy.
      * API Version: 2020-11-01-preview.

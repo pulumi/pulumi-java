@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransitGatewayConnect {
     private GetTransitGatewayConnect() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransitGatewayConnectArgs.Builder a);
-    }
-    private static GetTransitGatewayConnectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransitGatewayConnectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::EC2::TransitGatewayConnect type
- * 
-     */
-    public static CompletableFuture<GetTransitGatewayConnectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::EC2::TransitGatewayConnect type
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReservationIamPolicy {
     private GetReservationIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetReservationIamPolicyArgs.Builder a);
-    }
-    private static GetReservationIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReservationIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- * 
-     */
-    public static CompletableFuture<GetReservationIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 

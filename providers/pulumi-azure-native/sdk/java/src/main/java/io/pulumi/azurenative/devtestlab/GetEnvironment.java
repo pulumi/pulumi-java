@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnvironment {
     private GetEnvironment() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnvironmentArgs.Builder a);
-    }
-    private static GetEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An environment, which is essentially an ARM template deployment.
- * API Version: 2018-09-15.
- * 
-     *
-     * An environment, which is essentially an ARM template deployment.
- * 
-     */
-    public static CompletableFuture<GetEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An environment, which is essentially an ARM template deployment.
      * API Version: 2018-09-15.

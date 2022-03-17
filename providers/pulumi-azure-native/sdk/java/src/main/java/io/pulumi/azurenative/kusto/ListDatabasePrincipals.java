@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListDatabasePrincipals {
     private ListDatabasePrincipals() {}
-    public interface BuilderApplicator {
-        public void apply(ListDatabasePrincipalsArgs.Builder a);
-    }
-    private static ListDatabasePrincipalsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListDatabasePrincipalsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list Kusto database principals operation response.
- * API Version: 2021-01-01.
- * 
-     *
-     * The list Kusto database principals operation response.
- * 
-     */
-    public static CompletableFuture<ListDatabasePrincipalsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list Kusto database principals operation response.
      * API Version: 2021-01-01.

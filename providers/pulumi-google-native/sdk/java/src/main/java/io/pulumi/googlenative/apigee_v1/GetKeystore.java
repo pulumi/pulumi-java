@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKeystore {
     private GetKeystore() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeystoreArgs.Builder a);
-    }
-    private static GetKeystoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeystoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a keystore or truststore.
- * 
-     */
-    public static CompletableFuture<GetKeystoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a keystore or truststore.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionInstantSnapshot {
     private GetRegionInstantSnapshot() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionInstantSnapshotArgs.Builder a);
-    }
-    private static GetRegionInstantSnapshotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionInstantSnapshotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified InstantSnapshot resource in the specified region.
- * 
-     */
-    public static CompletableFuture<GetRegionInstantSnapshotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified InstantSnapshot resource in the specified region.
      * 

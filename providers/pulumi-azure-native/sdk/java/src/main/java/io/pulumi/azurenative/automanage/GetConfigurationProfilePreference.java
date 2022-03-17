@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfigurationProfilePreference {
     private GetConfigurationProfilePreference() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationProfilePreferenceArgs.Builder a);
-    }
-    private static GetConfigurationProfilePreferenceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationProfilePreferenceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the configuration profile preference.
- * API Version: 2020-06-30-preview.
- * 
-     *
-     * Definition of the configuration profile preference.
- * 
-     */
-    public static CompletableFuture<GetConfigurationProfilePreferenceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the configuration profile preference.
      * API Version: 2020-06-30-preview.

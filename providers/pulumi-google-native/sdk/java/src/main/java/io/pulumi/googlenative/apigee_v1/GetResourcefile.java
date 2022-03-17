@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourcefile {
     private GetResourcefile() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourcefileArgs.Builder a);
-    }
-    private static GetResourcefileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourcefileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the contents of a resource file. For more information about resource files, see [Resource files](https://cloud.google.com/apigee/docs/api-platform/develop/resource-files).
- * 
-     */
-    public static CompletableFuture<GetResourcefileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the contents of a resource file. For more information about resource files, see [Resource files](https://cloud.google.com/apigee/docs/api-platform/develop/resource-files).
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVault {
     private GetVault() {}
-    public interface BuilderApplicator {
-        public void apply(GetVaultArgs.Builder a);
-    }
-    private static GetVaultArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVaultArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource information with extended details.
- * API Version: 2019-09-01.
- * 
-     *
-     * Resource information with extended details.
- * 
-     */
-    public static CompletableFuture<GetVaultResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource information with extended details.
      * API Version: 2019-09-01.

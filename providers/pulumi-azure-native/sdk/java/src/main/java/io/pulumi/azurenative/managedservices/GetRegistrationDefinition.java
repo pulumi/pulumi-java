@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistrationDefinition {
     private GetRegistrationDefinition() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistrationDefinitionArgs.Builder a);
-    }
-    private static GetRegistrationDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistrationDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Registration definition.
- * API Version: 2019-09-01.
- * 
-     *
-     * Registration definition.
- * 
-     */
-    public static CompletableFuture<GetRegistrationDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Registration definition.
      * API Version: 2019-09-01.

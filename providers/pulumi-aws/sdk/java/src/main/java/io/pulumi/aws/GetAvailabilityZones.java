@@ -14,36 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAvailabilityZones {
     private GetAvailabilityZones() {}
-    public interface BuilderApplicator {
-        public void apply(GetAvailabilityZonesArgs.Builder a);
-    }
-    private static GetAvailabilityZonesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAvailabilityZonesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Availability Zones data source allows access to the list of AWS
- * Availability Zones which can be accessed by an AWS account within the region
- * configured in the provider.
- * 
- * This is different from the `aws.getAvailabilityZone` (singular) data source,
- * which provides some details about a specific availability zone.
- * 
- * > When [Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) are enabled in a region, by default the API and this data source include both Local Zones and Availability Zones. To return only Availability Zones, see the example section below.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getAvailabilityZones.
- * 
-     *
-     * A collection of values returned by getAvailabilityZones.
- * 
-     */
-    public static CompletableFuture<GetAvailabilityZonesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Availability Zones data source allows access to the list of AWS
      * Availability Zones which can be accessed by an AWS account within the region

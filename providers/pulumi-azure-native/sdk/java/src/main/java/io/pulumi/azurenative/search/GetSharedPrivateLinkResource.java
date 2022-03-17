@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSharedPrivateLinkResource {
     private GetSharedPrivateLinkResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetSharedPrivateLinkResourceArgs.Builder a);
-    }
-    private static GetSharedPrivateLinkResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSharedPrivateLinkResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
- * API Version: 2020-08-01.
- * 
-     *
-     * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
- * 
-     */
-    public static CompletableFuture<GetSharedPrivateLinkResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
      * API Version: 2020-08-01.

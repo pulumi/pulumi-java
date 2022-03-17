@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPackagingGroup {
     private GetPackagingGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetPackagingGroupArgs.Builder a);
-    }
-    private static GetPackagingGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPackagingGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::MediaPackage::PackagingGroup
- * 
-     */
-    public static CompletableFuture<GetPackagingGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::MediaPackage::PackagingGroup
      * 

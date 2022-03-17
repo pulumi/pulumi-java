@@ -80,22 +80,6 @@ public class FolderIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(FolderIamPolicyArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.cloudresourcemanager_v2beta1.FolderIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.cloudresourcemanager_v2beta1.FolderIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public FolderIamPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

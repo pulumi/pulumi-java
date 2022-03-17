@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListManagedClusterAdminCredentials {
     private ListManagedClusterAdminCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(ListManagedClusterAdminCredentialsArgs.Builder a);
-    }
-    private static ListManagedClusterAdminCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListManagedClusterAdminCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of credential result response.
- * API Version: 2021-03-01.
- * 
-     *
-     * The list of credential result response.
- * 
-     */
-    public static CompletableFuture<ListManagedClusterAdminCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of credential result response.
      * API Version: 2021-03-01.

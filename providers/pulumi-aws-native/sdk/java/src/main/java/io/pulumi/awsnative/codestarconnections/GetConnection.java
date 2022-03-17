@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnection {
     private GetConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectionArgs.Builder a);
-    }
-    private static GetConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
- * 
-     */
-    public static CompletableFuture<GetConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
      * 

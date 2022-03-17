@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpnTunnel {
     private GetVpnTunnel() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpnTunnelArgs.Builder a);
-    }
-    private static GetVpnTunnelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpnTunnelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetVpnTunnelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
      * 

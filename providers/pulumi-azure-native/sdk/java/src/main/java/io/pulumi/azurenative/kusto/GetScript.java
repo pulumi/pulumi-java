@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScript {
     private GetScript() {}
-    public interface BuilderApplicator {
-        public void apply(GetScriptArgs.Builder a);
-    }
-    private static GetScriptArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScriptArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing a database script.
- * API Version: 2021-01-01.
- * 
-     *
-     * Class representing a database script.
- * 
-     */
-    public static CompletableFuture<GetScriptResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing a database script.
      * API Version: 2021-01-01.

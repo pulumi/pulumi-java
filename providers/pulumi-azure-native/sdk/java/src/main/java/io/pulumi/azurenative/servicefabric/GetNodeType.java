@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNodeType {
     private GetNodeType() {}
-    public interface BuilderApplicator {
-        public void apply(GetNodeTypeArgs.Builder a);
-    }
-    private static GetNodeTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNodeTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
- * API Version: 2020-01-01-preview.
- * 
-     *
-     * Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
- * 
-     */
-    public static CompletableFuture<GetNodeTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
      * API Version: 2020-01-01-preview.

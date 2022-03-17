@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOutput {
     private GetOutput() {}
-    public interface BuilderApplicator {
-        public void apply(GetOutputArgs.Builder a);
-    }
-    private static GetOutputArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOutputArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
- * API Version: 2016-03-01.
- * 
-     *
-     * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
- * 
-     */
-    public static CompletableFuture<GetOutputResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
      * API Version: 2016-03-01.

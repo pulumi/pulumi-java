@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCachePolicy {
     private GetCachePolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetCachePolicyArgs.Builder a);
-    }
-    private static GetCachePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCachePolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::CloudFront::CachePolicy
- * 
-     */
-    public static CompletableFuture<GetCachePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::CloudFront::CachePolicy
      * 

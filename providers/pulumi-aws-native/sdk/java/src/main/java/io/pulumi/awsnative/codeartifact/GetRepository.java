@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRepository {
     private GetRepository() {}
-    public interface BuilderApplicator {
-        public void apply(GetRepositoryArgs.Builder a);
-    }
-    private static GetRepositoryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRepositoryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The resource schema to create a CodeArtifact repository.
- * 
-     */
-    public static CompletableFuture<GetRepositoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The resource schema to create a CodeArtifact repository.
      * 

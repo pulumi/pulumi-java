@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetQueueServiceProperties {
     private GetQueueServiceProperties() {}
-    public interface BuilderApplicator {
-        public void apply(GetQueueServicePropertiesArgs.Builder a);
-    }
-    private static GetQueueServicePropertiesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetQueueServicePropertiesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The properties of a storage account’s Queue service.
- * API Version: 2021-02-01.
- * 
-     *
-     * The properties of a storage account’s Queue service.
- * 
-     */
-    public static CompletableFuture<GetQueueServicePropertiesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The properties of a storage account’s Queue service.
      * API Version: 2021-02-01.

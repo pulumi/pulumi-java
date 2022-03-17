@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetADLSGen1FileDataSet {
     private GetADLSGen1FileDataSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetADLSGen1FileDataSetArgs.Builder a);
-    }
-    private static GetADLSGen1FileDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetADLSGen1FileDataSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An ADLS Gen 1 file data set.
- * API Version: 2020-09-01.
- * 
-     *
-     * An ADLS Gen 1 file data set.
- * 
-     */
-    public static CompletableFuture<GetADLSGen1FileDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An ADLS Gen 1 file data set.
      * API Version: 2020-09-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWarmPool {
     private GetWarmPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetWarmPoolArgs.Builder a);
-    }
-    private static GetWarmPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWarmPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::AutoScaling::WarmPool.
- * 
-     */
-    public static CompletableFuture<GetWarmPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::AutoScaling::WarmPool.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppDeployment {
     private GetWebAppDeployment() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppDeploymentArgs.Builder a);
-    }
-    private static GetWebAppDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppDeploymentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * User credentials used for publishing activity.
- * API Version: 2020-12-01.
- * 
-     *
-     * User credentials used for publishing activity.
- * 
-     */
-    public static CompletableFuture<GetWebAppDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * User credentials used for publishing activity.
      * API Version: 2020-12-01.

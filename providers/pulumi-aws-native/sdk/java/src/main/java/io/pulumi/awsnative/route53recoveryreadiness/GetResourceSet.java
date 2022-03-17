@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourceSet {
     private GetResourceSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceSetArgs.Builder a);
-    }
-    private static GetResourceSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
- * 
-     */
-    public static CompletableFuture<GetResourceSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
      * 

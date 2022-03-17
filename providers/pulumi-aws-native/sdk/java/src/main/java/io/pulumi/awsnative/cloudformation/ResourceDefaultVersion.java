@@ -78,22 +78,6 @@ public class ResourceDefaultVersion extends io.pulumi.resources.CustomResource {
         return this.versionId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable ResourceDefaultVersionArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.cloudformation.ResourceDefaultVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.cloudformation.ResourceDefaultVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ResourceDefaultVersion(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

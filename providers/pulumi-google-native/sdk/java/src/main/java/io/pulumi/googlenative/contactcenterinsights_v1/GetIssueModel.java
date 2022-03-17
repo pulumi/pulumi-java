@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIssueModel {
     private GetIssueModel() {}
-    public interface BuilderApplicator {
-        public void apply(GetIssueModelArgs.Builder a);
-    }
-    private static GetIssueModelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIssueModelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an issue model.
- * 
-     */
-    public static CompletableFuture<GetIssueModelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an issue model.
      * 

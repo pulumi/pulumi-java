@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLicense {
     private GetLicense() {}
-    public interface BuilderApplicator {
-        public void apply(GetLicenseArgs.Builder a);
-    }
-    private static GetLicenseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLicenseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
- * 
-     */
-    public static CompletableFuture<GetLicenseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
      * 

@@ -15,32 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* aws.cloudtrail.getFunction has been deprecated in favor of aws.cloudfront.getFunction */
 public class GetFunction {
     private GetFunction() {}
-    public interface BuilderApplicator {
-        public void apply(GetFunctionArgs.Builder a);
-    }
-    private static GetFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFunctionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides information about a CloudFront Function.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getFunction.
- * 
-     *
-     * A collection of values returned by getFunction.
- * 
-     * @Deprecated
-     * aws.cloudtrail.getFunction has been deprecated in favor of aws.cloudfront.getFunction
- * 
-     */
-    public static CompletableFuture<GetFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides information about a CloudFront Function.
      * 

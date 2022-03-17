@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStaticSite {
     private GetStaticSite() {}
-    public interface BuilderApplicator {
-        public void apply(GetStaticSiteArgs.Builder a);
-    }
-    private static GetStaticSiteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStaticSiteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Static Site ARM resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * Static Site ARM resource.
- * 
-     */
-    public static CompletableFuture<GetStaticSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Static Site ARM resource.
      * API Version: 2020-12-01.

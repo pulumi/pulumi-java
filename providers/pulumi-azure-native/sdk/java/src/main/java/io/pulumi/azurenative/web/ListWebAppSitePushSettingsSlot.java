@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppSitePushSettingsSlot {
     private ListWebAppSitePushSettingsSlot() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppSitePushSettingsSlotArgs.Builder a);
-    }
-    private static ListWebAppSitePushSettingsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppSitePushSettingsSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Push settings for the App.
- * API Version: 2020-12-01.
- * 
-     *
-     * Push settings for the App.
- * 
-     */
-    public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Push settings for the App.
      * API Version: 2020-12-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionNetwork {
     private GetRegionNetwork() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionNetworkArgs.Builder a);
-    }
-    private static GetRegionNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionNetworkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified network.
- * 
-     */
-    public static CompletableFuture<GetRegionNetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified network.
      * 

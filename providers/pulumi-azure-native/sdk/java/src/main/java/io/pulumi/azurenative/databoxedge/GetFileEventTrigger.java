@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFileEventTrigger {
     private GetFileEventTrigger() {}
-    public interface BuilderApplicator {
-        public void apply(GetFileEventTriggerArgs.Builder a);
-    }
-    private static GetFileEventTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFileEventTriggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Trigger details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Trigger details.
- * 
-     */
-    public static CompletableFuture<GetFileEventTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Trigger details.
      * API Version: 2020-12-01.

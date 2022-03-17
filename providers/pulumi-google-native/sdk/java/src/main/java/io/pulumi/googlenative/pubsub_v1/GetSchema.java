@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSchema {
     private GetSchema() {}
-    public interface BuilderApplicator {
-        public void apply(GetSchemaArgs.Builder a);
-    }
-    private static GetSchemaArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSchemaArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a schema.
- * 
-     */
-    public static CompletableFuture<GetSchemaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a schema.
      * 

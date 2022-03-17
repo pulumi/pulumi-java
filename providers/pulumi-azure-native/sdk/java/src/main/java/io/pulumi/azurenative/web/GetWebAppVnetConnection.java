@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppVnetConnection {
     private GetWebAppVnetConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppVnetConnectionArgs.Builder a);
-    }
-    private static GetWebAppVnetConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppVnetConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Virtual Network information contract.
- * API Version: 2020-12-01.
- * 
-     *
-     * Virtual Network information contract.
- * 
-     */
-    public static CompletableFuture<GetWebAppVnetConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Virtual Network information contract.
      * API Version: 2020-12-01.

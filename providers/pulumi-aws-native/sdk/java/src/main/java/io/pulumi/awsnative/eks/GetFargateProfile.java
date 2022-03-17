@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFargateProfile {
     private GetFargateProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetFargateProfileArgs.Builder a);
-    }
-    private static GetFargateProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFargateProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema for AWS::EKS::FargateProfile
- * 
-     */
-    public static CompletableFuture<GetFargateProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema for AWS::EKS::FargateProfile
      * 

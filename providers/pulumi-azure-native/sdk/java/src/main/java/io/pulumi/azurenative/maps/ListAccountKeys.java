@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListAccountKeys {
     private ListAccountKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListAccountKeysArgs.Builder a);
-    }
-    private static ListAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListAccountKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The set of keys which can be used to access the Maps REST APIs. Two keys are provided for key rotation without interruption.
- * API Version: 2018-05-01.
- * 
-     *
-     * The set of keys which can be used to access the Maps REST APIs. Two keys are provided for key rotation without interruption.
- * 
-     */
-    public static CompletableFuture<ListAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The set of keys which can be used to access the Maps REST APIs. Two keys are provided for key rotation without interruption.
      * API Version: 2018-05-01.

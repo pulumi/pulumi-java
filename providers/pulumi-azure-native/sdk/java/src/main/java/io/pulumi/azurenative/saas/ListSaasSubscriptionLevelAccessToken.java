@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListSaasSubscriptionLevelAccessToken {
     private ListSaasSubscriptionLevelAccessToken() {}
-    public interface BuilderApplicator {
-        public void apply(ListSaasSubscriptionLevelAccessTokenArgs.Builder a);
-    }
-    private static ListSaasSubscriptionLevelAccessTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListSaasSubscriptionLevelAccessTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * the ISV access token result response.
- * API Version: 2018-03-01-beta.
- * 
-     *
-     * the ISV access token result response.
- * 
-     */
-    public static CompletableFuture<ListSaasSubscriptionLevelAccessTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * the ISV access token result response.
      * API Version: 2018-03-01-beta.

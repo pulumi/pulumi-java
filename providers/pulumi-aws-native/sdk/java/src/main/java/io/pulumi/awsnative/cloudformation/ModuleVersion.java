@@ -174,22 +174,6 @@ public class ModuleVersion extends io.pulumi.resources.CustomResource {
         return this.visibility;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ModuleVersionArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.cloudformation.ModuleVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.cloudformation.ModuleVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ModuleVersion(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

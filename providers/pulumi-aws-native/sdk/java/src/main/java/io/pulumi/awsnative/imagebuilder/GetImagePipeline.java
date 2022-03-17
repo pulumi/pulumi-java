@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImagePipeline {
     private GetImagePipeline() {}
-    public interface BuilderApplicator {
-        public void apply(GetImagePipelineArgs.Builder a);
-    }
-    private static GetImagePipelineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImagePipelineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::ImageBuilder::ImagePipeline
- * 
-     */
-    public static CompletableFuture<GetImagePipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::ImageBuilder::ImagePipeline
      * 

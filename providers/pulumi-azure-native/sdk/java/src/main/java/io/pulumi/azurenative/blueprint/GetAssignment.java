@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssignment {
     private GetAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssignmentArgs.Builder a);
-    }
-    private static GetAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a blueprint assignment.
- * API Version: 2018-11-01-preview.
- * 
-     *
-     * Represents a blueprint assignment.
- * 
-     */
-    public static CompletableFuture<GetAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a blueprint assignment.
      * API Version: 2018-11-01-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMicrosoftSecurityIncidentCreationAlertRule {
     private GetMicrosoftSecurityIncidentCreationAlertRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetMicrosoftSecurityIncidentCreationAlertRuleArgs.Builder a);
-    }
-    private static GetMicrosoftSecurityIncidentCreationAlertRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMicrosoftSecurityIncidentCreationAlertRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents MicrosoftSecurityIncidentCreation rule.
- * API Version: 2020-01-01.
- * 
-     *
-     * Represents MicrosoftSecurityIncidentCreation rule.
- * 
-     */
-    public static CompletableFuture<GetMicrosoftSecurityIncidentCreationAlertRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents MicrosoftSecurityIncidentCreation rule.
      * API Version: 2020-01-01.

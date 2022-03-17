@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppSiteBackupsSlot {
     private ListWebAppSiteBackupsSlot() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppSiteBackupsSlotArgs.Builder a);
-    }
-    private static ListWebAppSiteBackupsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppSiteBackupsSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of backup items.
- * API Version: 2020-12-01.
- * 
-     *
-     * Collection of backup items.
- * 
-     */
-    public static CompletableFuture<ListWebAppSiteBackupsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of backup items.
      * API Version: 2020-12-01.

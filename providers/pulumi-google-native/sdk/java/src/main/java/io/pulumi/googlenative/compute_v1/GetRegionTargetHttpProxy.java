@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionTargetHttpProxy {
     private GetRegionTargetHttpProxy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionTargetHttpProxyArgs.Builder a);
-    }
-    private static GetRegionTargetHttpProxyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionTargetHttpProxyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetRegionTargetHttpProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
      * 

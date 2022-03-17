@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCloudEdgeManagementRole {
     private GetCloudEdgeManagementRole() {}
-    public interface BuilderApplicator {
-        public void apply(GetCloudEdgeManagementRoleArgs.Builder a);
-    }
-    private static GetCloudEdgeManagementRoleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCloudEdgeManagementRoleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * CloudEdgeManagementRole role.
- * API Version: 2020-12-01.
- * 
-     *
-     * CloudEdgeManagementRole role.
- * 
-     */
-    public static CompletableFuture<GetCloudEdgeManagementRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * CloudEdgeManagementRole role.
      * API Version: 2020-12-01.

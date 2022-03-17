@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnterpriseChannel {
     private GetEnterpriseChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnterpriseChannelArgs.Builder a);
-    }
-    private static GetEnterpriseChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnterpriseChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Enterprise Channel resource definition
- * API Version: 2018-07-12.
- * 
-     *
-     * Enterprise Channel resource definition
- * 
-     */
-    public static CompletableFuture<GetEnterpriseChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Enterprise Channel resource definition
      * API Version: 2018-07-12.

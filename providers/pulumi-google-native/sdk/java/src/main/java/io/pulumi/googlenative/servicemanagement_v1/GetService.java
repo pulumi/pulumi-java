@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetService {
     private GetService() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceArgs.Builder a);
-    }
-    private static GetServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a managed service. Authentication is required unless the service is public.
- * 
-     */
-    public static CompletableFuture<GetServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a managed service. Authentication is required unless the service is public.
      * 

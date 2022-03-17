@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPolicySetDefinitionAtManagementGroup {
     private GetPolicySetDefinitionAtManagementGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetPolicySetDefinitionAtManagementGroupArgs.Builder a);
-    }
-    private static GetPolicySetDefinitionAtManagementGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPolicySetDefinitionAtManagementGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The policy set definition.
- * API Version: 2020-09-01.
- * 
-     *
-     * The policy set definition.
- * 
-     */
-    public static CompletableFuture<GetPolicySetDefinitionAtManagementGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The policy set definition.
      * API Version: 2020-09-01.

@@ -89,22 +89,6 @@ public class DataVersion extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DataVersionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.machinelearningservices.DataVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.machinelearningservices.DataVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DataVersion(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

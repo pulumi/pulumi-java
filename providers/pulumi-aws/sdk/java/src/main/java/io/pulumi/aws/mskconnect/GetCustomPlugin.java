@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomPlugin {
     private GetCustomPlugin() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomPluginArgs.Builder a);
-    }
-    private static GetCustomPluginArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomPluginArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on an Amazon MSK Connect custom plugin.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getCustomPlugin.
- * 
-     *
-     * A collection of values returned by getCustomPlugin.
- * 
-     */
-    public static CompletableFuture<GetCustomPluginResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on an Amazon MSK Connect custom plugin.
      * 

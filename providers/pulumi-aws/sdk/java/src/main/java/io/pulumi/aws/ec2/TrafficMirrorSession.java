@@ -186,22 +186,6 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
         return this.virtualNetworkId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TrafficMirrorSessionArgs.Builder a);
-    }
-    private static io.pulumi.aws.ec2.TrafficMirrorSessionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ec2.TrafficMirrorSessionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public TrafficMirrorSession(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

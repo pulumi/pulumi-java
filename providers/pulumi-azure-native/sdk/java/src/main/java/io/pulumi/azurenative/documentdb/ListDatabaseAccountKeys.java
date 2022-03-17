@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListDatabaseAccountKeys {
     private ListDatabaseAccountKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListDatabaseAccountKeysArgs.Builder a);
-    }
-    private static ListDatabaseAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListDatabaseAccountKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The access keys for the given database account.
- * API Version: 2021-03-15.
- * 
-     *
-     * The access keys for the given database account.
- * 
-     */
-    public static CompletableFuture<ListDatabaseAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The access keys for the given database account.
      * API Version: 2021-03-15.

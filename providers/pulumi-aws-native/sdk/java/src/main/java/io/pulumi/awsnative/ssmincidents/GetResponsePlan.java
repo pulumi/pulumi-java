@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResponsePlan {
     private GetResponsePlan() {}
-    public interface BuilderApplicator {
-        public void apply(GetResponsePlanArgs.Builder a);
-    }
-    private static GetResponsePlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResponsePlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource type definition for AWS::SSMIncidents::ResponsePlan
- * 
-     */
-    public static CompletableFuture<GetResponsePlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource type definition for AWS::SSMIncidents::ResponsePlan
      * 

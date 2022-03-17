@@ -56,22 +56,6 @@ public class Archive extends io.pulumi.resources.CustomResource {
         return this.sourceArn;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ArchiveArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.events.ArchiveArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.events.ArchiveArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Archive(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

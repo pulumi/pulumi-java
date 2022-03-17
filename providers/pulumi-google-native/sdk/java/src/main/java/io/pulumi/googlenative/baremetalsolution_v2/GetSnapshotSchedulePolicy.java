@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSnapshotSchedulePolicy {
     private GetSnapshotSchedulePolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetSnapshotSchedulePolicyArgs.Builder a);
-    }
-    private static GetSnapshotSchedulePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSnapshotSchedulePolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get details of a single snapshot schedule policy.
- * 
-     */
-    public static CompletableFuture<GetSnapshotSchedulePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get details of a single snapshot schedule policy.
      * 

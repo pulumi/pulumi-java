@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: AdminRule, DefaultAdminRule. */
 public class GetAdminRule {
     private GetAdminRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetAdminRuleArgs.Builder a);
-    }
-    private static GetAdminRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAdminRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Network base admin rule.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Network base admin rule.
- * 
-     * @Deprecated
-     * Please use one of the variants: AdminRule, DefaultAdminRule.
- * 
-     */
-    public static CompletableFuture<GetAdminRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Network base admin rule.
      * API Version: 2021-02-01-preview.

@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubnets {
     private GetSubnets() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubnetsArgs.Builder a);
-    }
-    private static GetSubnetsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubnetsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This resource can be useful for getting back a set of subnet IDs.
- * 
-     *
-     * A collection of arguments for invoking getSubnets.
- * 
-     *
-     * A collection of values returned by getSubnets.
- * 
-     */
-    public static CompletableFuture<GetSubnetsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This resource can be useful for getting back a set of subnet IDs.
      * 

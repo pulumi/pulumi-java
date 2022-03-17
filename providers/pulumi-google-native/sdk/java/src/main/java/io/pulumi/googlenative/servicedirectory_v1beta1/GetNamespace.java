@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNamespace {
     private GetNamespace() {}
-    public interface BuilderApplicator {
-        public void apply(GetNamespaceArgs.Builder a);
-    }
-    private static GetNamespaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNamespaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a namespace.
- * 
-     */
-    public static CompletableFuture<GetNamespaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a namespace.
      * 

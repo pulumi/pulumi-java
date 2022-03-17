@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBastionShareableLink {
     private GetBastionShareableLink() {}
-    public interface BuilderApplicator {
-        public void apply(GetBastionShareableLinkArgs.Builder a);
-    }
-    private static GetBastionShareableLinkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBastionShareableLinkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response for all the Bastion Shareable Link endpoints.
- * API Version: 2020-11-01.
- * 
-     *
-     * Response for all the Bastion Shareable Link endpoints.
- * 
-     */
-    public static CompletableFuture<GetBastionShareableLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response for all the Bastion Shareable Link endpoints.
      * API Version: 2020-11-01.

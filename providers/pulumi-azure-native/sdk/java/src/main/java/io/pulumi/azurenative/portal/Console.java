@@ -45,22 +45,6 @@ public class Console extends io.pulumi.resources.CustomResource {
         return this.properties;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ConsoleArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.portal.ConsoleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.portal.ConsoleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Console(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

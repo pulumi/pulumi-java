@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetForwardingRule {
     private GetForwardingRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetForwardingRuleArgs.Builder a);
-    }
-    private static GetForwardingRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetForwardingRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a forwarding rule within GCE from its name.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getForwardingRule.
- * 
-     *
-     * A collection of values returned by getForwardingRule.
- * 
-     */
-    public static CompletableFuture<GetForwardingRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a forwarding rule within GCE from its name.
      * 

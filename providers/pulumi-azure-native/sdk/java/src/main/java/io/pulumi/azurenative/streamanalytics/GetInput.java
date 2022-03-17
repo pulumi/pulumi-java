@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInput {
     private GetInput() {}
-    public interface BuilderApplicator {
-        public void apply(GetInputArgs.Builder a);
-    }
-    private static GetInputArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInputArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
- * API Version: 2016-03-01.
- * 
-     *
-     * An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
- * 
-     */
-    public static CompletableFuture<GetInputResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
      * API Version: 2016-03-01.

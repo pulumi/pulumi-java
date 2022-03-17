@@ -101,22 +101,6 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
         return this.queryArgProfileConfig;
     }
 
-    public interface BuilderApplicator {
-        public void apply(FieldLevelEncryptionConfigArgs.Builder a);
-    }
-    private static io.pulumi.aws.cloudfront.FieldLevelEncryptionConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.cloudfront.FieldLevelEncryptionConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public FieldLevelEncryptionConfig(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFlowEntitlement {
     private GetFlowEntitlement() {}
-    public interface BuilderApplicator {
-        public void apply(GetFlowEntitlementArgs.Builder a);
-    }
-    private static GetFlowEntitlementArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFlowEntitlementArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::MediaConnect::FlowEntitlement
- * 
-     */
-    public static CompletableFuture<GetFlowEntitlementResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::MediaConnect::FlowEntitlement
      * 

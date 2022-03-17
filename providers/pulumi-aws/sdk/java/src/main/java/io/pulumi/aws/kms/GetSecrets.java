@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecrets {
     private GetSecrets() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecretsArgs.Builder a);
-    }
-    private static GetSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecretsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Decrypt multiple secrets from data encrypted with the AWS KMS service.
- * 
-     *
-     * A collection of arguments for invoking getSecrets.
- * 
-     *
-     * A collection of values returned by getSecrets.
- * 
-     */
-    public static CompletableFuture<GetSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Decrypt multiple secrets from data encrypted with the AWS KMS service.
      * 

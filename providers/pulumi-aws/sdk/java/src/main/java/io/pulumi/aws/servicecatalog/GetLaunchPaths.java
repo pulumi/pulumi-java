@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLaunchPaths {
     private GetLaunchPaths() {}
-    public interface BuilderApplicator {
-        public void apply(GetLaunchPathsArgs.Builder a);
-    }
-    private static GetLaunchPathsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLaunchPathsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary when provisioning a product. A path also determines the constraints put on the product.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getLaunchPaths.
- * 
-     *
-     * A collection of values returned by getLaunchPaths.
- * 
-     */
-    public static CompletableFuture<GetLaunchPathsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary when provisioning a product. A path also determines the constraints put on the product.
      * 

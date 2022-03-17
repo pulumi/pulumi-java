@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegrationServiceEnvironmentManagedApi {
     private GetIntegrationServiceEnvironmentManagedApi() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationServiceEnvironmentManagedApiArgs.Builder a);
-    }
-    private static GetIntegrationServiceEnvironmentManagedApiArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationServiceEnvironmentManagedApiArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The integration service environment managed api.
- * API Version: 2019-05-01.
- * 
-     *
-     * The integration service environment managed api.
- * 
-     */
-    public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The integration service environment managed api.
      * API Version: 2019-05-01.

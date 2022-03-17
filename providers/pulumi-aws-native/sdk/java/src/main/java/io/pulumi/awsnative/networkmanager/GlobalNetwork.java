@@ -64,22 +64,6 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable GlobalNetworkArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.networkmanager.GlobalNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.networkmanager.GlobalNetworkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public GlobalNetwork(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

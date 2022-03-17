@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetJobTrigger {
     private GetJobTrigger() {}
-    public interface BuilderApplicator {
-        public void apply(GetJobTriggerArgs.Builder a);
-    }
-    private static GetJobTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetJobTriggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
- * 
-     */
-    public static CompletableFuture<GetJobTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
      * 

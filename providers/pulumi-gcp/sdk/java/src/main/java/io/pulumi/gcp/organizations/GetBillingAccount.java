@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBillingAccount {
     private GetBillingAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetBillingAccountArgs.Builder a);
-    }
-    private static GetBillingAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBillingAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a Google Billing Account.
- * 
-     *
-     * A collection of arguments for invoking getBillingAccount.
- * 
-     *
-     * A collection of values returned by getBillingAccount.
- * 
-     */
-    public static CompletableFuture<GetBillingAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a Google Billing Account.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStaticSiteCustomDomain {
     private GetStaticSiteCustomDomain() {}
-    public interface BuilderApplicator {
-        public void apply(GetStaticSiteCustomDomainArgs.Builder a);
-    }
-    private static GetStaticSiteCustomDomainArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStaticSiteCustomDomainArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Static Site Custom Domain Overview ARM resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * Static Site Custom Domain Overview ARM resource.
- * 
-     */
-    public static CompletableFuture<GetStaticSiteCustomDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Static Site Custom Domain Overview ARM resource.
      * API Version: 2020-12-01.

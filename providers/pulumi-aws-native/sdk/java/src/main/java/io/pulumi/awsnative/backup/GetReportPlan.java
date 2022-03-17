@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReportPlan {
     private GetReportPlan() {}
-    public interface BuilderApplicator {
-        public void apply(GetReportPlanArgs.Builder a);
-    }
-    private static GetReportPlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReportPlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Contains detailed information about a report plan in AWS Backup Audit Manager.
- * 
-     */
-    public static CompletableFuture<GetReportPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Contains detailed information about a report plan in AWS Backup Audit Manager.
      * 

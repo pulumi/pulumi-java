@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceAttachment {
     private GetInstanceAttachment() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceAttachmentArgs.Builder a);
-    }
-    private static GetInstanceAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceAttachmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an attachment. **Note:** Not supported for Apigee hybrid.
- * 
-     */
-    public static CompletableFuture<GetInstanceAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an attachment. **Note:** Not supported for Apigee hybrid.
      * 

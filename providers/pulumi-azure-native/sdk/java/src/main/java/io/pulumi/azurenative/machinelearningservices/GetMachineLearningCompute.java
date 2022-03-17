@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMachineLearningCompute {
     private GetMachineLearningCompute() {}
-    public interface BuilderApplicator {
-        public void apply(GetMachineLearningComputeArgs.Builder a);
-    }
-    private static GetMachineLearningComputeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMachineLearningComputeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Machine Learning compute object wrapped into ARM resource envelope.
- * API Version: 2021-01-01.
- * 
-     *
-     * Machine Learning compute object wrapped into ARM resource envelope.
- * 
-     */
-    public static CompletableFuture<GetMachineLearningComputeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Machine Learning compute object wrapped into ARM resource envelope.
      * API Version: 2021-01-01.

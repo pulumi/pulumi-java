@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegisteredAsn {
     private GetRegisteredAsn() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegisteredAsnArgs.Builder a);
-    }
-    private static GetRegisteredAsnArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegisteredAsnArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The customer's ASN that is registered by the peering service provider.
- * API Version: 2021-01-01.
- * 
-     *
-     * The customer's ASN that is registered by the peering service provider.
- * 
-     */
-    public static CompletableFuture<GetRegisteredAsnResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The customer's ASN that is registered by the peering service provider.
      * API Version: 2021-01-01.

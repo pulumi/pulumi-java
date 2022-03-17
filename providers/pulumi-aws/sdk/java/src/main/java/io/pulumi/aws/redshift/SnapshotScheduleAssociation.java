@@ -55,22 +55,6 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
         return this.scheduleIdentifier;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SnapshotScheduleAssociationArgs.Builder a);
-    }
-    private static io.pulumi.aws.redshift.SnapshotScheduleAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.redshift.SnapshotScheduleAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SnapshotScheduleAssociation(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

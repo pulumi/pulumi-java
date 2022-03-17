@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStateMachine {
     private GetStateMachine() {}
-    public interface BuilderApplicator {
-        public void apply(GetStateMachineArgs.Builder a);
-    }
-    private static GetStateMachineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStateMachineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for StateMachine
- * 
-     */
-    public static CompletableFuture<GetStateMachineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for StateMachine
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOpenShiftCluster {
     private GetOpenShiftCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetOpenShiftClusterArgs.Builder a);
-    }
-    private static GetOpenShiftClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOpenShiftClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
- * API Version: 2020-04-30.
- * 
-     *
-     * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
- * 
-     */
-    public static CompletableFuture<GetOpenShiftClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
      * API Version: 2020-04-30.

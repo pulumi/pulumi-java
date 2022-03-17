@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFolder {
     private GetFolder() {}
-    public interface BuilderApplicator {
-        public void apply(GetFolderArgs.Builder a);
-    }
-    private static GetFolderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFolderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves a Folder identified by the supplied resource name. Valid Folder resource names have the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have `resourcemanager.folders.get` permission on the identified folder.
- * 
-     */
-    public static CompletableFuture<GetFolderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves a Folder identified by the supplied resource name. Valid Folder resource names have the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have `resourcemanager.folders.get` permission on the identified folder.
      * 

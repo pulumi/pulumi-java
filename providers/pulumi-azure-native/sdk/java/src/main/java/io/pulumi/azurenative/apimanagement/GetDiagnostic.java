@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDiagnostic {
     private GetDiagnostic() {}
-    public interface BuilderApplicator {
-        public void apply(GetDiagnosticArgs.Builder a);
-    }
-    private static GetDiagnosticArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDiagnosticArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Diagnostic details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Diagnostic details.
- * 
-     */
-    public static CompletableFuture<GetDiagnosticResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Diagnostic details.
      * API Version: 2020-12-01.

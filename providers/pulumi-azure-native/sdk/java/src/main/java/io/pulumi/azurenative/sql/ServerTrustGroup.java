@@ -88,22 +88,6 @@ public class ServerTrustGroup extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ServerTrustGroupArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.sql.ServerTrustGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.sql.ServerTrustGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ServerTrustGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

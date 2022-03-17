@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkflow {
     private GetWorkflow() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkflowArgs.Builder a);
-    }
-    private static GetWorkflowArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkflowArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The workflow type.
- * API Version: 2019-05-01.
- * 
-     *
-     * The workflow type.
- * 
-     */
-    public static CompletableFuture<GetWorkflowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The workflow type.
      * API Version: 2019-05-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHybridUseBenefit {
     private GetHybridUseBenefit() {}
-    public interface BuilderApplicator {
-        public void apply(GetHybridUseBenefitArgs.Builder a);
-    }
-    private static GetHybridUseBenefitArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHybridUseBenefitArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response on GET of a hybrid use benefit
- * API Version: 2019-06-01-preview.
- * 
-     *
-     * Response on GET of a hybrid use benefit
- * 
-     */
-    public static CompletableFuture<GetHybridUseBenefitResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response on GET of a hybrid use benefit
      * API Version: 2019-06-01-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStorageSyncService {
     private GetStorageSyncService() {}
-    public interface BuilderApplicator {
-        public void apply(GetStorageSyncServiceArgs.Builder a);
-    }
-    private static GetStorageSyncServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStorageSyncServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Storage Sync Service object.
- * API Version: 2020-03-01.
- * 
-     *
-     * Storage Sync Service object.
- * 
-     */
-    public static CompletableFuture<GetStorageSyncServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Storage Sync Service object.
      * API Version: 2020-03-01.

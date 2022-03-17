@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAction {
     private GetAction() {}
-    public interface BuilderApplicator {
-        public void apply(GetActionArgs.Builder a);
-    }
-    private static GetActionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetActionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Action for alert rule.
- * API Version: 2020-01-01.
- * 
-     *
-     * Action for alert rule.
- * 
-     */
-    public static CompletableFuture<GetActionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Action for alert rule.
      * API Version: 2020-01-01.

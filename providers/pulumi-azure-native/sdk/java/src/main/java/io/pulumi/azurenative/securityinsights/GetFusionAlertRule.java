@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFusionAlertRule {
     private GetFusionAlertRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetFusionAlertRuleArgs.Builder a);
-    }
-    private static GetFusionAlertRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFusionAlertRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents Fusion alert rule.
- * API Version: 2020-01-01.
- * 
-     *
-     * Represents Fusion alert rule.
- * 
-     */
-    public static CompletableFuture<GetFusionAlertRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents Fusion alert rule.
      * API Version: 2020-01-01.

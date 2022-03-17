@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceConsumerIamPolicy {
     private GetServiceConsumerIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceConsumerIamPolicyArgs.Builder a);
-    }
-    private static GetServiceConsumerIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceConsumerIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetServiceConsumerIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVariable {
     private GetVariable() {}
-    public interface BuilderApplicator {
-        public void apply(GetVariableArgs.Builder a);
-    }
-    private static GetVariableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVariableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the variable.
- * API Version: 2019-06-01.
- * 
-     *
-     * Definition of the variable.
- * 
-     */
-    public static CompletableFuture<GetVariableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the variable.
      * API Version: 2019-06-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLinkedService {
     private GetLinkedService() {}
-    public interface BuilderApplicator {
-        public void apply(GetLinkedServiceArgs.Builder a);
-    }
-    private static GetLinkedServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLinkedServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Linked service resource type.
- * API Version: 2018-06-01.
- * 
-     *
-     * Linked service resource type.
- * 
-     */
-    public static CompletableFuture<GetLinkedServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Linked service resource type.
      * API Version: 2018-06-01.

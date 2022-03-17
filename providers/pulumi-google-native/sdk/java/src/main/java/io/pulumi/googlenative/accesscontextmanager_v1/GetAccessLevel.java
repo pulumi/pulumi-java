@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccessLevel {
     private GetAccessLevel() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccessLevelArgs.Builder a);
-    }
-    private static GetAccessLevelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccessLevelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an access level based on the resource name.
- * 
-     */
-    public static CompletableFuture<GetAccessLevelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an access level based on the resource name.
      * 

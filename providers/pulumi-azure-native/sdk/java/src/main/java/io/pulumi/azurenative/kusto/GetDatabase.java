@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: ReadOnlyFollowingDatabase, ReadWriteDatabase. */
 public class GetDatabase {
     private GetDatabase() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatabaseArgs.Builder a);
-    }
-    private static GetDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatabaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing a Kusto database.
- * API Version: 2021-01-01.
- * 
-     *
-     * Class representing a Kusto database.
- * 
-     * @Deprecated
-     * Please use one of the variants: ReadOnlyFollowingDatabase, ReadWriteDatabase.
- * 
-     */
-    public static CompletableFuture<GetDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing a Kusto database.
      * API Version: 2021-01-01.

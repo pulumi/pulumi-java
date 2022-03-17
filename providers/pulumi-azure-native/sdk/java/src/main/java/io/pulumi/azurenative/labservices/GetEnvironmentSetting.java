@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEnvironmentSetting {
     private GetEnvironmentSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnvironmentSettingArgs.Builder a);
-    }
-    private static GetEnvironmentSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnvironmentSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents settings of an environment, from which environment instances would be created
- * API Version: 2018-10-15.
- * 
-     *
-     * Represents settings of an environment, from which environment instances would be created
- * 
-     */
-    public static CompletableFuture<GetEnvironmentSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents settings of an environment, from which environment instances would be created
      * API Version: 2018-10-15.

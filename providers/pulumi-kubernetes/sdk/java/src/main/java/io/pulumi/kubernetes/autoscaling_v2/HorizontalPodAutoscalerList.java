@@ -77,22 +77,6 @@ public class HorizontalPodAutoscalerList extends io.pulumi.resources.CustomResou
         return this.metadata;
     }
 
-    public interface BuilderApplicator {
-        public void apply(HorizontalPodAutoscalerListArgs.Builder a);
-    }
-    private static io.pulumi.kubernetes.autoscaling_v2.HorizontalPodAutoscalerListArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.kubernetes.autoscaling_v2.HorizontalPodAutoscalerListArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public HorizontalPodAutoscalerList(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

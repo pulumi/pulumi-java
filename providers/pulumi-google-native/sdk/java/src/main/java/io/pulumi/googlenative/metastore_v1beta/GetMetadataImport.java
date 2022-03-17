@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMetadataImport {
     private GetMetadataImport() {}
-    public interface BuilderApplicator {
-        public void apply(GetMetadataImportArgs.Builder a);
-    }
-    private static GetMetadataImportArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMetadataImportArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets details of a single import.
- * 
-     */
-    public static CompletableFuture<GetMetadataImportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets details of a single import.
      * 

@@ -65,22 +65,6 @@ public class QueueIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(QueueIamPolicyArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.cloudtasks_v2.QueueIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.cloudtasks_v2.QueueIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public QueueIamPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

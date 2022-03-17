@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResiliencyPolicy {
     private GetResiliencyPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetResiliencyPolicyArgs.Builder a);
-    }
-    private static GetResiliencyPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResiliencyPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type Definition for Resiliency Policy.
- * 
-     */
-    public static CompletableFuture<GetResiliencyPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type Definition for Resiliency Policy.
      * 

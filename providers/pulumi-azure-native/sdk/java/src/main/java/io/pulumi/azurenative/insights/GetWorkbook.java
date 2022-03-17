@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkbook {
     private GetWorkbook() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkbookArgs.Builder a);
-    }
-    private static GetWorkbookArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkbookArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Application Insights workbook definition.
- * API Version: 2020-10-20.
- * 
-     *
-     * An Application Insights workbook definition.
- * 
-     */
-    public static CompletableFuture<GetWorkbookResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Application Insights workbook definition.
      * API Version: 2020-10-20.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssessment {
     private GetAssessment() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssessmentArgs.Builder a);
-    }
-    private static GetAssessmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssessmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An assessment created for a group in the Migration project.
- * API Version: 2019-10-01.
- * 
-     *
-     * An assessment created for a group in the Migration project.
- * 
-     */
-    public static CompletableFuture<GetAssessmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An assessment created for a group in the Migration project.
      * API Version: 2019-10-01.

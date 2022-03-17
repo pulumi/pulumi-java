@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListIntegrationRuntimeAuthKey {
     private ListIntegrationRuntimeAuthKey() {}
-    public interface BuilderApplicator {
-        public void apply(ListIntegrationRuntimeAuthKeyArgs.Builder a);
-    }
-    private static ListIntegrationRuntimeAuthKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListIntegrationRuntimeAuthKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The integration runtime authentication keys.
- * API Version: 2021-03-01.
- * 
-     *
-     * The integration runtime authentication keys.
- * 
-     */
-    public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The integration runtime authentication keys.
      * API Version: 2021-03-01.

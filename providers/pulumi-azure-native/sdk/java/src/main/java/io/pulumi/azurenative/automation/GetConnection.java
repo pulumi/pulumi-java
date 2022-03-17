@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConnection {
     private GetConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetConnectionArgs.Builder a);
-    }
-    private static GetConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the connection.
- * API Version: 2019-06-01.
- * 
-     *
-     * Definition of the connection.
- * 
-     */
-    public static CompletableFuture<GetConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the connection.
      * API Version: 2019-06-01.

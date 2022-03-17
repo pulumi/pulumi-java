@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserSettingsWithLocation {
     private GetUserSettingsWithLocation() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserSettingsWithLocationArgs.Builder a);
-    }
-    private static GetUserSettingsWithLocationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserSettingsWithLocationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response to get user settings
- * API Version: 2018-10-01.
- * 
-     *
-     * Response to get user settings
- * 
-     */
-    public static CompletableFuture<GetUserSettingsWithLocationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response to get user settings
      * API Version: 2018-10-01.

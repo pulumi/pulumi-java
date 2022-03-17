@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVPCEConfiguration {
     private GetVPCEConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetVPCEConfigurationArgs.Builder a);
-    }
-    private static GetVPCEConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVPCEConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS::DeviceFarm::VPCEConfiguration creates a new Device Farm VPCE Configuration
- * 
-     */
-    public static CompletableFuture<GetVPCEConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS::DeviceFarm::VPCEConfiguration creates a new Device Farm VPCE Configuration
      * 

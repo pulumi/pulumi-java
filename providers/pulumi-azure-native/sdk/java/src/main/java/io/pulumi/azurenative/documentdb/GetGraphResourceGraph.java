@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGraphResourceGraph {
     private GetGraphResourceGraph() {}
-    public interface BuilderApplicator {
-        public void apply(GetGraphResourceGraphArgs.Builder a);
-    }
-    private static GetGraphResourceGraphArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGraphResourceGraphArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB Graph resource.
- * API Version: 2021-07-01-preview.
- * 
-     *
-     * An Azure Cosmos DB Graph resource.
- * 
-     */
-    public static CompletableFuture<GetGraphResourceGraphResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB Graph resource.
      * API Version: 2021-07-01-preview.

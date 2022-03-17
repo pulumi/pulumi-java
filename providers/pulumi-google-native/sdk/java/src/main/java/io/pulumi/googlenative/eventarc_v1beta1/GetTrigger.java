@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTrigger {
     private GetTrigger() {}
-    public interface BuilderApplicator {
-        public void apply(GetTriggerArgs.Builder a);
-    }
-    private static GetTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTriggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a single trigger.
- * 
-     */
-    public static CompletableFuture<GetTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a single trigger.
      * 

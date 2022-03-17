@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDomainName {
     private GetDomainName() {}
-    public interface BuilderApplicator {
-        public void apply(GetDomainNameArgs.Builder a);
-    }
-    private static GetDomainNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDomainNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::AppSync::DomainName
- * 
-     */
-    public static CompletableFuture<GetDomainNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::AppSync::DomainName
      * 

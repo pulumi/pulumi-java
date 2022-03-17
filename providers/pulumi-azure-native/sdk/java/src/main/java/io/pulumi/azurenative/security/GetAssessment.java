@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssessment {
     private GetAssessment() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssessmentArgs.Builder a);
-    }
-    private static GetAssessmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssessmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Security assessment on a resource
- * API Version: 2020-01-01.
- * 
-     *
-     * Security assessment on a resource
- * 
-     */
-    public static CompletableFuture<GetAssessmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Security assessment on a resource
      * API Version: 2020-01-01.

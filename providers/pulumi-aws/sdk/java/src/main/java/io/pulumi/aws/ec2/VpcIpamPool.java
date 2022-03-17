@@ -270,22 +270,6 @@ public class VpcIpamPool extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
-    public interface BuilderApplicator {
-        public void apply(VpcIpamPoolArgs.Builder a);
-    }
-    private static io.pulumi.aws.ec2.VpcIpamPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ec2.VpcIpamPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public VpcIpamPool(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -65,22 +65,6 @@ public class TaxonomyPolicyTagIamPolicy extends io.pulumi.resources.CustomResour
         return this.version;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TaxonomyPolicyTagIamPolicyArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.datacatalog_v1beta1.TaxonomyPolicyTagIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.datacatalog_v1beta1.TaxonomyPolicyTagIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public TaxonomyPolicyTagIamPolicy(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

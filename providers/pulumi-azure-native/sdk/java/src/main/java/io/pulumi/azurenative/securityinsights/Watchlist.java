@@ -385,22 +385,6 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
         return this.watchlistType;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WatchlistArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.securityinsights.WatchlistArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.securityinsights.WatchlistArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Watchlist(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

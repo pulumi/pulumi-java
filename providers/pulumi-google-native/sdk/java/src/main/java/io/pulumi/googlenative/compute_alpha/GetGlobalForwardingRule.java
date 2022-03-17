@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGlobalForwardingRule {
     private GetGlobalForwardingRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetGlobalForwardingRuleArgs.Builder a);
-    }
-    private static GetGlobalForwardingRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGlobalForwardingRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetGlobalForwardingRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
      * 

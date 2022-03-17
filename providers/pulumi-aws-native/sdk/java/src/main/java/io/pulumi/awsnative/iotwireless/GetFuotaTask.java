@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFuotaTask {
     private GetFuotaTask() {}
-    public interface BuilderApplicator {
-        public void apply(GetFuotaTaskArgs.Builder a);
-    }
-    private static GetFuotaTaskArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFuotaTaskArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Create and manage FUOTA tasks.
- * 
-     */
-    public static CompletableFuture<GetFuotaTaskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Create and manage FUOTA tasks.
      * 

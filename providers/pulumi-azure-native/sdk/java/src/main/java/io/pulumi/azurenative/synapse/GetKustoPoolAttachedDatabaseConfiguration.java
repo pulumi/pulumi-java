@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKustoPoolAttachedDatabaseConfiguration {
     private GetKustoPoolAttachedDatabaseConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetKustoPoolAttachedDatabaseConfigurationArgs.Builder a);
-    }
-    private static GetKustoPoolAttachedDatabaseConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKustoPoolAttachedDatabaseConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Class representing an attached database configuration.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * Class representing an attached database configuration.
- * 
-     */
-    public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Class representing an attached database configuration.
      * API Version: 2021-06-01-preview.

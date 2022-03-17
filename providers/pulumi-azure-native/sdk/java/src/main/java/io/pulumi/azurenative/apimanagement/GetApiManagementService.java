@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiManagementService {
     private GetApiManagementService() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiManagementServiceArgs.Builder a);
-    }
-    private static GetApiManagementServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiManagementServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A single API Management service resource in List or Get response.
- * API Version: 2020-12-01.
- * 
-     *
-     * A single API Management service resource in List or Get response.
- * 
-     */
-    public static CompletableFuture<GetApiManagementServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A single API Management service resource in List or Get response.
      * API Version: 2020-12-01.

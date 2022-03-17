@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistryPolicy {
     private GetRegistryPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistryPolicyArgs.Builder a);
-    }
-    private static GetRegistryPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistryPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
- * 
-     */
-    public static CompletableFuture<GetRegistryPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
      * 

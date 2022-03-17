@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkDhcp {
     private GetWorkloadNetworkDhcp() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadNetworkDhcpArgs.Builder a);
-    }
-    private static GetWorkloadNetworkDhcpArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadNetworkDhcpArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NSX DHCP
- * API Version: 2020-07-17-preview.
- * 
-     *
-     * NSX DHCP
- * 
-     */
-    public static CompletableFuture<GetWorkloadNetworkDhcpResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NSX DHCP
      * API Version: 2020-07-17-preview.

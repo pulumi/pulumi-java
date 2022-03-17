@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUptimeCheckConfig {
     private GetUptimeCheckConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetUptimeCheckConfigArgs.Builder a);
-    }
-    private static GetUptimeCheckConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUptimeCheckConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a single Uptime check configuration.
- * 
-     */
-    public static CompletableFuture<GetUptimeCheckConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a single Uptime check configuration.
      * 

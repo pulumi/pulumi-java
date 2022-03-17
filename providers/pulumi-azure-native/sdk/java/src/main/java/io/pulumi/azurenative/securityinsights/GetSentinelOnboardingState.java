@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSentinelOnboardingState {
     private GetSentinelOnboardingState() {}
-    public interface BuilderApplicator {
-        public void apply(GetSentinelOnboardingStateArgs.Builder a);
-    }
-    private static GetSentinelOnboardingStateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSentinelOnboardingStateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Sentinel onboarding state
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Sentinel onboarding state
- * 
-     */
-    public static CompletableFuture<GetSentinelOnboardingStateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Sentinel onboarding state
      * API Version: 2021-03-01-preview.

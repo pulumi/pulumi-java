@@ -14,32 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBucket {
     private GetBucket() {}
-    public interface BuilderApplicator {
-        public void apply(GetBucketArgs.Builder a);
-    }
-    private static GetBucketArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBucketArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about a specific S3 bucket.
- * 
- * This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
- * Distribution.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getBucket.
- * 
-     *
-     * A collection of values returned by getBucket.
- * 
-     */
-    public static CompletableFuture<GetBucketResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about a specific S3 bucket.
      * 

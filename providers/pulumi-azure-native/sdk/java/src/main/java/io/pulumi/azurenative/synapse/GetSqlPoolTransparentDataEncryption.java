@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlPoolTransparentDataEncryption {
     private GetSqlPoolTransparentDataEncryption() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlPoolTransparentDataEncryptionArgs.Builder a);
-    }
-    private static GetSqlPoolTransparentDataEncryptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlPoolTransparentDataEncryptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a Sql pool transparent data encryption configuration.
- * API Version: 2021-03-01.
- * 
-     *
-     * Represents a Sql pool transparent data encryption configuration.
- * 
-     */
-    public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a Sql pool transparent data encryption configuration.
      * API Version: 2021-03-01.

@@ -40,9 +40,10 @@ public final class MyStack extends Stack {
 
     public MyStack() {
         var randomPassword = new RandomPassword("my-password",
-                $ -> $.length(16)
-                        .special(true)
-                        .overrideSpecial("_@"));
+            RandomPasswordArgs.builder().length(16)
+                .special(true)
+                .overrideSpecial("_@")
+                .build());
 
         this.randomPassword = randomPassword.getResult();
 
@@ -51,17 +52,27 @@ public final class MyStack extends Stack {
         this.randomPetKeepers = randomPet.getKeepers();
 
         var randomInteger = new RandomInteger("my-int",
-                $ -> $.max(100)
-                        .min(0)
+            RandomIntegerArgs.builder()
+                .max(100)
+                .min(0)
+                .build()
         );
 
         this.randomInteger = randomInteger.getResult();
 
-        var randomString = new RandomString("my-string", $ -> $.length(10));
+        var randomString = new RandomString("my-string",
+            RandomStringArgs.builder()
+                .length(10)
+                .build()
+        );
 
         this.randomString = randomString.getResult();
 
-        var randomId = new RandomId("my-id", $ -> $.byteLength(10));
+        var randomId = new RandomId("my-id",
+            RandomIdArgs.builder()
+                .byteLength(10)
+                .build()
+        );
 
         this.randomIdHex = randomId.getHex();
 
@@ -70,13 +81,15 @@ public final class MyStack extends Stack {
         this.randomUuid = randomUuid.getResult();
 
         var randomShuffle = new RandomShuffle("my-shuffle",
-                $ -> $.inputs(List.of("A", "B", "C"))
+            RandomShuffleArgs.builder()
+            .inputs(List.of("A", "B", "C"))
+            .build()
         );
 
         this.shuffled = randomShuffle.getResults();
 
         this.randomTuple = Output.tuple(this.randomString, this.randomUuid)
-                .applyValue(t -> t.t1 + t.t2);
+            .applyValue(t -> t.t1 + t.t2);
 
         this.randomAll = Output.all(this.randomString, this.randomUuid);
     }

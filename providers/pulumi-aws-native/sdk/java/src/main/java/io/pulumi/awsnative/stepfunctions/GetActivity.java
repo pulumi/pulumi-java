@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetActivity {
     private GetActivity() {}
-    public interface BuilderApplicator {
-        public void apply(GetActivityArgs.Builder a);
-    }
-    private static GetActivityArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetActivityArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for Activity
- * 
-     */
-    public static CompletableFuture<GetActivityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for Activity
      * 

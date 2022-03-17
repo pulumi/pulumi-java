@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSnapshot {
     private GetSnapshot() {}
-    public interface BuilderApplicator {
-        public void apply(GetSnapshotArgs.Builder a);
-    }
-    private static GetSnapshotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSnapshotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Snapshot resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * Snapshot resource.
- * 
-     */
-    public static CompletableFuture<GetSnapshotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Snapshot resource.
      * API Version: 2020-12-01.

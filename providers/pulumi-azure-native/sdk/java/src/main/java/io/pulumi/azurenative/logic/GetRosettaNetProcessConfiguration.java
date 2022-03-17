@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRosettaNetProcessConfiguration {
     private GetRosettaNetProcessConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetRosettaNetProcessConfigurationArgs.Builder a);
-    }
-    private static GetRosettaNetProcessConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRosettaNetProcessConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The integration account RosettaNet process configuration.
- * API Version: 2016-06-01.
- * 
-     *
-     * The integration account RosettaNet process configuration.
- * 
-     */
-    public static CompletableFuture<GetRosettaNetProcessConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The integration account RosettaNet process configuration.
      * API Version: 2016-06-01.

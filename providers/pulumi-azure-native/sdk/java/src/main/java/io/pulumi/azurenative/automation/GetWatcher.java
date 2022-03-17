@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWatcher {
     private GetWatcher() {}
-    public interface BuilderApplicator {
-        public void apply(GetWatcherArgs.Builder a);
-    }
-    private static GetWatcherArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWatcherArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Definition of the watcher type.
- * API Version: 2019-06-01.
- * 
-     *
-     * Definition of the watcher type.
- * 
-     */
-    public static CompletableFuture<GetWatcherResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Definition of the watcher type.
      * API Version: 2019-06-01.

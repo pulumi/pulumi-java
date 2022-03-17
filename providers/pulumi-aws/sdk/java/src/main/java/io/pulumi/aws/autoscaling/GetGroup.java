@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGroup {
     private GetGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetGroupArgs.Builder a);
-    }
-    private static GetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information on an existing autoscaling group.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getGroup.
- * 
-     *
-     * A collection of values returned by getGroup.
- * 
-     */
-    public static CompletableFuture<GetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information on an existing autoscaling group.
      * 

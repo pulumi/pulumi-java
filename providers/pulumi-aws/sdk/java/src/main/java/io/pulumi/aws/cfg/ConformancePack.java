@@ -135,22 +135,6 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
         return this.templateS3Uri;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable ConformancePackArgs.Builder a);
-    }
-    private static io.pulumi.aws.cfg.ConformancePackArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.cfg.ConformancePackArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ConformancePack(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

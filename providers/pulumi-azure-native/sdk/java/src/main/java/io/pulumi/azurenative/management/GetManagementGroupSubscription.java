@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagementGroupSubscription {
     private GetManagementGroupSubscription() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagementGroupSubscriptionArgs.Builder a);
-    }
-    private static GetManagementGroupSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagementGroupSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The details of subscription under management group.
- * API Version: 2020-05-01.
- * 
-     *
-     * The details of subscription under management group.
- * 
-     */
-    public static CompletableFuture<GetManagementGroupSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The details of subscription under management group.
      * API Version: 2020-05-01.

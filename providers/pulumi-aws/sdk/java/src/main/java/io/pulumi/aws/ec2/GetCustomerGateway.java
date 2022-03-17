@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomerGateway {
     private GetCustomerGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomerGatewayArgs.Builder a);
-    }
-    private static GetCustomerGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomerGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get an existing AWS Customer Gateway.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getCustomerGateway.
- * 
-     *
-     * A collection of values returned by getCustomerGateway.
- * 
-     */
-    public static CompletableFuture<GetCustomerGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get an existing AWS Customer Gateway.
      * 

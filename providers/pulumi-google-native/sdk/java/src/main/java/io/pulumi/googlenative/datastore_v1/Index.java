@@ -105,22 +105,6 @@ public class Index extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
-    public interface BuilderApplicator {
-        public void apply(IndexArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.datastore_v1.IndexArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.datastore_v1.IndexArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Index(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

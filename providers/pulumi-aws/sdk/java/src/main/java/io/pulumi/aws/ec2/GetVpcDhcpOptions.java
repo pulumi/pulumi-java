@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpcDhcpOptions {
     private GetVpcDhcpOptions() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpcDhcpOptionsArgs.Builder a);
-    }
-    private static GetVpcDhcpOptionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpcDhcpOptionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve information about an EC2 DHCP Options configuration.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getVpcDhcpOptions.
- * 
-     *
-     * A collection of values returned by getVpcDhcpOptions.
- * 
-     */
-    public static CompletableFuture<GetVpcDhcpOptionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve information about an EC2 DHCP Options configuration.
      * 

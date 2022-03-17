@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImageVersions {
     private GetImageVersions() {}
-    public interface BuilderApplicator {
-        public void apply(GetImageVersionsArgs.Builder a);
-    }
-    private static GetImageVersionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImageVersionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides access to available Cloud Composer versions in a region for a given project.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getImageVersions.
- * 
-     *
-     * A collection of values returned by getImageVersions.
- * 
-     */
-    public static CompletableFuture<GetImageVersionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides access to available Cloud Composer versions in a region for a given project.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotebookWorkspace {
     private GetNotebookWorkspace() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotebookWorkspaceArgs.Builder a);
-    }
-    private static GetNotebookWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotebookWorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A notebook workspace resource
- * API Version: 2021-03-15.
- * 
-     *
-     * A notebook workspace resource
- * 
-     */
-    public static CompletableFuture<GetNotebookWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A notebook workspace resource
      * API Version: 2021-03-15.

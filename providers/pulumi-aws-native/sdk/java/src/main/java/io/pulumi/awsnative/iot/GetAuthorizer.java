@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAuthorizer {
     private GetAuthorizer() {}
-    public interface BuilderApplicator {
-        public void apply(GetAuthorizerArgs.Builder a);
-    }
-    private static GetAuthorizerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAuthorizerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Creates an authorizer.
- * 
-     */
-    public static CompletableFuture<GetAuthorizerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Creates an authorizer.
      * 

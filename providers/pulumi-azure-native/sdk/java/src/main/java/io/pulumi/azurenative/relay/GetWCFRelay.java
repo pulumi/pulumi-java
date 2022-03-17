@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWCFRelay {
     private GetWCFRelay() {}
-    public interface BuilderApplicator {
-        public void apply(GetWCFRelayArgs.Builder a);
-    }
-    private static GetWCFRelayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWCFRelayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Description of the WCF relay resource.
- * API Version: 2017-04-01.
- * 
-     *
-     * Description of the WCF relay resource.
- * 
-     */
-    public static CompletableFuture<GetWCFRelayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Description of the WCF relay resource.
      * API Version: 2017-04-01.

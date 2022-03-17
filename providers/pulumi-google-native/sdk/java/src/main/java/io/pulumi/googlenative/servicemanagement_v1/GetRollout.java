@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRollout {
     private GetRollout() {}
-    public interface BuilderApplicator {
-        public void apply(GetRolloutArgs.Builder a);
-    }
-    private static GetRolloutArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRolloutArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a service configuration rollout.
- * 
-     */
-    public static CompletableFuture<GetRolloutResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a service configuration rollout.
      * 

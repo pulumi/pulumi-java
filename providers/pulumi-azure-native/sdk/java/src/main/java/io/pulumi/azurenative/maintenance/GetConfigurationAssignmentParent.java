@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfigurationAssignmentParent {
     private GetConfigurationAssignmentParent() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationAssignmentParentArgs.Builder a);
-    }
-    private static GetConfigurationAssignmentParentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationAssignmentParentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Configuration Assignment
- * API Version: 2021-04-01-preview.
- * 
-     *
-     * Configuration Assignment
- * 
-     */
-    public static CompletableFuture<GetConfigurationAssignmentParentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Configuration Assignment
      * API Version: 2021-04-01-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExtension {
     private GetExtension() {}
-    public interface BuilderApplicator {
-        public void apply(GetExtensionArgs.Builder a);
-    }
-    private static GetExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExtensionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Extension resource.
- * API Version: 2020-05-12-preview.
- * 
-     *
-     * Extension resource.
- * 
-     */
-    public static CompletableFuture<GetExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Extension resource.
      * API Version: 2020-05-12-preview.

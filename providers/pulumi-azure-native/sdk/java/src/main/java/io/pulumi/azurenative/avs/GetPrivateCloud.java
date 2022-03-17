@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateCloud {
     private GetPrivateCloud() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateCloudArgs.Builder a);
-    }
-    private static GetPrivateCloudArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateCloudArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A private cloud resource
- * API Version: 2020-03-20.
- * 
-     *
-     * A private cloud resource
- * 
-     */
-    public static CompletableFuture<GetPrivateCloudResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A private cloud resource
      * API Version: 2020-03-20.

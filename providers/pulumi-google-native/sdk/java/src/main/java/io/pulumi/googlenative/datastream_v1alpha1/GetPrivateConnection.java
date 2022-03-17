@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateConnection {
     private GetPrivateConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateConnectionArgs.Builder a);
-    }
-    private static GetPrivateConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this method to get details about a private connectivity configuration.
- * 
-     */
-    public static CompletableFuture<GetPrivateConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this method to get details about a private connectivity configuration.
      * 

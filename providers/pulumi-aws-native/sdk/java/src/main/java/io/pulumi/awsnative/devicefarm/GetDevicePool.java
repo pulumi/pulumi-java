@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDevicePool {
     private GetDevicePool() {}
-    public interface BuilderApplicator {
-        public void apply(GetDevicePoolArgs.Builder a);
-    }
-    private static GetDevicePoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDevicePoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS::DeviceFarm::DevicePool creates a new Device Pool for a given DF Project
- * 
-     */
-    public static CompletableFuture<GetDevicePoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS::DeviceFarm::DevicePool creates a new Device Pool for a given DF Project
      * 

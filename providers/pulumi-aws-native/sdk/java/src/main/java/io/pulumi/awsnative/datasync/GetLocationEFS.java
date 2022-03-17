@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocationEFS {
     private GetLocationEFS() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocationEFSArgs.Builder a);
-    }
-    private static GetLocationEFSArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocationEFSArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::DataSync::LocationEFS.
- * 
-     */
-    public static CompletableFuture<GetLocationEFSResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::DataSync::LocationEFS.
      * 

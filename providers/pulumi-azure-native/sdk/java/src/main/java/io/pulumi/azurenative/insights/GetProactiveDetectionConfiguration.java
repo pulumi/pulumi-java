@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProactiveDetectionConfiguration {
     private GetProactiveDetectionConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetProactiveDetectionConfigurationArgs.Builder a);
-    }
-    private static GetProactiveDetectionConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProactiveDetectionConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Properties that define a ProactiveDetection configuration.
- * API Version: 2015-05-01.
- * 
-     *
-     * Properties that define a ProactiveDetection configuration.
- * 
-     */
-    public static CompletableFuture<GetProactiveDetectionConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Properties that define a ProactiveDetection configuration.
      * API Version: 2015-05-01.

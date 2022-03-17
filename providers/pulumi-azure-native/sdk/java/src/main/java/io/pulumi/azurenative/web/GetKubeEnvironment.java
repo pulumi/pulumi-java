@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKubeEnvironment {
     private GetKubeEnvironment() {}
-    public interface BuilderApplicator {
-        public void apply(GetKubeEnvironmentArgs.Builder a);
-    }
-    private static GetKubeEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKubeEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Kubernetes cluster specialized for web workloads by Azure App Service
- * API Version: 2021-01-01.
- * 
-     *
-     * A Kubernetes cluster specialized for web workloads by Azure App Service
- * 
-     */
-    public static CompletableFuture<GetKubeEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Kubernetes cluster specialized for web workloads by Azure App Service
      * API Version: 2021-01-01.

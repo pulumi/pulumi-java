@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListStorageAccountSasTokens {
     private ListStorageAccountSasTokens() {}
-    public interface BuilderApplicator {
-        public void apply(ListStorageAccountSasTokensArgs.Builder a);
-    }
-    private static ListStorageAccountSasTokensArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListStorageAccountSasTokensArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The SAS response that contains the storage account, container and associated SAS token for connection use.
- * API Version: 2016-11-01.
- * 
-     *
-     * The SAS response that contains the storage account, container and associated SAS token for connection use.
- * 
-     */
-    public static CompletableFuture<ListStorageAccountSasTokensResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The SAS response that contains the storage account, container and associated SAS token for connection use.
      * API Version: 2016-11-01.

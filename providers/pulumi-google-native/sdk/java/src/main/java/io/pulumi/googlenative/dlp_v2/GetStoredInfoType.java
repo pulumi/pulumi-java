@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStoredInfoType {
     private GetStoredInfoType() {}
-    public interface BuilderApplicator {
-        public void apply(GetStoredInfoTypeArgs.Builder a);
-    }
-    private static GetStoredInfoTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStoredInfoTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
- * 
-     */
-    public static CompletableFuture<GetStoredInfoTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
      * 

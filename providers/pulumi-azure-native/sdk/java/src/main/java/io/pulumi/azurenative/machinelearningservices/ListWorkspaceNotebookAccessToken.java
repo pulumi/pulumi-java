@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWorkspaceNotebookAccessToken {
     private ListWorkspaceNotebookAccessToken() {}
-    public interface BuilderApplicator {
-        public void apply(ListWorkspaceNotebookAccessTokenArgs.Builder a);
-    }
-    private static ListWorkspaceNotebookAccessTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWorkspaceNotebookAccessTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2021-01-01.
- * 
-     */
-    public static CompletableFuture<ListWorkspaceNotebookAccessTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2021-01-01.
      * 

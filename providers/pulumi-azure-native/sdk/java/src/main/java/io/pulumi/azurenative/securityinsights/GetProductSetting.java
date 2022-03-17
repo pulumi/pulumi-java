@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba. */
 public class GetProductSetting {
     private GetProductSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetProductSettingArgs.Builder a);
-    }
-    private static GetProductSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProductSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Setting.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * The Setting.
- * 
-     * @Deprecated
-     * Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba.
- * 
-     */
-    public static CompletableFuture<GetProductSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Setting.
      * API Version: 2021-03-01-preview.

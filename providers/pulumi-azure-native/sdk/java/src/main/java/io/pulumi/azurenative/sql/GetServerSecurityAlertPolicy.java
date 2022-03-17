@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerSecurityAlertPolicy {
     private GetServerSecurityAlertPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerSecurityAlertPolicyArgs.Builder a);
-    }
-    private static GetServerSecurityAlertPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerSecurityAlertPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A server security alert policy.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A server security alert policy.
- * 
-     */
-    public static CompletableFuture<GetServerSecurityAlertPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A server security alert policy.
      * API Version: 2020-11-01-preview.

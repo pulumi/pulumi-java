@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnection {
     private GetPrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * REST model used to encapsulate the user visible state of a PrivateEndpoint.
- * API Version: 2020-07-07.
- * 
-     *
-     * REST model used to encapsulate the user visible state of a PrivateEndpoint.
- * 
-     */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * REST model used to encapsulate the user visible state of a PrivateEndpoint.
      * API Version: 2020-07-07.

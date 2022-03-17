@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDistribution {
     private GetDistribution() {}
-    public interface BuilderApplicator {
-        public void apply(GetDistributionArgs.Builder a);
-    }
-    private static GetDistributionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDistributionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::CloudFront::Distribution
- * 
-     */
-    public static CompletableFuture<GetDistributionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::CloudFront::Distribution
      * 

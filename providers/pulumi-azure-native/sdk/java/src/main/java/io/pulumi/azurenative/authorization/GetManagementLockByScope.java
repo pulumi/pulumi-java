@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagementLockByScope {
     private GetManagementLockByScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagementLockByScopeArgs.Builder a);
-    }
-    private static GetManagementLockByScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagementLockByScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The lock information.
- * API Version: 2017-04-01.
- * 
-     *
-     * The lock information.
- * 
-     */
-    public static CompletableFuture<GetManagementLockByScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The lock information.
      * API Version: 2017-04-01.

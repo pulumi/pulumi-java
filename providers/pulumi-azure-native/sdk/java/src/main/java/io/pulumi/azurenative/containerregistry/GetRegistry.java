@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegistry {
     private GetRegistry() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegistryArgs.Builder a);
-    }
-    private static GetRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegistryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An object that represents a container registry.
- * API Version: 2019-05-01.
- * 
-     *
-     * An object that represents a container registry.
- * 
-     */
-    public static CompletableFuture<GetRegistryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An object that represents a container registry.
      * API Version: 2019-05-01.

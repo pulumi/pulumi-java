@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVersion {
     private GetVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetVersionArgs.Builder a);
-    }
-    private static GetVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified agent version.
- * 
-     */
-    public static CompletableFuture<GetVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified agent version.
      * 

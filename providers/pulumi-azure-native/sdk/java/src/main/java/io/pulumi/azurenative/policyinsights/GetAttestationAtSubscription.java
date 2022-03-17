@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAttestationAtSubscription {
     private GetAttestationAtSubscription() {}
-    public interface BuilderApplicator {
-        public void apply(GetAttestationAtSubscriptionArgs.Builder a);
-    }
-    private static GetAttestationAtSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAttestationAtSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An attestation resource.
- * API Version: 2021-01-01.
- * 
-     *
-     * An attestation resource.
- * 
-     */
-    public static CompletableFuture<GetAttestationAtSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An attestation resource.
      * API Version: 2021-01-01.

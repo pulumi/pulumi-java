@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBackupRun {
     private GetBackupRun() {}
-    public interface BuilderApplicator {
-        public void apply(GetBackupRunArgs.Builder a);
-    }
-    private static GetBackupRunArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBackupRunArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a Cloud SQL instance backup run.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getBackupRun.
- * 
-     *
-     * A collection of values returned by getBackupRun.
- * 
-     */
-    public static CompletableFuture<GetBackupRunResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a Cloud SQL instance backup run.
      * 
