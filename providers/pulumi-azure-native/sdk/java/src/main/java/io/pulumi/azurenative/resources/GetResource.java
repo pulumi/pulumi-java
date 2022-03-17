@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResource {
     private GetResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceArgs.Builder a);
-    }
-    private static GetResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource information.
- * API Version: 2019-05-01.
- * 
-     *
-     * Resource information.
- * 
-     */
-    public static CompletableFuture<GetResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource information.
      * API Version: 2019-05-01.

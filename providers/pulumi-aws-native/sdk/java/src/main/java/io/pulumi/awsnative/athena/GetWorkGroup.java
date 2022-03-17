@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkGroup {
     private GetWorkGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkGroupArgs.Builder a);
-    }
-    private static GetWorkGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Athena::WorkGroup
- * 
-     */
-    public static CompletableFuture<GetWorkGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Athena::WorkGroup
      * 

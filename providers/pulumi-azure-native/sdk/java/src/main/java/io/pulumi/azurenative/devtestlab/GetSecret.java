@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecret {
     private GetSecret() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecretArgs.Builder a);
-    }
-    private static GetSecretArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecretArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A secret.
- * API Version: 2018-09-15.
- * 
-     *
-     * A secret.
- * 
-     */
-    public static CompletableFuture<GetSecretResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A secret.
      * API Version: 2018-09-15.

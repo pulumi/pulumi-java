@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTenantConfiguration {
     private GetTenantConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetTenantConfigurationArgs.Builder a);
-    }
-    private static GetTenantConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTenantConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Tenant configuration.
- * API Version: 2020-09-01-preview.
- * 
-     *
-     * Tenant configuration.
- * 
-     */
-    public static CompletableFuture<GetTenantConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Tenant configuration.
      * API Version: 2020-09-01-preview.

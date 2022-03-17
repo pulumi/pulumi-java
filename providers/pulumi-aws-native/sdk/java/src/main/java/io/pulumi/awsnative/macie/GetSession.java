@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSession {
     private GetSession() {}
-    public interface BuilderApplicator {
-        public void apply(GetSessionArgs.Builder a);
-    }
-    private static GetSessionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSessionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
- * 
-     */
-    public static CompletableFuture<GetSessionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
      * 

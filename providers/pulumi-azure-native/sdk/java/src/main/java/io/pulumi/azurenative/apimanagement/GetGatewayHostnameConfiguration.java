@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGatewayHostnameConfiguration {
     private GetGatewayHostnameConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetGatewayHostnameConfigurationArgs.Builder a);
-    }
-    private static GetGatewayHostnameConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGatewayHostnameConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gateway hostname configuration details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Gateway hostname configuration details.
- * 
-     */
-    public static CompletableFuture<GetGatewayHostnameConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gateway hostname configuration details.
      * API Version: 2020-12-01.

@@ -146,22 +146,6 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
         return this.userRoleRequired;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SlackChannelConfigurationArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.chatbot.SlackChannelConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.chatbot.SlackChannelConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SlackChannelConfiguration(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

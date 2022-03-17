@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListNamespaceKeys {
     private ListNamespaceKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListNamespaceKeysArgs.Builder a);
-    }
-    private static ListNamespaceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListNamespaceKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Namespace/ServiceBus Connection String
- * API Version: 2017-04-01.
- * 
-     *
-     * Namespace/ServiceBus Connection String
- * 
-     */
-    public static CompletableFuture<ListNamespaceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Namespace/ServiceBus Connection String
      * API Version: 2017-04-01.

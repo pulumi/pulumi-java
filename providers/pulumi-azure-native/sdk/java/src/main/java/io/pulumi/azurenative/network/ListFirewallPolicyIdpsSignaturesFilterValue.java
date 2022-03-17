@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListFirewallPolicyIdpsSignaturesFilterValue {
     private ListFirewallPolicyIdpsSignaturesFilterValue() {}
-    public interface BuilderApplicator {
-        public void apply(ListFirewallPolicyIdpsSignaturesFilterValueArgs.Builder a);
-    }
-    private static ListFirewallPolicyIdpsSignaturesFilterValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListFirewallPolicyIdpsSignaturesFilterValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes the list of all possible values for a specific filter value
- * API Version: 2021-05-01.
- * 
-     *
-     * Describes the list of all possible values for a specific filter value
- * 
-     */
-    public static CompletableFuture<ListFirewallPolicyIdpsSignaturesFilterValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes the list of all possible values for a specific filter value
      * API Version: 2021-05-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransferConfig {
     private GetTransferConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransferConfigArgs.Builder a);
-    }
-    private static GetTransferConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransferConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns information about a data transfer config.
- * 
-     */
-    public static CompletableFuture<GetTransferConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns information about a data transfer config.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListApplianceClusterUserCredential {
     private ListApplianceClusterUserCredential() {}
-    public interface BuilderApplicator {
-        public void apply(ListApplianceClusterUserCredentialArgs.Builder a);
-    }
-    private static ListApplianceClusterUserCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListApplianceClusterUserCredentialArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The List Cluster User Credential appliance.
- * API Version: 2021-10-31-preview.
- * 
-     *
-     * The List Cluster User Credential appliance.
- * 
-     */
-    public static CompletableFuture<ListApplianceClusterUserCredentialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The List Cluster User Credential appliance.
      * API Version: 2021-10-31-preview.

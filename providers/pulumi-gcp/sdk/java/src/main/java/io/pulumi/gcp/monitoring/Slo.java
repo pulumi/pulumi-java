@@ -255,22 +255,6 @@ public class Slo extends io.pulumi.resources.CustomResource {
         return this.windowsBasedSli;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SloArgs.Builder a);
-    }
-    private static io.pulumi.gcp.monitoring.SloArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.monitoring.SloArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Slo(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

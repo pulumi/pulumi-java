@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListObjectAnchorsAccountKeys {
     private ListObjectAnchorsAccountKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListObjectAnchorsAccountKeysArgs.Builder a);
-    }
-    private static ListObjectAnchorsAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListObjectAnchorsAccountKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Developer Keys of account
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Developer Keys of account
- * 
-     */
-    public static CompletableFuture<ListObjectAnchorsAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Developer Keys of account
      * API Version: 2021-03-01-preview.

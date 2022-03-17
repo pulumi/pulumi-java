@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListDomainSharedAccessKeys {
     private ListDomainSharedAccessKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListDomainSharedAccessKeysArgs.Builder a);
-    }
-    private static ListDomainSharedAccessKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListDomainSharedAccessKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Shared access keys of the Domain.
- * API Version: 2020-06-01.
- * 
-     *
-     * Shared access keys of the Domain.
- * 
-     */
-    public static CompletableFuture<ListDomainSharedAccessKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Shared access keys of the Domain.
      * API Version: 2020-06-01.

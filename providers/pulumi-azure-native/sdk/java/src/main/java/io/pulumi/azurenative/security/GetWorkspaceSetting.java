@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkspaceSetting {
     private GetWorkspaceSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkspaceSettingArgs.Builder a);
-    }
-    private static GetWorkspaceSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkspaceSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Configures where to store the OMS agent data for workspaces under a scope
- * API Version: 2017-08-01-preview.
- * 
-     *
-     * Configures where to store the OMS agent data for workspaces under a scope
- * 
-     */
-    public static CompletableFuture<GetWorkspaceSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Configures where to store the OMS agent data for workspaces under a scope
      * API Version: 2017-08-01-preview.

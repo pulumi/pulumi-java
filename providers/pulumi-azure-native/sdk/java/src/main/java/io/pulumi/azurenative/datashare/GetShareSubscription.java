@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetShareSubscription {
     private GetShareSubscription() {}
-    public interface BuilderApplicator {
-        public void apply(GetShareSubscriptionArgs.Builder a);
-    }
-    private static GetShareSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetShareSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A share subscription data transfer object.
- * API Version: 2020-09-01.
- * 
-     *
-     * A share subscription data transfer object.
- * 
-     */
-    public static CompletableFuture<GetShareSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A share subscription data transfer object.
      * API Version: 2020-09-01.

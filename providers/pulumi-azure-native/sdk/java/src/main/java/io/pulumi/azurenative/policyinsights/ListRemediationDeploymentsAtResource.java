@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListRemediationDeploymentsAtResource {
     private ListRemediationDeploymentsAtResource() {}
-    public interface BuilderApplicator {
-        public void apply(ListRemediationDeploymentsAtResourceArgs.Builder a);
-    }
-    private static ListRemediationDeploymentsAtResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListRemediationDeploymentsAtResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * List of deployments for a remediation.
- * API Version: 2019-07-01.
- * 
-     *
-     * List of deployments for a remediation.
- * 
-     */
-    public static CompletableFuture<ListRemediationDeploymentsAtResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * List of deployments for a remediation.
      * API Version: 2019-07-01.

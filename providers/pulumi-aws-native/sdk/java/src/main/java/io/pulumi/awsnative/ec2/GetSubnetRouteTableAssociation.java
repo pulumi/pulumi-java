@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubnetRouteTableAssociation {
     private GetSubnetRouteTableAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubnetRouteTableAssociationArgs.Builder a);
-    }
-    private static GetSubnetRouteTableAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubnetRouteTableAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::SubnetRouteTableAssociation
- * 
-     */
-    public static CompletableFuture<GetSubnetRouteTableAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::SubnetRouteTableAssociation
      * 

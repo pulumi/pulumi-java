@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccount {
     private GetAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccountArgs.Builder a);
-    }
-    private static GetAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
- * API Version: 2016-11-01.
- * 
-     *
-     * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
- * 
-     */
-    public static CompletableFuture<GetAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
      * API Version: 2016-11-01.

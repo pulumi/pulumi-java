@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrderItemByName {
     private GetOrderItemByName() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrderItemByNameArgs.Builder a);
-    }
-    private static GetOrderItemByNameArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrderItemByNameArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents order item contract
- * API Version: 2021-12-01.
- * 
-     *
-     * Represents order item contract
- * 
-     */
-    public static CompletableFuture<GetOrderItemByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents order item contract
      * API Version: 2021-12-01.

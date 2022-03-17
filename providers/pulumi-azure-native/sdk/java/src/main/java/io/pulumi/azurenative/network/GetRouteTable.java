@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRouteTable {
     private GetRouteTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouteTableArgs.Builder a);
-    }
-    private static GetRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouteTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Route table resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Route table resource.
- * 
-     */
-    public static CompletableFuture<GetRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Route table resource.
      * API Version: 2020-11-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeviceSecurityGroup {
     private GetDeviceSecurityGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeviceSecurityGroupArgs.Builder a);
-    }
-    private static GetDeviceSecurityGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeviceSecurityGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The device security group resource
- * API Version: 2019-08-01.
- * 
-     *
-     * The device security group resource
- * 
-     */
-    public static CompletableFuture<GetDeviceSecurityGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The device security group resource
      * API Version: 2019-08-01.

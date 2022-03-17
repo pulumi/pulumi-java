@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServer {
     private GetServer() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerArgs.Builder a);
-    }
-    private static GetServerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the ARN of an AWS Transfer Server for use in other
- * resources.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getServer.
- * 
-     *
-     * A collection of values returned by getServer.
- * 
-     */
-    public static CompletableFuture<GetServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the ARN of an AWS Transfer Server for use in other
      * resources.

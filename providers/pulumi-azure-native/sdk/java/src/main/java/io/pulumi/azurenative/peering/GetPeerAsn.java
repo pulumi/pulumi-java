@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPeerAsn {
     private GetPeerAsn() {}
-    public interface BuilderApplicator {
-        public void apply(GetPeerAsnArgs.Builder a);
-    }
-    private static GetPeerAsnArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPeerAsnArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The essential information related to the peer's ASN.
- * API Version: 2021-01-01.
- * 
-     *
-     * The essential information related to the peer's ASN.
- * 
-     */
-    public static CompletableFuture<GetPeerAsnResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The essential information related to the peer's ASN.
      * API Version: 2021-01-01.

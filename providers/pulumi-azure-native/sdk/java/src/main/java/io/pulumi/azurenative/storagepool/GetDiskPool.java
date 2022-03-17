@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDiskPool {
     private GetDiskPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetDiskPoolArgs.Builder a);
-    }
-    private static GetDiskPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDiskPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response for Disk pool request.
- * API Version: 2020-03-15-preview.
- * 
-     *
-     * Response for Disk pool request.
- * 
-     */
-    public static CompletableFuture<GetDiskPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response for Disk pool request.
      * API Version: 2020-03-15-preview.

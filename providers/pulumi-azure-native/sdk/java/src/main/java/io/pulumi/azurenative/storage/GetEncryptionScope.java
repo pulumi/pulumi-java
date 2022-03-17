@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEncryptionScope {
     private GetEncryptionScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetEncryptionScopeArgs.Builder a);
-    }
-    private static GetEncryptionScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEncryptionScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Encryption Scope resource.
- * API Version: 2021-02-01.
- * 
-     *
-     * The Encryption Scope resource.
- * 
-     */
-    public static CompletableFuture<GetEncryptionScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Encryption Scope resource.
      * API Version: 2021-02-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpnGateway {
     private GetVpnGateway() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpnGatewayArgs.Builder a);
-    }
-    private static GetVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpnGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetVpnGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
      * 

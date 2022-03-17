@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDocumentationVersion {
     private GetDocumentationVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetDocumentationVersionArgs.Builder a);
-    }
-    private static GetDocumentationVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDocumentationVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A snapshot of the documentation of an API.
- * 
-     */
-    public static CompletableFuture<GetDocumentationVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A snapshot of the documentation of an API.
      * 

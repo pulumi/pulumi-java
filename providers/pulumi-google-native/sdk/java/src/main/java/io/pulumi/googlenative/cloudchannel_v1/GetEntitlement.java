@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEntitlement {
     private GetEntitlement() {}
-    public interface BuilderApplicator {
-        public void apply(GetEntitlementArgs.Builder a);
-    }
-    private static GetEntitlementArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEntitlementArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The customer doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The requested Entitlement resource.
- * 
-     */
-    public static CompletableFuture<GetEntitlementResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The customer doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The requested Entitlement resource.
      * 

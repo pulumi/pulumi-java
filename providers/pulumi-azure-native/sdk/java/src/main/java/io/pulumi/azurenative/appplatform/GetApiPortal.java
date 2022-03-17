@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiPortal {
     private GetApiPortal() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiPortalArgs.Builder a);
-    }
-    private static GetApiPortalArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiPortalArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API portal resource
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * API portal resource
- * 
-     */
-    public static CompletableFuture<GetApiPortalResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API portal resource
      * API Version: 2022-01-01-preview.

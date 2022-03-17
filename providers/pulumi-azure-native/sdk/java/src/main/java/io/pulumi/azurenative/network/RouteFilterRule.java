@@ -129,22 +129,6 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
         return this.routeFilterRuleType;
     }
 
-    public interface BuilderApplicator {
-        public void apply(RouteFilterRuleArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.RouteFilterRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.RouteFilterRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public RouteFilterRule(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

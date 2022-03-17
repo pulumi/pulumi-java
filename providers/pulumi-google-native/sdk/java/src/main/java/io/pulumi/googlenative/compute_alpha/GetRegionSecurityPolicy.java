@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionSecurityPolicy {
     private GetRegionSecurityPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionSecurityPolicyArgs.Builder a);
-    }
-    private static GetRegionSecurityPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionSecurityPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * List all of the ordered rules present in a single specified policy.
- * 
-     */
-    public static CompletableFuture<GetRegionSecurityPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * List all of the ordered rules present in a single specified policy.
      * 

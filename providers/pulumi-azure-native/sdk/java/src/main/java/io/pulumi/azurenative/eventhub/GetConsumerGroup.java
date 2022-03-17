@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConsumerGroup {
     private GetConsumerGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetConsumerGroupArgs.Builder a);
-    }
-    private static GetConsumerGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConsumerGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Single item in List or Get Consumer group operation
- * API Version: 2017-04-01.
- * 
-     *
-     * Single item in List or Get Consumer group operation
- * 
-     */
-    public static CompletableFuture<GetConsumerGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Single item in List or Get Consumer group operation
      * API Version: 2017-04-01.

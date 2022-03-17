@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListClusterLanguageExtensions {
     private ListClusterLanguageExtensions() {}
-    public interface BuilderApplicator {
-        public void apply(ListClusterLanguageExtensionsArgs.Builder a);
-    }
-    private static ListClusterLanguageExtensionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListClusterLanguageExtensionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of language extension objects.
- * API Version: 2021-01-01.
- * 
-     *
-     * The list of language extension objects.
- * 
-     */
-    public static CompletableFuture<ListClusterLanguageExtensionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of language extension objects.
      * API Version: 2021-01-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListTenantAccessSecrets {
     private ListTenantAccessSecrets() {}
-    public interface BuilderApplicator {
-        public void apply(ListTenantAccessSecretsArgs.Builder a);
-    }
-    private static ListTenantAccessSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListTenantAccessSecretsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Tenant access information contract of the API Management service.
- * API Version: 2020-12-01.
- * 
-     *
-     * Tenant access information contract of the API Management service.
- * 
-     */
-    public static CompletableFuture<ListTenantAccessSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Tenant access information contract of the API Management service.
      * API Version: 2020-12-01.

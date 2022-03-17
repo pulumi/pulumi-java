@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProtectedItem {
     private GetProtectedItem() {}
-    public interface BuilderApplicator {
-        public void apply(GetProtectedItemArgs.Builder a);
-    }
-    private static GetProtectedItemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProtectedItemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Base class for backup items.
- * API Version: 2021-02-01.
- * 
-     *
-     * Base class for backup items.
- * 
-     */
-    public static CompletableFuture<GetProtectedItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Base class for backup items.
      * API Version: 2021-02-01.

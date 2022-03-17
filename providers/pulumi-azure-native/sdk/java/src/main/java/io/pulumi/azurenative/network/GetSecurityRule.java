@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSecurityRule {
     private GetSecurityRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetSecurityRuleArgs.Builder a);
-    }
-    private static GetSecurityRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSecurityRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Network security rule.
- * API Version: 2020-11-01.
- * 
-     *
-     * Network security rule.
- * 
-     */
-    public static CompletableFuture<GetSecurityRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Network security rule.
      * API Version: 2020-11-01.

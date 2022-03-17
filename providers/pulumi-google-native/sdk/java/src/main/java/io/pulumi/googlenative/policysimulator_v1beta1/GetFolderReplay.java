@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFolderReplay {
     private GetFolderReplay() {}
-    public interface BuilderApplicator {
-        public void apply(GetFolderReplayArgs.Builder a);
-    }
-    private static GetFolderReplayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFolderReplayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified Replay. Each `Replay` is available for at least 7 days.
- * 
-     */
-    public static CompletableFuture<GetFolderReplayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified Replay. Each `Replay` is available for at least 7 days.
      * 

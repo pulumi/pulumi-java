@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRecordSet {
     private GetRecordSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetRecordSetArgs.Builder a);
-    }
-    private static GetRecordSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRecordSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a DNS record set (a collection of DNS records with the same name and type).
- * API Version: 2018-05-01.
- * 
-     *
-     * Describes a DNS record set (a collection of DNS records with the same name and type).
- * 
-     */
-    public static CompletableFuture<GetRecordSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a DNS record set (a collection of DNS records with the same name and type).
      * API Version: 2018-05-01.

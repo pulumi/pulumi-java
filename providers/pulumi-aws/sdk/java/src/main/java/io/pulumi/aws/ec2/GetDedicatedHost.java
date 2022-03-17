@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDedicatedHost {
     private GetDedicatedHost() {}
-    public interface BuilderApplicator {
-        public void apply(GetDedicatedHostArgs.Builder a);
-    }
-    private static GetDedicatedHostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDedicatedHostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about an EC2 Dedicated Host.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDedicatedHost.
- * 
-     *
-     * A collection of values returned by getDedicatedHost.
- * 
-     */
-    public static CompletableFuture<GetDedicatedHostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about an EC2 Dedicated Host.
      * 

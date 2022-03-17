@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBudgetsAction {
     private GetBudgetsAction() {}
-    public interface BuilderApplicator {
-        public void apply(GetBudgetsActionArgs.Builder a);
-    }
-    private static GetBudgetsActionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBudgetsActionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An example resource schema demonstrating some basic constructs and validation rules.
- * 
-     */
-    public static CompletableFuture<GetBudgetsActionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An example resource schema demonstrating some basic constructs and validation rules.
      * 

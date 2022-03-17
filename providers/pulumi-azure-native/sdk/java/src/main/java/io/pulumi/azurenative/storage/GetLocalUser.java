@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocalUser {
     private GetLocalUser() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocalUserArgs.Builder a);
-    }
-    private static GetLocalUserArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocalUserArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The local user associated with the storage accounts.
- * API Version: 2021-08-01.
- * 
-     *
-     * The local user associated with the storage accounts.
- * 
-     */
-    public static CompletableFuture<GetLocalUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The local user associated with the storage accounts.
      * API Version: 2021-08-01.

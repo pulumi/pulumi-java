@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScalingPlan {
     private GetScalingPlan() {}
-    public interface BuilderApplicator {
-        public void apply(GetScalingPlanArgs.Builder a);
-    }
-    private static GetScalingPlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScalingPlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a scaling plan definition.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Represents a scaling plan definition.
- * 
-     */
-    public static CompletableFuture<GetScalingPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a scaling plan definition.
      * API Version: 2021-02-01-preview.

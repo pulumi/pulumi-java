@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKeyPair {
     private GetKeyPair() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeyPairArgs.Builder a);
-    }
-    private static GetKeyPairArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeyPairArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a specific EC2 Key Pair.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getKeyPair.
- * 
-     *
-     * A collection of values returned by getKeyPair.
- * 
-     */
-    public static CompletableFuture<GetKeyPairResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a specific EC2 Key Pair.
      * 

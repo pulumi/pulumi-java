@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFlowSource {
     private GetFlowSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetFlowSourceArgs.Builder a);
-    }
-    private static GetFlowSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFlowSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::MediaConnect::FlowSource
- * 
-     */
-    public static CompletableFuture<GetFlowSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::MediaConnect::FlowSource
      * 

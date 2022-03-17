@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTestBaseAccount {
     private GetTestBaseAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetTestBaseAccountArgs.Builder a);
-    }
-    private static GetTestBaseAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTestBaseAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Test Base Account resource.
- * API Version: 2020-12-16-preview.
- * 
-     *
-     * The Test Base Account resource.
- * 
-     */
-    public static CompletableFuture<GetTestBaseAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Test Base Account resource.
      * API Version: 2020-12-16-preview.

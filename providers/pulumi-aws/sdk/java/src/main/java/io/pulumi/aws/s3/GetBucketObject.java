@@ -14,32 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBucketObject {
     private GetBucketObject() {}
-    public interface BuilderApplicator {
-        public void apply(GetBucketObjectArgs.Builder a);
-    }
-    private static GetBucketObjectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBucketObjectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The S3 object data source allows access to the metadata and
- * _optionally_ (see below) content of an object stored inside S3 bucket.
- * 
- * > **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getBucketObject.
- * 
-     *
-     * A collection of values returned by getBucketObject.
- * 
-     */
-    public static CompletableFuture<GetBucketObjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The S3 object data source allows access to the metadata and
      * _optionally_ (see below) content of an object stored inside S3 bucket.

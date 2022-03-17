@@ -189,22 +189,6 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
         return this.users;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ADCCatalogArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.datacatalog.ADCCatalogArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.datacatalog.ADCCatalogArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ADCCatalog(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

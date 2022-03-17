@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceRunner {
     private GetServiceRunner() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceRunnerArgs.Builder a);
-    }
-    private static GetServiceRunnerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceRunnerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A container for a managed identity to execute DevTest lab services.
- * API Version: 2018-09-15.
- * 
-     *
-     * A container for a managed identity to execute DevTest lab services.
- * 
-     */
-    public static CompletableFuture<GetServiceRunnerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A container for a managed identity to execute DevTest lab services.
      * API Version: 2018-09-15.

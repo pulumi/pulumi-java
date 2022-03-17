@@ -146,22 +146,6 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
         return this.routingConfiguration;
     }
 
-    public interface BuilderApplicator {
-        public void apply(HubVirtualNetworkConnectionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.HubVirtualNetworkConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.HubVirtualNetworkConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public HubVirtualNetworkConnection(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

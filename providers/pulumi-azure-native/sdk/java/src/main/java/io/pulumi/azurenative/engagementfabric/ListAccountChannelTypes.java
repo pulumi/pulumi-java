@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListAccountChannelTypes {
     private ListAccountChannelTypes() {}
-    public interface BuilderApplicator {
-        public void apply(ListAccountChannelTypesArgs.Builder a);
-    }
-    private static ListAccountChannelTypesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListAccountChannelTypesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * List of the EngagementFabric channel descriptions
- * API Version: 2018-09-01-preview.
- * 
-     *
-     * List of the EngagementFabric channel descriptions
- * 
-     */
-    public static CompletableFuture<ListAccountChannelTypesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * List of the EngagementFabric channel descriptions
      * API Version: 2018-09-01-preview.

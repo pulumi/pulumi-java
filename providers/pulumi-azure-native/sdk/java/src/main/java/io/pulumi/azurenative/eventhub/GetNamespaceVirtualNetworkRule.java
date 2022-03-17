@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNamespaceVirtualNetworkRule {
     private GetNamespaceVirtualNetworkRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetNamespaceVirtualNetworkRuleArgs.Builder a);
-    }
-    private static GetNamespaceVirtualNetworkRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNamespaceVirtualNetworkRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Single item in a List or Get VirtualNetworkRules operation
- * API Version: 2018-01-01-preview.
- * 
-     *
-     * Single item in a List or Get VirtualNetworkRules operation
- * 
-     */
-    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Single item in a List or Get VirtualNetworkRules operation
      * API Version: 2018-01-01-preview.

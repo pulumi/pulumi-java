@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeidentifyTemplate {
     private GetDeidentifyTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeidentifyTemplateArgs.Builder a);
-    }
-    private static GetDeidentifyTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeidentifyTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
- * 
-     */
-    public static CompletableFuture<GetDeidentifyTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransitionRouteGroup {
     private GetTransitionRouteGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransitionRouteGroupArgs.Builder a);
-    }
-    private static GetTransitionRouteGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransitionRouteGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified TransitionRouteGroup.
- * 
-     */
-    public static CompletableFuture<GetTransitionRouteGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified TransitionRouteGroup.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGatewayCustomDomain {
     private GetGatewayCustomDomain() {}
-    public interface BuilderApplicator {
-        public void apply(GetGatewayCustomDomainArgs.Builder a);
-    }
-    private static GetGatewayCustomDomainArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGatewayCustomDomainArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Custom domain of the Spring Cloud Gateway
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Custom domain of the Spring Cloud Gateway
- * 
-     */
-    public static CompletableFuture<GetGatewayCustomDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Custom domain of the Spring Cloud Gateway
      * API Version: 2022-01-01-preview.

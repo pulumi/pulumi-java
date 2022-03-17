@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTestCase {
     private GetTestCase() {}
-    public interface BuilderApplicator {
-        public void apply(GetTestCaseArgs.Builder a);
-    }
-    private static GetTestCaseArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTestCaseArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a test case.
- * 
-     */
-    public static CompletableFuture<GetTestCaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a test case.
      * 

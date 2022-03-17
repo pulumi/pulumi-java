@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualMachineSchedule {
     private GetVirtualMachineSchedule() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualMachineScheduleArgs.Builder a);
-    }
-    private static GetVirtualMachineScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualMachineScheduleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A schedule.
- * API Version: 2018-09-15.
- * 
-     *
-     * A schedule.
- * 
-     */
-    public static CompletableFuture<GetVirtualMachineScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A schedule.
      * API Version: 2018-09-15.

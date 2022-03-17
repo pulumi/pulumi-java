@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFluxConfiguration {
     private GetFluxConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetFluxConfigurationArgs.Builder a);
-    }
-    private static GetFluxConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFluxConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Flux Configuration object returned in Get & Put response.
- * API Version: 2021-11-01-preview.
- * 
-     *
-     * The Flux Configuration object returned in Get & Put response.
- * 
-     */
-    public static CompletableFuture<GetFluxConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Flux Configuration object returned in Get & Put response.
      * API Version: 2021-11-01-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAssetModel {
     private GetAssetModel() {}
-    public interface BuilderApplicator {
-        public void apply(GetAssetModelArgs.Builder a);
-    }
-    private static GetAssetModelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAssetModelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::IoTSiteWise::AssetModel
- * 
-     */
-    public static CompletableFuture<GetAssetModelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::IoTSiteWise::AssetModel
      * 

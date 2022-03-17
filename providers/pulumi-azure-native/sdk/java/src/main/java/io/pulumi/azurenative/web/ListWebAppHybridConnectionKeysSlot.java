@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListWebAppHybridConnectionKeysSlot {
     private ListWebAppHybridConnectionKeysSlot() {}
-    public interface BuilderApplicator {
-        public void apply(ListWebAppHybridConnectionKeysSlotArgs.Builder a);
-    }
-    private static ListWebAppHybridConnectionKeysSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListWebAppHybridConnectionKeysSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
- * API Version: 2018-11-01.
- * 
-     *
-     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
- * 
-     */
-    public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
      * API Version: 2018-11-01.

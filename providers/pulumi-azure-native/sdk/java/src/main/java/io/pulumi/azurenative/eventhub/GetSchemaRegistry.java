@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSchemaRegistry {
     private GetSchemaRegistry() {}
-    public interface BuilderApplicator {
-        public void apply(GetSchemaRegistryArgs.Builder a);
-    }
-    private static GetSchemaRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSchemaRegistryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Single item in List or Get Schema Group operation
- * API Version: 2021-11-01.
- * 
-     *
-     * Single item in List or Get Schema Group operation
- * 
-     */
-    public static CompletableFuture<GetSchemaRegistryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Single item in List or Get Schema Group operation
      * API Version: 2021-11-01.

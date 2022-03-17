@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDirectConnectGatewayAttachment {
     private GetDirectConnectGatewayAttachment() {}
-    public interface BuilderApplicator {
-        public void apply(GetDirectConnectGatewayAttachmentArgs.Builder a);
-    }
-    private static GetDirectConnectGatewayAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDirectConnectGatewayAttachmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gateway.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDirectConnectGatewayAttachment.
- * 
-     *
-     * A collection of values returned by getDirectConnectGatewayAttachment.
- * 
-     */
-    public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gateway.
      * 

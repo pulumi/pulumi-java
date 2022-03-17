@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDebugToken {
     private GetDebugToken() {}
-    public interface BuilderApplicator {
-        public void apply(GetDebugTokenArgs.Builder a);
-    }
-    private static GetDebugTokenArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDebugTokenArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified DebugToken. For security reasons, the `token` field is never populated in the response.
- * 
-     */
-    public static CompletableFuture<GetDebugTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified DebugToken. For security reasons, the `token` field is never populated in the response.
      * 

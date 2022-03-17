@@ -147,22 +147,6 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable ExternalVpnGatewayArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.compute_beta.ExternalVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.compute_beta.ExternalVpnGatewayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ExternalVpnGateway(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

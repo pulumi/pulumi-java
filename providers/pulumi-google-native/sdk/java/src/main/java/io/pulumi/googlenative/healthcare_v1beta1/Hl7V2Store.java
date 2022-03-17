@@ -108,22 +108,6 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
         return this.rejectDuplicateMessage;
     }
 
-    public interface BuilderApplicator {
-        public void apply(Hl7V2StoreArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.healthcare_v1beta1.Hl7V2StoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.healthcare_v1beta1.Hl7V2StoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Hl7V2Store(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

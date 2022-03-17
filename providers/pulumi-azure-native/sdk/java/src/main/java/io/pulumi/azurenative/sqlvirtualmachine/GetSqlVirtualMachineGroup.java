@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlVirtualMachineGroup {
     private GetSqlVirtualMachineGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlVirtualMachineGroupArgs.Builder a);
-    }
-    private static GetSqlVirtualMachineGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlVirtualMachineGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A SQL virtual machine group.
- * API Version: 2017-03-01-preview.
- * 
-     *
-     * A SQL virtual machine group.
- * 
-     */
-    public static CompletableFuture<GetSqlVirtualMachineGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A SQL virtual machine group.
      * API Version: 2017-03-01-preview.

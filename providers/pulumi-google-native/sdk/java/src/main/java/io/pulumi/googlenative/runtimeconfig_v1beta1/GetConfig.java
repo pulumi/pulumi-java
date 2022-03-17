@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfig {
     private GetConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigArgs.Builder a);
-    }
-    private static GetConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets information about a RuntimeConfig resource.
- * 
-     */
-    public static CompletableFuture<GetConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets information about a RuntimeConfig resource.
      * 

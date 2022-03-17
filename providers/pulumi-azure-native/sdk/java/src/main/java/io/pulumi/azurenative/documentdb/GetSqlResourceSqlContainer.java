@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlContainer {
     private GetSqlResourceSqlContainer() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlResourceSqlContainerArgs.Builder a);
-    }
-    private static GetSqlResourceSqlContainerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlResourceSqlContainerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB container.
- * API Version: 2021-03-15.
- * 
-     *
-     * An Azure Cosmos DB container.
- * 
-     */
-    public static CompletableFuture<GetSqlResourceSqlContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB container.
      * API Version: 2021-03-15.

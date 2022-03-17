@@ -77,22 +77,6 @@ public class ValidatingWebhookConfigurationList extends io.pulumi.resources.Cust
         return this.metadata;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ValidatingWebhookConfigurationListArgs.Builder a);
-    }
-    private static io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.ValidatingWebhookConfigurationListArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.ValidatingWebhookConfigurationListArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ValidatingWebhookConfigurationList(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

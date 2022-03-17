@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationHubAuthorizationRule {
     private GetNotificationHubAuthorizationRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationHubAuthorizationRuleArgs.Builder a);
-    }
-    private static GetNotificationHubAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationHubAuthorizationRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Description of a Namespace AuthorizationRules.
- * API Version: 2017-04-01.
- * 
-     *
-     * Description of a Namespace AuthorizationRules.
- * 
-     */
-    public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Description of a Namespace AuthorizationRules.
      * API Version: 2017-04-01.

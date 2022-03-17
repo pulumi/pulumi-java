@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeploymentAtSubscriptionScope {
     private GetDeploymentAtSubscriptionScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeploymentAtSubscriptionScopeArgs.Builder a);
-    }
-    private static GetDeploymentAtSubscriptionScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeploymentAtSubscriptionScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Deployment information.
- * API Version: 2021-01-01.
- * 
-     *
-     * Deployment information.
- * 
-     */
-    public static CompletableFuture<GetDeploymentAtSubscriptionScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Deployment information.
      * API Version: 2021-01-01.

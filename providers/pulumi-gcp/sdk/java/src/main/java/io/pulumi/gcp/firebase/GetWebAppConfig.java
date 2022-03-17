@@ -14,33 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppConfig {
     private GetWebAppConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppConfigArgs.Builder a);
-    }
-    private static GetWebAppConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Google Cloud Firebase web application configuration
- * 
- * To get more information about WebApp, see:
- * 
- * * [API documentation](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps)
- * * How-to Guides
- *     * [Official Documentation](https://firebase.google.com/)
- * 
-     *
-     * A collection of arguments for invoking getWebAppConfig.
- * 
-     *
-     * A collection of values returned by getWebAppConfig.
- * 
-     */
-    public static CompletableFuture<GetWebAppConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Google Cloud Firebase web application configuration
      * 

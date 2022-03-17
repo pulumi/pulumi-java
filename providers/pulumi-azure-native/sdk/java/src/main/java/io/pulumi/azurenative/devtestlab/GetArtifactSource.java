@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetArtifactSource {
     private GetArtifactSource() {}
-    public interface BuilderApplicator {
-        public void apply(GetArtifactSourceArgs.Builder a);
-    }
-    private static GetArtifactSourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetArtifactSourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Properties of an artifact source.
- * API Version: 2018-09-15.
- * 
-     *
-     * Properties of an artifact source.
- * 
-     */
-    public static CompletableFuture<GetArtifactSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Properties of an artifact source.
      * API Version: 2018-09-15.

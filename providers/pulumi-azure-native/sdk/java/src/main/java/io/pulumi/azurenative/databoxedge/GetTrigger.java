@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
 public class GetTrigger {
     private GetTrigger() {}
-    public interface BuilderApplicator {
-        public void apply(GetTriggerArgs.Builder a);
-    }
-    private static GetTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTriggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Trigger details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Trigger details.
- * 
-     * @Deprecated
-     * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
- * 
-     */
-    public static CompletableFuture<GetTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Trigger details.
      * API Version: 2020-12-01.

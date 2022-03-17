@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetArchiveDeployment {
     private GetArchiveDeployment() {}
-    public interface BuilderApplicator {
-        public void apply(GetArchiveDeploymentArgs.Builder a);
-    }
-    private static GetArchiveDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetArchiveDeploymentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified ArchiveDeployment.
- * 
-     */
-    public static CompletableFuture<GetArchiveDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified ArchiveDeployment.
      * 

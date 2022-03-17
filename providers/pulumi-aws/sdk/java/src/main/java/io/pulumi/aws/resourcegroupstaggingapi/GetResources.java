@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResources {
     private GetResources() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourcesArgs.Builder a);
-    }
-    private static GetResourcesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourcesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about resource tagging.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getResources.
- * 
-     *
-     * A collection of values returned by getResources.
- * 
-     */
-    public static CompletableFuture<GetResourcesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about resource tagging.
      * 

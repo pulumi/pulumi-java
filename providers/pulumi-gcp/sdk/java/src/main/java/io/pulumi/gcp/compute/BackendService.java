@@ -573,22 +573,6 @@ public class BackendService extends io.pulumi.resources.CustomResource {
         return this.timeoutSec;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable BackendServiceArgs.Builder a);
-    }
-    private static io.pulumi.gcp.compute.BackendServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.compute.BackendServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public BackendService(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

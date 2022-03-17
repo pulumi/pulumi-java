@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebPubSubSharedPrivateLinkResource {
     private GetWebPubSubSharedPrivateLinkResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebPubSubSharedPrivateLinkResourceArgs.Builder a);
-    }
-    private static GetWebPubSubSharedPrivateLinkResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebPubSubSharedPrivateLinkResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes a Shared Private Link Resource
- * API Version: 2021-04-01-preview.
- * 
-     *
-     * Describes a Shared Private Link Resource
- * 
-     */
-    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes a Shared Private Link Resource
      * API Version: 2021-04-01-preview.

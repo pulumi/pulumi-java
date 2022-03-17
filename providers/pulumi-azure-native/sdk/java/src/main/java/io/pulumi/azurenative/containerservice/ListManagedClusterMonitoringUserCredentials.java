@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListManagedClusterMonitoringUserCredentials {
     private ListManagedClusterMonitoringUserCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(ListManagedClusterMonitoringUserCredentialsArgs.Builder a);
-    }
-    private static ListManagedClusterMonitoringUserCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListManagedClusterMonitoringUserCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of credential result response.
- * API Version: 2021-03-01.
- * 
-     *
-     * The list of credential result response.
- * 
-     */
-    public static CompletableFuture<ListManagedClusterMonitoringUserCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of credential result response.
      * API Version: 2021-03-01.

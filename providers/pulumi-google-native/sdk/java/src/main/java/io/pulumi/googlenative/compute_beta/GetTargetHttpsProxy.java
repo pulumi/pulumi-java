@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTargetHttpsProxy {
     private GetTargetHttpsProxy() {}
-    public interface BuilderApplicator {
-        public void apply(GetTargetHttpsProxyArgs.Builder a);
-    }
-    private static GetTargetHttpsProxyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTargetHttpsProxyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetTargetHttpsProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
      * 

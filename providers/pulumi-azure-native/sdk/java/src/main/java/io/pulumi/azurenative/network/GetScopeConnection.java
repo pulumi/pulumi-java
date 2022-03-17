@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScopeConnection {
     private GetScopeConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetScopeConnectionArgs.Builder a);
-    }
-    private static GetScopeConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScopeConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Scope Connections resource
- * API Version: 2021-05-01-preview.
- * 
-     *
-     * The Scope Connections resource
- * 
-     */
-    public static CompletableFuture<GetScopeConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Scope Connections resource
      * API Version: 2021-05-01-preview.

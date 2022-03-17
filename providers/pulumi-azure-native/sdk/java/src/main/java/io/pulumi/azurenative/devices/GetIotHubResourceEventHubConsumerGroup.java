@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIotHubResourceEventHubConsumerGroup {
     private GetIotHubResourceEventHubConsumerGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetIotHubResourceEventHubConsumerGroupArgs.Builder a);
-    }
-    private static GetIotHubResourceEventHubConsumerGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIotHubResourceEventHubConsumerGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The properties of the EventHubConsumerGroupInfo object.
- * API Version: 2020-08-31.
- * 
-     *
-     * The properties of the EventHubConsumerGroupInfo object.
- * 
-     */
-    public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The properties of the EventHubConsumerGroupInfo object.
      * API Version: 2020-08-31.

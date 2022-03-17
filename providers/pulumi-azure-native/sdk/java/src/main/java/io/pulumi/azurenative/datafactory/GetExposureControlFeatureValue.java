@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExposureControlFeatureValue {
     private GetExposureControlFeatureValue() {}
-    public interface BuilderApplicator {
-        public void apply(GetExposureControlFeatureValueArgs.Builder a);
-    }
-    private static GetExposureControlFeatureValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExposureControlFeatureValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The exposure control response.
- * API Version: 2018-06-01.
- * 
-     *
-     * The exposure control response.
- * 
-     */
-    public static CompletableFuture<GetExposureControlFeatureValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The exposure control response.
      * API Version: 2018-06-01.

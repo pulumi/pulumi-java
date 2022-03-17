@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWirelessDevice {
     private GetWirelessDevice() {}
-    public interface BuilderApplicator {
-        public void apply(GetWirelessDeviceArgs.Builder a);
-    }
-    private static GetWirelessDeviceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWirelessDeviceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Create and manage wireless gateways, including LoRa gateways.
- * 
-     */
-    public static CompletableFuture<GetWirelessDeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Create and manage wireless gateways, including LoRa gateways.
      * 

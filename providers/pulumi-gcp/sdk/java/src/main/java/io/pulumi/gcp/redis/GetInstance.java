@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstance {
     private GetInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceArgs.Builder a);
-    }
-    private static GetInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get info about a Google Cloud Redis instance.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getInstance.
- * 
-     *
-     * A collection of values returned by getInstance.
- * 
-     */
-    public static CompletableFuture<GetInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get info about a Google Cloud Redis instance.
      * 

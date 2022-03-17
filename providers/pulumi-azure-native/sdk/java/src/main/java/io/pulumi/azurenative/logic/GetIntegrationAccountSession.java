@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegrationAccountSession {
     private GetIntegrationAccountSession() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationAccountSessionArgs.Builder a);
-    }
-    private static GetIntegrationAccountSessionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationAccountSessionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The integration account session.
- * API Version: 2019-05-01.
- * 
-     *
-     * The integration account session.
- * 
-     */
-    public static CompletableFuture<GetIntegrationAccountSessionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The integration account session.
      * API Version: 2019-05-01.

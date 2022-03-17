@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfigurationProfile {
     private GetConfigurationProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationProfileArgs.Builder a);
-    }
-    private static GetConfigurationProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A profile object that contains change analysis configuration, such as notification settings, for this subscription
- * API Version: 2020-04-01-preview.
- * 
-     *
-     * A profile object that contains change analysis configuration, such as notification settings, for this subscription
- * 
-     */
-    public static CompletableFuture<GetConfigurationProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A profile object that contains change analysis configuration, such as notification settings, for this subscription
      * API Version: 2020-04-01-preview.

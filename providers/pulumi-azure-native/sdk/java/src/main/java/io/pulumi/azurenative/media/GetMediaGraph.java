@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMediaGraph {
     private GetMediaGraph() {}
-    public interface BuilderApplicator {
-        public void apply(GetMediaGraphArgs.Builder a);
-    }
-    private static GetMediaGraphArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMediaGraphArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Media Graph.
- * API Version: 2020-02-01-preview.
- * 
-     *
-     * The Media Graph.
- * 
-     */
-    public static CompletableFuture<GetMediaGraphResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Media Graph.
      * API Version: 2020-02-01-preview.

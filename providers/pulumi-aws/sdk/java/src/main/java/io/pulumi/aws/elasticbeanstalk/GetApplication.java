@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplication {
     private GetApplication() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationArgs.Builder a);
-    }
-    private static GetApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieve information about an Elastic Beanstalk Application.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getApplication.
- * 
-     *
-     * A collection of values returned by getApplication.
- * 
-     */
-    public static CompletableFuture<GetApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieve information about an Elastic Beanstalk Application.
      * 

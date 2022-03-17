@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTemplateSpec {
     private GetTemplateSpec() {}
-    public interface BuilderApplicator {
-        public void apply(GetTemplateSpecArgs.Builder a);
-    }
-    private static GetTemplateSpecArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTemplateSpecArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Template Spec object.
- * API Version: 2021-05-01.
- * 
-     *
-     * Template Spec object.
- * 
-     */
-    public static CompletableFuture<GetTemplateSpecResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Template Spec object.
      * API Version: 2021-05-01.

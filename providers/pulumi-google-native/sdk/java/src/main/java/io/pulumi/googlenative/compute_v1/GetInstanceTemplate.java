@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceTemplate {
     private GetInstanceTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceTemplateArgs.Builder a);
-    }
-    private static GetInstanceTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified instance template. Gets a list of available instance templates by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetInstanceTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified instance template. Gets a list of available instance templates by making a list() request.
      * 

@@ -249,22 +249,6 @@ public class PartnerTopicEventSubscription extends io.pulumi.resources.CustomRes
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PartnerTopicEventSubscriptionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.eventgrid.PartnerTopicEventSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.eventgrid.PartnerTopicEventSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PartnerTopicEventSubscription(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

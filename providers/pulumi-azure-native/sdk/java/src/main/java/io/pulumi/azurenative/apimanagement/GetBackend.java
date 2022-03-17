@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBackend {
     private GetBackend() {}
-    public interface BuilderApplicator {
-        public void apply(GetBackendArgs.Builder a);
-    }
-    private static GetBackendArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBackendArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Backend details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Backend details.
- * 
-     */
-    public static CompletableFuture<GetBackendResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Backend details.
      * API Version: 2020-12-01.

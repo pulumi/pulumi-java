@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListRedisKeys {
     private ListRedisKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListRedisKeysArgs.Builder a);
-    }
-    private static ListRedisKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListRedisKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Redis cache access keys.
- * API Version: 2020-06-01.
- * 
-     *
-     * Redis cache access keys.
- * 
-     */
-    public static CompletableFuture<ListRedisKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Redis cache access keys.
      * API Version: 2020-06-01.

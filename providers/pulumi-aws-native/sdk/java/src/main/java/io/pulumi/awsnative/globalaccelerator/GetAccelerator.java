@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccelerator {
     private GetAccelerator() {}
-    public interface BuilderApplicator {
-        public void apply(GetAcceleratorArgs.Builder a);
-    }
-    private static GetAcceleratorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAcceleratorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::GlobalAccelerator::Accelerator
- * 
-     */
-    public static CompletableFuture<GetAcceleratorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::GlobalAccelerator::Accelerator
      * 

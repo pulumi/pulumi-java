@@ -80,22 +80,6 @@ public class Template extends io.pulumi.resources.CustomResource {
         return this.templateType;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TemplateArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.dataflow_v1b3.TemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.dataflow_v1b3.TemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Template(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

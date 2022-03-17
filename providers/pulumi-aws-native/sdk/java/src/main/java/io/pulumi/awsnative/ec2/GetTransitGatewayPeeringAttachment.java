@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTransitGatewayPeeringAttachment {
     private GetTransitGatewayPeeringAttachment() {}
-    public interface BuilderApplicator {
-        public void apply(GetTransitGatewayPeeringAttachmentArgs.Builder a);
-    }
-    private static GetTransitGatewayPeeringAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTransitGatewayPeeringAttachmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::EC2::TransitGatewayPeeringAttachment type
- * 
-     */
-    public static CompletableFuture<GetTransitGatewayPeeringAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::EC2::TransitGatewayPeeringAttachment type
      * 

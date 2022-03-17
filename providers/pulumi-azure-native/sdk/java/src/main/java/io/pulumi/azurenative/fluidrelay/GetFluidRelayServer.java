@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFluidRelayServer {
     private GetFluidRelayServer() {}
-    public interface BuilderApplicator {
-        public void apply(GetFluidRelayServerArgs.Builder a);
-    }
-    private static GetFluidRelayServerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFluidRelayServerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A FluidRelay Server.
- * API Version: 2021-03-12-preview.
- * 
-     *
-     * A FluidRelay Server.
- * 
-     */
-    public static CompletableFuture<GetFluidRelayServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A FluidRelay Server.
      * API Version: 2021-03-12-preview.

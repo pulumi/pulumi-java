@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetActiveSessions {
     private GetActiveSessions() {}
-    public interface BuilderApplicator {
-        public void apply(GetActiveSessionsArgs.Builder a);
-    }
-    private static GetActiveSessionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetActiveSessionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response for GetActiveSessions.
- * API Version: 2020-11-01.
- * 
-     *
-     * Response for GetActiveSessions.
- * 
-     */
-    public static CompletableFuture<GetActiveSessionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response for GetActiveSessions.
      * API Version: 2020-11-01.

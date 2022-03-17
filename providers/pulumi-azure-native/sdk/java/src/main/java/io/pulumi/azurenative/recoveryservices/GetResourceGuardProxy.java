@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourceGuardProxy {
     private GetResourceGuardProxy() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourceGuardProxyArgs.Builder a);
-    }
-    private static GetResourceGuardProxyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourceGuardProxyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2021-02-01-preview.
- * 
-     */
-    public static CompletableFuture<GetResourceGuardProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2021-02-01-preview.
      * 

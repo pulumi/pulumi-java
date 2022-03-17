@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDiskEncryptionSet {
     private GetDiskEncryptionSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetDiskEncryptionSetArgs.Builder a);
-    }
-    private static GetDiskEncryptionSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDiskEncryptionSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * disk encryption set resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * disk encryption set resource.
- * 
-     */
-    public static CompletableFuture<GetDiskEncryptionSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * disk encryption set resource.
      * API Version: 2020-12-01.

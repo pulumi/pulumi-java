@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIndex {
     private GetIndex() {}
-    public interface BuilderApplicator {
-        public void apply(GetIndexArgs.Builder a);
-    }
-    private static GetIndexArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIndexArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Kendra index
- * 
-     */
-    public static CompletableFuture<GetIndexResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Kendra index
      * 

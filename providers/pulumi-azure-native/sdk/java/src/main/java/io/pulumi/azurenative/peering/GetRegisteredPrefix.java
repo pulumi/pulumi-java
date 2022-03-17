@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegisteredPrefix {
     private GetRegisteredPrefix() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegisteredPrefixArgs.Builder a);
-    }
-    private static GetRegisteredPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegisteredPrefixArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The customer's prefix that is registered by the peering service provider.
- * API Version: 2021-01-01.
- * 
-     *
-     * The customer's prefix that is registered by the peering service provider.
- * 
-     */
-    public static CompletableFuture<GetRegisteredPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The customer's prefix that is registered by the peering service provider.
      * API Version: 2021-01-01.

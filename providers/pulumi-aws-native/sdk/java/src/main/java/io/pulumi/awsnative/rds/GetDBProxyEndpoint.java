@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDBProxyEndpoint {
     private GetDBProxyEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetDBProxyEndpointArgs.Builder a);
-    }
-    private static GetDBProxyEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDBProxyEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::RDS::DBProxyEndpoint.
- * 
-     */
-    public static CompletableFuture<GetDBProxyEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::RDS::DBProxyEndpoint.
      * 

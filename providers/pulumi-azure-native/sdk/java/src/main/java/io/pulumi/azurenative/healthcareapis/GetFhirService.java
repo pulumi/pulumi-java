@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFhirService {
     private GetFhirService() {}
-    public interface BuilderApplicator {
-        public void apply(GetFhirServiceArgs.Builder a);
-    }
-    private static GetFhirServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFhirServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The description of Fhir Service
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * The description of Fhir Service
- * 
-     */
-    public static CompletableFuture<GetFhirServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The description of Fhir Service
      * API Version: 2021-06-01-preview.

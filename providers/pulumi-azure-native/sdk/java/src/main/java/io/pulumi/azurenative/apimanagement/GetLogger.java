@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLogger {
     private GetLogger() {}
-    public interface BuilderApplicator {
-        public void apply(GetLoggerArgs.Builder a);
-    }
-    private static GetLoggerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLoggerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Logger details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Logger details.
- * 
-     */
-    public static CompletableFuture<GetLoggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Logger details.
      * API Version: 2020-12-01.

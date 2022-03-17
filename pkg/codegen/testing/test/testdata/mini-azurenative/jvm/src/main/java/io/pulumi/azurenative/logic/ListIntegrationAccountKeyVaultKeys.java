@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListIntegrationAccountKeyVaultKeys {
     private ListIntegrationAccountKeyVaultKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListIntegrationAccountKeyVaultKeysArgs.Builder a);
-    }
-    private static ListIntegrationAccountKeyVaultKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListIntegrationAccountKeyVaultKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of key vault keys.
- * API Version: 2019-05-01.
- * 
-     *
-     * Collection of key vault keys.
- * 
-     */
-    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of key vault keys.
      * API Version: 2019-05-01.

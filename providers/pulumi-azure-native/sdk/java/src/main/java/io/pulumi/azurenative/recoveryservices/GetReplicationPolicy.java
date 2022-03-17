@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReplicationPolicy {
     private GetReplicationPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetReplicationPolicyArgs.Builder a);
-    }
-    private static GetReplicationPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReplicationPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Protection profile details.
- * API Version: 2018-07-10.
- * 
-     *
-     * Protection profile details.
- * 
-     */
-    public static CompletableFuture<GetReplicationPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Protection profile details.
      * API Version: 2018-07-10.

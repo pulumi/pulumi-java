@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPackage {
     private GetPackage() {}
-    public interface BuilderApplicator {
-        public void apply(GetPackageArgs.Builder a);
-    }
-    private static GetPackageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPackageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schema for Package CloudFormation Resource
- * 
-     */
-    public static CompletableFuture<GetPackageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schema for Package CloudFormation Resource
      * 

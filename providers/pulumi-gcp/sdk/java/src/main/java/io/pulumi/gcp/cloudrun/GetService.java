@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetService {
     private GetService() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceArgs.Builder a);
-    }
-    private static GetServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information about a Google Cloud Run Service. For more information see
- * the [official documentation](https://cloud.google.com/run/docs/)
- * and [API](https://cloud.google.com/run/docs/apis).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getService.
- * 
-     *
-     * A collection of values returned by getService.
- * 
-     */
-    public static CompletableFuture<GetServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information about a Google Cloud Run Service. For more information see
      * the [official documentation](https://cloud.google.com/run/docs/)

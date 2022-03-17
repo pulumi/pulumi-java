@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiDestination {
     private GetApiDestination() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiDestinationArgs.Builder a);
-    }
-    private static GetApiDestinationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiDestinationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Events::ApiDestination.
- * 
-     */
-    public static CompletableFuture<GetApiDestinationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Events::ApiDestination.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeploymentAtScope {
     private GetDeploymentAtScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeploymentAtScopeArgs.Builder a);
-    }
-    private static GetDeploymentAtScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeploymentAtScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Deployment information.
- * API Version: 2021-01-01.
- * 
-     *
-     * Deployment information.
- * 
-     */
-    public static CompletableFuture<GetDeploymentAtScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Deployment information.
      * API Version: 2021-01-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDefaultUserRule {
     private GetDefaultUserRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetDefaultUserRuleArgs.Builder a);
-    }
-    private static GetDefaultUserRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDefaultUserRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Network security default user rule.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Network security default user rule.
- * 
-     */
-    public static CompletableFuture<GetDefaultUserRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Network security default user rule.
      * API Version: 2021-02-01-preview.

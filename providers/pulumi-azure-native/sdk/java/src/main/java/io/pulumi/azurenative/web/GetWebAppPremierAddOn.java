@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppPremierAddOn {
     private GetWebAppPremierAddOn() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppPremierAddOnArgs.Builder a);
-    }
-    private static GetWebAppPremierAddOnArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppPremierAddOnArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Premier add-on.
- * API Version: 2020-12-01.
- * 
-     *
-     * Premier add-on.
- * 
-     */
-    public static CompletableFuture<GetWebAppPremierAddOnResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Premier add-on.
      * API Version: 2020-12-01.

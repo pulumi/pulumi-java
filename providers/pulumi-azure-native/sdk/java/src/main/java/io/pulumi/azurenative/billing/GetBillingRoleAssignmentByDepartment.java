@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBillingRoleAssignmentByDepartment {
     private GetBillingRoleAssignmentByDepartment() {}
-    public interface BuilderApplicator {
-        public void apply(GetBillingRoleAssignmentByDepartmentArgs.Builder a);
-    }
-    private static GetBillingRoleAssignmentByDepartmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBillingRoleAssignmentByDepartmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The role assignment
- * API Version: 2019-10-01-preview.
- * 
-     *
-     * The role assignment
- * 
-     */
-    public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The role assignment
      * API Version: 2019-10-01-preview.

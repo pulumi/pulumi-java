@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetControl {
     private GetControl() {}
-    public interface BuilderApplicator {
-        public void apply(GetControlArgs.Builder a);
-    }
-    private static GetControlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetControlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a Control.
- * 
-     */
-    public static CompletableFuture<GetControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a Control.
      * 

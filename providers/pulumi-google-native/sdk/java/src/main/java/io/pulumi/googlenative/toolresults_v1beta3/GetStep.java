@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStep {
     private GetStep() {}
-    public interface BuilderApplicator {
-        public void apply(GetStepArgs.Builder a);
-    }
-    private static GetStepArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStepArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
- * 
-     */
-    public static CompletableFuture<GetStepResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
      * 

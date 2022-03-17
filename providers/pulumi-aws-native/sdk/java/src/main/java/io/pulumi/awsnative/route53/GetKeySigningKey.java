@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetKeySigningKey {
     private GetKeySigningKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetKeySigningKeyArgs.Builder a);
-    }
-    private static GetKeySigningKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetKeySigningKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
- * 
-     */
-    public static CompletableFuture<GetKeySigningKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
      * 

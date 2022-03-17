@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCloudService {
     private GetCloudService() {}
-    public interface BuilderApplicator {
-        public void apply(GetCloudServiceArgs.Builder a);
-    }
-    private static GetCloudServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCloudServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes the cloud service.
- * API Version: 2021-03-01.
- * 
-     *
-     * Describes the cloud service.
- * 
-     */
-    public static CompletableFuture<GetCloudServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes the cloud service.
      * API Version: 2021-03-01.

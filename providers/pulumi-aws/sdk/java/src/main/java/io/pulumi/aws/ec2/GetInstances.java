@@ -14,33 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstances {
     private GetInstances() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstancesArgs.Builder a);
-    }
-    private static GetInstancesArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstancesArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere,
- * e.g., to allow easier migration from another management solution
- * or to make it easier for an operator to connect through bastion host(s).
- * 
- * > **Note:** It's strongly discouraged to use this data source for querying ephemeral
- * instances (e.g., managed via autoscaling group), as the output may change at any time
- * and you'd need to re-run `apply` every time an instance comes up or dies.
- * 
-     *
-     * A collection of arguments for invoking getInstances.
- * 
-     *
-     * A collection of values returned by getInstances.
- * 
-     */
-    public static CompletableFuture<GetInstancesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere,
      * e.g., to allow easier migration from another management solution

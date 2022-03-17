@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFailoverGroup {
     private GetFailoverGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetFailoverGroupArgs.Builder a);
-    }
-    private static GetFailoverGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFailoverGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A failover group.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A failover group.
- * 
-     */
-    public static CompletableFuture<GetFailoverGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A failover group.
      * API Version: 2020-11-01-preview.

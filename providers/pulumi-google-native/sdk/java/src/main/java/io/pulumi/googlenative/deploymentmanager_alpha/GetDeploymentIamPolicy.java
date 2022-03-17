@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeploymentIamPolicy {
     private GetDeploymentIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeploymentIamPolicyArgs.Builder a);
-    }
-    private static GetDeploymentIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeploymentIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- * 
-     */
-    public static CompletableFuture<GetDeploymentIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 

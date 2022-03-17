@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStaticSitePrivateEndpointConnection {
     private GetStaticSitePrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetStaticSitePrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetStaticSitePrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStaticSitePrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Remote Private Endpoint Connection ARM resource.
- * API Version: 2020-12-01.
- * 
-     *
-     * Remote Private Endpoint Connection ARM resource.
- * 
-     */
-    public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Remote Private Endpoint Connection ARM resource.
      * API Version: 2020-12-01.

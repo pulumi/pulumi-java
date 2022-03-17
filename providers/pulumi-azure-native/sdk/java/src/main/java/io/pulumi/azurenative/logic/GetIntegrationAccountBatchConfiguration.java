@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIntegrationAccountBatchConfiguration {
     private GetIntegrationAccountBatchConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetIntegrationAccountBatchConfigurationArgs.Builder a);
-    }
-    private static GetIntegrationAccountBatchConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIntegrationAccountBatchConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The batch configuration resource definition.
- * API Version: 2019-05-01.
- * 
-     *
-     * The batch configuration resource definition.
- * 
-     */
-    public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The batch configuration resource definition.
      * API Version: 2019-05-01.

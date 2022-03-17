@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTenant {
     private GetTenant() {}
-    public interface BuilderApplicator {
-        public void apply(GetTenantArgs.Builder a);
-    }
-    private static GetTenantArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTenantArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves specified tenant.
- * 
-     */
-    public static CompletableFuture<GetTenantResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves specified tenant.
      * 

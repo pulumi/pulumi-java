@@ -161,22 +161,6 @@ public class PrivateLinkServicesForO365ManagementActivityAPI extends io.pulumi.r
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(PrivateLinkServicesForO365ManagementActivityAPIArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForO365ManagementActivityAPIArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.securityandcompliance.PrivateLinkServicesForO365ManagementActivityAPIArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public PrivateLinkServicesForO365ManagementActivityAPI(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

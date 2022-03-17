@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBatchDeployment {
     private GetBatchDeployment() {}
-    public interface BuilderApplicator {
-        public void apply(GetBatchDeploymentArgs.Builder a);
-    }
-    private static GetBatchDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBatchDeploymentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2021-03-01-preview.
- * 
-     */
-    public static CompletableFuture<GetBatchDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2021-03-01-preview.
      * 

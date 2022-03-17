@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIscsiTarget {
     private GetIscsiTarget() {}
-    public interface BuilderApplicator {
-        public void apply(GetIscsiTargetArgs.Builder a);
-    }
-    private static GetIscsiTargetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIscsiTargetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Response for iSCSI target requests.
- * API Version: 2020-03-15-preview.
- * 
-     *
-     * Response for iSCSI target requests.
- * 
-     */
-    public static CompletableFuture<GetIscsiTargetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Response for iSCSI target requests.
      * API Version: 2020-03-15-preview.

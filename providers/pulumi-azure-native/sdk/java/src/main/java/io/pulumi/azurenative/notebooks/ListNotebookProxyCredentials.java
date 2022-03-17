@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListNotebookProxyCredentials {
     private ListNotebookProxyCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(ListNotebookProxyCredentialsArgs.Builder a);
-    }
-    private static ListNotebookProxyCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListNotebookProxyCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Credentials and other properties of NotebookProxy resource
- * API Version: 2019-10-11-preview.
- * 
-     *
-     * Credentials and other properties of NotebookProxy resource
- * 
-     */
-    public static CompletableFuture<ListNotebookProxyCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Credentials and other properties of NotebookProxy resource
      * API Version: 2019-10-11-preview.

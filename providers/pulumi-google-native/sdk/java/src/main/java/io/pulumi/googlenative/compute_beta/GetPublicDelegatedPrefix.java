@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPublicDelegatedPrefix {
     private GetPublicDelegatedPrefix() {}
-    public interface BuilderApplicator {
-        public void apply(GetPublicDelegatedPrefixArgs.Builder a);
-    }
-    private static GetPublicDelegatedPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPublicDelegatedPrefixArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified PublicDelegatedPrefix resource in the given region.
- * 
-     */
-    public static CompletableFuture<GetPublicDelegatedPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified PublicDelegatedPrefix resource in the given region.
      * 

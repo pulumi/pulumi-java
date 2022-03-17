@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetView {
     private GetView() {}
-    public interface BuilderApplicator {
-        public void apply(GetViewArgs.Builder a);
-    }
-    private static GetViewArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetViewArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a view.
- * 
-     */
-    public static CompletableFuture<GetViewResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a view.
      * 

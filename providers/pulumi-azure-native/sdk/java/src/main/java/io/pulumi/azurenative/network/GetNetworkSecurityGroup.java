@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkSecurityGroup {
     private GetNetworkSecurityGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkSecurityGroupArgs.Builder a);
-    }
-    private static GetNetworkSecurityGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkSecurityGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NetworkSecurityGroup resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * NetworkSecurityGroup resource.
- * 
-     */
-    public static CompletableFuture<GetNetworkSecurityGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NetworkSecurityGroup resource.
      * API Version: 2020-11-01.

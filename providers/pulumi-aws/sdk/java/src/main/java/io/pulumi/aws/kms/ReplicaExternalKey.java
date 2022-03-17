@@ -243,22 +243,6 @@ public class ReplicaExternalKey extends io.pulumi.resources.CustomResource {
         return this.validTo;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ReplicaExternalKeyArgs.Builder a);
-    }
-    private static io.pulumi.aws.kms.ReplicaExternalKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.kms.ReplicaExternalKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ReplicaExternalKey(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBucketIamPolicy {
     private GetBucketIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetBucketIamPolicyArgs.Builder a);
-    }
-    private static GetBucketIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBucketIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns an IAM policy for the specified bucket.
- * 
-     */
-    public static CompletableFuture<GetBucketIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns an IAM policy for the specified bucket.
      * 

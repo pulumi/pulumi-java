@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListScheduleApplicable {
     private ListScheduleApplicable() {}
-    public interface BuilderApplicator {
-        public void apply(ListScheduleApplicableArgs.Builder a);
-    }
-    private static ListScheduleApplicableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListScheduleApplicableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The response of a list operation.
- * API Version: 2018-09-15.
- * 
-     *
-     * The response of a list operation.
- * 
-     */
-    public static CompletableFuture<ListScheduleApplicableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The response of a list operation.
      * API Version: 2018-09-15.

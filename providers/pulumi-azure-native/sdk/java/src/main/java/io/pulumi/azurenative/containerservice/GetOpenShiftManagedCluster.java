@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOpenShiftManagedCluster {
     private GetOpenShiftManagedCluster() {}
-    public interface BuilderApplicator {
-        public void apply(GetOpenShiftManagedClusterArgs.Builder a);
-    }
-    private static GetOpenShiftManagedClusterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOpenShiftManagedClusterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * OpenShift Managed cluster.
- * API Version: 2019-04-30.
- * 
-     *
-     * OpenShift Managed cluster.
- * 
-     */
-    public static CompletableFuture<GetOpenShiftManagedClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * OpenShift Managed cluster.
      * API Version: 2019-04-30.

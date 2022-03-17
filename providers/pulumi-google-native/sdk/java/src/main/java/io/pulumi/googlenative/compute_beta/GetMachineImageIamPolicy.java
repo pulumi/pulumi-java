@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMachineImageIamPolicy {
     private GetMachineImageIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetMachineImageIamPolicyArgs.Builder a);
-    }
-    private static GetMachineImageIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMachineImageIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- * 
-     */
-    public static CompletableFuture<GetMachineImageIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListDomainRecommendations {
     private ListDomainRecommendations() {}
-    public interface BuilderApplicator {
-        public void apply(ListDomainRecommendationsArgs.Builder a);
-    }
-    private static ListDomainRecommendationsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListDomainRecommendationsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Collection of domain name identifiers.
- * API Version: 2020-10-01.
- * 
-     *
-     * Collection of domain name identifiers.
- * 
-     */
-    public static CompletableFuture<ListDomainRecommendationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Collection of domain name identifiers.
      * API Version: 2020-10-01.

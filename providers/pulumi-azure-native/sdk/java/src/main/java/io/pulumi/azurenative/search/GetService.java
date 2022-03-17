@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetService {
     private GetService() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceArgs.Builder a);
-    }
-    private static GetServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes an Azure Cognitive Search service and its current state.
- * API Version: 2020-08-01.
- * 
-     *
-     * Describes an Azure Cognitive Search service and its current state.
- * 
-     */
-    public static CompletableFuture<GetServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes an Azure Cognitive Search service and its current state.
      * API Version: 2020-08-01.

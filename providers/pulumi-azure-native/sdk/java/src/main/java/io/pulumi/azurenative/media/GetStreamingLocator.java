@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStreamingLocator {
     private GetStreamingLocator() {}
-    public interface BuilderApplicator {
-        public void apply(GetStreamingLocatorArgs.Builder a);
-    }
-    private static GetStreamingLocatorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStreamingLocatorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Streaming Locator resource
- * API Version: 2020-05-01.
- * 
-     *
-     * A Streaming Locator resource
- * 
-     */
-    public static CompletableFuture<GetStreamingLocatorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Streaming Locator resource
      * API Version: 2020-05-01.

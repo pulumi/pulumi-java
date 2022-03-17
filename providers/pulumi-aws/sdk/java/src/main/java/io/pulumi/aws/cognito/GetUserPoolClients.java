@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserPoolClients {
     private GetUserPoolClients() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserPoolClientsArgs.Builder a);
-    }
-    private static GetUserPoolClientsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserPoolClientsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get a list of Cognito user pools clients for a Cognito IdP user pool.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getUserPoolClients.
- * 
-     *
-     * A collection of values returned by getUserPoolClients.
- * 
-     */
-    public static CompletableFuture<GetUserPoolClientsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get a list of Cognito user pools clients for a Cognito IdP user pool.
      * 

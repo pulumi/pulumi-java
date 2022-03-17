@@ -198,22 +198,6 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
         return this.versionTemplate;
     }
 
-    public interface BuilderApplicator {
-        public void apply(CryptoKeyArgs.Builder a);
-    }
-    private static io.pulumi.gcp.kms.CryptoKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.kms.CryptoKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public CryptoKey(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIncidentComment {
     private GetIncidentComment() {}
-    public interface BuilderApplicator {
-        public void apply(GetIncidentCommentArgs.Builder a);
-    }
-    private static GetIncidentCommentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIncidentCommentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents an incident comment
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Represents an incident comment
- * 
-     */
-    public static CompletableFuture<GetIncidentCommentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents an incident comment
      * API Version: 2021-03-01-preview.

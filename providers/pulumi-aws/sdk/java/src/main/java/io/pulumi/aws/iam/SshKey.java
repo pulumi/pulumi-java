@@ -113,22 +113,6 @@ public class SshKey extends io.pulumi.resources.CustomResource {
         return this.username;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SshKeyArgs.Builder a);
-    }
-    private static io.pulumi.aws.iam.SshKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.iam.SshKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SshKey(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

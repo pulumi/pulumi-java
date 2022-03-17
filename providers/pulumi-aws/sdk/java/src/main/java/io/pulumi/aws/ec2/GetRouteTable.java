@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRouteTable {
     private GetRouteTable() {}
-    public interface BuilderApplicator {
-        public void apply(GetRouteTableArgs.Builder a);
-    }
-    private static GetRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRouteTableArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * `aws.ec2.RouteTable` provides details about a specific Route Table.
- * 
- * This resource can prove useful when a module accepts a Subnet ID as an input variable and needs to, for example, add a route in the Route Table.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getRouteTable.
- * 
-     *
-     * A collection of values returned by getRouteTable.
- * 
-     */
-    public static CompletableFuture<GetRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * `aws.ec2.RouteTable` provides details about a specific Route Table.
      * 

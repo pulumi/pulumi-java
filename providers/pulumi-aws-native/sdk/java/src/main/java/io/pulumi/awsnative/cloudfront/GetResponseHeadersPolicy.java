@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResponseHeadersPolicy {
     private GetResponseHeadersPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetResponseHeadersPolicyArgs.Builder a);
-    }
-    private static GetResponseHeadersPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResponseHeadersPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
- * 
-     */
-    public static CompletableFuture<GetResponseHeadersPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResourcePolicy {
     private GetResourcePolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetResourcePolicyArgs.Builder a);
-    }
-    private static GetResourcePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResourcePolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A resource policy with specified policy statements that attaches to a Lex bot or bot alias.
- * 
-     */
-    public static CompletableFuture<GetResourcePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A resource policy with specified policy statements that attaches to a Lex bot or bot alias.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDomainNameApiAssociation {
     private GetDomainNameApiAssociation() {}
-    public interface BuilderApplicator {
-        public void apply(GetDomainNameApiAssociationArgs.Builder a);
-    }
-    private static GetDomainNameApiAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDomainNameApiAssociationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
- * 
-     */
-    public static CompletableFuture<GetDomainNameApiAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
      * 

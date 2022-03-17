@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventSubscriptionFullUrl {
     private GetEventSubscriptionFullUrl() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventSubscriptionFullUrlArgs.Builder a);
-    }
-    private static GetEventSubscriptionFullUrlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventSubscriptionFullUrlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Full endpoint url of an event subscription
- * API Version: 2020-06-01.
- * 
-     *
-     * Full endpoint url of an event subscription
- * 
-     */
-    public static CompletableFuture<GetEventSubscriptionFullUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Full endpoint url of an event subscription
      * API Version: 2020-06-01.

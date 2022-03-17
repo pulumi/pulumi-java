@@ -92,22 +92,6 @@ public class Experiment extends io.pulumi.resources.CustomResource {
         return this.treatments;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ExperimentArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.evidently.ExperimentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.evidently.ExperimentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Experiment(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

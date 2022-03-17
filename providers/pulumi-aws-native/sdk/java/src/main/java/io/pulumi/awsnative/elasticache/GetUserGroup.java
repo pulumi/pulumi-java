@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUserGroup {
     private GetUserGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserGroupArgs.Builder a);
-    }
-    private static GetUserGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::ElastiCache::UserGroup
- * 
-     */
-    public static CompletableFuture<GetUserGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::ElastiCache::UserGroup
      * 

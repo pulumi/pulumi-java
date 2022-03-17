@@ -67,22 +67,6 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
         return this.prefixListId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ManagedPrefixListEntryArgs.Builder a);
-    }
-    private static io.pulumi.aws.ec2.ManagedPrefixListEntryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ec2.ManagedPrefixListEntryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ManagedPrefixListEntry(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

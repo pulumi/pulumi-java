@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRobot {
     private GetRobot() {}
-    public interface BuilderApplicator {
-        public void apply(GetRobotArgs.Builder a);
-    }
-    private static GetRobotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRobotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS::RoboMaker::Robot resource creates an AWS RoboMaker fleet.
- * 
-     */
-    public static CompletableFuture<GetRobotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS::RoboMaker::Robot resource creates an AWS RoboMaker fleet.
      * 

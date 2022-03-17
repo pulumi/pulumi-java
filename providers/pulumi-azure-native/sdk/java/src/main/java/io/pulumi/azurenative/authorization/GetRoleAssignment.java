@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRoleAssignment {
     private GetRoleAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetRoleAssignmentArgs.Builder a);
-    }
-    private static GetRoleAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRoleAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Role Assignments
- * API Version: 2020-08-01-preview.
- * 
-     *
-     * Role Assignments
- * 
-     */
-    public static CompletableFuture<GetRoleAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Role Assignments
      * API Version: 2020-08-01-preview.

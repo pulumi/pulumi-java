@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDnsNamespace {
     private GetDnsNamespace() {}
-    public interface BuilderApplicator {
-        public void apply(GetDnsNamespaceArgs.Builder a);
-    }
-    private static GetDnsNamespaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDnsNamespaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves information about a Service Discovery private or public DNS namespace.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDnsNamespace.
- * 
-     *
-     * A collection of values returned by getDnsNamespace.
- * 
-     */
-    public static CompletableFuture<GetDnsNamespaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves information about a Service Discovery private or public DNS namespace.
      * 

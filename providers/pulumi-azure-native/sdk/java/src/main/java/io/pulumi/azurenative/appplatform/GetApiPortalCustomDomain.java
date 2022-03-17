@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiPortalCustomDomain {
     private GetApiPortalCustomDomain() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiPortalCustomDomainArgs.Builder a);
-    }
-    private static GetApiPortalCustomDomainArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiPortalCustomDomainArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Custom domain of the API portal
- * API Version: 2022-01-01-preview.
- * 
-     *
-     * Custom domain of the API portal
- * 
-     */
-    public static CompletableFuture<GetApiPortalCustomDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Custom domain of the API portal
      * API Version: 2022-01-01-preview.

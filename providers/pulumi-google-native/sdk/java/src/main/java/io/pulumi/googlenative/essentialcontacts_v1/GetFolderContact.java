@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFolderContact {
     private GetFolderContact() {}
-    public interface BuilderApplicator {
-        public void apply(GetFolderContactArgs.Builder a);
-    }
-    private static GetFolderContactArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFolderContactArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a single contact.
- * 
-     */
-    public static CompletableFuture<GetFolderContactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a single contact.
      * 

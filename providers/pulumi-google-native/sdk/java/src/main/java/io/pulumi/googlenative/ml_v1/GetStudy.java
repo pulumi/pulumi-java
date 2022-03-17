@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStudy {
     private GetStudy() {}
-    public interface BuilderApplicator {
-        public void apply(GetStudyArgs.Builder a);
-    }
-    private static GetStudyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStudyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a study.
- * 
-     */
-    public static CompletableFuture<GetStudyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a study.
      * 

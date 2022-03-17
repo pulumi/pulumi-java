@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstantSnapshotIamPolicy {
     private GetInstantSnapshotIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstantSnapshotIamPolicyArgs.Builder a);
-    }
-    private static GetInstantSnapshotIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstantSnapshotIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- * 
-     */
-    public static CompletableFuture<GetInstantSnapshotIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 

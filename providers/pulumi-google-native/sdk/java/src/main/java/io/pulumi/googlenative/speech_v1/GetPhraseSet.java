@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPhraseSet {
     private GetPhraseSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetPhraseSetArgs.Builder a);
-    }
-    private static GetPhraseSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPhraseSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a phrase set.
- * 
-     */
-    public static CompletableFuture<GetPhraseSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a phrase set.
      * 

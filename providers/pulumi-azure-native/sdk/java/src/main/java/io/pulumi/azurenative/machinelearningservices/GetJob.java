@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetJob {
     private GetJob() {}
-    public interface BuilderApplicator {
-        public void apply(GetJobArgs.Builder a);
-    }
-    private static GetJobArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetJobArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Azure Resource Manager resource envelope.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Azure Resource Manager resource envelope.
- * 
-     */
-    public static CompletableFuture<GetJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.

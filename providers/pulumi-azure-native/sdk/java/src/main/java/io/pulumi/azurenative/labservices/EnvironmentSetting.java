@@ -227,22 +227,6 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
         return this.uniqueIdentifier;
     }
 
-    public interface BuilderApplicator {
-        public void apply(EnvironmentSettingArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.labservices.EnvironmentSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.labservices.EnvironmentSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public EnvironmentSetting(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

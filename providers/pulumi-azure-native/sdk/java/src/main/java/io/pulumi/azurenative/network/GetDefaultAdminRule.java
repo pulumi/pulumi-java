@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDefaultAdminRule {
     private GetDefaultAdminRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetDefaultAdminRuleArgs.Builder a);
-    }
-    private static GetDefaultAdminRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDefaultAdminRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Network default admin rule.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Network default admin rule.
- * 
-     */
-    public static CompletableFuture<GetDefaultAdminRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Network default admin rule.
      * API Version: 2021-02-01-preview.

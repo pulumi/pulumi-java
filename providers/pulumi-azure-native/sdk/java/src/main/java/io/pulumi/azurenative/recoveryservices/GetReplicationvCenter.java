@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReplicationvCenter {
     private GetReplicationvCenter() {}
-    public interface BuilderApplicator {
-        public void apply(GetReplicationvCenterArgs.Builder a);
-    }
-    private static GetReplicationvCenterArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReplicationvCenterArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * vCenter definition.
- * API Version: 2018-07-10.
- * 
-     *
-     * vCenter definition.
- * 
-     */
-    public static CompletableFuture<GetReplicationvCenterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * vCenter definition.
      * API Version: 2018-07-10.

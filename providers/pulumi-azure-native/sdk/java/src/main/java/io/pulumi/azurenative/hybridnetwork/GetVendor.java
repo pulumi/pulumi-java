@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVendor {
     private GetVendor() {}
-    public interface BuilderApplicator {
-        public void apply(GetVendorArgs.Builder a);
-    }
-    private static GetVendorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVendorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Vendor resource.
- * API Version: 2020-01-01-preview.
- * 
-     *
-     * Vendor resource.
- * 
-     */
-    public static CompletableFuture<GetVendorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Vendor resource.
      * API Version: 2020-01-01-preview.

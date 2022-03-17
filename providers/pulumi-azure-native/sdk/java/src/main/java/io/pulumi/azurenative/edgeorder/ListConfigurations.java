@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListConfigurations {
     private ListConfigurations() {}
-    public interface BuilderApplicator {
-        public void apply(ListConfigurationsArgs.Builder a);
-    }
-    private static ListConfigurationsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListConfigurationsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of configurations.
- * API Version: 2021-12-01.
- * 
-     *
-     * The list of configurations.
- * 
-     */
-    public static CompletableFuture<ListConfigurationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of configurations.
      * API Version: 2021-12-01.

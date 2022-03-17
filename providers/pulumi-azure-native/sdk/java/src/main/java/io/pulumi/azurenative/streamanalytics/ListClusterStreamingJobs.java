@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListClusterStreamingJobs {
     private ListClusterStreamingJobs() {}
-    public interface BuilderApplicator {
-        public void apply(ListClusterStreamingJobsArgs.Builder a);
-    }
-    private static ListClusterStreamingJobsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListClusterStreamingJobsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A list of streaming jobs. Populated by a List operation.
- * API Version: 2020-03-01-preview.
- * 
-     *
-     * A list of streaming jobs. Populated by a List operation.
- * 
-     */
-    public static CompletableFuture<ListClusterStreamingJobsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A list of streaming jobs. Populated by a List operation.
      * API Version: 2020-03-01-preview.

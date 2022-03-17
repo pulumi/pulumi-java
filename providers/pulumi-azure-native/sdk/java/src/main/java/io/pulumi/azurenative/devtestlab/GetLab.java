@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLab {
     private GetLab() {}
-    public interface BuilderApplicator {
-        public void apply(GetLabArgs.Builder a);
-    }
-    private static GetLabArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLabArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A lab.
- * API Version: 2018-09-15.
- * 
-     *
-     * A lab.
- * 
-     */
-    public static CompletableFuture<GetLabResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A lab.
      * API Version: 2018-09-15.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMultiRegionAccessPointPolicy {
     private GetMultiRegionAccessPointPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetMultiRegionAccessPointPolicyArgs.Builder a);
-    }
-    private static GetMultiRegionAccessPointPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMultiRegionAccessPointPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The policy to be attached to a Multi Region Access Point
- * 
-     */
-    public static CompletableFuture<GetMultiRegionAccessPointPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The policy to be attached to a Multi Region Access Point
      * 

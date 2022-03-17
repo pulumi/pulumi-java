@@ -4,17 +4,17 @@ import java.util.List;
 
 import io.pulumi.Config;
 import io.pulumi.Stack;
-import io.pulumi.azurenative.insights.Component;
+import io.pulumi.azurenative.insights.*;
 import io.pulumi.azurenative.insights.enums.ApplicationType;
 import io.pulumi.azurenative.resources.ResourceGroup;
-import io.pulumi.azurenative.sql.Database;
-import io.pulumi.azurenative.sql.Server;
+import io.pulumi.azurenative.sql.*;
 import io.pulumi.azurenative.storage.*;
 import io.pulumi.azurenative.storage.enums.*;
+import io.pulumi.azurenative.storage.inputs.ListStorageAccountServiceSASArgs;
 import io.pulumi.azurenative.storage.inputs.SkuArgs;
 import io.pulumi.azurenative.storage.outputs.ListStorageAccountServiceSASResult;
 import io.pulumi.azurenative.web.AppServicePlan;
-import io.pulumi.azurenative.web.WebApp;
+import io.pulumi.azurenative.web.*;
 import io.pulumi.azurenative.web.enums.ConnectionStringType;
 import io.pulumi.azurenative.web.inputs.ConnStringInfoArgs;
 import io.pulumi.azurenative.web.inputs.NameValuePairArgs;
@@ -35,19 +35,19 @@ public final class MyStack extends Stack {
         var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("sa",
-                $ -> $.resourceGroupName(resourceGroup.getName())
+                StorageAccountArgs.builder().resourceGroupName(resourceGroup.getName())
                         .kind(Either.ofRight(Kind.StorageV2))
                         .sku(SkuArgs.builder().name(Either.ofRight(SkuName.Standard_LRS)).build())
                         .build());
 
         var storageContainer = new BlobContainer("container",
-                $ -> $.resourceGroupName(resourceGroup.getName())
+                BlobContainerArgs.builder().resourceGroupName(resourceGroup.getName())
                         .accountName(storageAccount.getName())
                         .publicAccess(PublicAccess.None)
                         .build());
 
         var blob = new Blob("blob",
-                $ -> $.resourceGroupName(resourceGroup.getName())
+                BlobArgs.builder().resourceGroupName(resourceGroup.getName())
                         .accountName(storageAccount.getName())
                         .containerName(storageContainer.getName())
                         .source(new Archive.FileArchive("wwwroot"))
@@ -56,7 +56,7 @@ public final class MyStack extends Stack {
         var codeBlobUrl = getSASToken(storageAccount.getName(), storageContainer.getName(), blob.getName(), resourceGroup.getName());
 
         var appInsights = new Component("ai",
-                $ -> $.resourceGroupName(resourceGroup.getName())
+                ComponentArgs.builder().resourceGroupName(resourceGroup.getName())
                         .kind("web")
                         .applicationType(Either.ofRight(ApplicationType.Web))
                         .build());
@@ -68,26 +68,26 @@ public final class MyStack extends Stack {
         var pwd = config.require("sqlPassword");
 
         var sqlServer = new Server("sqlserver",
-                $ -> $.resourceGroupName(resourceGroup.getName())
+                ServerArgs.builder().resourceGroupName(resourceGroup.getName())
                         .administratorLogin(username)
                         .administratorLoginPassword(pwd)
                         .version("12.0")
                         .build());
 
         var database = new Database("db",
-                $ -> $.resourceGroupName(resourceGroup.getName())
+                DatabaseArgs.builder().resourceGroupName(resourceGroup.getName())
                         .serverName(sqlServer.getName())
                         .sku(io.pulumi.azurenative.sql.inputs.SkuArgs.builder().name("S0").build())
                         .build());
 
         var appServicePlan = new AppServicePlan("asp",
-                $ -> $.resourceGroupName(resourceGroup.getName())
+                AppServicePlanArgs.builder().resourceGroupName(resourceGroup.getName())
                         .kind("App")
                         .sku(SkuDescriptionArgs.builder().name("B1").tier("Basic").build())
                         .build());
 
         var app = new WebApp("webapp",
-                $ -> $.resourceGroupName(resourceGroup.getName())
+                WebAppArgs.builder().resourceGroupName(resourceGroup.getName())
                         .serverFarmId(appServicePlan.getId())
                         .siteConfig(SiteConfigArgs.builder()
                                 .appSettings(List.of(
@@ -127,7 +127,7 @@ public final class MyStack extends Stack {
                                        Output<String> blobName, Output<String> resourceGroupName) {
         var blobSAS = Output.tuple(resourceGroupName, storageAccountName, storageContainerName).applyFuture(t ->
             ListStorageAccountServiceSAS.invokeAsync(
-                $ -> $.resourceGroupName(t.t1)
+                ListStorageAccountServiceSASArgs.builder().resourceGroupName(t.t1)
                         .accountName(t.t2)
                         .protocols(HttpProtocol.Https)
                         .sharedAccessStartTime("2022-01-01")

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAdaptiveApplicationControl {
     private GetAdaptiveApplicationControl() {}
-    public interface BuilderApplicator {
-        public void apply(GetAdaptiveApplicationControlArgs.Builder a);
-    }
-    private static GetAdaptiveApplicationControlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAdaptiveApplicationControlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2020-01-01.
- * 
-     */
-    public static CompletableFuture<GetAdaptiveApplicationControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2020-01-01.
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegisteredServer {
     private GetRegisteredServer() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegisteredServerArgs.Builder a);
-    }
-    private static GetRegisteredServerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegisteredServerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Registered Server resource.
- * API Version: 2020-03-01.
- * 
-     *
-     * Registered Server resource.
- * 
-     */
-    public static CompletableFuture<GetRegisteredServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Registered Server resource.
      * API Version: 2020-03-01.

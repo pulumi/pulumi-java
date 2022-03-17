@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProductSet {
     private GetProductSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetProductSetArgs.Builder a);
-    }
-    private static GetProductSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProductSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets information associated with a ProductSet. Possible errors: * Returns NOT_FOUND if the ProductSet does not exist.
- * 
-     */
-    public static CompletableFuture<GetProductSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets information associated with a ProductSet. Possible errors: * Returns NOT_FOUND if the ProductSet does not exist.
      * 

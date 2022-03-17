@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCanaryEvaluation {
     private GetCanaryEvaluation() {}
-    public interface BuilderApplicator {
-        public void apply(GetCanaryEvaluationArgs.Builder a);
-    }
-    private static GetCanaryEvaluationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCanaryEvaluationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a CanaryEvaluation for an organization.
- * 
-     */
-    public static CompletableFuture<GetCanaryEvaluationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a CanaryEvaluation for an organization.
      * 

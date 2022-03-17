@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEndpoint {
     private GetEndpoint() {}
-    public interface BuilderApplicator {
-        public void apply(GetEndpointArgs.Builder a);
-    }
-    private static GetEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEndpointArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns a unique endpoint specific to the AWS account making the call.
- * 
-     *
-     * A collection of arguments for invoking getEndpoint.
- * 
-     *
-     * A collection of values returned by getEndpoint.
- * 
-     */
-    public static CompletableFuture<GetEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns a unique endpoint specific to the AWS account making the call.
      * 

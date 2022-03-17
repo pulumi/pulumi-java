@@ -34,22 +34,6 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
         return this.type;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable WebAppRelayServiceConnectionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppRelayServiceConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppRelayServiceConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppRelayServiceConnection(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

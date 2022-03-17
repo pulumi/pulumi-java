@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDistributionConfiguration {
     private GetDistributionConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetDistributionConfigurationArgs.Builder a);
-    }
-    private static GetDistributionConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDistributionConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::ImageBuilder::DistributionConfiguration
- * 
-     */
-    public static CompletableFuture<GetDistributionConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::ImageBuilder::DistributionConfiguration
      * 

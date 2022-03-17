@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReplicaKey {
     private GetReplicaKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetReplicaKeyArgs.Builder a);
-    }
-    private static GetReplicaKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReplicaKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
- * 
-     */
-    public static CompletableFuture<GetReplicaKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
      * 

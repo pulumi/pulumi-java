@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProduct {
     private GetProduct() {}
-    public interface BuilderApplicator {
-        public void apply(GetProductArgs.Builder a);
-    }
-    private static GetProductArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProductArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the pricing information of all products in AWS.
- * This data source is only available in a us-east-1 or ap-south-1 provider.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getProduct.
- * 
-     *
-     * A collection of values returned by getProduct.
- * 
-     */
-    public static CompletableFuture<GetProductResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the pricing information of all products in AWS.
      * This data source is only available in a us-east-1 or ap-south-1 provider.

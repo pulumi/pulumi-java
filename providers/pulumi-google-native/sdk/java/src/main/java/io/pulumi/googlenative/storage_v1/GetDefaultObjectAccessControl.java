@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDefaultObjectAccessControl {
     private GetDefaultObjectAccessControl() {}
-    public interface BuilderApplicator {
-        public void apply(GetDefaultObjectAccessControlArgs.Builder a);
-    }
-    private static GetDefaultObjectAccessControlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDefaultObjectAccessControlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the default object ACL entry for the specified entity on the specified bucket.
- * 
-     */
-    public static CompletableFuture<GetDefaultObjectAccessControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the default object ACL entry for the specified entity on the specified bucket.
      * 

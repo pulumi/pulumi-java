@@ -84,22 +84,6 @@ public class WebAppDomainOwnershipIdentifierSlot extends io.pulumi.resources.Cus
         return this.value;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebAppDomainOwnershipIdentifierSlotArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.web.WebAppDomainOwnershipIdentifierSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.web.WebAppDomainOwnershipIdentifierSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebAppDomainOwnershipIdentifierSlot(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccount {
     private GetAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccountArgs.Builder a);
-    }
-    private static GetAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Account resource
- * API Version: 2020-12-01-preview.
- * 
-     *
-     * Account resource
- * 
-     */
-    public static CompletableFuture<GetAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Account resource
      * API Version: 2020-12-01-preview.

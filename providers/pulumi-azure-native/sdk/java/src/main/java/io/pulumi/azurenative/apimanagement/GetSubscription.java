@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSubscription {
     private GetSubscription() {}
-    public interface BuilderApplicator {
-        public void apply(GetSubscriptionArgs.Builder a);
-    }
-    private static GetSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSubscriptionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Subscription details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Subscription details.
- * 
-     */
-    public static CompletableFuture<GetSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Subscription details.
      * API Version: 2020-12-01.

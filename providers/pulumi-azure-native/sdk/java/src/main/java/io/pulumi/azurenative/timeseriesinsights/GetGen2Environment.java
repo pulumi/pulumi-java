@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGen2Environment {
     private GetGen2Environment() {}
-    public interface BuilderApplicator {
-        public void apply(GetGen2EnvironmentArgs.Builder a);
-    }
-    private static GetGen2EnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGen2EnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
- * API Version: 2020-05-15.
- * 
-     *
-     * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
- * 
-     */
-    public static CompletableFuture<GetGen2EnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
      * API Version: 2020-05-15.

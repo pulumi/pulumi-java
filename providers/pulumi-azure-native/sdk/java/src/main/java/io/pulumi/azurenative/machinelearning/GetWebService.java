@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebService {
     private GetWebService() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebServiceArgs.Builder a);
-    }
-    private static GetWebServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Instance of an Azure ML web service resource.
- * API Version: 2017-01-01.
- * 
-     *
-     * Instance of an Azure ML web service resource.
- * 
-     */
-    public static CompletableFuture<GetWebServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Instance of an Azure ML web service resource.
      * API Version: 2017-01-01.

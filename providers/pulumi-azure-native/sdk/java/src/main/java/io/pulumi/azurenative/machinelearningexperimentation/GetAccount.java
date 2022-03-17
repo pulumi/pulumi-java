@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAccount {
     private GetAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetAccountArgs.Builder a);
-    }
-    private static GetAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An object that represents a machine learning team account.
- * API Version: 2017-05-01-preview.
- * 
-     *
-     * An object that represents a machine learning team account.
- * 
-     */
-    public static CompletableFuture<GetAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An object that represents a machine learning team account.
      * API Version: 2017-05-01-preview.

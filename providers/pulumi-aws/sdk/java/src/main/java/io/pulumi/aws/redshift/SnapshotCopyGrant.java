@@ -102,22 +102,6 @@ public class SnapshotCopyGrant extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SnapshotCopyGrantArgs.Builder a);
-    }
-    private static io.pulumi.aws.redshift.SnapshotCopyGrantArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.redshift.SnapshotCopyGrantArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SnapshotCopyGrant(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

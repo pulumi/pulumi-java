@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStreamingPolicy {
     private GetStreamingPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetStreamingPolicyArgs.Builder a);
-    }
-    private static GetStreamingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStreamingPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Streaming Policy resource
- * API Version: 2020-05-01.
- * 
-     *
-     * A Streaming Policy resource
- * 
-     */
-    public static CompletableFuture<GetStreamingPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Streaming Policy resource
      * API Version: 2020-05-01.

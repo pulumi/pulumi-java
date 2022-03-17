@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEventChannel {
     private GetEventChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetEventChannelArgs.Builder a);
-    }
-    private static GetEventChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEventChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Event Channel.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * Event Channel.
- * 
-     */
-    public static CompletableFuture<GetEventChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Event Channel.
      * API Version: 2021-06-01-preview.

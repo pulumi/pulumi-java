@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkExperimentProfile {
     private GetNetworkExperimentProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkExperimentProfileArgs.Builder a);
-    }
-    private static GetNetworkExperimentProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkExperimentProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Defines an Network Experiment Profile and lists of Experiments
- * API Version: 2019-11-01.
- * 
-     *
-     * Defines an Network Experiment Profile and lists of Experiments
- * 
-     */
-    public static CompletableFuture<GetNetworkExperimentProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Defines an Network Experiment Profile and lists of Experiments
      * API Version: 2019-11-01.

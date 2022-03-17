@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceGroup {
     private GetInstanceGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceGroupArgs.Builder a);
-    }
-    private static GetInstanceGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
- * 
-     */
-    public static CompletableFuture<GetInstanceGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
      * 

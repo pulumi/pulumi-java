@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebPubSubPrivateEndpointConnection {
     private GetWebPubSubPrivateEndpointConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebPubSubPrivateEndpointConnectionArgs.Builder a);
-    }
-    private static GetWebPubSubPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebPubSubPrivateEndpointConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A private endpoint connection to an azure resource
- * API Version: 2021-04-01-preview.
- * 
-     *
-     * A private endpoint connection to an azure resource
- * 
-     */
-    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A private endpoint connection to an azure resource
      * API Version: 2021-04-01-preview.

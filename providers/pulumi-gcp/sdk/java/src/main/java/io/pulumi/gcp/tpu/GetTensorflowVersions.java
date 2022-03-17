@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTensorflowVersions {
     private GetTensorflowVersions() {}
-    public interface BuilderApplicator {
-        public void apply(GetTensorflowVersionsArgs.Builder a);
-    }
-    private static GetTensorflowVersionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTensorflowVersionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getTensorflowVersions.
- * 
-     *
-     * A collection of values returned by getTensorflowVersions.
- * 
-     */
-    public static CompletableFuture<GetTensorflowVersionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
      * 

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListManagerActivationKey {
     private ListManagerActivationKey() {}
-    public interface BuilderApplicator {
-        public void apply(ListManagerActivationKeyArgs.Builder a);
-    }
-    private static ListManagerActivationKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListManagerActivationKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The key.
- * API Version: 2017-06-01.
- * 
-     *
-     * The key.
- * 
-     */
-    public static CompletableFuture<ListManagerActivationKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The key.
      * API Version: 2017-06-01.

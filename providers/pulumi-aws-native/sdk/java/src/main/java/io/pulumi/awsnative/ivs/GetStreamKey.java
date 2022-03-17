@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStreamKey {
     private GetStreamKey() {}
-    public interface BuilderApplicator {
-        public void apply(GetStreamKeyArgs.Builder a);
-    }
-    private static GetStreamKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStreamKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::IVS::StreamKey
- * 
-     */
-    public static CompletableFuture<GetStreamKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::IVS::StreamKey
      * 

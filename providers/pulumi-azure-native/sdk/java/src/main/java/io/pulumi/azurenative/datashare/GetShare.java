@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetShare {
     private GetShare() {}
-    public interface BuilderApplicator {
-        public void apply(GetShareArgs.Builder a);
-    }
-    private static GetShareArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetShareArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A share data transfer object.
- * API Version: 2020-09-01.
- * 
-     *
-     * A share data transfer object.
- * 
-     */
-    public static CompletableFuture<GetShareResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A share data transfer object.
      * API Version: 2020-09-01.

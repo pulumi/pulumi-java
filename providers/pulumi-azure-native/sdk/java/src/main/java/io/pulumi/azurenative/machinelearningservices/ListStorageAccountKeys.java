@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListStorageAccountKeys {
     private ListStorageAccountKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListStorageAccountKeysArgs.Builder a);
-    }
-    private static ListStorageAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListStorageAccountKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2021-01-01.
- * 
-     */
-    public static CompletableFuture<ListStorageAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2021-01-01.
      * 

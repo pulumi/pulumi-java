@@ -363,22 +363,6 @@ public class OntapFileSystem extends io.pulumi.resources.CustomResource {
         return this.weeklyMaintenanceStartTime;
     }
 
-    public interface BuilderApplicator {
-        public void apply(OntapFileSystemArgs.Builder a);
-    }
-    private static io.pulumi.aws.fsx.OntapFileSystemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.fsx.OntapFileSystemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public OntapFileSystem(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

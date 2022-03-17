@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListPrivateCloudAdminCredentials {
     private ListPrivateCloudAdminCredentials() {}
-    public interface BuilderApplicator {
-        public void apply(ListPrivateCloudAdminCredentialsArgs.Builder a);
-    }
-    private static ListPrivateCloudAdminCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListPrivateCloudAdminCredentialsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Administrative credentials for accessing vCenter and NSX-T
- * API Version: 2020-03-20.
- * 
-     *
-     * Administrative credentials for accessing vCenter and NSX-T
- * 
-     */
-    public static CompletableFuture<ListPrivateCloudAdminCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Administrative credentials for accessing vCenter and NSX-T
      * API Version: 2020-03-20.

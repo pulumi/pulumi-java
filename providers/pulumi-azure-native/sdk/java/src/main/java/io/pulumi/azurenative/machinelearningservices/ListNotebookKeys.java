@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListNotebookKeys {
     private ListNotebookKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListNotebookKeysArgs.Builder a);
-    }
-    private static ListNotebookKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListNotebookKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2021-01-01.
- * 
-     */
-    public static CompletableFuture<ListNotebookKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2021-01-01.
      * 

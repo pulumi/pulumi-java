@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListAuthorizationServerSecrets {
     private ListAuthorizationServerSecrets() {}
-    public interface BuilderApplicator {
-        public void apply(ListAuthorizationServerSecretsArgs.Builder a);
-    }
-    private static ListAuthorizationServerSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListAuthorizationServerSecretsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * OAuth Server Secrets Contract.
- * API Version: 2020-12-01.
- * 
-     *
-     * OAuth Server Secrets Contract.
- * 
-     */
-    public static CompletableFuture<ListAuthorizationServerSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * OAuth Server Secrets Contract.
      * API Version: 2020-12-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerCommunicationLink {
     private GetServerCommunicationLink() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerCommunicationLinkArgs.Builder a);
-    }
-    private static GetServerCommunicationLinkArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerCommunicationLinkArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Server communication link.
- * API Version: 2014-04-01.
- * 
-     *
-     * Server communication link.
- * 
-     */
-    public static CompletableFuture<GetServerCommunicationLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Server communication link.
      * API Version: 2014-04-01.

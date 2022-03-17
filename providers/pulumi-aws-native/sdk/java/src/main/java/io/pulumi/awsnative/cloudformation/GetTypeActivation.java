@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTypeActivation {
     private GetTypeActivation() {}
-    public interface BuilderApplicator {
-        public void apply(GetTypeActivationArgs.Builder a);
-    }
-    private static GetTypeActivationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTypeActivationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Enable a resource that has been published in the CloudFormation Registry.
- * 
-     */
-    public static CompletableFuture<GetTypeActivationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Enable a resource that has been published in the CloudFormation Registry.
      * 

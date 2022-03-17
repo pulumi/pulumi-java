@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegexPatternSet {
     private GetRegexPatternSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegexPatternSetArgs.Builder a);
-    }
-    private static GetRegexPatternSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegexPatternSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Contains a list of Regular expressions based on the provided inputs. RegexPatternSet can be used with other WAF entities with RegexPatternSetReferenceStatement to perform other actions .
- * 
-     */
-    public static CompletableFuture<GetRegexPatternSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Contains a list of Regular expressions based on the provided inputs. RegexPatternSet can be used with other WAF entities with RegexPatternSetReferenceStatement to perform other actions .
      * 

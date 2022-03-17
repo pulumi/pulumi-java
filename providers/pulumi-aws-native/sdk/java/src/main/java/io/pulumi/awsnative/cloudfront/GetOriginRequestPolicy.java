@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOriginRequestPolicy {
     private GetOriginRequestPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetOriginRequestPolicyArgs.Builder a);
-    }
-    private static GetOriginRequestPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOriginRequestPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
- * 
-     */
-    public static CompletableFuture<GetOriginRequestPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
      * 

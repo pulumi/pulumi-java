@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetClusterCapacityProviderAssociations {
     private GetClusterCapacityProviderAssociations() {}
-    public interface BuilderApplicator {
-        public void apply(GetClusterCapacityProviderAssociationsArgs.Builder a);
-    }
-    private static GetClusterCapacityProviderAssociationsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetClusterCapacityProviderAssociationsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Associate a set of ECS Capacity Providers with a specified ECS Cluster
- * 
-     */
-    public static CompletableFuture<GetClusterCapacityProviderAssociationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Associate a set of ECS Capacity Providers with a specified ECS Cluster
      * 

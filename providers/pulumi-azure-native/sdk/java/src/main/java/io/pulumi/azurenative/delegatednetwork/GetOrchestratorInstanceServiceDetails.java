@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrchestratorInstanceServiceDetails {
     private GetOrchestratorInstanceServiceDetails() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrchestratorInstanceServiceDetailsArgs.Builder a);
-    }
-    private static GetOrchestratorInstanceServiceDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrchestratorInstanceServiceDetailsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents an instance of a orchestrator.
- * API Version: 2021-03-15.
- * 
-     *
-     * Represents an instance of a orchestrator.
- * 
-     */
-    public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents an instance of a orchestrator.
      * API Version: 2021-03-15.

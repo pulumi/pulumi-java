@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLogAnalyticExportRequestRateByInterval {
     private GetLogAnalyticExportRequestRateByInterval() {}
-    public interface BuilderApplicator {
-        public void apply(GetLogAnalyticExportRequestRateByIntervalArgs.Builder a);
-    }
-    private static GetLogAnalyticExportRequestRateByIntervalArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLogAnalyticExportRequestRateByIntervalArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * LogAnalytics operation status response
- * API Version: 2020-12-01.
- * 
-     *
-     * LogAnalytics operation status response
- * 
-     */
-    public static CompletableFuture<GetLogAnalyticExportRequestRateByIntervalResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * LogAnalytics operation status response
      * API Version: 2020-12-01.

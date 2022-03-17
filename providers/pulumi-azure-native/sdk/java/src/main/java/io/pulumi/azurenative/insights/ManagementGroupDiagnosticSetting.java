@@ -158,22 +158,6 @@ public class ManagementGroupDiagnosticSetting extends io.pulumi.resources.Custom
         return this.workspaceId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ManagementGroupDiagnosticSettingArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.insights.ManagementGroupDiagnosticSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.insights.ManagementGroupDiagnosticSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ManagementGroupDiagnosticSetting(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetResolverQueryLoggingConfig {
     private GetResolverQueryLoggingConfig() {}
-    public interface BuilderApplicator {
-        public void apply(GetResolverQueryLoggingConfigArgs.Builder a);
-    }
-    private static GetResolverQueryLoggingConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetResolverQueryLoggingConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfig.
- * 
-     */
-    public static CompletableFuture<GetResolverQueryLoggingConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfig.
      * 

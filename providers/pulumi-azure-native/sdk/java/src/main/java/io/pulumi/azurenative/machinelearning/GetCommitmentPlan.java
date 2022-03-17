@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCommitmentPlan {
     private GetCommitmentPlan() {}
-    public interface BuilderApplicator {
-        public void apply(GetCommitmentPlanArgs.Builder a);
-    }
-    private static GetCommitmentPlanArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCommitmentPlanArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure ML commitment plan resource.
- * API Version: 2016-05-01-preview.
- * 
-     *
-     * An Azure ML commitment plan resource.
- * 
-     */
-    public static CompletableFuture<GetCommitmentPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure ML commitment plan resource.
      * API Version: 2016-05-01-preview.

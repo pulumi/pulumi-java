@@ -103,22 +103,6 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
         return this.updatedAt;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ArchiveDeploymentArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.apigee_v1.ArchiveDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.apigee_v1.ArchiveDeploymentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ArchiveDeployment(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

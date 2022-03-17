@@ -116,22 +116,6 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
         return this.versionStages;
     }
 
-    public interface BuilderApplicator {
-        public void apply(SecretVersionArgs.Builder a);
-    }
-    private static io.pulumi.aws.secretsmanager.SecretVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.secretsmanager.SecretVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SecretVersion(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

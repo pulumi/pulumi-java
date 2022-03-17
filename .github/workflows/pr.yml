@@ -134,14 +134,16 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example aws-java-webserver
         run: |
-          make provider.aws.build provider.aws.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          make provider.aws.build provider.aws.install
+          export PATH="$PATH:$(pwd)/bin/" &&
+            ss=0
             cd tests/examples/aws-java-webserver &&
-            ./gradlew install &&
+            ./gradlew install || ((ss++))
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
-            pulumi preview"
+            pulumi stack init dev || ((ss++))
+            pulumi preview || ((ss++))
+            exit $ss
   example2:
     runs-on: ubuntu-latest
     steps:
@@ -196,17 +198,19 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         name: run example azure-java-appservice-sql
         run: |
+          make bin/pulumi-language-jvm
           make provider.azure-native.build
           make provider.azure-native.install
-          make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/azure-java-appservice-sql &&
             ./gradlew install &&
+            ss=0
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
+            pulumi stack init dev || ((ss++))
             pulumi config set azure-native:location westus
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
-            pulumi preview"
+            pulumi preview || ((ss++))
+            exit $ss
   example3:
     runs-on: ubuntu-latest
     steps:
@@ -256,16 +260,18 @@ jobs:
           export_default_credentials: true
       - name: run example gcp-java-gke-hello-world
         run: |
+          make bin/pulumi-language-jvm
           make provider.gcp.build provider.gcp.install
           make provider.kubernetes.build provider.kubernetes.install
-          make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/gcp-java-gke-hello-world &&
-            ./gradlew install &&
+            ss=0
+            ./gradlew install || ((ss++))
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
+            pulumi stack init dev || ((ss++))
             pulumi config set gcp:zone us-west1-a
-            pulumi preview"
+            pulumi preview || ((ss++))
+            exit $ss
   example4:
     runs-on: ubuntu-latest
     steps:
@@ -311,18 +317,19 @@ jobs:
       - name: run example minimal
         run: |
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/minimal &&
             ./gradlew install &&
+            ss=0
             pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
-            pulumi config set minimal:name foo &&
-            pulumi config set minimal:secret bar &&
-            pulumi preview
-            pulumi up -s dev --yes
-            pulumi destroy -s dev --yes || true
-            "
+            pulumi stack init dev || ((ss++))
+            pulumi config set minimal:name foo
+            pulumi config set minimal:secret bar
+            pulumi preview || ((ss++))
+            pulumi up -s dev --yes || ((ss++))
+            pulumi destroy -s dev --yes || ((ss++))
+            exit $ss
   example5:
     runs-on: ubuntu-latest
     steps:
@@ -377,16 +384,18 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example aws-native-java-s3-folder
         run: |
+          make bin/pulumi-language-jvm
           make provider.aws.build provider.aws.install
           make provider.aws-native.build provider.aws-native.install
-          make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/aws-native-java-s3-folder &&
-            ./gradlew install &&
+            ss=0
+            ./gradlew install || ((ss++))
             pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
-            pulumi preview"
+            pulumi stack init dev || ((ss++))
+            pulumi preview || ((ss++))
+            exit $ss
   example6:
     runs-on: ubuntu-latest
     steps:
@@ -441,15 +450,17 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         name: run example azure-java-static-website
         run: |
-          make provider.azure-native.build provider.azure-native.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          make provider.azure-native.build provider.azure-native.install
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/azure-java-static-website &&
-            ./gradlew install &&
+            ss=0
+            ./gradlew install || ((ss++))
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
+            pulumi stack init dev || ((ss++))
             pulumi config set azure-native:location westus
-            pulumi preview"
+            pulumi preview || ((ss++))
+            exit $ss
   example7:
     runs-on: ubuntu-latest
     steps:
@@ -494,17 +505,19 @@ jobs:
           pulumi plugin install resource random v4.3.1;
       - name: run example random
         run: |
-          make provider.random.build provider.random.install
           make bin/pulumi-language-jvm
-          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+          make provider.random.build provider.random.install
+          export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/random &&
-            ./gradlew install &&
+            ss=0
+            ./gradlew install || ((ss++))
             pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
-            pulumi stack init dev;
-            pulumi preview
-            pulumi up -s dev --yes
-            pulumi destroy -s dev --yes || true"
+            pulumi stack init dev || ((ss++))
+            pulumi preview || ((ss++))
+            pulumi up -s dev --yes || ((ss++))
+            pulumi destroy -s dev --yes || ((ss++))
+            exit $ss
     strategy:
       fail-fast: true
   go-lint:

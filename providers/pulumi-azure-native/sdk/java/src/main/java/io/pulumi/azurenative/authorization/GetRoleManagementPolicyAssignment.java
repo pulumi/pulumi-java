@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRoleManagementPolicyAssignment {
     private GetRoleManagementPolicyAssignment() {}
-    public interface BuilderApplicator {
-        public void apply(GetRoleManagementPolicyAssignmentArgs.Builder a);
-    }
-    private static GetRoleManagementPolicyAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRoleManagementPolicyAssignmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Role management policy
- * API Version: 2020-10-01-preview.
- * 
-     *
-     * Role management policy
- * 
-     */
-    public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Role management policy
      * API Version: 2020-10-01-preview.

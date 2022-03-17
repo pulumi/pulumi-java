@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataFlow {
     private GetDataFlow() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataFlowArgs.Builder a);
-    }
-    private static GetDataFlowArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataFlowArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Data flow resource type.
- * API Version: 2018-06-01.
- * 
-     *
-     * Data flow resource type.
- * 
-     */
-    public static CompletableFuture<GetDataFlowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Data flow resource type.
      * API Version: 2018-06-01.

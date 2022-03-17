@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUsers {
     private GetUsers() {}
-    public interface BuilderApplicator {
-        public void apply(GetUsersArgs.Builder a);
-    }
-    private static GetUsersArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUsersArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the ARNs and Names of IAM Users.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getUsers.
- * 
-     *
-     * A collection of values returned by getUsers.
- * 
-     */
-    public static CompletableFuture<GetUsersResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the ARNs and Names of IAM Users.
      * 

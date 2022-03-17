@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBackendBucket {
     private GetBackendBucket() {}
-    public interface BuilderApplicator {
-        public void apply(GetBackendBucketArgs.Builder a);
-    }
-    private static GetBackendBucketArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBackendBucketArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
- * 
-     */
-    public static CompletableFuture<GetBackendBucketResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
      * 

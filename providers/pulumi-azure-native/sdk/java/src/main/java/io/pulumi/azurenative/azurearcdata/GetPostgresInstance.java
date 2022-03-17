@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPostgresInstance {
     private GetPostgresInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetPostgresInstanceArgs.Builder a);
-    }
-    private static GetPostgresInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPostgresInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Postgres Instance.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * A Postgres Instance.
- * 
-     */
-    public static CompletableFuture<GetPostgresInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Postgres Instance.
      * API Version: 2021-06-01-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrivateLinkService {
     private GetPrivateLinkService() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrivateLinkServiceArgs.Builder a);
-    }
-    private static GetPrivateLinkServiceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrivateLinkServiceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Private link service resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Private link service resource.
- * 
-     */
-    public static CompletableFuture<GetPrivateLinkServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Private link service resource.
      * API Version: 2020-11-01.

@@ -157,22 +157,6 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ServiceQuotaArgs.Builder a);
-    }
-    private static io.pulumi.aws.servicequotas.ServiceQuotaArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.servicequotas.ServiceQuotaArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ServiceQuota(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

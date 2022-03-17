@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTopic {
     private GetTopic() {}
-    public interface BuilderApplicator {
-        public void apply(GetTopicArgs.Builder a);
-    }
-    private static GetTopicArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTopicArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the configuration of a topic. Since the topic only has the name attribute, this method is only useful to check the existence of a topic. If other attributes are added in the future, they will be returned here.
- * 
-     */
-    public static CompletableFuture<GetTopicResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the configuration of a topic. Since the topic only has the name attribute, this method is only useful to check the existence of a topic. If other attributes are added in the future, they will be returned here.
      * 

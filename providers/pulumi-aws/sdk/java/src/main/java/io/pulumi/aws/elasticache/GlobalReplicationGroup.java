@@ -216,22 +216,6 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
         return this.transitEncryptionEnabled;
     }
 
-    public interface BuilderApplicator {
-        public void apply(GlobalReplicationGroupArgs.Builder a);
-    }
-    private static io.pulumi.aws.elasticache.GlobalReplicationGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.elasticache.GlobalReplicationGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public GlobalReplicationGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

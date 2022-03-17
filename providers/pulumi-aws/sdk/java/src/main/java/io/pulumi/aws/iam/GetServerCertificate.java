@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerCertificate {
     private GetServerCertificate() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerCertificateArgs.Builder a);
-    }
-    private static GetServerCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerCertificateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to lookup information about IAM Server Certificates.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getServerCertificate.
- * 
-     *
-     * A collection of values returned by getServerCertificate.
- * 
-     */
-    public static CompletableFuture<GetServerCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to lookup information about IAM Server Certificates.
      * 

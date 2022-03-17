@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHostedZone {
     private GetHostedZone() {}
-    public interface BuilderApplicator {
-        public void apply(GetHostedZoneArgs.Builder a);
-    }
-    private static GetHostedZoneArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHostedZoneArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Route53::HostedZone.
- * 
-     */
-    public static CompletableFuture<GetHostedZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Route53::HostedZone.
      * 

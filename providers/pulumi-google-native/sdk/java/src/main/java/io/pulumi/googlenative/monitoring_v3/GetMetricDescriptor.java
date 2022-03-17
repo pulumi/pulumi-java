@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMetricDescriptor {
     private GetMetricDescriptor() {}
-    public interface BuilderApplicator {
-        public void apply(GetMetricDescriptorArgs.Builder a);
-    }
-    private static GetMetricDescriptorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMetricDescriptorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a single metric descriptor. This method does not require a Workspace.
- * 
-     */
-    public static CompletableFuture<GetMetricDescriptorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a single metric descriptor. This method does not require a Workspace.
      * 

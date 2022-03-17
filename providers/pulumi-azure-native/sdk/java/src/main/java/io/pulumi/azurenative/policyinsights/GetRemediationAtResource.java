@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRemediationAtResource {
     private GetRemediationAtResource() {}
-    public interface BuilderApplicator {
-        public void apply(GetRemediationAtResourceArgs.Builder a);
-    }
-    private static GetRemediationAtResourceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRemediationAtResourceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The remediation definition.
- * API Version: 2019-07-01.
- * 
-     *
-     * The remediation definition.
- * 
-     */
-    public static CompletableFuture<GetRemediationAtResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The remediation definition.
      * API Version: 2019-07-01.

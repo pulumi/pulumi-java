@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfiguration {
     private GetConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationArgs.Builder a);
-    }
-    private static GetConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information on an Amazon MSK Configuration.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getConfiguration.
- * 
-     *
-     * A collection of values returned by getConfiguration.
- * 
-     */
-    public static CompletableFuture<GetConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information on an Amazon MSK Configuration.
      * 

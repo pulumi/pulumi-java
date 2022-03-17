@@ -14,17 +14,6 @@ import javax.annotation.Nullable;
 
 public class ImportValue {
     private ImportValue() {}
-    public interface BuilderApplicator {
-        public void apply(ImportValueArgs.Builder a);
-    }
-    private static ImportValueArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ImportValueArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    public static CompletableFuture<ImportValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     public static CompletableFuture<ImportValueResult> invokeAsync(ImportValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:importValue", TypeShape.of(ImportValueResult.class), args == null ? ImportValueArgs.Empty : args, Utilities.withVersion(options));
     }

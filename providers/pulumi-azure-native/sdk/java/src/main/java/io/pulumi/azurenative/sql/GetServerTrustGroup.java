@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServerTrustGroup {
     private GetServerTrustGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetServerTrustGroupArgs.Builder a);
-    }
-    private static GetServerTrustGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServerTrustGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A server trust group.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A server trust group.
- * 
-     */
-    public static CompletableFuture<GetServerTrustGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A server trust group.
      * API Version: 2020-11-01-preview.

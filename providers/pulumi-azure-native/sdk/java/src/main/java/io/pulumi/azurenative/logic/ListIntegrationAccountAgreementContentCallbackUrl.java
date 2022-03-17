@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListIntegrationAccountAgreementContentCallbackUrl {
     private ListIntegrationAccountAgreementContentCallbackUrl() {}
-    public interface BuilderApplicator {
-        public void apply(ListIntegrationAccountAgreementContentCallbackUrlArgs.Builder a);
-    }
-    private static ListIntegrationAccountAgreementContentCallbackUrlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListIntegrationAccountAgreementContentCallbackUrlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The workflow trigger callback URL.
- * API Version: 2019-05-01.
- * 
-     *
-     * The workflow trigger callback URL.
- * 
-     */
-    public static CompletableFuture<ListIntegrationAccountAgreementContentCallbackUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The workflow trigger callback URL.
      * API Version: 2019-05-01.

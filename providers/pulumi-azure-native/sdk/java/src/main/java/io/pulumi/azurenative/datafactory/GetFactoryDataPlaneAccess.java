@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFactoryDataPlaneAccess {
     private GetFactoryDataPlaneAccess() {}
-    public interface BuilderApplicator {
-        public void apply(GetFactoryDataPlaneAccessArgs.Builder a);
-    }
-    private static GetFactoryDataPlaneAccessArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFactoryDataPlaneAccessArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get Data Plane read only token response definition.
- * API Version: 2018-06-01.
- * 
-     *
-     * Get Data Plane read only token response definition.
- * 
-     */
-    public static CompletableFuture<GetFactoryDataPlaneAccessResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get Data Plane read only token response definition.
      * API Version: 2018-06-01.

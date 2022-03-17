@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataExport {
     private GetDataExport() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataExportArgs.Builder a);
-    }
-    private static GetDataExportArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataExportArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The top level data export resource container.
- * API Version: 2020-08-01.
- * 
-     *
-     * The top level data export resource container.
- * 
-     */
-    public static CompletableFuture<GetDataExportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The top level data export resource container.
      * API Version: 2020-08-01.

@@ -87,22 +87,6 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
         return this.storageClassAnalysis;
     }
 
-    public interface BuilderApplicator {
-        public void apply(AnalyticsConfigurationArgs.Builder a);
-    }
-    private static io.pulumi.aws.s3.AnalyticsConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.s3.AnalyticsConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public AnalyticsConfiguration(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

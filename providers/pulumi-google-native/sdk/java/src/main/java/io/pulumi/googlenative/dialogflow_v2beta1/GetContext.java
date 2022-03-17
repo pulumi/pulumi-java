@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetContext {
     private GetContext() {}
-    public interface BuilderApplicator {
-        public void apply(GetContextArgs.Builder a);
-    }
-    private static GetContextArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetContextArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Retrieves the specified context.
- * 
-     */
-    public static CompletableFuture<GetContextResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Retrieves the specified context.
      * 

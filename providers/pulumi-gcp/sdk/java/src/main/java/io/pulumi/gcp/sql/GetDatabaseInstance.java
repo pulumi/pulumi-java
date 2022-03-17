@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDatabaseInstance {
     private GetDatabaseInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatabaseInstanceArgs.Builder a);
-    }
-    private static GetDatabaseInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatabaseInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a Cloud SQL instance.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getDatabaseInstance.
- * 
-     *
-     * A collection of values returned by getDatabaseInstance.
- * 
-     */
-    public static CompletableFuture<GetDatabaseInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a Cloud SQL instance.
      * 

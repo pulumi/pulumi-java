@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProject {
     private GetProject() {}
-    public interface BuilderApplicator {
-        public void apply(GetProjectArgs.Builder a);
-    }
-    private static GetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProjectArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * AWS::DeviceFarm::Project creates a new Device Farm Project
- * 
-     */
-    public static CompletableFuture<GetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * AWS::DeviceFarm::Project creates a new Device Farm Project
      * 

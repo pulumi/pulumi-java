@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAttestor {
     private GetAttestor() {}
-    public interface BuilderApplicator {
-        public void apply(GetAttestorArgs.Builder a);
-    }
-    private static GetAttestorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAttestorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
- * 
-     */
-    public static CompletableFuture<GetAttestorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
      * 

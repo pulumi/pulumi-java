@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDashboard {
     private GetDashboard() {}
-    public interface BuilderApplicator {
-        public void apply(GetDashboardArgs.Builder a);
-    }
-    private static GetDashboardArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDashboardArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
- * 
-     */
-    public static CompletableFuture<GetDashboardResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
      * 

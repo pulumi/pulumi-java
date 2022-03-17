@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWatchlistItem {
     private GetWatchlistItem() {}
-    public interface BuilderApplicator {
-        public void apply(GetWatchlistItemArgs.Builder a);
-    }
-    private static GetWatchlistItemArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWatchlistItemArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a Watchlist item in Azure Security Insights.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Represents a Watchlist item in Azure Security Insights.
- * 
-     */
-    public static CompletableFuture<GetWatchlistItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a Watchlist item in Azure Security Insights.
      * API Version: 2021-03-01-preview.

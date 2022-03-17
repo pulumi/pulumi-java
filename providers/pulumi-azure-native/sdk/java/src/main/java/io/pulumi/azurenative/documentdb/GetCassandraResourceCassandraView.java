@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCassandraResourceCassandraView {
     private GetCassandraResourceCassandraView() {}
-    public interface BuilderApplicator {
-        public void apply(GetCassandraResourceCassandraViewArgs.Builder a);
-    }
-    private static GetCassandraResourceCassandraViewArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCassandraResourceCassandraViewArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An Azure Cosmos DB Cassandra view.
- * API Version: 2021-07-01-preview.
- * 
-     *
-     * An Azure Cosmos DB Cassandra view.
- * 
-     */
-    public static CompletableFuture<GetCassandraResourceCassandraViewResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An Azure Cosmos DB Cassandra view.
      * API Version: 2021-07-01-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPipeline {
     private GetPipeline() {}
-    public interface BuilderApplicator {
-        public void apply(GetPipelineArgs.Builder a);
-    }
-    private static GetPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPipelineArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::SageMaker::Pipeline
- * 
-     */
-    public static CompletableFuture<GetPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::SageMaker::Pipeline
      * 

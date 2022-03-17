@@ -174,22 +174,6 @@ public class Grant extends io.pulumi.resources.CustomResource {
         return this.retiringPrincipal;
     }
 
-    public interface BuilderApplicator {
-        public void apply(GrantArgs.Builder a);
-    }
-    private static io.pulumi.aws.kms.GrantArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.kms.GrantArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Grant(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

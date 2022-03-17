@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSearchApplication {
     private GetSearchApplication() {}
-    public interface BuilderApplicator {
-        public void apply(GetSearchApplicationArgs.Builder a);
-    }
-    private static GetSearchApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSearchApplicationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the specified search application. **Note:** This API requires an admin account to execute.
- * 
-     */
-    public static CompletableFuture<GetSearchApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the specified search application. **Note:** This API requires an admin account to execute.
      * 

@@ -14,27 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetExport {
     private GetExport() {}
-    public interface BuilderApplicator {
-        public void apply(GetExportArgs.Builder a);
-    }
-    private static GetExportArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetExportArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getExport.
- * 
-     *
-     * A collection of values returned by getExport.
- * 
-     */
-    public static CompletableFuture<GetExportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * ## Example Usage
      * 

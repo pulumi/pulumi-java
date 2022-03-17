@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTestBaseAccountFileUploadUrl {
     private GetTestBaseAccountFileUploadUrl() {}
-    public interface BuilderApplicator {
-        public void apply(GetTestBaseAccountFileUploadUrlArgs.Builder a);
-    }
-    private static GetTestBaseAccountFileUploadUrlArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTestBaseAccountFileUploadUrlArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The URL response
- * API Version: 2020-12-16-preview.
- * 
-     *
-     * The URL response
- * 
-     */
-    public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The URL response
      * API Version: 2020-12-16-preview.

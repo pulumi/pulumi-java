@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListAgentPoolQueueStatus {
     private ListAgentPoolQueueStatus() {}
-    public interface BuilderApplicator {
-        public void apply(ListAgentPoolQueueStatusArgs.Builder a);
-    }
-    private static ListAgentPoolQueueStatusArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListAgentPoolQueueStatusArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The QueueStatus of Agent Pool
- * API Version: 2019-06-01-preview.
- * 
-     *
-     * The QueueStatus of Agent Pool
- * 
-     */
-    public static CompletableFuture<ListAgentPoolQueueStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The QueueStatus of Agent Pool
      * API Version: 2019-06-01-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetFaq {
     private GetFaq() {}
-    public interface BuilderApplicator {
-        public void apply(GetFaqArgs.Builder a);
-    }
-    private static GetFaqArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetFaqArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A Kendra FAQ resource
- * 
-     */
-    public static CompletableFuture<GetFaqResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A Kendra FAQ resource
      * 

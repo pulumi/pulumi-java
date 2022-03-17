@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEndpointAccess {
     private GetEndpointAccess() {}
-    public interface BuilderApplicator {
-        public void apply(GetEndpointAccessArgs.Builder a);
-    }
-    private static GetEndpointAccessArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEndpointAccessArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for a Redshift-managed VPC endpoint.
- * 
-     */
-    public static CompletableFuture<GetEndpointAccessResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for a Redshift-managed VPC endpoint.
      * 

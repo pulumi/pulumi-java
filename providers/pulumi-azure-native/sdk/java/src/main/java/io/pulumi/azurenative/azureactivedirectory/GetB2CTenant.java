@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetB2CTenant {
     private GetB2CTenant() {}
-    public interface BuilderApplicator {
-        public void apply(GetB2CTenantArgs.Builder a);
-    }
-    private static GetB2CTenantArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetB2CTenantArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2019-01-01-preview.
- * 
-     */
-    public static CompletableFuture<GetB2CTenantResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2019-01-01-preview.
      * 

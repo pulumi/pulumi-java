@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPredictionTrainingResults {
     private GetPredictionTrainingResults() {}
-    public interface BuilderApplicator {
-        public void apply(GetPredictionTrainingResultsArgs.Builder a);
-    }
-    private static GetPredictionTrainingResultsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPredictionTrainingResultsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The training results of the prediction.
- * API Version: 2017-04-26.
- * 
-     *
-     * The training results of the prediction.
- * 
-     */
-    public static CompletableFuture<GetPredictionTrainingResultsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The training results of the prediction.
      * API Version: 2017-04-26.

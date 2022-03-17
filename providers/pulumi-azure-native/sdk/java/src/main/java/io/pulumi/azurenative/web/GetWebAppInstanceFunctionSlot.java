@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppInstanceFunctionSlot {
     private GetWebAppInstanceFunctionSlot() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppInstanceFunctionSlotArgs.Builder a);
-    }
-    private static GetWebAppInstanceFunctionSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppInstanceFunctionSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Function information.
- * API Version: 2020-12-01.
- * 
-     *
-     * Function information.
- * 
-     */
-    public static CompletableFuture<GetWebAppInstanceFunctionSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Function information.
      * API Version: 2020-12-01.

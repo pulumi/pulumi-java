@@ -87,22 +87,6 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
         return this.serviceAccountCredentials;
     }
 
-    public interface BuilderApplicator {
-        public void apply(DirectoryConfigArgs.Builder a);
-    }
-    private static io.pulumi.aws.appstream.DirectoryConfigArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.appstream.DirectoryConfigArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public DirectoryConfig(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImage {
     private GetImage() {}
-    public interface BuilderApplicator {
-        public void apply(GetImageArgs.Builder a);
-    }
-    private static GetImageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getImage.
- * 
-     *
-     * A collection of values returned by getImage.
- * 
-     */
-    public static CompletableFuture<GetImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.
      * 

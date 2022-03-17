@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadIdentityPool {
     private GetWorkloadIdentityPool() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadIdentityPoolArgs.Builder a);
-    }
-    private static GetWorkloadIdentityPoolArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadIdentityPoolArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a IAM workload identity pool from Google Cloud by its id.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getWorkloadIdentityPool.
- * 
-     *
-     * A collection of values returned by getWorkloadIdentityPool.
- * 
-     */
-    public static CompletableFuture<GetWorkloadIdentityPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a IAM workload identity pool from Google Cloud by its id.
      * 

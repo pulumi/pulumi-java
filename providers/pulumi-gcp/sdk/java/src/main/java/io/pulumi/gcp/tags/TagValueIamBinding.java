@@ -117,22 +117,6 @@ public class TagValueIamBinding extends io.pulumi.resources.CustomResource {
         return this.tagValue;
     }
 
-    public interface BuilderApplicator {
-        public void apply(TagValueIamBindingArgs.Builder a);
-    }
-    private static io.pulumi.gcp.tags.TagValueIamBindingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.gcp.tags.TagValueIamBindingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public TagValueIamBinding(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

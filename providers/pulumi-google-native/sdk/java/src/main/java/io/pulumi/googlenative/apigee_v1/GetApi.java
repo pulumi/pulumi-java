@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApi {
     private GetApi() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiArgs.Builder a);
-    }
-    private static GetApiArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets an API proxy including a list of existing revisions.
- * 
-     */
-    public static CompletableFuture<GetApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets an API proxy including a list of existing revisions.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeviceProfile {
     private GetDeviceProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeviceProfileArgs.Builder a);
-    }
-    private static GetDeviceProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeviceProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Device Profile's resource schema demonstrating some basic constructs and validation rules.
- * 
-     */
-    public static CompletableFuture<GetDeviceProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Device Profile's resource schema demonstrating some basic constructs and validation rules.
      * 

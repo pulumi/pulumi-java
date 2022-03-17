@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkVirtualAppliance {
     private GetNetworkVirtualAppliance() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkVirtualApplianceArgs.Builder a);
-    }
-    private static GetNetworkVirtualApplianceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkVirtualApplianceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NetworkVirtualAppliance Resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * NetworkVirtualAppliance Resource.
- * 
-     */
-    public static CompletableFuture<GetNetworkVirtualApplianceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NetworkVirtualAppliance Resource.
      * API Version: 2020-11-01.

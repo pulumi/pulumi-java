@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetImageVersion {
     private GetImageVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetImageVersionArgs.Builder a);
-    }
-    private static GetImageVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetImageVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::SageMaker::ImageVersion
- * 
-     */
-    public static CompletableFuture<GetImageVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::SageMaker::ImageVersion
      * 

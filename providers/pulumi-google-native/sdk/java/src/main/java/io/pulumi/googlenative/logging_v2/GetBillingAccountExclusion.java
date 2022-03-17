@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBillingAccountExclusion {
     private GetBillingAccountExclusion() {}
-    public interface BuilderApplicator {
-        public void apply(GetBillingAccountExclusionArgs.Builder a);
-    }
-    private static GetBillingAccountExclusionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBillingAccountExclusionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the description of an exclusion in the _Default sink.
- * 
-     */
-    public static CompletableFuture<GetBillingAccountExclusionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the description of an exclusion in the _Default sink.
      * 

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLaunchConfiguration {
     private GetLaunchConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetLaunchConfigurationArgs.Builder a);
-    }
-    private static GetLaunchConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLaunchConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
- * 
-     */
-    public static CompletableFuture<GetLaunchConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
      * 

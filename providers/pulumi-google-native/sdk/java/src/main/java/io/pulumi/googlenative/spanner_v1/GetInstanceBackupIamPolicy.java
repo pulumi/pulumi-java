@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInstanceBackupIamPolicy {
     private GetInstanceBackupIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetInstanceBackupIamPolicyArgs.Builder a);
-    }
-    private static GetInstanceBackupIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInstanceBackupIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a database or backup resource. Returns an empty policy if a database or backup exists but does not have a policy set. Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires `spanner.backups.getIamPolicy` permission on resource.
- * 
-     */
-    public static CompletableFuture<GetInstanceBackupIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a database or backup resource. Returns an empty policy if a database or backup exists but does not have a policy set. Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires `spanner.backups.getIamPolicy` permission on resource.
      * 

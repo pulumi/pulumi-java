@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTemplateArtifact {
     private GetTemplateArtifact() {}
-    public interface BuilderApplicator {
-        public void apply(GetTemplateArtifactArgs.Builder a);
-    }
-    private static GetTemplateArtifactArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTemplateArtifactArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Blueprint artifact that deploys a Resource Manager template.
- * API Version: 2018-11-01-preview.
- * 
-     *
-     * Blueprint artifact that deploys a Resource Manager template.
- * 
-     */
-    public static CompletableFuture<GetTemplateArtifactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Blueprint artifact that deploys a Resource Manager template.
      * API Version: 2018-11-01-preview.

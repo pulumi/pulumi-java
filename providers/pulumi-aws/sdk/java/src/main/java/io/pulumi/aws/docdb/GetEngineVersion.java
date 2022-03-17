@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEngineVersion {
     private GetEngineVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetEngineVersionArgs.Builder a);
-    }
-    private static GetEngineVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEngineVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about a DocumentDB engine version.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getEngineVersion.
- * 
-     *
-     * A collection of values returned by getEngineVersion.
- * 
-     */
-    public static CompletableFuture<GetEngineVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about a DocumentDB engine version.
      * 

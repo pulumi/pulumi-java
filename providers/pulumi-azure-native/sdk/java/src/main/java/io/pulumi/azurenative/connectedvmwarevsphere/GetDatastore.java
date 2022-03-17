@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDatastore {
     private GetDatastore() {}
-    public interface BuilderApplicator {
-        public void apply(GetDatastoreArgs.Builder a);
-    }
-    private static GetDatastoreArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDatastoreArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Define the datastore.
- * API Version: 2020-10-01-preview.
- * 
-     *
-     * Define the datastore.
- * 
-     */
-    public static CompletableFuture<GetDatastoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Define the datastore.
      * API Version: 2020-10-01-preview.

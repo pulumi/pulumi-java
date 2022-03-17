@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetProductPolicy {
     private GetProductPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetProductPolicyArgs.Builder a);
-    }
-    private static GetProductPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetProductPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Policy Contract details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Policy Contract details.
- * 
-     */
-    public static CompletableFuture<GetProductPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Policy Contract details.
      * API Version: 2020-12-01.

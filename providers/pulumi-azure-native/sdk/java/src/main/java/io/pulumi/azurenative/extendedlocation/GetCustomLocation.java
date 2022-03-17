@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCustomLocation {
     private GetCustomLocation() {}
-    public interface BuilderApplicator {
-        public void apply(GetCustomLocationArgs.Builder a);
-    }
-    private static GetCustomLocationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCustomLocationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Custom Locations definition.
- * API Version: 2021-03-15-preview.
- * 
-     *
-     * Custom Locations definition.
- * 
-     */
-    public static CompletableFuture<GetCustomLocationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Custom Locations definition.
      * API Version: 2021-03-15-preview.

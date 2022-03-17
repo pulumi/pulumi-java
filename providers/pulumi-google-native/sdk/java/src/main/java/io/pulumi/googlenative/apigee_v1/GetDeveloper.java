@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDeveloper {
     private GetDeveloper() {}
-    public interface BuilderApplicator {
-        public void apply(GetDeveloperArgs.Builder a);
-    }
-    private static GetDeveloperArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDeveloperArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns the developer details, including the developer's name, email address, apps, and other information. **Note**: The response includes only the first 100 developer apps.
- * 
-     */
-    public static CompletableFuture<GetDeveloperResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns the developer details, including the developer's name, email address, apps, and other information. **Note**: The response includes only the first 100 developer apps.
      * 

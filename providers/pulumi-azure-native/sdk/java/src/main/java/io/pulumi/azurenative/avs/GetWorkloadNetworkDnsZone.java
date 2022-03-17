@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkDnsZone {
     private GetWorkloadNetworkDnsZone() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadNetworkDnsZoneArgs.Builder a);
-    }
-    private static GetWorkloadNetworkDnsZoneArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadNetworkDnsZoneArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * NSX DNS Zone
- * API Version: 2020-07-17-preview.
- * 
-     *
-     * NSX DNS Zone
- * 
-     */
-    public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * NSX DNS Zone
      * API Version: 2020-07-17-preview.

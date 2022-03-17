@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBastionHost {
     private GetBastionHost() {}
-    public interface BuilderApplicator {
-        public void apply(GetBastionHostArgs.Builder a);
-    }
-    private static GetBastionHostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBastionHostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Bastion Host resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Bastion Host resource.
- * 
-     */
-    public static CompletableFuture<GetBastionHostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Bastion Host resource.
      * API Version: 2020-11-01.

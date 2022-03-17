@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEntity {
     private GetEntity() {}
-    public interface BuilderApplicator {
-        public void apply(GetEntityArgs.Builder a);
-    }
-    private static GetEntityArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEntityArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Describes the result of the request to view entities.
- * API Version: 2020-05-01.
- * 
-     *
-     * Describes the result of the request to view entities.
- * 
-     */
-    public static CompletableFuture<GetEntityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Describes the result of the request to view entities.
      * API Version: 2020-05-01.

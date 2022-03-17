@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSnapshotIds {
     private GetSnapshotIds() {}
-    public interface BuilderApplicator {
-        public void apply(GetSnapshotIdsArgs.Builder a);
-    }
-    private static GetSnapshotIdsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSnapshotIdsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get a list of EBS Snapshot IDs matching the specified
- * criteria.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSnapshotIds.
- * 
-     *
-     * A collection of values returned by getSnapshotIds.
- * 
-     */
-    public static CompletableFuture<GetSnapshotIdsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get a list of EBS Snapshot IDs matching the specified
      * criteria.

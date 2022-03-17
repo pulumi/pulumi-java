@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSqlManagedInstance {
     private GetSqlManagedInstance() {}
-    public interface BuilderApplicator {
-        public void apply(GetSqlManagedInstanceArgs.Builder a);
-    }
-    private static GetSqlManagedInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSqlManagedInstanceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A SqlManagedInstance.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * A SqlManagedInstance.
- * 
-     */
-    public static CompletableFuture<GetSqlManagedInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A SqlManagedInstance.
      * API Version: 2021-06-01-preview.

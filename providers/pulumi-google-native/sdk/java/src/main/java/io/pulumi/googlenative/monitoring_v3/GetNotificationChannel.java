@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
     private GetNotificationChannel() {}
-    public interface BuilderApplicator {
-        public void apply(GetNotificationChannelArgs.Builder a);
-    }
-    private static GetNotificationChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNotificationChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets a single notification channel. The channel includes the relevant configuration details with which the channel was created. However, the response may truncate or omit passwords, API keys, or other private key matter and thus the response may not be 100% identical to the information that was supplied in the call to the create method.
- * 
-     */
-    public static CompletableFuture<GetNotificationChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets a single notification channel. The channel includes the relevant configuration details with which the channel was created. However, the response may truncate or omit passwords, API keys, or other private key matter and thus the response may not be 100% identical to the information that was supplied in the call to the create method.
      * 

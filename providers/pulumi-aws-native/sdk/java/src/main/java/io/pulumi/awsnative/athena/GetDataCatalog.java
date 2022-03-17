@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataCatalog {
     private GetDataCatalog() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataCatalogArgs.Builder a);
-    }
-    private static GetDataCatalogArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataCatalogArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::Athena::DataCatalog
- * 
-     */
-    public static CompletableFuture<GetDataCatalogResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::Athena::DataCatalog
      * 

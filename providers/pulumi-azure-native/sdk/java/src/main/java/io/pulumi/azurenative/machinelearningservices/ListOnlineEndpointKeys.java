@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListOnlineEndpointKeys {
     private ListOnlineEndpointKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListOnlineEndpointKeysArgs.Builder a);
-    }
-    private static ListOnlineEndpointKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListOnlineEndpointKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Keys for endpoint authentication.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Keys for endpoint authentication.
- * 
-     */
-    public static CompletableFuture<ListOnlineEndpointKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Keys for endpoint authentication.
      * API Version: 2021-03-01-preview.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApiIssueComment {
     private GetApiIssueComment() {}
-    public interface BuilderApplicator {
-        public void apply(GetApiIssueCommentArgs.Builder a);
-    }
-    private static GetApiIssueCommentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApiIssueCommentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Issue Comment Contract details.
- * API Version: 2020-12-01.
- * 
-     *
-     * Issue Comment Contract details.
- * 
-     */
-    public static CompletableFuture<GetApiIssueCommentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Issue Comment Contract details.
      * API Version: 2020-12-01.

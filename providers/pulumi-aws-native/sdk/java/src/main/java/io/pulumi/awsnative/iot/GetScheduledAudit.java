@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetScheduledAudit {
     private GetScheduledAudit() {}
-    public interface BuilderApplicator {
-        public void apply(GetScheduledAuditArgs.Builder a);
-    }
-    private static GetScheduledAuditArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetScheduledAuditArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Scheduled audits can be used to specify the checks you want to perform during an audit and how often the audit should be run.
- * 
-     */
-    public static CompletableFuture<GetScheduledAuditResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Scheduled audits can be used to specify the checks you want to perform during an audit and how often the audit should be run.
      * 

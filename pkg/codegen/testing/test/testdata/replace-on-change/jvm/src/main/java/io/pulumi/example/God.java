@@ -20,22 +20,6 @@ public class God extends io.pulumi.resources.CustomResource {
         return this.backwards;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable GodArgs.Builder a);
-    }
-    private static io.pulumi.example.GodArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.example.GodArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public God(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

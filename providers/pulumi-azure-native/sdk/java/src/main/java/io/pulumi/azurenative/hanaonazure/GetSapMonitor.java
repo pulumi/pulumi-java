@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSapMonitor {
     private GetSapMonitor() {}
-    public interface BuilderApplicator {
-        public void apply(GetSapMonitorArgs.Builder a);
-    }
-    private static GetSapMonitorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSapMonitorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * SAP monitor info on Azure (ARM properties and SAP monitor properties)
- * API Version: 2020-02-07-preview.
- * 
-     *
-     * SAP monitor info on Azure (ARM properties and SAP monitor properties)
- * 
-     */
-    public static CompletableFuture<GetSapMonitorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * SAP monitor info on Azure (ARM properties and SAP monitor properties)
      * API Version: 2020-02-07-preview.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetReplicationSet {
     private GetReplicationSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetReplicationSetArgs.Builder a);
-    }
-    private static GetReplicationSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetReplicationSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource type definition for AWS::SSMIncidents::ReplicationSet
- * 
-     */
-    public static CompletableFuture<GetReplicationSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource type definition for AWS::SSMIncidents::ReplicationSet
      * 

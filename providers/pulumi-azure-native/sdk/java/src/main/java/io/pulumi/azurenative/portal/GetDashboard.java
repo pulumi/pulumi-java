@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDashboard {
     private GetDashboard() {}
-    public interface BuilderApplicator {
-        public void apply(GetDashboardArgs.Builder a);
-    }
-    private static GetDashboardArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDashboardArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The shared dashboard resource definition.
- * API Version: 2020-09-01-preview.
- * 
-     *
-     * The shared dashboard resource definition.
- * 
-     */
-    public static CompletableFuture<GetDashboardResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The shared dashboard resource definition.
      * API Version: 2020-09-01-preview.

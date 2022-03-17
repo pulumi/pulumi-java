@@ -14,29 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOutpost {
     private GetOutpost() {}
-    public interface BuilderApplicator {
-        public void apply(GetOutpostArgs.Builder a);
-    }
-    private static GetOutpostArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOutpostArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Provides details about an Outposts Outpost.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getOutpost.
- * 
-     *
-     * A collection of values returned by getOutpost.
- * 
-     */
-    public static CompletableFuture<GetOutpostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Provides details about an Outposts Outpost.
      * 

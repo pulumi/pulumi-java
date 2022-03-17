@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetHookVersion {
     private GetHookVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetHookVersionArgs.Builder a);
-    }
-    private static GetHookVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetHookVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Publishes new or first hook version to AWS CloudFormation Registry.
- * 
-     */
-    public static CompletableFuture<GetHookVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Publishes new or first hook version to AWS CloudFormation Registry.
      * 

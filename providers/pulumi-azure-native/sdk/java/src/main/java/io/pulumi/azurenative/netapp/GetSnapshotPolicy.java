@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSnapshotPolicy {
     private GetSnapshotPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetSnapshotPolicyArgs.Builder a);
-    }
-    private static GetSnapshotPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSnapshotPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Snapshot policy information
- * API Version: 2020-12-01.
- * 
-     *
-     * Snapshot policy information
- * 
-     */
-    public static CompletableFuture<GetSnapshotPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Snapshot policy information
      * API Version: 2020-12-01.

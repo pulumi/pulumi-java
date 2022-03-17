@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkload {
     private GetWorkload() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkloadArgs.Builder a);
-    }
-    private static GetWorkloadArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkloadArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets Assured Workload associated with a CRM Node
- * 
-     */
-    public static CompletableFuture<GetWorkloadResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets Assured Workload associated with a CRM Node
      * 

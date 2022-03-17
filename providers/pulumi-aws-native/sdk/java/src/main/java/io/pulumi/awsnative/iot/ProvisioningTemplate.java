@@ -70,22 +70,6 @@ public class ProvisioningTemplate extends io.pulumi.resources.CustomResource {
         return this.templateName;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ProvisioningTemplateArgs.Builder a);
-    }
-    private static io.pulumi.awsnative.iot.ProvisioningTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.awsnative.iot.ProvisioningTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ProvisioningTemplate(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

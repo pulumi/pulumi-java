@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetGroup {
     private GetGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetGroupArgs.Builder a);
-    }
-    private static GetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This data source can be used to fetch information about a specific
- * IAM group. By using this data source, you can reference IAM group
- * properties without having to hard code ARNs as input.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getGroup.
- * 
-     *
-     * A collection of values returned by getGroup.
- * 
-     */
-    public static CompletableFuture<GetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This data source can be used to fetch information about a specific
      * IAM group. By using this data source, you can reference IAM group

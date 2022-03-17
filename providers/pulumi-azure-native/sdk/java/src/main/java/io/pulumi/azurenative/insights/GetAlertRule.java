@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetAlertRule {
     private GetAlertRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetAlertRuleArgs.Builder a);
-    }
-    private static GetAlertRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetAlertRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The alert rule resource.
- * API Version: 2016-03-01.
- * 
-     *
-     * The alert rule resource.
- * 
-     */
-    public static CompletableFuture<GetAlertRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The alert rule resource.
      * API Version: 2016-03-01.

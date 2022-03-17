@@ -199,22 +199,6 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
         return this.vpcId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable SecurityGroupArgs.Builder a);
-    }
-    private static io.pulumi.aws.ec2.SecurityGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ec2.SecurityGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public SecurityGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

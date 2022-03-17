@@ -14,34 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIAMPolicy {
     private GetIAMPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetIAMPolicyArgs.Builder a);
-    }
-    private static GetIAMPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIAMPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Generates an IAM policy document that may be referenced by and applied to
- * other Google Cloud Platform IAM resources, such as the `gcp.projects.IAMPolicy` resource.
- * 
- * **Note:** Please review the documentation of the resource that you will be using the datasource with. Some resources such as `gcp.projects.IAMPolicy` and others have limitations in their API methods which are noted on their respective page.
- * 
- * This data source is used to define IAM policies to apply to other resources.
- * Currently, defining a policy through a datasource and referencing that policy
- * from another resource is the only way to apply an IAM policy to a resource.
- * 
-     *
-     * A collection of arguments for invoking getIAMPolicy.
- * 
-     *
-     * A collection of values returned by getIAMPolicy.
- * 
-     */
-    public static CompletableFuture<GetIAMPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Generates an IAM policy document that may be referenced by and applied to
      * other Google Cloud Platform IAM resources, such as the `gcp.projects.IAMPolicy` resource.

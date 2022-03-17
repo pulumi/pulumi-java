@@ -215,22 +215,6 @@ public class WebTest extends io.pulumi.resources.CustomResource {
         return this.webTestName;
     }
 
-    public interface BuilderApplicator {
-        public void apply(WebTestArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.insights.WebTestArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.insights.WebTestArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public WebTest(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

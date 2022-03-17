@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceProfile {
     private GetServiceProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceProfileArgs.Builder a);
-    }
-    private static GetServiceProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An example resource schema demonstrating some basic constructs and validation rules.
- * 
-     */
-    public static CompletableFuture<GetServiceProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An example resource schema demonstrating some basic constructs and validation rules.
      * 

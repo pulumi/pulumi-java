@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppRelayServiceConnection {
     private GetWebAppRelayServiceConnection() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppRelayServiceConnectionArgs.Builder a);
-    }
-    private static GetWebAppRelayServiceConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppRelayServiceConnectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Hybrid Connection for an App Service app.
- * API Version: 2020-12-01.
- * 
-     *
-     * Hybrid Connection for an App Service app.
- * 
-     */
-    public static CompletableFuture<GetWebAppRelayServiceConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Hybrid Connection for an App Service app.
      * API Version: 2020-12-01.

@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetEC2Fleet {
     private GetEC2Fleet() {}
-    public interface BuilderApplicator {
-        public void apply(GetEC2FleetArgs.Builder a);
-    }
-    private static GetEC2FleetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEC2FleetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::EC2::EC2Fleet
- * 
-     */
-    public static CompletableFuture<GetEC2FleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::EC2::EC2Fleet
      * 

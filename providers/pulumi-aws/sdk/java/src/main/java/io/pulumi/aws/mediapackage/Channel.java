@@ -116,22 +116,6 @@ public class Channel extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ChannelArgs.Builder a);
-    }
-    private static io.pulumi.aws.mediapackage.ChannelArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.mediapackage.ChannelArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public Channel(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

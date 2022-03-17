@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
 public class GetEntityQuery {
     private GetEntityQuery() {}
-    public interface BuilderApplicator {
-        public void apply(GetEntityQueryArgs.Builder a);
-    }
-    private static GetEntityQueryArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEntityQueryArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Specific entity query.
- * API Version: 2021-03-01-preview.
- * 
-     *
-     * Specific entity query.
- * 
-     * @Deprecated
-     * Please use one of the variants: ActivityCustomEntityQuery.
- * 
-     */
-    public static CompletableFuture<GetEntityQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Specific entity query.
      * API Version: 2021-03-01-preview.

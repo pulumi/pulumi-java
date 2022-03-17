@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetUser {
     private GetUser() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserArgs.Builder a);
-    }
-    private static GetUserArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::Connect::User
- * 
-     */
-    public static CompletableFuture<GetUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::Connect::User
      * 

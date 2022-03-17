@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBackup {
     private GetBackup() {}
-    public interface BuilderApplicator {
-        public void apply(GetBackupArgs.Builder a);
-    }
-    private static GetBackupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBackupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the details of a specific backup.
- * 
-     */
-    public static CompletableFuture<GetBackupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the details of a specific backup.
      * 

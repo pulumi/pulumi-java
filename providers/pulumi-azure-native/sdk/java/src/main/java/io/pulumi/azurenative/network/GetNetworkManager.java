@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkManager {
     private GetNetworkManager() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkManagerArgs.Builder a);
-    }
-    private static GetNetworkManagerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkManagerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Managed Network resource
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * The Managed Network resource
- * 
-     */
-    public static CompletableFuture<GetNetworkManagerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Managed Network resource
      * API Version: 2021-02-01-preview.

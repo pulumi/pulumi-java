@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPackageVersion {
     private GetPackageVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetPackageVersionArgs.Builder a);
-    }
-    private static GetPackageVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPackageVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schema for PackageVersion Resource Type
- * 
-     */
-    public static CompletableFuture<GetPackageVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schema for PackageVersion Resource Type
      * 

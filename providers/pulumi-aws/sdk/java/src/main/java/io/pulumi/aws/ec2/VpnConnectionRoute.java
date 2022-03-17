@@ -49,22 +49,6 @@ public class VpnConnectionRoute extends io.pulumi.resources.CustomResource {
         return this.vpnConnectionId;
     }
 
-    public interface BuilderApplicator {
-        public void apply(VpnConnectionRouteArgs.Builder a);
-    }
-    private static io.pulumi.aws.ec2.VpnConnectionRouteArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.aws.ec2.VpnConnectionRouteArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public VpnConnectionRoute(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

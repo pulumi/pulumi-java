@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetApplication {
     private GetApplication() {}
-    public interface BuilderApplicator {
-        public void apply(GetApplicationArgs.Builder a);
-    }
-    private static GetApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetApplicationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Schema for Application properties.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Schema for Application properties.
- * 
-     */
-    public static CompletableFuture<GetApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Schema for Application properties.
      * API Version: 2021-02-01-preview.

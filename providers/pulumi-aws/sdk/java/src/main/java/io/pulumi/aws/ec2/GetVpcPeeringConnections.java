@@ -14,28 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVpcPeeringConnections {
     private GetVpcPeeringConnections() {}
-    public interface BuilderApplicator {
-        public void apply(GetVpcPeeringConnectionsArgs.Builder a);
-    }
-    private static GetVpcPeeringConnectionsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVpcPeeringConnectionsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get IDs of Amazon VPC peering connections
- * To get more details on each connection, use the data resource `aws.ec2.VpcPeeringConnection`
- * 
-     *
-     * A collection of arguments for invoking getVpcPeeringConnections.
- * 
-     *
-     * A collection of values returned by getVpcPeeringConnections.
- * 
-     */
-    public static CompletableFuture<GetVpcPeeringConnectionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get IDs of Amazon VPC peering connections
      * To get more details on each connection, use the data resource `aws.ec2.VpcPeeringConnection`

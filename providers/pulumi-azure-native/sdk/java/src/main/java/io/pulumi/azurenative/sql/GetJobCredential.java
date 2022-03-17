@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetJobCredential {
     private GetJobCredential() {}
-    public interface BuilderApplicator {
-        public void apply(GetJobCredentialArgs.Builder a);
-    }
-    private static GetJobCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetJobCredentialArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A stored credential that can be used by a job to connect to target databases.
- * API Version: 2020-11-01-preview.
- * 
-     *
-     * A stored credential that can be used by a job to connect to target databases.
- * 
-     */
-    public static CompletableFuture<GetJobCredentialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A stored credential that can be used by a job to connect to target databases.
      * API Version: 2020-11-01-preview.

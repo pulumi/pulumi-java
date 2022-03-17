@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRecordingConfiguration {
     private GetRecordingConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(GetRecordingConfigurationArgs.Builder a);
-    }
-    private static GetRecordingConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRecordingConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Type definition for AWS::IVS::RecordingConfiguration
- * 
-     */
-    public static CompletableFuture<GetRecordingConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Type definition for AWS::IVS::RecordingConfiguration
      * 

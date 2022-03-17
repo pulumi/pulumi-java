@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCloudConnector {
     private GetCloudConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetCloudConnectorArgs.Builder a);
-    }
-    private static GetCloudConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCloudConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The Connector model definition
- * API Version: 2019-03-01-preview.
- * 
-     *
-     * The Connector model definition
- * 
-     */
-    public static CompletableFuture<GetCloudConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The Connector model definition
      * API Version: 2019-03-01-preview.

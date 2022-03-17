@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListConnectedClusterUserCredential {
     private ListConnectedClusterUserCredential() {}
-    public interface BuilderApplicator {
-        public void apply(ListConnectedClusterUserCredentialArgs.Builder a);
-    }
-    private static ListConnectedClusterUserCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListConnectedClusterUserCredentialArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The list of credential result response.
- * API Version: 2021-10-01.
- * 
-     *
-     * The list of credential result response.
- * 
-     */
-    public static CompletableFuture<ListConnectedClusterUserCredentialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The list of credential result response.
      * API Version: 2021-10-01.

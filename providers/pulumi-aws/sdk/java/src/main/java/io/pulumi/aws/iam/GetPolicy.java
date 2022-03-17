@@ -14,30 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPolicy {
     private GetPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetPolicyArgs.Builder a);
-    }
-    private static GetPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * This data source can be used to fetch information about a specific
- * IAM policy.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getPolicy.
- * 
-     *
-     * A collection of values returned by getPolicy.
- * 
-     */
-    public static CompletableFuture<GetPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * This data source can be used to fetch information about a specific
      * IAM policy.

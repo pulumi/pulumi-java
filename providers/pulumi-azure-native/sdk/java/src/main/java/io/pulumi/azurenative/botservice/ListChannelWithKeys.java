@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListChannelWithKeys {
     private ListChannelWithKeys() {}
-    public interface BuilderApplicator {
-        public void apply(ListChannelWithKeysArgs.Builder a);
-    }
-    private static ListChannelWithKeysArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListChannelWithKeysArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The ARM channel of list channel with keys operation response.
- * API Version: 2021-03-01.
- * 
-     *
-     * The ARM channel of list channel with keys operation response.
- * 
-     */
-    public static CompletableFuture<ListChannelWithKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The ARM channel of list channel with keys operation response.
      * API Version: 2021-03-01.

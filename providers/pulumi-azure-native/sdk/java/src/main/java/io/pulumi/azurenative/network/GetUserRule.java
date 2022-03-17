@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: DefaultUserRule, UserRule. */
 public class GetUserRule {
     private GetUserRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetUserRuleArgs.Builder a);
-    }
-    private static GetUserRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetUserRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Network base rule.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Network base rule.
- * 
-     * @Deprecated
-     * Please use one of the variants: DefaultUserRule, UserRule.
- * 
-     */
-    public static CompletableFuture<GetUserRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Network base rule.
      * API Version: 2021-02-01-preview.

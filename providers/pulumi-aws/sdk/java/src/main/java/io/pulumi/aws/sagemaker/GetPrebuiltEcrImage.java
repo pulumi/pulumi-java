@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPrebuiltEcrImage {
     private GetPrebuiltEcrImage() {}
-    public interface BuilderApplicator {
-        public void apply(GetPrebuiltEcrImageArgs.Builder a);
-    }
-    private static GetPrebuiltEcrImageArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPrebuiltEcrImageArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get information about prebuilt Amazon SageMaker Docker images.
- * 
- * > **NOTE:** The AWS provider creates a validly constructed `registry_path` but does not verify that the `registry_path` corresponds to an existing image. For example, using a `registry_path` containing an `image_tag` that does not correspond to a Docker image in the ECR repository, will result in an error.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getPrebuiltEcrImage.
- * 
-     *
-     * A collection of values returned by getPrebuiltEcrImage.
- * 
-     */
-    public static CompletableFuture<GetPrebuiltEcrImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get information about prebuilt Amazon SageMaker Docker images.
      * 

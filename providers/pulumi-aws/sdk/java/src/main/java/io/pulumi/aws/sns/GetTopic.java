@@ -14,31 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetTopic {
     private GetTopic() {}
-    public interface BuilderApplicator {
-        public void apply(GetTopicArgs.Builder a);
-    }
-    private static GetTopicArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetTopicArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get the ARN of a topic in AWS Simple Notification
- * Service (SNS). By using this data source, you can reference SNS topics
- * without having to hard code the ARNs as input.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getTopic.
- * 
-     *
-     * A collection of values returned by getTopic.
- * 
-     */
-    public static CompletableFuture<GetTopicResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get the ARN of a topic in AWS Simple Notification
      * Service (SNS). By using this data source, you can reference SNS topics

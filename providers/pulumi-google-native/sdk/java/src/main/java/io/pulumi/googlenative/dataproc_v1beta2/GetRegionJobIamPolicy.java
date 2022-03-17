@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetRegionJobIamPolicy {
     private GetRegionJobIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetRegionJobIamPolicyArgs.Builder a);
-    }
-    private static GetRegionJobIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetRegionJobIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- * 
-     */
-    public static CompletableFuture<GetRegionJobIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 

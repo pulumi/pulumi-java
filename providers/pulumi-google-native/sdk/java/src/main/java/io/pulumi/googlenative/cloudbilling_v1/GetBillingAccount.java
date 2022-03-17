@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetBillingAccount {
     private GetBillingAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetBillingAccountArgs.Builder a);
-    }
-    private static GetBillingAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetBillingAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets information about a billing account. The current authenticated user must be a [viewer of the billing account](https://cloud.google.com/billing/docs/how-to/billing-access).
- * 
-     */
-    public static CompletableFuture<GetBillingAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets information about a billing account. The current authenticated user must be a [viewer of the billing account](https://cloud.google.com/billing/docs/how-to/billing-access).
      * 

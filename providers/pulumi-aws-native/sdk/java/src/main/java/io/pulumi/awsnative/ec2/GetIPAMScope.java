@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIPAMScope {
     private GetIPAMScope() {}
-    public interface BuilderApplicator {
-        public void apply(GetIPAMScopeArgs.Builder a);
-    }
-    private static GetIPAMScopeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIPAMScopeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema of AWS::EC2::IPAMScope Type
- * 
-     */
-    public static CompletableFuture<GetIPAMScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema of AWS::EC2::IPAMScope Type
      * 

@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: Gen1Environment, Gen2Environment. */
 public class GetEnvironment {
     private GetEnvironment() {}
-    public interface BuilderApplicator {
-        public void apply(GetEnvironmentArgs.Builder a);
-    }
-    private static GetEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetEnvironmentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
- * API Version: 2020-05-15.
- * 
-     *
-     * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
- * 
-     * @Deprecated
-     * Please use one of the variants: Gen1Environment, Gen2Environment.
- * 
-     */
-    public static CompletableFuture<GetEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
      * API Version: 2020-05-15.

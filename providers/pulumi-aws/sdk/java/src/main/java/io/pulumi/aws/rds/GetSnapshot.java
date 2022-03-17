@@ -14,32 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetSnapshot {
     private GetSnapshot() {}
-    public interface BuilderApplicator {
-        public void apply(GetSnapshotArgs.Builder a);
-    }
-    private static GetSnapshotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetSnapshotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Use this data source to get information about a DB Snapshot for use when provisioning DB instances
- * 
- * > **NOTE:** This data source does not apply to snapshots created on Aurora DB clusters.
- * See the `aws.rds.ClusterSnapshot` data source for DB Cluster snapshots.
- * 
- * ## Example Usage
- * 
-     *
-     * A collection of arguments for invoking getSnapshot.
- * 
-     *
-     * A collection of values returned by getSnapshot.
- * 
-     */
-    public static CompletableFuture<GetSnapshotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Use this data source to get information about a DB Snapshot for use when provisioning DB instances
      * 

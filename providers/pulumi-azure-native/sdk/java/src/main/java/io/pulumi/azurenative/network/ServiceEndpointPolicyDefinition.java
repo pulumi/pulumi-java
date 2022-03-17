@@ -115,22 +115,6 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
         return this.serviceResources;
     }
 
-    public interface BuilderApplicator {
-        public void apply(ServiceEndpointPolicyDefinitionArgs.Builder a);
-    }
-    private static io.pulumi.azurenative.network.ServiceEndpointPolicyDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.azurenative.network.ServiceEndpointPolicyDefinitionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ServiceEndpointPolicyDefinition(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

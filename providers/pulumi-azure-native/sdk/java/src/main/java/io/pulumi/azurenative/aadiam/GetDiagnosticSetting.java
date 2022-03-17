@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDiagnosticSetting {
     private GetDiagnosticSetting() {}
-    public interface BuilderApplicator {
-        public void apply(GetDiagnosticSettingArgs.Builder a);
-    }
-    private static GetDiagnosticSettingArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDiagnosticSettingArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The diagnostic setting resource.
- * API Version: 2017-04-01.
- * 
-     *
-     * The diagnostic setting resource.
- * 
-     */
-    public static CompletableFuture<GetDiagnosticSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The diagnostic setting resource.
      * API Version: 2017-04-01.

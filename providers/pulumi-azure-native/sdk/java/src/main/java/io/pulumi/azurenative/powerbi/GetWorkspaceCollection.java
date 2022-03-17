@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWorkspaceCollection {
     private GetWorkspaceCollection() {}
-    public interface BuilderApplicator {
-        public void apply(GetWorkspaceCollectionArgs.Builder a);
-    }
-    private static GetWorkspaceCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWorkspaceCollectionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * API Version: 2016-01-29.
- * 
-     */
-    public static CompletableFuture<GetWorkspaceCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * API Version: 2016-01-29.
      * 

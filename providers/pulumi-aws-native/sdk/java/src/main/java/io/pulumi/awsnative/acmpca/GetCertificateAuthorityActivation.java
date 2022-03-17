@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCertificateAuthorityActivation {
     private GetCertificateAuthorityActivation() {}
-    public interface BuilderApplicator {
-        public void apply(GetCertificateAuthorityActivationArgs.Builder a);
-    }
-    private static GetCertificateAuthorityActivationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCertificateAuthorityActivationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Used to install the certificate authority certificate and update the certificate authority status.
- * 
-     */
-    public static CompletableFuture<GetCertificateAuthorityActivationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Used to install the certificate authority certificate and update the certificate authority status.
      * 

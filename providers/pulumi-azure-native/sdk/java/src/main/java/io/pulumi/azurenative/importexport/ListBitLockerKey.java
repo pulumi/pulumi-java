@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListBitLockerKey {
     private ListBitLockerKey() {}
-    public interface BuilderApplicator {
-        public void apply(ListBitLockerKeyArgs.Builder a);
-    }
-    private static ListBitLockerKeyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListBitLockerKeyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * GetBitLockerKeys response
- * API Version: 2020-08-01.
- * 
-     *
-     * GetBitLockerKeys response
- * 
-     */
-    public static CompletableFuture<ListBitLockerKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * GetBitLockerKeys response
      * API Version: 2020-08-01.

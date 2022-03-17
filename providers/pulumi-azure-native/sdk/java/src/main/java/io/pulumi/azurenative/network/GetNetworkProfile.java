@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetNetworkProfile {
     private GetNetworkProfile() {}
-    public interface BuilderApplicator {
-        public void apply(GetNetworkProfileArgs.Builder a);
-    }
-    private static GetNetworkProfileArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetNetworkProfileArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Network profile resource.
- * API Version: 2020-11-01.
- * 
-     *
-     * Network profile resource.
- * 
-     */
-    public static CompletableFuture<GetNetworkProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Network profile resource.
      * API Version: 2020-11-01.

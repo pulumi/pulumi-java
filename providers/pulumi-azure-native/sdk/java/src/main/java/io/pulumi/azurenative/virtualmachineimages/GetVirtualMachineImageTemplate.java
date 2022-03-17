@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetVirtualMachineImageTemplate {
     private GetVirtualMachineImageTemplate() {}
-    public interface BuilderApplicator {
-        public void apply(GetVirtualMachineImageTemplateArgs.Builder a);
-    }
-    private static GetVirtualMachineImageTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetVirtualMachineImageTemplateArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
- * API Version: 2020-02-14.
- * 
-     *
-     * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
- * 
-     */
-    public static CompletableFuture<GetVirtualMachineImageTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
      * API Version: 2020-02-14.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListContainerAppSecrets {
     private ListContainerAppSecrets() {}
-    public interface BuilderApplicator {
-        public void apply(ListContainerAppSecretsArgs.Builder a);
-    }
-    private static ListContainerAppSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListContainerAppSecretsArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Container App Secrets Collection ARM resource.
- * API Version: 2021-03-01.
- * 
-     *
-     * Container App Secrets Collection ARM resource.
- * 
-     */
-    public static CompletableFuture<ListContainerAppSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Container App Secrets Collection ARM resource.
      * API Version: 2021-03-01.

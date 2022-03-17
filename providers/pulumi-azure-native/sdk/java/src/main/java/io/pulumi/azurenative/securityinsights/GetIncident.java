@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetIncident {
     private GetIncident() {}
-    public interface BuilderApplicator {
-        public void apply(GetIncidentArgs.Builder a);
-    }
-    private static GetIncidentArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetIncidentArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents an incident in Azure Security Insights.
- * API Version: 2020-01-01.
- * 
-     *
-     * Represents an incident in Azure Security Insights.
- * 
-     */
-    public static CompletableFuture<GetIncidentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents an incident in Azure Security Insights.
      * API Version: 2020-01-01.

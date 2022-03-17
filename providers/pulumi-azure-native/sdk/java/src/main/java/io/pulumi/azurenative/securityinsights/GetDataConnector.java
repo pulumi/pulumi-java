@@ -15,28 +15,6 @@ import javax.annotation.Nullable;
 @Deprecated /* Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector. */
 public class GetDataConnector {
     private GetDataConnector() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataConnectorArgs.Builder a);
-    }
-    private static GetDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataConnectorArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Data connector.
- * API Version: 2020-01-01.
- * 
-     *
-     * Data connector.
- * 
-     * @Deprecated
-     * Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector.
- * 
-     */
-    public static CompletableFuture<GetDataConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Data connector.
      * API Version: 2020-01-01.

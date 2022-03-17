@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetWebAppDomainOwnershipIdentifierSlot {
     private GetWebAppDomainOwnershipIdentifierSlot() {}
-    public interface BuilderApplicator {
-        public void apply(GetWebAppDomainOwnershipIdentifierSlotArgs.Builder a);
-    }
-    private static GetWebAppDomainOwnershipIdentifierSlotArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetWebAppDomainOwnershipIdentifierSlotArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A domain specific resource identifier.
- * API Version: 2020-12-01.
- * 
-     *
-     * A domain specific resource identifier.
- * 
-     */
-    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A domain specific resource identifier.
      * API Version: 2020-12-01.

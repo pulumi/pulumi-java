@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetObjectType {
     private GetObjectType() {}
-    public interface BuilderApplicator {
-        public void apply(GetObjectTypeArgs.Builder a);
-    }
-    private static GetObjectTypeArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetObjectTypeArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * An ObjectType resource of Amazon Connect Customer Profiles
- * 
-     */
-    public static CompletableFuture<GetObjectTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * An ObjectType resource of Amazon Connect Customer Profiles
      * 

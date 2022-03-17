@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetDataManager {
     private GetDataManager() {}
-    public interface BuilderApplicator {
-        public void apply(GetDataManagerArgs.Builder a);
-    }
-    private static GetDataManagerArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetDataManagerArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * The DataManager resource.
- * API Version: 2019-06-01.
- * 
-     *
-     * The DataManager resource.
- * 
-     */
-    public static CompletableFuture<GetDataManagerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * The DataManager resource.
      * API Version: 2019-06-01.

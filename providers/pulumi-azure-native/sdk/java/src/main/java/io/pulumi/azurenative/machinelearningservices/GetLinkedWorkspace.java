@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLinkedWorkspace {
     private GetLinkedWorkspace() {}
-    public interface BuilderApplicator {
-        public void apply(GetLinkedWorkspaceArgs.Builder a);
-    }
-    private static GetLinkedWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLinkedWorkspaceArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Linked workspace.
- * API Version: 2020-03-01.
- * 
-     *
-     * Linked workspace.
- * 
-     */
-    public static CompletableFuture<GetLinkedWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Linked workspace.
      * API Version: 2020-03-01.

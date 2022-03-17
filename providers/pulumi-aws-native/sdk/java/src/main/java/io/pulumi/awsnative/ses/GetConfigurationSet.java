@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetConfigurationSet {
     private GetConfigurationSet() {}
-    public interface BuilderApplicator {
-        public void apply(GetConfigurationSetArgs.Builder a);
-    }
-    private static GetConfigurationSetArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetConfigurationSetArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::SES::ConfigurationSet.
- * 
-     */
-    public static CompletableFuture<GetConfigurationSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::SES::ConfigurationSet.
      * 

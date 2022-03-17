@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetCryptoKeyVersion {
     private GetCryptoKeyVersion() {}
-    public interface BuilderApplicator {
-        public void apply(GetCryptoKeyVersionArgs.Builder a);
-    }
-    private static GetCryptoKeyVersionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetCryptoKeyVersionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Returns metadata for a given CryptoKeyVersion.
- * 
-     */
-    public static CompletableFuture<GetCryptoKeyVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Returns metadata for a given CryptoKeyVersion.
      * 

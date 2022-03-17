@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class ListEffectiveConnectivityConfiguration {
     private ListEffectiveConnectivityConfiguration() {}
-    public interface BuilderApplicator {
-        public void apply(ListEffectiveConnectivityConfigurationArgs.Builder a);
-    }
-    private static ListEffectiveConnectivityConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = ListEffectiveConnectivityConfigurationArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Result of the request to list networkManagerEffectiveConnectivityConfiguration. It contains a list of groups and a skiptoken to get the next set of results.
- * API Version: 2021-02-01-preview.
- * 
-     *
-     * Result of the request to list networkManagerEffectiveConnectivityConfiguration. It contains a list of groups and a skiptoken to get the next set of results.
- * 
-     */
-    public static CompletableFuture<ListEffectiveConnectivityConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Result of the request to list networkManagerEffectiveConnectivityConfiguration. It contains a list of groups and a skiptoken to get the next set of results.
      * API Version: 2021-02-01-preview.

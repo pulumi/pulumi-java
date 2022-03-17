@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetStorageAccount {
     private GetStorageAccount() {}
-    public interface BuilderApplicator {
-        public void apply(GetStorageAccountArgs.Builder a);
-    }
-    private static GetStorageAccountArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetStorageAccountArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Represents a Storage Account on the  Data Box Edge/Gateway device.
- * API Version: 2020-12-01.
- * 
-     *
-     * Represents a Storage Account on the  Data Box Edge/Gateway device.
- * 
-     */
-    public static CompletableFuture<GetStorageAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Represents a Storage Account on the  Data Box Edge/Gateway device.
      * API Version: 2020-12-01.

@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetInboundNatRule {
     private GetInboundNatRule() {}
-    public interface BuilderApplicator {
-        public void apply(GetInboundNatRuleArgs.Builder a);
-    }
-    private static GetInboundNatRuleArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetInboundNatRuleArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Inbound NAT rule of the load balancer.
- * API Version: 2020-11-01.
- * 
-     *
-     * Inbound NAT rule of the load balancer.
- * 
-     */
-    public static CompletableFuture<GetInboundNatRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Inbound NAT rule of the load balancer.
      * API Version: 2020-11-01.

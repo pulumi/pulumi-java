@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetManagedHsm {
     private GetManagedHsm() {}
-    public interface BuilderApplicator {
-        public void apply(GetManagedHsmArgs.Builder a);
-    }
-    private static GetManagedHsmArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetManagedHsmArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource information with extended details.
- * API Version: 2021-06-01-preview.
- * 
-     *
-     * Resource information with extended details.
- * 
-     */
-    public static CompletableFuture<GetManagedHsmResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource information with extended details.
      * API Version: 2021-06-01-preview.

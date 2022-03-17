@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceAction {
     private GetServiceAction() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceActionArgs.Builder a);
-    }
-    private static GetServiceActionArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceActionArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource Schema for AWS::ServiceCatalog::ServiceAction
- * 
-     */
-    public static CompletableFuture<GetServiceActionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource Schema for AWS::ServiceCatalog::ServiceAction
      * 

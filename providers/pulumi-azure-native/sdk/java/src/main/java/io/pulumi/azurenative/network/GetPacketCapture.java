@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetPacketCapture {
     private GetPacketCapture() {}
-    public interface BuilderApplicator {
-        public void apply(GetPacketCaptureArgs.Builder a);
-    }
-    private static GetPacketCaptureArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetPacketCaptureArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Information about packet capture session.
- * API Version: 2020-11-01.
- * 
-     *
-     * Information about packet capture session.
- * 
-     */
-    public static CompletableFuture<GetPacketCaptureResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Information about packet capture session.
      * API Version: 2020-11-01.

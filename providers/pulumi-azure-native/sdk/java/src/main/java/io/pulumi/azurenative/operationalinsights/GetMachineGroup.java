@@ -14,25 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetMachineGroup {
     private GetMachineGroup() {}
-    public interface BuilderApplicator {
-        public void apply(GetMachineGroupArgs.Builder a);
-    }
-    private static GetMachineGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetMachineGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * A user-defined logical grouping of machines.
- * API Version: 2015-11-01-preview.
- * 
-     *
-     * A user-defined logical grouping of machines.
- * 
-     */
-    public static CompletableFuture<GetMachineGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * A user-defined logical grouping of machines.
      * API Version: 2015-11-01-preview.

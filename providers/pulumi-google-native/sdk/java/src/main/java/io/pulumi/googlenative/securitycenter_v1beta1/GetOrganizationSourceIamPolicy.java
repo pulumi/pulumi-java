@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetOrganizationSourceIamPolicy {
     private GetOrganizationSourceIamPolicy() {}
-    public interface BuilderApplicator {
-        public void apply(GetOrganizationSourceIamPolicyArgs.Builder a);
-    }
-    private static GetOrganizationSourceIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetOrganizationSourceIamPolicyArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Gets the access control policy on the specified Source.
- * 
-     */
-    public static CompletableFuture<GetOrganizationSourceIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Gets the access control policy on the specified Source.
      * 

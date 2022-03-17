@@ -79,22 +79,6 @@ public class OrganizationReplay extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
-    public interface BuilderApplicator {
-        public void apply(OrganizationReplayArgs.Builder a);
-    }
-    private static io.pulumi.googlenative.policysimulator_v1.OrganizationReplayArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.googlenative.policysimulator_v1.OrganizationReplayArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public OrganizationReplay(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

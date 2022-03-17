@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetLocationS3 {
     private GetLocationS3() {}
-    public interface BuilderApplicator {
-        public void apply(GetLocationS3Args.Builder a);
-    }
-    private static GetLocationS3Args buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetLocationS3Args.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Resource schema for AWS::DataSync::LocationS3
- * 
-     */
-    public static CompletableFuture<GetLocationS3Result> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Resource schema for AWS::DataSync::LocationS3
      * 

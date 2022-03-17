@@ -14,21 +14,6 @@ import javax.annotation.Nullable;
 
 public class GetServiceLevelObjective {
     private GetServiceLevelObjective() {}
-    public interface BuilderApplicator {
-        public void apply(GetServiceLevelObjectiveArgs.Builder a);
-    }
-    private static GetServiceLevelObjectiveArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = GetServiceLevelObjectiveArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     * Get a ServiceLevelObjective by name.
- * 
-     */
-    public static CompletableFuture<GetServiceLevelObjectiveResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
-        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
-    }
     /**
          * Get a ServiceLevelObjective by name.
      * 
