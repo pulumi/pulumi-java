@@ -173,8 +173,9 @@ public class Deserializer {
 
             return OutputData.ofNullable(
                     ImmutableSet.copyOf(resources),
-                    ImmutableMap.copyOf(result),
-                    isKnown, isSecret
+                    isKnown ? ImmutableMap.copyOf(result) : null,
+                    isKnown,
+                    isSecret
             );
         });
     }
