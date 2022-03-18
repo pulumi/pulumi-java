@@ -289,7 +289,7 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}    }
 {{ range $setter := .Setters }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.PropertyType }} {{ $setter.PropertyName }}) {
-{{ $.Indent }}        {{ $setter.Assignment }}; // WOOOHOOO
+{{ $.Indent }}        {{ $setter.Assignment }};
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
 
