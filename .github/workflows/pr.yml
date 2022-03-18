@@ -113,8 +113,10 @@ jobs:
           build-root-directory: sdk/jvm
       - name: Publish Pulumi Java SDK to a local Maven repo
         run: make install_sdk
-      - name: Build JVM SDK provider ${{ matrix.provider }}
-        run: make provider.${{ matrix.provider }}.build provider.${{ matrix.provider }}.install
+      - name: Build JVM SDK provider
+        run: make provider.${PROVIDER}.build provider.${PROVIDER}.install
+        env:
+          PROVIDER: ${{ matrix.provider }}
   example1:
     runs-on: ubuntu-latest
     steps:
