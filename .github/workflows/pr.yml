@@ -115,9 +115,6 @@ jobs:
         run: make install_sdk
       - name: Build JVM SDK provider ${{ matrix.provider }}
         run: make provider.${{ matrix.provider }}.build provider.${{ matrix.provider }}.install
-
-    strategy:
-      fail-fast: true
   example1:
     runs-on: ubuntu-latest
     steps:
