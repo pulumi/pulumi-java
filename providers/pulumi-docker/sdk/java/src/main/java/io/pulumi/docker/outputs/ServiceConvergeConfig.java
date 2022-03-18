@@ -55,12 +55,10 @@ public final class ServiceConvergeConfig {
             this.delay = delay;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public ServiceConvergeConfig build() {
+        }        public ServiceConvergeConfig build() {
             return new ServiceConvergeConfig(delay, timeout);
         }
     }

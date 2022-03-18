@@ -53,12 +53,10 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsLabel {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecMountVolumeOptionsLabel build() {
+        }        public ServiceTaskSpecContainerSpecMountVolumeOptionsLabel build() {
             return new ServiceTaskSpecContainerSpecMountVolumeOptionsLabel(label, value);
         }
     }

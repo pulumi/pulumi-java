@@ -115,62 +115,50 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
             this.fileGid = fileGid;
             return this;
         }
-
         public Builder fileGid(@Nullable String fileGid) {
             this.fileGid = Output.ofNullable(fileGid);
             return this;
         }
-
         public Builder fileMode(@Nullable Output<Integer> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
-
         public Builder fileMode(@Nullable Integer fileMode) {
             this.fileMode = Output.ofNullable(fileMode);
             return this;
         }
-
         public Builder fileName(Output<String> fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public Builder fileName(String fileName) {
             this.fileName = Output.of(Objects.requireNonNull(fileName));
             return this;
         }
-
         public Builder fileUid(@Nullable Output<String> fileUid) {
             this.fileUid = fileUid;
             return this;
         }
-
         public Builder fileUid(@Nullable String fileUid) {
             this.fileUid = Output.ofNullable(fileUid);
             return this;
         }
-
         public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
-
         public Builder secretName(@Nullable Output<String> secretName) {
             this.secretName = secretName;
             return this;
         }
-
         public Builder secretName(@Nullable String secretName) {
             this.secretName = Output.ofNullable(secretName);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecSecretGetArgs build() {
+        }        public ServiceTaskSpecContainerSpecSecretGetArgs build() {
             return new ServiceTaskSpecContainerSpecSecretGetArgs(fileGid, fileMode, fileName, fileUid, secretId, secretName);
         }
     }

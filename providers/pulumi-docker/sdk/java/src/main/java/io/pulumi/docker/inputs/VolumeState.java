@@ -126,52 +126,45 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
             this.driver = driver;
             return this;
         }
-
         public Builder driver(@Nullable String driver) {
             this.driver = Output.ofNullable(driver);
             return this;
         }
-
         public Builder driverOpts(@Nullable Output<Map<String,Object>> driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
-
         public Builder driverOpts(@Nullable Map<String,Object> driverOpts) {
             this.driverOpts = Output.ofNullable(driverOpts);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<VolumeLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<VolumeLabelGetArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(VolumeLabelGetArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder mountpoint(@Nullable Output<String> mountpoint) {
             this.mountpoint = mountpoint;
             return this;
         }
-
         public Builder mountpoint(@Nullable String mountpoint) {
             this.mountpoint = Output.ofNullable(mountpoint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public VolumeState build() {
+        }        public VolumeState build() {
             return new VolumeState(driver, driverOpts, labels, mountpoint, name);
         }
     }

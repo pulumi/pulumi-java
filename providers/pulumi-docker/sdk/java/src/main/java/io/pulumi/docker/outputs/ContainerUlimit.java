@@ -62,17 +62,14 @@ public final class ContainerUlimit {
             this.hard = Objects.requireNonNull(hard);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder soft(Integer soft) {
             this.soft = Objects.requireNonNull(soft);
             return this;
-        }
-        public ContainerUlimit build() {
+        }        public ContainerUlimit build() {
             return new ContainerUlimit(hard, name, soft);
         }
     }

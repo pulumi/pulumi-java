@@ -53,12 +53,10 @@ public final class ContainerHost {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder ip(String ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
-        }
-        public ContainerHost build() {
+        }        public ContainerHost build() {
             return new ContainerHost(host, ip);
         }
     }

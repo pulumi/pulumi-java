@@ -242,122 +242,104 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             this.attachable = attachable;
             return this;
         }
-
         public Builder attachable(@Nullable Boolean attachable) {
             this.attachable = Output.ofNullable(attachable);
             return this;
         }
-
         public Builder checkDuplicate(@Nullable Output<Boolean> checkDuplicate) {
             this.checkDuplicate = checkDuplicate;
             return this;
         }
-
         public Builder checkDuplicate(@Nullable Boolean checkDuplicate) {
             this.checkDuplicate = Output.ofNullable(checkDuplicate);
             return this;
         }
-
         public Builder driver(@Nullable Output<String> driver) {
             this.driver = driver;
             return this;
         }
-
         public Builder driver(@Nullable String driver) {
             this.driver = Output.ofNullable(driver);
             return this;
         }
-
         public Builder ingress(@Nullable Output<Boolean> ingress) {
             this.ingress = ingress;
             return this;
         }
-
         public Builder ingress(@Nullable Boolean ingress) {
             this.ingress = Output.ofNullable(ingress);
             return this;
         }
-
         public Builder internal(@Nullable Output<Boolean> internal) {
             this.internal = internal;
             return this;
         }
-
         public Builder internal(@Nullable Boolean internal) {
             this.internal = Output.ofNullable(internal);
             return this;
         }
-
         public Builder ipamConfigs(@Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs) {
             this.ipamConfigs = ipamConfigs;
             return this;
         }
-
         public Builder ipamConfigs(@Nullable List<NetworkIpamConfigGetArgs> ipamConfigs) {
             this.ipamConfigs = Output.ofNullable(ipamConfigs);
             return this;
         }
-
+        public Builder ipamConfigs(NetworkIpamConfigGetArgs... ipamConfigs) {
+            return ipamConfigs(List.of(ipamConfigs));
+        }
         public Builder ipamDriver(@Nullable Output<String> ipamDriver) {
             this.ipamDriver = ipamDriver;
             return this;
         }
-
         public Builder ipamDriver(@Nullable String ipamDriver) {
             this.ipamDriver = Output.ofNullable(ipamDriver);
             return this;
         }
-
         public Builder ipv6(@Nullable Output<Boolean> ipv6) {
             this.ipv6 = ipv6;
             return this;
         }
-
         public Builder ipv6(@Nullable Boolean ipv6) {
             this.ipv6 = Output.ofNullable(ipv6);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<NetworkLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<NetworkLabelGetArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(NetworkLabelGetArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder options(@Nullable Output<Map<String,Object>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable Map<String,Object> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public NetworkState build() {
+        }        public NetworkState build() {
             return new NetworkState(attachable, checkDuplicate, driver, ingress, internal, ipamConfigs, ipamDriver, ipv6, labels, name, options, scope);
         }
     }

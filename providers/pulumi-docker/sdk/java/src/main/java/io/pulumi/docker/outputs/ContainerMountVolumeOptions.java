@@ -75,22 +75,21 @@ public final class ContainerMountVolumeOptions {
             this.driverName = driverName;
             return this;
         }
-
         public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
             this.driverOptions = driverOptions;
             return this;
         }
-
         public Builder labels(@Nullable List<ContainerMountVolumeOptionsLabel> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(ContainerMountVolumeOptionsLabel... labels) {
+            return labels(List.of(labels));
+        }
         public Builder noCopy(@Nullable Boolean noCopy) {
             this.noCopy = noCopy;
             return this;
-        }
-        public ContainerMountVolumeOptions build() {
+        }        public ContainerMountVolumeOptions build() {
             return new ContainerMountVolumeOptions(driverName, driverOptions, labels, noCopy);
         }
     }

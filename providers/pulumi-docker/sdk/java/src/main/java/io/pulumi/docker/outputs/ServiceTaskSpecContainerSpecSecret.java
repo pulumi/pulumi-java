@@ -88,32 +88,26 @@ public final class ServiceTaskSpecContainerSpecSecret {
             this.fileGid = fileGid;
             return this;
         }
-
         public Builder fileMode(@Nullable Integer fileMode) {
             this.fileMode = fileMode;
             return this;
         }
-
         public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public Builder fileUid(@Nullable String fileUid) {
             this.fileUid = fileUid;
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
-        }
-        public ServiceTaskSpecContainerSpecSecret build() {
+        }        public ServiceTaskSpecContainerSpecSecret build() {
             return new ServiceTaskSpecContainerSpecSecret(fileGid, fileMode, fileName, fileUid, secretId, secretName);
         }
     }

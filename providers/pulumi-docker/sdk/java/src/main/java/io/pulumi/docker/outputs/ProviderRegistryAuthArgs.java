@@ -79,27 +79,22 @@ public final class ProviderRegistryAuthArgs {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder configFile(@Nullable Output<String> configFile) {
             this.configFile = configFile;
             return this;
         }
-
         public Builder configFileContent(@Nullable Output<String> configFileContent) {
             this.configFileContent = configFileContent;
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
-        }
-        public ProviderRegistryAuthArgs build() {
+        }        public ProviderRegistryAuthArgs build() {
             return new ProviderRegistryAuthArgs(address, configFile, configFileContent, password, username);
         }
     }

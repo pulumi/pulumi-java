@@ -74,22 +74,27 @@ public final class ServiceTaskSpecPlacement {
             this.constraints = constraints;
             return this;
         }
-
+        public Builder constraints(String... constraints) {
+            return constraints(List.of(constraints));
+        }
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
-
         public Builder platforms(@Nullable List<ServiceTaskSpecPlacementPlatform> platforms) {
             this.platforms = platforms;
             return this;
         }
-
+        public Builder platforms(ServiceTaskSpecPlacementPlatform... platforms) {
+            return platforms(List.of(platforms));
+        }
         public Builder prefs(@Nullable List<String> prefs) {
             this.prefs = prefs;
             return this;
         }
-        public ServiceTaskSpecPlacement build() {
+        public Builder prefs(String... prefs) {
+            return prefs(List.of(prefs));
+        }        public ServiceTaskSpecPlacement build() {
             return new ServiceTaskSpecPlacement(constraints, maxReplicas, platforms, prefs);
         }
     }

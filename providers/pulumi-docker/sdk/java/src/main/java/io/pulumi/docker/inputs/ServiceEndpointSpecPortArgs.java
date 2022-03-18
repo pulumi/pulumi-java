@@ -103,52 +103,42 @@ public final class ServiceEndpointSpecPortArgs extends io.pulumi.resources.Resou
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder publishMode(@Nullable Output<String> publishMode) {
             this.publishMode = publishMode;
             return this;
         }
-
         public Builder publishMode(@Nullable String publishMode) {
             this.publishMode = Output.ofNullable(publishMode);
             return this;
         }
-
         public Builder publishedPort(@Nullable Output<Integer> publishedPort) {
             this.publishedPort = publishedPort;
             return this;
         }
-
         public Builder publishedPort(@Nullable Integer publishedPort) {
             this.publishedPort = Output.ofNullable(publishedPort);
             return this;
         }
-
         public Builder targetPort(Output<Integer> targetPort) {
             this.targetPort = Objects.requireNonNull(targetPort);
             return this;
         }
-
         public Builder targetPort(Integer targetPort) {
             this.targetPort = Output.of(Objects.requireNonNull(targetPort));
             return this;
-        }
-        public ServiceEndpointSpecPortArgs build() {
+        }        public ServiceEndpointSpecPortArgs build() {
             return new ServiceEndpointSpecPortArgs(name, protocol, publishMode, publishedPort, targetPort);
         }
     }

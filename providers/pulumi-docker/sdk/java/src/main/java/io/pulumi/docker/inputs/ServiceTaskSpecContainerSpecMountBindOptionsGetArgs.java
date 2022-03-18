@@ -53,12 +53,10 @@ public final class ServiceTaskSpecContainerSpecMountBindOptionsGetArgs extends i
             this.propagation = propagation;
             return this;
         }
-
         public Builder propagation(@Nullable String propagation) {
             this.propagation = Output.ofNullable(propagation);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecMountBindOptionsGetArgs build() {
+        }        public ServiceTaskSpecContainerSpecMountBindOptionsGetArgs build() {
             return new ServiceTaskSpecContainerSpecMountBindOptionsGetArgs(propagation);
         }
     }

@@ -67,12 +67,10 @@ public final class GetRegistryImageArgs extends io.pulumi.resources.InvokeArgs {
             this.insecureSkipVerify = insecureSkipVerify;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRegistryImageArgs build() {
+        }        public GetRegistryImageArgs build() {
             return new GetRegistryImageArgs(insecureSkipVerify, name);
         }
     }

@@ -67,22 +67,24 @@ public final class ServiceTaskSpecResourcesReservationGenericResourcesArgs exten
             this.discreteResourcesSpecs = discreteResourcesSpecs;
             return this;
         }
-
         public Builder discreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
             this.discreteResourcesSpecs = Output.ofNullable(discreteResourcesSpecs);
             return this;
         }
-
+        public Builder discreteResourcesSpecs(String... discreteResourcesSpecs) {
+            return discreteResourcesSpecs(List.of(discreteResourcesSpecs));
+        }
         public Builder namedResourcesSpecs(@Nullable Output<List<String>> namedResourcesSpecs) {
             this.namedResourcesSpecs = namedResourcesSpecs;
             return this;
         }
-
         public Builder namedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
             this.namedResourcesSpecs = Output.ofNullable(namedResourcesSpecs);
             return this;
         }
-        public ServiceTaskSpecResourcesReservationGenericResourcesArgs build() {
+        public Builder namedResourcesSpecs(String... namedResourcesSpecs) {
+            return namedResourcesSpecs(List.of(namedResourcesSpecs));
+        }        public ServiceTaskSpecResourcesReservationGenericResourcesArgs build() {
             return new ServiceTaskSpecResourcesReservationGenericResourcesArgs(discreteResourcesSpecs, namedResourcesSpecs);
         }
     }

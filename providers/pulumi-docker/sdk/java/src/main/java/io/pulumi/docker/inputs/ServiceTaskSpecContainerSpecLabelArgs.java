@@ -65,22 +65,18 @@ public final class ServiceTaskSpecContainerSpecLabelArgs extends io.pulumi.resou
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder label(String label) {
             this.label = Output.of(Objects.requireNonNull(label));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ServiceTaskSpecContainerSpecLabelArgs build() {
+        }        public ServiceTaskSpecContainerSpecLabelArgs build() {
             return new ServiceTaskSpecContainerSpecLabelArgs(label, value);
         }
     }

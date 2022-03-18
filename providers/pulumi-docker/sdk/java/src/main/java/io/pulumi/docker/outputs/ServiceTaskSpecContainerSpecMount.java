@@ -99,37 +99,30 @@ public final class ServiceTaskSpecContainerSpecMount {
             this.bindOptions = bindOptions;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder tmpfsOptions(@Nullable ServiceTaskSpecContainerSpecMountTmpfsOptions tmpfsOptions) {
             this.tmpfsOptions = tmpfsOptions;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumeOptions(@Nullable ServiceTaskSpecContainerSpecMountVolumeOptions volumeOptions) {
             this.volumeOptions = volumeOptions;
             return this;
-        }
-        public ServiceTaskSpecContainerSpecMount build() {
+        }        public ServiceTaskSpecContainerSpecMount build() {
             return new ServiceTaskSpecContainerSpecMount(bindOptions, readOnly, source, target, tmpfsOptions, type, volumeOptions);
         }
     }

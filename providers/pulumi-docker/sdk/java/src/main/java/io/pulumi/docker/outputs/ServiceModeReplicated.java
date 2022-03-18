@@ -45,8 +45,7 @@ public final class ServiceModeReplicated {
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
-        }
-        public ServiceModeReplicated build() {
+        }        public ServiceModeReplicated build() {
             return new ServiceModeReplicated(replicas);
         }
     }
