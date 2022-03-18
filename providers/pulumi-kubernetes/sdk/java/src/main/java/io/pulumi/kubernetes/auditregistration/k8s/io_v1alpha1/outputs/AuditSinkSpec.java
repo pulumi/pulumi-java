@@ -70,12 +70,10 @@ public final class AuditSinkSpec {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder webhook(Webhook webhook) {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
-        }
-        public AuditSinkSpec build() {
+        }        public AuditSinkSpec build() {
             return new AuditSinkSpec(policy, webhook);
         }
     }

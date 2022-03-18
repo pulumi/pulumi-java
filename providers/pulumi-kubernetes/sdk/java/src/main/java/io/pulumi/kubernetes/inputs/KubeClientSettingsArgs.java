@@ -80,22 +80,18 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
             this.burst = burst;
             return this;
         }
-
         public Builder burst(@Nullable Integer burst) {
             this.burst = Output.ofNullable(burst);
             return this;
         }
-
         public Builder qps(@Nullable Output<Double> qps) {
             this.qps = qps;
             return this;
         }
-
         public Builder qps(@Nullable Double qps) {
             this.qps = Output.ofNullable(qps);
             return this;
-        }
-        public KubeClientSettingsArgs build() {
+        }        public KubeClientSettingsArgs build() {
             return new KubeClientSettingsArgs(burst, qps);
         }
     }

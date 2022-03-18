@@ -216,37 +216,36 @@ public final class CSIDriverSpec {
             this.attachRequired = attachRequired;
             return this;
         }
-
         public Builder fsGroupPolicy(@Nullable String fsGroupPolicy) {
             this.fsGroupPolicy = fsGroupPolicy;
             return this;
         }
-
         public Builder podInfoOnMount(@Nullable Boolean podInfoOnMount) {
             this.podInfoOnMount = podInfoOnMount;
             return this;
         }
-
         public Builder requiresRepublish(@Nullable Boolean requiresRepublish) {
             this.requiresRepublish = requiresRepublish;
             return this;
         }
-
         public Builder storageCapacity(@Nullable Boolean storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
-
         public Builder tokenRequests(@Nullable List<TokenRequest> tokenRequests) {
             this.tokenRequests = tokenRequests;
             return this;
         }
-
+        public Builder tokenRequests(TokenRequest... tokenRequests) {
+            return tokenRequests(List.of(tokenRequests));
+        }
         public Builder volumeLifecycleModes(@Nullable List<String> volumeLifecycleModes) {
             this.volumeLifecycleModes = volumeLifecycleModes;
             return this;
         }
-        public CSIDriverSpec build() {
+        public Builder volumeLifecycleModes(String... volumeLifecycleModes) {
+            return volumeLifecycleModes(List.of(volumeLifecycleModes));
+        }        public CSIDriverSpec build() {
             return new CSIDriverSpec(attachRequired, fsGroupPolicy, podInfoOnMount, requiresRepublish, storageCapacity, tokenRequests, volumeLifecycleModes);
         }
     }

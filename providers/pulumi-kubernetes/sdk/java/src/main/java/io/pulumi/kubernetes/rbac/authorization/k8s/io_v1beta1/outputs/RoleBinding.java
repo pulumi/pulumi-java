@@ -123,27 +123,25 @@ public final class RoleBinding {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder roleRef(RoleRef roleRef) {
             this.roleRef = Objects.requireNonNull(roleRef);
             return this;
         }
-
         public Builder subjects(@Nullable List<Subject> subjects) {
             this.subjects = subjects;
             return this;
         }
-        public RoleBinding build() {
+        public Builder subjects(Subject... subjects) {
+            return subjects(List.of(subjects));
+        }        public RoleBinding build() {
             return new RoleBinding(apiVersion, kind, metadata, roleRef, subjects);
         }
     }

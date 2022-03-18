@@ -147,62 +147,56 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
             this.addressType = Objects.requireNonNull(addressType);
             return this;
         }
-
         public Builder addressType(String addressType) {
             this.addressType = Output.of(Objects.requireNonNull(addressType));
             return this;
         }
-
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder endpoints(Output<List<EndpointArgs>> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder endpoints(List<EndpointArgs> endpoints) {
             this.endpoints = Output.of(Objects.requireNonNull(endpoints));
             return this;
         }
-
+        public Builder endpoints(EndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<EndpointPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<EndpointPortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-        public EndpointSliceArgs build() {
+        public Builder ports(EndpointPortArgs... ports) {
+            return ports(List.of(ports));
+        }        public EndpointSliceArgs build() {
             return new EndpointSliceArgs(addressType, apiVersion, endpoints, kind, metadata, ports);
         }
     }

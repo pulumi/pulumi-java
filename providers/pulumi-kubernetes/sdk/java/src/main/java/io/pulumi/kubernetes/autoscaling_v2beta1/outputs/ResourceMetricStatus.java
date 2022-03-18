@@ -88,17 +88,14 @@ public final class ResourceMetricStatus {
             this.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
-
         public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ResourceMetricStatus build() {
+        }        public ResourceMetricStatus build() {
             return new ResourceMetricStatus(currentAverageUtilization, currentAverageValue, name);
         }
     }

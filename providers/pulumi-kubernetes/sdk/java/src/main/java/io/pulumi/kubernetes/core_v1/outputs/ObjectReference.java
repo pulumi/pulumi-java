@@ -151,37 +151,30 @@ public final class ObjectReference {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
-        }
-        public ObjectReference build() {
+        }        public ObjectReference build() {
             return new ObjectReference(apiVersion, fieldPath, kind, name, namespace, resourceVersion, uid);
         }
     }

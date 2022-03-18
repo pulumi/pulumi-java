@@ -122,27 +122,22 @@ public final class Deployment {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable DeploymentSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable DeploymentStatus status) {
             this.status = status;
             return this;
-        }
-        public Deployment build() {
+        }        public Deployment build() {
             return new Deployment(apiVersion, kind, metadata, spec, status);
         }
     }

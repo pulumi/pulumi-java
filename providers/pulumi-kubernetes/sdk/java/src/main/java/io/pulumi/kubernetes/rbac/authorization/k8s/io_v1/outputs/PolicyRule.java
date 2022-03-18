@@ -119,27 +119,37 @@ public final class PolicyRule {
             this.apiGroups = apiGroups;
             return this;
         }
-
+        public Builder apiGroups(String... apiGroups) {
+            return apiGroups(List.of(apiGroups));
+        }
         public Builder nonResourceURLs(@Nullable List<String> nonResourceURLs) {
             this.nonResourceURLs = nonResourceURLs;
             return this;
         }
-
+        public Builder nonResourceURLs(String... nonResourceURLs) {
+            return nonResourceURLs(List.of(nonResourceURLs));
+        }
         public Builder resourceNames(@Nullable List<String> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
-
+        public Builder resourceNames(String... resourceNames) {
+            return resourceNames(List.of(resourceNames));
+        }
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-        public PolicyRule build() {
+        public Builder verbs(String... verbs) {
+            return verbs(List.of(verbs));
+        }        public PolicyRule build() {
             return new PolicyRule(apiGroups, nonResourceURLs, resourceNames, resources, verbs);
         }
     }

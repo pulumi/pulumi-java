@@ -138,32 +138,26 @@ public final class ConfigMap {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder binaryData(@Nullable Map<String,String> binaryData) {
             this.binaryData = binaryData;
             return this;
         }
-
         public Builder data(@Nullable Map<String,String> data) {
             this.data = data;
             return this;
         }
-
         public Builder immutable(@Nullable Boolean immutable) {
             this.immutable = immutable;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
-        }
-        public ConfigMap build() {
+        }        public ConfigMap build() {
             return new ConfigMap(apiVersion, binaryData, data, immutable, kind, metadata);
         }
     }

@@ -104,22 +104,18 @@ public final class ExternalMetricSource {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricSelector(@Nullable LabelSelector metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }
-
         public Builder targetAverageValue(@Nullable String targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
-
         public Builder targetValue(@Nullable String targetValue) {
             this.targetValue = targetValue;
             return this;
-        }
-        public ExternalMetricSource build() {
+        }        public ExternalMetricSource build() {
             return new ExternalMetricSource(metricName, metricSelector, targetAverageValue, targetValue);
         }
     }

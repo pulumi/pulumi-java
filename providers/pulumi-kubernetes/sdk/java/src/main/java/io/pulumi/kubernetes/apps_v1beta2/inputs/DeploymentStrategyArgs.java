@@ -79,22 +79,18 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             this.rollingUpdate = rollingUpdate;
             return this;
         }
-
         public Builder rollingUpdate(@Nullable RollingUpdateDeploymentArgs rollingUpdate) {
             this.rollingUpdate = Output.ofNullable(rollingUpdate);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DeploymentStrategyArgs build() {
+        }        public DeploymentStrategyArgs build() {
             return new DeploymentStrategyArgs(rollingUpdate, type);
         }
     }

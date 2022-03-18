@@ -106,22 +106,21 @@ public final class Endpoints {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder subsets(@Nullable List<EndpointSubset> subsets) {
             this.subsets = subsets;
             return this;
         }
-        public Endpoints build() {
+        public Builder subsets(EndpointSubset... subsets) {
+            return subsets(List.of(subsets));
+        }        public Endpoints build() {
             return new Endpoints(apiVersion, kind, metadata, subsets);
         }
     }

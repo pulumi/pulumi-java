@@ -179,82 +179,69 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
-
         public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
             this.additionalPrinterColumns = Output.ofNullable(additionalPrinterColumns);
             return this;
         }
-
+        public Builder additionalPrinterColumns(CustomResourceColumnDefinitionArgs... additionalPrinterColumns) {
+            return additionalPrinterColumns(List.of(additionalPrinterColumns));
+        }
         public Builder deprecated(@Nullable Output<Boolean> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
-
         public Builder deprecated(@Nullable Boolean deprecated) {
             this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
-
         public Builder deprecationWarning(@Nullable Output<String> deprecationWarning) {
             this.deprecationWarning = deprecationWarning;
             return this;
         }
-
         public Builder deprecationWarning(@Nullable String deprecationWarning) {
             this.deprecationWarning = Output.ofNullable(deprecationWarning);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder schema(@Nullable Output<CustomResourceValidationArgs> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable CustomResourceValidationArgs schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder served(Output<Boolean> served) {
             this.served = Objects.requireNonNull(served);
             return this;
         }
-
         public Builder served(Boolean served) {
             this.served = Output.of(Objects.requireNonNull(served));
             return this;
         }
-
         public Builder storage(Output<Boolean> storage) {
             this.storage = Objects.requireNonNull(storage);
             return this;
         }
-
         public Builder storage(Boolean storage) {
             this.storage = Output.of(Objects.requireNonNull(storage));
             return this;
         }
-
         public Builder subresources(@Nullable Output<CustomResourceSubresourcesArgs> subresources) {
             this.subresources = subresources;
             return this;
         }
-
         public Builder subresources(@Nullable CustomResourceSubresourcesArgs subresources) {
             this.subresources = Output.ofNullable(subresources);
             return this;
-        }
-        public CustomResourceDefinitionVersionArgs build() {
+        }        public CustomResourceDefinitionVersionArgs build() {
             return new CustomResourceDefinitionVersionArgs(additionalPrinterColumns, deprecated, deprecationWarning, name, schema, served, storage, subresources);
         }
     }

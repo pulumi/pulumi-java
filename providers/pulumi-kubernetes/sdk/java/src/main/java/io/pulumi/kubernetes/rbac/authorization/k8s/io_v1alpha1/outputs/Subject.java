@@ -103,22 +103,18 @@ public final class Subject {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
-        }
-        public Subject build() {
+        }        public Subject build() {
             return new Subject(apiVersion, kind, name, namespace);
         }
     }

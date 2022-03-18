@@ -106,22 +106,18 @@ public final class VolumeProjection {
             this.configMap = configMap;
             return this;
         }
-
         public Builder downwardAPI(@Nullable DownwardAPIProjection downwardAPI) {
             this.downwardAPI = downwardAPI;
             return this;
         }
-
         public Builder secret(@Nullable SecretProjection secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder serviceAccountToken(@Nullable ServiceAccountTokenProjection serviceAccountToken) {
             this.serviceAccountToken = serviceAccountToken;
             return this;
-        }
-        public VolumeProjection build() {
+        }        public VolumeProjection build() {
             return new VolumeProjection(configMap, downwardAPI, secret, serviceAccountToken);
         }
     }

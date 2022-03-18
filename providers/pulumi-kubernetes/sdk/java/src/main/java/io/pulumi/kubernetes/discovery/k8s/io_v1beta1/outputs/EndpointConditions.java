@@ -87,17 +87,14 @@ public final class EndpointConditions {
             this.ready = ready;
             return this;
         }
-
         public Builder serving(@Nullable Boolean serving) {
             this.serving = serving;
             return this;
         }
-
         public Builder terminating(@Nullable Boolean terminating) {
             this.terminating = terminating;
             return this;
-        }
-        public EndpointConditions build() {
+        }        public EndpointConditions build() {
             return new EndpointConditions(ready, serving, terminating);
         }
     }

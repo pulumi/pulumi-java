@@ -79,22 +79,18 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder port(@Nullable Output<ServiceBackendPortArgs> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable ServiceBackendPortArgs port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public IngressServiceBackendArgs build() {
+        }        public IngressServiceBackendArgs build() {
             return new IngressServiceBackendArgs(name, port);
         }
     }

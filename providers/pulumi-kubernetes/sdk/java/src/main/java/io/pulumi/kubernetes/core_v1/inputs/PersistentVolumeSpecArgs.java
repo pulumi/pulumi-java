@@ -557,302 +557,248 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
             this.accessModes = accessModes;
             return this;
         }
-
         public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = Output.ofNullable(accessModes);
             return this;
         }
-
+        public Builder accessModes(String... accessModes) {
+            return accessModes(List.of(accessModes));
+        }
         public Builder awsElasticBlockStore(@Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore) {
             this.awsElasticBlockStore = awsElasticBlockStore;
             return this;
         }
-
         public Builder awsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSourceArgs awsElasticBlockStore) {
             this.awsElasticBlockStore = Output.ofNullable(awsElasticBlockStore);
             return this;
         }
-
         public Builder azureDisk(@Nullable Output<AzureDiskVolumeSourceArgs> azureDisk) {
             this.azureDisk = azureDisk;
             return this;
         }
-
         public Builder azureDisk(@Nullable AzureDiskVolumeSourceArgs azureDisk) {
             this.azureDisk = Output.ofNullable(azureDisk);
             return this;
         }
-
         public Builder azureFile(@Nullable Output<AzureFilePersistentVolumeSourceArgs> azureFile) {
             this.azureFile = azureFile;
             return this;
         }
-
         public Builder azureFile(@Nullable AzureFilePersistentVolumeSourceArgs azureFile) {
             this.azureFile = Output.ofNullable(azureFile);
             return this;
         }
-
         public Builder capacity(@Nullable Output<Map<String,String>> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder cephfs(@Nullable Output<CephFSPersistentVolumeSourceArgs> cephfs) {
             this.cephfs = cephfs;
             return this;
         }
-
         public Builder cephfs(@Nullable CephFSPersistentVolumeSourceArgs cephfs) {
             this.cephfs = Output.ofNullable(cephfs);
             return this;
         }
-
         public Builder cinder(@Nullable Output<CinderPersistentVolumeSourceArgs> cinder) {
             this.cinder = cinder;
             return this;
         }
-
         public Builder cinder(@Nullable CinderPersistentVolumeSourceArgs cinder) {
             this.cinder = Output.ofNullable(cinder);
             return this;
         }
-
         public Builder claimRef(@Nullable Output<ObjectReferenceArgs> claimRef) {
             this.claimRef = claimRef;
             return this;
         }
-
         public Builder claimRef(@Nullable ObjectReferenceArgs claimRef) {
             this.claimRef = Output.ofNullable(claimRef);
             return this;
         }
-
         public Builder csi(@Nullable Output<CSIPersistentVolumeSourceArgs> csi) {
             this.csi = csi;
             return this;
         }
-
         public Builder csi(@Nullable CSIPersistentVolumeSourceArgs csi) {
             this.csi = Output.ofNullable(csi);
             return this;
         }
-
         public Builder fc(@Nullable Output<FCVolumeSourceArgs> fc) {
             this.fc = fc;
             return this;
         }
-
         public Builder fc(@Nullable FCVolumeSourceArgs fc) {
             this.fc = Output.ofNullable(fc);
             return this;
         }
-
         public Builder flexVolume(@Nullable Output<FlexPersistentVolumeSourceArgs> flexVolume) {
             this.flexVolume = flexVolume;
             return this;
         }
-
         public Builder flexVolume(@Nullable FlexPersistentVolumeSourceArgs flexVolume) {
             this.flexVolume = Output.ofNullable(flexVolume);
             return this;
         }
-
         public Builder flocker(@Nullable Output<FlockerVolumeSourceArgs> flocker) {
             this.flocker = flocker;
             return this;
         }
-
         public Builder flocker(@Nullable FlockerVolumeSourceArgs flocker) {
             this.flocker = Output.ofNullable(flocker);
             return this;
         }
-
         public Builder gcePersistentDisk(@Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk) {
             this.gcePersistentDisk = gcePersistentDisk;
             return this;
         }
-
         public Builder gcePersistentDisk(@Nullable GCEPersistentDiskVolumeSourceArgs gcePersistentDisk) {
             this.gcePersistentDisk = Output.ofNullable(gcePersistentDisk);
             return this;
         }
-
         public Builder glusterfs(@Nullable Output<GlusterfsPersistentVolumeSourceArgs> glusterfs) {
             this.glusterfs = glusterfs;
             return this;
         }
-
         public Builder glusterfs(@Nullable GlusterfsPersistentVolumeSourceArgs glusterfs) {
             this.glusterfs = Output.ofNullable(glusterfs);
             return this;
         }
-
         public Builder hostPath(@Nullable Output<HostPathVolumeSourceArgs> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder hostPath(@Nullable HostPathVolumeSourceArgs hostPath) {
             this.hostPath = Output.ofNullable(hostPath);
             return this;
         }
-
         public Builder iscsi(@Nullable Output<ISCSIPersistentVolumeSourceArgs> iscsi) {
             this.iscsi = iscsi;
             return this;
         }
-
         public Builder iscsi(@Nullable ISCSIPersistentVolumeSourceArgs iscsi) {
             this.iscsi = Output.ofNullable(iscsi);
             return this;
         }
-
         public Builder local(@Nullable Output<LocalVolumeSourceArgs> local) {
             this.local = local;
             return this;
         }
-
         public Builder local(@Nullable LocalVolumeSourceArgs local) {
             this.local = Output.ofNullable(local);
             return this;
         }
-
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
+        public Builder mountOptions(String... mountOptions) {
+            return mountOptions(List.of(mountOptions));
+        }
         public Builder nfs(@Nullable Output<NFSVolumeSourceArgs> nfs) {
             this.nfs = nfs;
             return this;
         }
-
         public Builder nfs(@Nullable NFSVolumeSourceArgs nfs) {
             this.nfs = Output.ofNullable(nfs);
             return this;
         }
-
         public Builder nodeAffinity(@Nullable Output<VolumeNodeAffinityArgs> nodeAffinity) {
             this.nodeAffinity = nodeAffinity;
             return this;
         }
-
         public Builder nodeAffinity(@Nullable VolumeNodeAffinityArgs nodeAffinity) {
             this.nodeAffinity = Output.ofNullable(nodeAffinity);
             return this;
         }
-
         public Builder persistentVolumeReclaimPolicy(@Nullable Output<String> persistentVolumeReclaimPolicy) {
             this.persistentVolumeReclaimPolicy = persistentVolumeReclaimPolicy;
             return this;
         }
-
         public Builder persistentVolumeReclaimPolicy(@Nullable String persistentVolumeReclaimPolicy) {
             this.persistentVolumeReclaimPolicy = Output.ofNullable(persistentVolumeReclaimPolicy);
             return this;
         }
-
         public Builder photonPersistentDisk(@Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk) {
             this.photonPersistentDisk = photonPersistentDisk;
             return this;
         }
-
         public Builder photonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSourceArgs photonPersistentDisk) {
             this.photonPersistentDisk = Output.ofNullable(photonPersistentDisk);
             return this;
         }
-
         public Builder portworxVolume(@Nullable Output<PortworxVolumeSourceArgs> portworxVolume) {
             this.portworxVolume = portworxVolume;
             return this;
         }
-
         public Builder portworxVolume(@Nullable PortworxVolumeSourceArgs portworxVolume) {
             this.portworxVolume = Output.ofNullable(portworxVolume);
             return this;
         }
-
         public Builder quobyte(@Nullable Output<QuobyteVolumeSourceArgs> quobyte) {
             this.quobyte = quobyte;
             return this;
         }
-
         public Builder quobyte(@Nullable QuobyteVolumeSourceArgs quobyte) {
             this.quobyte = Output.ofNullable(quobyte);
             return this;
         }
-
         public Builder rbd(@Nullable Output<RBDPersistentVolumeSourceArgs> rbd) {
             this.rbd = rbd;
             return this;
         }
-
         public Builder rbd(@Nullable RBDPersistentVolumeSourceArgs rbd) {
             this.rbd = Output.ofNullable(rbd);
             return this;
         }
-
         public Builder scaleIO(@Nullable Output<ScaleIOPersistentVolumeSourceArgs> scaleIO) {
             this.scaleIO = scaleIO;
             return this;
         }
-
         public Builder scaleIO(@Nullable ScaleIOPersistentVolumeSourceArgs scaleIO) {
             this.scaleIO = Output.ofNullable(scaleIO);
             return this;
         }
-
         public Builder storageClassName(@Nullable Output<String> storageClassName) {
             this.storageClassName = storageClassName;
             return this;
         }
-
         public Builder storageClassName(@Nullable String storageClassName) {
             this.storageClassName = Output.ofNullable(storageClassName);
             return this;
         }
-
         public Builder storageos(@Nullable Output<StorageOSPersistentVolumeSourceArgs> storageos) {
             this.storageos = storageos;
             return this;
         }
-
         public Builder storageos(@Nullable StorageOSPersistentVolumeSourceArgs storageos) {
             this.storageos = Output.ofNullable(storageos);
             return this;
         }
-
         public Builder volumeMode(@Nullable Output<String> volumeMode) {
             this.volumeMode = volumeMode;
             return this;
         }
-
         public Builder volumeMode(@Nullable String volumeMode) {
             this.volumeMode = Output.ofNullable(volumeMode);
             return this;
         }
-
         public Builder vsphereVolume(@Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume) {
             this.vsphereVolume = vsphereVolume;
             return this;
         }
-
         public Builder vsphereVolume(@Nullable VsphereVirtualDiskVolumeSourceArgs vsphereVolume) {
             this.vsphereVolume = Output.ofNullable(vsphereVolume);
             return this;
-        }
-        public PersistentVolumeSpecArgs build() {
+        }        public PersistentVolumeSpecArgs build() {
             return new PersistentVolumeSpecArgs(accessModes, awsElasticBlockStore, azureDisk, azureFile, capacity, cephfs, cinder, claimRef, csi, fc, flexVolume, flocker, gcePersistentDisk, glusterfs, hostPath, iscsi, local, mountOptions, nfs, nodeAffinity, persistentVolumeReclaimPolicy, photonPersistentDisk, portworxVolume, quobyte, rbd, scaleIO, storageClassName, storageos, volumeMode, vsphereVolume);
         }
     }

@@ -105,22 +105,18 @@ public final class PodSecurityPolicy {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable PodSecurityPolicySpec spec) {
             this.spec = spec;
             return this;
-        }
-        public PodSecurityPolicy build() {
+        }        public PodSecurityPolicy build() {
             return new PodSecurityPolicy(apiVersion, kind, metadata, spec);
         }
     }

@@ -53,7 +53,9 @@ public final class CSINodeSpec {
             this.drivers = Objects.requireNonNull(drivers);
             return this;
         }
-        public CSINodeSpec build() {
+        public Builder drivers(CSINodeDriver... drivers) {
+            return drivers(List.of(drivers));
+        }        public CSINodeSpec build() {
             return new CSINodeSpec(drivers);
         }
     }

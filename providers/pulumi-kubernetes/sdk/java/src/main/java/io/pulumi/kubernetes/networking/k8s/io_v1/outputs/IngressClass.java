@@ -105,22 +105,18 @@ public final class IngressClass {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable IngressClassSpec spec) {
             this.spec = spec;
             return this;
-        }
-        public IngressClass build() {
+        }        public IngressClass build() {
             return new IngressClass(apiVersion, kind, metadata, spec);
         }
     }

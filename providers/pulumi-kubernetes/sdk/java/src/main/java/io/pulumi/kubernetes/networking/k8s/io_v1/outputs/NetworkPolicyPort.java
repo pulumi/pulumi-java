@@ -89,17 +89,14 @@ public final class NetworkPolicyPort {
             this.endPort = endPort;
             return this;
         }
-
         public Builder port(@Nullable Either<Integer,String> port) {
             this.port = port;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public NetworkPolicyPort build() {
+        }        public NetworkPolicyPort build() {
             return new NetworkPolicyPort(endPort, port, protocol);
         }
     }

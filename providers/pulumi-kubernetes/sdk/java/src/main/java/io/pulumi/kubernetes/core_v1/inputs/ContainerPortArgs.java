@@ -132,52 +132,42 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder containerPort(Integer containerPort) {
             this.containerPort = Output.of(Objects.requireNonNull(containerPort));
             return this;
         }
-
         public Builder hostIP(@Nullable Output<String> hostIP) {
             this.hostIP = hostIP;
             return this;
         }
-
         public Builder hostIP(@Nullable String hostIP) {
             this.hostIP = Output.ofNullable(hostIP);
             return this;
         }
-
         public Builder hostPort(@Nullable Output<Integer> hostPort) {
             this.hostPort = hostPort;
             return this;
         }
-
         public Builder hostPort(@Nullable Integer hostPort) {
             this.hostPort = Output.ofNullable(hostPort);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public ContainerPortArgs build() {
+        }        public ContainerPortArgs build() {
             return new ContainerPortArgs(containerPort, hostIP, hostPort, name, protocol);
         }
     }

@@ -208,102 +208,85 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
             this.collisionCount = collisionCount;
             return this;
         }
-
         public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = Output.ofNullable(collisionCount);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<DaemonSetConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<DaemonSetConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(DaemonSetConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder currentNumberScheduled(Output<Integer> currentNumberScheduled) {
             this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled);
             return this;
         }
-
         public Builder currentNumberScheduled(Integer currentNumberScheduled) {
             this.currentNumberScheduled = Output.of(Objects.requireNonNull(currentNumberScheduled));
             return this;
         }
-
         public Builder desiredNumberScheduled(Output<Integer> desiredNumberScheduled) {
             this.desiredNumberScheduled = Objects.requireNonNull(desiredNumberScheduled);
             return this;
         }
-
         public Builder desiredNumberScheduled(Integer desiredNumberScheduled) {
             this.desiredNumberScheduled = Output.of(Objects.requireNonNull(desiredNumberScheduled));
             return this;
         }
-
         public Builder numberAvailable(@Nullable Output<Integer> numberAvailable) {
             this.numberAvailable = numberAvailable;
             return this;
         }
-
         public Builder numberAvailable(@Nullable Integer numberAvailable) {
             this.numberAvailable = Output.ofNullable(numberAvailable);
             return this;
         }
-
         public Builder numberMisscheduled(Output<Integer> numberMisscheduled) {
             this.numberMisscheduled = Objects.requireNonNull(numberMisscheduled);
             return this;
         }
-
         public Builder numberMisscheduled(Integer numberMisscheduled) {
             this.numberMisscheduled = Output.of(Objects.requireNonNull(numberMisscheduled));
             return this;
         }
-
         public Builder numberReady(Output<Integer> numberReady) {
             this.numberReady = Objects.requireNonNull(numberReady);
             return this;
         }
-
         public Builder numberReady(Integer numberReady) {
             this.numberReady = Output.of(Objects.requireNonNull(numberReady));
             return this;
         }
-
         public Builder numberUnavailable(@Nullable Output<Integer> numberUnavailable) {
             this.numberUnavailable = numberUnavailable;
             return this;
         }
-
         public Builder numberUnavailable(@Nullable Integer numberUnavailable) {
             this.numberUnavailable = Output.ofNullable(numberUnavailable);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder updatedNumberScheduled(@Nullable Output<Integer> updatedNumberScheduled) {
             this.updatedNumberScheduled = updatedNumberScheduled;
             return this;
         }
-
         public Builder updatedNumberScheduled(@Nullable Integer updatedNumberScheduled) {
             this.updatedNumberScheduled = Output.ofNullable(updatedNumberScheduled);
             return this;
-        }
-        public DaemonSetStatusArgs build() {
+        }        public DaemonSetStatusArgs build() {
             return new DaemonSetStatusArgs(collisionCount, conditions, currentNumberScheduled, desiredNumberScheduled, numberAvailable, numberMisscheduled, numberReady, numberUnavailable, observedGeneration, updatedNumberScheduled);
         }
     }

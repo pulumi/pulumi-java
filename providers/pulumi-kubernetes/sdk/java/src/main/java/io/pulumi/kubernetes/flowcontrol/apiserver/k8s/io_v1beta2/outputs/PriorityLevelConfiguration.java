@@ -122,27 +122,22 @@ public final class PriorityLevelConfiguration {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable PriorityLevelConfigurationSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable PriorityLevelConfigurationStatus status) {
             this.status = status;
             return this;
-        }
-        public PriorityLevelConfiguration build() {
+        }        public PriorityLevelConfiguration build() {
             return new PriorityLevelConfiguration(apiVersion, kind, metadata, spec, status);
         }
     }

@@ -54,7 +54,9 @@ public final class APIServiceStatus {
             this.conditions = conditions;
             return this;
         }
-        public APIServiceStatus build() {
+        public Builder conditions(APIServiceCondition... conditions) {
+            return conditions(List.of(conditions));
+        }        public APIServiceStatus build() {
             return new APIServiceStatus(conditions);
         }
     }

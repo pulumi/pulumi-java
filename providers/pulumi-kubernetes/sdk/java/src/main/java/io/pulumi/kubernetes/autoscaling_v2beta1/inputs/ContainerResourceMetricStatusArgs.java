@@ -111,42 +111,34 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder container(String container) {
             this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
-
         public Builder currentAverageUtilization(@Nullable Output<Integer> currentAverageUtilization) {
             this.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
-
         public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
             this.currentAverageUtilization = Output.ofNullable(currentAverageUtilization);
             return this;
         }
-
         public Builder currentAverageValue(Output<String> currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
-
         public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Output.of(Objects.requireNonNull(currentAverageValue));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ContainerResourceMetricStatusArgs build() {
+        }        public ContainerResourceMetricStatusArgs build() {
             return new ContainerResourceMetricStatusArgs(container, currentAverageUtilization, currentAverageValue, name);
         }
     }

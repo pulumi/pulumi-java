@@ -181,42 +181,37 @@ public final class PersistentVolumeClaimSpec {
             this.accessModes = accessModes;
             return this;
         }
-
+        public Builder accessModes(String... accessModes) {
+            return accessModes(List.of(accessModes));
+        }
         public Builder dataSource(@Nullable TypedLocalObjectReference dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSourceRef(@Nullable TypedLocalObjectReference dataSourceRef) {
             this.dataSourceRef = dataSourceRef;
             return this;
         }
-
         public Builder resources(@Nullable ResourceRequirements resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder storageClassName(@Nullable String storageClassName) {
             this.storageClassName = storageClassName;
             return this;
         }
-
         public Builder volumeMode(@Nullable String volumeMode) {
             this.volumeMode = volumeMode;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
-        }
-        public PersistentVolumeClaimSpec build() {
+        }        public PersistentVolumeClaimSpec build() {
             return new PersistentVolumeClaimSpec(accessModes, dataSource, dataSourceRef, resources, selector, storageClassName, volumeMode, volumeName);
         }
     }

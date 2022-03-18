@@ -205,102 +205,82 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder architecture(String architecture) {
             this.architecture = Output.of(Objects.requireNonNull(architecture));
             return this;
         }
-
         public Builder bootID(Output<String> bootID) {
             this.bootID = Objects.requireNonNull(bootID);
             return this;
         }
-
         public Builder bootID(String bootID) {
             this.bootID = Output.of(Objects.requireNonNull(bootID));
             return this;
         }
-
         public Builder containerRuntimeVersion(Output<String> containerRuntimeVersion) {
             this.containerRuntimeVersion = Objects.requireNonNull(containerRuntimeVersion);
             return this;
         }
-
         public Builder containerRuntimeVersion(String containerRuntimeVersion) {
             this.containerRuntimeVersion = Output.of(Objects.requireNonNull(containerRuntimeVersion));
             return this;
         }
-
         public Builder kernelVersion(Output<String> kernelVersion) {
             this.kernelVersion = Objects.requireNonNull(kernelVersion);
             return this;
         }
-
         public Builder kernelVersion(String kernelVersion) {
             this.kernelVersion = Output.of(Objects.requireNonNull(kernelVersion));
             return this;
         }
-
         public Builder kubeProxyVersion(Output<String> kubeProxyVersion) {
             this.kubeProxyVersion = Objects.requireNonNull(kubeProxyVersion);
             return this;
         }
-
         public Builder kubeProxyVersion(String kubeProxyVersion) {
             this.kubeProxyVersion = Output.of(Objects.requireNonNull(kubeProxyVersion));
             return this;
         }
-
         public Builder kubeletVersion(Output<String> kubeletVersion) {
             this.kubeletVersion = Objects.requireNonNull(kubeletVersion);
             return this;
         }
-
         public Builder kubeletVersion(String kubeletVersion) {
             this.kubeletVersion = Output.of(Objects.requireNonNull(kubeletVersion));
             return this;
         }
-
         public Builder machineID(Output<String> machineID) {
             this.machineID = Objects.requireNonNull(machineID);
             return this;
         }
-
         public Builder machineID(String machineID) {
             this.machineID = Output.of(Objects.requireNonNull(machineID));
             return this;
         }
-
         public Builder operatingSystem(Output<String> operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
-
         public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Output.of(Objects.requireNonNull(operatingSystem));
             return this;
         }
-
         public Builder osImage(Output<String> osImage) {
             this.osImage = Objects.requireNonNull(osImage);
             return this;
         }
-
         public Builder osImage(String osImage) {
             this.osImage = Output.of(Objects.requireNonNull(osImage));
             return this;
         }
-
         public Builder systemUUID(Output<String> systemUUID) {
             this.systemUUID = Objects.requireNonNull(systemUUID);
             return this;
         }
-
         public Builder systemUUID(String systemUUID) {
             this.systemUUID = Output.of(Objects.requireNonNull(systemUUID));
             return this;
-        }
-        public NodeSystemInfoArgs build() {
+        }        public NodeSystemInfoArgs build() {
             return new NodeSystemInfoArgs(architecture, bootID, containerRuntimeVersion, kernelVersion, kubeProxyVersion, kubeletVersion, machineID, operatingSystem, osImage, systemUUID);
         }
     }

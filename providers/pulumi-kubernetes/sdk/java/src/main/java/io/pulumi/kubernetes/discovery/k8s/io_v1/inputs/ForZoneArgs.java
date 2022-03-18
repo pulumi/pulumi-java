@@ -60,12 +60,10 @@ public final class ForZoneArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ForZoneArgs build() {
+        }        public ForZoneArgs build() {
             return new ForZoneArgs(name);
         }
     }

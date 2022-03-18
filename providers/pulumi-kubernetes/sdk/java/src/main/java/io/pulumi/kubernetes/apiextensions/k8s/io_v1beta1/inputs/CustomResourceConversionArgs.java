@@ -97,32 +97,29 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
             this.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
-
         public Builder conversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
             this.conversionReviewVersions = Output.ofNullable(conversionReviewVersions);
             return this;
         }
-
+        public Builder conversionReviewVersions(String... conversionReviewVersions) {
+            return conversionReviewVersions(List.of(conversionReviewVersions));
+        }
         public Builder strategy(Output<String> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
-
         public Builder strategy(String strategy) {
             this.strategy = Output.of(Objects.requireNonNull(strategy));
             return this;
         }
-
         public Builder webhookClientConfig(@Nullable Output<WebhookClientConfigArgs> webhookClientConfig) {
             this.webhookClientConfig = webhookClientConfig;
             return this;
         }
-
         public Builder webhookClientConfig(@Nullable WebhookClientConfigArgs webhookClientConfig) {
             this.webhookClientConfig = Output.ofNullable(webhookClientConfig);
             return this;
-        }
-        public CustomResourceConversionArgs build() {
+        }        public CustomResourceConversionArgs build() {
             return new CustomResourceConversionArgs(conversionReviewVersions, strategy, webhookClientConfig);
         }
     }

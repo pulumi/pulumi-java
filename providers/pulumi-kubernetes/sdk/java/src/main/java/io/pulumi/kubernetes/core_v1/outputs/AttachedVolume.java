@@ -69,12 +69,10 @@ public final class AttachedVolume {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AttachedVolume build() {
+        }        public AttachedVolume build() {
             return new AttachedVolume(devicePath, name);
         }
     }

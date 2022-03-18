@@ -81,22 +81,18 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
             this.pathPrefix = pathPrefix;
             return this;
         }
-
         public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = Output.ofNullable(pathPrefix);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
-        }
-        public AllowedHostPathArgs build() {
+        }        public AllowedHostPathArgs build() {
             return new AllowedHostPathArgs(pathPrefix, readOnly);
         }
     }

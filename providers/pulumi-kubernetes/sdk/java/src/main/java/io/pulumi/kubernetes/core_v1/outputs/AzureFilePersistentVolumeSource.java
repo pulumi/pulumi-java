@@ -104,22 +104,18 @@ public final class AzureFilePersistentVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretNamespace(@Nullable String secretNamespace) {
             this.secretNamespace = secretNamespace;
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
-        }
-        public AzureFilePersistentVolumeSource build() {
+        }        public AzureFilePersistentVolumeSource build() {
             return new AzureFilePersistentVolumeSource(readOnly, secretName, secretNamespace, shareName);
         }
     }

@@ -178,82 +178,66 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = Output.ofNullable(minReadySeconds);
             return this;
         }
-
         public Builder paused(@Nullable Output<Boolean> paused) {
             this.paused = paused;
             return this;
         }
-
         public Builder paused(@Nullable Boolean paused) {
             this.paused = Output.ofNullable(paused);
             return this;
         }
-
         public Builder progressDeadlineSeconds(@Nullable Output<Integer> progressDeadlineSeconds) {
             this.progressDeadlineSeconds = progressDeadlineSeconds;
             return this;
         }
-
         public Builder progressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
             this.progressDeadlineSeconds = Output.ofNullable(progressDeadlineSeconds);
             return this;
         }
-
         public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = Output.ofNullable(revisionHistoryLimit);
             return this;
         }
-
         public Builder selector(Output<LabelSelectorArgs> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selector(LabelSelectorArgs selector) {
             this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
-
         public Builder strategy(@Nullable Output<DeploymentStrategyArgs> strategy) {
             this.strategy = strategy;
             return this;
         }
-
         public Builder strategy(@Nullable DeploymentStrategyArgs strategy) {
             this.strategy = Output.ofNullable(strategy);
             return this;
         }
-
         public Builder template(Output<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder template(PodTemplateSpecArgs template) {
             this.template = Output.of(Objects.requireNonNull(template));
             return this;
-        }
-        public DeploymentSpecArgs build() {
+        }        public DeploymentSpecArgs build() {
             return new DeploymentSpecArgs(minReadySeconds, paused, progressDeadlineSeconds, replicas, revisionHistoryLimit, selector, strategy, template);
         }
     }

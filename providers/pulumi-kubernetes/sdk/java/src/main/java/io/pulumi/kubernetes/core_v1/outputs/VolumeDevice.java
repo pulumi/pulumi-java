@@ -69,12 +69,10 @@ public final class VolumeDevice {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public VolumeDevice build() {
+        }        public VolumeDevice build() {
             return new VolumeDevice(devicePath, name);
         }
     }

@@ -104,42 +104,34 @@ public final class LocalSubjectAccessReviewArgs extends io.pulumi.resources.Reso
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(Output<SubjectAccessReviewSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder spec(SubjectAccessReviewSpecArgs spec) {
             this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
-        }
-        public LocalSubjectAccessReviewArgs build() {
+        }        public LocalSubjectAccessReviewArgs build() {
             return new LocalSubjectAccessReviewArgs(apiVersion, kind, metadata, spec);
         }
     }

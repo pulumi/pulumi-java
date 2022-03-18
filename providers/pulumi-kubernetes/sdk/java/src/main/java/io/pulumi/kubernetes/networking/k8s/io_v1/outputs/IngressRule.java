@@ -78,12 +78,10 @@ public final class IngressRule {
             this.host = host;
             return this;
         }
-
         public Builder http(@Nullable HTTPIngressRuleValue http) {
             this.http = http;
             return this;
-        }
-        public IngressRule build() {
+        }        public IngressRule build() {
             return new IngressRule(host, http);
         }
     }

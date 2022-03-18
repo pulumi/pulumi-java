@@ -79,22 +79,18 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(@Nullable Output<JobSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable JobSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
-        }
-        public JobTemplateSpecArgs build() {
+        }        public JobTemplateSpecArgs build() {
             return new JobTemplateSpecArgs(metadata, spec);
         }
     }

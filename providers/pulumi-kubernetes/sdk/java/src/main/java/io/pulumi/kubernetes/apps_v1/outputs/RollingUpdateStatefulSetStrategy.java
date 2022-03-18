@@ -53,8 +53,7 @@ public final class RollingUpdateStatefulSetStrategy {
         public Builder partition(@Nullable Integer partition) {
             this.partition = partition;
             return this;
-        }
-        public RollingUpdateStatefulSetStrategy build() {
+        }        public RollingUpdateStatefulSetStrategy build() {
             return new RollingUpdateStatefulSetStrategy(partition);
         }
     }

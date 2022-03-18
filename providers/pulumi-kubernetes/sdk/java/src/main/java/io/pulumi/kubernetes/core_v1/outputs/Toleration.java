@@ -138,27 +138,22 @@ public final class Toleration {
             this.effect = effect;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder tolerationSeconds(@Nullable Integer tolerationSeconds) {
             this.tolerationSeconds = tolerationSeconds;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public Toleration build() {
+        }        public Toleration build() {
             return new Toleration(effect, key, operator, tolerationSeconds, value);
         }
     }

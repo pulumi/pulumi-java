@@ -71,12 +71,10 @@ public final class ContainerStateWaiting {
             this.message = message;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
-        }
-        public ContainerStateWaiting build() {
+        }        public ContainerStateWaiting build() {
             return new ContainerStateWaiting(message, reason);
         }
     }

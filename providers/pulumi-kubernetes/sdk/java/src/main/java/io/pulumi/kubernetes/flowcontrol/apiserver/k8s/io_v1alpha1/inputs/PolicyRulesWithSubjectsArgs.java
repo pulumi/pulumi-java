@@ -97,32 +97,35 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
             this.nonResourceRules = nonResourceRules;
             return this;
         }
-
         public Builder nonResourceRules(@Nullable List<NonResourcePolicyRuleArgs> nonResourceRules) {
             this.nonResourceRules = Output.ofNullable(nonResourceRules);
             return this;
         }
-
+        public Builder nonResourceRules(NonResourcePolicyRuleArgs... nonResourceRules) {
+            return nonResourceRules(List.of(nonResourceRules));
+        }
         public Builder resourceRules(@Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules) {
             this.resourceRules = resourceRules;
             return this;
         }
-
         public Builder resourceRules(@Nullable List<ResourcePolicyRuleArgs> resourceRules) {
             this.resourceRules = Output.ofNullable(resourceRules);
             return this;
         }
-
+        public Builder resourceRules(ResourcePolicyRuleArgs... resourceRules) {
+            return resourceRules(List.of(resourceRules));
+        }
         public Builder subjects(Output<List<SubjectArgs>> subjects) {
             this.subjects = Objects.requireNonNull(subjects);
             return this;
         }
-
         public Builder subjects(List<SubjectArgs> subjects) {
             this.subjects = Output.of(Objects.requireNonNull(subjects));
             return this;
         }
-        public PolicyRulesWithSubjectsArgs build() {
+        public Builder subjects(SubjectArgs... subjects) {
+            return subjects(List.of(subjects));
+        }        public PolicyRulesWithSubjectsArgs build() {
             return new PolicyRulesWithSubjectsArgs(nonResourceRules, resourceRules, subjects);
         }
     }

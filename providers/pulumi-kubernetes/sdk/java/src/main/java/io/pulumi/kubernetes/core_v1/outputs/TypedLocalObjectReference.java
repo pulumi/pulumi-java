@@ -87,17 +87,14 @@ public final class TypedLocalObjectReference {
             this.apiGroup = apiGroup;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public TypedLocalObjectReference build() {
+        }        public TypedLocalObjectReference build() {
             return new TypedLocalObjectReference(apiGroup, kind, name);
         }
     }

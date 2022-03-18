@@ -105,22 +105,18 @@ public final class CSINode {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(CSINodeSpec spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
-        }
-        public CSINode build() {
+        }        public CSINode build() {
             return new CSINode(apiVersion, kind, metadata, spec);
         }
     }

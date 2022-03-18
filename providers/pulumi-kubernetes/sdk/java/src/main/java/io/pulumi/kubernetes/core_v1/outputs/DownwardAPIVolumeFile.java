@@ -106,22 +106,18 @@ public final class DownwardAPIVolumeFile {
             this.fieldRef = fieldRef;
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder resourceFieldRef(@Nullable ResourceFieldSelector resourceFieldRef) {
             this.resourceFieldRef = resourceFieldRef;
             return this;
-        }
-        public DownwardAPIVolumeFile build() {
+        }        public DownwardAPIVolumeFile build() {
             return new DownwardAPIVolumeFile(fieldRef, mode, path, resourceFieldRef);
         }
     }

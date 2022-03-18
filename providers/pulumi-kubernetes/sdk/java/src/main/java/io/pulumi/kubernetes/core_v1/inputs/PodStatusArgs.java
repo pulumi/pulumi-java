@@ -274,132 +274,121 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<PodConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(PodConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder containerStatuses(@Nullable Output<List<ContainerStatusArgs>> containerStatuses) {
             this.containerStatuses = containerStatuses;
             return this;
         }
-
         public Builder containerStatuses(@Nullable List<ContainerStatusArgs> containerStatuses) {
             this.containerStatuses = Output.ofNullable(containerStatuses);
             return this;
         }
-
+        public Builder containerStatuses(ContainerStatusArgs... containerStatuses) {
+            return containerStatuses(List.of(containerStatuses));
+        }
         public Builder ephemeralContainerStatuses(@Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses) {
             this.ephemeralContainerStatuses = ephemeralContainerStatuses;
             return this;
         }
-
         public Builder ephemeralContainerStatuses(@Nullable List<ContainerStatusArgs> ephemeralContainerStatuses) {
             this.ephemeralContainerStatuses = Output.ofNullable(ephemeralContainerStatuses);
             return this;
         }
-
+        public Builder ephemeralContainerStatuses(ContainerStatusArgs... ephemeralContainerStatuses) {
+            return ephemeralContainerStatuses(List.of(ephemeralContainerStatuses));
+        }
         public Builder hostIP(@Nullable Output<String> hostIP) {
             this.hostIP = hostIP;
             return this;
         }
-
         public Builder hostIP(@Nullable String hostIP) {
             this.hostIP = Output.ofNullable(hostIP);
             return this;
         }
-
         public Builder initContainerStatuses(@Nullable Output<List<ContainerStatusArgs>> initContainerStatuses) {
             this.initContainerStatuses = initContainerStatuses;
             return this;
         }
-
         public Builder initContainerStatuses(@Nullable List<ContainerStatusArgs> initContainerStatuses) {
             this.initContainerStatuses = Output.ofNullable(initContainerStatuses);
             return this;
         }
-
+        public Builder initContainerStatuses(ContainerStatusArgs... initContainerStatuses) {
+            return initContainerStatuses(List.of(initContainerStatuses));
+        }
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder nominatedNodeName(@Nullable Output<String> nominatedNodeName) {
             this.nominatedNodeName = nominatedNodeName;
             return this;
         }
-
         public Builder nominatedNodeName(@Nullable String nominatedNodeName) {
             this.nominatedNodeName = Output.ofNullable(nominatedNodeName);
             return this;
         }
-
         public Builder phase(@Nullable Output<String> phase) {
             this.phase = phase;
             return this;
         }
-
         public Builder phase(@Nullable String phase) {
             this.phase = Output.ofNullable(phase);
             return this;
         }
-
         public Builder podIP(@Nullable Output<String> podIP) {
             this.podIP = podIP;
             return this;
         }
-
         public Builder podIP(@Nullable String podIP) {
             this.podIP = Output.ofNullable(podIP);
             return this;
         }
-
         public Builder podIPs(@Nullable Output<List<PodIPArgs>> podIPs) {
             this.podIPs = podIPs;
             return this;
         }
-
         public Builder podIPs(@Nullable List<PodIPArgs> podIPs) {
             this.podIPs = Output.ofNullable(podIPs);
             return this;
         }
-
+        public Builder podIPs(PodIPArgs... podIPs) {
+            return podIPs(List.of(podIPs));
+        }
         public Builder qosClass(@Nullable Output<String> qosClass) {
             this.qosClass = qosClass;
             return this;
         }
-
         public Builder qosClass(@Nullable String qosClass) {
             this.qosClass = Output.ofNullable(qosClass);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public PodStatusArgs build() {
+        }        public PodStatusArgs build() {
             return new PodStatusArgs(conditions, containerStatuses, ephemeralContainerStatuses, hostIP, initContainerStatuses, message, nominatedNodeName, phase, podIP, podIPs, qosClass, reason, startTime);
         }
     }

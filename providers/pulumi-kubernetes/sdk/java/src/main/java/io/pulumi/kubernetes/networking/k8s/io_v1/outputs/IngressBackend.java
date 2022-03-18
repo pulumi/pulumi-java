@@ -72,12 +72,10 @@ public final class IngressBackend {
             this.resource = resource;
             return this;
         }
-
         public Builder service(@Nullable IngressServiceBackend service) {
             this.service = service;
             return this;
-        }
-        public IngressBackend build() {
+        }        public IngressBackend build() {
             return new IngressBackend(resource, service);
         }
     }

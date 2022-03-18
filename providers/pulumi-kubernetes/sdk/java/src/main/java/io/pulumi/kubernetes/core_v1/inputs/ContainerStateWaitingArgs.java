@@ -78,22 +78,18 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
-        }
-        public ContainerStateWaitingArgs build() {
+        }        public ContainerStateWaitingArgs build() {
             return new ContainerStateWaitingArgs(message, reason);
         }
     }

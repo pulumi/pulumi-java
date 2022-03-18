@@ -115,12 +115,13 @@ public final class CertificateSigningRequestStatus {
             this.certificate = certificate;
             return this;
         }
-
         public Builder conditions(@Nullable List<CertificateSigningRequestCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-        public CertificateSigningRequestStatus build() {
+        public Builder conditions(CertificateSigningRequestCondition... conditions) {
+            return conditions(List.of(conditions));
+        }        public CertificateSigningRequestStatus build() {
             return new CertificateSigningRequestStatus(certificate, conditions);
         }
     }

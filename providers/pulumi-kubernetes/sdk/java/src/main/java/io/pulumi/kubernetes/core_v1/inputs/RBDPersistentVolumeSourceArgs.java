@@ -177,82 +177,69 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder keyring(@Nullable Output<String> keyring) {
             this.keyring = keyring;
             return this;
         }
-
         public Builder keyring(@Nullable String keyring) {
             this.keyring = Output.ofNullable(keyring);
             return this;
         }
-
         public Builder monitors(Output<List<String>> monitors) {
             this.monitors = Objects.requireNonNull(monitors);
             return this;
         }
-
         public Builder monitors(List<String> monitors) {
             this.monitors = Output.of(Objects.requireNonNull(monitors));
             return this;
         }
-
+        public Builder monitors(String... monitors) {
+            return monitors(List.of(monitors));
+        }
         public Builder pool(@Nullable Output<String> pool) {
             this.pool = pool;
             return this;
         }
-
         public Builder pool(@Nullable String pool) {
             this.pool = Output.ofNullable(pool);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable SecretReferenceArgs secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public RBDPersistentVolumeSourceArgs build() {
+        }        public RBDPersistentVolumeSourceArgs build() {
             return new RBDPersistentVolumeSourceArgs(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);
         }
     }

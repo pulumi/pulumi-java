@@ -104,22 +104,18 @@ public final class WindowsSecurityContextOptions {
             this.gmsaCredentialSpec = gmsaCredentialSpec;
             return this;
         }
-
         public Builder gmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
             this.gmsaCredentialSpecName = gmsaCredentialSpecName;
             return this;
         }
-
         public Builder hostProcess(@Nullable Boolean hostProcess) {
             this.hostProcess = hostProcess;
             return this;
         }
-
         public Builder runAsUserName(@Nullable String runAsUserName) {
             this.runAsUserName = runAsUserName;
             return this;
-        }
-        public WindowsSecurityContextOptions build() {
+        }        public WindowsSecurityContextOptions build() {
             return new WindowsSecurityContextOptions(gmsaCredentialSpec, gmsaCredentialSpecName, hostProcess, runAsUserName);
         }
     }

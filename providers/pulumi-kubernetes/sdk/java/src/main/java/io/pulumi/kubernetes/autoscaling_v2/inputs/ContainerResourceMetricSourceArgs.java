@@ -94,32 +94,26 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder container(String container) {
             this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder target(Output<MetricTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(MetricTargetArgs target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public ContainerResourceMetricSourceArgs build() {
+        }        public ContainerResourceMetricSourceArgs build() {
             return new ContainerResourceMetricSourceArgs(container, name, target);
         }
     }

@@ -147,62 +147,53 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
             this.conversion = conversion;
             return this;
         }
-
         public Builder conversion(@Nullable CustomResourceConversionArgs conversion) {
             this.conversion = Output.ofNullable(conversion);
             return this;
         }
-
         public Builder group(Output<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder group(String group) {
             this.group = Output.of(Objects.requireNonNull(group));
             return this;
         }
-
         public Builder names(Output<CustomResourceDefinitionNamesArgs> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public Builder names(CustomResourceDefinitionNamesArgs names) {
             this.names = Output.of(Objects.requireNonNull(names));
             return this;
         }
-
         public Builder preserveUnknownFields(@Nullable Output<Boolean> preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
-
         public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = Output.ofNullable(preserveUnknownFields);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder versions(Output<List<CustomResourceDefinitionVersionArgs>> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public Builder versions(List<CustomResourceDefinitionVersionArgs> versions) {
             this.versions = Output.of(Objects.requireNonNull(versions));
             return this;
         }
-        public CustomResourceDefinitionSpecArgs build() {
+        public Builder versions(CustomResourceDefinitionVersionArgs... versions) {
+            return versions(List.of(versions));
+        }        public CustomResourceDefinitionSpecArgs build() {
             return new CustomResourceDefinitionSpecArgs(conversion, group, names, preserveUnknownFields, scope, versions);
         }
     }

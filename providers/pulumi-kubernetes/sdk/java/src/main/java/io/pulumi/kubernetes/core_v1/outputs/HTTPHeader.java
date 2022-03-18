@@ -69,12 +69,10 @@ public final class HTTPHeader {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public HTTPHeader build() {
+        }        public HTTPHeader build() {
             return new HTTPHeader(name, value);
         }
     }

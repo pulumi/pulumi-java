@@ -102,22 +102,18 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder rule(Output<String> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public Builder rule(String rule) {
             this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
-        }
-        public ValidationRuleArgs build() {
+        }        public ValidationRuleArgs build() {
             return new ValidationRuleArgs(message, rule);
         }
     }

@@ -69,12 +69,10 @@ public final class HostPortRange {
             this.max = Objects.requireNonNull(max);
             return this;
         }
-
         public Builder min(Integer min) {
             this.min = Objects.requireNonNull(min);
             return this;
-        }
-        public HostPortRange build() {
+        }        public HostPortRange build() {
             return new HostPortRange(max, min);
         }
     }

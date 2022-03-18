@@ -78,22 +78,18 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public LocalVolumeSourceArgs build() {
+        }        public LocalVolumeSourceArgs build() {
             return new LocalVolumeSourceArgs(fsType, path);
         }
     }

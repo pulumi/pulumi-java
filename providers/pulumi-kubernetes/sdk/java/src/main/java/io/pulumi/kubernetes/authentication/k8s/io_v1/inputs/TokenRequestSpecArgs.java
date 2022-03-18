@@ -97,32 +97,29 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
-
         public Builder audiences(List<String> audiences) {
             this.audiences = Output.of(Objects.requireNonNull(audiences));
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder boundObjectRef(@Nullable Output<BoundObjectReferenceArgs> boundObjectRef) {
             this.boundObjectRef = boundObjectRef;
             return this;
         }
-
         public Builder boundObjectRef(@Nullable BoundObjectReferenceArgs boundObjectRef) {
             this.boundObjectRef = Output.ofNullable(boundObjectRef);
             return this;
         }
-
         public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
-
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = Output.ofNullable(expirationSeconds);
             return this;
-        }
-        public TokenRequestSpecArgs build() {
+        }        public TokenRequestSpecArgs build() {
             return new TokenRequestSpecArgs(audiences, boundObjectRef, expirationSeconds);
         }
     }

@@ -104,22 +104,18 @@ public final class MetricTarget {
             this.averageUtilization = averageUtilization;
             return this;
         }
-
         public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = averageValue;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public MetricTarget build() {
+        }        public MetricTarget build() {
             return new MetricTarget(averageUtilization, averageValue, type, value);
         }
     }

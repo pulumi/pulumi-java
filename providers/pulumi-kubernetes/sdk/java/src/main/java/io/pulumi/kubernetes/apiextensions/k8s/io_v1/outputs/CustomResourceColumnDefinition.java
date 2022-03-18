@@ -136,32 +136,26 @@ public final class CustomResourceColumnDefinition {
             this.description = description;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder jsonPath(String jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CustomResourceColumnDefinition build() {
+        }        public CustomResourceColumnDefinition build() {
             return new CustomResourceColumnDefinition(description, format, jsonPath, name, priority, type);
         }
     }

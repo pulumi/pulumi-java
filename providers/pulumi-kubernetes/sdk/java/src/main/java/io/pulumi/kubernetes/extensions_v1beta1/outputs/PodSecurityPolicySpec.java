@@ -443,122 +443,131 @@ public final class PodSecurityPolicySpec {
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
-
         public Builder allowedCSIDrivers(@Nullable List<AllowedCSIDriver> allowedCSIDrivers) {
             this.allowedCSIDrivers = allowedCSIDrivers;
             return this;
         }
-
+        public Builder allowedCSIDrivers(AllowedCSIDriver... allowedCSIDrivers) {
+            return allowedCSIDrivers(List.of(allowedCSIDrivers));
+        }
         public Builder allowedCapabilities(@Nullable List<String> allowedCapabilities) {
             this.allowedCapabilities = allowedCapabilities;
             return this;
         }
-
+        public Builder allowedCapabilities(String... allowedCapabilities) {
+            return allowedCapabilities(List.of(allowedCapabilities));
+        }
         public Builder allowedFlexVolumes(@Nullable List<AllowedFlexVolume> allowedFlexVolumes) {
             this.allowedFlexVolumes = allowedFlexVolumes;
             return this;
         }
-
+        public Builder allowedFlexVolumes(AllowedFlexVolume... allowedFlexVolumes) {
+            return allowedFlexVolumes(List.of(allowedFlexVolumes));
+        }
         public Builder allowedHostPaths(@Nullable List<AllowedHostPath> allowedHostPaths) {
             this.allowedHostPaths = allowedHostPaths;
             return this;
         }
-
+        public Builder allowedHostPaths(AllowedHostPath... allowedHostPaths) {
+            return allowedHostPaths(List.of(allowedHostPaths));
+        }
         public Builder allowedProcMountTypes(@Nullable List<String> allowedProcMountTypes) {
             this.allowedProcMountTypes = allowedProcMountTypes;
             return this;
         }
-
+        public Builder allowedProcMountTypes(String... allowedProcMountTypes) {
+            return allowedProcMountTypes(List.of(allowedProcMountTypes));
+        }
         public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
-
+        public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
+            return allowedUnsafeSysctls(List.of(allowedUnsafeSysctls));
+        }
         public Builder defaultAddCapabilities(@Nullable List<String> defaultAddCapabilities) {
             this.defaultAddCapabilities = defaultAddCapabilities;
             return this;
         }
-
+        public Builder defaultAddCapabilities(String... defaultAddCapabilities) {
+            return defaultAddCapabilities(List.of(defaultAddCapabilities));
+        }
         public Builder defaultAllowPrivilegeEscalation(@Nullable Boolean defaultAllowPrivilegeEscalation) {
             this.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
             return this;
         }
-
         public Builder forbiddenSysctls(@Nullable List<String> forbiddenSysctls) {
             this.forbiddenSysctls = forbiddenSysctls;
             return this;
         }
-
+        public Builder forbiddenSysctls(String... forbiddenSysctls) {
+            return forbiddenSysctls(List.of(forbiddenSysctls));
+        }
         public Builder fsGroup(FSGroupStrategyOptions fsGroup) {
             this.fsGroup = Objects.requireNonNull(fsGroup);
             return this;
         }
-
         public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
-
         public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
-
         public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = hostPID;
             return this;
         }
-
         public Builder hostPorts(@Nullable List<HostPortRange> hostPorts) {
             this.hostPorts = hostPorts;
             return this;
         }
-
+        public Builder hostPorts(HostPortRange... hostPorts) {
+            return hostPorts(List.of(hostPorts));
+        }
         public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = privileged;
             return this;
         }
-
         public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
-
         public Builder requiredDropCapabilities(@Nullable List<String> requiredDropCapabilities) {
             this.requiredDropCapabilities = requiredDropCapabilities;
             return this;
         }
-
+        public Builder requiredDropCapabilities(String... requiredDropCapabilities) {
+            return requiredDropCapabilities(List.of(requiredDropCapabilities));
+        }
         public Builder runAsGroup(@Nullable RunAsGroupStrategyOptions runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
-
         public Builder runAsUser(RunAsUserStrategyOptions runAsUser) {
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }
-
         public Builder runtimeClass(@Nullable RuntimeClassStrategyOptions runtimeClass) {
             this.runtimeClass = runtimeClass;
             return this;
         }
-
         public Builder seLinux(SELinuxStrategyOptions seLinux) {
             this.seLinux = Objects.requireNonNull(seLinux);
             return this;
         }
-
         public Builder supplementalGroups(SupplementalGroupsStrategyOptions supplementalGroups) {
             this.supplementalGroups = Objects.requireNonNull(supplementalGroups);
             return this;
         }
-
         public Builder volumes(@Nullable List<String> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public PodSecurityPolicySpec build() {
+        public Builder volumes(String... volumes) {
+            return volumes(List.of(volumes));
+        }        public PodSecurityPolicySpec build() {
             return new PodSecurityPolicySpec(allowPrivilegeEscalation, allowedCSIDrivers, allowedCapabilities, allowedFlexVolumes, allowedHostPaths, allowedProcMountTypes, allowedUnsafeSysctls, defaultAddCapabilities, defaultAllowPrivilegeEscalation, forbiddenSysctls, fsGroup, hostIPC, hostNetwork, hostPID, hostPorts, privileged, readOnlyRootFilesystem, requiredDropCapabilities, runAsGroup, runAsUser, runtimeClass, seLinux, supplementalGroups, volumes);
         }
     }

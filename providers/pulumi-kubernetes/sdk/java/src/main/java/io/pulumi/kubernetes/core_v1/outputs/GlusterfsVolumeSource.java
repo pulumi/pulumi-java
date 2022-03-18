@@ -88,17 +88,14 @@ public final class GlusterfsVolumeSource {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
-        }
-        public GlusterfsVolumeSource build() {
+        }        public GlusterfsVolumeSource build() {
             return new GlusterfsVolumeSource(endpoints, path, readOnly);
         }
     }

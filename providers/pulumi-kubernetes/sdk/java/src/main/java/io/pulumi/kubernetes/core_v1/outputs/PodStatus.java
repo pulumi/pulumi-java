@@ -283,67 +283,69 @@ public final class PodStatus {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(PodCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder containerStatuses(@Nullable List<ContainerStatus> containerStatuses) {
             this.containerStatuses = containerStatuses;
             return this;
         }
-
+        public Builder containerStatuses(ContainerStatus... containerStatuses) {
+            return containerStatuses(List.of(containerStatuses));
+        }
         public Builder ephemeralContainerStatuses(@Nullable List<ContainerStatus> ephemeralContainerStatuses) {
             this.ephemeralContainerStatuses = ephemeralContainerStatuses;
             return this;
         }
-
+        public Builder ephemeralContainerStatuses(ContainerStatus... ephemeralContainerStatuses) {
+            return ephemeralContainerStatuses(List.of(ephemeralContainerStatuses));
+        }
         public Builder hostIP(@Nullable String hostIP) {
             this.hostIP = hostIP;
             return this;
         }
-
         public Builder initContainerStatuses(@Nullable List<ContainerStatus> initContainerStatuses) {
             this.initContainerStatuses = initContainerStatuses;
             return this;
         }
-
+        public Builder initContainerStatuses(ContainerStatus... initContainerStatuses) {
+            return initContainerStatuses(List.of(initContainerStatuses));
+        }
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder nominatedNodeName(@Nullable String nominatedNodeName) {
             this.nominatedNodeName = nominatedNodeName;
             return this;
         }
-
         public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
         }
-
         public Builder podIP(@Nullable String podIP) {
             this.podIP = podIP;
             return this;
         }
-
         public Builder podIPs(@Nullable List<PodIP> podIPs) {
             this.podIPs = podIPs;
             return this;
         }
-
+        public Builder podIPs(PodIP... podIPs) {
+            return podIPs(List.of(podIPs));
+        }
         public Builder qosClass(@Nullable String qosClass) {
             this.qosClass = qosClass;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public PodStatus build() {
+        }        public PodStatus build() {
             return new PodStatus(conditions, containerStatuses, ephemeralContainerStatuses, hostIP, initContainerStatuses, message, nominatedNodeName, phase, podIP, podIPs, qosClass, reason, startTime);
         }
     }

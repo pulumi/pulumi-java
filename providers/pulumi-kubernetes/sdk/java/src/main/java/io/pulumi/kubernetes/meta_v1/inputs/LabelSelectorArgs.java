@@ -81,22 +81,21 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.matchExpressions = matchExpressions;
             return this;
         }
-
         public Builder matchExpressions(@Nullable List<LabelSelectorRequirementArgs> matchExpressions) {
             this.matchExpressions = Output.ofNullable(matchExpressions);
             return this;
         }
-
+        public Builder matchExpressions(LabelSelectorRequirementArgs... matchExpressions) {
+            return matchExpressions(List.of(matchExpressions));
+        }
         public Builder matchLabels(@Nullable Output<Map<String,String>> matchLabels) {
             this.matchLabels = matchLabels;
             return this;
         }
-
         public Builder matchLabels(@Nullable Map<String,String> matchLabels) {
             this.matchLabels = Output.ofNullable(matchLabels);
             return this;
-        }
-        public LabelSelectorArgs build() {
+        }        public LabelSelectorArgs build() {
             return new LabelSelectorArgs(matchExpressions, matchLabels);
         }
     }

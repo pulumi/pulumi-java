@@ -53,8 +53,7 @@ public final class PodIP {
         public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
-        }
-        public PodIP build() {
+        }        public PodIP build() {
             return new PodIP(ip);
         }
     }

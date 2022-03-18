@@ -127,52 +127,42 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.acquireTime = acquireTime;
             return this;
         }
-
         public Builder acquireTime(@Nullable String acquireTime) {
             this.acquireTime = Output.ofNullable(acquireTime);
             return this;
         }
-
         public Builder holderIdentity(@Nullable Output<String> holderIdentity) {
             this.holderIdentity = holderIdentity;
             return this;
         }
-
         public Builder holderIdentity(@Nullable String holderIdentity) {
             this.holderIdentity = Output.ofNullable(holderIdentity);
             return this;
         }
-
         public Builder leaseDurationSeconds(@Nullable Output<Integer> leaseDurationSeconds) {
             this.leaseDurationSeconds = leaseDurationSeconds;
             return this;
         }
-
         public Builder leaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
             this.leaseDurationSeconds = Output.ofNullable(leaseDurationSeconds);
             return this;
         }
-
         public Builder leaseTransitions(@Nullable Output<Integer> leaseTransitions) {
             this.leaseTransitions = leaseTransitions;
             return this;
         }
-
         public Builder leaseTransitions(@Nullable Integer leaseTransitions) {
             this.leaseTransitions = Output.ofNullable(leaseTransitions);
             return this;
         }
-
         public Builder renewTime(@Nullable Output<String> renewTime) {
             this.renewTime = renewTime;
             return this;
         }
-
         public Builder renewTime(@Nullable String renewTime) {
             this.renewTime = Output.ofNullable(renewTime);
             return this;
-        }
-        public LeaseSpecArgs build() {
+        }        public LeaseSpecArgs build() {
             return new LeaseSpecArgs(acquireTime, holderIdentity, leaseDurationSeconds, leaseTransitions, renewTime);
         }
     }

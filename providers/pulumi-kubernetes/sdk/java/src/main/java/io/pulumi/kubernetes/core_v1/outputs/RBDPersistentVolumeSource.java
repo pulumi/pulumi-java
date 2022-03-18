@@ -170,42 +170,37 @@ public final class RBDPersistentVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder keyring(@Nullable String keyring) {
             this.keyring = keyring;
             return this;
         }
-
         public Builder monitors(List<String> monitors) {
             this.monitors = Objects.requireNonNull(monitors);
             return this;
         }
-
+        public Builder monitors(String... monitors) {
+            return monitors(List.of(monitors));
+        }
         public Builder pool(@Nullable String pool) {
             this.pool = pool;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secretRef(@Nullable SecretReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = user;
             return this;
-        }
-        public RBDPersistentVolumeSource build() {
+        }        public RBDPersistentVolumeSource build() {
             return new RBDPersistentVolumeSource(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);
         }
     }
