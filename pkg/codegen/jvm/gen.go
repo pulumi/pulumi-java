@@ -25,6 +25,8 @@ type typeDetails struct {
 	plainType  bool
 }
 
+const ListTypeName = "java.util.List"
+
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
 		return pkg
@@ -627,7 +629,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			false,               // inputless overload
 		)
 		nestedType := ""
-		if propertyType.Type.String() == "java.util.List" {
+		if propertyType.Type.String() == ListTypeName {
 			for _, a := range propertyType.Parameters {
 				if strings.HasPrefix(a.Type.String(), "java.util.") {
 					continue
@@ -692,7 +694,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			if !propertyTypeUnwrapped.Equal(propertyType) {
 				// add overloaded setter
 				nestedType := ""
-				if propertyTypeUnwrapped.Type.String() == "java.util.List" {
+				if propertyTypeUnwrapped.Type.String() == ListTypeName {
 					for _, a := range propertyTypeUnwrapped.Parameters {
 						if strings.HasPrefix(a.Type.String(), "java.util.") {
 							continue
@@ -851,7 +853,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			false,               // inputless overload
 		)
 		nestedType := ""
-		if propertyType.Type.String() == "java.util.List" {
+		if propertyType.Type.String() == ListTypeName {
 			for _, a := range propertyType.Parameters {
 				if strings.HasPrefix(a.Type.String(), "java.util.") {
 					continue
@@ -916,7 +918,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			if !propertyTypeUnwrapped.Equal(propertyType) {
 				// add overloaded setter
 				nestedType := ""
-				if propertyTypeUnwrapped.Type.String() == "java.util.List" {
+				if propertyTypeUnwrapped.Type.String() == ListTypeName {
 					for _, a := range propertyTypeUnwrapped.Parameters {
 						if strings.HasPrefix(a.Type.String(), "java.util.") {
 							continue
@@ -1120,7 +1122,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 		nestedType := ""
-		if propertyType.Type.String() == "java.util.List" {
+		if propertyType.Type.String() == ListTypeName {
 			for _, a := range propertyType.Parameters {
 				if strings.HasPrefix(a.Type.String(), "java.util.") {
 					continue
@@ -1357,7 +1359,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 		)
 
 		nestedType := ""
-		if propertyType.Type.String() == "java.util.List" {
+		if propertyType.Type.String() == ListTypeName {
 			for _, a := range propertyType.Parameters {
 				if strings.HasPrefix(a.Type.String(), "java.util.") {
 					continue
