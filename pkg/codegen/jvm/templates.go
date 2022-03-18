@@ -251,11 +251,11 @@ type getterTemplateContext struct {
 }
 
 type builderSetterTemplateContext struct {
-	SetterName   string
-	PropertyType string
-	PropertyName string
-	Assignment   string
-	IsList       string
+	SetterName     string
+	PropertyType   string
+	PropertyName   string
+	Assignment     string
+	ListNestedType string
 }
 
 type builderFieldTemplateContext struct {
@@ -293,8 +293,8 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
 
-{{- if $setter.IsList }}
-{{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.IsList }}... {{ $setter.PropertyName }}) {
+{{- if $setter.ListNestedType }}
+{{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.ListNestedType }}... {{ $setter.PropertyName }}) {
 {{ $.Indent }}        return {{ $setter.SetterName }}(List.of({{ $setter.PropertyName }}));
 {{ $.Indent }}    }
 {{- end -}}
