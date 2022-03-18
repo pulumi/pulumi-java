@@ -79,12 +79,10 @@ public final class TriggerBuildOptionsVolume {
             this.name = name;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
-        }
-        public TriggerBuildOptionsVolume build() {
+        }        public TriggerBuildOptionsVolume build() {
             return new TriggerBuildOptionsVolume(name, path);
         }
     }

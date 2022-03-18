@@ -53,8 +53,7 @@ public final class CxAgentSpeechToTextSettings {
         public Builder enableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
             this.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
-        }
-        public CxAgentSpeechToTextSettings build() {
+        }        public CxAgentSpeechToTextSettings build() {
             return new CxAgentSpeechToTextSettings(enableSpeechAdaptation);
         }
     }

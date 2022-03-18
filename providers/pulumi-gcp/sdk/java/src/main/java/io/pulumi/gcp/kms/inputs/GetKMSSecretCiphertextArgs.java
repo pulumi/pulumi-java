@@ -74,12 +74,10 @@ public final class GetKMSSecretCiphertextArgs extends io.pulumi.resources.Invoke
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
-        }
-        public GetKMSSecretCiphertextArgs build() {
+        }        public GetKMSSecretCiphertextArgs build() {
             return new GetKMSSecretCiphertextArgs(cryptoKey, plaintext);
         }
     }

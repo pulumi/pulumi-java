@@ -70,22 +70,21 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
-        }
-        public GetClusterClusterAutoscalingAutoProvisioningDefault build() {
+        }        public GetClusterClusterAutoscalingAutoProvisioningDefault build() {
             return new GetClusterClusterAutoscalingAutoProvisioningDefault(imageType, minCpuPlatform, oauthScopes, serviceAccount);
         }
     }

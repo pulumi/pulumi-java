@@ -128,52 +128,42 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
-
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
-
         public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = Output.ofNullable(numNodes);
             return this;
         }
-
         public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public InstanceClusterArgs build() {
+        }        public InstanceClusterArgs build() {
             return new InstanceClusterArgs(clusterId, kmsKeyName, numNodes, storageType, zone);
         }
     }

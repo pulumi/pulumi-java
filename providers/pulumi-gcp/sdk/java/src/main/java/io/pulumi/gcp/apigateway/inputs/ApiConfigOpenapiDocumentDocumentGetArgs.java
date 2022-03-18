@@ -73,22 +73,18 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
-
         public Builder contents(String contents) {
             this.contents = Output.of(Objects.requireNonNull(contents));
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public ApiConfigOpenapiDocumentDocumentGetArgs build() {
+        }        public ApiConfigOpenapiDocumentDocumentGetArgs build() {
             return new ApiConfigOpenapiDocumentDocumentGetArgs(contents, path);
         }
     }

@@ -129,52 +129,42 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             this.ignoreIdleSlots = ignoreIdleSlots;
             return this;
         }
-
         public Builder ignoreIdleSlots(@Nullable Boolean ignoreIdleSlots) {
             this.ignoreIdleSlots = Output.ofNullable(ignoreIdleSlots);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder slotCapacity(Output<Integer> slotCapacity) {
             this.slotCapacity = Objects.requireNonNull(slotCapacity);
             return this;
         }
-
         public Builder slotCapacity(Integer slotCapacity) {
             this.slotCapacity = Output.of(Objects.requireNonNull(slotCapacity));
             return this;
-        }
-        public ReservationArgs build() {
+        }        public ReservationArgs build() {
             return new ReservationArgs(ignoreIdleSlots, location, name, project, slotCapacity);
         }
     }

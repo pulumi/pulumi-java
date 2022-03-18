@@ -50,8 +50,7 @@ public final class GetAppEngineServiceTelemetry extends io.pulumi.resources.Invo
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetAppEngineServiceTelemetry build() {
+        }        public GetAppEngineServiceTelemetry build() {
             return new GetAppEngineServiceTelemetry(resourceName);
         }
     }

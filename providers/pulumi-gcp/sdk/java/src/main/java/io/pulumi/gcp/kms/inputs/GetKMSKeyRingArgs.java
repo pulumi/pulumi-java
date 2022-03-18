@@ -93,17 +93,14 @@ public final class GetKMSKeyRingArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetKMSKeyRingArgs build() {
+        }        public GetKMSKeyRingArgs build() {
             return new GetKMSKeyRingArgs(location, name, project);
         }
     }

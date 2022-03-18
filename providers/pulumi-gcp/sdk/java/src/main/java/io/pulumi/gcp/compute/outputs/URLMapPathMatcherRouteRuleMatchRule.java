@@ -206,37 +206,39 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
             this.fullPathMatch = fullPathMatch;
             return this;
         }
-
         public Builder headerMatches(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches) {
             this.headerMatches = headerMatches;
             return this;
         }
-
+        public Builder headerMatches(URLMapPathMatcherRouteRuleMatchRuleHeaderMatch... headerMatches) {
+            return headerMatches(List.of(headerMatches));
+        }
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
-
         public Builder metadataFilters(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters) {
             this.metadataFilters = metadataFilters;
             return this;
         }
-
+        public Builder metadataFilters(URLMapPathMatcherRouteRuleMatchRuleMetadataFilter... metadataFilters) {
+            return metadataFilters(List.of(metadataFilters));
+        }
         public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder queryParameterMatches(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }
-
+        public Builder queryParameterMatches(URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch... queryParameterMatches) {
+            return queryParameterMatches(List.of(queryParameterMatches));
+        }
         public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = regexMatch;
             return this;
-        }
-        public URLMapPathMatcherRouteRuleMatchRule build() {
+        }        public URLMapPathMatcherRouteRuleMatchRule build() {
             return new URLMapPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }
     }

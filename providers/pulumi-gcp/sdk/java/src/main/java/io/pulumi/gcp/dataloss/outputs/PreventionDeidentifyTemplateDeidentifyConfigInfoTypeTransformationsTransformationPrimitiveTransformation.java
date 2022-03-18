@@ -135,27 +135,22 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.characterMaskConfig = characterMaskConfig;
             return this;
         }
-
         public Builder cryptoDeterministicConfig(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig cryptoDeterministicConfig) {
             this.cryptoDeterministicConfig = cryptoDeterministicConfig;
             return this;
         }
-
         public Builder cryptoReplaceFfxFpeConfig(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig cryptoReplaceFfxFpeConfig) {
             this.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
             return this;
         }
-
         public Builder replaceConfig(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig replaceConfig) {
             this.replaceConfig = replaceConfig;
             return this;
         }
-
         public Builder replaceWithInfoTypeConfig(@Nullable Boolean replaceWithInfoTypeConfig) {
             this.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation(characterMaskConfig, cryptoDeterministicConfig, cryptoReplaceFfxFpeConfig, replaceConfig, replaceWithInfoTypeConfig);
         }
     }

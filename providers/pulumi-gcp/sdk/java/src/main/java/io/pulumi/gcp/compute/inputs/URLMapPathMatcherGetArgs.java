@@ -201,82 +201,72 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
             this.defaultRouteAction = defaultRouteAction;
             return this;
         }
-
         public Builder defaultRouteAction(@Nullable URLMapPathMatcherDefaultRouteActionGetArgs defaultRouteAction) {
             this.defaultRouteAction = Output.ofNullable(defaultRouteAction);
             return this;
         }
-
         public Builder defaultService(@Nullable Output<String> defaultService) {
             this.defaultService = defaultService;
             return this;
         }
-
         public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = Output.ofNullable(defaultService);
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable Output<URLMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable URLMapPathMatcherDefaultUrlRedirectGetArgs defaultUrlRedirect) {
             this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<URLMapPathMatcherHeaderActionGetArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable URLMapPathMatcherHeaderActionGetArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder pathRules(@Nullable Output<List<URLMapPathMatcherPathRuleGetArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
-
         public Builder pathRules(@Nullable List<URLMapPathMatcherPathRuleGetArgs> pathRules) {
             this.pathRules = Output.ofNullable(pathRules);
             return this;
         }
-
+        public Builder pathRules(URLMapPathMatcherPathRuleGetArgs... pathRules) {
+            return pathRules(List.of(pathRules));
+        }
         public Builder routeRules(@Nullable Output<List<URLMapPathMatcherRouteRuleGetArgs>> routeRules) {
             this.routeRules = routeRules;
             return this;
         }
-
         public Builder routeRules(@Nullable List<URLMapPathMatcherRouteRuleGetArgs> routeRules) {
             this.routeRules = Output.ofNullable(routeRules);
             return this;
         }
-        public URLMapPathMatcherGetArgs build() {
+        public Builder routeRules(URLMapPathMatcherRouteRuleGetArgs... routeRules) {
+            return routeRules(List.of(routeRules));
+        }        public URLMapPathMatcherGetArgs build() {
             return new URLMapPathMatcherGetArgs(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, name, pathRules, routeRules);
         }
     }

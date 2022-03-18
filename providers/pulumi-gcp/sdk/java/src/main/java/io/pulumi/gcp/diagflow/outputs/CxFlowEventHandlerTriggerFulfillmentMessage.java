@@ -53,8 +53,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessage {
         public Builder text(@Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
             this.text = text;
             return this;
-        }
-        public CxFlowEventHandlerTriggerFulfillmentMessage build() {
+        }        public CxFlowEventHandlerTriggerFulfillmentMessage build() {
             return new CxFlowEventHandlerTriggerFulfillmentMessage(text);
         }
     }

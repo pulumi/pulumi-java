@@ -78,22 +78,21 @@ public final class RegionPerInstanceConfigPreservedStateGetArgs extends io.pulum
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<RegionPerInstanceConfigPreservedStateDiskGetArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(RegionPerInstanceConfigPreservedStateDiskGetArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public RegionPerInstanceConfigPreservedStateGetArgs build() {
+        }        public RegionPerInstanceConfigPreservedStateGetArgs build() {
             return new RegionPerInstanceConfigPreservedStateGetArgs(disks, metadata);
         }
     }

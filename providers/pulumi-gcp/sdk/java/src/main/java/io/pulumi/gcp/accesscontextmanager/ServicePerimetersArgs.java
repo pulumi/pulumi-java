@@ -78,22 +78,21 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder servicePerimeters(@Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters) {
             this.servicePerimeters = servicePerimeters;
             return this;
         }
-
         public Builder servicePerimeters(@Nullable List<ServicePerimetersServicePerimeterArgs> servicePerimeters) {
             this.servicePerimeters = Output.ofNullable(servicePerimeters);
             return this;
         }
-        public ServicePerimetersArgs build() {
+        public Builder servicePerimeters(ServicePerimetersServicePerimeterArgs... servicePerimeters) {
+            return servicePerimeters(List.of(servicePerimeters));
+        }        public ServicePerimetersArgs build() {
             return new ServicePerimetersArgs(parent, servicePerimeters);
         }
     }

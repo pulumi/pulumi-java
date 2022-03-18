@@ -102,17 +102,14 @@ public final class BudgetAmountSpecifiedAmount {
             this.currencyCode = currencyCode;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
-
         public Builder units(@Nullable String units) {
             this.units = units;
             return this;
-        }
-        public BudgetAmountSpecifiedAmount build() {
+        }        public BudgetAmountSpecifiedAmount build() {
             return new BudgetAmountSpecifiedAmount(currencyCode, nanos, units);
         }
     }

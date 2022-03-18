@@ -63,7 +63,9 @@ public final class TopicMessageStoragePolicy {
             this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
             return this;
         }
-        public TopicMessageStoragePolicy build() {
+        public Builder allowedPersistenceRegions(String... allowedPersistenceRegions) {
+            return allowedPersistenceRegions(List.of(allowedPersistenceRegions));
+        }        public TopicMessageStoragePolicy build() {
             return new TopicMessageStoragePolicy(allowedPersistenceRegions);
         }
     }

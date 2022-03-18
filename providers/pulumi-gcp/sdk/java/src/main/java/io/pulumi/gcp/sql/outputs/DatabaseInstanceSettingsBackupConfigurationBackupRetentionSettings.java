@@ -74,12 +74,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
             this.retainedBackups = Objects.requireNonNull(retainedBackups);
             return this;
         }
-
         public Builder retentionUnit(@Nullable String retentionUnit) {
             this.retentionUnit = retentionUnit;
             return this;
-        }
-        public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings build() {
+        }        public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings build() {
             return new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings(retainedBackups, retentionUnit);
         }
     }

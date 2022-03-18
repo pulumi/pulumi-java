@@ -115,22 +115,18 @@ public final class TableTimePartitioning {
             this.expirationMs = expirationMs;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
-
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TableTimePartitioning build() {
+        }        public TableTimePartitioning build() {
             return new TableTimePartitioning(expirationMs, field, requirePartitionFilter, type);
         }
     }

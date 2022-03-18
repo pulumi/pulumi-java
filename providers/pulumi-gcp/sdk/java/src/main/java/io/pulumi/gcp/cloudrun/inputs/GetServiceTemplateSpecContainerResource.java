@@ -65,12 +65,10 @@ public final class GetServiceTemplateSpecContainerResource extends io.pulumi.res
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
-
         public Builder requests(Map<String,String> requests) {
             this.requests = Objects.requireNonNull(requests);
             return this;
-        }
-        public GetServiceTemplateSpecContainerResource build() {
+        }        public GetServiceTemplateSpecContainerResource build() {
             return new GetServiceTemplateSpecContainerResource(limits, requests);
         }
     }

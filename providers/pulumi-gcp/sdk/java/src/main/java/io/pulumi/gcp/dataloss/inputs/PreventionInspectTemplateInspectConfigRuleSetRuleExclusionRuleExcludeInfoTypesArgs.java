@@ -58,12 +58,13 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
-
         public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs> infoTypes) {
             this.infoTypes = Output.of(Objects.requireNonNull(infoTypes));
             return this;
         }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs build() {
+        public Builder infoTypes(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs(infoTypes);
         }
     }

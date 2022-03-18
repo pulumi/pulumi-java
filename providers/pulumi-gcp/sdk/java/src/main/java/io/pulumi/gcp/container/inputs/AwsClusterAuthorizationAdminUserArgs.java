@@ -56,12 +56,10 @@ public final class AwsClusterAuthorizationAdminUserArgs extends io.pulumi.resour
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public AwsClusterAuthorizationAdminUserArgs build() {
+        }        public AwsClusterAuthorizationAdminUserArgs build() {
             return new AwsClusterAuthorizationAdminUserArgs(username);
         }
     }

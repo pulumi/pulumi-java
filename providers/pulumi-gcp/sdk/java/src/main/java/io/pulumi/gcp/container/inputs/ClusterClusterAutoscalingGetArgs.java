@@ -118,42 +118,37 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
             this.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
-
         public Builder autoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs autoProvisioningDefaults) {
             this.autoProvisioningDefaults = Output.ofNullable(autoProvisioningDefaults);
             return this;
         }
-
         public Builder autoscalingProfile(@Nullable Output<String> autoscalingProfile) {
             this.autoscalingProfile = autoscalingProfile;
             return this;
         }
-
         public Builder autoscalingProfile(@Nullable String autoscalingProfile) {
             this.autoscalingProfile = Output.ofNullable(autoscalingProfile);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder resourceLimits(@Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits) {
             this.resourceLimits = resourceLimits;
             return this;
         }
-
         public Builder resourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimitGetArgs> resourceLimits) {
             this.resourceLimits = Output.ofNullable(resourceLimits);
             return this;
         }
-        public ClusterClusterAutoscalingGetArgs build() {
+        public Builder resourceLimits(ClusterClusterAutoscalingResourceLimitGetArgs... resourceLimits) {
+            return resourceLimits(List.of(resourceLimits));
+        }        public ClusterClusterAutoscalingGetArgs build() {
             return new ClusterClusterAutoscalingGetArgs(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }
     }

@@ -52,7 +52,9 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom extends io.pulumi
             this.secretKeyReves = Objects.requireNonNull(secretKeyReves);
             return this;
         }
-        public GetServiceTemplateSpecContainerEnvValueFrom build() {
+        public Builder secretKeyReves(GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef... secretKeyReves) {
+            return secretKeyReves(List.of(secretKeyReves));
+        }        public GetServiceTemplateSpecContainerEnvValueFrom build() {
             return new GetServiceTemplateSpecContainerEnvValueFrom(secretKeyReves);
         }
     }

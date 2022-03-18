@@ -133,52 +133,42 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.charset = charset;
             return this;
         }
-
         public Builder charset(@Nullable String charset) {
             this.charset = Output.ofNullable(charset);
             return this;
         }
-
         public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public DatabaseArgs build() {
+        }        public DatabaseArgs build() {
             return new DatabaseArgs(charset, collation, instance, name, project);
         }
     }

@@ -72,12 +72,10 @@ public final class StandardAppVersionDeploymentZip {
             this.filesCount = filesCount;
             return this;
         }
-
         public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
-        }
-        public StandardAppVersionDeploymentZip build() {
+        }        public StandardAppVersionDeploymentZip build() {
             return new StandardAppVersionDeploymentZip(filesCount, sourceUrl);
         }
     }

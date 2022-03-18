@@ -96,32 +96,26 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends io.
             this.bigQueryField = bigQueryField;
             return this;
         }
-
         public Builder bigQueryField(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs bigQueryField) {
             this.bigQueryField = Output.ofNullable(bigQueryField);
             return this;
         }
-
         public Builder cloudStorageFileSet(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet) {
             this.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
-
         public Builder cloudStorageFileSet(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs cloudStorageFileSet) {
             this.cloudStorageFileSet = Output.ofNullable(cloudStorageFileSet);
             return this;
         }
-
         public Builder outputPath(Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public Builder outputPath(PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs outputPath) {
             this.outputPath = Output.of(Objects.requireNonNull(outputPath));
             return this;
-        }
-        public PreventionStoredInfoTypeLargeCustomDictionaryArgs build() {
+        }        public PreventionStoredInfoTypeLargeCustomDictionaryArgs build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryArgs(bigQueryField, cloudStorageFileSet, outputPath);
         }
     }

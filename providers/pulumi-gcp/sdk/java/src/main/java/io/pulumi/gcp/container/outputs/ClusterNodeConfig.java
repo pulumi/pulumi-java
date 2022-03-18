@@ -516,122 +516,110 @@ public final class ClusterNodeConfig {
             this.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder ephemeralStorageConfig(@Nullable ClusterNodeConfigEphemeralStorageConfig ephemeralStorageConfig) {
             this.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
-
         public Builder gcfsConfig(@Nullable ClusterNodeConfigGcfsConfig gcfsConfig) {
             this.gcfsConfig = gcfsConfig;
             return this;
         }
-
         public Builder guestAccelerators(@Nullable List<ClusterNodeConfigGuestAccelerator> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
-
+        public Builder guestAccelerators(ClusterNodeConfigGuestAccelerator... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
         }
-
         public Builder kubeletConfig(@Nullable ClusterNodeConfigKubeletConfig kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder linuxNodeConfig(@Nullable ClusterNodeConfigLinuxNodeConfig linuxNodeConfig) {
             this.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
-
         public Builder localSsdCount(@Nullable Integer localSsdCount) {
             this.localSsdCount = localSsdCount;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder nodeGroup(@Nullable String nodeGroup) {
             this.nodeGroup = nodeGroup;
             return this;
         }
-
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
         }
-
         public Builder sandboxConfig(@Nullable ClusterNodeConfigSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable ClusterNodeConfigShieldedInstanceConfig shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-
         public Builder spot(@Nullable Boolean spot) {
             this.spot = spot;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taints(@Nullable List<ClusterNodeConfigTaint> taints) {
             this.taints = taints;
             return this;
         }
-
+        public Builder taints(ClusterNodeConfigTaint... taints) {
+            return taints(List.of(taints));
+        }
         public Builder workloadMetadataConfig(@Nullable ClusterNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
-        }
-        public ClusterNodeConfig build() {
+        }        public ClusterNodeConfig build() {
             return new ClusterNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }
     }

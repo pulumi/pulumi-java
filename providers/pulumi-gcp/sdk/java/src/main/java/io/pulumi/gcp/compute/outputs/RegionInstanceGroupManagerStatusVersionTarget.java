@@ -45,8 +45,7 @@ public final class RegionInstanceGroupManagerStatusVersionTarget {
         public Builder isReached(@Nullable Boolean isReached) {
             this.isReached = isReached;
             return this;
-        }
-        public RegionInstanceGroupManagerStatusVersionTarget build() {
+        }        public RegionInstanceGroupManagerStatusVersionTarget build() {
             return new RegionInstanceGroupManagerStatusVersionTarget(isReached);
         }
     }

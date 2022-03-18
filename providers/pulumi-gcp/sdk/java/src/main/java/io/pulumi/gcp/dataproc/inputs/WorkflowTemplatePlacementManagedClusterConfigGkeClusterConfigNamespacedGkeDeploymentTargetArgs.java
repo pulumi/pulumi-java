@@ -74,22 +74,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.clusterNamespace = clusterNamespace;
             return this;
         }
-
         public Builder clusterNamespace(@Nullable String clusterNamespace) {
             this.clusterNamespace = Output.ofNullable(clusterNamespace);
             return this;
         }
-
         public Builder targetGkeCluster(@Nullable Output<String> targetGkeCluster) {
             this.targetGkeCluster = targetGkeCluster;
             return this;
         }
-
         public Builder targetGkeCluster(@Nullable String targetGkeCluster) {
             this.targetGkeCluster = Output.ofNullable(targetGkeCluster);
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs(clusterNamespace, targetGkeCluster);
         }
     }

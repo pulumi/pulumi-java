@@ -77,22 +77,21 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs ext
             this.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
-
         public Builder allowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = Output.ofNullable(allowPlaybackInterruption);
             return this;
         }
-
         public Builder texts(@Nullable Output<List<String>> texts) {
             this.texts = texts;
             return this;
         }
-
         public Builder texts(@Nullable List<String> texts) {
             this.texts = Output.ofNullable(texts);
             return this;
         }
-        public CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs build() {
+        public Builder texts(String... texts) {
+            return texts(List.of(texts));
+        }        public CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs build() {
             return new CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs(allowPlaybackInterruption, texts);
         }
     }

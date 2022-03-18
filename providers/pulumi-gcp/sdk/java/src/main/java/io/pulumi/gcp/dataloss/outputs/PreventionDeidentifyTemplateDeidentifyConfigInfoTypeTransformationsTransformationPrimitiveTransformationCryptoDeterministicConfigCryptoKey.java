@@ -95,17 +95,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.kmsWrapped = kmsWrapped;
             return this;
         }
-
         public Builder $transient(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient $transient) {
             this.$transient = $transient;
             return this;
         }
-
         public Builder unwrapped(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped unwrapped) {
             this.unwrapped = unwrapped;
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKey build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKey build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKey(kmsWrapped, $transient, unwrapped);
         }
     }

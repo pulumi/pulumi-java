@@ -178,82 +178,66 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             this.cloudSql = cloudSql;
             return this;
         }
-
         public Builder cloudSql(@Nullable ConnectionCloudSqlGetArgs cloudSql) {
             this.cloudSql = Output.ofNullable(cloudSql);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder hasCredential(@Nullable Output<Boolean> hasCredential) {
             this.hasCredential = hasCredential;
             return this;
         }
-
         public Builder hasCredential(@Nullable Boolean hasCredential) {
             this.hasCredential = Output.ofNullable(hasCredential);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ConnectionState build() {
+        }        public ConnectionState build() {
             return new ConnectionState(cloudSql, connectionId, description, friendlyName, hasCredential, location, name, project);
         }
     }

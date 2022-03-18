@@ -53,8 +53,7 @@ public final class GameServerConfigScalingConfigSelector {
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
-        }
-        public GameServerConfigScalingConfigSelector build() {
+        }        public GameServerConfigScalingConfigSelector build() {
             return new GameServerConfigScalingConfigSelector(labels);
         }
     }

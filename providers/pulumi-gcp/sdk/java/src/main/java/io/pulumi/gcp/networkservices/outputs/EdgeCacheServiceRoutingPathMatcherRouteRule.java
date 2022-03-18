@@ -174,37 +174,33 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
             this.description = description;
             return this;
         }
-
         public Builder headerAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder matchRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules) {
             this.matchRules = Objects.requireNonNull(matchRules);
             return this;
         }
-
+        public Builder matchRules(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule... matchRules) {
+            return matchRules(List.of(matchRules));
+        }
         public Builder origin(@Nullable String origin) {
             this.origin = origin;
             return this;
         }
-
         public Builder priority(String priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder routeAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder urlRedirect(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRule build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRule build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRule(description, headerAction, matchRules, origin, priority, routeAction, urlRedirect);
         }
     }

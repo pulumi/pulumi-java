@@ -149,62 +149,50 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder oauthToken(@Nullable Output<JobHttpTargetOauthTokenArgs> oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
-
         public Builder oauthToken(@Nullable JobHttpTargetOauthTokenArgs oauthToken) {
             this.oauthToken = Output.ofNullable(oauthToken);
             return this;
         }
-
         public Builder oidcToken(@Nullable Output<JobHttpTargetOidcTokenArgs> oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
-
         public Builder oidcToken(@Nullable JobHttpTargetOidcTokenArgs oidcToken) {
             this.oidcToken = Output.ofNullable(oidcToken);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public JobHttpTargetArgs build() {
+        }        public JobHttpTargetArgs build() {
             return new JobHttpTargetArgs(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }
     }

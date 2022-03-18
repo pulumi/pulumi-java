@@ -199,92 +199,74 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
             this.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
-
         public Builder hiveMetastoreConfig(@Nullable MetastoreServiceHiveMetastoreConfigArgs hiveMetastoreConfig) {
             this.hiveMetastoreConfig = Output.ofNullable(hiveMetastoreConfig);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable MetastoreServiceMaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public MetastoreServiceArgs build() {
+        }        public MetastoreServiceArgs build() {
             return new MetastoreServiceArgs(hiveMetastoreConfig, labels, location, maintenanceWindow, network, port, project, serviceId, tier);
         }
     }

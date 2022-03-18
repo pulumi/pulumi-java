@@ -99,32 +99,26 @@ public final class NodeGroupAutoscalingPolicyGetArgs extends io.pulumi.resources
             this.maxNodes = maxNodes;
             return this;
         }
-
         public Builder maxNodes(@Nullable Integer maxNodes) {
             this.maxNodes = Output.ofNullable(maxNodes);
             return this;
         }
-
         public Builder minNodes(@Nullable Output<Integer> minNodes) {
             this.minNodes = minNodes;
             return this;
         }
-
         public Builder minNodes(@Nullable Integer minNodes) {
             this.minNodes = Output.ofNullable(minNodes);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public NodeGroupAutoscalingPolicyGetArgs build() {
+        }        public NodeGroupAutoscalingPolicyGetArgs build() {
             return new NodeGroupAutoscalingPolicyGetArgs(maxNodes, minNodes, mode);
         }
     }

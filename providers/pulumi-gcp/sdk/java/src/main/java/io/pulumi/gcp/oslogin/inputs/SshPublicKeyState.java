@@ -122,52 +122,42 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
             this.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
-
         public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
             this.expirationTimeUsec = Output.ofNullable(expirationTimeUsec);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public SshPublicKeyState build() {
+        }        public SshPublicKeyState build() {
             return new SshPublicKeyState(expirationTimeUsec, fingerprint, key, project, user);
         }
     }

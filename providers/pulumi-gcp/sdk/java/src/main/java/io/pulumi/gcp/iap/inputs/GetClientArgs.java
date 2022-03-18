@@ -72,12 +72,10 @@ public final class GetClientArgs extends io.pulumi.resources.InvokeArgs {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
-        }
-        public GetClientArgs build() {
+        }        public GetClientArgs build() {
             return new GetClientArgs(brand, clientId);
         }
     }

@@ -93,32 +93,26 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionGetArgs extends i
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
-
         public Builder critical(Boolean critical) {
             this.critical = Output.of(Objects.requireNonNull(critical));
             return this;
         }
-
         public Builder objectId(Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public AuthorityConfigX509ConfigAdditionalExtensionGetArgs build() {
+        }        public AuthorityConfigX509ConfigAdditionalExtensionGetArgs build() {
             return new AuthorityConfigX509ConfigAdditionalExtensionGetArgs(critical, objectId, value);
         }
     }

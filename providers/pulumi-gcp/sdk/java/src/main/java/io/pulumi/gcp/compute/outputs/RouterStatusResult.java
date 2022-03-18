@@ -116,37 +116,36 @@ public final class RouterStatusResult {
             this.bestRoutes = Objects.requireNonNull(bestRoutes);
             return this;
         }
-
+        public Builder bestRoutes(RouterStatusBestRoute... bestRoutes) {
+            return bestRoutes(List.of(bestRoutes));
+        }
         public Builder bestRoutesForRouters(List<RouterStatusBestRoutesForRouter> bestRoutesForRouters) {
             this.bestRoutesForRouters = Objects.requireNonNull(bestRoutesForRouters);
             return this;
         }
-
+        public Builder bestRoutesForRouters(RouterStatusBestRoutesForRouter... bestRoutesForRouters) {
+            return bestRoutesForRouters(List.of(bestRoutesForRouters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public RouterStatusResult build() {
+        }        public RouterStatusResult build() {
             return new RouterStatusResult(bestRoutes, bestRoutesForRouters, id, name, network, project, region);
         }
     }

@@ -115,42 +115,37 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
             this.imageType = imageType;
             return this;
         }
-
         public Builder imageType(@Nullable String imageType) {
             this.imageType = Output.ofNullable(imageType);
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
-
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
-
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
-        }
-        public ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs build() {
+        }        public ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs build() {
             return new ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs(imageType, minCpuPlatform, oauthScopes, serviceAccount);
         }
     }

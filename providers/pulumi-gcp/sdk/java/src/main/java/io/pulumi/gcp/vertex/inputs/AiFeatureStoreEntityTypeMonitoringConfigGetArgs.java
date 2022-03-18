@@ -58,12 +58,10 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
             this.snapshotAnalysis = snapshotAnalysis;
             return this;
         }
-
         public Builder snapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs snapshotAnalysis) {
             this.snapshotAnalysis = Output.ofNullable(snapshotAnalysis);
             return this;
-        }
-        public AiFeatureStoreEntityTypeMonitoringConfigGetArgs build() {
+        }        public AiFeatureStoreEntityTypeMonitoringConfigGetArgs build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigGetArgs(snapshotAnalysis);
         }
     }

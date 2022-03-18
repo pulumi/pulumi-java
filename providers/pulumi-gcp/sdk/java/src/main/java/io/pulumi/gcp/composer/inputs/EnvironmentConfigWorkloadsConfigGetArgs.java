@@ -80,32 +80,26 @@ public final class EnvironmentConfigWorkloadsConfigGetArgs extends io.pulumi.res
             this.scheduler = scheduler;
             return this;
         }
-
         public Builder scheduler(@Nullable EnvironmentConfigWorkloadsConfigSchedulerGetArgs scheduler) {
             this.scheduler = Output.ofNullable(scheduler);
             return this;
         }
-
         public Builder webServer(@Nullable Output<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer) {
             this.webServer = webServer;
             return this;
         }
-
         public Builder webServer(@Nullable EnvironmentConfigWorkloadsConfigWebServerGetArgs webServer) {
             this.webServer = Output.ofNullable(webServer);
             return this;
         }
-
         public Builder worker(@Nullable Output<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker) {
             this.worker = worker;
             return this;
         }
-
         public Builder worker(@Nullable EnvironmentConfigWorkloadsConfigWorkerGetArgs worker) {
             this.worker = Output.ofNullable(worker);
             return this;
-        }
-        public EnvironmentConfigWorkloadsConfigGetArgs build() {
+        }        public EnvironmentConfigWorkloadsConfigGetArgs build() {
             return new EnvironmentConfigWorkloadsConfigGetArgs(scheduler, webServer, worker);
         }
     }

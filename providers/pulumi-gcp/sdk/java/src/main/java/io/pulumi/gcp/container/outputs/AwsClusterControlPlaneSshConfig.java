@@ -51,8 +51,7 @@ public final class AwsClusterControlPlaneSshConfig {
         public Builder ec2KeyPair(String ec2KeyPair) {
             this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
             return this;
-        }
-        public AwsClusterControlPlaneSshConfig build() {
+        }        public AwsClusterControlPlaneSshConfig build() {
             return new AwsClusterControlPlaneSshConfig(ec2KeyPair);
         }
     }

@@ -53,8 +53,7 @@ public final class WorkflowTemplateJobPigJobLoggingConfig {
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
             this.driverLogLevels = driverLogLevels;
             return this;
-        }
-        public WorkflowTemplateJobPigJobLoggingConfig build() {
+        }        public WorkflowTemplateJobPigJobLoggingConfig build() {
             return new WorkflowTemplateJobPigJobLoggingConfig(driverLogLevels);
         }
     }

@@ -69,12 +69,10 @@ public final class GetInstanceGroupNamedPort extends io.pulumi.resources.InvokeA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public GetInstanceGroupNamedPort build() {
+        }        public GetInstanceGroupNamedPort build() {
             return new GetInstanceGroupNamedPort(name, port);
         }
     }

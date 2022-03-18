@@ -77,12 +77,10 @@ public final class BackendServiceOutlierDetectionInterval {
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public BackendServiceOutlierDetectionInterval build() {
+        }        public BackendServiceOutlierDetectionInterval build() {
             return new BackendServiceOutlierDetectionInterval(nanos, seconds);
         }
     }

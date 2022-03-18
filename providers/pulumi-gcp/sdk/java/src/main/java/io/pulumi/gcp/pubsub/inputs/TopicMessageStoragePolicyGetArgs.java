@@ -62,12 +62,13 @@ public final class TopicMessageStoragePolicyGetArgs extends io.pulumi.resources.
             this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
             return this;
         }
-
         public Builder allowedPersistenceRegions(List<String> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = Output.of(Objects.requireNonNull(allowedPersistenceRegions));
             return this;
         }
-        public TopicMessageStoragePolicyGetArgs build() {
+        public Builder allowedPersistenceRegions(String... allowedPersistenceRegions) {
+            return allowedPersistenceRegions(List.of(allowedPersistenceRegions));
+        }        public TopicMessageStoragePolicyGetArgs build() {
             return new TopicMessageStoragePolicyGetArgs(allowedPersistenceRegions);
         }
     }

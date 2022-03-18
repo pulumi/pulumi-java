@@ -76,12 +76,10 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControl {
             this.maxScaledDownReplicas = maxScaledDownReplicas;
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
-        }
-        public RegionAutoscalerAutoscalingPolicyScaleDownControl build() {
+        }        public RegionAutoscalerAutoscalingPolicyScaleDownControl build() {
             return new RegionAutoscalerAutoscalingPolicyScaleDownControl(maxScaledDownReplicas, timeWindowSec);
         }
     }

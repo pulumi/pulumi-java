@@ -94,32 +94,26 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
             this.enableRefresh = enableRefresh;
             return this;
         }
-
         public Builder enableRefresh(@Nullable Boolean enableRefresh) {
             this.enableRefresh = Output.ofNullable(enableRefresh);
             return this;
         }
-
         public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
-
         public Builder refreshIntervalMs(@Nullable Output<Integer> refreshIntervalMs) {
             this.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
-
         public Builder refreshIntervalMs(@Nullable Integer refreshIntervalMs) {
             this.refreshIntervalMs = Output.ofNullable(refreshIntervalMs);
             return this;
-        }
-        public TableMaterializedViewGetArgs build() {
+        }        public TableMaterializedViewGetArgs build() {
             return new TableMaterializedViewGetArgs(enableRefresh, query, refreshIntervalMs);
         }
     }

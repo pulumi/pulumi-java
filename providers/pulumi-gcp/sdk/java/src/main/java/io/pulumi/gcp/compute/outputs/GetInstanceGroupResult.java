@@ -178,52 +178,48 @@ public final class GetInstanceGroupResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namedPorts(List<GetInstanceGroupNamedPort> namedPorts) {
             this.namedPorts = Objects.requireNonNull(namedPorts);
             return this;
         }
-
+        public Builder namedPorts(GetInstanceGroupNamedPort... namedPorts) {
+            return namedPorts(List.of(namedPorts));
+        }
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstanceGroupResult build() {
+        }        public GetInstanceGroupResult build() {
             return new GetInstanceGroupResult(description, id, instances, name, namedPorts, network, project, selfLink, size, zone);
         }
     }

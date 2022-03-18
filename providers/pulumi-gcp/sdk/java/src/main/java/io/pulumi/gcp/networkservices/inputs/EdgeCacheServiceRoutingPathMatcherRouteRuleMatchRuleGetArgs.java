@@ -151,62 +151,56 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs e
             this.fullPathMatch = fullPathMatch;
             return this;
         }
-
         public Builder fullPathMatch(@Nullable String fullPathMatch) {
             this.fullPathMatch = Output.ofNullable(fullPathMatch);
             return this;
         }
-
         public Builder headerMatches(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> headerMatches) {
             this.headerMatches = headerMatches;
             return this;
         }
-
         public Builder headerMatches(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs> headerMatches) {
             this.headerMatches = Output.ofNullable(headerMatches);
             return this;
         }
-
+        public Builder headerMatches(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs... headerMatches) {
+            return headerMatches(List.of(headerMatches));
+        }
         public Builder ignoreCase(@Nullable Output<Boolean> ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
-
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = Output.ofNullable(ignoreCase);
             return this;
         }
-
         public Builder pathTemplateMatch(@Nullable Output<String> pathTemplateMatch) {
             this.pathTemplateMatch = pathTemplateMatch;
             return this;
         }
-
         public Builder pathTemplateMatch(@Nullable String pathTemplateMatch) {
             this.pathTemplateMatch = Output.ofNullable(pathTemplateMatch);
             return this;
         }
-
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
-
         public Builder queryParameterMatches(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> queryParameterMatches) {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }
-
         public Builder queryParameterMatches(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs> queryParameterMatches) {
             this.queryParameterMatches = Output.ofNullable(queryParameterMatches);
             return this;
         }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs build() {
+        public Builder queryParameterMatches(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs... queryParameterMatches) {
+            return queryParameterMatches(List.of(queryParameterMatches));
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs(fullPathMatch, headerMatches, ignoreCase, pathTemplateMatch, prefixMatch, queryParameterMatches);
         }
     }

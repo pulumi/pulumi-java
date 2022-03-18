@@ -143,27 +143,25 @@ public final class InstanceScheduling {
             this.automaticRestart = automaticRestart;
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
-
         public Builder nodeAffinities(@Nullable List<InstanceSchedulingNodeAffinity> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
-
+        public Builder nodeAffinities(InstanceSchedulingNodeAffinity... nodeAffinities) {
+            return nodeAffinities(List.of(nodeAffinities));
+        }
         public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
-
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
-        }
-        public InstanceScheduling build() {
+        }        public InstanceScheduling build() {
             return new InstanceScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }
     }

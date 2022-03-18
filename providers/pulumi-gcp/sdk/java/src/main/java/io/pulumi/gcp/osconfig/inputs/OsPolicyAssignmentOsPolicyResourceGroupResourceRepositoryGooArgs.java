@@ -73,22 +73,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs(name, url);
         }
     }

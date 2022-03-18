@@ -59,12 +59,10 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
-
         public Builder ingressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
             this.ingressTrafficAllowed = Output.ofNullable(ingressTrafficAllowed);
             return this;
-        }
-        public ServiceNetworkSettingsNetworkSettingsGetArgs build() {
+        }        public ServiceNetworkSettingsNetworkSettingsGetArgs build() {
             return new ServiceNetworkSettingsNetworkSettingsGetArgs(ingressTrafficAllowed);
         }
     }

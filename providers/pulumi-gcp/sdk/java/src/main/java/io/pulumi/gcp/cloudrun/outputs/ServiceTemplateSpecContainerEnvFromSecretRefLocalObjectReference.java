@@ -51,8 +51,7 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference build() {
+        }        public ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference build() {
             return new ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference(name);
         }
     }

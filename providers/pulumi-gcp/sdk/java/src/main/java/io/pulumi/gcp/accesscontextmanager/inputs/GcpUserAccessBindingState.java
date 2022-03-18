@@ -108,42 +108,34 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
             this.accessLevels = accessLevels;
             return this;
         }
-
         public Builder accessLevels(@Nullable String accessLevels) {
             this.accessLevels = Output.ofNullable(accessLevels);
             return this;
         }
-
         public Builder groupKey(@Nullable Output<String> groupKey) {
             this.groupKey = groupKey;
             return this;
         }
-
         public Builder groupKey(@Nullable String groupKey) {
             this.groupKey = Output.ofNullable(groupKey);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(@Nullable Output<String> organizationId) {
             this.organizationId = organizationId;
             return this;
         }
-
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = Output.ofNullable(organizationId);
             return this;
-        }
-        public GcpUserAccessBindingState build() {
+        }        public GcpUserAccessBindingState build() {
             return new GcpUserAccessBindingState(accessLevels, groupKey, name, organizationId);
         }
     }

@@ -76,17 +76,14 @@ public final class GetClusterMaintenancePolicyRecurringWindow extends io.pulumi.
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder recurrence(String recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public GetClusterMaintenancePolicyRecurringWindow build() {
+        }        public GetClusterMaintenancePolicyRecurringWindow build() {
             return new GetClusterMaintenancePolicyRecurringWindow(endTime, recurrence, startTime);
         }
     }

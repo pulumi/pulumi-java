@@ -109,42 +109,34 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
             this.consentStoreId = consentStoreId;
             return this;
         }
-
         public Builder consentStoreId(@Nullable String consentStoreId) {
             this.consentStoreId = Output.ofNullable(consentStoreId);
             return this;
         }
-
         public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public ConsentStoreIamPolicyState build() {
+        }        public ConsentStoreIamPolicyState build() {
             return new ConsentStoreIamPolicyState(consentStoreId, dataset, etag, policyData);
         }
     }

@@ -227,112 +227,90 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
         }
-
         public Builder keyAlgorithm(@Nullable Output<String> keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
             return this;
         }
-
         public Builder keyAlgorithm(@Nullable String keyAlgorithm) {
             this.keyAlgorithm = Output.ofNullable(keyAlgorithm);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder privateKeyType(@Nullable Output<String> privateKeyType) {
             this.privateKeyType = privateKeyType;
             return this;
         }
-
         public Builder privateKeyType(@Nullable String privateKeyType) {
             this.privateKeyType = Output.ofNullable(privateKeyType);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder publicKeyData(@Nullable Output<String> publicKeyData) {
             this.publicKeyData = publicKeyData;
             return this;
         }
-
         public Builder publicKeyData(@Nullable String publicKeyData) {
             this.publicKeyData = Output.ofNullable(publicKeyData);
             return this;
         }
-
         public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
             this.publicKeyType = publicKeyType;
             return this;
         }
-
         public Builder publicKeyType(@Nullable String publicKeyType) {
             this.publicKeyType = Output.ofNullable(publicKeyType);
             return this;
         }
-
         public Builder serviceAccountId(@Nullable Output<String> serviceAccountId) {
             this.serviceAccountId = serviceAccountId;
             return this;
         }
-
         public Builder serviceAccountId(@Nullable String serviceAccountId) {
             this.serviceAccountId = Output.ofNullable(serviceAccountId);
             return this;
         }
-
         public Builder validAfter(@Nullable Output<String> validAfter) {
             this.validAfter = validAfter;
             return this;
         }
-
         public Builder validAfter(@Nullable String validAfter) {
             this.validAfter = Output.ofNullable(validAfter);
             return this;
         }
-
         public Builder validBefore(@Nullable Output<String> validBefore) {
             this.validBefore = validBefore;
             return this;
         }
-
         public Builder validBefore(@Nullable String validBefore) {
             this.validBefore = Output.ofNullable(validBefore);
             return this;
-        }
-        public KeyState build() {
+        }        public KeyState build() {
             return new KeyState(keepers, keyAlgorithm, name, privateKey, privateKeyType, publicKey, publicKeyData, publicKeyType, serviceAccountId, validAfter, validBefore);
         }
     }

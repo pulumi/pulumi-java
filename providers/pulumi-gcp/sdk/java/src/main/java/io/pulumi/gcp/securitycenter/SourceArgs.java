@@ -95,32 +95,26 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder organization(Output<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
-
         public Builder organization(String organization) {
             this.organization = Output.of(Objects.requireNonNull(organization));
             return this;
-        }
-        public SourceArgs build() {
+        }        public SourceArgs build() {
             return new SourceArgs(description, displayName, organization);
         }
     }

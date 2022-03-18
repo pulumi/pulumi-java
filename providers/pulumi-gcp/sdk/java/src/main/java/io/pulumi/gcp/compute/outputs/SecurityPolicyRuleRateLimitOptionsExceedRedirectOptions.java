@@ -55,12 +55,10 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
             this.target = target;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions build() {
+        }        public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions build() {
             return new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions(target, type);
         }
     }

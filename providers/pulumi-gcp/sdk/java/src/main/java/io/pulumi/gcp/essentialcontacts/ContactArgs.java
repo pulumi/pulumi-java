@@ -106,42 +106,37 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder languageTag(Output<String> languageTag) {
             this.languageTag = Objects.requireNonNull(languageTag);
             return this;
         }
-
         public Builder languageTag(String languageTag) {
             this.languageTag = Output.of(Objects.requireNonNull(languageTag));
             return this;
         }
-
         public Builder notificationCategorySubscriptions(Output<List<String>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions);
             return this;
         }
-
         public Builder notificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Output.of(Objects.requireNonNull(notificationCategorySubscriptions));
             return this;
         }
-
+        public Builder notificationCategorySubscriptions(String... notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
+        }
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
-        }
-        public ContactArgs build() {
+        }        public ContactArgs build() {
             return new ContactArgs(email, languageTag, notificationCategorySubscriptions, parent);
         }
     }

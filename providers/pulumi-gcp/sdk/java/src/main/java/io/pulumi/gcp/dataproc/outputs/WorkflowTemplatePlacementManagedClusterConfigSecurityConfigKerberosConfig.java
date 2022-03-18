@@ -281,77 +281,62 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
             this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
             return this;
         }
-
         public Builder crossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
             this.crossRealmTrustKdc = crossRealmTrustKdc;
             return this;
         }
-
         public Builder crossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
             this.crossRealmTrustRealm = crossRealmTrustRealm;
             return this;
         }
-
         public Builder crossRealmTrustSharedPassword(@Nullable String crossRealmTrustSharedPassword) {
             this.crossRealmTrustSharedPassword = crossRealmTrustSharedPassword;
             return this;
         }
-
         public Builder enableKerberos(@Nullable Boolean enableKerberos) {
             this.enableKerberos = enableKerberos;
             return this;
         }
-
         public Builder kdcDbKey(@Nullable String kdcDbKey) {
             this.kdcDbKey = kdcDbKey;
             return this;
         }
-
         public Builder keyPassword(@Nullable String keyPassword) {
             this.keyPassword = keyPassword;
             return this;
         }
-
         public Builder keystore(@Nullable String keystore) {
             this.keystore = keystore;
             return this;
         }
-
         public Builder keystorePassword(@Nullable String keystorePassword) {
             this.keystorePassword = keystorePassword;
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder realm(@Nullable String realm) {
             this.realm = realm;
             return this;
         }
-
         public Builder rootPrincipalPassword(@Nullable String rootPrincipalPassword) {
             this.rootPrincipalPassword = rootPrincipalPassword;
             return this;
         }
-
         public Builder tgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
             this.tgtLifetimeHours = tgtLifetimeHours;
             return this;
         }
-
         public Builder truststore(@Nullable String truststore) {
             this.truststore = truststore;
             return this;
         }
-
         public Builder truststorePassword(@Nullable String truststorePassword) {
             this.truststorePassword = truststorePassword;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPassword, enableKerberos, kdcDbKey, keyPassword, keystore, keystorePassword, kmsKey, realm, rootPrincipalPassword, tgtLifetimeHours, truststore, truststorePassword);
         }
     }

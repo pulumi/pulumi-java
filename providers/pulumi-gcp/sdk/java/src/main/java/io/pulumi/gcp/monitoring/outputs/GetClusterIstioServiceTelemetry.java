@@ -43,8 +43,7 @@ public final class GetClusterIstioServiceTelemetry {
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetClusterIstioServiceTelemetry build() {
+        }        public GetClusterIstioServiceTelemetry build() {
             return new GetClusterIstioServiceTelemetry(resourceName);
         }
     }

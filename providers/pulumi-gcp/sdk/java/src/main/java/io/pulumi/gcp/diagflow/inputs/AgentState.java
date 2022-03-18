@@ -279,132 +279,109 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder avatarUri(@Nullable Output<String> avatarUri) {
             this.avatarUri = avatarUri;
             return this;
         }
-
         public Builder avatarUri(@Nullable String avatarUri) {
             this.avatarUri = Output.ofNullable(avatarUri);
             return this;
         }
-
         public Builder avatarUriBackend(@Nullable Output<String> avatarUriBackend) {
             this.avatarUriBackend = avatarUriBackend;
             return this;
         }
-
         public Builder avatarUriBackend(@Nullable String avatarUriBackend) {
             this.avatarUriBackend = Output.ofNullable(avatarUriBackend);
             return this;
         }
-
         public Builder classificationThreshold(@Nullable Output<Double> classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
-
         public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = Output.ofNullable(classificationThreshold);
             return this;
         }
-
         public Builder defaultLanguageCode(@Nullable Output<String> defaultLanguageCode) {
             this.defaultLanguageCode = defaultLanguageCode;
             return this;
         }
-
         public Builder defaultLanguageCode(@Nullable String defaultLanguageCode) {
             this.defaultLanguageCode = Output.ofNullable(defaultLanguageCode);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder matchMode(@Nullable Output<String> matchMode) {
             this.matchMode = matchMode;
             return this;
         }
-
         public Builder matchMode(@Nullable String matchMode) {
             this.matchMode = Output.ofNullable(matchMode);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
             this.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
-
         public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Output.ofNullable(supportedLanguageCodes);
             return this;
         }
-
+        public Builder supportedLanguageCodes(String... supportedLanguageCodes) {
+            return supportedLanguageCodes(List.of(supportedLanguageCodes));
+        }
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public AgentState build() {
+        }        public AgentState build() {
             return new AgentState(apiVersion, avatarUri, avatarUriBackend, classificationThreshold, defaultLanguageCode, description, displayName, enableLogging, matchMode, project, supportedLanguageCodes, tier, timeZone);
         }
     }

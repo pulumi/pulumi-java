@@ -44,8 +44,7 @@ public final class JobHadoopConfigLoggingConfig {
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
-        }
-        public JobHadoopConfigLoggingConfig build() {
+        }        public JobHadoopConfigLoggingConfig build() {
             return new JobHadoopConfigLoggingConfig(driverLogLevels);
         }
     }

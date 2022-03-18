@@ -142,62 +142,50 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
-
         public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecArgs encryptionSpec) {
             this.encryptionSpec = Output.ofNullable(encryptionSpec);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder metadataSchemaUri(Output<String> metadataSchemaUri) {
             this.metadataSchemaUri = Objects.requireNonNull(metadataSchemaUri);
             return this;
         }
-
         public Builder metadataSchemaUri(String metadataSchemaUri) {
             this.metadataSchemaUri = Output.of(Objects.requireNonNull(metadataSchemaUri));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public AiDatasetArgs build() {
+        }        public AiDatasetArgs build() {
             return new AiDatasetArgs(displayName, encryptionSpec, labels, metadataSchemaUri, project, region);
         }
     }

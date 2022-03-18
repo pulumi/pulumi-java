@@ -74,12 +74,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRef {
             this.localObjectReference = localObjectReference;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvFromConfigMapRef build() {
+        }        public ServiceTemplateSpecContainerEnvFromConfigMapRef build() {
             return new ServiceTemplateSpecContainerEnvFromConfigMapRef(localObjectReference, optional);
         }
     }

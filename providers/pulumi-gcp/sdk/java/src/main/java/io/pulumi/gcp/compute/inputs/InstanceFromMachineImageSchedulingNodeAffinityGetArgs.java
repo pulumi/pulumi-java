@@ -78,32 +78,29 @@ public final class InstanceFromMachineImageSchedulingNodeAffinityGetArgs extends
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder operator(Output<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public InstanceFromMachineImageSchedulingNodeAffinityGetArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public InstanceFromMachineImageSchedulingNodeAffinityGetArgs build() {
             return new InstanceFromMachineImageSchedulingNodeAffinityGetArgs(key, operator, values);
         }
     }

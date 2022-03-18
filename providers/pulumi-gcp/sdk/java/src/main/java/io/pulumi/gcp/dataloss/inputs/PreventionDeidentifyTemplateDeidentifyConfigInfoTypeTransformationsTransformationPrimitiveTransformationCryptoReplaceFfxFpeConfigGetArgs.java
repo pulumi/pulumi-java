@@ -158,62 +158,50 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.commonAlphabet = commonAlphabet;
             return this;
         }
-
         public Builder commonAlphabet(@Nullable String commonAlphabet) {
             this.commonAlphabet = Output.ofNullable(commonAlphabet);
             return this;
         }
-
         public Builder context(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context) {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder cryptoKey(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
-
         public Builder cryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs cryptoKey) {
             this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
-
         public Builder customAlphabet(@Nullable Output<String> customAlphabet) {
             this.customAlphabet = customAlphabet;
             return this;
         }
-
         public Builder customAlphabet(@Nullable String customAlphabet) {
             this.customAlphabet = Output.ofNullable(customAlphabet);
             return this;
         }
-
         public Builder radix(@Nullable Output<Integer> radix) {
             this.radix = radix;
             return this;
         }
-
         public Builder radix(@Nullable Integer radix) {
             this.radix = Output.ofNullable(radix);
             return this;
         }
-
         public Builder surrogateInfoType(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }
-
         public Builder surrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs surrogateInfoType) {
             this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs(commonAlphabet, context, cryptoKey, customAlphabet, radix, surrogateInfoType);
         }
     }

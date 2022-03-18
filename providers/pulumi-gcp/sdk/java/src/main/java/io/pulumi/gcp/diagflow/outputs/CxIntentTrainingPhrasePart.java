@@ -71,12 +71,10 @@ public final class CxIntentTrainingPhrasePart {
             this.parameterId = parameterId;
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public CxIntentTrainingPhrasePart build() {
+        }        public CxIntentTrainingPhrasePart build() {
             return new CxIntentTrainingPhrasePart(parameterId, text);
         }
     }

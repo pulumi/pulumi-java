@@ -52,12 +52,10 @@ public final class MembershipAuthorityArgs extends io.pulumi.resources.ResourceA
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
-        }
-        public MembershipAuthorityArgs build() {
+        }        public MembershipAuthorityArgs build() {
             return new MembershipAuthorityArgs(issuer);
         }
     }

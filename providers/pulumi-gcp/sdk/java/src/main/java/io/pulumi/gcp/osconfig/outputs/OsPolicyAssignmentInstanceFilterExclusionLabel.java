@@ -53,8 +53,7 @@ public final class OsPolicyAssignmentInstanceFilterExclusionLabel {
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
-        }
-        public OsPolicyAssignmentInstanceFilterExclusionLabel build() {
+        }        public OsPolicyAssignmentInstanceFilterExclusionLabel build() {
             return new OsPolicyAssignmentInstanceFilterExclusionLabel(labels);
         }
     }

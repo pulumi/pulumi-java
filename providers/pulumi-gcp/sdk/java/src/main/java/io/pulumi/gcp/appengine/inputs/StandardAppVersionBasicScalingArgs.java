@@ -76,22 +76,18 @@ public final class StandardAppVersionBasicScalingArgs extends io.pulumi.resource
             this.idleTimeout = idleTimeout;
             return this;
         }
-
         public Builder idleTimeout(@Nullable String idleTimeout) {
             this.idleTimeout = Output.ofNullable(idleTimeout);
             return this;
         }
-
         public Builder maxInstances(Output<Integer> maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Output.of(Objects.requireNonNull(maxInstances));
             return this;
-        }
-        public StandardAppVersionBasicScalingArgs build() {
+        }        public StandardAppVersionBasicScalingArgs build() {
             return new StandardAppVersionBasicScalingArgs(idleTimeout, maxInstances);
         }
     }

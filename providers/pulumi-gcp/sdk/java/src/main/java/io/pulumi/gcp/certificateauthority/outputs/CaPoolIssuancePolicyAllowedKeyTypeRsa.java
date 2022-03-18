@@ -75,12 +75,10 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
             this.maxModulusSize = maxModulusSize;
             return this;
         }
-
         public Builder minModulusSize(@Nullable String minModulusSize) {
             this.minModulusSize = minModulusSize;
             return this;
-        }
-        public CaPoolIssuancePolicyAllowedKeyTypeRsa build() {
+        }        public CaPoolIssuancePolicyAllowedKeyTypeRsa build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeRsa(maxModulusSize, minModulusSize);
         }
     }

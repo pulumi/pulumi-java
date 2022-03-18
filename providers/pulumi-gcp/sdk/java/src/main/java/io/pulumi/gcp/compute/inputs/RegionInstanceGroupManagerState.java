@@ -390,202 +390,180 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
             this.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
-
         public Builder autoHealingPolicies(@Nullable RegionInstanceGroupManagerAutoHealingPoliciesGetArgs autoHealingPolicies) {
             this.autoHealingPolicies = Output.ofNullable(autoHealingPolicies);
             return this;
         }
-
         public Builder baseInstanceName(@Nullable Output<String> baseInstanceName) {
             this.baseInstanceName = baseInstanceName;
             return this;
         }
-
         public Builder baseInstanceName(@Nullable String baseInstanceName) {
             this.baseInstanceName = Output.ofNullable(baseInstanceName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder distributionPolicyTargetShape(@Nullable Output<String> distributionPolicyTargetShape) {
             this.distributionPolicyTargetShape = distributionPolicyTargetShape;
             return this;
         }
-
         public Builder distributionPolicyTargetShape(@Nullable String distributionPolicyTargetShape) {
             this.distributionPolicyTargetShape = Output.ofNullable(distributionPolicyTargetShape);
             return this;
         }
-
         public Builder distributionPolicyZones(@Nullable Output<List<String>> distributionPolicyZones) {
             this.distributionPolicyZones = distributionPolicyZones;
             return this;
         }
-
         public Builder distributionPolicyZones(@Nullable List<String> distributionPolicyZones) {
             this.distributionPolicyZones = Output.ofNullable(distributionPolicyZones);
             return this;
         }
-
+        public Builder distributionPolicyZones(String... distributionPolicyZones) {
+            return distributionPolicyZones(List.of(distributionPolicyZones));
+        }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder instanceGroup(@Nullable Output<String> instanceGroup) {
             this.instanceGroup = instanceGroup;
             return this;
         }
-
         public Builder instanceGroup(@Nullable String instanceGroup) {
             this.instanceGroup = Output.ofNullable(instanceGroup);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namedPorts(@Nullable Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
-
         public Builder namedPorts(@Nullable List<RegionInstanceGroupManagerNamedPortGetArgs> namedPorts) {
             this.namedPorts = Output.ofNullable(namedPorts);
             return this;
         }
-
+        public Builder namedPorts(RegionInstanceGroupManagerNamedPortGetArgs... namedPorts) {
+            return namedPorts(List.of(namedPorts));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder statefulDisks(@Nullable Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> statefulDisks) {
             this.statefulDisks = statefulDisks;
             return this;
         }
-
         public Builder statefulDisks(@Nullable List<RegionInstanceGroupManagerStatefulDiskGetArgs> statefulDisks) {
             this.statefulDisks = Output.ofNullable(statefulDisks);
             return this;
         }
-
+        public Builder statefulDisks(RegionInstanceGroupManagerStatefulDiskGetArgs... statefulDisks) {
+            return statefulDisks(List.of(statefulDisks));
+        }
         public Builder statuses(@Nullable Output<List<RegionInstanceGroupManagerStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
-
         public Builder statuses(@Nullable List<RegionInstanceGroupManagerStatusGetArgs> statuses) {
             this.statuses = Output.ofNullable(statuses);
             return this;
         }
-
+        public Builder statuses(RegionInstanceGroupManagerStatusGetArgs... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder targetPools(@Nullable Output<List<String>> targetPools) {
             this.targetPools = targetPools;
             return this;
         }
-
         public Builder targetPools(@Nullable List<String> targetPools) {
             this.targetPools = Output.ofNullable(targetPools);
             return this;
         }
-
+        public Builder targetPools(String... targetPools) {
+            return targetPools(List.of(targetPools));
+        }
         public Builder targetSize(@Nullable Output<Integer> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
-
         public Builder targetSize(@Nullable Integer targetSize) {
             this.targetSize = Output.ofNullable(targetSize);
             return this;
         }
-
         public Builder updatePolicy(@Nullable Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> updatePolicy) {
             this.updatePolicy = updatePolicy;
             return this;
         }
-
         public Builder updatePolicy(@Nullable RegionInstanceGroupManagerUpdatePolicyGetArgs updatePolicy) {
             this.updatePolicy = Output.ofNullable(updatePolicy);
             return this;
         }
-
         public Builder versions(@Nullable Output<List<RegionInstanceGroupManagerVersionGetArgs>> versions) {
             this.versions = versions;
             return this;
         }
-
         public Builder versions(@Nullable List<RegionInstanceGroupManagerVersionGetArgs> versions) {
             this.versions = Output.ofNullable(versions);
             return this;
         }
-
+        public Builder versions(RegionInstanceGroupManagerVersionGetArgs... versions) {
+            return versions(List.of(versions));
+        }
         public Builder waitForInstances(@Nullable Output<Boolean> waitForInstances) {
             this.waitForInstances = waitForInstances;
             return this;
         }
-
         public Builder waitForInstances(@Nullable Boolean waitForInstances) {
             this.waitForInstances = Output.ofNullable(waitForInstances);
             return this;
         }
-
         public Builder waitForInstancesStatus(@Nullable Output<String> waitForInstancesStatus) {
             this.waitForInstancesStatus = waitForInstancesStatus;
             return this;
         }
-
         public Builder waitForInstancesStatus(@Nullable String waitForInstancesStatus) {
             this.waitForInstancesStatus = Output.ofNullable(waitForInstancesStatus);
             return this;
-        }
-        public RegionInstanceGroupManagerState build() {
+        }        public RegionInstanceGroupManagerState build() {
             return new RegionInstanceGroupManagerState(autoHealingPolicies, baseInstanceName, description, distributionPolicyTargetShape, distributionPolicyZones, fingerprint, instanceGroup, name, namedPorts, project, region, selfLink, statefulDisks, statuses, targetPools, targetSize, updatePolicy, versions, waitForInstances, waitForInstancesStatus);
         }
     }

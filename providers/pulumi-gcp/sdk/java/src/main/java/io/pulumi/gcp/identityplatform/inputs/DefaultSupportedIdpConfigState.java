@@ -150,62 +150,50 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder idpId(@Nullable Output<String> idpId) {
             this.idpId = idpId;
             return this;
         }
-
         public Builder idpId(@Nullable String idpId) {
             this.idpId = Output.ofNullable(idpId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public DefaultSupportedIdpConfigState build() {
+        }        public DefaultSupportedIdpConfigState build() {
             return new DefaultSupportedIdpConfigState(clientId, clientSecret, enabled, idpId, name, project);
         }
     }

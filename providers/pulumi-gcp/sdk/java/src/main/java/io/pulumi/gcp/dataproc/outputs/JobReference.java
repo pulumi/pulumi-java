@@ -45,8 +45,7 @@ public final class JobReference {
         public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
-        }
-        public JobReference build() {
+        }        public JobReference build() {
             return new JobReference(jobId);
         }
     }

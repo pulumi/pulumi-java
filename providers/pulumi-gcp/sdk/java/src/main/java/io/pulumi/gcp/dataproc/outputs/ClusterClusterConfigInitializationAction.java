@@ -78,12 +78,10 @@ public final class ClusterClusterConfigInitializationAction {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
-        }
-        public ClusterClusterConfigInitializationAction build() {
+        }        public ClusterClusterConfigInitializationAction build() {
             return new ClusterClusterConfigInitializationAction(script, timeoutSec);
         }
     }

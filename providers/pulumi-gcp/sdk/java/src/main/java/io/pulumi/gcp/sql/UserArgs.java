@@ -164,72 +164,58 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.deletionPolicy = deletionPolicy;
             return this;
         }
-
         public Builder deletionPolicy(@Nullable String deletionPolicy) {
             this.deletionPolicy = Output.ofNullable(deletionPolicy);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(deletionPolicy, host, instance, name, password, project, type);
         }
     }

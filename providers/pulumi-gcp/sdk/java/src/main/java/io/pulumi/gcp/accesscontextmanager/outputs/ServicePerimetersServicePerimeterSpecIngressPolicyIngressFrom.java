@@ -101,17 +101,20 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom
             this.identities = identities;
             return this;
         }
-
+        public Builder identities(String... identities) {
+            return identities(List.of(identities));
+        }
         public Builder identityType(@Nullable String identityType) {
             this.identityType = identityType;
             return this;
         }
-
         public Builder sources(@Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources) {
             this.sources = sources;
             return this;
         }
-        public ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom build() {
+        public Builder sources(ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource... sources) {
+            return sources(List.of(sources));
+        }        public ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom build() {
             return new ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom(identities, identityType, sources);
         }
     }

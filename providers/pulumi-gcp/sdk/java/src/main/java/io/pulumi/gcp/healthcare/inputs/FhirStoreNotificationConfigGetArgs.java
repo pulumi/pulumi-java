@@ -61,12 +61,10 @@ public final class FhirStoreNotificationConfigGetArgs extends io.pulumi.resource
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
             return this;
-        }
-        public FhirStoreNotificationConfigGetArgs build() {
+        }        public FhirStoreNotificationConfigGetArgs build() {
             return new FhirStoreNotificationConfigGetArgs(pubsubTopic);
         }
     }

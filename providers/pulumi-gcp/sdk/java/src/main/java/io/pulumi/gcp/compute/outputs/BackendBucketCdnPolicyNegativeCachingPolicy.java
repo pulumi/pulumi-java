@@ -75,12 +75,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy {
             this.code = code;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = ttl;
             return this;
-        }
-        public BackendBucketCdnPolicyNegativeCachingPolicy build() {
+        }        public BackendBucketCdnPolicyNegativeCachingPolicy build() {
             return new BackendBucketCdnPolicyNegativeCachingPolicy(code, ttl);
         }
     }

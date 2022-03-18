@@ -189,82 +189,72 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
             this.assetNames = assetNames;
             return this;
         }
-
         public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Output.ofNullable(assetNames);
             return this;
         }
-
+        public Builder assetNames(String... assetNames) {
+            return assetNames(List.of(assetNames));
+        }
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
-
         public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Output.ofNullable(assetTypes);
             return this;
         }
-
+        public Builder assetTypes(String... assetTypes) {
+            return assetTypes(List.of(assetTypes));
+        }
         public Builder billingProject(Output<String> billingProject) {
             this.billingProject = Objects.requireNonNull(billingProject);
             return this;
         }
-
         public Builder billingProject(String billingProject) {
             this.billingProject = Output.of(Objects.requireNonNull(billingProject));
             return this;
         }
-
         public Builder condition(@Nullable Output<OrganizationFeedConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable OrganizationFeedConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder feedId(Output<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
-
         public Builder feedId(String feedId) {
             this.feedId = Output.of(Objects.requireNonNull(feedId));
             return this;
         }
-
         public Builder feedOutputConfig(Output<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
-
         public Builder feedOutputConfig(OrganizationFeedFeedOutputConfigArgs feedOutputConfig) {
             this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
-
         public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
-        }
-        public OrganizationFeedArgs build() {
+        }        public OrganizationFeedArgs build() {
             return new OrganizationFeedArgs(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, orgId);
         }
     }

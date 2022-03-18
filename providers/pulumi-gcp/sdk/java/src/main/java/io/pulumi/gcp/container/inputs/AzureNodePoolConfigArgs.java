@@ -109,42 +109,34 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
             this.rootVolume = rootVolume;
             return this;
         }
-
         public Builder rootVolume(@Nullable AzureNodePoolConfigRootVolumeArgs rootVolume) {
             this.rootVolume = Output.ofNullable(rootVolume);
             return this;
         }
-
         public Builder sshConfig(Output<AzureNodePoolConfigSshConfigArgs> sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
-
         public Builder sshConfig(AzureNodePoolConfigSshConfigArgs sshConfig) {
             this.sshConfig = Output.of(Objects.requireNonNull(sshConfig));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
-        }
-        public AzureNodePoolConfigArgs build() {
+        }        public AzureNodePoolConfigArgs build() {
             return new AzureNodePoolConfigArgs(rootVolume, sshConfig, tags, vmSize);
         }
     }

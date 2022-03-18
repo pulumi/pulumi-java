@@ -66,22 +66,18 @@ public final class AlertPolicyCreationRecordArgs extends io.pulumi.resources.Res
             this.mutateTime = mutateTime;
             return this;
         }
-
         public Builder mutateTime(@Nullable String mutateTime) {
             this.mutateTime = Output.ofNullable(mutateTime);
             return this;
         }
-
         public Builder mutatedBy(@Nullable Output<String> mutatedBy) {
             this.mutatedBy = mutatedBy;
             return this;
         }
-
         public Builder mutatedBy(@Nullable String mutatedBy) {
             this.mutatedBy = Output.ofNullable(mutatedBy);
             return this;
-        }
-        public AlertPolicyCreationRecordArgs build() {
+        }        public AlertPolicyCreationRecordArgs build() {
             return new AlertPolicyCreationRecordArgs(mutateTime, mutatedBy);
         }
     }

@@ -64,12 +64,10 @@ public final class GetSecretRotation extends io.pulumi.resources.InvokeArgs {
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
-
         public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
-        }
-        public GetSecretRotation build() {
+        }        public GetSecretRotation build() {
             return new GetSecretRotation(nextRotationTime, rotationPeriod);
         }
     }

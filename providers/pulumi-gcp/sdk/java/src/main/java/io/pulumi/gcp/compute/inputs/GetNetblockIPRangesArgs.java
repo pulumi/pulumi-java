@@ -56,8 +56,7 @@ public final class GetNetblockIPRangesArgs extends io.pulumi.resources.InvokeArg
         public Builder rangeType(@Nullable String rangeType) {
             this.rangeType = rangeType;
             return this;
-        }
-        public GetNetblockIPRangesArgs build() {
+        }        public GetNetblockIPRangesArgs build() {
             return new GetNetblockIPRangesArgs(rangeType);
         }
     }

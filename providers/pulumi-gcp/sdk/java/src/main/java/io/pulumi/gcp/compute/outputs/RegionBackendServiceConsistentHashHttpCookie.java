@@ -90,17 +90,14 @@ public final class RegionBackendServiceConsistentHashHttpCookie {
             this.name = name;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder ttl(@Nullable RegionBackendServiceConsistentHashHttpCookieTtl ttl) {
             this.ttl = ttl;
             return this;
-        }
-        public RegionBackendServiceConsistentHashHttpCookie build() {
+        }        public RegionBackendServiceConsistentHashHttpCookie build() {
             return new RegionBackendServiceConsistentHashHttpCookie(name, path, ttl);
         }
     }

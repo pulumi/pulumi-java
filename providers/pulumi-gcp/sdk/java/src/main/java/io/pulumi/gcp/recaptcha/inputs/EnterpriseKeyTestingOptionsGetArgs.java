@@ -75,22 +75,18 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
             this.testingChallenge = testingChallenge;
             return this;
         }
-
         public Builder testingChallenge(@Nullable String testingChallenge) {
             this.testingChallenge = Output.ofNullable(testingChallenge);
             return this;
         }
-
         public Builder testingScore(@Nullable Output<Double> testingScore) {
             this.testingScore = testingScore;
             return this;
         }
-
         public Builder testingScore(@Nullable Double testingScore) {
             this.testingScore = Output.ofNullable(testingScore);
             return this;
-        }
-        public EnterpriseKeyTestingOptionsGetArgs build() {
+        }        public EnterpriseKeyTestingOptionsGetArgs build() {
             return new EnterpriseKeyTestingOptionsGetArgs(testingChallenge, testingScore);
         }
     }

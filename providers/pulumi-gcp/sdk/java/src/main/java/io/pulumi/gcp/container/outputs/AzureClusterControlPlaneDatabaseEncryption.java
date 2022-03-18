@@ -51,8 +51,7 @@ public final class AzureClusterControlPlaneDatabaseEncryption {
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
-        }
-        public AzureClusterControlPlaneDatabaseEncryption build() {
+        }        public AzureClusterControlPlaneDatabaseEncryption build() {
             return new AzureClusterControlPlaneDatabaseEncryption(keyId);
         }
     }

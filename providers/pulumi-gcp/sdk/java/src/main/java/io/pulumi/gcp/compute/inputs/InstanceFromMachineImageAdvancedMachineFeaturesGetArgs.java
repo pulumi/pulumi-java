@@ -67,22 +67,18 @@ public final class InstanceFromMachineImageAdvancedMachineFeaturesGetArgs extend
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
-
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
-        }
-        public InstanceFromMachineImageAdvancedMachineFeaturesGetArgs build() {
+        }        public InstanceFromMachineImageAdvancedMachineFeaturesGetArgs build() {
             return new InstanceFromMachineImageAdvancedMachineFeaturesGetArgs(enableNestedVirtualization, threadsPerCore);
         }
     }

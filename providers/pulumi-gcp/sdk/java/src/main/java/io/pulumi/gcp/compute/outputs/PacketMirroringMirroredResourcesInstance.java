@@ -51,8 +51,7 @@ public final class PacketMirroringMirroredResourcesInstance {
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public PacketMirroringMirroredResourcesInstance build() {
+        }        public PacketMirroringMirroredResourcesInstance build() {
             return new PacketMirroringMirroredResourcesInstance(url);
         }
     }

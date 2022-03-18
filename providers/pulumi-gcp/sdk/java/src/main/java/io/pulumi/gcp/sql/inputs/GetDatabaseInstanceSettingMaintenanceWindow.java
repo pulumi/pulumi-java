@@ -77,17 +77,14 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow extends io.pulumi
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder hour(Integer hour) {
             this.hour = Objects.requireNonNull(hour);
             return this;
         }
-
         public Builder updateTrack(String updateTrack) {
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
-        }
-        public GetDatabaseInstanceSettingMaintenanceWindow build() {
+        }        public GetDatabaseInstanceSettingMaintenanceWindow build() {
             return new GetDatabaseInstanceSettingMaintenanceWindow(day, hour, updateTrack);
         }
     }

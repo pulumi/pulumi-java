@@ -75,12 +75,10 @@ public final class TriggerBuildSecret {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder secretEnv(@Nullable Map<String,String> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
-        }
-        public TriggerBuildSecret build() {
+        }        public TriggerBuildSecret build() {
             return new TriggerBuildSecret(kmsKeyName, secretEnv);
         }
     }

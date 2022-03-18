@@ -138,62 +138,50 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs ex
             this.clientAuth = clientAuth;
             return this;
         }
-
         public Builder clientAuth(@Nullable Boolean clientAuth) {
             this.clientAuth = Output.ofNullable(clientAuth);
             return this;
         }
-
         public Builder codeSigning(@Nullable Output<Boolean> codeSigning) {
             this.codeSigning = codeSigning;
             return this;
         }
-
         public Builder codeSigning(@Nullable Boolean codeSigning) {
             this.codeSigning = Output.ofNullable(codeSigning);
             return this;
         }
-
         public Builder emailProtection(@Nullable Output<Boolean> emailProtection) {
             this.emailProtection = emailProtection;
             return this;
         }
-
         public Builder emailProtection(@Nullable Boolean emailProtection) {
             this.emailProtection = Output.ofNullable(emailProtection);
             return this;
         }
-
         public Builder ocspSigning(@Nullable Output<Boolean> ocspSigning) {
             this.ocspSigning = ocspSigning;
             return this;
         }
-
         public Builder ocspSigning(@Nullable Boolean ocspSigning) {
             this.ocspSigning = Output.ofNullable(ocspSigning);
             return this;
         }
-
         public Builder serverAuth(@Nullable Output<Boolean> serverAuth) {
             this.serverAuth = serverAuth;
             return this;
         }
-
         public Builder serverAuth(@Nullable Boolean serverAuth) {
             this.serverAuth = Output.ofNullable(serverAuth);
             return this;
         }
-
         public Builder timeStamping(@Nullable Output<Boolean> timeStamping) {
             this.timeStamping = timeStamping;
             return this;
         }
-
         public Builder timeStamping(@Nullable Boolean timeStamping) {
             this.timeStamping = Output.ofNullable(timeStamping);
             return this;
-        }
-        public CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs build() {
+        }        public CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs build() {
             return new CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }
     }

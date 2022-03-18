@@ -90,22 +90,18 @@ public final class SubscriptionDeadLetterPolicyArgs extends io.pulumi.resources.
             this.deadLetterTopic = deadLetterTopic;
             return this;
         }
-
         public Builder deadLetterTopic(@Nullable String deadLetterTopic) {
             this.deadLetterTopic = Output.ofNullable(deadLetterTopic);
             return this;
         }
-
         public Builder maxDeliveryAttempts(@Nullable Output<Integer> maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
-
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = Output.ofNullable(maxDeliveryAttempts);
             return this;
-        }
-        public SubscriptionDeadLetterPolicyArgs build() {
+        }        public SubscriptionDeadLetterPolicyArgs build() {
             return new SubscriptionDeadLetterPolicyArgs(deadLetterTopic, maxDeliveryAttempts);
         }
     }

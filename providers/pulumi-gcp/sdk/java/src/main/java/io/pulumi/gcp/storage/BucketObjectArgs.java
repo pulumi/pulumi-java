@@ -306,162 +306,130 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder cacheControl(@Nullable Output<String> cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
-
         public Builder cacheControl(@Nullable String cacheControl) {
             this.cacheControl = Output.ofNullable(cacheControl);
             return this;
         }
-
         public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
-
         public Builder contentDisposition(@Nullable String contentDisposition) {
             this.contentDisposition = Output.ofNullable(contentDisposition);
             return this;
         }
-
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
-
         public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
         }
-
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
-
         public Builder contentLanguage(@Nullable String contentLanguage) {
             this.contentLanguage = Output.ofNullable(contentLanguage);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption) {
             this.customerEncryption = customerEncryption;
             return this;
         }
-
         public Builder customerEncryption(@Nullable BucketObjectCustomerEncryptionArgs customerEncryption) {
             this.customerEncryption = Output.ofNullable(customerEncryption);
             return this;
         }
-
         public Builder detectMd5hash(@Nullable Output<String> detectMd5hash) {
             this.detectMd5hash = detectMd5hash;
             return this;
         }
-
         public Builder detectMd5hash(@Nullable String detectMd5hash) {
             this.detectMd5hash = Output.ofNullable(detectMd5hash);
             return this;
         }
-
         public Builder eventBasedHold(@Nullable Output<Boolean> eventBasedHold) {
             this.eventBasedHold = eventBasedHold;
             return this;
         }
-
         public Builder eventBasedHold(@Nullable Boolean eventBasedHold) {
             this.eventBasedHold = Output.ofNullable(eventBasedHold);
             return this;
         }
-
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable AssetOrArchive source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
-
         public Builder temporaryHold(@Nullable Output<Boolean> temporaryHold) {
             this.temporaryHold = temporaryHold;
             return this;
         }
-
         public Builder temporaryHold(@Nullable Boolean temporaryHold) {
             this.temporaryHold = Output.ofNullable(temporaryHold);
             return this;
-        }
-        public BucketObjectArgs build() {
+        }        public BucketObjectArgs build() {
             return new BucketObjectArgs(bucket, cacheControl, content, contentDisposition, contentEncoding, contentLanguage, contentType, customerEncryption, detectMd5hash, eventBasedHold, kmsKeyName, metadata, name, source, storageClass, temporaryHold);
         }
     }

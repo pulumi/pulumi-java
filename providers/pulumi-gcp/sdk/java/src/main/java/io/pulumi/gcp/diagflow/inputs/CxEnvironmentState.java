@@ -143,62 +143,53 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder versionConfigs(@Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
             this.versionConfigs = versionConfigs;
             return this;
         }
-
         public Builder versionConfigs(@Nullable List<CxEnvironmentVersionConfigGetArgs> versionConfigs) {
             this.versionConfigs = Output.ofNullable(versionConfigs);
             return this;
         }
-        public CxEnvironmentState build() {
+        public Builder versionConfigs(CxEnvironmentVersionConfigGetArgs... versionConfigs) {
+            return versionConfigs(List.of(versionConfigs));
+        }        public CxEnvironmentState build() {
             return new CxEnvironmentState(description, displayName, name, parent, updateTime, versionConfigs);
         }
     }

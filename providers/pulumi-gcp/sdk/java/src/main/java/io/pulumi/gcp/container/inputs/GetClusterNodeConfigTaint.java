@@ -76,17 +76,14 @@ public final class GetClusterNodeConfigTaint extends io.pulumi.resources.InvokeA
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetClusterNodeConfigTaint build() {
+        }        public GetClusterNodeConfigTaint build() {
             return new GetClusterNodeConfigTaint(effect, key, value);
         }
     }

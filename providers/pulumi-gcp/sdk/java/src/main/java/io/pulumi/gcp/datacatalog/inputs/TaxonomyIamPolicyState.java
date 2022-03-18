@@ -120,52 +120,42 @@ public final class TaxonomyIamPolicyState extends io.pulumi.resources.ResourceAr
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder taxonomy(@Nullable Output<String> taxonomy) {
             this.taxonomy = taxonomy;
             return this;
         }
-
         public Builder taxonomy(@Nullable String taxonomy) {
             this.taxonomy = Output.ofNullable(taxonomy);
             return this;
-        }
-        public TaxonomyIamPolicyState build() {
+        }        public TaxonomyIamPolicyState build() {
             return new TaxonomyIamPolicyState(etag, policyData, project, region, taxonomy);
         }
     }

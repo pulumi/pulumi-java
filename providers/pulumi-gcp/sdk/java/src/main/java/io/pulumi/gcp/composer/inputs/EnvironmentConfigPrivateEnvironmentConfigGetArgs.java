@@ -127,72 +127,58 @@ public final class EnvironmentConfigPrivateEnvironmentConfigGetArgs extends io.p
             this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
             return this;
         }
-
         public Builder cloudComposerConnectionSubnetwork(@Nullable String cloudComposerConnectionSubnetwork) {
             this.cloudComposerConnectionSubnetwork = Output.ofNullable(cloudComposerConnectionSubnetwork);
             return this;
         }
-
         public Builder cloudComposerNetworkIpv4CidrBlock(@Nullable Output<String> cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
             return this;
         }
-
         public Builder cloudComposerNetworkIpv4CidrBlock(@Nullable String cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = Output.ofNullable(cloudComposerNetworkIpv4CidrBlock);
             return this;
         }
-
         public Builder cloudSqlIpv4CidrBlock(@Nullable Output<String> cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
             return this;
         }
-
         public Builder cloudSqlIpv4CidrBlock(@Nullable String cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = Output.ofNullable(cloudSqlIpv4CidrBlock);
             return this;
         }
-
         public Builder enablePrivateEndpoint(@Nullable Output<Boolean> enablePrivateEndpoint) {
             this.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
-
         public Builder enablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Output.ofNullable(enablePrivateEndpoint);
             return this;
         }
-
         public Builder enablePrivatelyUsedPublicIps(@Nullable Output<Boolean> enablePrivatelyUsedPublicIps) {
             this.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
             return this;
         }
-
         public Builder enablePrivatelyUsedPublicIps(@Nullable Boolean enablePrivatelyUsedPublicIps) {
             this.enablePrivatelyUsedPublicIps = Output.ofNullable(enablePrivatelyUsedPublicIps);
             return this;
         }
-
         public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
-
         public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Output.ofNullable(masterIpv4CidrBlock);
             return this;
         }
-
         public Builder webServerIpv4CidrBlock(@Nullable Output<String> webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
             return this;
         }
-
         public Builder webServerIpv4CidrBlock(@Nullable String webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = Output.ofNullable(webServerIpv4CidrBlock);
             return this;
-        }
-        public EnvironmentConfigPrivateEnvironmentConfigGetArgs build() {
+        }        public EnvironmentConfigPrivateEnvironmentConfigGetArgs build() {
             return new EnvironmentConfigPrivateEnvironmentConfigGetArgs(cloudComposerConnectionSubnetwork, cloudComposerNetworkIpv4CidrBlock, cloudSqlIpv4CidrBlock, enablePrivateEndpoint, enablePrivatelyUsedPublicIps, masterIpv4CidrBlock, webServerIpv4CidrBlock);
         }
     }

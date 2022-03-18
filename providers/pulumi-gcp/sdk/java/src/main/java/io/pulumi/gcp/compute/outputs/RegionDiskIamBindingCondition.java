@@ -63,17 +63,14 @@ public final class RegionDiskIamBindingCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public RegionDiskIamBindingCondition build() {
+        }        public RegionDiskIamBindingCondition build() {
             return new RegionDiskIamBindingCondition(description, expression, title);
         }
     }

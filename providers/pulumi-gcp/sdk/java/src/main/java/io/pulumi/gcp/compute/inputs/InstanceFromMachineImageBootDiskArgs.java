@@ -140,82 +140,66 @@ public final class InstanceFromMachineImageBootDiskArgs extends io.pulumi.resour
             this.autoDelete = autoDelete;
             return this;
         }
-
         public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Output.ofNullable(autoDelete);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder diskEncryptionKeyRaw(@Nullable Output<String> diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
-
         public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = Output.ofNullable(diskEncryptionKeyRaw);
             return this;
         }
-
         public Builder diskEncryptionKeySha256(@Nullable Output<String> diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
-
         public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = Output.ofNullable(diskEncryptionKeySha256);
             return this;
         }
-
         public Builder initializeParams(@Nullable Output<InstanceFromMachineImageBootDiskInitializeParamsArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
-
         public Builder initializeParams(@Nullable InstanceFromMachineImageBootDiskInitializeParamsArgs initializeParams) {
             this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
-
         public Builder kmsKeySelfLink(@Nullable Output<String> kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
-
         public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = Output.ofNullable(kmsKeySelfLink);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public InstanceFromMachineImageBootDiskArgs build() {
+        }        public InstanceFromMachineImageBootDiskArgs build() {
             return new InstanceFromMachineImageBootDiskArgs(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }
     }

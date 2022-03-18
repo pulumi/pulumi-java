@@ -138,27 +138,28 @@ public final class InstanceNetwork {
             this.connectMode = connectMode;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder modes(List<String> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
-
+        public Builder modes(String... modes) {
+            return modes(List.of(modes));
+        }
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
-        }
-        public InstanceNetwork build() {
+        }        public InstanceNetwork build() {
             return new InstanceNetwork(connectMode, ipAddresses, modes, network, reservedIpRange);
         }
     }

@@ -95,32 +95,26 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(OrganizationSecurityPolicyRuleMatchConfigArgs config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder versionedExpr(@Nullable Output<String> versionedExpr) {
             this.versionedExpr = versionedExpr;
             return this;
         }
-
         public Builder versionedExpr(@Nullable String versionedExpr) {
             this.versionedExpr = Output.ofNullable(versionedExpr);
             return this;
-        }
-        public OrganizationSecurityPolicyRuleMatchArgs build() {
+        }        public OrganizationSecurityPolicyRuleMatchArgs build() {
             return new OrganizationSecurityPolicyRuleMatchArgs(config, description, versionedExpr);
         }
     }

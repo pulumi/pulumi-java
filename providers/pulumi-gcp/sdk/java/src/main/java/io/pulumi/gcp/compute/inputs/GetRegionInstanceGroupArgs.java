@@ -110,22 +110,18 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
             this.name = name;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
-        }
-        public GetRegionInstanceGroupArgs build() {
+        }        public GetRegionInstanceGroupArgs build() {
             return new GetRegionInstanceGroupArgs(name, project, region, selfLink);
         }
     }

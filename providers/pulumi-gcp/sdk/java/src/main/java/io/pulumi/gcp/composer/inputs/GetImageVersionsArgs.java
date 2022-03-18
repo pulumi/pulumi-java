@@ -76,12 +76,10 @@ public final class GetImageVersionsArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetImageVersionsArgs build() {
+        }        public GetImageVersionsArgs build() {
             return new GetImageVersionsArgs(project, region);
         }
     }

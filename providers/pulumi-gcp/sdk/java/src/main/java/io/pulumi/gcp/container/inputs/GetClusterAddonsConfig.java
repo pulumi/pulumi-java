@@ -170,52 +170,72 @@ public final class GetClusterAddonsConfig extends io.pulumi.resources.InvokeArgs
             this.cloudrunConfigs = Objects.requireNonNull(cloudrunConfigs);
             return this;
         }
-
+        public Builder cloudrunConfigs(GetClusterAddonsConfigCloudrunConfig... cloudrunConfigs) {
+            return cloudrunConfigs(List.of(cloudrunConfigs));
+        }
         public Builder configConnectorConfigs(List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs) {
             this.configConnectorConfigs = Objects.requireNonNull(configConnectorConfigs);
             return this;
         }
-
+        public Builder configConnectorConfigs(GetClusterAddonsConfigConfigConnectorConfig... configConnectorConfigs) {
+            return configConnectorConfigs(List.of(configConnectorConfigs));
+        }
         public Builder dnsCacheConfigs(List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs) {
             this.dnsCacheConfigs = Objects.requireNonNull(dnsCacheConfigs);
             return this;
         }
-
+        public Builder dnsCacheConfigs(GetClusterAddonsConfigDnsCacheConfig... dnsCacheConfigs) {
+            return dnsCacheConfigs(List.of(dnsCacheConfigs));
+        }
         public Builder gcePersistentDiskCsiDriverConfigs(List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs) {
             this.gcePersistentDiskCsiDriverConfigs = Objects.requireNonNull(gcePersistentDiskCsiDriverConfigs);
             return this;
         }
-
+        public Builder gcePersistentDiskCsiDriverConfigs(GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig... gcePersistentDiskCsiDriverConfigs) {
+            return gcePersistentDiskCsiDriverConfigs(List.of(gcePersistentDiskCsiDriverConfigs));
+        }
         public Builder gcpFilestoreCsiDriverConfigs(List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs) {
             this.gcpFilestoreCsiDriverConfigs = Objects.requireNonNull(gcpFilestoreCsiDriverConfigs);
             return this;
         }
-
+        public Builder gcpFilestoreCsiDriverConfigs(GetClusterAddonsConfigGcpFilestoreCsiDriverConfig... gcpFilestoreCsiDriverConfigs) {
+            return gcpFilestoreCsiDriverConfigs(List.of(gcpFilestoreCsiDriverConfigs));
+        }
         public Builder horizontalPodAutoscalings(List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings) {
             this.horizontalPodAutoscalings = Objects.requireNonNull(horizontalPodAutoscalings);
             return this;
         }
-
+        public Builder horizontalPodAutoscalings(GetClusterAddonsConfigHorizontalPodAutoscaling... horizontalPodAutoscalings) {
+            return horizontalPodAutoscalings(List.of(horizontalPodAutoscalings));
+        }
         public Builder httpLoadBalancings(List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings) {
             this.httpLoadBalancings = Objects.requireNonNull(httpLoadBalancings);
             return this;
         }
-
+        public Builder httpLoadBalancings(GetClusterAddonsConfigHttpLoadBalancing... httpLoadBalancings) {
+            return httpLoadBalancings(List.of(httpLoadBalancings));
+        }
         public Builder istioConfigs(List<GetClusterAddonsConfigIstioConfig> istioConfigs) {
             this.istioConfigs = Objects.requireNonNull(istioConfigs);
             return this;
         }
-
+        public Builder istioConfigs(GetClusterAddonsConfigIstioConfig... istioConfigs) {
+            return istioConfigs(List.of(istioConfigs));
+        }
         public Builder kalmConfigs(List<GetClusterAddonsConfigKalmConfig> kalmConfigs) {
             this.kalmConfigs = Objects.requireNonNull(kalmConfigs);
             return this;
         }
-
+        public Builder kalmConfigs(GetClusterAddonsConfigKalmConfig... kalmConfigs) {
+            return kalmConfigs(List.of(kalmConfigs));
+        }
         public Builder networkPolicyConfigs(List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs) {
             this.networkPolicyConfigs = Objects.requireNonNull(networkPolicyConfigs);
             return this;
         }
-        public GetClusterAddonsConfig build() {
+        public Builder networkPolicyConfigs(GetClusterAddonsConfigNetworkPolicyConfig... networkPolicyConfigs) {
+            return networkPolicyConfigs(List.of(networkPolicyConfigs));
+        }        public GetClusterAddonsConfig build() {
             return new GetClusterAddonsConfig(cloudrunConfigs, configConnectorConfigs, dnsCacheConfigs, gcePersistentDiskCsiDriverConfigs, gcpFilestoreCsiDriverConfigs, horizontalPodAutoscalings, httpLoadBalancings, istioConfigs, kalmConfigs, networkPolicyConfigs);
         }
     }

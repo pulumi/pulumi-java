@@ -98,32 +98,26 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
             this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
             return this;
         }
-
         public Builder hotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs hotwordRegex) {
             this.hotwordRegex = Output.of(Objects.requireNonNull(hotwordRegex));
             return this;
         }
-
         public Builder likelihoodAdjustment(Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> likelihoodAdjustment) {
             this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
             return this;
         }
-
         public Builder likelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs likelihoodAdjustment) {
             this.likelihoodAdjustment = Output.of(Objects.requireNonNull(likelihoodAdjustment));
             return this;
         }
-
         public Builder proximity(Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> proximity) {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }
-
         public Builder proximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs proximity) {
             this.proximity = Output.of(Objects.requireNonNull(proximity));
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs(hotwordRegex, likelihoodAdjustment, proximity);
         }
     }

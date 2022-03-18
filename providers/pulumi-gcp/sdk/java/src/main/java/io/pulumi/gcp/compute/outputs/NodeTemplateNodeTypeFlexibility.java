@@ -89,17 +89,14 @@ public final class NodeTemplateNodeTypeFlexibility {
             this.cpus = cpus;
             return this;
         }
-
         public Builder localSsd(@Nullable String localSsd) {
             this.localSsd = localSsd;
             return this;
         }
-
         public Builder memory(@Nullable String memory) {
             this.memory = memory;
             return this;
-        }
-        public NodeTemplateNodeTypeFlexibility build() {
+        }        public NodeTemplateNodeTypeFlexibility build() {
             return new NodeTemplateNodeTypeFlexibility(cpus, localSsd, memory);
         }
     }

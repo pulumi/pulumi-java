@@ -55,12 +55,10 @@ public final class ClusterNodePoolManagement {
             this.autoRepair = autoRepair;
             return this;
         }
-
         public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
-        }
-        public ClusterNodePoolManagement build() {
+        }        public ClusterNodePoolManagement build() {
             return new ClusterNodePoolManagement(autoRepair, autoUpgrade);
         }
     }

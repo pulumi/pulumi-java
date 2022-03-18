@@ -51,8 +51,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet build() {
+        }        public PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet(url);
         }
     }

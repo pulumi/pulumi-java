@@ -232,77 +232,92 @@ public final class GetEnvironmentConfig extends io.pulumi.resources.InvokeArgs {
             this.airflowUri = Objects.requireNonNull(airflowUri);
             return this;
         }
-
         public Builder dagGcsPrefix(String dagGcsPrefix) {
             this.dagGcsPrefix = Objects.requireNonNull(dagGcsPrefix);
             return this;
         }
-
         public Builder databaseConfigs(List<GetEnvironmentConfigDatabaseConfig> databaseConfigs) {
             this.databaseConfigs = Objects.requireNonNull(databaseConfigs);
             return this;
         }
-
+        public Builder databaseConfigs(GetEnvironmentConfigDatabaseConfig... databaseConfigs) {
+            return databaseConfigs(List.of(databaseConfigs));
+        }
         public Builder encryptionConfigs(List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs) {
             this.encryptionConfigs = Objects.requireNonNull(encryptionConfigs);
             return this;
         }
-
+        public Builder encryptionConfigs(GetEnvironmentConfigEncryptionConfig... encryptionConfigs) {
+            return encryptionConfigs(List.of(encryptionConfigs));
+        }
         public Builder environmentSize(String environmentSize) {
             this.environmentSize = Objects.requireNonNull(environmentSize);
             return this;
         }
-
         public Builder gkeCluster(String gkeCluster) {
             this.gkeCluster = Objects.requireNonNull(gkeCluster);
             return this;
         }
-
         public Builder maintenanceWindows(List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows) {
             this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows);
             return this;
         }
-
+        public Builder maintenanceWindows(GetEnvironmentConfigMaintenanceWindow... maintenanceWindows) {
+            return maintenanceWindows(List.of(maintenanceWindows));
+        }
         public Builder masterAuthorizedNetworksConfigs(List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs) {
             this.masterAuthorizedNetworksConfigs = Objects.requireNonNull(masterAuthorizedNetworksConfigs);
             return this;
         }
-
+        public Builder masterAuthorizedNetworksConfigs(GetEnvironmentConfigMasterAuthorizedNetworksConfig... masterAuthorizedNetworksConfigs) {
+            return masterAuthorizedNetworksConfigs(List.of(masterAuthorizedNetworksConfigs));
+        }
         public Builder nodeConfigs(List<GetEnvironmentConfigNodeConfig> nodeConfigs) {
             this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
             return this;
         }
-
+        public Builder nodeConfigs(GetEnvironmentConfigNodeConfig... nodeConfigs) {
+            return nodeConfigs(List.of(nodeConfigs));
+        }
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
-
         public Builder privateEnvironmentConfigs(List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs) {
             this.privateEnvironmentConfigs = Objects.requireNonNull(privateEnvironmentConfigs);
             return this;
         }
-
+        public Builder privateEnvironmentConfigs(GetEnvironmentConfigPrivateEnvironmentConfig... privateEnvironmentConfigs) {
+            return privateEnvironmentConfigs(List.of(privateEnvironmentConfigs));
+        }
         public Builder softwareConfigs(List<GetEnvironmentConfigSoftwareConfig> softwareConfigs) {
             this.softwareConfigs = Objects.requireNonNull(softwareConfigs);
             return this;
         }
-
+        public Builder softwareConfigs(GetEnvironmentConfigSoftwareConfig... softwareConfigs) {
+            return softwareConfigs(List.of(softwareConfigs));
+        }
         public Builder webServerConfigs(List<GetEnvironmentConfigWebServerConfig> webServerConfigs) {
             this.webServerConfigs = Objects.requireNonNull(webServerConfigs);
             return this;
         }
-
+        public Builder webServerConfigs(GetEnvironmentConfigWebServerConfig... webServerConfigs) {
+            return webServerConfigs(List.of(webServerConfigs));
+        }
         public Builder webServerNetworkAccessControls(List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls) {
             this.webServerNetworkAccessControls = Objects.requireNonNull(webServerNetworkAccessControls);
             return this;
         }
-
+        public Builder webServerNetworkAccessControls(GetEnvironmentConfigWebServerNetworkAccessControl... webServerNetworkAccessControls) {
+            return webServerNetworkAccessControls(List.of(webServerNetworkAccessControls));
+        }
         public Builder workloadsConfigs(List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs) {
             this.workloadsConfigs = Objects.requireNonNull(workloadsConfigs);
             return this;
         }
-        public GetEnvironmentConfig build() {
+        public Builder workloadsConfigs(GetEnvironmentConfigWorkloadsConfig... workloadsConfigs) {
+            return workloadsConfigs(List.of(workloadsConfigs));
+        }        public GetEnvironmentConfig build() {
             return new GetEnvironmentConfig(airflowUri, dagGcsPrefix, databaseConfigs, encryptionConfigs, environmentSize, gkeCluster, maintenanceWindows, masterAuthorizedNetworksConfigs, nodeConfigs, nodeCount, privateEnvironmentConfigs, softwareConfigs, webServerConfigs, webServerNetworkAccessControls, workloadsConfigs);
         }
     }

@@ -73,12 +73,10 @@ public final class EnvironmentContainerImage {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
-        }
-        public EnvironmentContainerImage build() {
+        }        public EnvironmentContainerImage build() {
             return new EnvironmentContainerImage(repository, tag);
         }
     }

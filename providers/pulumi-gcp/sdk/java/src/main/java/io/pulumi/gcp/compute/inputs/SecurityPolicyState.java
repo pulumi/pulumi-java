@@ -160,72 +160,61 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             this.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
-
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigGetArgs adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<SecurityPolicyRuleGetArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(SecurityPolicyRuleGetArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public SecurityPolicyState build() {
+        }        public SecurityPolicyState build() {
             return new SecurityPolicyState(adaptiveProtectionConfig, description, fingerprint, name, project, rules, selfLink);
         }
     }

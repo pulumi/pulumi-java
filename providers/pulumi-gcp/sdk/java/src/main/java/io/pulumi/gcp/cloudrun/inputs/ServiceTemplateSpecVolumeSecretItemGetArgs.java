@@ -98,32 +98,26 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder mode(@Nullable Output<Integer> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public ServiceTemplateSpecVolumeSecretItemGetArgs build() {
+        }        public ServiceTemplateSpecVolumeSecretItemGetArgs build() {
             return new ServiceTemplateSpecVolumeSecretItemGetArgs(key, mode, path);
         }
     }

@@ -56,12 +56,10 @@ public final class AiFeatureStoreOnlineServingConfigGetArgs extends io.pulumi.re
             this.fixedNodeCount = Objects.requireNonNull(fixedNodeCount);
             return this;
         }
-
         public Builder fixedNodeCount(Integer fixedNodeCount) {
             this.fixedNodeCount = Output.of(Objects.requireNonNull(fixedNodeCount));
             return this;
-        }
-        public AiFeatureStoreOnlineServingConfigGetArgs build() {
+        }        public AiFeatureStoreOnlineServingConfigGetArgs build() {
             return new AiFeatureStoreOnlineServingConfigGetArgs(fixedNodeCount);
         }
     }

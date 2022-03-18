@@ -96,32 +96,26 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
             this.basicSliPerformance = basicSliPerformance;
             return this;
         }
-
         public Builder basicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs basicSliPerformance) {
             this.basicSliPerformance = Output.ofNullable(basicSliPerformance);
             return this;
         }
-
         public Builder performance(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs> performance) {
             this.performance = performance;
             return this;
         }
-
         public Builder performance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs performance) {
             this.performance = Output.ofNullable(performance);
             return this;
         }
-
         public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
-
         public Builder threshold(@Nullable Double threshold) {
             this.threshold = Output.ofNullable(threshold);
             return this;
-        }
-        public SloWindowsBasedSliGoodTotalRatioThresholdArgs build() {
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdArgs(basicSliPerformance, performance, threshold);
         }
     }

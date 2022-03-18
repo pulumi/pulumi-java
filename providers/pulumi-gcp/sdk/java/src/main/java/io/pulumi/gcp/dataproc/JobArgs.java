@@ -265,132 +265,106 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.forceDelete = forceDelete;
             return this;
         }
-
         public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
-
         public Builder hadoopConfig(@Nullable Output<JobHadoopConfigArgs> hadoopConfig) {
             this.hadoopConfig = hadoopConfig;
             return this;
         }
-
         public Builder hadoopConfig(@Nullable JobHadoopConfigArgs hadoopConfig) {
             this.hadoopConfig = Output.ofNullable(hadoopConfig);
             return this;
         }
-
         public Builder hiveConfig(@Nullable Output<JobHiveConfigArgs> hiveConfig) {
             this.hiveConfig = hiveConfig;
             return this;
         }
-
         public Builder hiveConfig(@Nullable JobHiveConfigArgs hiveConfig) {
             this.hiveConfig = Output.ofNullable(hiveConfig);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder pigConfig(@Nullable Output<JobPigConfigArgs> pigConfig) {
             this.pigConfig = pigConfig;
             return this;
         }
-
         public Builder pigConfig(@Nullable JobPigConfigArgs pigConfig) {
             this.pigConfig = Output.ofNullable(pigConfig);
             return this;
         }
-
         public Builder placement(Output<JobPlacementArgs> placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
-
         public Builder placement(JobPlacementArgs placement) {
             this.placement = Output.of(Objects.requireNonNull(placement));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pysparkConfig(@Nullable Output<JobPysparkConfigArgs> pysparkConfig) {
             this.pysparkConfig = pysparkConfig;
             return this;
         }
-
         public Builder pysparkConfig(@Nullable JobPysparkConfigArgs pysparkConfig) {
             this.pysparkConfig = Output.ofNullable(pysparkConfig);
             return this;
         }
-
         public Builder reference(@Nullable Output<JobReferenceArgs> reference) {
             this.reference = reference;
             return this;
         }
-
         public Builder reference(@Nullable JobReferenceArgs reference) {
             this.reference = Output.ofNullable(reference);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder scheduling(@Nullable Output<JobSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder scheduling(@Nullable JobSchedulingArgs scheduling) {
             this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
-
         public Builder sparkConfig(@Nullable Output<JobSparkConfigArgs> sparkConfig) {
             this.sparkConfig = sparkConfig;
             return this;
         }
-
         public Builder sparkConfig(@Nullable JobSparkConfigArgs sparkConfig) {
             this.sparkConfig = Output.ofNullable(sparkConfig);
             return this;
         }
-
         public Builder sparksqlConfig(@Nullable Output<JobSparksqlConfigArgs> sparksqlConfig) {
             this.sparksqlConfig = sparksqlConfig;
             return this;
         }
-
         public Builder sparksqlConfig(@Nullable JobSparksqlConfigArgs sparksqlConfig) {
             this.sparksqlConfig = Output.ofNullable(sparksqlConfig);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(forceDelete, hadoopConfig, hiveConfig, labels, pigConfig, placement, project, pysparkConfig, reference, region, scheduling, sparkConfig, sparksqlConfig);
         }
     }

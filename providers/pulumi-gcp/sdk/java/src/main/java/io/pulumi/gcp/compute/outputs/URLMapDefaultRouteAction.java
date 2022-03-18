@@ -202,37 +202,33 @@ public final class URLMapDefaultRouteAction {
             this.corsPolicy = corsPolicy;
             return this;
         }
-
         public Builder faultInjectionPolicy(@Nullable URLMapDefaultRouteActionFaultInjectionPolicy faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
-
         public Builder requestMirrorPolicy(@Nullable URLMapDefaultRouteActionRequestMirrorPolicy requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable URLMapDefaultRouteActionRetryPolicy retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder timeout(@Nullable URLMapDefaultRouteActionTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder urlRewrite(@Nullable URLMapDefaultRouteActionUrlRewrite urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
-
         public Builder weightedBackendServices(@Nullable List<URLMapDefaultRouteActionWeightedBackendService> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
-        public URLMapDefaultRouteAction build() {
+        public Builder weightedBackendServices(URLMapDefaultRouteActionWeightedBackendService... weightedBackendServices) {
+            return weightedBackendServices(List.of(weightedBackendServices));
+        }        public URLMapDefaultRouteAction build() {
             return new URLMapDefaultRouteAction(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }
     }

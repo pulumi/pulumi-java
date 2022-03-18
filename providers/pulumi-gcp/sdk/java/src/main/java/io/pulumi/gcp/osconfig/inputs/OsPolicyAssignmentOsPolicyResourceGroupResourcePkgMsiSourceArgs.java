@@ -109,42 +109,34 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceAr
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Output.ofNullable(allowInsecure);
             return this;
         }
-
         public Builder gcs(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
-
         public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs gcs) {
             this.gcs = Output.ofNullable(gcs);
             return this;
         }
-
         public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = Output.ofNullable(localPath);
             return this;
         }
-
         public Builder remote(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs> remote) {
             this.remote = remote;
             return this;
         }
-
         public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs remote) {
             this.remote = Output.ofNullable(remote);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs(allowInsecure, gcs, localPath, remote);
         }
     }

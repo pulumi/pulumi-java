@@ -78,22 +78,18 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends io.pul
             this.monthDay = monthDay;
             return this;
         }
-
         public Builder monthDay(@Nullable Integer monthDay) {
             this.monthDay = Output.ofNullable(monthDay);
             return this;
         }
-
         public Builder weekDayOfMonth(@Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> weekDayOfMonth) {
             this.weekDayOfMonth = weekDayOfMonth;
             return this;
         }
-
         public Builder weekDayOfMonth(@Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs weekDayOfMonth) {
             this.weekDayOfMonth = Output.ofNullable(weekDayOfMonth);
             return this;
-        }
-        public PatchDeploymentRecurringScheduleMonthlyGetArgs build() {
+        }        public PatchDeploymentRecurringScheduleMonthlyGetArgs build() {
             return new PatchDeploymentRecurringScheduleMonthlyGetArgs(monthDay, weekDayOfMonth);
         }
     }

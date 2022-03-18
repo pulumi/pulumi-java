@@ -58,12 +58,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(String threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
-        }
-        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs build() {
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs(threshold);
         }
     }

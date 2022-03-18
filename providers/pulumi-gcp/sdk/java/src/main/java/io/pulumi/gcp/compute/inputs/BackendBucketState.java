@@ -198,92 +198,77 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy) {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
-
         public Builder cdnPolicy(@Nullable BackendBucketCdnPolicyGetArgs cdnPolicy) {
             this.cdnPolicy = Output.ofNullable(cdnPolicy);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
             this.customResponseHeaders = customResponseHeaders;
             return this;
         }
-
         public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
             this.customResponseHeaders = Output.ofNullable(customResponseHeaders);
             return this;
         }
-
+        public Builder customResponseHeaders(String... customResponseHeaders) {
+            return customResponseHeaders(List.of(customResponseHeaders));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
             this.enableCdn = enableCdn;
             return this;
         }
-
         public Builder enableCdn(@Nullable Boolean enableCdn) {
             this.enableCdn = Output.ofNullable(enableCdn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public BackendBucketState build() {
+        }        public BackendBucketState build() {
             return new BackendBucketState(bucketName, cdnPolicy, creationTimestamp, customResponseHeaders, description, enableCdn, name, project, selfLink);
         }
     }

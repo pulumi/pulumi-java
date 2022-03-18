@@ -165,72 +165,58 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             this.interconnectAttachment = interconnectAttachment;
             return this;
         }
-
         public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
             this.interconnectAttachment = Output.ofNullable(interconnectAttachment);
             return this;
         }
-
         public Builder ipRange(@Nullable Output<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
-
         public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder router(Output<String> router) {
             this.router = Objects.requireNonNull(router);
             return this;
         }
-
         public Builder router(String router) {
             this.router = Output.of(Objects.requireNonNull(router));
             return this;
         }
-
         public Builder vpnTunnel(@Nullable Output<String> vpnTunnel) {
             this.vpnTunnel = vpnTunnel;
             return this;
         }
-
         public Builder vpnTunnel(@Nullable String vpnTunnel) {
             this.vpnTunnel = Output.ofNullable(vpnTunnel);
             return this;
-        }
-        public RouterInterfaceArgs build() {
+        }        public RouterInterfaceArgs build() {
             return new RouterInterfaceArgs(interconnectAttachment, ipRange, name, project, region, router, vpnTunnel);
         }
     }

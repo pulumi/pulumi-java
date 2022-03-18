@@ -57,12 +57,13 @@ public final class AuthorityConfigX509ConfigPolicyIdArgs extends io.pulumi.resou
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-        public AuthorityConfigX509ConfigPolicyIdArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public AuthorityConfigX509ConfigPolicyIdArgs build() {
             return new AuthorityConfigX509ConfigPolicyIdArgs(objectIdPaths);
         }
     }

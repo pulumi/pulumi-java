@@ -50,8 +50,7 @@ public final class GetClusterAddonsConfigHttpLoadBalancing extends io.pulumi.res
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public GetClusterAddonsConfigHttpLoadBalancing build() {
+        }        public GetClusterAddonsConfigHttpLoadBalancing build() {
             return new GetClusterAddonsConfigHttpLoadBalancing(disabled);
         }
     }

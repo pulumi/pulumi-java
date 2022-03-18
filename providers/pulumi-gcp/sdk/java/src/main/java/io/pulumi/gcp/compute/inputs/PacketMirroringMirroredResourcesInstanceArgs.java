@@ -56,12 +56,10 @@ public final class PacketMirroringMirroredResourcesInstanceArgs extends io.pulum
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public PacketMirroringMirroredResourcesInstanceArgs build() {
+        }        public PacketMirroringMirroredResourcesInstanceArgs build() {
             return new PacketMirroringMirroredResourcesInstanceArgs(url);
         }
     }

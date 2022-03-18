@@ -57,12 +57,10 @@ public final class ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs ex
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs build() {
+        }        public ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs build() {
             return new ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs(enabled);
         }
     }

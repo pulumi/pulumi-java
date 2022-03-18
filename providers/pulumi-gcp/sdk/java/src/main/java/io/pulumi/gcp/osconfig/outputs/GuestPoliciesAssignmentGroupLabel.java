@@ -52,8 +52,7 @@ public final class GuestPoliciesAssignmentGroupLabel {
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public GuestPoliciesAssignmentGroupLabel build() {
+        }        public GuestPoliciesAssignmentGroupLabel build() {
             return new GuestPoliciesAssignmentGroupLabel(labels);
         }
     }

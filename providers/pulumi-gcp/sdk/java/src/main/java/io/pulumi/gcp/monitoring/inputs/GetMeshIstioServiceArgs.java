@@ -110,22 +110,18 @@ public final class GetMeshIstioServiceArgs extends io.pulumi.resources.InvokeArg
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
-        }
-        public GetMeshIstioServiceArgs build() {
+        }        public GetMeshIstioServiceArgs build() {
             return new GetMeshIstioServiceArgs(meshUid, project, serviceName, serviceNamespace);
         }
     }

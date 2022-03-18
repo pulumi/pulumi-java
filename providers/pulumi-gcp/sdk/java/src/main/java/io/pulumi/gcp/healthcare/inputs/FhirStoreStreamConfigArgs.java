@@ -83,22 +83,21 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public Builder bigqueryDestination(FhirStoreStreamConfigBigqueryDestinationArgs bigqueryDestination) {
             this.bigqueryDestination = Output.of(Objects.requireNonNull(bigqueryDestination));
             return this;
         }
-
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
-        public FhirStoreStreamConfigArgs build() {
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }        public FhirStoreStreamConfigArgs build() {
             return new FhirStoreStreamConfigArgs(bigqueryDestination, resourceTypes);
         }
     }

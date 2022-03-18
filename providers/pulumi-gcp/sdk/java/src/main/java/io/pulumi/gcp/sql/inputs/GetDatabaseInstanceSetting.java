@@ -254,87 +254,88 @@ public final class GetDatabaseInstanceSetting extends io.pulumi.resources.Invoke
             this.activationPolicy = Objects.requireNonNull(activationPolicy);
             return this;
         }
-
         public Builder availabilityType(String availabilityType) {
             this.availabilityType = Objects.requireNonNull(availabilityType);
             return this;
         }
-
         public Builder backupConfigurations(List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations) {
             this.backupConfigurations = Objects.requireNonNull(backupConfigurations);
             return this;
         }
-
+        public Builder backupConfigurations(GetDatabaseInstanceSettingBackupConfiguration... backupConfigurations) {
+            return backupConfigurations(List.of(backupConfigurations));
+        }
         public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
-
         public Builder databaseFlags(List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags) {
             this.databaseFlags = Objects.requireNonNull(databaseFlags);
             return this;
         }
-
+        public Builder databaseFlags(GetDatabaseInstanceSettingDatabaseFlag... databaseFlags) {
+            return databaseFlags(List.of(databaseFlags));
+        }
         public Builder diskAutoresize(Boolean diskAutoresize) {
             this.diskAutoresize = Objects.requireNonNull(diskAutoresize);
             return this;
         }
-
         public Builder diskAutoresizeLimit(Integer diskAutoresizeLimit) {
             this.diskAutoresizeLimit = Objects.requireNonNull(diskAutoresizeLimit);
             return this;
         }
-
         public Builder diskSize(Integer diskSize) {
             this.diskSize = Objects.requireNonNull(diskSize);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder insightsConfigs(List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs) {
             this.insightsConfigs = Objects.requireNonNull(insightsConfigs);
             return this;
         }
-
+        public Builder insightsConfigs(GetDatabaseInstanceSettingInsightsConfig... insightsConfigs) {
+            return insightsConfigs(List.of(insightsConfigs));
+        }
         public Builder ipConfigurations(List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(GetDatabaseInstanceSettingIpConfiguration... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder locationPreferences(List<GetDatabaseInstanceSettingLocationPreference> locationPreferences) {
             this.locationPreferences = Objects.requireNonNull(locationPreferences);
             return this;
         }
-
+        public Builder locationPreferences(GetDatabaseInstanceSettingLocationPreference... locationPreferences) {
+            return locationPreferences(List.of(locationPreferences));
+        }
         public Builder maintenanceWindows(List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows) {
             this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows);
             return this;
         }
-
+        public Builder maintenanceWindows(GetDatabaseInstanceSettingMaintenanceWindow... maintenanceWindows) {
+            return maintenanceWindows(List.of(maintenanceWindows));
+        }
         public Builder pricingPlan(String pricingPlan) {
             this.pricingPlan = Objects.requireNonNull(pricingPlan);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetDatabaseInstanceSetting build() {
+        }        public GetDatabaseInstanceSetting build() {
             return new GetDatabaseInstanceSetting(activationPolicy, availabilityType, backupConfigurations, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfigs, ipConfigurations, locationPreferences, maintenanceWindows, pricingPlan, tier, userLabels, version);
         }
     }

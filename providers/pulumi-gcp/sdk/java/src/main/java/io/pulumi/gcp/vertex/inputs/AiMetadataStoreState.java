@@ -177,82 +177,69 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptionSpec(@Nullable Output<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
-
         public Builder encryptionSpec(@Nullable AiMetadataStoreEncryptionSpecGetArgs encryptionSpec) {
             this.encryptionSpec = Output.ofNullable(encryptionSpec);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder states(@Nullable Output<List<AiMetadataStoreStateGetArgs>> states) {
             this.states = states;
             return this;
         }
-
         public Builder states(@Nullable List<AiMetadataStoreStateGetArgs> states) {
             this.states = Output.ofNullable(states);
             return this;
         }
-
+        public Builder states(AiMetadataStoreStateGetArgs... states) {
+            return states(List.of(states));
+        }
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public AiMetadataStoreState build() {
+        }        public AiMetadataStoreState build() {
             return new AiMetadataStoreState(createTime, description, encryptionSpec, name, project, region, states, updateTime);
         }
     }

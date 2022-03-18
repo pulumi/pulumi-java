@@ -110,42 +110,37 @@ public final class CxPageEntryFulfillmentGetArgs extends io.pulumi.resources.Res
             this.messages = messages;
             return this;
         }
-
         public Builder messages(@Nullable List<CxPageEntryFulfillmentMessageGetArgs> messages) {
             this.messages = Output.ofNullable(messages);
             return this;
         }
-
+        public Builder messages(CxPageEntryFulfillmentMessageGetArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder returnPartialResponses(@Nullable Output<Boolean> returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
-
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = Output.ofNullable(returnPartialResponses);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
         }
-
         public Builder webhook(@Nullable Output<String> webhook) {
             this.webhook = webhook;
             return this;
         }
-
         public Builder webhook(@Nullable String webhook) {
             this.webhook = Output.ofNullable(webhook);
             return this;
-        }
-        public CxPageEntryFulfillmentGetArgs build() {
+        }        public CxPageEntryFulfillmentGetArgs build() {
             return new CxPageEntryFulfillmentGetArgs(messages, returnPartialResponses, tag, webhook);
         }
     }

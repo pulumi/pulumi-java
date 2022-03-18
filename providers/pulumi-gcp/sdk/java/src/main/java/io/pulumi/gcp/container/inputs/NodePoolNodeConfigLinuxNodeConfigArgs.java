@@ -53,12 +53,10 @@ public final class NodePoolNodeConfigLinuxNodeConfigArgs extends io.pulumi.resou
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
-
         public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Output.of(Objects.requireNonNull(sysctls));
             return this;
-        }
-        public NodePoolNodeConfigLinuxNodeConfigArgs build() {
+        }        public NodePoolNodeConfigLinuxNodeConfigArgs build() {
             return new NodePoolNodeConfigLinuxNodeConfigArgs(sysctls);
         }
     }

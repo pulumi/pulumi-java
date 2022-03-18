@@ -56,12 +56,10 @@ public final class SharedVPCHostProjectArgs extends io.pulumi.resources.Resource
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
-        }
-        public SharedVPCHostProjectArgs build() {
+        }        public SharedVPCHostProjectArgs build() {
             return new SharedVPCHostProjectArgs(project);
         }
     }

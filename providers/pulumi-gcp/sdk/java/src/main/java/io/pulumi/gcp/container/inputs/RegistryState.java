@@ -90,32 +90,26 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
             this.bucketSelfLink = bucketSelfLink;
             return this;
         }
-
         public Builder bucketSelfLink(@Nullable String bucketSelfLink) {
             this.bucketSelfLink = Output.ofNullable(bucketSelfLink);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public RegistryState build() {
+        }        public RegistryState build() {
             return new RegistryState(bucketSelfLink, location, project);
         }
     }

@@ -92,32 +92,35 @@ public final class FirewallPolicyRuleMatchGetArgs extends io.pulumi.resources.Re
             this.destIpRanges = destIpRanges;
             return this;
         }
-
         public Builder destIpRanges(@Nullable List<String> destIpRanges) {
             this.destIpRanges = Output.ofNullable(destIpRanges);
             return this;
         }
-
+        public Builder destIpRanges(String... destIpRanges) {
+            return destIpRanges(List.of(destIpRanges));
+        }
         public Builder layer4Configs(Output<List<FirewallPolicyRuleMatchLayer4ConfigGetArgs>> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
-
         public Builder layer4Configs(List<FirewallPolicyRuleMatchLayer4ConfigGetArgs> layer4Configs) {
             this.layer4Configs = Output.of(Objects.requireNonNull(layer4Configs));
             return this;
         }
-
+        public Builder layer4Configs(FirewallPolicyRuleMatchLayer4ConfigGetArgs... layer4Configs) {
+            return layer4Configs(List.of(layer4Configs));
+        }
         public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
-
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = Output.ofNullable(srcIpRanges);
             return this;
         }
-        public FirewallPolicyRuleMatchGetArgs build() {
+        public Builder srcIpRanges(String... srcIpRanges) {
+            return srcIpRanges(List.of(srcIpRanges));
+        }        public FirewallPolicyRuleMatchGetArgs build() {
             return new FirewallPolicyRuleMatchGetArgs(destIpRanges, layer4Configs, srcIpRanges);
         }
     }

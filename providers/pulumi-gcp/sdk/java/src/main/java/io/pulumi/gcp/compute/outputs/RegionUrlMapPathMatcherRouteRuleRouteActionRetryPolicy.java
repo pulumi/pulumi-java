@@ -132,17 +132,17 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
             this.numRetries = Objects.requireNonNull(numRetries);
             return this;
         }
-
         public Builder perTryTimeout(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout) {
             this.perTryTimeout = perTryTimeout;
             return this;
         }
-
         public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
-        public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy build() {
+        public Builder retryConditions(String... retryConditions) {
+            return retryConditions(List.of(retryConditions));
+        }        public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy(numRetries, perTryTimeout, retryConditions);
         }
     }

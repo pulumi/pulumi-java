@@ -91,32 +91,26 @@ public final class CertificateTemplateIdentityConstraintsGetArgs extends io.pulu
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
-
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Output.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
             return this;
         }
-
         public Builder allowSubjectPassthrough(Output<Boolean> allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
-
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Output.of(Objects.requireNonNull(allowSubjectPassthrough));
             return this;
         }
-
         public Builder celExpression(@Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression) {
             this.celExpression = celExpression;
             return this;
         }
-
         public Builder celExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpressionGetArgs celExpression) {
             this.celExpression = Output.ofNullable(celExpression);
             return this;
-        }
-        public CertificateTemplateIdentityConstraintsGetArgs build() {
+        }        public CertificateTemplateIdentityConstraintsGetArgs build() {
             return new CertificateTemplateIdentityConstraintsGetArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }
     }

@@ -73,12 +73,10 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GlobalForwardingRuleMetadataFilterFilterLabel build() {
+        }        public GlobalForwardingRuleMetadataFilterFilterLabel build() {
             return new GlobalForwardingRuleMetadataFilterFilterLabel(name, value);
         }
     }

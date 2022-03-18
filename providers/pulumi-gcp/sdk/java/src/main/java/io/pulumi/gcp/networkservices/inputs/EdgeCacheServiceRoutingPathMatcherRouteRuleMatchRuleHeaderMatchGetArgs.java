@@ -141,62 +141,50 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             this.exactMatch = exactMatch;
             return this;
         }
-
         public Builder exactMatch(@Nullable String exactMatch) {
             this.exactMatch = Output.ofNullable(exactMatch);
             return this;
         }
-
         public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
-
         public Builder invertMatch(@Nullable Output<Boolean> invertMatch) {
             this.invertMatch = invertMatch;
             return this;
         }
-
         public Builder invertMatch(@Nullable Boolean invertMatch) {
             this.invertMatch = Output.ofNullable(invertMatch);
             return this;
         }
-
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
-
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
-
         public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = Output.ofNullable(presentMatch);
             return this;
         }
-
         public Builder suffixMatch(@Nullable Output<String> suffixMatch) {
             this.suffixMatch = suffixMatch;
             return this;
         }
-
         public Builder suffixMatch(@Nullable String suffixMatch) {
             this.suffixMatch = Output.ofNullable(suffixMatch);
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, suffixMatch);
         }
     }

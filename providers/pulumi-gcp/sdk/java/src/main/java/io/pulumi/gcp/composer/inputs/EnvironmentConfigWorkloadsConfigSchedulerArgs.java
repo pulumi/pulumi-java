@@ -91,42 +91,34 @@ public final class EnvironmentConfigWorkloadsConfigSchedulerArgs extends io.pulu
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Double cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
-
         public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
-
         public Builder storageGb(@Nullable Output<Double> storageGb) {
             this.storageGb = storageGb;
             return this;
         }
-
         public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = Output.ofNullable(storageGb);
             return this;
-        }
-        public EnvironmentConfigWorkloadsConfigSchedulerArgs build() {
+        }        public EnvironmentConfigWorkloadsConfigSchedulerArgs build() {
             return new EnvironmentConfigWorkloadsConfigSchedulerArgs(count, cpu, memoryGb, storageGb);
         }
     }

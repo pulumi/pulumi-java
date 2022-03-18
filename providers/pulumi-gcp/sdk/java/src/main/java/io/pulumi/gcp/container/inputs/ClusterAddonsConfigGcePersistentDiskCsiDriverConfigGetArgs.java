@@ -57,12 +57,10 @@ public final class ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs ex
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs build() {
+        }        public ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs build() {
             return new ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs(enabled);
         }
     }

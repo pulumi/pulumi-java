@@ -77,22 +77,21 @@ public final class PreventionStoredInfoTypeRegexArgs extends io.pulumi.resources
             this.groupIndexes = groupIndexes;
             return this;
         }
-
         public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
             this.groupIndexes = Output.ofNullable(groupIndexes);
             return this;
         }
-
+        public Builder groupIndexes(Integer... groupIndexes) {
+            return groupIndexes(List.of(groupIndexes));
+        }
         public Builder pattern(Output<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public Builder pattern(String pattern) {
             this.pattern = Output.of(Objects.requireNonNull(pattern));
             return this;
-        }
-        public PreventionStoredInfoTypeRegexArgs build() {
+        }        public PreventionStoredInfoTypeRegexArgs build() {
             return new PreventionStoredInfoTypeRegexArgs(groupIndexes, pattern);
         }
     }

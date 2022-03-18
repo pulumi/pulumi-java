@@ -104,22 +104,24 @@ public final class TransferJobTransferSpecObjectConditions {
             this.excludePrefixes = excludePrefixes;
             return this;
         }
-
+        public Builder excludePrefixes(String... excludePrefixes) {
+            return excludePrefixes(List.of(excludePrefixes));
+        }
         public Builder includePrefixes(@Nullable List<String> includePrefixes) {
             this.includePrefixes = includePrefixes;
             return this;
         }
-
+        public Builder includePrefixes(String... includePrefixes) {
+            return includePrefixes(List.of(includePrefixes));
+        }
         public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
-
         public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
-        }
-        public TransferJobTransferSpecObjectConditions build() {
+        }        public TransferJobTransferSpecObjectConditions build() {
             return new TransferJobTransferSpecObjectConditions(excludePrefixes, includePrefixes, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
         }
     }

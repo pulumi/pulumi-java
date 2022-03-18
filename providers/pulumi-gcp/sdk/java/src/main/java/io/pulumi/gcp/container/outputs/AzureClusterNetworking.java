@@ -86,17 +86,20 @@ public final class AzureClusterNetworking {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
-
+        public Builder podAddressCidrBlocks(String... podAddressCidrBlocks) {
+            return podAddressCidrBlocks(List.of(podAddressCidrBlocks));
+        }
         public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
-
+        public Builder serviceAddressCidrBlocks(String... serviceAddressCidrBlocks) {
+            return serviceAddressCidrBlocks(List.of(serviceAddressCidrBlocks));
+        }
         public Builder virtualNetworkId(String virtualNetworkId) {
             this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
             return this;
-        }
-        public AzureClusterNetworking build() {
+        }        public AzureClusterNetworking build() {
             return new AzureClusterNetworking(podAddressCidrBlocks, serviceAddressCidrBlocks, virtualNetworkId);
         }
     }

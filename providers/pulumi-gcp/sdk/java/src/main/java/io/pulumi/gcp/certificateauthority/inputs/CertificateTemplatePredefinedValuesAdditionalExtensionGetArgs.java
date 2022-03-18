@@ -92,32 +92,26 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
             this.critical = critical;
             return this;
         }
-
         public Builder critical(@Nullable Boolean critical) {
             this.critical = Output.ofNullable(critical);
             return this;
         }
-
         public Builder objectId(Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs build() {
+        }        public CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs build() {
             return new CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs(critical, objectId, value);
         }
     }

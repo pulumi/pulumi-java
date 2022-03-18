@@ -100,42 +100,34 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
-        }
-        public IamPolicyArgs build() {
+        }        public IamPolicyArgs build() {
             return new IamPolicyArgs(datasetId, policyData, project, tableId);
         }
     }

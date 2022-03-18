@@ -50,8 +50,7 @@ public final class GetBucketVersioning extends io.pulumi.resources.InvokeArgs {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetBucketVersioning build() {
+        }        public GetBucketVersioning build() {
             return new GetBucketVersioning(enabled);
         }
     }

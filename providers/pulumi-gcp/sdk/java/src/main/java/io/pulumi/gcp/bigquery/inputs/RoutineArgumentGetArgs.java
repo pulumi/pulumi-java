@@ -115,42 +115,34 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
             this.argumentKind = argumentKind;
             return this;
         }
-
         public Builder argumentKind(@Nullable String argumentKind) {
             this.argumentKind = Output.ofNullable(argumentKind);
             return this;
         }
-
         public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public RoutineArgumentGetArgs build() {
+        }        public RoutineArgumentGetArgs build() {
             return new RoutineArgumentGetArgs(argumentKind, dataType, mode, name);
         }
     }

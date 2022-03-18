@@ -76,22 +76,18 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder monitoringInterval(@Nullable Output<String> monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
-
         public Builder monitoringInterval(@Nullable String monitoringInterval) {
             this.monitoringInterval = Output.ofNullable(monitoringInterval);
             return this;
-        }
-        public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs build() {
+        }        public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs(disabled, monitoringInterval);
         }
     }

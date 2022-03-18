@@ -411,202 +411,168 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable Output<RegionDiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable RegionDiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
             this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
-
         public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = Output.ofNullable($interface);
             return this;
         }
-
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
-
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder lastAttachTimestamp(@Nullable Output<String> lastAttachTimestamp) {
             this.lastAttachTimestamp = lastAttachTimestamp;
             return this;
         }
-
         public Builder lastAttachTimestamp(@Nullable String lastAttachTimestamp) {
             this.lastAttachTimestamp = Output.ofNullable(lastAttachTimestamp);
             return this;
         }
-
         public Builder lastDetachTimestamp(@Nullable Output<String> lastDetachTimestamp) {
             this.lastDetachTimestamp = lastDetachTimestamp;
             return this;
         }
-
         public Builder lastDetachTimestamp(@Nullable String lastDetachTimestamp) {
             this.lastDetachTimestamp = Output.ofNullable(lastDetachTimestamp);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder physicalBlockSizeBytes(@Nullable Output<Integer> physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
-
         public Builder physicalBlockSizeBytes(@Nullable Integer physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = Output.ofNullable(physicalBlockSizeBytes);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder replicaZones(@Nullable Output<List<String>> replicaZones) {
             this.replicaZones = replicaZones;
             return this;
         }
-
         public Builder replicaZones(@Nullable List<String> replicaZones) {
             this.replicaZones = Output.ofNullable(replicaZones);
             return this;
         }
-
+        public Builder replicaZones(String... replicaZones) {
+            return replicaZones(List.of(replicaZones));
+        }
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder snapshot(@Nullable Output<String> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
-
         public Builder snapshot(@Nullable String snapshot) {
             this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<RegionDiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable RegionDiskSourceSnapshotEncryptionKeyGetArgs sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public Builder sourceSnapshotId(@Nullable Output<String> sourceSnapshotId) {
             this.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
-
         public Builder sourceSnapshotId(@Nullable String sourceSnapshotId) {
             this.sourceSnapshotId = Output.ofNullable(sourceSnapshotId);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder users(@Nullable Output<List<String>> users) {
             this.users = users;
             return this;
         }
-
         public Builder users(@Nullable List<String> users) {
             this.users = Output.ofNullable(users);
             return this;
         }
-        public RegionDiskState build() {
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }        public RegionDiskState build() {
             return new RegionDiskState(creationTimestamp, description, diskEncryptionKey, $interface, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, name, physicalBlockSizeBytes, project, region, replicaZones, selfLink, size, snapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, type, users);
         }
     }

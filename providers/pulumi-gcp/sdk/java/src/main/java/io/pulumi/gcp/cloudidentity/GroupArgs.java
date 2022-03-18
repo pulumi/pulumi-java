@@ -153,62 +153,50 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder groupKey(Output<GroupGroupKeyArgs> groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
-
         public Builder groupKey(GroupGroupKeyArgs groupKey) {
             this.groupKey = Output.of(Objects.requireNonNull(groupKey));
             return this;
         }
-
         public Builder initialGroupConfig(@Nullable Output<String> initialGroupConfig) {
             this.initialGroupConfig = initialGroupConfig;
             return this;
         }
-
         public Builder initialGroupConfig(@Nullable String initialGroupConfig) {
             this.initialGroupConfig = Output.ofNullable(initialGroupConfig);
             return this;
         }
-
         public Builder labels(Output<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
-        }
-        public GroupArgs build() {
+        }        public GroupArgs build() {
             return new GroupArgs(description, displayName, groupKey, initialGroupConfig, labels, parent);
         }
     }

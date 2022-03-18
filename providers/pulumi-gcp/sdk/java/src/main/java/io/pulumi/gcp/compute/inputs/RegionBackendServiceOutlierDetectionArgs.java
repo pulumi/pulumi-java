@@ -248,112 +248,90 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
             this.baseEjectionTime = baseEjectionTime;
             return this;
         }
-
         public Builder baseEjectionTime(@Nullable RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs baseEjectionTime) {
             this.baseEjectionTime = Output.ofNullable(baseEjectionTime);
             return this;
         }
-
         public Builder consecutiveErrors(@Nullable Output<Integer> consecutiveErrors) {
             this.consecutiveErrors = consecutiveErrors;
             return this;
         }
-
         public Builder consecutiveErrors(@Nullable Integer consecutiveErrors) {
             this.consecutiveErrors = Output.ofNullable(consecutiveErrors);
             return this;
         }
-
         public Builder consecutiveGatewayFailure(@Nullable Output<Integer> consecutiveGatewayFailure) {
             this.consecutiveGatewayFailure = consecutiveGatewayFailure;
             return this;
         }
-
         public Builder consecutiveGatewayFailure(@Nullable Integer consecutiveGatewayFailure) {
             this.consecutiveGatewayFailure = Output.ofNullable(consecutiveGatewayFailure);
             return this;
         }
-
         public Builder enforcingConsecutiveErrors(@Nullable Output<Integer> enforcingConsecutiveErrors) {
             this.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
             return this;
         }
-
         public Builder enforcingConsecutiveErrors(@Nullable Integer enforcingConsecutiveErrors) {
             this.enforcingConsecutiveErrors = Output.ofNullable(enforcingConsecutiveErrors);
             return this;
         }
-
         public Builder enforcingConsecutiveGatewayFailure(@Nullable Output<Integer> enforcingConsecutiveGatewayFailure) {
             this.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
             return this;
         }
-
         public Builder enforcingConsecutiveGatewayFailure(@Nullable Integer enforcingConsecutiveGatewayFailure) {
             this.enforcingConsecutiveGatewayFailure = Output.ofNullable(enforcingConsecutiveGatewayFailure);
             return this;
         }
-
         public Builder enforcingSuccessRate(@Nullable Output<Integer> enforcingSuccessRate) {
             this.enforcingSuccessRate = enforcingSuccessRate;
             return this;
         }
-
         public Builder enforcingSuccessRate(@Nullable Integer enforcingSuccessRate) {
             this.enforcingSuccessRate = Output.ofNullable(enforcingSuccessRate);
             return this;
         }
-
         public Builder interval(@Nullable Output<RegionBackendServiceOutlierDetectionIntervalArgs> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable RegionBackendServiceOutlierDetectionIntervalArgs interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder maxEjectionPercent(@Nullable Output<Integer> maxEjectionPercent) {
             this.maxEjectionPercent = maxEjectionPercent;
             return this;
         }
-
         public Builder maxEjectionPercent(@Nullable Integer maxEjectionPercent) {
             this.maxEjectionPercent = Output.ofNullable(maxEjectionPercent);
             return this;
         }
-
         public Builder successRateMinimumHosts(@Nullable Output<Integer> successRateMinimumHosts) {
             this.successRateMinimumHosts = successRateMinimumHosts;
             return this;
         }
-
         public Builder successRateMinimumHosts(@Nullable Integer successRateMinimumHosts) {
             this.successRateMinimumHosts = Output.ofNullable(successRateMinimumHosts);
             return this;
         }
-
         public Builder successRateRequestVolume(@Nullable Output<Integer> successRateRequestVolume) {
             this.successRateRequestVolume = successRateRequestVolume;
             return this;
         }
-
         public Builder successRateRequestVolume(@Nullable Integer successRateRequestVolume) {
             this.successRateRequestVolume = Output.ofNullable(successRateRequestVolume);
             return this;
         }
-
         public Builder successRateStdevFactor(@Nullable Output<Integer> successRateStdevFactor) {
             this.successRateStdevFactor = successRateStdevFactor;
             return this;
         }
-
         public Builder successRateStdevFactor(@Nullable Integer successRateStdevFactor) {
             this.successRateStdevFactor = Output.ofNullable(successRateStdevFactor);
             return this;
-        }
-        public RegionBackendServiceOutlierDetectionArgs build() {
+        }        public RegionBackendServiceOutlierDetectionArgs build() {
             return new RegionBackendServiceOutlierDetectionArgs(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }
     }

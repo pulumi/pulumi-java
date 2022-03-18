@@ -131,57 +131,52 @@ public final class EnvironmentConfigNodeConfig {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder enableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
             this.enableIpMasqAgent = enableIpMasqAgent;
             return this;
         }
-
         public Builder ipAllocationPolicy(@Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy) {
             this.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
-
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public EnvironmentConfigNodeConfig build() {
+        }        public EnvironmentConfigNodeConfig build() {
             return new EnvironmentConfigNodeConfig(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags, zone);
         }
     }

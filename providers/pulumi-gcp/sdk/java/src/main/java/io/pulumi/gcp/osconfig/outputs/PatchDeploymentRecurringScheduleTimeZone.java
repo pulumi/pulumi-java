@@ -71,12 +71,10 @@ public final class PatchDeploymentRecurringScheduleTimeZone {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public PatchDeploymentRecurringScheduleTimeZone build() {
+        }        public PatchDeploymentRecurringScheduleTimeZone build() {
             return new PatchDeploymentRecurringScheduleTimeZone(id, version);
         }
     }

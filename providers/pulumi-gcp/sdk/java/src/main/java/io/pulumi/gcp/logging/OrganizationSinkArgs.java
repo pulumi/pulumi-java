@@ -195,92 +195,77 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
-
         public Builder bigqueryOptions(@Nullable OrganizationSinkBigqueryOptionsArgs bigqueryOptions) {
             this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder exclusions(@Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
         public Builder exclusions(@Nullable List<OrganizationSinkExclusionArgs> exclusions) {
             this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
-
+        public Builder exclusions(OrganizationSinkExclusionArgs... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder includeChildren(@Nullable Output<Boolean> includeChildren) {
             this.includeChildren = includeChildren;
             return this;
         }
-
         public Builder includeChildren(@Nullable Boolean includeChildren) {
             this.includeChildren = Output.ofNullable(includeChildren);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
-        }
-        public OrganizationSinkArgs build() {
+        }        public OrganizationSinkArgs build() {
             return new OrganizationSinkArgs(bigqueryOptions, description, destination, disabled, exclusions, filter, includeChildren, name, orgId);
         }
     }

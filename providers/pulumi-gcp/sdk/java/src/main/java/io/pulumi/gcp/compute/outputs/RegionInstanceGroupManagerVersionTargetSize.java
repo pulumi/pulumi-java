@@ -75,12 +75,10 @@ public final class RegionInstanceGroupManagerVersionTargetSize {
             this.fixed = fixed;
             return this;
         }
-
         public Builder percent(@Nullable Integer percent) {
             this.percent = percent;
             return this;
-        }
-        public RegionInstanceGroupManagerVersionTargetSize build() {
+        }        public RegionInstanceGroupManagerVersionTargetSize build() {
             return new RegionInstanceGroupManagerVersionTargetSize(fixed, percent);
         }
     }

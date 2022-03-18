@@ -141,62 +141,50 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder folderId(@Nullable Output<String> folderId) {
             this.folderId = folderId;
             return this;
         }
-
         public Builder folderId(@Nullable String folderId) {
             this.folderId = Output.ofNullable(folderId);
             return this;
         }
-
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
-
         public Builder lifecycleState(@Nullable String lifecycleState) {
             this.lifecycleState = Output.ofNullable(lifecycleState);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
-        }
-        public FolderState build() {
+        }        public FolderState build() {
             return new FolderState(createTime, displayName, folderId, lifecycleState, name, parent);
         }
     }

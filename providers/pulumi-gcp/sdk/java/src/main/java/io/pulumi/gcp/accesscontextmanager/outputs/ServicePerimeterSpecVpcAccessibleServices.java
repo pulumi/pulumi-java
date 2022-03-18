@@ -77,12 +77,13 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
             this.allowedServices = allowedServices;
             return this;
         }
-
+        public Builder allowedServices(String... allowedServices) {
+            return allowedServices(List.of(allowedServices));
+        }
         public Builder enableRestriction(@Nullable Boolean enableRestriction) {
             this.enableRestriction = enableRestriction;
             return this;
-        }
-        public ServicePerimeterSpecVpcAccessibleServices build() {
+        }        public ServicePerimeterSpecVpcAccessibleServices build() {
             return new ServicePerimeterSpecVpcAccessibleServices(allowedServices, enableRestriction);
         }
     }

@@ -56,12 +56,10 @@ public final class AzureClusterControlPlaneSshConfigArgs extends io.pulumi.resou
             this.authorizedKey = Objects.requireNonNull(authorizedKey);
             return this;
         }
-
         public Builder authorizedKey(String authorizedKey) {
             this.authorizedKey = Output.of(Objects.requireNonNull(authorizedKey));
             return this;
-        }
-        public AzureClusterControlPlaneSshConfigArgs build() {
+        }        public AzureClusterControlPlaneSshConfigArgs build() {
             return new AzureClusterControlPlaneSshConfigArgs(authorizedKey);
         }
     }

@@ -217,102 +217,85 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable Integer certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder managed(@Nullable Output<ManagedSslCertificateManagedGetArgs> managed) {
             this.managed = managed;
             return this;
         }
-
         public Builder managed(@Nullable ManagedSslCertificateManagedGetArgs managed) {
             this.managed = Output.ofNullable(managed);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-
+        public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
+            return subjectAlternativeNames(List.of(subjectAlternativeNames));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ManagedSslCertificateState build() {
+        }        public ManagedSslCertificateState build() {
             return new ManagedSslCertificateState(certificateId, creationTimestamp, description, expireTime, managed, name, project, selfLink, subjectAlternativeNames, type);
         }
     }

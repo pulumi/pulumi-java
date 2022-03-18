@@ -194,92 +194,80 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
             this.configId = configId;
             return this;
         }
-
         public Builder configId(@Nullable String configId) {
             this.configId = Output.ofNullable(configId);
             return this;
         }
-
         public Builder deploymentId(@Nullable Output<String> deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
-
         public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = Output.ofNullable(deploymentId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fleetConfigs(@Nullable Output<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs) {
             this.fleetConfigs = fleetConfigs;
             return this;
         }
-
         public Builder fleetConfigs(@Nullable List<GameServerConfigFleetConfigGetArgs> fleetConfigs) {
             this.fleetConfigs = Output.ofNullable(fleetConfigs);
             return this;
         }
-
+        public Builder fleetConfigs(GameServerConfigFleetConfigGetArgs... fleetConfigs) {
+            return fleetConfigs(List.of(fleetConfigs));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder scalingConfigs(@Nullable Output<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs) {
             this.scalingConfigs = scalingConfigs;
             return this;
         }
-
         public Builder scalingConfigs(@Nullable List<GameServerConfigScalingConfigGetArgs> scalingConfigs) {
             this.scalingConfigs = Output.ofNullable(scalingConfigs);
             return this;
         }
-        public GameServerConfigState build() {
+        public Builder scalingConfigs(GameServerConfigScalingConfigGetArgs... scalingConfigs) {
+            return scalingConfigs(List.of(scalingConfigs));
+        }        public GameServerConfigState build() {
             return new GameServerConfigState(configId, deploymentId, description, fleetConfigs, labels, location, name, project, scalingConfigs);
         }
     }

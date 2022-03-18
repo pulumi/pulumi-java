@@ -72,12 +72,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
             this.acceleratorCount = acceleratorCount;
             return this;
         }
-
         public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator build() {
             return new WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator(acceleratorCount, acceleratorType);
         }
     }

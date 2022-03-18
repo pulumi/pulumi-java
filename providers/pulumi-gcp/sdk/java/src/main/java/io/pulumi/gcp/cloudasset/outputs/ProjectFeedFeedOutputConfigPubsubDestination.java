@@ -51,8 +51,7 @@ public final class ProjectFeedFeedOutputConfigPubsubDestination {
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public ProjectFeedFeedOutputConfigPubsubDestination build() {
+        }        public ProjectFeedFeedOutputConfigPubsubDestination build() {
             return new ProjectFeedFeedOutputConfigPubsubDestination(topic);
         }
     }

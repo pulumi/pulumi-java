@@ -112,42 +112,37 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
-
         public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
             this.allowedSuccessCodes = Output.ofNullable(allowedSuccessCodes);
             return this;
         }
-
+        public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
+            return allowedSuccessCodes(List.of(allowedSuccessCodes));
+        }
         public Builder gcsObject(@Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
-
         public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs gcsObject) {
             this.gcsObject = Output.ofNullable(gcsObject);
             return this;
         }
-
         public Builder interpreter(@Nullable Output<String> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
-
         public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = Output.ofNullable(interpreter);
             return this;
         }
-
         public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = Output.ofNullable(localPath);
             return this;
-        }
-        public PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs build() {
+        }        public PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs build() {
             return new PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }
     }

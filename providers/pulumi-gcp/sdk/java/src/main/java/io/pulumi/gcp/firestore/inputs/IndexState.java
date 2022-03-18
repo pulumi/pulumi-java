@@ -150,62 +150,53 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
             this.collection = collection;
             return this;
         }
-
         public Builder collection(@Nullable String collection) {
             this.collection = Output.ofNullable(collection);
             return this;
         }
-
         public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder fields(@Nullable Output<List<IndexFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<IndexFieldGetArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(IndexFieldGetArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder queryScope(@Nullable Output<String> queryScope) {
             this.queryScope = queryScope;
             return this;
         }
-
         public Builder queryScope(@Nullable String queryScope) {
             this.queryScope = Output.ofNullable(queryScope);
             return this;
-        }
-        public IndexState build() {
+        }        public IndexState build() {
             return new IndexState(collection, database, fields, name, project, queryScope);
         }
     }

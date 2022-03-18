@@ -126,52 +126,42 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
-
         public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = Output.ofNullable(serviceId);
             return this;
         }
-
         public Builder telemetry(@Nullable Output<CustomServiceTelemetryGetArgs> telemetry) {
             this.telemetry = telemetry;
             return this;
         }
-
         public Builder telemetry(@Nullable CustomServiceTelemetryGetArgs telemetry) {
             this.telemetry = Output.ofNullable(telemetry);
             return this;
-        }
-        public CustomServiceState build() {
+        }        public CustomServiceState build() {
             return new CustomServiceState(displayName, name, project, serviceId, telemetry);
         }
     }

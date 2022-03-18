@@ -184,72 +184,67 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
             this.fullPathMatch = fullPathMatch;
             return this;
         }
-
         public Builder fullPathMatch(@Nullable String fullPathMatch) {
             this.fullPathMatch = Output.ofNullable(fullPathMatch);
             return this;
         }
-
         public Builder headerMatches(@Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches) {
             this.headerMatches = headerMatches;
             return this;
         }
-
         public Builder headerMatches(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs> headerMatches) {
             this.headerMatches = Output.ofNullable(headerMatches);
             return this;
         }
-
+        public Builder headerMatches(RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs... headerMatches) {
+            return headerMatches(List.of(headerMatches));
+        }
         public Builder ignoreCase(@Nullable Output<Boolean> ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
-
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = Output.ofNullable(ignoreCase);
             return this;
         }
-
         public Builder metadataFilters(@Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters) {
             this.metadataFilters = metadataFilters;
             return this;
         }
-
         public Builder metadataFilters(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs> metadataFilters) {
             this.metadataFilters = Output.ofNullable(metadataFilters);
             return this;
         }
-
+        public Builder metadataFilters(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs... metadataFilters) {
+            return metadataFilters(List.of(metadataFilters));
+        }
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
-
         public Builder queryParameterMatches(@Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches) {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }
-
         public Builder queryParameterMatches(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs> queryParameterMatches) {
             this.queryParameterMatches = Output.ofNullable(queryParameterMatches);
             return this;
         }
-
+        public Builder queryParameterMatches(RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs... queryParameterMatches) {
+            return queryParameterMatches(List.of(queryParameterMatches));
+        }
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }
-
         public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = Output.ofNullable(regexMatch);
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleMatchRuleArgs build() {
+        }        public RegionUrlMapPathMatcherRouteRuleMatchRuleArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleArgs(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }
     }

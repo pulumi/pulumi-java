@@ -104,22 +104,18 @@ public final class FulfillmentGenericWebService {
             this.password = password;
             return this;
         }
-
         public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public FulfillmentGenericWebService build() {
+        }        public FulfillmentGenericWebService build() {
             return new FulfillmentGenericWebService(password, requestHeaders, uri, username);
         }
     }

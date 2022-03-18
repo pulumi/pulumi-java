@@ -165,62 +165,53 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.customFeatures = customFeatures;
             return this;
         }
-
         public Builder customFeatures(@Nullable List<String> customFeatures) {
             this.customFeatures = Output.ofNullable(customFeatures);
             return this;
         }
-
+        public Builder customFeatures(String... customFeatures) {
+            return customFeatures(List.of(customFeatures));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
-
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
             this.minTlsVersion = Output.ofNullable(minTlsVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder profile(@Nullable Output<String> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public SSLPolicyArgs build() {
+        }        public SSLPolicyArgs build() {
             return new SSLPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project);
         }
     }

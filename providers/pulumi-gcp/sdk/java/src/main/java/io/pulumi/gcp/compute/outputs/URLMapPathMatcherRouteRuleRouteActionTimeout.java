@@ -76,12 +76,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionTimeout {
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public URLMapPathMatcherRouteRuleRouteActionTimeout build() {
+        }        public URLMapPathMatcherRouteRuleRouteActionTimeout build() {
             return new URLMapPathMatcherRouteRuleRouteActionTimeout(nanos, seconds);
         }
     }

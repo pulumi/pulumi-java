@@ -53,12 +53,13 @@ public final class MangedSslCertificateManagedGetArgs extends io.pulumi.resource
             this.domains = Objects.requireNonNull(domains);
             return this;
         }
-
         public Builder domains(List<String> domains) {
             this.domains = Output.of(Objects.requireNonNull(domains));
             return this;
         }
-        public MangedSslCertificateManagedGetArgs build() {
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }        public MangedSslCertificateManagedGetArgs build() {
             return new MangedSslCertificateManagedGetArgs(domains);
         }
     }

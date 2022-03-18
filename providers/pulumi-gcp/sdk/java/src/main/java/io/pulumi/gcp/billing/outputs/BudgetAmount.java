@@ -84,12 +84,10 @@ public final class BudgetAmount {
             this.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
-
         public Builder specifiedAmount(@Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
             this.specifiedAmount = specifiedAmount;
             return this;
-        }
-        public BudgetAmount build() {
+        }        public BudgetAmount build() {
             return new BudgetAmount(lastPeriodAmount, specifiedAmount);
         }
     }

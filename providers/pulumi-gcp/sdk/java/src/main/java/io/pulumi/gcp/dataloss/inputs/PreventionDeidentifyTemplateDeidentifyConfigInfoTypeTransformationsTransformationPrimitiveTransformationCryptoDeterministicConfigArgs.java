@@ -106,32 +106,26 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder cryptoKey(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
-
         public Builder cryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs cryptoKey) {
             this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
-
         public Builder surrogateInfoType(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs> surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }
-
         public Builder surrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs surrogateInfoType) {
             this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs(context, cryptoKey, surrogateInfoType);
         }
     }

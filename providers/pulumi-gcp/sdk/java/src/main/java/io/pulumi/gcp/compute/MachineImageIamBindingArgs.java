@@ -124,52 +124,45 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable MachineImageIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder machineImage(Output<String> machineImage) {
             this.machineImage = Objects.requireNonNull(machineImage);
             return this;
         }
-
         public Builder machineImage(String machineImage) {
             this.machineImage = Output.of(Objects.requireNonNull(machineImage));
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public MachineImageIamBindingArgs build() {
+        }        public MachineImageIamBindingArgs build() {
             return new MachineImageIamBindingArgs(condition, machineImage, members, project, role);
         }
     }

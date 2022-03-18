@@ -56,12 +56,10 @@ public final class OrganizationPolicyBooleanPolicyArgs extends io.pulumi.resourc
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }
-
         public Builder enforced(Boolean enforced) {
             this.enforced = Output.of(Objects.requireNonNull(enforced));
             return this;
-        }
-        public OrganizationPolicyBooleanPolicyArgs build() {
+        }        public OrganizationPolicyBooleanPolicyArgs build() {
             return new OrganizationPolicyBooleanPolicyArgs(enforced);
         }
     }

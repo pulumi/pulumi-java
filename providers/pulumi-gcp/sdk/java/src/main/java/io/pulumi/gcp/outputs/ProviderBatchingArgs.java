@@ -56,12 +56,10 @@ public final class ProviderBatchingArgs {
             this.enableBatching = enableBatching;
             return this;
         }
-
         public Builder sendAfter(@Nullable Output<String> sendAfter) {
             this.sendAfter = sendAfter;
             return this;
-        }
-        public ProviderBatchingArgs build() {
+        }        public ProviderBatchingArgs build() {
             return new ProviderBatchingArgs(enableBatching, sendAfter);
         }
     }

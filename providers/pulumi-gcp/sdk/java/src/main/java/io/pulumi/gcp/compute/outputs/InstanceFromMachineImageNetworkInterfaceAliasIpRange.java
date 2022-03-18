@@ -55,12 +55,10 @@ public final class InstanceFromMachineImageNetworkInterfaceAliasIpRange {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
-        }
-        public InstanceFromMachineImageNetworkInterfaceAliasIpRange build() {
+        }        public InstanceFromMachineImageNetworkInterfaceAliasIpRange build() {
             return new InstanceFromMachineImageNetworkInterfaceAliasIpRange(ipCidrRange, subnetworkRangeName);
         }
     }

@@ -208,92 +208,74 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(@Nullable Output<String> selfLinkWithId) {
             this.selfLinkWithId = selfLinkWithId;
             return this;
         }
-
         public Builder selfLinkWithId(@Nullable String selfLinkWithId) {
             this.selfLinkWithId = Output.ofNullable(selfLinkWithId);
             return this;
         }
-
         public Builder urlMap(@Nullable Output<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
-
         public Builder urlMap(@Nullable String urlMap) {
             this.urlMap = Output.ofNullable(urlMap);
             return this;
         }
-
         public Builder validateForProxyless(@Nullable Output<Boolean> validateForProxyless) {
             this.validateForProxyless = validateForProxyless;
             return this;
         }
-
         public Builder validateForProxyless(@Nullable Boolean validateForProxyless) {
             this.validateForProxyless = Output.ofNullable(validateForProxyless);
             return this;
-        }
-        public TargetGrpcProxyState build() {
+        }        public TargetGrpcProxyState build() {
             return new TargetGrpcProxyState(creationTimestamp, description, fingerprint, name, project, selfLink, selfLinkWithId, urlMap, validateForProxyless);
         }
     }

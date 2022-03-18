@@ -62,17 +62,14 @@ public final class GetClusterNodePoolNodeConfigKubeletConfig {
             this.cpuCfsQuota = Objects.requireNonNull(cpuCfsQuota);
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = Objects.requireNonNull(cpuCfsQuotaPeriod);
             return this;
         }
-
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
-        }
-        public GetClusterNodePoolNodeConfigKubeletConfig build() {
+        }        public GetClusterNodePoolNodeConfigKubeletConfig build() {
             return new GetClusterNodePoolNodeConfigKubeletConfig(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }
     }

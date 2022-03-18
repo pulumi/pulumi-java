@@ -102,42 +102,37 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable PolicyTagIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder policyTag(Output<String> policyTag) {
             this.policyTag = Objects.requireNonNull(policyTag);
             return this;
         }
-
         public Builder policyTag(String policyTag) {
             this.policyTag = Output.of(Objects.requireNonNull(policyTag));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public PolicyTagIamBindingArgs build() {
+        }        public PolicyTagIamBindingArgs build() {
             return new PolicyTagIamBindingArgs(condition, members, policyTag, role);
         }
     }

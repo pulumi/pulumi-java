@@ -124,42 +124,34 @@ public final class HealthCheckGrpcHealthCheckGetArgs extends io.pulumi.resources
             this.grpcServiceName = grpcServiceName;
             return this;
         }
-
         public Builder grpcServiceName(@Nullable String grpcServiceName) {
             this.grpcServiceName = Output.ofNullable(grpcServiceName);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder portName(@Nullable Output<String> portName) {
             this.portName = portName;
             return this;
         }
-
         public Builder portName(@Nullable String portName) {
             this.portName = Output.ofNullable(portName);
             return this;
         }
-
         public Builder portSpecification(@Nullable Output<String> portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
-
         public Builder portSpecification(@Nullable String portSpecification) {
             this.portSpecification = Output.ofNullable(portSpecification);
             return this;
-        }
-        public HealthCheckGrpcHealthCheckGetArgs build() {
+        }        public HealthCheckGrpcHealthCheckGetArgs build() {
             return new HealthCheckGrpcHealthCheckGetArgs(grpcServiceName, port, portName, portSpecification);
         }
     }

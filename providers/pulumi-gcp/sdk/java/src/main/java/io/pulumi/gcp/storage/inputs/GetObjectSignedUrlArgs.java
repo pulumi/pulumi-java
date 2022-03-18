@@ -176,42 +176,34 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder contentMd5(@Nullable String contentMd5) {
             this.contentMd5 = contentMd5;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder credentials(@Nullable String credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder extensionHeaders(@Nullable Map<String,String> extensionHeaders) {
             this.extensionHeaders = extensionHeaders;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public GetObjectSignedUrlArgs build() {
+        }        public GetObjectSignedUrlArgs build() {
             return new GetObjectSignedUrlArgs(bucket, contentMd5, contentType, credentials, duration, extensionHeaders, httpMethod, path);
         }
     }

@@ -55,12 +55,10 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
-        }
-        public EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock build() {
+        }        public EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock build() {
             return new EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
         }
     }

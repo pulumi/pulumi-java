@@ -78,12 +78,10 @@ public final class ServiceTemplate {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable ServiceTemplateSpec spec) {
             this.spec = spec;
             return this;
-        }
-        public ServiceTemplate build() {
+        }        public ServiceTemplate build() {
             return new ServiceTemplate(metadata, spec);
         }
     }

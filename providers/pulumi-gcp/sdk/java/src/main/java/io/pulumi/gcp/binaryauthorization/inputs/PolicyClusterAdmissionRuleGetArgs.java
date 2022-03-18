@@ -116,42 +116,37 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder cluster(String cluster) {
             this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
-
         public Builder enforcementMode(Output<String> enforcementMode) {
             this.enforcementMode = Objects.requireNonNull(enforcementMode);
             return this;
         }
-
         public Builder enforcementMode(String enforcementMode) {
             this.enforcementMode = Output.of(Objects.requireNonNull(enforcementMode));
             return this;
         }
-
         public Builder evaluationMode(Output<String> evaluationMode) {
             this.evaluationMode = Objects.requireNonNull(evaluationMode);
             return this;
         }
-
         public Builder evaluationMode(String evaluationMode) {
             this.evaluationMode = Output.of(Objects.requireNonNull(evaluationMode));
             return this;
         }
-
         public Builder requireAttestationsBies(@Nullable Output<List<String>> requireAttestationsBies) {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
-
         public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
             this.requireAttestationsBies = Output.ofNullable(requireAttestationsBies);
             return this;
         }
-        public PolicyClusterAdmissionRuleGetArgs build() {
+        public Builder requireAttestationsBies(String... requireAttestationsBies) {
+            return requireAttestationsBies(List.of(requireAttestationsBies));
+        }        public PolicyClusterAdmissionRuleGetArgs build() {
             return new PolicyClusterAdmissionRuleGetArgs(cluster, enforcementMode, evaluationMode, requireAttestationsBies);
         }
     }

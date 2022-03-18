@@ -76,12 +76,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay build() {
+        }        public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay build() {
             return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay(nanos, seconds);
         }
     }

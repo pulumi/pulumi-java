@@ -57,12 +57,10 @@ public final class CxAgentSpeechToTextSettingsGetArgs extends io.pulumi.resource
             this.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }
-
         public Builder enableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
             this.enableSpeechAdaptation = Output.ofNullable(enableSpeechAdaptation);
             return this;
-        }
-        public CxAgentSpeechToTextSettingsGetArgs build() {
+        }        public CxAgentSpeechToTextSettingsGetArgs build() {
             return new CxAgentSpeechToTextSettingsGetArgs(enableSpeechAdaptation);
         }
     }

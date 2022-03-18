@@ -77,22 +77,18 @@ public final class URLMapDefaultRouteActionTimeoutArgs extends io.pulumi.resourc
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(@Nullable Output<String> seconds) {
             this.seconds = seconds;
             return this;
         }
-
         public Builder seconds(@Nullable String seconds) {
             this.seconds = Output.ofNullable(seconds);
             return this;
-        }
-        public URLMapDefaultRouteActionTimeoutArgs build() {
+        }        public URLMapDefaultRouteActionTimeoutArgs build() {
             return new URLMapDefaultRouteActionTimeoutArgs(nanos, seconds);
         }
     }

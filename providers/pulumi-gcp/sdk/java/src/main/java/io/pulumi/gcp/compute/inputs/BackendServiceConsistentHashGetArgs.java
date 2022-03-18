@@ -102,32 +102,26 @@ public final class BackendServiceConsistentHashGetArgs extends io.pulumi.resourc
             this.httpCookie = httpCookie;
             return this;
         }
-
         public Builder httpCookie(@Nullable BackendServiceConsistentHashHttpCookieGetArgs httpCookie) {
             this.httpCookie = Output.ofNullable(httpCookie);
             return this;
         }
-
         public Builder httpHeaderName(@Nullable Output<String> httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
-
         public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = Output.ofNullable(httpHeaderName);
             return this;
         }
-
         public Builder minimumRingSize(@Nullable Output<Integer> minimumRingSize) {
             this.minimumRingSize = minimumRingSize;
             return this;
         }
-
         public Builder minimumRingSize(@Nullable Integer minimumRingSize) {
             this.minimumRingSize = Output.ofNullable(minimumRingSize);
             return this;
-        }
-        public BackendServiceConsistentHashGetArgs build() {
+        }        public BackendServiceConsistentHashGetArgs build() {
             return new BackendServiceConsistentHashGetArgs(httpCookie, httpHeaderName, minimumRingSize);
         }
     }

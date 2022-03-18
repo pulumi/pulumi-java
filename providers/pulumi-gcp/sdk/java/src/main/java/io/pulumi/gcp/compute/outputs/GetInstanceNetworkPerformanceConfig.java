@@ -51,8 +51,7 @@ public final class GetInstanceNetworkPerformanceConfig {
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
-        }
-        public GetInstanceNetworkPerformanceConfig build() {
+        }        public GetInstanceNetworkPerformanceConfig build() {
             return new GetInstanceNetworkPerformanceConfig(totalEgressBandwidthTier);
         }
     }

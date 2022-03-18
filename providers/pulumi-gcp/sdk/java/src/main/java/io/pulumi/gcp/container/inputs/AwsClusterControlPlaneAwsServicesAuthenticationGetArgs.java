@@ -74,22 +74,18 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder roleSessionName(@Nullable Output<String> roleSessionName) {
             this.roleSessionName = roleSessionName;
             return this;
         }
-
         public Builder roleSessionName(@Nullable String roleSessionName) {
             this.roleSessionName = Output.ofNullable(roleSessionName);
             return this;
-        }
-        public AwsClusterControlPlaneAwsServicesAuthenticationGetArgs build() {
+        }        public AwsClusterControlPlaneAwsServicesAuthenticationGetArgs build() {
             return new AwsClusterControlPlaneAwsServicesAuthenticationGetArgs(roleArn, roleSessionName);
         }
     }

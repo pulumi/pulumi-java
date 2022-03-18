@@ -136,62 +136,53 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable ConsentStoreIamBindingConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
             this.consentStoreId = consentStoreId;
             return this;
         }
-
         public Builder consentStoreId(@Nullable String consentStoreId) {
             this.consentStoreId = Output.ofNullable(consentStoreId);
             return this;
         }
-
         public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public ConsentStoreIamBindingState build() {
+        }        public ConsentStoreIamBindingState build() {
             return new ConsentStoreIamBindingState(condition, consentStoreId, dataset, etag, members, role);
         }
     }

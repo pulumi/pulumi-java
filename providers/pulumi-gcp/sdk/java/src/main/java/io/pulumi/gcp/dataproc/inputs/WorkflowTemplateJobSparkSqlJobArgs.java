@@ -142,62 +142,53 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
             this.jarFileUris = jarFileUris;
             return this;
         }
-
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Output.ofNullable(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobSparkSqlJobLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkSqlJobLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = Output.ofNullable(queryFileUri);
             return this;
         }
-
         public Builder queryList(@Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListArgs> queryList) {
             this.queryList = queryList;
             return this;
         }
-
         public Builder queryList(@Nullable WorkflowTemplateJobSparkSqlJobQueryListArgs queryList) {
             this.queryList = Output.ofNullable(queryList);
             return this;
         }
-
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = Output.ofNullable(scriptVariables);
             return this;
-        }
-        public WorkflowTemplateJobSparkSqlJobArgs build() {
+        }        public WorkflowTemplateJobSparkSqlJobArgs build() {
             return new WorkflowTemplateJobSparkSqlJobArgs(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }
     }

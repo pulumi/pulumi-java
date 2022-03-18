@@ -170,72 +170,58 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
-
         public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Output.of(Objects.requireNonNull(enablePrivateEndpoint));
             return this;
         }
-
         public Builder enablePrivateNodes(@Nullable Output<Boolean> enablePrivateNodes) {
             this.enablePrivateNodes = enablePrivateNodes;
             return this;
         }
-
         public Builder enablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
             this.enablePrivateNodes = Output.ofNullable(enablePrivateNodes);
             return this;
         }
-
         public Builder masterGlobalAccessConfig(@Nullable Output<ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs> masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = masterGlobalAccessConfig;
             return this;
         }
-
         public Builder masterGlobalAccessConfig(@Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = Output.ofNullable(masterGlobalAccessConfig);
             return this;
         }
-
         public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
-
         public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Output.ofNullable(masterIpv4CidrBlock);
             return this;
         }
-
         public Builder peeringName(@Nullable Output<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
-
         public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = Output.ofNullable(peeringName);
             return this;
         }
-
         public Builder privateEndpoint(@Nullable Output<String> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateEndpoint(@Nullable String privateEndpoint) {
             this.privateEndpoint = Output.ofNullable(privateEndpoint);
             return this;
         }
-
         public Builder publicEndpoint(@Nullable Output<String> publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }
-
         public Builder publicEndpoint(@Nullable String publicEndpoint) {
             this.publicEndpoint = Output.ofNullable(publicEndpoint);
             return this;
-        }
-        public ClusterPrivateClusterConfigGetArgs build() {
+        }        public ClusterPrivateClusterConfigGetArgs build() {
             return new ClusterPrivateClusterConfigGetArgs(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }
     }

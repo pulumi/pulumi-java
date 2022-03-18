@@ -43,8 +43,7 @@ public final class MembershipAuthority {
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
-        }
-        public MembershipAuthority build() {
+        }        public MembershipAuthority build() {
             return new MembershipAuthority(issuer);
         }
     }

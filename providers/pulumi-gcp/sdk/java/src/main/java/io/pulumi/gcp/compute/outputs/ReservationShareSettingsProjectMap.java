@@ -71,12 +71,10 @@ public final class ReservationShareSettingsProjectMap {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
-        }
-        public ReservationShareSettingsProjectMap build() {
+        }        public ReservationShareSettingsProjectMap build() {
             return new ReservationShareSettingsProjectMap(id, projectId);
         }
     }

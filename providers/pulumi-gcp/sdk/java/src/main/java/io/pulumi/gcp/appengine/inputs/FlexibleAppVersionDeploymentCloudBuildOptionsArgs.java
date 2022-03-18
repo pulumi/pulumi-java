@@ -75,22 +75,18 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
             this.appYamlPath = Objects.requireNonNull(appYamlPath);
             return this;
         }
-
         public Builder appYamlPath(String appYamlPath) {
             this.appYamlPath = Output.of(Objects.requireNonNull(appYamlPath));
             return this;
         }
-
         public Builder cloudBuildTimeout(@Nullable Output<String> cloudBuildTimeout) {
             this.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
-
         public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
             this.cloudBuildTimeout = Output.ofNullable(cloudBuildTimeout);
             return this;
-        }
-        public FlexibleAppVersionDeploymentCloudBuildOptionsArgs build() {
+        }        public FlexibleAppVersionDeploymentCloudBuildOptionsArgs build() {
             return new FlexibleAppVersionDeploymentCloudBuildOptionsArgs(appYamlPath, cloudBuildTimeout);
         }
     }

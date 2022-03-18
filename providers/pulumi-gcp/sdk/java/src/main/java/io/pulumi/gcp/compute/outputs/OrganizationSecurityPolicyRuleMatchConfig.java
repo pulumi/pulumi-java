@@ -94,17 +94,23 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
             this.destIpRanges = destIpRanges;
             return this;
         }
-
+        public Builder destIpRanges(String... destIpRanges) {
+            return destIpRanges(List.of(destIpRanges));
+        }
         public Builder layer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
-
+        public Builder layer4Configs(OrganizationSecurityPolicyRuleMatchConfigLayer4Config... layer4Configs) {
+            return layer4Configs(List.of(layer4Configs));
+        }
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
-        public OrganizationSecurityPolicyRuleMatchConfig build() {
+        public Builder srcIpRanges(String... srcIpRanges) {
+            return srcIpRanges(List.of(srcIpRanges));
+        }        public OrganizationSecurityPolicyRuleMatchConfig build() {
             return new OrganizationSecurityPolicyRuleMatchConfig(destIpRanges, layer4Configs, srcIpRanges);
         }
     }

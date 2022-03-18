@@ -63,17 +63,14 @@ public final class IAMMemberCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public IAMMemberCondition build() {
+        }        public IAMMemberCondition build() {
             return new IAMMemberCondition(description, expression, title);
         }
     }

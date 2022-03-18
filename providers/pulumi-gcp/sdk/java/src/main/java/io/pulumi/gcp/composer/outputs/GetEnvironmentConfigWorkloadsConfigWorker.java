@@ -78,27 +78,22 @@ public final class GetEnvironmentConfigWorkloadsConfigWorker {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder maxCount(Integer maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
-
         public Builder memoryGb(Double memoryGb) {
             this.memoryGb = Objects.requireNonNull(memoryGb);
             return this;
         }
-
         public Builder minCount(Integer minCount) {
             this.minCount = Objects.requireNonNull(minCount);
             return this;
         }
-
         public Builder storageGb(Double storageGb) {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
-        }
-        public GetEnvironmentConfigWorkloadsConfigWorker build() {
+        }        public GetEnvironmentConfigWorkloadsConfigWorker build() {
             return new GetEnvironmentConfigWorkloadsConfigWorker(cpu, maxCount, memoryGb, minCount, storageGb);
         }
     }

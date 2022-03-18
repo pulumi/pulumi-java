@@ -57,12 +57,10 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends io.pulumi.resou
             this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
             return this;
         }
-
         public Builder deliveryRequirement(String deliveryRequirement) {
             this.deliveryRequirement = Output.of(Objects.requireNonNull(deliveryRequirement));
             return this;
-        }
-        public LiteSubscriptionDeliveryConfigGetArgs build() {
+        }        public LiteSubscriptionDeliveryConfigGetArgs build() {
             return new LiteSubscriptionDeliveryConfigGetArgs(deliveryRequirement);
         }
     }

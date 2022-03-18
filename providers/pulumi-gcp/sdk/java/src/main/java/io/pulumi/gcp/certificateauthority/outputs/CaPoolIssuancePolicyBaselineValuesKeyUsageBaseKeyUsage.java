@@ -183,47 +183,38 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage {
             this.certSign = certSign;
             return this;
         }
-
         public Builder contentCommitment(@Nullable Boolean contentCommitment) {
             this.contentCommitment = contentCommitment;
             return this;
         }
-
         public Builder crlSign(@Nullable Boolean crlSign) {
             this.crlSign = crlSign;
             return this;
         }
-
         public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
             this.dataEncipherment = dataEncipherment;
             return this;
         }
-
         public Builder decipherOnly(@Nullable Boolean decipherOnly) {
             this.decipherOnly = decipherOnly;
             return this;
         }
-
         public Builder digitalSignature(@Nullable Boolean digitalSignature) {
             this.digitalSignature = digitalSignature;
             return this;
         }
-
         public Builder encipherOnly(@Nullable Boolean encipherOnly) {
             this.encipherOnly = encipherOnly;
             return this;
         }
-
         public Builder keyAgreement(@Nullable Boolean keyAgreement) {
             this.keyAgreement = keyAgreement;
             return this;
         }
-
         public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
             this.keyEncipherment = keyEncipherment;
             return this;
-        }
-        public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage build() {
+        }        public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }
     }

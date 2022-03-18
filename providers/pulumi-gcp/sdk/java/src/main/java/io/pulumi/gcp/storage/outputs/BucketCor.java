@@ -105,22 +105,27 @@ public final class BucketCor {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
-
         public Builder methods(@Nullable List<String> methods) {
             this.methods = methods;
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder origins(@Nullable List<String> origins) {
             this.origins = origins;
             return this;
         }
-
+        public Builder origins(String... origins) {
+            return origins(List.of(origins));
+        }
         public Builder responseHeaders(@Nullable List<String> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-        public BucketCor build() {
+        public Builder responseHeaders(String... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public BucketCor build() {
             return new BucketCor(maxAgeSeconds, methods, origins, responseHeaders);
         }
     }

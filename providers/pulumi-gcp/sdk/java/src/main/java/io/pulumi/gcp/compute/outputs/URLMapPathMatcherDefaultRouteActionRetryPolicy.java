@@ -124,17 +124,17 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
             this.numRetries = numRetries;
             return this;
         }
-
         public Builder perTryTimeout(@Nullable URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout perTryTimeout) {
             this.perTryTimeout = perTryTimeout;
             return this;
         }
-
         public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
-        public URLMapPathMatcherDefaultRouteActionRetryPolicy build() {
+        public Builder retryConditions(String... retryConditions) {
+            return retryConditions(List.of(retryConditions));
+        }        public URLMapPathMatcherDefaultRouteActionRetryPolicy build() {
             return new URLMapPathMatcherDefaultRouteActionRetryPolicy(numRetries, perTryTimeout, retryConditions);
         }
     }

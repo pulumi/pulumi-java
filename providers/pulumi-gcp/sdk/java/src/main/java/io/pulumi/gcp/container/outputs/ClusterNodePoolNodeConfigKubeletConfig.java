@@ -100,17 +100,14 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
-
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
-        }
-        public ClusterNodePoolNodeConfigKubeletConfig build() {
+        }        public ClusterNodePoolNodeConfigKubeletConfig build() {
             return new ClusterNodePoolNodeConfigKubeletConfig(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }
     }

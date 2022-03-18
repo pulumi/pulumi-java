@@ -117,17 +117,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.context = context;
             return this;
         }
-
         public Builder cryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKey cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
-
         public Builder surrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig(context, cryptoKey, surrogateInfoType);
         }
     }

@@ -127,52 +127,42 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ProjectExclusionArgs build() {
+        }        public ProjectExclusionArgs build() {
             return new ProjectExclusionArgs(description, disabled, filter, name, project);
         }
     }

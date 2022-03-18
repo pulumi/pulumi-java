@@ -58,12 +58,10 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }
-
         public Builder publicKeyCertificate(Map<String,Object> publicKeyCertificate) {
             this.publicKeyCertificate = Output.of(Objects.requireNonNull(publicKeyCertificate));
             return this;
-        }
-        public RegistryCredentialArgs build() {
+        }        public RegistryCredentialArgs build() {
             return new RegistryCredentialArgs(publicKeyCertificate);
         }
     }

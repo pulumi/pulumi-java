@@ -95,17 +95,17 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
-
         public Builder extendedKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-        public CaPoolIssuancePolicyBaselineValuesKeyUsage build() {
+        public Builder unknownExtendedKeyUsages(CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public CaPoolIssuancePolicyBaselineValuesKeyUsage build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsage(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }
     }

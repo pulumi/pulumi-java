@@ -91,32 +91,29 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.consumeReservationType = consumeReservationType;
             return this;
         }
-
         public Builder consumeReservationType(@Nullable String consumeReservationType) {
             this.consumeReservationType = Output.ofNullable(consumeReservationType);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityArgs(consumeReservationType, key, values);
         }
     }

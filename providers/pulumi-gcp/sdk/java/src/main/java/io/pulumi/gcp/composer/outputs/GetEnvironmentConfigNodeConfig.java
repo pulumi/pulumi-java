@@ -129,57 +129,55 @@ public final class GetEnvironmentConfigNodeConfig {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder enableIpMasqAgent(Boolean enableIpMasqAgent) {
             this.enableIpMasqAgent = Objects.requireNonNull(enableIpMasqAgent);
             return this;
         }
-
         public Builder ipAllocationPolicies(List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies) {
             this.ipAllocationPolicies = Objects.requireNonNull(ipAllocationPolicies);
             return this;
         }
-
+        public Builder ipAllocationPolicies(GetEnvironmentConfigNodeConfigIpAllocationPolicy... ipAllocationPolicies) {
+            return ipAllocationPolicies(List.of(ipAllocationPolicies));
+        }
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetEnvironmentConfigNodeConfig build() {
+        }        public GetEnvironmentConfigNodeConfig build() {
             return new GetEnvironmentConfigNodeConfig(diskSizeGb, enableIpMasqAgent, ipAllocationPolicies, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags, zone);
         }
     }

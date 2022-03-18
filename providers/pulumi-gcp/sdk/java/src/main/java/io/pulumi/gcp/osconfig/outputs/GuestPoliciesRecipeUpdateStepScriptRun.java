@@ -93,17 +93,17 @@ public final class GuestPoliciesRecipeUpdateStepScriptRun {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = interpreter;
             return this;
         }
-
         public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
-        }
-        public GuestPoliciesRecipeUpdateStepScriptRun build() {
+        }        public GuestPoliciesRecipeUpdateStepScriptRun build() {
             return new GuestPoliciesRecipeUpdateStepScriptRun(allowedExitCodes, interpreter, script);
         }
     }

@@ -101,42 +101,34 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable PolicyTagIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder policyTag(Output<String> policyTag) {
             this.policyTag = Objects.requireNonNull(policyTag);
             return this;
         }
-
         public Builder policyTag(String policyTag) {
             this.policyTag = Output.of(Objects.requireNonNull(policyTag));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public PolicyTagIamMemberArgs build() {
+        }        public PolicyTagIamMemberArgs build() {
             return new PolicyTagIamMemberArgs(condition, member, policyTag, role);
         }
     }

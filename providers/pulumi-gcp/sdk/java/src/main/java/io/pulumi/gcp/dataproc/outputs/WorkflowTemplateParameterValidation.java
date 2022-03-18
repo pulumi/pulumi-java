@@ -72,12 +72,10 @@ public final class WorkflowTemplateParameterValidation {
             this.regex = regex;
             return this;
         }
-
         public Builder values(@Nullable WorkflowTemplateParameterValidationValues values) {
             this.values = values;
             return this;
-        }
-        public WorkflowTemplateParameterValidation build() {
+        }        public WorkflowTemplateParameterValidation build() {
             return new WorkflowTemplateParameterValidation(regex, values);
         }
     }

@@ -94,32 +94,26 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder publicKey(CertificateConfigPublicKeyGetArgs publicKey) {
             this.publicKey = Output.of(Objects.requireNonNull(publicKey));
             return this;
         }
-
         public Builder subjectConfig(Output<CertificateConfigSubjectConfigGetArgs> subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
-
         public Builder subjectConfig(CertificateConfigSubjectConfigGetArgs subjectConfig) {
             this.subjectConfig = Output.of(Objects.requireNonNull(subjectConfig));
             return this;
         }
-
         public Builder x509Config(Output<CertificateConfigX509ConfigGetArgs> x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public Builder x509Config(CertificateConfigX509ConfigGetArgs x509Config) {
             this.x509Config = Output.of(Objects.requireNonNull(x509Config));
             return this;
-        }
-        public CertificateConfigGetArgs build() {
+        }        public CertificateConfigGetArgs build() {
             return new CertificateConfigGetArgs(publicKey, subjectConfig, x509Config);
         }
     }

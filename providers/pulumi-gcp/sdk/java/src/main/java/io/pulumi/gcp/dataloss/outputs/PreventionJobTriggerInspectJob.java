@@ -92,17 +92,17 @@ public final class PreventionJobTriggerInspectJob {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(PreventionJobTriggerInspectJobAction... actions) {
+            return actions(List.of(actions));
+        }
         public Builder inspectTemplateName(String inspectTemplateName) {
             this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
             return this;
         }
-
         public Builder storageConfig(PreventionJobTriggerInspectJobStorageConfig storageConfig) {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
-        }
-        public PreventionJobTriggerInspectJob build() {
+        }        public PreventionJobTriggerInspectJob build() {
             return new PreventionJobTriggerInspectJob(actions, inspectTemplateName, storageConfig);
         }
     }

@@ -51,8 +51,7 @@ public final class PacketMirroringNetwork {
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public PacketMirroringNetwork build() {
+        }        public PacketMirroringNetwork build() {
             return new PacketMirroringNetwork(url);
         }
     }

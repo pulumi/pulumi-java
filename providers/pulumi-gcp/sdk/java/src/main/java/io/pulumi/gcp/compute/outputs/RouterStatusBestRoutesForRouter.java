@@ -187,77 +187,65 @@ public final class RouterStatusBestRoutesForRouter {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder destRange(String destRange) {
             this.destRange = Objects.requireNonNull(destRange);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder nextHopGateway(String nextHopGateway) {
             this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
             return this;
         }
-
         public Builder nextHopIlb(String nextHopIlb) {
             this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
             return this;
         }
-
         public Builder nextHopInstance(String nextHopInstance) {
             this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
             return this;
         }
-
         public Builder nextHopInstanceZone(String nextHopInstanceZone) {
             this.nextHopInstanceZone = Objects.requireNonNull(nextHopInstanceZone);
             return this;
         }
-
         public Builder nextHopIp(String nextHopIp) {
             this.nextHopIp = Objects.requireNonNull(nextHopIp);
             return this;
         }
-
         public Builder nextHopNetwork(String nextHopNetwork) {
             this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
             return this;
         }
-
         public Builder nextHopVpnTunnel(String nextHopVpnTunnel) {
             this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-        public RouterStatusBestRoutesForRouter build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public RouterStatusBestRoutesForRouter build() {
             return new RouterStatusBestRoutesForRouter(description, destRange, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInstanceZone, nextHopIp, nextHopNetwork, nextHopVpnTunnel, priority, project, selfLink, tags);
         }
     }

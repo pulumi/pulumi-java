@@ -191,82 +191,72 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
             this.assetNames = assetNames;
             return this;
         }
-
         public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Output.ofNullable(assetNames);
             return this;
         }
-
+        public Builder assetNames(String... assetNames) {
+            return assetNames(List.of(assetNames));
+        }
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
-
         public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Output.ofNullable(assetTypes);
             return this;
         }
-
+        public Builder assetTypes(String... assetTypes) {
+            return assetTypes(List.of(assetTypes));
+        }
         public Builder billingProject(@Nullable Output<String> billingProject) {
             this.billingProject = billingProject;
             return this;
         }
-
         public Builder billingProject(@Nullable String billingProject) {
             this.billingProject = Output.ofNullable(billingProject);
             return this;
         }
-
         public Builder condition(@Nullable Output<ProjectFeedConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable ProjectFeedConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder feedId(Output<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
-
         public Builder feedId(String feedId) {
             this.feedId = Output.of(Objects.requireNonNull(feedId));
             return this;
         }
-
         public Builder feedOutputConfig(Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
-
         public Builder feedOutputConfig(ProjectFeedFeedOutputConfigArgs feedOutputConfig) {
             this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ProjectFeedArgs build() {
+        }        public ProjectFeedArgs build() {
             return new ProjectFeedArgs(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, project);
         }
     }

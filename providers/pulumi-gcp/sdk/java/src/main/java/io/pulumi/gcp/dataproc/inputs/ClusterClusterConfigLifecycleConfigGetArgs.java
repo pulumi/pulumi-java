@@ -89,32 +89,26 @@ public final class ClusterClusterConfigLifecycleConfigGetArgs extends io.pulumi.
             this.autoDeleteTime = autoDeleteTime;
             return this;
         }
-
         public Builder autoDeleteTime(@Nullable String autoDeleteTime) {
             this.autoDeleteTime = Output.ofNullable(autoDeleteTime);
             return this;
         }
-
         public Builder idleDeleteTtl(@Nullable Output<String> idleDeleteTtl) {
             this.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
-
         public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
             this.idleDeleteTtl = Output.ofNullable(idleDeleteTtl);
             return this;
         }
-
         public Builder idleStartTime(@Nullable Output<String> idleStartTime) {
             this.idleStartTime = idleStartTime;
             return this;
         }
-
         public Builder idleStartTime(@Nullable String idleStartTime) {
             this.idleStartTime = Output.ofNullable(idleStartTime);
             return this;
-        }
-        public ClusterClusterConfigLifecycleConfigGetArgs build() {
+        }        public ClusterClusterConfigLifecycleConfigGetArgs build() {
             return new ClusterClusterConfigLifecycleConfigGetArgs(autoDeleteTime, idleDeleteTtl, idleStartTime);
         }
     }

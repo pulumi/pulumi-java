@@ -77,22 +77,18 @@ public final class DatasetIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
-        }
-        public DatasetIamPolicyArgs build() {
+        }        public DatasetIamPolicyArgs build() {
             return new DatasetIamPolicyArgs(datasetId, policyData);
         }
     }

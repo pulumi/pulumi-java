@@ -407,192 +407,163 @@ public final class JobLoadArgs extends io.pulumi.resources.ResourceArgs {
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
-
         public Builder allowJaggedRows(@Nullable Boolean allowJaggedRows) {
             this.allowJaggedRows = Output.ofNullable(allowJaggedRows);
             return this;
         }
-
         public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
-
         public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Output.ofNullable(allowQuotedNewlines);
             return this;
         }
-
         public Builder autodetect(@Nullable Output<Boolean> autodetect) {
             this.autodetect = autodetect;
             return this;
         }
-
         public Builder autodetect(@Nullable Boolean autodetect) {
             this.autodetect = Output.ofNullable(autodetect);
             return this;
         }
-
         public Builder createDisposition(@Nullable Output<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
-
         public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Output.ofNullable(createDisposition);
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable Output<JobLoadDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable JobLoadDestinationEncryptionConfigurationArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Output.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
-
         public Builder destinationTable(Output<JobLoadDestinationTableArgs> destinationTable) {
             this.destinationTable = Objects.requireNonNull(destinationTable);
             return this;
         }
-
         public Builder destinationTable(JobLoadDestinationTableArgs destinationTable) {
             this.destinationTable = Output.of(Objects.requireNonNull(destinationTable));
             return this;
         }
-
         public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
             return this;
         }
-
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
-
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Output.ofNullable(ignoreUnknownValues);
             return this;
         }
-
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
-
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = Output.ofNullable(maxBadRecords);
             return this;
         }
-
         public Builder nullMarker(@Nullable Output<String> nullMarker) {
             this.nullMarker = nullMarker;
             return this;
         }
-
         public Builder nullMarker(@Nullable String nullMarker) {
             this.nullMarker = Output.ofNullable(nullMarker);
             return this;
         }
-
         public Builder projectionFields(@Nullable Output<List<String>> projectionFields) {
             this.projectionFields = projectionFields;
             return this;
         }
-
         public Builder projectionFields(@Nullable List<String> projectionFields) {
             this.projectionFields = Output.ofNullable(projectionFields);
             return this;
         }
-
+        public Builder projectionFields(String... projectionFields) {
+            return projectionFields(List.of(projectionFields));
+        }
         public Builder quote(@Nullable Output<String> quote) {
             this.quote = quote;
             return this;
         }
-
         public Builder quote(@Nullable String quote) {
             this.quote = Output.ofNullable(quote);
             return this;
         }
-
         public Builder schemaUpdateOptions(@Nullable Output<List<String>> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
-
         public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Output.ofNullable(schemaUpdateOptions);
             return this;
         }
-
+        public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
+            return schemaUpdateOptions(List.of(schemaUpdateOptions));
+        }
         public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
             return this;
         }
-
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
-
         public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = Output.ofNullable(sourceFormat);
             return this;
         }
-
         public Builder sourceUris(Output<List<String>> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
         public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Output.of(Objects.requireNonNull(sourceUris));
             return this;
         }
-
+        public Builder sourceUris(String... sourceUris) {
+            return sourceUris(List.of(sourceUris));
+        }
         public Builder timePartitioning(@Nullable Output<JobLoadTimePartitioningArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
-
         public Builder timePartitioning(@Nullable JobLoadTimePartitioningArgs timePartitioning) {
             this.timePartitioning = Output.ofNullable(timePartitioning);
             return this;
         }
-
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
-        }
-        public JobLoadArgs build() {
+        }        public JobLoadArgs build() {
             return new JobLoadArgs(allowJaggedRows, allowQuotedNewlines, autodetect, createDisposition, destinationEncryptionConfiguration, destinationTable, encoding, fieldDelimiter, ignoreUnknownValues, maxBadRecords, nullMarker, projectionFields, quote, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, writeDisposition);
         }
     }

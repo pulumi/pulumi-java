@@ -139,47 +139,47 @@ public final class GetResourcePolicyResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder groupPlacementPolicies(List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies) {
             this.groupPlacementPolicies = Objects.requireNonNull(groupPlacementPolicies);
             return this;
         }
-
+        public Builder groupPlacementPolicies(GetResourcePolicyGroupPlacementPolicy... groupPlacementPolicies) {
+            return groupPlacementPolicies(List.of(groupPlacementPolicies));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceSchedulePolicies(List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies) {
             this.instanceSchedulePolicies = Objects.requireNonNull(instanceSchedulePolicies);
             return this;
         }
-
+        public Builder instanceSchedulePolicies(GetResourcePolicyInstanceSchedulePolicy... instanceSchedulePolicies) {
+            return instanceSchedulePolicies(List.of(instanceSchedulePolicies));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder snapshotSchedulePolicies(List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
             this.snapshotSchedulePolicies = Objects.requireNonNull(snapshotSchedulePolicies);
             return this;
         }
-        public GetResourcePolicyResult build() {
+        public Builder snapshotSchedulePolicies(GetResourcePolicySnapshotSchedulePolicy... snapshotSchedulePolicies) {
+            return snapshotSchedulePolicies(List.of(snapshotSchedulePolicies));
+        }        public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(description, groupPlacementPolicies, id, instanceSchedulePolicies, name, project, region, selfLink, snapshotSchedulePolicies);
         }
     }

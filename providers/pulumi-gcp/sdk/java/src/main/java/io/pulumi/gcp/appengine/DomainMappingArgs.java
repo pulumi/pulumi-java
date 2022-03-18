@@ -112,42 +112,34 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
             this.overrideStrategy = overrideStrategy;
             return this;
         }
-
         public Builder overrideStrategy(@Nullable String overrideStrategy) {
             this.overrideStrategy = Output.ofNullable(overrideStrategy);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sslSettings(@Nullable Output<DomainMappingSslSettingsArgs> sslSettings) {
             this.sslSettings = sslSettings;
             return this;
         }
-
         public Builder sslSettings(@Nullable DomainMappingSslSettingsArgs sslSettings) {
             this.sslSettings = Output.ofNullable(sslSettings);
             return this;
-        }
-        public DomainMappingArgs build() {
+        }        public DomainMappingArgs build() {
             return new DomainMappingArgs(domainName, overrideStrategy, project, sslSettings);
         }
     }

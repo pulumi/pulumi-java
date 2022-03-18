@@ -53,12 +53,13 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkArgs> networks) {
             this.networks = Output.of(Objects.requireNonNull(networks));
             return this;
         }
-        public ManagedZonePrivateVisibilityConfigArgs build() {
+        public Builder networks(ManagedZonePrivateVisibilityConfigNetworkArgs... networks) {
+            return networks(List.of(networks));
+        }        public ManagedZonePrivateVisibilityConfigArgs build() {
             return new ManagedZonePrivateVisibilityConfigArgs(networks);
         }
     }

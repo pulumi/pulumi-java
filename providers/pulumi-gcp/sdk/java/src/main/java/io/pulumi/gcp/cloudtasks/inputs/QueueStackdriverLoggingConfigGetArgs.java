@@ -58,12 +58,10 @@ public final class QueueStackdriverLoggingConfigGetArgs extends io.pulumi.resour
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
         }
-
         public Builder samplingRatio(Double samplingRatio) {
             this.samplingRatio = Output.of(Objects.requireNonNull(samplingRatio));
             return this;
-        }
-        public QueueStackdriverLoggingConfigGetArgs build() {
+        }        public QueueStackdriverLoggingConfigGetArgs build() {
             return new QueueStackdriverLoggingConfigGetArgs(samplingRatio);
         }
     }

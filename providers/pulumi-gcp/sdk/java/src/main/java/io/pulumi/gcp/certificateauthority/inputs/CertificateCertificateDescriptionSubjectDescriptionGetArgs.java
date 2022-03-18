@@ -133,62 +133,56 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
             this.hexSerialNumber = hexSerialNumber;
             return this;
         }
-
         public Builder hexSerialNumber(@Nullable String hexSerialNumber) {
             this.hexSerialNumber = Output.ofNullable(hexSerialNumber);
             return this;
         }
-
         public Builder lifetime(@Nullable Output<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
-
         public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = Output.ofNullable(lifetime);
             return this;
         }
-
         public Builder notAfterTime(@Nullable Output<String> notAfterTime) {
             this.notAfterTime = notAfterTime;
             return this;
         }
-
         public Builder notAfterTime(@Nullable String notAfterTime) {
             this.notAfterTime = Output.ofNullable(notAfterTime);
             return this;
         }
-
         public Builder notBeforeTime(@Nullable Output<String> notBeforeTime) {
             this.notBeforeTime = notBeforeTime;
             return this;
         }
-
         public Builder notBeforeTime(@Nullable String notBeforeTime) {
             this.notBeforeTime = Output.ofNullable(notBeforeTime);
             return this;
         }
-
         public Builder subjectAltNames(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
-
         public Builder subjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs> subjectAltNames) {
             this.subjectAltNames = Output.ofNullable(subjectAltNames);
             return this;
         }
-
+        public Builder subjectAltNames(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs... subjectAltNames) {
+            return subjectAltNames(List.of(subjectAltNames));
+        }
         public Builder subjects(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> subjects) {
             this.subjects = subjects;
             return this;
         }
-
         public Builder subjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs> subjects) {
             this.subjects = Output.ofNullable(subjects);
             return this;
         }
-        public CertificateCertificateDescriptionSubjectDescriptionGetArgs build() {
+        public Builder subjects(CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs... subjects) {
+            return subjects(List.of(subjects));
+        }        public CertificateCertificateDescriptionSubjectDescriptionGetArgs build() {
             return new CertificateCertificateDescriptionSubjectDescriptionGetArgs(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subjectAltNames, subjects);
         }
     }

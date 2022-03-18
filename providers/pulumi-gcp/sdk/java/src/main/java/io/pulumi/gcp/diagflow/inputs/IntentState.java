@@ -305,152 +305,134 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder defaultResponsePlatforms(@Nullable Output<List<String>> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = defaultResponsePlatforms;
             return this;
         }
-
         public Builder defaultResponsePlatforms(@Nullable List<String> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = Output.ofNullable(defaultResponsePlatforms);
             return this;
         }
-
+        public Builder defaultResponsePlatforms(String... defaultResponsePlatforms) {
+            return defaultResponsePlatforms(List.of(defaultResponsePlatforms));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder events(@Nullable Output<List<String>> events) {
             this.events = events;
             return this;
         }
-
         public Builder events(@Nullable List<String> events) {
             this.events = Output.ofNullable(events);
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder followupIntentInfos(@Nullable Output<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos) {
             this.followupIntentInfos = followupIntentInfos;
             return this;
         }
-
         public Builder followupIntentInfos(@Nullable List<IntentFollowupIntentInfoGetArgs> followupIntentInfos) {
             this.followupIntentInfos = Output.ofNullable(followupIntentInfos);
             return this;
         }
-
+        public Builder followupIntentInfos(IntentFollowupIntentInfoGetArgs... followupIntentInfos) {
+            return followupIntentInfos(List.of(followupIntentInfos));
+        }
         public Builder inputContextNames(@Nullable Output<List<String>> inputContextNames) {
             this.inputContextNames = inputContextNames;
             return this;
         }
-
         public Builder inputContextNames(@Nullable List<String> inputContextNames) {
             this.inputContextNames = Output.ofNullable(inputContextNames);
             return this;
         }
-
+        public Builder inputContextNames(String... inputContextNames) {
+            return inputContextNames(List.of(inputContextNames));
+        }
         public Builder isFallback(@Nullable Output<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
-
         public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Output.ofNullable(isFallback);
             return this;
         }
-
         public Builder mlDisabled(@Nullable Output<Boolean> mlDisabled) {
             this.mlDisabled = mlDisabled;
             return this;
         }
-
         public Builder mlDisabled(@Nullable Boolean mlDisabled) {
             this.mlDisabled = Output.ofNullable(mlDisabled);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
-
         public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
             this.parentFollowupIntentName = Output.ofNullable(parentFollowupIntentName);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resetContexts(@Nullable Output<Boolean> resetContexts) {
             this.resetContexts = resetContexts;
             return this;
         }
-
         public Builder resetContexts(@Nullable Boolean resetContexts) {
             this.resetContexts = Output.ofNullable(resetContexts);
             return this;
         }
-
         public Builder rootFollowupIntentName(@Nullable Output<String> rootFollowupIntentName) {
             this.rootFollowupIntentName = rootFollowupIntentName;
             return this;
         }
-
         public Builder rootFollowupIntentName(@Nullable String rootFollowupIntentName) {
             this.rootFollowupIntentName = Output.ofNullable(rootFollowupIntentName);
             return this;
         }
-
         public Builder webhookState(@Nullable Output<String> webhookState) {
             this.webhookState = webhookState;
             return this;
         }
-
         public Builder webhookState(@Nullable String webhookState) {
             this.webhookState = Output.ofNullable(webhookState);
             return this;
-        }
-        public IntentState build() {
+        }        public IntentState build() {
             return new IntentState(action, defaultResponsePlatforms, displayName, events, followupIntentInfos, inputContextNames, isFallback, mlDisabled, name, parentFollowupIntentName, priority, project, resetContexts, rootFollowupIntentName, webhookState);
         }
     }

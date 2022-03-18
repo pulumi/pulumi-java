@@ -53,8 +53,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessage {
         public Builder text(@Nullable CxPageTransitionRouteTriggerFulfillmentMessageText text) {
             this.text = text;
             return this;
-        }
-        public CxPageTransitionRouteTriggerFulfillmentMessage build() {
+        }        public CxPageTransitionRouteTriggerFulfillmentMessage build() {
             return new CxPageTransitionRouteTriggerFulfillmentMessage(text);
         }
     }

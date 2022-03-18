@@ -56,12 +56,10 @@ public final class ClusterClusterConfigAutoscalingConfigArgs extends io.pulumi.r
             this.policyUri = Objects.requireNonNull(policyUri);
             return this;
         }
-
         public Builder policyUri(String policyUri) {
             this.policyUri = Output.of(Objects.requireNonNull(policyUri));
             return this;
-        }
-        public ClusterClusterConfigAutoscalingConfigArgs build() {
+        }        public ClusterClusterConfigAutoscalingConfigArgs build() {
             return new ClusterClusterConfigAutoscalingConfigArgs(policyUri);
         }
     }

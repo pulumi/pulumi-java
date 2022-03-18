@@ -60,12 +60,10 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceGetArgs extends io.
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }
-
         public Builder namespaceUrl(String namespaceUrl) {
             this.namespaceUrl = Output.of(Objects.requireNonNull(namespaceUrl));
             return this;
-        }
-        public ManagedZoneServiceDirectoryConfigNamespaceGetArgs build() {
+        }        public ManagedZoneServiceDirectoryConfigNamespaceGetArgs build() {
             return new ManagedZoneServiceDirectoryConfigNamespaceGetArgs(namespaceUrl);
         }
     }

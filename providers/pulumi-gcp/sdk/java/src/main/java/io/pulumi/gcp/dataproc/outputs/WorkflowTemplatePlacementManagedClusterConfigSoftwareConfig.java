@@ -81,17 +81,17 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig {
             this.imageVersion = imageVersion;
             return this;
         }
-
         public Builder optionalComponents(@Nullable List<String> optionalComponents) {
             this.optionalComponents = optionalComponents;
             return this;
         }
-
+        public Builder optionalComponents(String... optionalComponents) {
+            return optionalComponents(List.of(optionalComponents));
+        }
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig(imageVersion, optionalComponents, properties);
         }
     }

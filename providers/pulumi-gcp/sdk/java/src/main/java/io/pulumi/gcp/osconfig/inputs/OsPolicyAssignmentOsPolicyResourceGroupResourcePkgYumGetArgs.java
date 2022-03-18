@@ -56,12 +56,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs(name);
         }
     }

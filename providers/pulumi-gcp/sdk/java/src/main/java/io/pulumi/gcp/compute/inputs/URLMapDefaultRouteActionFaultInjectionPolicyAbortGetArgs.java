@@ -77,22 +77,18 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs exte
             this.httpStatus = httpStatus;
             return this;
         }
-
         public Builder httpStatus(@Nullable Integer httpStatus) {
             this.httpStatus = Output.ofNullable(httpStatus);
             return this;
         }
-
         public Builder percentage(@Nullable Output<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
-
         public Builder percentage(@Nullable Double percentage) {
             this.percentage = Output.ofNullable(percentage);
             return this;
-        }
-        public URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs build() {
+        }        public URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs(httpStatus, percentage);
         }
     }

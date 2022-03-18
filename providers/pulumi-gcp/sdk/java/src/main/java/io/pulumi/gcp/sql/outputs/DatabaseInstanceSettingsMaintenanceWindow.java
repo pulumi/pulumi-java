@@ -90,17 +90,14 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
             this.day = day;
             return this;
         }
-
         public Builder hour(@Nullable Integer hour) {
             this.hour = hour;
             return this;
         }
-
         public Builder updateTrack(@Nullable String updateTrack) {
             this.updateTrack = updateTrack;
             return this;
-        }
-        public DatabaseInstanceSettingsMaintenanceWindow build() {
+        }        public DatabaseInstanceSettingsMaintenanceWindow build() {
             return new DatabaseInstanceSettingsMaintenanceWindow(day, hour, updateTrack);
         }
     }

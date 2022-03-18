@@ -92,17 +92,17 @@ public final class TenantInboundSamlConfigSpConfig {
             this.callbackUri = Objects.requireNonNull(callbackUri);
             return this;
         }
-
         public Builder spCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
-
+        public Builder spCertificates(TenantInboundSamlConfigSpConfigSpCertificate... spCertificates) {
+            return spCertificates(List.of(spCertificates));
+        }
         public Builder spEntityId(String spEntityId) {
             this.spEntityId = Objects.requireNonNull(spEntityId);
             return this;
-        }
-        public TenantInboundSamlConfigSpConfig build() {
+        }        public TenantInboundSamlConfigSpConfig build() {
             return new TenantInboundSamlConfigSpConfig(callbackUri, spCertificates, spEntityId);
         }
     }

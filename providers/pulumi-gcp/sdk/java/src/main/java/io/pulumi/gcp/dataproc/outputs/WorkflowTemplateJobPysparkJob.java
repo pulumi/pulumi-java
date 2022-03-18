@@ -170,42 +170,49 @@ public final class WorkflowTemplateJobPysparkJob {
             this.archiveUris = archiveUris;
             return this;
         }
-
+        public Builder archiveUris(String... archiveUris) {
+            return archiveUris(List.of(archiveUris));
+        }
         public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
-
+        public Builder fileUris(String... fileUris) {
+            return fileUris(List.of(fileUris));
+        }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(@Nullable WorkflowTemplateJobPysparkJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder mainPythonFileUri(String mainPythonFileUri) {
             this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder pythonFileUris(@Nullable List<String> pythonFileUris) {
             this.pythonFileUris = pythonFileUris;
             return this;
         }
-        public WorkflowTemplateJobPysparkJob build() {
+        public Builder pythonFileUris(String... pythonFileUris) {
+            return pythonFileUris(List.of(pythonFileUris));
+        }        public WorkflowTemplateJobPysparkJob build() {
             return new WorkflowTemplateJobPysparkJob(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }
     }

@@ -122,52 +122,42 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
-        }
-        public AzureClientArgs build() {
+        }        public AzureClientArgs build() {
             return new AzureClientArgs(applicationId, location, name, project, tenantId);
         }
     }

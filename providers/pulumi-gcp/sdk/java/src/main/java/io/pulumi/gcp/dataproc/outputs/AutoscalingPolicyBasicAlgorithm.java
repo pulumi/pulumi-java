@@ -78,12 +78,10 @@ public final class AutoscalingPolicyBasicAlgorithm {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
-
         public Builder yarnConfig(AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig) {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
-        }
-        public AutoscalingPolicyBasicAlgorithm build() {
+        }        public AutoscalingPolicyBasicAlgorithm build() {
             return new AutoscalingPolicyBasicAlgorithm(cooldownPeriod, yarnConfig);
         }
     }

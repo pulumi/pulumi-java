@@ -151,72 +151,61 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable DatabaseIAMBindingConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public DatabaseIAMBindingState build() {
+        }        public DatabaseIAMBindingState build() {
             return new DatabaseIAMBindingState(condition, database, etag, instance, members, project, role);
         }
     }

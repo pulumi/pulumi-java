@@ -121,17 +121,14 @@ public final class SloRequestBasedSliGoodTotalRatio {
             this.badServiceFilter = badServiceFilter;
             return this;
         }
-
         public Builder goodServiceFilter(@Nullable String goodServiceFilter) {
             this.goodServiceFilter = goodServiceFilter;
             return this;
         }
-
         public Builder totalServiceFilter(@Nullable String totalServiceFilter) {
             this.totalServiceFilter = totalServiceFilter;
             return this;
-        }
-        public SloRequestBasedSliGoodTotalRatio build() {
+        }        public SloRequestBasedSliGoodTotalRatio build() {
             return new SloRequestBasedSliGoodTotalRatio(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }
     }

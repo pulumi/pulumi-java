@@ -117,27 +117,22 @@ public final class GetClientConfigResult {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetClientConfigResult build() {
+        }        public GetClientConfigResult build() {
             return new GetClientConfigResult(accessToken, id, project, region, zone);
         }
     }

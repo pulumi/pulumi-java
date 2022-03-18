@@ -88,17 +88,14 @@ public final class TriggerGithubPush {
             this.branch = branch;
             return this;
         }
-
         public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
-        }
-        public TriggerGithubPush build() {
+        }        public TriggerGithubPush build() {
             return new TriggerGithubPush(branch, invertRegex, tag);
         }
     }

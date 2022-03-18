@@ -130,52 +130,42 @@ public final class GetInstanceResult {
             this.config = config;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder forceDestroy(Boolean forceDestroy) {
             this.forceDestroy = Objects.requireNonNull(forceDestroy);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numNodes(Integer numNodes) {
             this.numNodes = Objects.requireNonNull(numNodes);
             return this;
         }
-
         public Builder processingUnits(Integer processingUnits) {
             this.processingUnits = Objects.requireNonNull(processingUnits);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(config, displayName, forceDestroy, id, labels, name, numNodes, processingUnits, project, state);
         }
     }

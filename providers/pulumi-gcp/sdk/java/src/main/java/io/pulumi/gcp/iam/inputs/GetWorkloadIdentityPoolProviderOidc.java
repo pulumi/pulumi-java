@@ -65,12 +65,13 @@ public final class GetWorkloadIdentityPoolProviderOidc extends io.pulumi.resourc
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
-
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }
         public Builder issuerUri(String issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
-        }
-        public GetWorkloadIdentityPoolProviderOidc build() {
+        }        public GetWorkloadIdentityPoolProviderOidc build() {
             return new GetWorkloadIdentityPoolProviderOidc(allowedAudiences, issuerUri);
         }
     }

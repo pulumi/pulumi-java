@@ -159,72 +159,58 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
             this.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
-
         public Builder backupRetentionSettings(@Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs backupRetentionSettings) {
             this.backupRetentionSettings = Output.ofNullable(backupRetentionSettings);
             return this;
         }
-
         public Builder binaryLogEnabled(@Nullable Output<Boolean> binaryLogEnabled) {
             this.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
-
         public Builder binaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
             this.binaryLogEnabled = Output.ofNullable(binaryLogEnabled);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder transactionLogRetentionDays(@Nullable Output<Integer> transactionLogRetentionDays) {
             this.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }
-
         public Builder transactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = Output.ofNullable(transactionLogRetentionDays);
             return this;
-        }
-        public DatabaseInstanceSettingsBackupConfigurationGetArgs build() {
+        }        public DatabaseInstanceSettingsBackupConfigurationGetArgs build() {
             return new DatabaseInstanceSettingsBackupConfigurationGetArgs(backupRetentionSettings, binaryLogEnabled, enabled, location, pointInTimeRecoveryEnabled, startTime, transactionLogRetentionDays);
         }
     }

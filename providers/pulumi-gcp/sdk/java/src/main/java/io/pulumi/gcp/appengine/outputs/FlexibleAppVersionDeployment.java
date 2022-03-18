@@ -117,22 +117,21 @@ public final class FlexibleAppVersionDeployment {
             this.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
-
         public Builder container(@Nullable FlexibleAppVersionDeploymentContainer container) {
             this.container = container;
             return this;
         }
-
         public Builder files(@Nullable List<FlexibleAppVersionDeploymentFile> files) {
             this.files = files;
             return this;
         }
-
+        public Builder files(FlexibleAppVersionDeploymentFile... files) {
+            return files(List.of(files));
+        }
         public Builder zip(@Nullable FlexibleAppVersionDeploymentZip zip) {
             this.zip = zip;
             return this;
-        }
-        public FlexibleAppVersionDeployment build() {
+        }        public FlexibleAppVersionDeployment build() {
             return new FlexibleAppVersionDeployment(cloudBuildOptions, container, files, zip);
         }
     }

@@ -133,27 +133,31 @@ public final class AuthorityConfigX509Config {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
+        public Builder additionalExtensions(AuthorityConfigX509ConfigAdditionalExtension... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
-
+        public Builder aiaOcspServers(String... aiaOcspServers) {
+            return aiaOcspServers(List.of(aiaOcspServers));
+        }
         public Builder caOptions(AuthorityConfigX509ConfigCaOptions caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
-
         public Builder keyUsage(AuthorityConfigX509ConfigKeyUsage keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
-
         public Builder policyIds(@Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
-        public AuthorityConfigX509Config build() {
+        public Builder policyIds(AuthorityConfigX509ConfigPolicyId... policyIds) {
+            return policyIds(List.of(policyIds));
+        }        public AuthorityConfigX509Config build() {
             return new AuthorityConfigX509Config(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }
     }

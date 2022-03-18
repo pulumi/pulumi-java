@@ -57,12 +57,10 @@ public final class ClusterAddonsConfigHorizontalPodAutoscalingGetArgs extends io
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
-        }
-        public ClusterAddonsConfigHorizontalPodAutoscalingGetArgs build() {
+        }        public ClusterAddonsConfigHorizontalPodAutoscalingGetArgs build() {
             return new ClusterAddonsConfigHorizontalPodAutoscalingGetArgs(disabled);
         }
     }

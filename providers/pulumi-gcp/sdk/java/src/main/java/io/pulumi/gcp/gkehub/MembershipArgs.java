@@ -151,62 +151,50 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             this.authority = authority;
             return this;
         }
-
         public Builder authority(@Nullable MembershipAuthorityArgs authority) {
             this.authority = Output.ofNullable(authority);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<MembershipEndpointArgs> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable MembershipEndpointArgs endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder membershipId(Output<String> membershipId) {
             this.membershipId = Objects.requireNonNull(membershipId);
             return this;
         }
-
         public Builder membershipId(String membershipId) {
             this.membershipId = Output.of(Objects.requireNonNull(membershipId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public MembershipArgs build() {
+        }        public MembershipArgs build() {
             return new MembershipArgs(authority, description, endpoint, labels, membershipId, project);
         }
     }

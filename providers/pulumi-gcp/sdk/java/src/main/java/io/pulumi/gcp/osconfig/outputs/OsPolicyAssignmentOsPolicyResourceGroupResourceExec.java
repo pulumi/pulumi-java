@@ -72,12 +72,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExec {
             this.enforce = enforce;
             return this;
         }
-
         public Builder validate(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
             this.validate = Objects.requireNonNull(validate);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceExec build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExec build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExec(enforce, validate);
         }
     }

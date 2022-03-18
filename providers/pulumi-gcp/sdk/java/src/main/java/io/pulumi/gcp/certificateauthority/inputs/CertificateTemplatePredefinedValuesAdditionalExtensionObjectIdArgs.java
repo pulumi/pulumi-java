@@ -57,12 +57,13 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionObjectI
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-        public CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs build() {
             return new CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs(objectIdPaths);
         }
     }

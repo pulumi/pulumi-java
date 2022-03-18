@@ -58,12 +58,10 @@ public final class HealthCheckLogConfigArgs extends io.pulumi.resources.Resource
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
-        }
-        public HealthCheckLogConfigArgs build() {
+        }        public HealthCheckLogConfigArgs build() {
             return new HealthCheckLogConfigArgs(enable);
         }
     }

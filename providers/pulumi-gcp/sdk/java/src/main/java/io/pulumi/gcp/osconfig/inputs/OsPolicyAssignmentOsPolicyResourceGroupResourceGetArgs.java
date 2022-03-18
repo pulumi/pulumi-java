@@ -126,52 +126,42 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
             this.exec = exec;
             return this;
         }
-
         public Builder exec(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs exec) {
             this.exec = Output.ofNullable(exec);
             return this;
         }
-
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder pkg(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg) {
             this.pkg = pkg;
             return this;
         }
-
         public Builder pkg(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs pkg) {
             this.pkg = Output.ofNullable(pkg);
             return this;
         }
-
         public Builder repository(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder repository(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs repository) {
             this.repository = Output.ofNullable(repository);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs(exec, file, id, pkg, repository);
         }
     }

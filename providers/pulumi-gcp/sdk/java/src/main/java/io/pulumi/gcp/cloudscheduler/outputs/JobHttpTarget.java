@@ -154,32 +154,26 @@ public final class JobHttpTarget {
             this.body = body;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder oauthToken(@Nullable JobHttpTargetOauthToken oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
-
         public Builder oidcToken(@Nullable JobHttpTargetOidcToken oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public JobHttpTarget build() {
+        }        public JobHttpTarget build() {
             return new JobHttpTarget(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }
     }

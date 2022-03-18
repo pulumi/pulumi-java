@@ -78,22 +78,18 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs exte
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(Output<String> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs build() {
+        }        public RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs(nanos, seconds);
         }
     }

@@ -57,12 +57,10 @@ public final class ClusterAddonsConfigConfigConnectorConfigGetArgs extends io.pu
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterAddonsConfigConfigConnectorConfigGetArgs build() {
+        }        public ClusterAddonsConfigConfigConnectorConfigGetArgs build() {
             return new ClusterAddonsConfigConfigConnectorConfigGetArgs(enabled);
         }
     }

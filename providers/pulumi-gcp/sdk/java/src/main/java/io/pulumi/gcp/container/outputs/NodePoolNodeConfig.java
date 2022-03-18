@@ -244,122 +244,110 @@ public final class NodePoolNodeConfig {
             this.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder ephemeralStorageConfig(@Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig) {
             this.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
-
         public Builder gcfsConfig(@Nullable NodePoolNodeConfigGcfsConfig gcfsConfig) {
             this.gcfsConfig = gcfsConfig;
             return this;
         }
-
         public Builder guestAccelerators(@Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
-
+        public Builder guestAccelerators(NodePoolNodeConfigGuestAccelerator... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
         }
-
         public Builder kubeletConfig(@Nullable NodePoolNodeConfigKubeletConfig kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder linuxNodeConfig(@Nullable NodePoolNodeConfigLinuxNodeConfig linuxNodeConfig) {
             this.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
-
         public Builder localSsdCount(@Nullable Integer localSsdCount) {
             this.localSsdCount = localSsdCount;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder nodeGroup(@Nullable String nodeGroup) {
             this.nodeGroup = nodeGroup;
             return this;
         }
-
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
         }
-
         public Builder sandboxConfig(@Nullable NodePoolNodeConfigSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable NodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-
         public Builder spot(@Nullable Boolean spot) {
             this.spot = spot;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taints(@Nullable List<NodePoolNodeConfigTaint> taints) {
             this.taints = taints;
             return this;
         }
-
+        public Builder taints(NodePoolNodeConfigTaint... taints) {
+            return taints(List.of(taints));
+        }
         public Builder workloadMetadataConfig(@Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
-        }
-        public NodePoolNodeConfig build() {
+        }        public NodePoolNodeConfig build() {
             return new NodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }
     }

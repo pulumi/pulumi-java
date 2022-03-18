@@ -90,32 +90,26 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public TriggerDestinationCloudRunServiceGetArgs build() {
+        }        public TriggerDestinationCloudRunServiceGetArgs build() {
             return new TriggerDestinationCloudRunServiceGetArgs(path, region, service);
         }
     }

@@ -146,62 +146,53 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder features(@Nullable Output<List<FulfillmentFeatureGetArgs>> features) {
             this.features = features;
             return this;
         }
-
         public Builder features(@Nullable List<FulfillmentFeatureGetArgs> features) {
             this.features = Output.ofNullable(features);
             return this;
         }
-
+        public Builder features(FulfillmentFeatureGetArgs... features) {
+            return features(List.of(features));
+        }
         public Builder genericWebService(@Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService) {
             this.genericWebService = genericWebService;
             return this;
         }
-
         public Builder genericWebService(@Nullable FulfillmentGenericWebServiceGetArgs genericWebService) {
             this.genericWebService = Output.ofNullable(genericWebService);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public FulfillmentState build() {
+        }        public FulfillmentState build() {
             return new FulfillmentState(displayName, enabled, features, genericWebService, name, project);
         }
     }

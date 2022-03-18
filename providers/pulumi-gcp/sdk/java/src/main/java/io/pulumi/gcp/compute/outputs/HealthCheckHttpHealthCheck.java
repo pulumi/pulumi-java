@@ -194,37 +194,30 @@ public final class HealthCheckHttpHealthCheck {
             this.host = host;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
         }
-
         public Builder portSpecification(@Nullable String portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
-
         public Builder proxyHeader(@Nullable String proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
-
         public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = requestPath;
             return this;
         }
-
         public Builder response(@Nullable String response) {
             this.response = response;
             return this;
-        }
-        public HealthCheckHttpHealthCheck build() {
+        }        public HealthCheckHttpHealthCheck build() {
             return new HealthCheckHttpHealthCheck(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }
     }

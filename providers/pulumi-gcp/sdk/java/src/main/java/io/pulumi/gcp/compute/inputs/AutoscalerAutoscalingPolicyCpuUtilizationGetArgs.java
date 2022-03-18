@@ -79,22 +79,18 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationGetArgs extends io.p
             this.predictiveMethod = predictiveMethod;
             return this;
         }
-
         public Builder predictiveMethod(@Nullable String predictiveMethod) {
             this.predictiveMethod = Output.ofNullable(predictiveMethod);
             return this;
         }
-
         public Builder target(Output<Double> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(Double target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public AutoscalerAutoscalingPolicyCpuUtilizationGetArgs build() {
+        }        public AutoscalerAutoscalingPolicyCpuUtilizationGetArgs build() {
             return new AutoscalerAutoscalingPolicyCpuUtilizationGetArgs(predictiveMethod, target);
         }
     }

@@ -71,12 +71,13 @@ public final class SpokeLinkedVpnTunnels {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-        public SpokeLinkedVpnTunnels build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public SpokeLinkedVpnTunnels build() {
             return new SpokeLinkedVpnTunnels(siteToSiteDataTransfer, uris);
         }
     }

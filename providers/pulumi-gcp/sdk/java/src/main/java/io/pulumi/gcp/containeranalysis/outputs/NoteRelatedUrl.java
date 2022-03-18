@@ -71,12 +71,10 @@ public final class NoteRelatedUrl {
             this.label = label;
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public NoteRelatedUrl build() {
+        }        public NoteRelatedUrl build() {
             return new NoteRelatedUrl(label, url);
         }
     }

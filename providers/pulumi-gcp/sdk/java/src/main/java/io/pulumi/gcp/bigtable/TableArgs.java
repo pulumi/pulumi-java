@@ -127,52 +127,48 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.columnFamilies = columnFamilies;
             return this;
         }
-
         public Builder columnFamilies(@Nullable List<TableColumnFamilyArgs> columnFamilies) {
             this.columnFamilies = Output.ofNullable(columnFamilies);
             return this;
         }
-
+        public Builder columnFamilies(TableColumnFamilyArgs... columnFamilies) {
+            return columnFamilies(List.of(columnFamilies));
+        }
         public Builder instanceName(Output<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
-
         public Builder instanceName(String instanceName) {
             this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder splitKeys(@Nullable Output<List<String>> splitKeys) {
             this.splitKeys = splitKeys;
             return this;
         }
-
         public Builder splitKeys(@Nullable List<String> splitKeys) {
             this.splitKeys = Output.ofNullable(splitKeys);
             return this;
         }
-        public TableArgs build() {
+        public Builder splitKeys(String... splitKeys) {
+            return splitKeys(List.of(splitKeys));
+        }        public TableArgs build() {
             return new TableArgs(columnFamilies, instanceName, name, project, splitKeys);
         }
     }

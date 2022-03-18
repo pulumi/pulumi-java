@@ -53,12 +53,10 @@ public final class JobPigConfigLoggingConfigGetArgs extends io.pulumi.resources.
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             this.driverLogLevels = Output.of(Objects.requireNonNull(driverLogLevels));
             return this;
-        }
-        public JobPigConfigLoggingConfigGetArgs build() {
+        }        public JobPigConfigLoggingConfigGetArgs build() {
             return new JobPigConfigLoggingConfigGetArgs(driverLogLevels);
         }
     }

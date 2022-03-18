@@ -51,8 +51,7 @@ public final class GetFunctionEventTriggerFailurePolicy {
         public Builder retry(Boolean retry) {
             this.retry = Objects.requireNonNull(retry);
             return this;
-        }
-        public GetFunctionEventTriggerFailurePolicy build() {
+        }        public GetFunctionEventTriggerFailurePolicy build() {
             return new GetFunctionEventTriggerFailurePolicy(retry);
         }
     }

@@ -76,22 +76,18 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
             this.maxModulusSize = maxModulusSize;
             return this;
         }
-
         public Builder maxModulusSize(@Nullable String maxModulusSize) {
             this.maxModulusSize = Output.ofNullable(maxModulusSize);
             return this;
         }
-
         public Builder minModulusSize(@Nullable Output<String> minModulusSize) {
             this.minModulusSize = minModulusSize;
             return this;
         }
-
         public Builder minModulusSize(@Nullable String minModulusSize) {
             this.minModulusSize = Output.ofNullable(minModulusSize);
             return this;
-        }
-        public CaPoolIssuancePolicyAllowedKeyTypeRsaArgs build() {
+        }        public CaPoolIssuancePolicyAllowedKeyTypeRsaArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(maxModulusSize, minModulusSize);
         }
     }

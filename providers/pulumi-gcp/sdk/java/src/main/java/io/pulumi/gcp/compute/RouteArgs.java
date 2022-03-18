@@ -291,132 +291,109 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destRange(Output<String> destRange) {
             this.destRange = Objects.requireNonNull(destRange);
             return this;
         }
-
         public Builder destRange(String destRange) {
             this.destRange = Output.of(Objects.requireNonNull(destRange));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
-
         public Builder nextHopGateway(@Nullable Output<String> nextHopGateway) {
             this.nextHopGateway = nextHopGateway;
             return this;
         }
-
         public Builder nextHopGateway(@Nullable String nextHopGateway) {
             this.nextHopGateway = Output.ofNullable(nextHopGateway);
             return this;
         }
-
         public Builder nextHopIlb(@Nullable Output<String> nextHopIlb) {
             this.nextHopIlb = nextHopIlb;
             return this;
         }
-
         public Builder nextHopIlb(@Nullable String nextHopIlb) {
             this.nextHopIlb = Output.ofNullable(nextHopIlb);
             return this;
         }
-
         public Builder nextHopInstance(@Nullable Output<String> nextHopInstance) {
             this.nextHopInstance = nextHopInstance;
             return this;
         }
-
         public Builder nextHopInstance(@Nullable String nextHopInstance) {
             this.nextHopInstance = Output.ofNullable(nextHopInstance);
             return this;
         }
-
         public Builder nextHopInstanceZone(@Nullable Output<String> nextHopInstanceZone) {
             this.nextHopInstanceZone = nextHopInstanceZone;
             return this;
         }
-
         public Builder nextHopInstanceZone(@Nullable String nextHopInstanceZone) {
             this.nextHopInstanceZone = Output.ofNullable(nextHopInstanceZone);
             return this;
         }
-
         public Builder nextHopIp(@Nullable Output<String> nextHopIp) {
             this.nextHopIp = nextHopIp;
             return this;
         }
-
         public Builder nextHopIp(@Nullable String nextHopIp) {
             this.nextHopIp = Output.ofNullable(nextHopIp);
             return this;
         }
-
         public Builder nextHopVpnTunnel(@Nullable Output<String> nextHopVpnTunnel) {
             this.nextHopVpnTunnel = nextHopVpnTunnel;
             return this;
         }
-
         public Builder nextHopVpnTunnel(@Nullable String nextHopVpnTunnel) {
             this.nextHopVpnTunnel = Output.ofNullable(nextHopVpnTunnel);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public RouteArgs build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public RouteArgs build() {
             return new RouteArgs(description, destRange, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInstanceZone, nextHopIp, nextHopVpnTunnel, priority, project, tags);
         }
     }

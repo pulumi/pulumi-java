@@ -56,12 +56,10 @@ public final class AzureClusterAuthorizationAdminUserArgs extends io.pulumi.reso
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public AzureClusterAuthorizationAdminUserArgs build() {
+        }        public AzureClusterAuthorizationAdminUserArgs build() {
             return new AzureClusterAuthorizationAdminUserArgs(username);
         }
     }

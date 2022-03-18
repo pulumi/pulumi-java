@@ -96,32 +96,26 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
-
         public Builder messageFormat(String messageFormat) {
             this.messageFormat = Output.of(Objects.requireNonNull(messageFormat));
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public RepositoryPubsubConfigGetArgs build() {
+        }        public RepositoryPubsubConfigGetArgs build() {
             return new RepositoryPubsubConfigGetArgs(messageFormat, serviceAccountEmail, topic);
         }
     }

@@ -113,17 +113,14 @@ public final class AutoscalingPolicyWorkerConfig {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public AutoscalingPolicyWorkerConfig build() {
+        }        public AutoscalingPolicyWorkerConfig build() {
             return new AutoscalingPolicyWorkerConfig(maxInstances, minInstances, weight);
         }
     }

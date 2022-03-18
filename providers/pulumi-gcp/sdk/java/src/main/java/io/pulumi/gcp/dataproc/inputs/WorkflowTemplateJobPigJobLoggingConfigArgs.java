@@ -58,12 +58,10 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends io.pulumi.
             this.driverLogLevels = driverLogLevels;
             return this;
         }
-
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
             this.driverLogLevels = Output.ofNullable(driverLogLevels);
             return this;
-        }
-        public WorkflowTemplateJobPigJobLoggingConfigArgs build() {
+        }        public WorkflowTemplateJobPigJobLoggingConfigArgs build() {
             return new WorkflowTemplateJobPigJobLoggingConfigArgs(driverLogLevels);
         }
     }

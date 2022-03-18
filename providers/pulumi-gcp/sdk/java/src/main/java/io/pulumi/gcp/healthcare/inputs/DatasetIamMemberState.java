@@ -120,52 +120,42 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable DatasetIamMemberConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
-
         public Builder member(@Nullable String member) {
             this.member = Output.ofNullable(member);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public DatasetIamMemberState build() {
+        }        public DatasetIamMemberState build() {
             return new DatasetIamMemberState(condition, datasetId, etag, member, role);
         }
     }

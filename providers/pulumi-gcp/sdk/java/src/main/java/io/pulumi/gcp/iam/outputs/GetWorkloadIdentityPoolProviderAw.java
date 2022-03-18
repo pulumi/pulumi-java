@@ -43,8 +43,7 @@ public final class GetWorkloadIdentityPoolProviderAw {
         public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
-        }
-        public GetWorkloadIdentityPoolProviderAw build() {
+        }        public GetWorkloadIdentityPoolProviderAw build() {
             return new GetWorkloadIdentityPoolProviderAw(accountId);
         }
     }

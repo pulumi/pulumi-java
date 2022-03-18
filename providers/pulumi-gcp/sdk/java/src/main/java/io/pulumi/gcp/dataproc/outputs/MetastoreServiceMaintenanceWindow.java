@@ -72,12 +72,10 @@ public final class MetastoreServiceMaintenanceWindow {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder hourOfDay(Integer hourOfDay) {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
-        }
-        public MetastoreServiceMaintenanceWindow build() {
+        }        public MetastoreServiceMaintenanceWindow build() {
             return new MetastoreServiceMaintenanceWindow(dayOfWeek, hourOfDay);
         }
     }

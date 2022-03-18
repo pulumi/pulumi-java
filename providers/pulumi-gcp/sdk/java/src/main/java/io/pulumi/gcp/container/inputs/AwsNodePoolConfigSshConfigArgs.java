@@ -56,12 +56,10 @@ public final class AwsNodePoolConfigSshConfigArgs extends io.pulumi.resources.Re
             this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
             return this;
         }
-
         public Builder ec2KeyPair(String ec2KeyPair) {
             this.ec2KeyPair = Output.of(Objects.requireNonNull(ec2KeyPair));
             return this;
-        }
-        public AwsNodePoolConfigSshConfigArgs build() {
+        }        public AwsNodePoolConfigSshConfigArgs build() {
             return new AwsNodePoolConfigSshConfigArgs(ec2KeyPair);
         }
     }

@@ -56,12 +56,10 @@ public final class NodeNetworkEndpoint {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public NodeNetworkEndpoint build() {
+        }        public NodeNetworkEndpoint build() {
             return new NodeNetworkEndpoint(ipAddress, port);
         }
     }

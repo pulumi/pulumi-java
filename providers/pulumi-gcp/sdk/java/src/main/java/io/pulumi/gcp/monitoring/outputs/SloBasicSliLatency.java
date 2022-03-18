@@ -55,8 +55,7 @@ public final class SloBasicSliLatency {
         public Builder threshold(String threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
-        }
-        public SloBasicSliLatency build() {
+        }        public SloBasicSliLatency build() {
             return new SloBasicSliLatency(threshold);
         }
     }

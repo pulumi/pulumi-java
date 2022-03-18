@@ -81,22 +81,18 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends io.pul
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }
-
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
             this.labelExtractors = Output.ofNullable(labelExtractors);
             return this;
-        }
-        public AlertPolicyConditionConditionMatchedLogGetArgs build() {
+        }        public AlertPolicyConditionConditionMatchedLogGetArgs build() {
             return new AlertPolicyConditionConditionMatchedLogGetArgs(filter, labelExtractors);
         }
     }

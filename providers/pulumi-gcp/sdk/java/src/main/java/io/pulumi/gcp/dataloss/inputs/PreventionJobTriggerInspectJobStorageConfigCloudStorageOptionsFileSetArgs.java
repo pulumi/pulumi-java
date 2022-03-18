@@ -80,22 +80,18 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.regexFileSet = regexFileSet;
             return this;
         }
-
         public Builder regexFileSet(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs regexFileSet) {
             this.regexFileSet = Output.ofNullable(regexFileSet);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs(regexFileSet, url);
         }
     }

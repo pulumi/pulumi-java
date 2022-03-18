@@ -77,22 +77,18 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeGetArgs extends io.pulumi.r
             this.ellipticCurve = ellipticCurve;
             return this;
         }
-
         public Builder ellipticCurve(@Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs ellipticCurve) {
             this.ellipticCurve = Output.ofNullable(ellipticCurve);
             return this;
         }
-
         public Builder rsa(@Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa) {
             this.rsa = rsa;
             return this;
         }
-
         public Builder rsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs rsa) {
             this.rsa = Output.ofNullable(rsa);
             return this;
-        }
-        public CaPoolIssuancePolicyAllowedKeyTypeGetArgs build() {
+        }        public CaPoolIssuancePolicyAllowedKeyTypeGetArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeGetArgs(ellipticCurve, rsa);
         }
     }

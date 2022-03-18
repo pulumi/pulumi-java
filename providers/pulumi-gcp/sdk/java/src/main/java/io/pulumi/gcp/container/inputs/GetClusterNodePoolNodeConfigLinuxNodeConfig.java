@@ -51,8 +51,7 @@ public final class GetClusterNodePoolNodeConfigLinuxNodeConfig extends io.pulumi
         public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
-        }
-        public GetClusterNodePoolNodeConfigLinuxNodeConfig build() {
+        }        public GetClusterNodePoolNodeConfigLinuxNodeConfig build() {
             return new GetClusterNodePoolNodeConfigLinuxNodeConfig(sysctls);
         }
     }

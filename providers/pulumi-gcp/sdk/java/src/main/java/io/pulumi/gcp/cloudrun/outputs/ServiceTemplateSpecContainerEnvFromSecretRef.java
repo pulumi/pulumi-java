@@ -74,12 +74,10 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRef {
             this.localObjectReference = localObjectReference;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvFromSecretRef build() {
+        }        public ServiceTemplateSpecContainerEnvFromSecretRef build() {
             return new ServiceTemplateSpecContainerEnvFromSecretRef(localObjectReference, optional);
         }
     }

@@ -113,42 +113,34 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
             this.expirationMs = expirationMs;
             return this;
         }
-
         public Builder expirationMs(@Nullable Integer expirationMs) {
             this.expirationMs = Output.ofNullable(expirationMs);
             return this;
         }
-
         public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
-
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TableTimePartitioningGetArgs build() {
+        }        public TableTimePartitioningGetArgs build() {
             return new TableTimePartitioningGetArgs(expirationMs, field, requirePartitionFilter, type);
         }
     }

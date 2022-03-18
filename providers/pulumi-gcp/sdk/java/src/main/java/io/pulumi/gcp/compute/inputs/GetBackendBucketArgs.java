@@ -75,12 +75,10 @@ public final class GetBackendBucketArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetBackendBucketArgs build() {
+        }        public GetBackendBucketArgs build() {
             return new GetBackendBucketArgs(name, project);
         }
     }

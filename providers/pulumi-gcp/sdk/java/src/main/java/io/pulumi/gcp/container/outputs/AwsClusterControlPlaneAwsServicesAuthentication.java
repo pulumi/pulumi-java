@@ -71,12 +71,10 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleSessionName(@Nullable String roleSessionName) {
             this.roleSessionName = roleSessionName;
             return this;
-        }
-        public AwsClusterControlPlaneAwsServicesAuthentication build() {
+        }        public AwsClusterControlPlaneAwsServicesAuthentication build() {
             return new AwsClusterControlPlaneAwsServicesAuthentication(roleArn, roleSessionName);
         }
     }

@@ -61,17 +61,14 @@ public final class ClusterMaintenancePolicyRecurringWindow {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder recurrence(String recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ClusterMaintenancePolicyRecurringWindow build() {
+        }        public ClusterMaintenancePolicyRecurringWindow build() {
             return new ClusterMaintenancePolicyRecurringWindow(endTime, recurrence, startTime);
         }
     }

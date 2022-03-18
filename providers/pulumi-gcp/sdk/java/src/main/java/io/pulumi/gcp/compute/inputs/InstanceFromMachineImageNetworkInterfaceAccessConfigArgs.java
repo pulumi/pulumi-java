@@ -78,32 +78,26 @@ public final class InstanceFromMachineImageNetworkInterfaceAccessConfigArgs exte
             this.natIp = natIp;
             return this;
         }
-
         public Builder natIp(@Nullable String natIp) {
             this.natIp = Output.ofNullable(natIp);
             return this;
         }
-
         public Builder networkTier(@Nullable Output<String> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
-
         public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = Output.ofNullable(networkTier);
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = Output.ofNullable(publicPtrDomainName);
             return this;
-        }
-        public InstanceFromMachineImageNetworkInterfaceAccessConfigArgs build() {
+        }        public InstanceFromMachineImageNetworkInterfaceAccessConfigArgs build() {
             return new InstanceFromMachineImageNetworkInterfaceAccessConfigArgs(natIp, networkTier, publicPtrDomainName);
         }
     }

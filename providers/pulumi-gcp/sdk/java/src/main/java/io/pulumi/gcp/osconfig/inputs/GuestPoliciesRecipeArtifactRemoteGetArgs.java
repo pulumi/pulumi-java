@@ -76,22 +76,18 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
             this.checkSum = checkSum;
             return this;
         }
-
         public Builder checkSum(@Nullable String checkSum) {
             this.checkSum = Output.ofNullable(checkSum);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public GuestPoliciesRecipeArtifactRemoteGetArgs build() {
+        }        public GuestPoliciesRecipeArtifactRemoteGetArgs build() {
             return new GuestPoliciesRecipeArtifactRemoteGetArgs(checkSum, uri);
         }
     }

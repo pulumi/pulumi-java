@@ -50,8 +50,7 @@ public final class GetInstanceConfidentialInstanceConfig extends io.pulumi.resou
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
-        }
-        public GetInstanceConfidentialInstanceConfig build() {
+        }        public GetInstanceConfidentialInstanceConfig build() {
             return new GetInstanceConfidentialInstanceConfig(enableConfidentialCompute);
         }
     }

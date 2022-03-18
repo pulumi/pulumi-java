@@ -124,52 +124,42 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
         public Builder state(Output<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs(content, file, path, permissions, state);
         }
     }

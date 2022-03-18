@@ -78,22 +78,18 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
             this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays);
             return this;
         }
-
         public Builder maxRetentionDays(Integer maxRetentionDays) {
             this.maxRetentionDays = Output.of(Objects.requireNonNull(maxRetentionDays));
             return this;
         }
-
         public Builder onSourceDiskDelete(@Nullable Output<String> onSourceDiskDelete) {
             this.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
-
         public Builder onSourceDiskDelete(@Nullable String onSourceDiskDelete) {
             this.onSourceDiskDelete = Output.ofNullable(onSourceDiskDelete);
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs build() {
+        }        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs(maxRetentionDays, onSourceDiskDelete);
         }
     }

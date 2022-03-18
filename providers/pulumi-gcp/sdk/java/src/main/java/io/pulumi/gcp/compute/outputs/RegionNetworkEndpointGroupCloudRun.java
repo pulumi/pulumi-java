@@ -107,17 +107,14 @@ public final class RegionNetworkEndpointGroupCloudRun {
             this.service = service;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = urlMask;
             return this;
-        }
-        public RegionNetworkEndpointGroupCloudRun build() {
+        }        public RegionNetworkEndpointGroupCloudRun build() {
             return new RegionNetworkEndpointGroupCloudRun(service, tag, urlMask);
         }
     }

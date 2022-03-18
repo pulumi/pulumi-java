@@ -132,52 +132,42 @@ public final class JobRetryConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.maxBackoffDuration = maxBackoffDuration;
             return this;
         }
-
         public Builder maxBackoffDuration(@Nullable String maxBackoffDuration) {
             this.maxBackoffDuration = Output.ofNullable(maxBackoffDuration);
             return this;
         }
-
         public Builder maxDoublings(@Nullable Output<Integer> maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
-
         public Builder maxDoublings(@Nullable Integer maxDoublings) {
             this.maxDoublings = Output.ofNullable(maxDoublings);
             return this;
         }
-
         public Builder maxRetryDuration(@Nullable Output<String> maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
-
         public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
             this.maxRetryDuration = Output.ofNullable(maxRetryDuration);
             return this;
         }
-
         public Builder minBackoffDuration(@Nullable Output<String> minBackoffDuration) {
             this.minBackoffDuration = minBackoffDuration;
             return this;
         }
-
         public Builder minBackoffDuration(@Nullable String minBackoffDuration) {
             this.minBackoffDuration = Output.ofNullable(minBackoffDuration);
             return this;
         }
-
         public Builder retryCount(@Nullable Output<Integer> retryCount) {
             this.retryCount = retryCount;
             return this;
         }
-
         public Builder retryCount(@Nullable Integer retryCount) {
             this.retryCount = Output.ofNullable(retryCount);
             return this;
-        }
-        public JobRetryConfigArgs build() {
+        }        public JobRetryConfigArgs build() {
             return new JobRetryConfigArgs(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
         }
     }

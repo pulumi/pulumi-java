@@ -159,72 +159,61 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
             this.clientTags = clientTags;
             return this;
         }
-
         public Builder clientTags(@Nullable List<String> clientTags) {
             this.clientTags = Output.ofNullable(clientTags);
             return this;
         }
-
+        public Builder clientTags(String... clientTags) {
+            return clientTags(List.of(clientTags));
+        }
         public Builder continueOnFailure(@Nullable Output<Boolean> continueOnFailure) {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
-
         public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = Output.ofNullable(continueOnFailure);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfigGetArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
-
         public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = Output.ofNullable(queryFileUri);
             return this;
         }
-
         public Builder queryList(@Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList) {
             this.queryList = queryList;
             return this;
         }
-
         public Builder queryList(@Nullable WorkflowTemplateJobPrestoJobQueryListGetArgs queryList) {
             this.queryList = Output.ofNullable(queryList);
             return this;
-        }
-        public WorkflowTemplateJobPrestoJobGetArgs build() {
+        }        public WorkflowTemplateJobPrestoJobGetArgs build() {
             return new WorkflowTemplateJobPrestoJobGetArgs(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
         }
     }

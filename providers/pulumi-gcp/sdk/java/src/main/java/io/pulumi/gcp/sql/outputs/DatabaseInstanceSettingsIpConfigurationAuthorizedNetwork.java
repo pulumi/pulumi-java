@@ -93,17 +93,14 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork build() {
+        }        public DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork build() {
             return new DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork(expirationTime, name, value);
         }
     }

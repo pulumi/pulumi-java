@@ -78,12 +78,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionTimeout {
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleRouteActionTimeout build() {
+        }        public RegionUrlMapPathMatcherPathRuleRouteActionTimeout build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionTimeout(nanos, seconds);
         }
     }

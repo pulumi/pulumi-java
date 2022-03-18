@@ -57,12 +57,10 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs build() {
+        }        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(text);
         }
     }

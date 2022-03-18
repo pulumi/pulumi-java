@@ -186,82 +186,66 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(String config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
-
         public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = Output.ofNullable(numNodes);
             return this;
         }
-
         public Builder processingUnits(@Nullable Output<Integer> processingUnits) {
             this.processingUnits = processingUnits;
             return this;
         }
-
         public Builder processingUnits(@Nullable Integer processingUnits) {
             this.processingUnits = Output.ofNullable(processingUnits);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(config, displayName, forceDestroy, labels, name, numNodes, processingUnits, project);
         }
     }

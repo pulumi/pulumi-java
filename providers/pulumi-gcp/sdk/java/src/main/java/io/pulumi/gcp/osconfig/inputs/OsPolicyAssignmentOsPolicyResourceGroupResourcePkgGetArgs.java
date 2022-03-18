@@ -177,82 +177,66 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
             this.apt = apt;
             return this;
         }
-
         public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs apt) {
             this.apt = Output.ofNullable(apt);
             return this;
         }
-
         public Builder deb(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb) {
             this.deb = deb;
             return this;
         }
-
         public Builder deb(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs deb) {
             this.deb = Output.ofNullable(deb);
             return this;
         }
-
         public Builder desiredState(Output<String> desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
-
         public Builder desiredState(String desiredState) {
             this.desiredState = Output.of(Objects.requireNonNull(desiredState));
             return this;
         }
-
         public Builder googet(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet) {
             this.googet = googet;
             return this;
         }
-
         public Builder googet(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs googet) {
             this.googet = Output.ofNullable(googet);
             return this;
         }
-
         public Builder msi(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi) {
             this.msi = msi;
             return this;
         }
-
         public Builder msi(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs msi) {
             this.msi = Output.ofNullable(msi);
             return this;
         }
-
         public Builder rpm(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm) {
             this.rpm = rpm;
             return this;
         }
-
         public Builder rpm(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs rpm) {
             this.rpm = Output.ofNullable(rpm);
             return this;
         }
-
         public Builder yum(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs yum) {
             this.yum = Output.ofNullable(yum);
             return this;
         }
-
         public Builder zypper(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
-
         public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs zypper) {
             this.zypper = Output.ofNullable(zypper);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }
     }

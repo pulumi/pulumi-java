@@ -88,12 +88,10 @@ public final class SloRequestBasedSliDistributionCut {
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
-
         public Builder range(SloRequestBasedSliDistributionCutRange range) {
             this.range = Objects.requireNonNull(range);
             return this;
-        }
-        public SloRequestBasedSliDistributionCut build() {
+        }        public SloRequestBasedSliDistributionCut build() {
             return new SloRequestBasedSliDistributionCut(distributionFilter, range);
         }
     }

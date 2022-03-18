@@ -128,52 +128,42 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
             this.deidentifyConfig = deidentifyConfig;
             return this;
         }
-
         public Builder deidentifyConfig(@Nullable PreventionDeidentifyTemplateDeidentifyConfigGetArgs deidentifyConfig) {
             this.deidentifyConfig = Output.ofNullable(deidentifyConfig);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
-        }
-        public PreventionDeidentifyTemplateState build() {
+        }        public PreventionDeidentifyTemplateState build() {
             return new PreventionDeidentifyTemplateState(deidentifyConfig, description, displayName, name, parent);
         }
     }

@@ -162,72 +162,70 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
             this.allowCredentials = allowCredentials;
             return this;
         }
-
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = Output.ofNullable(allowCredentials);
             return this;
         }
-
         public Builder allowHeaders(@Nullable Output<List<String>> allowHeaders) {
             this.allowHeaders = allowHeaders;
             return this;
         }
-
         public Builder allowHeaders(@Nullable List<String> allowHeaders) {
             this.allowHeaders = Output.ofNullable(allowHeaders);
             return this;
         }
-
+        public Builder allowHeaders(String... allowHeaders) {
+            return allowHeaders(List.of(allowHeaders));
+        }
         public Builder allowMethods(@Nullable Output<List<String>> allowMethods) {
             this.allowMethods = allowMethods;
             return this;
         }
-
         public Builder allowMethods(@Nullable List<String> allowMethods) {
             this.allowMethods = Output.ofNullable(allowMethods);
             return this;
         }
-
+        public Builder allowMethods(String... allowMethods) {
+            return allowMethods(List.of(allowMethods));
+        }
         public Builder allowOrigins(@Nullable Output<List<String>> allowOrigins) {
             this.allowOrigins = allowOrigins;
             return this;
         }
-
         public Builder allowOrigins(@Nullable List<String> allowOrigins) {
             this.allowOrigins = Output.ofNullable(allowOrigins);
             return this;
         }
-
+        public Builder allowOrigins(String... allowOrigins) {
+            return allowOrigins(List.of(allowOrigins));
+        }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder exposeHeaders(@Nullable Output<List<String>> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
-
         public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
             this.exposeHeaders = Output.ofNullable(exposeHeaders);
             return this;
         }
-
+        public Builder exposeHeaders(String... exposeHeaders) {
+            return exposeHeaders(List.of(exposeHeaders));
+        }
         public Builder maxAge(Output<String> maxAge) {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }
-
         public Builder maxAge(String maxAge) {
             this.maxAge = Output.of(Objects.requireNonNull(maxAge));
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs(allowCredentials, allowHeaders, allowMethods, allowOrigins, disabled, exposeHeaders, maxAge);
         }
     }

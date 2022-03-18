@@ -293,77 +293,65 @@ public final class WorkflowTemplatePlacementManagedClusterConfig {
             this.autoscalingConfig = autoscalingConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder endpointConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfig endpointConfig) {
             this.endpointConfig = endpointConfig;
             return this;
         }
-
         public Builder gceClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig gceClusterConfig) {
             this.gceClusterConfig = gceClusterConfig;
             return this;
         }
-
         public Builder gkeClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig gkeClusterConfig) {
             this.gkeClusterConfig = gkeClusterConfig;
             return this;
         }
-
         public Builder initializationActions(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> initializationActions) {
             this.initializationActions = initializationActions;
             return this;
         }
-
+        public Builder initializationActions(WorkflowTemplatePlacementManagedClusterConfigInitializationAction... initializationActions) {
+            return initializationActions(List.of(initializationActions));
+        }
         public Builder lifecycleConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig lifecycleConfig) {
             this.lifecycleConfig = lifecycleConfig;
             return this;
         }
-
         public Builder masterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfig masterConfig) {
             this.masterConfig = masterConfig;
             return this;
         }
-
         public Builder metastoreConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig metastoreConfig) {
             this.metastoreConfig = metastoreConfig;
             return this;
         }
-
         public Builder secondaryWorkerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
-
         public Builder securityConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfig securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
-
         public Builder softwareConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
-
         public Builder stagingBucket(@Nullable String stagingBucket) {
             this.stagingBucket = stagingBucket;
             return this;
         }
-
         public Builder tempBucket(@Nullable String tempBucket) {
             this.tempBucket = tempBucket;
             return this;
         }
-
         public Builder workerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig) {
             this.workerConfig = workerConfig;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfig(autoscalingConfig, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, stagingBucket, tempBucket, workerConfig);
         }
     }

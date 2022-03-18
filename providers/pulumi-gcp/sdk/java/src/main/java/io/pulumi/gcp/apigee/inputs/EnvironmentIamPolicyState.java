@@ -103,42 +103,34 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
             this.envId = envId;
             return this;
         }
-
         public Builder envId(@Nullable String envId) {
             this.envId = Output.ofNullable(envId);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
-
         public Builder orgId(@Nullable String orgId) {
             this.orgId = Output.ofNullable(orgId);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public EnvironmentIamPolicyState build() {
+        }        public EnvironmentIamPolicyState build() {
             return new EnvironmentIamPolicyState(envId, etag, orgId, policyData);
         }
     }

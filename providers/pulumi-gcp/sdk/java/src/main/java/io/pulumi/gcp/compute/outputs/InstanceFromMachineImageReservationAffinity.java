@@ -56,12 +56,10 @@ public final class InstanceFromMachineImageReservationAffinity {
             this.specificReservation = specificReservation;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InstanceFromMachineImageReservationAffinity build() {
+        }        public InstanceFromMachineImageReservationAffinity build() {
             return new InstanceFromMachineImageReservationAffinity(specificReservation, type);
         }
     }

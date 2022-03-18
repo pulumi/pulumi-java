@@ -67,17 +67,14 @@ public final class DeviceLastErrorStatus {
             this.details = details;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder number(@Nullable Integer number) {
             this.number = number;
             return this;
-        }
-        public DeviceLastErrorStatus build() {
+        }        public DeviceLastErrorStatus build() {
             return new DeviceLastErrorStatus(details, message, number);
         }
     }

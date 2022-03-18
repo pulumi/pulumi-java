@@ -91,32 +91,26 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public BucketIAMPolicyState build() {
+        }        public BucketIAMPolicyState build() {
             return new BucketIAMPolicyState(bucket, etag, policyData);
         }
     }

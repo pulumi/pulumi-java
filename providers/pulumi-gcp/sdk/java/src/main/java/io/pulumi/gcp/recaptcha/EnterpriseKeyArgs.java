@@ -159,72 +159,58 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.androidSettings = androidSettings;
             return this;
         }
-
         public Builder androidSettings(@Nullable EnterpriseKeyAndroidSettingsArgs androidSettings) {
             this.androidSettings = Output.ofNullable(androidSettings);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder iosSettings(@Nullable Output<EnterpriseKeyIosSettingsArgs> iosSettings) {
             this.iosSettings = iosSettings;
             return this;
         }
-
         public Builder iosSettings(@Nullable EnterpriseKeyIosSettingsArgs iosSettings) {
             this.iosSettings = Output.ofNullable(iosSettings);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder testingOptions(@Nullable Output<EnterpriseKeyTestingOptionsArgs> testingOptions) {
             this.testingOptions = testingOptions;
             return this;
         }
-
         public Builder testingOptions(@Nullable EnterpriseKeyTestingOptionsArgs testingOptions) {
             this.testingOptions = Output.ofNullable(testingOptions);
             return this;
         }
-
         public Builder webSettings(@Nullable Output<EnterpriseKeyWebSettingsArgs> webSettings) {
             this.webSettings = webSettings;
             return this;
         }
-
         public Builder webSettings(@Nullable EnterpriseKeyWebSettingsArgs webSettings) {
             this.webSettings = Output.ofNullable(webSettings);
             return this;
-        }
-        public EnterpriseKeyArgs build() {
+        }        public EnterpriseKeyArgs build() {
             return new EnterpriseKeyArgs(androidSettings, displayName, iosSettings, labels, project, testingOptions, webSettings);
         }
     }

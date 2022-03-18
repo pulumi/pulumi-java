@@ -93,17 +93,17 @@ public final class InstanceFileShares {
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nfsExportOptions(@Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions) {
             this.nfsExportOptions = nfsExportOptions;
             return this;
         }
-        public InstanceFileShares build() {
+        public Builder nfsExportOptions(InstanceFileSharesNfsExportOption... nfsExportOptions) {
+            return nfsExportOptions(List.of(nfsExportOptions));
+        }        public InstanceFileShares build() {
             return new InstanceFileShares(capacityGb, name, nfsExportOptions);
         }
     }

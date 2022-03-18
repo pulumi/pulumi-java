@@ -106,22 +106,18 @@ public final class ConnectionCloudSql {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ConnectionCloudSql build() {
+        }        public ConnectionCloudSql build() {
             return new ConnectionCloudSql(credential, database, instanceId, type);
         }
     }

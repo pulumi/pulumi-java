@@ -344,152 +344,128 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
             this.adminEnabled = adminEnabled;
             return this;
         }
-
         public Builder adminEnabled(@Nullable Boolean adminEnabled) {
             this.adminEnabled = Output.ofNullable(adminEnabled);
             return this;
         }
-
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
-
         public Builder bandwidth(@Nullable String bandwidth) {
             this.bandwidth = Output.ofNullable(bandwidth);
             return this;
         }
-
         public Builder candidateSubnets(@Nullable Output<List<String>> candidateSubnets) {
             this.candidateSubnets = candidateSubnets;
             return this;
         }
-
         public Builder candidateSubnets(@Nullable List<String> candidateSubnets) {
             this.candidateSubnets = Output.ofNullable(candidateSubnets);
             return this;
         }
-
+        public Builder candidateSubnets(String... candidateSubnets) {
+            return candidateSubnets(List.of(candidateSubnets));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder edgeAvailabilityDomain(@Nullable Output<String> edgeAvailabilityDomain) {
             this.edgeAvailabilityDomain = edgeAvailabilityDomain;
             return this;
         }
-
         public Builder edgeAvailabilityDomain(@Nullable String edgeAvailabilityDomain) {
             this.edgeAvailabilityDomain = Output.ofNullable(edgeAvailabilityDomain);
             return this;
         }
-
         public Builder encryption(@Nullable Output<String> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable String encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder interconnect(@Nullable Output<String> interconnect) {
             this.interconnect = interconnect;
             return this;
         }
-
         public Builder interconnect(@Nullable String interconnect) {
             this.interconnect = Output.ofNullable(interconnect);
             return this;
         }
-
         public Builder ipsecInternalAddresses(@Nullable Output<List<String>> ipsecInternalAddresses) {
             this.ipsecInternalAddresses = ipsecInternalAddresses;
             return this;
         }
-
         public Builder ipsecInternalAddresses(@Nullable List<String> ipsecInternalAddresses) {
             this.ipsecInternalAddresses = Output.ofNullable(ipsecInternalAddresses);
             return this;
         }
-
+        public Builder ipsecInternalAddresses(String... ipsecInternalAddresses) {
+            return ipsecInternalAddresses(List.of(ipsecInternalAddresses));
+        }
         public Builder mtu(@Nullable Output<String> mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder mtu(@Nullable String mtu) {
             this.mtu = Output.ofNullable(mtu);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder router(Output<String> router) {
             this.router = Objects.requireNonNull(router);
             return this;
         }
-
         public Builder router(String router) {
             this.router = Output.of(Objects.requireNonNull(router));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder vlanTag8021q(@Nullable Output<Integer> vlanTag8021q) {
             this.vlanTag8021q = vlanTag8021q;
             return this;
         }
-
         public Builder vlanTag8021q(@Nullable Integer vlanTag8021q) {
             this.vlanTag8021q = Output.ofNullable(vlanTag8021q);
             return this;
-        }
-        public InterconnectAttachmentArgs build() {
+        }        public InterconnectAttachmentArgs build() {
             return new InterconnectAttachmentArgs(adminEnabled, bandwidth, candidateSubnets, description, edgeAvailabilityDomain, encryption, interconnect, ipsecInternalAddresses, mtu, name, project, region, router, type, vlanTag8021q);
         }
     }

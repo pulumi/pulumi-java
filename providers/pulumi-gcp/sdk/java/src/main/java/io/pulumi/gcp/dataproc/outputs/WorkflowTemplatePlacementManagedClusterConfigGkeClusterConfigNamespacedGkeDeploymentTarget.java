@@ -71,12 +71,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.clusterNamespace = clusterNamespace;
             return this;
         }
-
         public Builder targetGkeCluster(@Nullable String targetGkeCluster) {
             this.targetGkeCluster = targetGkeCluster;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget(clusterNamespace, targetGkeCluster);
         }
     }

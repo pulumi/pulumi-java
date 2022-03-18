@@ -56,12 +56,10 @@ public final class ClusterClusterConfigMetastoreConfigGetArgs extends io.pulumi.
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }
-
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             this.dataprocMetastoreService = Output.of(Objects.requireNonNull(dataprocMetastoreService));
             return this;
-        }
-        public ClusterClusterConfigMetastoreConfigGetArgs build() {
+        }        public ClusterClusterConfigMetastoreConfigGetArgs build() {
             return new ClusterClusterConfigMetastoreConfigGetArgs(dataprocMetastoreService);
         }
     }

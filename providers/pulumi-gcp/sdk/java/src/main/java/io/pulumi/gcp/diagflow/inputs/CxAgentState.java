@@ -278,142 +278,117 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
             this.avatarUri = avatarUri;
             return this;
         }
-
         public Builder avatarUri(@Nullable String avatarUri) {
             this.avatarUri = Output.ofNullable(avatarUri);
             return this;
         }
-
         public Builder defaultLanguageCode(@Nullable Output<String> defaultLanguageCode) {
             this.defaultLanguageCode = defaultLanguageCode;
             return this;
         }
-
         public Builder defaultLanguageCode(@Nullable String defaultLanguageCode) {
             this.defaultLanguageCode = Output.ofNullable(defaultLanguageCode);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enableSpellCorrection(@Nullable Output<Boolean> enableSpellCorrection) {
             this.enableSpellCorrection = enableSpellCorrection;
             return this;
         }
-
         public Builder enableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
             this.enableSpellCorrection = Output.ofNullable(enableSpellCorrection);
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder securitySettings(@Nullable Output<String> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
-
         public Builder securitySettings(@Nullable String securitySettings) {
             this.securitySettings = Output.ofNullable(securitySettings);
             return this;
         }
-
         public Builder speechToTextSettings(@Nullable Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings) {
             this.speechToTextSettings = speechToTextSettings;
             return this;
         }
-
         public Builder speechToTextSettings(@Nullable CxAgentSpeechToTextSettingsGetArgs speechToTextSettings) {
             this.speechToTextSettings = Output.ofNullable(speechToTextSettings);
             return this;
         }
-
         public Builder startFlow(@Nullable Output<String> startFlow) {
             this.startFlow = startFlow;
             return this;
         }
-
         public Builder startFlow(@Nullable String startFlow) {
             this.startFlow = Output.ofNullable(startFlow);
             return this;
         }
-
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
             this.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
-
         public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Output.ofNullable(supportedLanguageCodes);
             return this;
         }
-
+        public Builder supportedLanguageCodes(String... supportedLanguageCodes) {
+            return supportedLanguageCodes(List.of(supportedLanguageCodes));
+        }
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public CxAgentState build() {
+        }        public CxAgentState build() {
             return new CxAgentState(avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, location, name, project, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
         }
     }

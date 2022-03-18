@@ -105,42 +105,34 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             this.api = Objects.requireNonNull(api);
             return this;
         }
-
         public Builder api(String api) {
             this.api = Output.of(Objects.requireNonNull(api));
             return this;
         }
-
         public Builder apiConfig(Output<String> apiConfig) {
             this.apiConfig = Objects.requireNonNull(apiConfig);
             return this;
         }
-
         public Builder apiConfig(String apiConfig) {
             this.apiConfig = Output.of(Objects.requireNonNull(apiConfig));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ApiConfigIamPolicyArgs build() {
+        }        public ApiConfigIamPolicyArgs build() {
             return new ApiConfigIamPolicyArgs(api, apiConfig, policyData, project);
         }
     }

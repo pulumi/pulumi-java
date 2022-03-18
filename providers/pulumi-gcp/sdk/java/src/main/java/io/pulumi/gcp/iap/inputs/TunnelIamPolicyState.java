@@ -92,32 +92,26 @@ public final class TunnelIamPolicyState extends io.pulumi.resources.ResourceArgs
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public TunnelIamPolicyState build() {
+        }        public TunnelIamPolicyState build() {
             return new TunnelIamPolicyState(etag, policyData, project);
         }
     }

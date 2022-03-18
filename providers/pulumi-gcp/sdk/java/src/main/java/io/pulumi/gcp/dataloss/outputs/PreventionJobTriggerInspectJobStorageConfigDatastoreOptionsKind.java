@@ -51,8 +51,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind(name);
         }
     }

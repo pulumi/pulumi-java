@@ -102,32 +102,26 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder pendingManagedCertificateId(@Nullable Output<String> pendingManagedCertificateId) {
             this.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
-
         public Builder pendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
             this.pendingManagedCertificateId = Output.ofNullable(pendingManagedCertificateId);
             return this;
         }
-
         public Builder sslManagementType(Output<String> sslManagementType) {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }
-
         public Builder sslManagementType(String sslManagementType) {
             this.sslManagementType = Output.of(Objects.requireNonNull(sslManagementType));
             return this;
-        }
-        public DomainMappingSslSettingsArgs build() {
+        }        public DomainMappingSslSettingsArgs build() {
             return new DomainMappingSslSettingsArgs(certificateId, pendingManagedCertificateId, sslManagementType);
         }
     }

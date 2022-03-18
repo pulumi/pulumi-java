@@ -118,42 +118,34 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public InstanceBootDiskInitializeParamsGetArgs build() {
+        }        public InstanceBootDiskInitializeParamsGetArgs build() {
             return new InstanceBootDiskInitializeParamsGetArgs(image, labels, size, type);
         }
     }

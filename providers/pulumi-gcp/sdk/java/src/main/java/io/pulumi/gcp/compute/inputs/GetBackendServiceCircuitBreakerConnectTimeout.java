@@ -64,12 +64,10 @@ public final class GetBackendServiceCircuitBreakerConnectTimeout extends io.pulu
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public GetBackendServiceCircuitBreakerConnectTimeout build() {
+        }        public GetBackendServiceCircuitBreakerConnectTimeout build() {
             return new GetBackendServiceCircuitBreakerConnectTimeout(nanos, seconds);
         }
     }

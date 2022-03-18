@@ -106,22 +106,18 @@ public final class BillingAccountSinkExclusion {
             this.description = description;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public BillingAccountSinkExclusion build() {
+        }        public BillingAccountSinkExclusion build() {
             return new BillingAccountSinkExclusion(description, disabled, filter, name);
         }
     }

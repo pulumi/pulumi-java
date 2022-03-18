@@ -53,8 +53,7 @@ public final class ClusterClusterConfigEncryptionConfig {
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public ClusterClusterConfigEncryptionConfig build() {
+        }        public ClusterClusterConfigEncryptionConfig build() {
             return new ClusterClusterConfigEncryptionConfig(kmsKeyName);
         }
     }

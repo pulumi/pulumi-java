@@ -133,52 +133,42 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
             this.appEngineRouting = appEngineRouting;
             return this;
         }
-
         public Builder appEngineRouting(@Nullable JobAppEngineHttpTargetAppEngineRoutingGetArgs appEngineRouting) {
             this.appEngineRouting = Output.ofNullable(appEngineRouting);
             return this;
         }
-
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder relativeUri(Output<String> relativeUri) {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }
-
         public Builder relativeUri(String relativeUri) {
             this.relativeUri = Output.of(Objects.requireNonNull(relativeUri));
             return this;
-        }
-        public JobAppEngineHttpTargetGetArgs build() {
+        }        public JobAppEngineHttpTargetGetArgs build() {
             return new JobAppEngineHttpTargetGetArgs(appEngineRouting, body, headers, httpMethod, relativeUri);
         }
     }

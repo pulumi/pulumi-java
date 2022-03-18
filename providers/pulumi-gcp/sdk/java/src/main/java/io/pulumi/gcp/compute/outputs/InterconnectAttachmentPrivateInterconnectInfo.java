@@ -45,8 +45,7 @@ public final class InterconnectAttachmentPrivateInterconnectInfo {
         public Builder tag8021q(@Nullable Integer tag8021q) {
             this.tag8021q = tag8021q;
             return this;
-        }
-        public InterconnectAttachmentPrivateInterconnectInfo build() {
+        }        public InterconnectAttachmentPrivateInterconnectInfo build() {
             return new InterconnectAttachmentPrivateInterconnectInfo(tag8021q);
         }
     }

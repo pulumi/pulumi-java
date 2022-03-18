@@ -119,42 +119,37 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder weeklyMaintenanceWindows(@Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows) {
             this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }
-
         public Builder weeklyMaintenanceWindows(@Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs> weeklyMaintenanceWindows) {
             this.weeklyMaintenanceWindows = Output.ofNullable(weeklyMaintenanceWindows);
             return this;
         }
-        public InstanceMaintenancePolicyGetArgs build() {
+        public Builder weeklyMaintenanceWindows(InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs... weeklyMaintenanceWindows) {
+            return weeklyMaintenanceWindows(List.of(weeklyMaintenanceWindows));
+        }        public InstanceMaintenancePolicyGetArgs build() {
             return new InstanceMaintenancePolicyGetArgs(createTime, description, updateTime, weeklyMaintenanceWindows);
         }
     }

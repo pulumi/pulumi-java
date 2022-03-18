@@ -90,32 +90,26 @@ public final class UsageExportBucketState extends io.pulumi.resources.ResourceAr
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public UsageExportBucketState build() {
+        }        public UsageExportBucketState build() {
             return new UsageExportBucketState(bucketName, prefix, project);
         }
     }

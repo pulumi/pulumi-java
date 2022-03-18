@@ -153,27 +153,25 @@ public final class SubnetworkLogConfig {
             this.aggregationInterval = aggregationInterval;
             return this;
         }
-
         public Builder filterExpr(@Nullable String filterExpr) {
             this.filterExpr = filterExpr;
             return this;
         }
-
         public Builder flowSampling(@Nullable Double flowSampling) {
             this.flowSampling = flowSampling;
             return this;
         }
-
         public Builder metadata(@Nullable String metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadataFields(@Nullable List<String> metadataFields) {
             this.metadataFields = metadataFields;
             return this;
         }
-        public SubnetworkLogConfig build() {
+        public Builder metadataFields(String... metadataFields) {
+            return metadataFields(List.of(metadataFields));
+        }        public SubnetworkLogConfig build() {
             return new SubnetworkLogConfig(aggregationInterval, filterExpr, flowSampling, metadata, metadataFields);
         }
     }

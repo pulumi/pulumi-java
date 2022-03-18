@@ -113,42 +113,34 @@ public final class GuestPoliciesRecipeInstallStepFileCopyArgs extends io.pulumi.
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder artifactId(String artifactId) {
             this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
         }
-
         public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
-
         public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = Output.ofNullable(overwrite);
             return this;
         }
-
         public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
-        }
-        public GuestPoliciesRecipeInstallStepFileCopyArgs build() {
+        }        public GuestPoliciesRecipeInstallStepFileCopyArgs build() {
             return new GuestPoliciesRecipeInstallStepFileCopyArgs(artifactId, destination, overwrite, permissions);
         }
     }

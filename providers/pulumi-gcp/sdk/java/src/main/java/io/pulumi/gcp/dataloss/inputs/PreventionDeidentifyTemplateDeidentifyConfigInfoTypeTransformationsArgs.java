@@ -58,12 +58,13 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
-
         public Builder transformations(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs> transformations) {
             this.transformations = Output.of(Objects.requireNonNull(transformations));
             return this;
         }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs build() {
+        public Builder transformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs... transformations) {
+            return transformations(List.of(transformations));
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs(transformations);
         }
     }

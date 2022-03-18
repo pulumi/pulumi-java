@@ -149,62 +149,53 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder origin(@Nullable Output<String> origin) {
             this.origin = origin;
             return this;
         }
-
         public Builder origin(@Nullable String origin) {
             this.origin = Output.ofNullable(origin);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
         }
-
         public Builder restrictions(@Nullable Output<List<String>> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
-
         public Builder restrictions(@Nullable List<String> restrictions) {
             this.restrictions = Output.ofNullable(restrictions);
             return this;
         }
-        public LienState build() {
+        public Builder restrictions(String... restrictions) {
+            return restrictions(List.of(restrictions));
+        }        public LienState build() {
             return new LienState(createTime, name, origin, parent, reason, restrictions);
         }
     }

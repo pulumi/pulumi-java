@@ -79,22 +79,18 @@ public final class ServicePerimeterStatusIngressPolicyArgs extends io.pulumi.res
             this.ingressFrom = ingressFrom;
             return this;
         }
-
         public Builder ingressFrom(@Nullable ServicePerimeterStatusIngressPolicyIngressFromArgs ingressFrom) {
             this.ingressFrom = Output.ofNullable(ingressFrom);
             return this;
         }
-
         public Builder ingressTo(@Nullable Output<ServicePerimeterStatusIngressPolicyIngressToArgs> ingressTo) {
             this.ingressTo = ingressTo;
             return this;
         }
-
         public Builder ingressTo(@Nullable ServicePerimeterStatusIngressPolicyIngressToArgs ingressTo) {
             this.ingressTo = Output.ofNullable(ingressTo);
             return this;
-        }
-        public ServicePerimeterStatusIngressPolicyArgs build() {
+        }        public ServicePerimeterStatusIngressPolicyArgs build() {
             return new ServicePerimeterStatusIngressPolicyArgs(ingressFrom, ingressTo);
         }
     }

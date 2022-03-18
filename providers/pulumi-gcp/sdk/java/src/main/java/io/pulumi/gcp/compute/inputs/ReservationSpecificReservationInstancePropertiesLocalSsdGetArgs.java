@@ -77,22 +77,18 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdGetAr
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Output.of(Objects.requireNonNull(diskSizeGb));
             return this;
         }
-
         public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = Output.ofNullable($interface);
             return this;
-        }
-        public ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs build() {
+        }        public ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs build() {
             return new ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs(diskSizeGb, $interface);
         }
     }

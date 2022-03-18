@@ -89,22 +89,18 @@ public final class GetDatabaseInstanceSettingInsightsConfig extends io.pulumi.re
             this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled);
             return this;
         }
-
         public Builder queryStringLength(Integer queryStringLength) {
             this.queryStringLength = Objects.requireNonNull(queryStringLength);
             return this;
         }
-
         public Builder recordApplicationTags(Boolean recordApplicationTags) {
             this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags);
             return this;
         }
-
         public Builder recordClientAddress(Boolean recordClientAddress) {
             this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
             return this;
-        }
-        public GetDatabaseInstanceSettingInsightsConfig build() {
+        }        public GetDatabaseInstanceSettingInsightsConfig build() {
             return new GetDatabaseInstanceSettingInsightsConfig(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
         }
     }

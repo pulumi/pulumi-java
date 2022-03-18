@@ -71,12 +71,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
             this.windowAfter = windowAfter;
             return this;
         }
-
         public Builder windowBefore(@Nullable Integer windowBefore) {
             this.windowBefore = windowBefore;
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity(windowAfter, windowBefore);
         }
     }

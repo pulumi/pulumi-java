@@ -68,12 +68,10 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends io.pulumi.
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetServiceTemplateSpecContainerVolumeMount build() {
+        }        public GetServiceTemplateSpecContainerVolumeMount build() {
             return new GetServiceTemplateSpecContainerVolumeMount(mountPath, name);
         }
     }

@@ -64,17 +64,23 @@ public final class GetResourcePolicySnapshotSchedulePolicy {
             this.retentionPolicies = Objects.requireNonNull(retentionPolicies);
             return this;
         }
-
+        public Builder retentionPolicies(GetResourcePolicySnapshotSchedulePolicyRetentionPolicy... retentionPolicies) {
+            return retentionPolicies(List.of(retentionPolicies));
+        }
         public Builder schedules(List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
+        public Builder schedules(GetResourcePolicySnapshotSchedulePolicySchedule... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder snapshotProperties(List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }
-        public GetResourcePolicySnapshotSchedulePolicy build() {
+        public Builder snapshotProperties(GetResourcePolicySnapshotSchedulePolicySnapshotProperty... snapshotProperties) {
+            return snapshotProperties(List.of(snapshotProperties));
+        }        public GetResourcePolicySnapshotSchedulePolicy build() {
             return new GetResourcePolicySnapshotSchedulePolicy(retentionPolicies, schedules, snapshotProperties);
         }
     }

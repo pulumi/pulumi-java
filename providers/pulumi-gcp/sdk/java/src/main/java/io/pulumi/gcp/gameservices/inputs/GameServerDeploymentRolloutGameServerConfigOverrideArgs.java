@@ -76,22 +76,18 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
             this.configVersion = configVersion;
             return this;
         }
-
         public Builder configVersion(@Nullable String configVersion) {
             this.configVersion = Output.ofNullable(configVersion);
             return this;
         }
-
         public Builder realmsSelector(@Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector) {
             this.realmsSelector = realmsSelector;
             return this;
         }
-
         public Builder realmsSelector(@Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs realmsSelector) {
             this.realmsSelector = Output.ofNullable(realmsSelector);
             return this;
-        }
-        public GameServerDeploymentRolloutGameServerConfigOverrideArgs build() {
+        }        public GameServerDeploymentRolloutGameServerConfigOverrideArgs build() {
             return new GameServerDeploymentRolloutGameServerConfigOverrideArgs(configVersion, realmsSelector);
         }
     }

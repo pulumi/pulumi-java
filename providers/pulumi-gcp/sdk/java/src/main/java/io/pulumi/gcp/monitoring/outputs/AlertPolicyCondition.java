@@ -173,32 +173,26 @@ public final class AlertPolicyCondition {
             this.conditionAbsent = conditionAbsent;
             return this;
         }
-
         public Builder conditionMatchedLog(@Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog) {
             this.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
-
         public Builder conditionMonitoringQueryLanguage(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
-
         public Builder conditionThreshold(@Nullable AlertPolicyConditionConditionThreshold conditionThreshold) {
             this.conditionThreshold = conditionThreshold;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public AlertPolicyCondition build() {
+        }        public AlertPolicyCondition build() {
             return new AlertPolicyCondition(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }
     }

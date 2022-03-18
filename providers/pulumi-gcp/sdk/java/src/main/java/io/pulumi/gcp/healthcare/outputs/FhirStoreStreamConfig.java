@@ -86,12 +86,13 @@ public final class FhirStoreStreamConfig {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
-        public FhirStoreStreamConfig build() {
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }        public FhirStoreStreamConfig build() {
             return new FhirStoreStreamConfig(bigqueryDestination, resourceTypes);
         }
     }

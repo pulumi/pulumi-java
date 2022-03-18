@@ -87,12 +87,10 @@ public final class SubscriptionPushConfigOidcToken {
             this.audience = audience;
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
-        }
-        public SubscriptionPushConfigOidcToken build() {
+        }        public SubscriptionPushConfigOidcToken build() {
             return new SubscriptionPushConfigOidcToken(audience, serviceAccountEmail);
         }
     }

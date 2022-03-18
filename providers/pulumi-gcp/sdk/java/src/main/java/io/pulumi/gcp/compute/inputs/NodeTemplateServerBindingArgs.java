@@ -67,12 +67,10 @@ public final class NodeTemplateServerBindingArgs extends io.pulumi.resources.Res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public NodeTemplateServerBindingArgs build() {
+        }        public NodeTemplateServerBindingArgs build() {
             return new NodeTemplateServerBindingArgs(type);
         }
     }

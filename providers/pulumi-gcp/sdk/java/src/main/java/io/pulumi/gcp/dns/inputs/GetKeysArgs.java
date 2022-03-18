@@ -74,12 +74,10 @@ public final class GetKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetKeysArgs build() {
+        }        public GetKeysArgs build() {
             return new GetKeysArgs(managedZone, project);
         }
     }

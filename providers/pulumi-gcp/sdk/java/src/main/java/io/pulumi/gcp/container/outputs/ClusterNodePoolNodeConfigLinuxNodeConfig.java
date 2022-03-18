@@ -56,8 +56,7 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfig {
         public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
-        }
-        public ClusterNodePoolNodeConfigLinuxNodeConfig build() {
+        }        public ClusterNodePoolNodeConfigLinuxNodeConfig build() {
             return new ClusterNodePoolNodeConfigLinuxNodeConfig(sysctls);
         }
     }

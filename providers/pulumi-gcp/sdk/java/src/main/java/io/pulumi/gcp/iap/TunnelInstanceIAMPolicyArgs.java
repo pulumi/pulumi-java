@@ -104,42 +104,34 @@ public final class TunnelInstanceIAMPolicyArgs extends io.pulumi.resources.Resou
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public TunnelInstanceIAMPolicyArgs build() {
+        }        public TunnelInstanceIAMPolicyArgs build() {
             return new TunnelInstanceIAMPolicyArgs(instance, policyData, project, zone);
         }
     }

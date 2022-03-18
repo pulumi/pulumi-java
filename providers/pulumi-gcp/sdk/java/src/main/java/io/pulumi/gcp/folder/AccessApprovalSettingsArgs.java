@@ -98,32 +98,32 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
             this.enrolledServices = Objects.requireNonNull(enrolledServices);
             return this;
         }
-
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
             this.enrolledServices = Output.of(Objects.requireNonNull(enrolledServices));
             return this;
         }
-
+        public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
+            return enrolledServices(List.of(enrolledServices));
+        }
         public Builder folderId(Output<String> folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public Builder folderId(String folderId) {
             this.folderId = Output.of(Objects.requireNonNull(folderId));
             return this;
         }
-
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
-
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
             this.notificationEmails = Output.ofNullable(notificationEmails);
             return this;
         }
-        public AccessApprovalSettingsArgs build() {
+        public Builder notificationEmails(String... notificationEmails) {
+            return notificationEmails(List.of(notificationEmails));
+        }        public AccessApprovalSettingsArgs build() {
             return new AccessApprovalSettingsArgs(enrolledServices, folderId, notificationEmails);
         }
     }

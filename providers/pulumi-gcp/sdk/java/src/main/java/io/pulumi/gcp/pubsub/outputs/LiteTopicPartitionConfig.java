@@ -74,12 +74,10 @@ public final class LiteTopicPartitionConfig {
             this.capacity = capacity;
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
-        }
-        public LiteTopicPartitionConfig build() {
+        }        public LiteTopicPartitionConfig build() {
             return new LiteTopicPartitionConfig(capacity, count);
         }
     }

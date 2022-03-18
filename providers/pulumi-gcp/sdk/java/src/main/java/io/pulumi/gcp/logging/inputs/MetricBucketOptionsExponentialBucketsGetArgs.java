@@ -91,32 +91,26 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
             this.growthFactor = growthFactor;
             return this;
         }
-
         public Builder growthFactor(@Nullable Double growthFactor) {
             this.growthFactor = Output.ofNullable(growthFactor);
             return this;
         }
-
         public Builder numFiniteBuckets(@Nullable Output<Integer> numFiniteBuckets) {
             this.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
-
         public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
             this.numFiniteBuckets = Output.ofNullable(numFiniteBuckets);
             return this;
         }
-
         public Builder scale(@Nullable Output<Double> scale) {
             this.scale = scale;
             return this;
         }
-
         public Builder scale(@Nullable Double scale) {
             this.scale = Output.ofNullable(scale);
             return this;
-        }
-        public MetricBucketOptionsExponentialBucketsGetArgs build() {
+        }        public MetricBucketOptionsExponentialBucketsGetArgs build() {
             return new MetricBucketOptionsExponentialBucketsGetArgs(growthFactor, numFiniteBuckets, scale);
         }
     }

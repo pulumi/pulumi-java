@@ -50,8 +50,7 @@ public final class GetClusterDefaultSnatStatus extends io.pulumi.resources.Invok
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public GetClusterDefaultSnatStatus build() {
+        }        public GetClusterDefaultSnatStatus build() {
             return new GetClusterDefaultSnatStatus(disabled);
         }
     }

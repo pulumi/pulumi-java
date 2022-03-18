@@ -98,32 +98,29 @@ public final class GetRepositoryResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder pubsubConfigs(List<GetRepositoryPubsubConfig> pubsubConfigs) {
             this.pubsubConfigs = Objects.requireNonNull(pubsubConfigs);
             return this;
         }
-
+        public Builder pubsubConfigs(GetRepositoryPubsubConfig... pubsubConfigs) {
+            return pubsubConfigs(List.of(pubsubConfigs));
+        }
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GetRepositoryResult build() {
+        }        public GetRepositoryResult build() {
             return new GetRepositoryResult(id, name, project, pubsubConfigs, size, url);
         }
     }

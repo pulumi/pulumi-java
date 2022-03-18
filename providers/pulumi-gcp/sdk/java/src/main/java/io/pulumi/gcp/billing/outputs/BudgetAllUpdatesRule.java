@@ -127,22 +127,21 @@ public final class BudgetAllUpdatesRule {
             this.disableDefaultIamRecipients = disableDefaultIamRecipients;
             return this;
         }
-
         public Builder monitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = monitoringNotificationChannels;
             return this;
         }
-
+        public Builder monitoringNotificationChannels(String... monitoringNotificationChannels) {
+            return monitoringNotificationChannels(List.of(monitoringNotificationChannels));
+        }
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
-
         public Builder schemaVersion(@Nullable String schemaVersion) {
             this.schemaVersion = schemaVersion;
             return this;
-        }
-        public BudgetAllUpdatesRule build() {
+        }        public BudgetAllUpdatesRule build() {
             return new BudgetAllUpdatesRule(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
         }
     }

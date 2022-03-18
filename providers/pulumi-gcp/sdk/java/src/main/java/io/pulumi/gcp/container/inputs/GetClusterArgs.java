@@ -93,17 +93,14 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetClusterArgs build() {
+        }        public GetClusterArgs build() {
             return new GetClusterArgs(location, name, project);
         }
     }

@@ -71,12 +71,10 @@ public final class MetricDescriptorMetadata {
             this.ingestDelay = ingestDelay;
             return this;
         }
-
         public Builder samplePeriod(@Nullable String samplePeriod) {
             this.samplePeriod = samplePeriod;
             return this;
-        }
-        public MetricDescriptorMetadata build() {
+        }        public MetricDescriptorMetadata build() {
             return new MetricDescriptorMetadata(ingestDelay, samplePeriod);
         }
     }

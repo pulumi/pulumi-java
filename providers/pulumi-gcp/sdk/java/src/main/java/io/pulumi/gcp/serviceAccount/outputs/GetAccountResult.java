@@ -139,37 +139,30 @@ public final class GetAccountResult {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
-        }
-        public GetAccountResult build() {
+        }        public GetAccountResult build() {
             return new GetAccountResult(accountId, displayName, email, id, name, project, uniqueId);
         }
     }

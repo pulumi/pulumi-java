@@ -134,62 +134,50 @@ public final class TopicIAMMemberState extends io.pulumi.resources.ResourceArgs 
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable TopicIAMMemberConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
-
         public Builder member(@Nullable String member) {
             this.member = Output.ofNullable(member);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public TopicIAMMemberState build() {
+        }        public TopicIAMMemberState build() {
             return new TopicIAMMemberState(condition, etag, member, project, role, topic);
         }
     }

@@ -86,32 +86,26 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
             this.envId = Objects.requireNonNull(envId);
             return this;
         }
-
         public Builder envId(String envId) {
             this.envId = Output.of(Objects.requireNonNull(envId));
             return this;
         }
-
         public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
-        }
-        public EnvironmentIamPolicyArgs build() {
+        }        public EnvironmentIamPolicyArgs build() {
             return new EnvironmentIamPolicyArgs(envId, orgId, policyData);
         }
     }

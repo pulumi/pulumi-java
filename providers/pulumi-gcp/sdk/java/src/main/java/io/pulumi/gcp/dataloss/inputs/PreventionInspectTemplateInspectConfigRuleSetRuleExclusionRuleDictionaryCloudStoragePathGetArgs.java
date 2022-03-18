@@ -56,12 +56,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathGetArgs(path);
         }
     }

@@ -56,12 +56,10 @@ public final class InstanceConfidentialInstanceConfigGetArgs extends io.pulumi.r
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
-
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             this.enableConfidentialCompute = Output.of(Objects.requireNonNull(enableConfidentialCompute));
             return this;
-        }
-        public InstanceConfidentialInstanceConfigGetArgs build() {
+        }        public InstanceConfidentialInstanceConfigGetArgs build() {
             return new InstanceConfidentialInstanceConfigGetArgs(enableConfidentialCompute);
         }
     }

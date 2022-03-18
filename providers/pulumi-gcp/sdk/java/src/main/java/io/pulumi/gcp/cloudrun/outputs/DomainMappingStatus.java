@@ -75,22 +75,24 @@ public final class DomainMappingStatus {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(DomainMappingStatusCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder mappedRouteName(@Nullable String mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder resourceRecords(@Nullable List<DomainMappingStatusResourceRecord> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
-        public DomainMappingStatus build() {
+        public Builder resourceRecords(DomainMappingStatusResourceRecord... resourceRecords) {
+            return resourceRecords(List.of(resourceRecords));
+        }        public DomainMappingStatus build() {
             return new DomainMappingStatus(conditions, mappedRouteName, observedGeneration, resourceRecords);
         }
     }
