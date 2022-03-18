@@ -53,8 +53,7 @@ public final class SiteConfigResponse {
         public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
-        }
-        public SiteConfigResponse build() {
+        }        public SiteConfigResponse build() {
             return new SiteConfigResponse(netFrameworkVersion);
         }
     }

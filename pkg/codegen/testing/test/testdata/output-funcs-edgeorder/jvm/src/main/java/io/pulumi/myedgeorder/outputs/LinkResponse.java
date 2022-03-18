@@ -69,12 +69,10 @@ public final class LinkResponse {
             this.linkType = Objects.requireNonNull(linkType);
             return this;
         }
-
         public Builder linkUrl(String linkUrl) {
             this.linkUrl = Objects.requireNonNull(linkUrl);
             return this;
-        }
-        public LinkResponse build() {
+        }        public LinkResponse build() {
             return new LinkResponse(linkType, linkUrl);
         }
     }

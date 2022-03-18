@@ -250,132 +250,106 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.optional_bool = optional_bool;
             return this;
         }
-
         public Builder optional_bool(@Nullable Boolean optional_bool) {
             this.optional_bool = Output.ofNullable(optional_bool);
             return this;
         }
-
         public Builder optional_const(@Nullable Output<String> optional_const) {
             this.optional_const = optional_const;
             return this;
         }
-
         public Builder optional_const(@Nullable String optional_const) {
             this.optional_const = Output.ofNullable(optional_const);
             return this;
         }
-
         public Builder optional_enum(@Nullable Output<EnumThing> optional_enum) {
             this.optional_enum = optional_enum;
             return this;
         }
-
         public Builder optional_enum(@Nullable EnumThing optional_enum) {
             this.optional_enum = Output.ofNullable(optional_enum);
             return this;
         }
-
         public Builder optional_number(@Nullable Output<Double> optional_number) {
             this.optional_number = optional_number;
             return this;
         }
-
         public Builder optional_number(@Nullable Double optional_number) {
             this.optional_number = Output.ofNullable(optional_number);
             return this;
         }
-
         public Builder optional_string(@Nullable Output<String> optional_string) {
             this.optional_string = optional_string;
             return this;
         }
-
         public Builder optional_string(@Nullable String optional_string) {
             this.optional_string = Output.ofNullable(optional_string);
             return this;
         }
-
         public Builder plain_optional_bool(@Nullable Boolean plain_optional_bool) {
             this.plain_optional_bool = plain_optional_bool;
             return this;
         }
-
         public Builder plain_optional_const(@Nullable String plain_optional_const) {
             this.plain_optional_const = plain_optional_const;
             return this;
         }
-
         public Builder plain_optional_number(@Nullable Double plain_optional_number) {
             this.plain_optional_number = plain_optional_number;
             return this;
         }
-
         public Builder plain_optional_string(@Nullable String plain_optional_string) {
             this.plain_optional_string = plain_optional_string;
             return this;
         }
-
         public Builder plain_required_bool(Boolean plain_required_bool) {
             this.plain_required_bool = Objects.requireNonNull(plain_required_bool);
             return this;
         }
-
         public Builder plain_required_const(String plain_required_const) {
             this.plain_required_const = Objects.requireNonNull(plain_required_const);
             return this;
         }
-
         public Builder plain_required_number(Double plain_required_number) {
             this.plain_required_number = Objects.requireNonNull(plain_required_number);
             return this;
         }
-
         public Builder plain_required_string(String plain_required_string) {
             this.plain_required_string = Objects.requireNonNull(plain_required_string);
             return this;
         }
-
         public Builder required_bool(Output<Boolean> required_bool) {
             this.required_bool = Objects.requireNonNull(required_bool);
             return this;
         }
-
         public Builder required_bool(Boolean required_bool) {
             this.required_bool = Output.of(Objects.requireNonNull(required_bool));
             return this;
         }
-
         public Builder required_enum(Output<EnumThing> required_enum) {
             this.required_enum = Objects.requireNonNull(required_enum);
             return this;
         }
-
         public Builder required_enum(EnumThing required_enum) {
             this.required_enum = Output.of(Objects.requireNonNull(required_enum));
             return this;
         }
-
         public Builder required_number(Output<Double> required_number) {
             this.required_number = Objects.requireNonNull(required_number);
             return this;
         }
-
         public Builder required_number(Double required_number) {
             this.required_number = Output.of(Objects.requireNonNull(required_number));
             return this;
         }
-
         public Builder required_string(Output<String> required_string) {
             this.required_string = Objects.requireNonNull(required_string);
             return this;
         }
-
         public Builder required_string(String required_string) {
             this.required_string = Output.of(Objects.requireNonNull(required_string));
             return this;
-        }
-        public ModuleResourceArgs build() {
+        }        public ModuleResourceArgs build() {
             return new ModuleResourceArgs(optional_bool, optional_const, optional_enum, optional_number, optional_string, plain_optional_bool, plain_optional_const, plain_optional_number, plain_optional_string, plain_required_bool, plain_required_const, plain_required_number, plain_required_string, required_bool, required_enum, required_number, required_string);
         }
     }

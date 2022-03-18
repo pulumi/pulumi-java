@@ -64,17 +64,14 @@ public final class Toy {
             this.associated = associated;
             return this;
         }
-
         public Builder color(@Nullable String color) {
             this.color = color;
             return this;
         }
-
         public Builder wear(@Nullable Double wear) {
             this.wear = wear;
             return this;
-        }
-        public Toy build() {
+        }        public Toy build() {
             return new Toy(associated, color, wear);
         }
     }

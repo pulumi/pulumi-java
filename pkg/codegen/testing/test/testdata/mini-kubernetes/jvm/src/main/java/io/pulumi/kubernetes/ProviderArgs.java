@@ -108,42 +108,34 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
         }
-
         public Builder context(@Nullable Output<String> context) {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
             this.kubeClientSettings = kubeClientSettings;
             return this;
         }
-
         public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
             this.kubeClientSettings = Output.ofNullable(kubeClientSettings);
             return this;
         }
-
         public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
         }
-
         public Builder kubeconfig(@Nullable String kubeconfig) {
             this.kubeconfig = Output.ofNullable(kubeconfig);
             return this;
-        }
-        public ProviderArgs build() {
+        }        public ProviderArgs build() {
             return new ProviderArgs(cluster, context, kubeClientSettings, kubeconfig);
         }
     }

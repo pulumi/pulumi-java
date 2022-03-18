@@ -69,12 +69,10 @@ public final class SpecificationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SpecificationResponse build() {
+        }        public SpecificationResponse build() {
             return new SpecificationResponse(name, value);
         }
     }

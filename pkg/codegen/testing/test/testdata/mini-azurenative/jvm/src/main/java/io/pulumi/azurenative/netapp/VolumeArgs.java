@@ -70,22 +70,18 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.throughputMibps = throughputMibps;
             return this;
         }
-
         public Builder throughputMibps(@Nullable Double throughputMibps) {
             this.throughputMibps = Output.ofNullable(throughputMibps);
             return this;
         }
-
         public Builder usageThreshold(Output<Double> usageThreshold) {
             this.usageThreshold = Objects.requireNonNull(usageThreshold);
             return this;
         }
-
         public Builder usageThreshold(Double usageThreshold) {
             this.usageThreshold = Output.of(Objects.requireNonNull(usageThreshold));
             return this;
-        }
-        public VolumeArgs build() {
+        }        public VolumeArgs build() {
             return new VolumeArgs(throughputMibps, usageThreshold);
         }
     }

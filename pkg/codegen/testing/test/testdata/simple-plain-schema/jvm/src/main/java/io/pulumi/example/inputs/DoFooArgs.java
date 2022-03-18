@@ -50,8 +50,7 @@ public final class DoFooArgs extends io.pulumi.resources.InvokeArgs {
         public Builder foo(Foo foo) {
             this.foo = Objects.requireNonNull(foo);
             return this;
-        }
-        public DoFooArgs build() {
+        }        public DoFooArgs build() {
             return new DoFooArgs(foo);
         }
     }

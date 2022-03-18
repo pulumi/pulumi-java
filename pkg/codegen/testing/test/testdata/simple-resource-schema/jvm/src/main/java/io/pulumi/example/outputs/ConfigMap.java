@@ -45,8 +45,7 @@ public final class ConfigMap {
         public Builder config(@Nullable String config) {
             this.config = config;
             return this;
-        }
-        public ConfigMap build() {
+        }        public ConfigMap build() {
             return new ConfigMap(config);
         }
     }

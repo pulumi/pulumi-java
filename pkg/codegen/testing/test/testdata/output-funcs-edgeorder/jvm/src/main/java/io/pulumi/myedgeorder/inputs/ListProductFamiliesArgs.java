@@ -110,22 +110,18 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
             this.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder filterableProperties(Map<String,List<FilterableProperty>> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }
-        public ListProductFamiliesArgs build() {
+        }        public ListProductFamiliesArgs build() {
             return new ListProductFamiliesArgs(customerSubscriptionDetails, expand, filterableProperties, skipToken);
         }
     }

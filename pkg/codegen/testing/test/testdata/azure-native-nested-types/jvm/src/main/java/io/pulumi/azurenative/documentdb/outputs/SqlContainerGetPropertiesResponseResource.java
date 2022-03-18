@@ -53,8 +53,7 @@ public final class SqlContainerGetPropertiesResponseResource {
         public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
             this.indexingPolicy = indexingPolicy;
             return this;
-        }
-        public SqlContainerGetPropertiesResponseResource build() {
+        }        public SqlContainerGetPropertiesResponseResource build() {
             return new SqlContainerGetPropertiesResponseResource(indexingPolicy);
         }
     }

@@ -78,12 +78,10 @@ public final class CustomerSubscriptionRegisteredFeatures extends io.pulumi.reso
             this.name = name;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public CustomerSubscriptionRegisteredFeatures build() {
+        }        public CustomerSubscriptionRegisteredFeatures build() {
             return new CustomerSubscriptionRegisteredFeatures(name, state);
         }
     }

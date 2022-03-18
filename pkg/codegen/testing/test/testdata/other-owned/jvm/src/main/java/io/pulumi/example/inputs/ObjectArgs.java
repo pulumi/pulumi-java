@@ -115,52 +115,45 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
             this.bar = bar;
             return this;
         }
-
         public Builder bar(@Nullable String bar) {
             this.bar = Output.ofNullable(bar);
             return this;
         }
-
         public Builder configs(@Nullable Output<List<ConfigMapArgs>> configs) {
             this.configs = configs;
             return this;
         }
-
         public Builder configs(@Nullable List<ConfigMapArgs> configs) {
             this.configs = Output.ofNullable(configs);
             return this;
         }
-
+        public Builder configs(ConfigMapArgs... configs) {
+            return configs(List.of(configs));
+        }
         public Builder foo(@Nullable Output<Resource> foo) {
             this.foo = foo;
             return this;
         }
-
         public Builder foo(@Nullable Resource foo) {
             this.foo = Output.ofNullable(foo);
             return this;
         }
-
         public Builder others(@Nullable Output<List<List<SomeOtherObjectArgs>>> others) {
             this.others = others;
             return this;
         }
-
         public Builder others(@Nullable List<List<SomeOtherObjectArgs>> others) {
             this.others = Output.ofNullable(others);
             return this;
         }
-
         public Builder stillOthers(@Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
             this.stillOthers = stillOthers;
             return this;
         }
-
         public Builder stillOthers(@Nullable Map<String,List<SomeOtherObjectArgs>> stillOthers) {
             this.stillOthers = Output.ofNullable(stillOthers);
             return this;
-        }
-        public ObjectArgs build() {
+        }        public ObjectArgs build() {
             return new ObjectArgs(bar, configs, foo, others, stillOthers);
         }
     }

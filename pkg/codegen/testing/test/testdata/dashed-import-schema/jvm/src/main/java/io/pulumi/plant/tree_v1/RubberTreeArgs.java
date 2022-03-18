@@ -108,52 +108,42 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable ContainerArgs container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder diameter(Output<Diameter> diameter) {
             this.diameter = Objects.requireNonNull(diameter);
             return this;
         }
-
         public Builder diameter(Diameter diameter) {
             this.diameter = Output.of(Objects.requireNonNull(diameter));
             return this;
         }
-
         public Builder farm(@Nullable Output<Either<Farm,String>> farm) {
             this.farm = farm;
             return this;
         }
-
         public Builder farm(@Nullable Either<Farm,String> farm) {
             this.farm = Output.ofNullable(farm);
             return this;
         }
-
         public Builder size(@Nullable Output<TreeSize> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable TreeSize size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder type(Output<RubberTreeVariety> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(RubberTreeVariety type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RubberTreeArgs build() {
+        }        public RubberTreeArgs build() {
             return new RubberTreeArgs(container, diameter, farm, size, type);
         }
     }
