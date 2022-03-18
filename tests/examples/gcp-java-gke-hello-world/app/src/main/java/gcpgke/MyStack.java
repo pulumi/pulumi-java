@@ -105,7 +105,7 @@ public final class MyStack extends Stack {
             )
             .build(),
             CustomResourceOptions.builder()
-            .dependsOn(List.of(cluster))
+            .dependsOn(cluster)
             .build());
         this.clusterName = cluster.getName();
 
@@ -155,7 +155,7 @@ public final class MyStack extends Stack {
                 .kubeconfig(this.kubeconfig)
                 .build(),
             CustomResourceOptions.builder()
-                .dependsOn(List.of(nodePool, cluster))
+                .dependsOn(nodePool, cluster)
                 .build());
         final var clusterResourceOptions = CustomResourceOptions.builder()
             .provider(clusterProvider)
