@@ -35,7 +35,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.8.6") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
-    implementation("org.mockito:mockito-core:3.+")
+    implementation("org.mockito:mockito-core:3.12.4")
 
     testImplementation("io.grpc:grpc-testing:${grpcVersion}")
 
@@ -96,14 +96,30 @@ test {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            groupId = 'io.pulumi'
-            artifactId = 'pulumi'
-            version = project.version
+        // TODO pom
 
+        // Publish to GitHub Packages like this
+        //
+        // gradle -Pversion=0.0.1-SNAPSHOT publish
+        //
+        // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
+        gpr(MavenPublication) {
+            groupId = "io.pulumi"
+            artifactId = "pulumi"
             from components.java
         }
-        // TODO pom
+    }
+
+    // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
+            credentials {
+                username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
+                password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+            }
+        }
     }
 }
 

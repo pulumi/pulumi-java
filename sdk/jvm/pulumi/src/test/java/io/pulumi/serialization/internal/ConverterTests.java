@@ -556,6 +556,18 @@ class ConverterTests {
                         assertThat(data.isSecret()).isFalse();
                     }).join();
         }
+
+        @Test
+        void testStructWithUnknowns() {
+            var converter = new Converter(log);
+            var value = Value.newBuilder().setStructValue(Struct.newBuilder()
+                            .putFields("myString", Value.newBuilder().setStringValue("foo").build())
+                            .putFields("myBoolean", Value.newBuilder().setStringValue(Constants.UnknownValue).build())
+                    .build()).build();
+            var data = converter.convertValue("test", value, SimpleStruct.class);
+            assertThat(data.isKnown()).isFalse();
+            assertThat(data.getValueNullable()).isNull();
+        }
     }
 
     @Nested
@@ -709,6 +721,23 @@ class ConverterTests {
         ) {
             this.ref = ref;
             this.additionalItems = additionalItems;
+        }
+    }
+
+    @CustomType
+    public static class SimpleStruct {
+        private final @Nullable
+        String myString;
+
+        private final @Nullable
+        Boolean myBoolean;
+
+        @CustomType.Constructor
+        private SimpleStruct(
+                @CustomType.Parameter("myString") @Nullable String myString,
+                @CustomType.Parameter("myBoolean") @Nullable Boolean myBoolean) {
+            this.myString = myString;
+            this.myBoolean = myBoolean;
         }
     }
 
