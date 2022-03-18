@@ -13,6 +13,7 @@ import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.ResourceArgs;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
@@ -29,6 +30,12 @@ public class ConstructorConfusionTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder().setOptions(new TestOptions(true)).setMocks(new ConfusionMocks()).setSpyGlobalInstance();
         var resources = mock.testAsync(ConfusionStack.class).join();
         assertThat(resources).isNotEmpty();
+    }
+
+
+    @AfterEach
+    public void cleanupMocks() {
+        DeploymentTests.cleanupDeploymentMocks();
     }
 
     public static class ConfusionMocks implements Mocks {
