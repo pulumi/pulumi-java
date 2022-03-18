@@ -1384,11 +1384,11 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 
 		// add setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:     setterName,
-			PropertyType:   propertyType.ToCode(ctx.imports),
-			PropertyName:   propertyName.String(),
-			Assignment:     assignment(propertyName),
-			ListNestedType: listNestedType,
+			SetterName:   setterName,
+			PropertyType: propertyType.ToCode(ctx.imports),
+			PropertyName: propertyName.String(),
+			Assignment:   assignment(propertyName),
+			ListType:     listNestedType,
 		})
 	}
 
