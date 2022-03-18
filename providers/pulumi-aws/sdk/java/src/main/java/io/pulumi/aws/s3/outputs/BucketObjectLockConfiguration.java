@@ -72,12 +72,10 @@ public final class BucketObjectLockConfiguration {
             this.objectLockEnabled = Objects.requireNonNull(objectLockEnabled);
             return this;
         }
-
         public Builder rule(@Nullable BucketObjectLockConfigurationRule rule) {
             this.rule = rule;
             return this;
-        }
-        public BucketObjectLockConfiguration build() {
+        }        public BucketObjectLockConfiguration build() {
             return new BucketObjectLockConfiguration(objectLockEnabled, rule);
         }
     }

@@ -57,12 +57,10 @@ public final class CrawlerLineageConfigurationGetArgs extends io.pulumi.resource
             this.crawlerLineageSettings = crawlerLineageSettings;
             return this;
         }
-
         public Builder crawlerLineageSettings(@Nullable String crawlerLineageSettings) {
             this.crawlerLineageSettings = Output.ofNullable(crawlerLineageSettings);
             return this;
-        }
-        public CrawlerLineageConfigurationGetArgs build() {
+        }        public CrawlerLineageConfigurationGetArgs build() {
             return new CrawlerLineageConfigurationGetArgs(crawlerLineageSettings);
         }
     }

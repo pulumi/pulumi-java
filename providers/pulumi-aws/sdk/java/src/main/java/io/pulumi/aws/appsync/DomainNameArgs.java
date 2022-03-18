@@ -90,32 +90,26 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder certificateArn(String certificateArn) {
             this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
-        }
-        public DomainNameArgs build() {
+        }        public DomainNameArgs build() {
             return new DomainNameArgs(certificateArn, description, domainName);
         }
     }

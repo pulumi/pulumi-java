@@ -92,32 +92,26 @@ public final class VirtualGatewaySpecListenerTlsCertificateArgs extends io.pulum
             this.acm = acm;
             return this;
         }
-
         public Builder acm(@Nullable VirtualGatewaySpecListenerTlsCertificateAcmArgs acm) {
             this.acm = Output.ofNullable(acm);
             return this;
         }
-
         public Builder file(@Nullable Output<VirtualGatewaySpecListenerTlsCertificateFileArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable VirtualGatewaySpecListenerTlsCertificateFileArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder sds(@Nullable Output<VirtualGatewaySpecListenerTlsCertificateSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
-
         public Builder sds(@Nullable VirtualGatewaySpecListenerTlsCertificateSdsArgs sds) {
             this.sds = Output.ofNullable(sds);
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsCertificateArgs build() {
+        }        public VirtualGatewaySpecListenerTlsCertificateArgs build() {
             return new VirtualGatewaySpecListenerTlsCertificateArgs(acm, file, sds);
         }
     }

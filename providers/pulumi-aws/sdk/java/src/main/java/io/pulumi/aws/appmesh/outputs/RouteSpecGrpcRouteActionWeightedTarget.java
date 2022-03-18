@@ -70,12 +70,10 @@ public final class RouteSpecGrpcRouteActionWeightedTarget {
             this.virtualNode = Objects.requireNonNull(virtualNode);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public RouteSpecGrpcRouteActionWeightedTarget build() {
+        }        public RouteSpecGrpcRouteActionWeightedTarget build() {
             return new RouteSpecGrpcRouteActionWeightedTarget(virtualNode, weight);
         }
     }

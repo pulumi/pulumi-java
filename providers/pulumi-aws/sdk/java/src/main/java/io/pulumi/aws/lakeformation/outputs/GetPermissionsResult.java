@@ -149,52 +149,48 @@ public final class GetPermissionsResult {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogResource(@Nullable Boolean catalogResource) {
             this.catalogResource = catalogResource;
             return this;
         }
-
         public Builder dataLocation(GetPermissionsDataLocation dataLocation) {
             this.dataLocation = Objects.requireNonNull(dataLocation);
             return this;
         }
-
         public Builder database(GetPermissionsDatabase database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder permissionsWithGrantOptions(List<String> permissionsWithGrantOptions) {
             this.permissionsWithGrantOptions = Objects.requireNonNull(permissionsWithGrantOptions);
             return this;
         }
-
+        public Builder permissionsWithGrantOptions(String... permissionsWithGrantOptions) {
+            return permissionsWithGrantOptions(List.of(permissionsWithGrantOptions));
+        }
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder table(GetPermissionsTable table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public Builder tableWithColumns(GetPermissionsTableWithColumns tableWithColumns) {
             this.tableWithColumns = Objects.requireNonNull(tableWithColumns);
             return this;
-        }
-        public GetPermissionsResult build() {
+        }        public GetPermissionsResult build() {
             return new GetPermissionsResult(catalogId, catalogResource, dataLocation, database, id, permissions, permissionsWithGrantOptions, principal, table, tableWithColumns);
         }
     }

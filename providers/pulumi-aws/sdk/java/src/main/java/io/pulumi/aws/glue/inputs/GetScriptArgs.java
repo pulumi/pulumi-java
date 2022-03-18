@@ -93,17 +93,20 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
             this.dagEdges = Objects.requireNonNull(dagEdges);
             return this;
         }
-
+        public Builder dagEdges(GetScriptDagEdge... dagEdges) {
+            return dagEdges(List.of(dagEdges));
+        }
         public Builder dagNodes(List<GetScriptDagNode> dagNodes) {
             this.dagNodes = Objects.requireNonNull(dagNodes);
             return this;
         }
-
+        public Builder dagNodes(GetScriptDagNode... dagNodes) {
+            return dagNodes(List.of(dagNodes));
+        }
         public Builder language(@Nullable String language) {
             this.language = language;
             return this;
-        }
-        public GetScriptArgs build() {
+        }        public GetScriptArgs build() {
             return new GetScriptArgs(dagEdges, dagNodes, language);
         }
     }

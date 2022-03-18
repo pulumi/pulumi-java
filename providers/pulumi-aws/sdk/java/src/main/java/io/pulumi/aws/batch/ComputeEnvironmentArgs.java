@@ -156,72 +156,58 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
             this.computeEnvironmentName = computeEnvironmentName;
             return this;
         }
-
         public Builder computeEnvironmentName(@Nullable String computeEnvironmentName) {
             this.computeEnvironmentName = Output.ofNullable(computeEnvironmentName);
             return this;
         }
-
         public Builder computeEnvironmentNamePrefix(@Nullable Output<String> computeEnvironmentNamePrefix) {
             this.computeEnvironmentNamePrefix = computeEnvironmentNamePrefix;
             return this;
         }
-
         public Builder computeEnvironmentNamePrefix(@Nullable String computeEnvironmentNamePrefix) {
             this.computeEnvironmentNamePrefix = Output.ofNullable(computeEnvironmentNamePrefix);
             return this;
         }
-
         public Builder computeResources(@Nullable Output<ComputeEnvironmentComputeResourcesArgs> computeResources) {
             this.computeResources = computeResources;
             return this;
         }
-
         public Builder computeResources(@Nullable ComputeEnvironmentComputeResourcesArgs computeResources) {
             this.computeResources = Output.ofNullable(computeResources);
             return this;
         }
-
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
-
         public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Output.ofNullable(serviceRole);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ComputeEnvironmentArgs build() {
+        }        public ComputeEnvironmentArgs build() {
             return new ComputeEnvironmentArgs(computeEnvironmentName, computeEnvironmentNamePrefix, computeResources, serviceRole, state, tags, type);
         }
     }

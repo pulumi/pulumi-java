@@ -109,27 +109,22 @@ public final class GetAliasResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder targetKeyArn(String targetKeyArn) {
             this.targetKeyArn = Objects.requireNonNull(targetKeyArn);
             return this;
         }
-
         public Builder targetKeyId(String targetKeyId) {
             this.targetKeyId = Objects.requireNonNull(targetKeyId);
             return this;
-        }
-        public GetAliasResult build() {
+        }        public GetAliasResult build() {
             return new GetAliasResult(arn, id, name, targetKeyArn, targetKeyId);
         }
     }

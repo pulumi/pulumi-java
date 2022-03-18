@@ -56,12 +56,10 @@ public final class VirtualRouterSpecListenerArgs extends io.pulumi.resources.Res
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
-
         public Builder portMapping(VirtualRouterSpecListenerPortMappingArgs portMapping) {
             this.portMapping = Output.of(Objects.requireNonNull(portMapping));
             return this;
-        }
-        public VirtualRouterSpecListenerArgs build() {
+        }        public VirtualRouterSpecListenerArgs build() {
             return new VirtualRouterSpecListenerArgs(portMapping);
         }
     }

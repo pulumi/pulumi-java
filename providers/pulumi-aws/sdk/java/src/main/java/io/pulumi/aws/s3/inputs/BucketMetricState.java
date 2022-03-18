@@ -91,32 +91,26 @@ public final class BucketMetricState extends io.pulumi.resources.ResourceArgs {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder filter(@Nullable Output<BucketMetricFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BucketMetricFilterGetArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public BucketMetricState build() {
+        }        public BucketMetricState build() {
             return new BucketMetricState(bucket, filter, name);
         }
     }

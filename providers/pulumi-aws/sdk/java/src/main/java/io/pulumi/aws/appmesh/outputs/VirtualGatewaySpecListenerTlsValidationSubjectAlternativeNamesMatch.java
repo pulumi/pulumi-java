@@ -53,7 +53,9 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
-        public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch build() {
+        public Builder exacts(String... exacts) {
+            return exacts(List.of(exacts));
+        }        public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch build() {
             return new VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch(exacts);
         }
     }

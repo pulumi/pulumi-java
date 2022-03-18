@@ -124,52 +124,42 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operatingSystem(Output<String> operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
-
         public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Output.of(Objects.requireNonNull(operatingSystem));
             return this;
         }
-
         public Builder storageLocation(Output<BuildStorageLocationArgs> storageLocation) {
             this.storageLocation = Objects.requireNonNull(storageLocation);
             return this;
         }
-
         public Builder storageLocation(BuildStorageLocationArgs storageLocation) {
             this.storageLocation = Output.of(Objects.requireNonNull(storageLocation));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public BuildArgs build() {
+        }        public BuildArgs build() {
             return new BuildArgs(name, operatingSystem, storageLocation, tags, version);
         }
     }

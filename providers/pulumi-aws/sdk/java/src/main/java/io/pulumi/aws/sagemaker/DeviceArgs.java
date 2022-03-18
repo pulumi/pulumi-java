@@ -74,22 +74,18 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.device = Objects.requireNonNull(device);
             return this;
         }
-
         public Builder device(DeviceDeviceArgs device) {
             this.device = Output.of(Objects.requireNonNull(device));
             return this;
         }
-
         public Builder deviceFleetName(Output<String> deviceFleetName) {
             this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
             return this;
         }
-
         public Builder deviceFleetName(String deviceFleetName) {
             this.deviceFleetName = Output.of(Objects.requireNonNull(deviceFleetName));
             return this;
-        }
-        public DeviceArgs build() {
+        }        public DeviceArgs build() {
             return new DeviceArgs(device, deviceFleetName);
         }
     }

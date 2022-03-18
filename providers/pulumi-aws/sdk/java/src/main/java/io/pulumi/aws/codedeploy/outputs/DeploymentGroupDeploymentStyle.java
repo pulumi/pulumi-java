@@ -71,12 +71,10 @@ public final class DeploymentGroupDeploymentStyle {
             this.deploymentOption = deploymentOption;
             return this;
         }
-
         public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
-        }
-        public DeploymentGroupDeploymentStyle build() {
+        }        public DeploymentGroupDeploymentStyle build() {
             return new DeploymentGroupDeploymentStyle(deploymentOption, deploymentType);
         }
     }

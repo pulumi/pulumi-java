@@ -119,27 +119,22 @@ public final class ImageOutputResourceAmi {
             this.accountId = accountId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public ImageOutputResourceAmi build() {
+        }        public ImageOutputResourceAmi build() {
             return new ImageOutputResourceAmi(accountId, description, image, name, region);
         }
     }

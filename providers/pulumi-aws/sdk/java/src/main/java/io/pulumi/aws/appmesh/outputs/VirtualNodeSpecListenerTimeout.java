@@ -106,22 +106,18 @@ public final class VirtualNodeSpecListenerTimeout {
             this.grpc = grpc;
             return this;
         }
-
         public Builder http(@Nullable VirtualNodeSpecListenerTimeoutHttp http) {
             this.http = http;
             return this;
         }
-
         public Builder http2(@Nullable VirtualNodeSpecListenerTimeoutHttp2 http2) {
             this.http2 = http2;
             return this;
         }
-
         public Builder tcp(@Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
             this.tcp = tcp;
             return this;
-        }
-        public VirtualNodeSpecListenerTimeout build() {
+        }        public VirtualNodeSpecListenerTimeout build() {
             return new VirtualNodeSpecListenerTimeout(grpc, http, http2, tcp);
         }
     }

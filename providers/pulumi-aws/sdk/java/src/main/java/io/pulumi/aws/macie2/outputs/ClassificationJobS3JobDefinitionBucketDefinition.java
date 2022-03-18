@@ -70,12 +70,13 @@ public final class ClassificationJobS3JobDefinitionBucketDefinition {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder buckets(List<String> buckets) {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }
-        public ClassificationJobS3JobDefinitionBucketDefinition build() {
+        public Builder buckets(String... buckets) {
+            return buckets(List.of(buckets));
+        }        public ClassificationJobS3JobDefinitionBucketDefinition build() {
             return new ClassificationJobS3JobDefinitionBucketDefinition(accountId, buckets);
         }
     }

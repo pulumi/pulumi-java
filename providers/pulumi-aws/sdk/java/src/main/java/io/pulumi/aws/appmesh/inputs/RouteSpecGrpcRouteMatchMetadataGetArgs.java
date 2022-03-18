@@ -92,32 +92,26 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
             this.invert = invert;
             return this;
         }
-
         public Builder invert(@Nullable Boolean invert) {
             this.invert = Output.ofNullable(invert);
             return this;
         }
-
         public Builder match(@Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match) {
             this.match = match;
             return this;
         }
-
         public Builder match(@Nullable RouteSpecGrpcRouteMatchMetadataMatchGetArgs match) {
             this.match = Output.ofNullable(match);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RouteSpecGrpcRouteMatchMetadataGetArgs build() {
+        }        public RouteSpecGrpcRouteMatchMetadataGetArgs build() {
             return new RouteSpecGrpcRouteMatchMetadataGetArgs(invert, match, name);
         }
     }

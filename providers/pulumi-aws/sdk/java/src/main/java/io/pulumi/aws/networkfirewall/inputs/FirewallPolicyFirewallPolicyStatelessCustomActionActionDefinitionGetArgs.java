@@ -56,12 +56,10 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
             this.publishMetricAction = Objects.requireNonNull(publishMetricAction);
             return this;
         }
-
         public Builder publishMetricAction(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs publishMetricAction) {
             this.publishMetricAction = Output.of(Objects.requireNonNull(publishMetricAction));
             return this;
-        }
-        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs build() {
+        }        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs build() {
             return new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs(publishMetricAction);
         }
     }

@@ -74,22 +74,18 @@ public final class DistributionOriginOriginShieldGetArgs extends io.pulumi.resou
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder originShieldRegion(Output<String> originShieldRegion) {
             this.originShieldRegion = Objects.requireNonNull(originShieldRegion);
             return this;
         }
-
         public Builder originShieldRegion(String originShieldRegion) {
             this.originShieldRegion = Output.of(Objects.requireNonNull(originShieldRegion));
             return this;
-        }
-        public DistributionOriginOriginShieldGetArgs build() {
+        }        public DistributionOriginOriginShieldGetArgs build() {
             return new DistributionOriginOriginShieldGetArgs(enabled, originShieldRegion);
         }
     }

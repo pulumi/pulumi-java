@@ -90,17 +90,17 @@ public final class WebAclDefaultActionBlockCustomResponse {
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<WebAclDefaultActionBlockCustomResponseResponseHeader> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-        public WebAclDefaultActionBlockCustomResponse build() {
+        public Builder responseHeaders(WebAclDefaultActionBlockCustomResponseResponseHeader... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public WebAclDefaultActionBlockCustomResponse build() {
             return new WebAclDefaultActionBlockCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

@@ -106,42 +106,34 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
             return this;
         }
-
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
             this.clientVpnEndpointId = Output.of(Objects.requireNonNull(clientVpnEndpointId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
-
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
-
         public Builder targetVpcSubnetId(Output<String> targetVpcSubnetId) {
             this.targetVpcSubnetId = Objects.requireNonNull(targetVpcSubnetId);
             return this;
         }
-
         public Builder targetVpcSubnetId(String targetVpcSubnetId) {
             this.targetVpcSubnetId = Output.of(Objects.requireNonNull(targetVpcSubnetId));
             return this;
-        }
-        public RouteArgs build() {
+        }        public RouteArgs build() {
             return new RouteArgs(clientVpnEndpointId, description, destinationCidrBlock, targetVpcSubnetId);
         }
     }

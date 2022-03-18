@@ -53,8 +53,7 @@ public final class RuleGroupRuleActionCount {
         public Builder customRequestHandling(@Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public RuleGroupRuleActionCount build() {
+        }        public RuleGroupRuleActionCount build() {
             return new RuleGroupRuleActionCount(customRequestHandling);
         }
     }

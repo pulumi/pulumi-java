@@ -91,32 +91,29 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder rules(Output<List<BucketReplicationConfigRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public Builder rules(List<BucketReplicationConfigRuleArgs> rules) {
             this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
-        public BucketReplicationConfigArgs build() {
+        public Builder rules(BucketReplicationConfigRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public BucketReplicationConfigArgs build() {
             return new BucketReplicationConfigArgs(bucket, role, rules);
         }
     }

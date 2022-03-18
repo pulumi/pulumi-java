@@ -139,62 +139,50 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
             this.connectionArn = Objects.requireNonNull(connectionArn);
             return this;
         }
-
         public Builder connectionArn(String connectionArn) {
             this.connectionArn = Output.of(Objects.requireNonNull(connectionArn));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
-
         public Builder invocationEndpoint(Output<String> invocationEndpoint) {
             this.invocationEndpoint = Objects.requireNonNull(invocationEndpoint);
             return this;
         }
-
         public Builder invocationEndpoint(String invocationEndpoint) {
             this.invocationEndpoint = Output.of(Objects.requireNonNull(invocationEndpoint));
             return this;
         }
-
         public Builder invocationRateLimitPerSecond(@Nullable Output<Integer> invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
-
         public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = Output.ofNullable(invocationRateLimitPerSecond);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public EventApiDestinationArgs build() {
+        }        public EventApiDestinationArgs build() {
             return new EventApiDestinationArgs(connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond, name);
         }
     }

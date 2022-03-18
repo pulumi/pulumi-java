@@ -90,32 +90,26 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
-        }
-        public RuleGroupNamespaceState build() {
+        }        public RuleGroupNamespaceState build() {
             return new RuleGroupNamespaceState(data, name, workspaceId);
         }
     }

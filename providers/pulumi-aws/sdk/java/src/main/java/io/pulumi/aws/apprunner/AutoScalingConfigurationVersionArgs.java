@@ -124,52 +124,42 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
             this.autoScalingConfigurationName = Objects.requireNonNull(autoScalingConfigurationName);
             return this;
         }
-
         public Builder autoScalingConfigurationName(String autoScalingConfigurationName) {
             this.autoScalingConfigurationName = Output.of(Objects.requireNonNull(autoScalingConfigurationName));
             return this;
         }
-
         public Builder maxConcurrency(@Nullable Output<Integer> maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
-
         public Builder maxConcurrency(@Nullable Integer maxConcurrency) {
             this.maxConcurrency = Output.ofNullable(maxConcurrency);
             return this;
         }
-
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
-
         public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AutoScalingConfigurationVersionArgs build() {
+        }        public AutoScalingConfigurationVersionArgs build() {
             return new AutoScalingConfigurationVersionArgs(autoScalingConfigurationName, maxConcurrency, maxSize, minSize, tags);
         }
     }

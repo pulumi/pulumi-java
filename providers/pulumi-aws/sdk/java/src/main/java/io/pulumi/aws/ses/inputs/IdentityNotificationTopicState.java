@@ -107,42 +107,34 @@ public final class IdentityNotificationTopicState extends io.pulumi.resources.Re
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable String identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder includeOriginalHeaders(@Nullable Output<Boolean> includeOriginalHeaders) {
             this.includeOriginalHeaders = includeOriginalHeaders;
             return this;
         }
-
         public Builder includeOriginalHeaders(@Nullable Boolean includeOriginalHeaders) {
             this.includeOriginalHeaders = Output.ofNullable(includeOriginalHeaders);
             return this;
         }
-
         public Builder notificationType(@Nullable Output<String> notificationType) {
             this.notificationType = notificationType;
             return this;
         }
-
         public Builder notificationType(@Nullable String notificationType) {
             this.notificationType = Output.ofNullable(notificationType);
             return this;
         }
-
         public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Output.ofNullable(topicArn);
             return this;
-        }
-        public IdentityNotificationTopicState build() {
+        }        public IdentityNotificationTopicState build() {
             return new IdentityNotificationTopicState(identity, includeOriginalHeaders, notificationType, topicArn);
         }
     }

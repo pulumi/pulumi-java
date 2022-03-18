@@ -84,17 +84,14 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serverSideEncryption(@Nullable GetTableServerSideEncryption serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetTableArgs build() {
+        }        public GetTableArgs build() {
             return new GetTableArgs(name, serverSideEncryption, tags);
         }
     }

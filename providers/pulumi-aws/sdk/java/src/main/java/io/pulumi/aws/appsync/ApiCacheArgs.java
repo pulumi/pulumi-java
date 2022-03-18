@@ -140,62 +140,50 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
             this.apiCachingBehavior = Objects.requireNonNull(apiCachingBehavior);
             return this;
         }
-
         public Builder apiCachingBehavior(String apiCachingBehavior) {
             this.apiCachingBehavior = Output.of(Objects.requireNonNull(apiCachingBehavior));
             return this;
         }
-
         public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
-
         public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = Output.ofNullable(atRestEncryptionEnabled);
             return this;
         }
-
         public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
             this.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
-
         public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
             this.transitEncryptionEnabled = Output.ofNullable(transitEncryptionEnabled);
             return this;
         }
-
         public Builder ttl(Output<Integer> ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public Builder ttl(Integer ttl) {
             this.ttl = Output.of(Objects.requireNonNull(ttl));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ApiCacheArgs build() {
+        }        public ApiCacheArgs build() {
             return new ApiCacheArgs(apiCachingBehavior, apiId, atRestEncryptionEnabled, transitEncryptionEnabled, ttl, type);
         }
     }

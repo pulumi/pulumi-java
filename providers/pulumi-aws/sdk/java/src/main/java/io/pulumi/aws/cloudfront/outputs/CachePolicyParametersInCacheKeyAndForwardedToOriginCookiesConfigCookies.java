@@ -54,7 +54,9 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
             this.items = items;
             return this;
         }
-        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies(items);
         }
     }

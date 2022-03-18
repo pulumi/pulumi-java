@@ -70,12 +70,10 @@ public final class RouteRequestParameter {
             this.requestParameterKey = Objects.requireNonNull(requestParameterKey);
             return this;
         }
-
         public Builder required(Boolean required) {
             this.required = Objects.requireNonNull(required);
             return this;
-        }
-        public RouteRequestParameter build() {
+        }        public RouteRequestParameter build() {
             return new RouteRequestParameter(requestParameterKey, required);
         }
     }

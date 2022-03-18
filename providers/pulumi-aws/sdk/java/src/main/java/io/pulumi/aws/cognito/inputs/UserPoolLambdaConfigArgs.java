@@ -252,132 +252,106 @@ public final class UserPoolLambdaConfigArgs extends io.pulumi.resources.Resource
             this.createAuthChallenge = createAuthChallenge;
             return this;
         }
-
         public Builder createAuthChallenge(@Nullable String createAuthChallenge) {
             this.createAuthChallenge = Output.ofNullable(createAuthChallenge);
             return this;
         }
-
         public Builder customEmailSender(@Nullable Output<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender) {
             this.customEmailSender = customEmailSender;
             return this;
         }
-
         public Builder customEmailSender(@Nullable UserPoolLambdaConfigCustomEmailSenderArgs customEmailSender) {
             this.customEmailSender = Output.ofNullable(customEmailSender);
             return this;
         }
-
         public Builder customMessage(@Nullable Output<String> customMessage) {
             this.customMessage = customMessage;
             return this;
         }
-
         public Builder customMessage(@Nullable String customMessage) {
             this.customMessage = Output.ofNullable(customMessage);
             return this;
         }
-
         public Builder customSmsSender(@Nullable Output<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender) {
             this.customSmsSender = customSmsSender;
             return this;
         }
-
         public Builder customSmsSender(@Nullable UserPoolLambdaConfigCustomSmsSenderArgs customSmsSender) {
             this.customSmsSender = Output.ofNullable(customSmsSender);
             return this;
         }
-
         public Builder defineAuthChallenge(@Nullable Output<String> defineAuthChallenge) {
             this.defineAuthChallenge = defineAuthChallenge;
             return this;
         }
-
         public Builder defineAuthChallenge(@Nullable String defineAuthChallenge) {
             this.defineAuthChallenge = Output.ofNullable(defineAuthChallenge);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder postAuthentication(@Nullable Output<String> postAuthentication) {
             this.postAuthentication = postAuthentication;
             return this;
         }
-
         public Builder postAuthentication(@Nullable String postAuthentication) {
             this.postAuthentication = Output.ofNullable(postAuthentication);
             return this;
         }
-
         public Builder postConfirmation(@Nullable Output<String> postConfirmation) {
             this.postConfirmation = postConfirmation;
             return this;
         }
-
         public Builder postConfirmation(@Nullable String postConfirmation) {
             this.postConfirmation = Output.ofNullable(postConfirmation);
             return this;
         }
-
         public Builder preAuthentication(@Nullable Output<String> preAuthentication) {
             this.preAuthentication = preAuthentication;
             return this;
         }
-
         public Builder preAuthentication(@Nullable String preAuthentication) {
             this.preAuthentication = Output.ofNullable(preAuthentication);
             return this;
         }
-
         public Builder preSignUp(@Nullable Output<String> preSignUp) {
             this.preSignUp = preSignUp;
             return this;
         }
-
         public Builder preSignUp(@Nullable String preSignUp) {
             this.preSignUp = Output.ofNullable(preSignUp);
             return this;
         }
-
         public Builder preTokenGeneration(@Nullable Output<String> preTokenGeneration) {
             this.preTokenGeneration = preTokenGeneration;
             return this;
         }
-
         public Builder preTokenGeneration(@Nullable String preTokenGeneration) {
             this.preTokenGeneration = Output.ofNullable(preTokenGeneration);
             return this;
         }
-
         public Builder userMigration(@Nullable Output<String> userMigration) {
             this.userMigration = userMigration;
             return this;
         }
-
         public Builder userMigration(@Nullable String userMigration) {
             this.userMigration = Output.ofNullable(userMigration);
             return this;
         }
-
         public Builder verifyAuthChallengeResponse(@Nullable Output<String> verifyAuthChallengeResponse) {
             this.verifyAuthChallengeResponse = verifyAuthChallengeResponse;
             return this;
         }
-
         public Builder verifyAuthChallengeResponse(@Nullable String verifyAuthChallengeResponse) {
             this.verifyAuthChallengeResponse = Output.ofNullable(verifyAuthChallengeResponse);
             return this;
-        }
-        public UserPoolLambdaConfigArgs build() {
+        }        public UserPoolLambdaConfigArgs build() {
             return new UserPoolLambdaConfigArgs(createAuthChallenge, customEmailSender, customMessage, customSmsSender, defineAuthChallenge, kmsKeyId, postAuthentication, postConfirmation, preAuthentication, preSignUp, preTokenGeneration, userMigration, verifyAuthChallengeResponse);
         }
     }

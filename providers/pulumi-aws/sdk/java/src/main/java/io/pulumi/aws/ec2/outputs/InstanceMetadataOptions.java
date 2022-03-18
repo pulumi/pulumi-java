@@ -104,22 +104,18 @@ public final class InstanceMetadataOptions {
             this.httpEndpoint = httpEndpoint;
             return this;
         }
-
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
-
         public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
-
         public Builder instanceMetadataTags(@Nullable String instanceMetadataTags) {
             this.instanceMetadataTags = instanceMetadataTags;
             return this;
-        }
-        public InstanceMetadataOptions build() {
+        }        public InstanceMetadataOptions build() {
             return new InstanceMetadataOptions(httpEndpoint, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
         }
     }

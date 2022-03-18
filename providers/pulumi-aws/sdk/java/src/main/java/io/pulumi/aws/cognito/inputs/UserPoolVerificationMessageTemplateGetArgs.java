@@ -138,62 +138,50 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
             this.defaultEmailOption = defaultEmailOption;
             return this;
         }
-
         public Builder defaultEmailOption(@Nullable String defaultEmailOption) {
             this.defaultEmailOption = Output.ofNullable(defaultEmailOption);
             return this;
         }
-
         public Builder emailMessage(@Nullable Output<String> emailMessage) {
             this.emailMessage = emailMessage;
             return this;
         }
-
         public Builder emailMessage(@Nullable String emailMessage) {
             this.emailMessage = Output.ofNullable(emailMessage);
             return this;
         }
-
         public Builder emailMessageByLink(@Nullable Output<String> emailMessageByLink) {
             this.emailMessageByLink = emailMessageByLink;
             return this;
         }
-
         public Builder emailMessageByLink(@Nullable String emailMessageByLink) {
             this.emailMessageByLink = Output.ofNullable(emailMessageByLink);
             return this;
         }
-
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
-
         public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = Output.ofNullable(emailSubject);
             return this;
         }
-
         public Builder emailSubjectByLink(@Nullable Output<String> emailSubjectByLink) {
             this.emailSubjectByLink = emailSubjectByLink;
             return this;
         }
-
         public Builder emailSubjectByLink(@Nullable String emailSubjectByLink) {
             this.emailSubjectByLink = Output.ofNullable(emailSubjectByLink);
             return this;
         }
-
         public Builder smsMessage(@Nullable Output<String> smsMessage) {
             this.smsMessage = smsMessage;
             return this;
         }
-
         public Builder smsMessage(@Nullable String smsMessage) {
             this.smsMessage = Output.ofNullable(smsMessage);
             return this;
-        }
-        public UserPoolVerificationMessageTemplateGetArgs build() {
+        }        public UserPoolVerificationMessageTemplateGetArgs build() {
             return new UserPoolVerificationMessageTemplateGetArgs(defaultEmailOption, emailMessage, emailMessageByLink, emailSubject, emailSubjectByLink, smsMessage);
         }
     }

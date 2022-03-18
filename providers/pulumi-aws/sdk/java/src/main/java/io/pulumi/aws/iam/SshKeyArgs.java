@@ -106,42 +106,34 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
-
         public Builder encoding(String encoding) {
             this.encoding = Output.of(Objects.requireNonNull(encoding));
             return this;
         }
-
         public Builder publicKey(Output<String> publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Output.of(Objects.requireNonNull(publicKey));
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public SshKeyArgs build() {
+        }        public SshKeyArgs build() {
             return new SshKeyArgs(encoding, publicKey, status, username);
         }
     }

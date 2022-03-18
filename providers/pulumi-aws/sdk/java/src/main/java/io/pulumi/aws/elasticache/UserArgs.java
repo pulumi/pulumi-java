@@ -173,82 +173,69 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.accessString = Objects.requireNonNull(accessString);
             return this;
         }
-
         public Builder accessString(String accessString) {
             this.accessString = Output.of(Objects.requireNonNull(accessString));
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder engine(Output<String> engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engine(String engine) {
             this.engine = Output.of(Objects.requireNonNull(engine));
             return this;
         }
-
         public Builder noPasswordRequired(@Nullable Output<Boolean> noPasswordRequired) {
             this.noPasswordRequired = noPasswordRequired;
             return this;
         }
-
         public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
             this.noPasswordRequired = Output.ofNullable(noPasswordRequired);
             return this;
         }
-
         public Builder passwords(@Nullable Output<List<String>> passwords) {
             this.passwords = passwords;
             return this;
         }
-
         public Builder passwords(@Nullable List<String> passwords) {
             this.passwords = Output.ofNullable(passwords);
             return this;
         }
-
+        public Builder passwords(String... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(accessString, arn, engine, noPasswordRequired, passwords, tags, userId, userName);
         }
     }

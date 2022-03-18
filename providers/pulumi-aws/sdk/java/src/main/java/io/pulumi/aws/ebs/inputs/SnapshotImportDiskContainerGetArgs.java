@@ -107,42 +107,34 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
         }
-
         public Builder userBucket(@Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket) {
             this.userBucket = userBucket;
             return this;
         }
-
         public Builder userBucket(@Nullable SnapshotImportDiskContainerUserBucketGetArgs userBucket) {
             this.userBucket = Output.ofNullable(userBucket);
             return this;
-        }
-        public SnapshotImportDiskContainerGetArgs build() {
+        }        public SnapshotImportDiskContainerGetArgs build() {
             return new SnapshotImportDiskContainerGetArgs(description, format, url, userBucket);
         }
     }

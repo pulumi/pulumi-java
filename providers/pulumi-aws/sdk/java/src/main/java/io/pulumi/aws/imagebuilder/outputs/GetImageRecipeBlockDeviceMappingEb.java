@@ -151,37 +151,30 @@ public final class GetImageRecipeBlockDeviceMappingEb {
             this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
-
         public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
-        }
-        public GetImageRecipeBlockDeviceMappingEb build() {
+        }        public GetImageRecipeBlockDeviceMappingEb build() {
             return new GetImageRecipeBlockDeviceMappingEb(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, volumeSize, volumeType);
         }
     }

@@ -125,52 +125,42 @@ public final class BucketLifecycleConfigurationRuleArgs extends io.pulumi.resour
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
-
         public Builder abortIncompleteMultipartUpload(@Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = Output.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
-
         public Builder expiration(@Nullable Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder expiration(@Nullable BucketLifecycleConfigurationRuleExpirationArgs expiration) {
             this.expiration = Output.ofNullable(expiration);
             return this;
         }
-
         public Builder filter(@Nullable Output<BucketLifecycleConfigurationRuleFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BucketLifecycleConfigurationRuleFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public BucketLifecycleConfigurationRuleArgs build() {
+        }        public BucketLifecycleConfigurationRuleArgs build() {
             return new BucketLifecycleConfigurationRuleArgs(abortIncompleteMultipartUpload, expiration, filter, id, status);
         }
     }

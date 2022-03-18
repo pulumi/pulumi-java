@@ -139,32 +139,38 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
             this.allowCredentials = Objects.requireNonNull(allowCredentials);
             return this;
         }
-
         public Builder allowHeaders(List<String> allowHeaders) {
             this.allowHeaders = Objects.requireNonNull(allowHeaders);
             return this;
         }
-
+        public Builder allowHeaders(String... allowHeaders) {
+            return allowHeaders(List.of(allowHeaders));
+        }
         public Builder allowMethods(List<String> allowMethods) {
             this.allowMethods = Objects.requireNonNull(allowMethods);
             return this;
         }
-
+        public Builder allowMethods(String... allowMethods) {
+            return allowMethods(List.of(allowMethods));
+        }
         public Builder allowOrigins(List<String> allowOrigins) {
             this.allowOrigins = Objects.requireNonNull(allowOrigins);
             return this;
         }
-
+        public Builder allowOrigins(String... allowOrigins) {
+            return allowOrigins(List.of(allowOrigins));
+        }
         public Builder exposeHeaders(List<String> exposeHeaders) {
             this.exposeHeaders = Objects.requireNonNull(exposeHeaders);
             return this;
         }
-
+        public Builder exposeHeaders(String... exposeHeaders) {
+            return exposeHeaders(List.of(exposeHeaders));
+        }
         public Builder maxAge(Integer maxAge) {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
-        }
-        public GetApiCorsConfiguration build() {
+        }        public GetApiCorsConfiguration build() {
             return new GetApiCorsConfiguration(allowCredentials, allowHeaders, allowMethods, allowOrigins, exposeHeaders, maxAge);
         }
     }

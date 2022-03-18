@@ -141,62 +141,50 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
-
         public Builder addressFamily(String addressFamily) {
             this.addressFamily = Output.of(Objects.requireNonNull(addressFamily));
             return this;
         }
-
         public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
-
         public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Output.ofNullable(amazonAddress);
             return this;
         }
-
         public Builder bgpAsn(Output<Integer> bgpAsn) {
             this.bgpAsn = Objects.requireNonNull(bgpAsn);
             return this;
         }
-
         public Builder bgpAsn(Integer bgpAsn) {
             this.bgpAsn = Output.of(Objects.requireNonNull(bgpAsn));
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
             return this;
         }
-
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
-
         public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Output.ofNullable(customerAddress);
             return this;
         }
-
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {
             this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId);
             return this;
         }
-
         public Builder virtualInterfaceId(String virtualInterfaceId) {
             this.virtualInterfaceId = Output.of(Objects.requireNonNull(virtualInterfaceId));
             return this;
-        }
-        public BgpPeerArgs build() {
+        }        public BgpPeerArgs build() {
             return new BgpPeerArgs(addressFamily, amazonAddress, bgpAsn, bgpAuthKey, customerAddress, virtualInterfaceId);
         }
     }

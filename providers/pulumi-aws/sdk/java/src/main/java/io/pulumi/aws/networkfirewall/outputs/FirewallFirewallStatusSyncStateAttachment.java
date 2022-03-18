@@ -71,12 +71,10 @@ public final class FirewallFirewallStatusSyncStateAttachment {
             this.endpointId = endpointId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
-        }
-        public FirewallFirewallStatusSyncStateAttachment build() {
+        }        public FirewallFirewallStatusSyncStateAttachment build() {
             return new FirewallFirewallStatusSyncStateAttachment(endpointId, subnetId);
         }
     }

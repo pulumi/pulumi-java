@@ -139,62 +139,50 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder certificateId(@Nullable Output<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder certificatePem(@Nullable Output<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
-
         public Builder certificatePem(@Nullable String certificatePem) {
             this.certificatePem = Output.ofNullable(certificatePem);
             return this;
         }
-
         public Builder certificateWallet(@Nullable Output<String> certificateWallet) {
             this.certificateWallet = certificateWallet;
             return this;
         }
-
         public Builder certificateWallet(@Nullable String certificateWallet) {
             this.certificateWallet = Output.ofNullable(certificateWallet);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public CertificateState build() {
+        }        public CertificateState build() {
             return new CertificateState(certificateArn, certificateId, certificatePem, certificateWallet, tags, tagsAll);
         }
     }

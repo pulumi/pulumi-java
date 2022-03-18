@@ -90,32 +90,26 @@ public final class InsightFiltersCriticalityGetArgs extends io.pulumi.resources.
             this.eq = eq;
             return this;
         }
-
         public Builder eq(@Nullable String eq) {
             this.eq = Output.ofNullable(eq);
             return this;
         }
-
         public Builder gte(@Nullable Output<String> gte) {
             this.gte = gte;
             return this;
         }
-
         public Builder gte(@Nullable String gte) {
             this.gte = Output.ofNullable(gte);
             return this;
         }
-
         public Builder lte(@Nullable Output<String> lte) {
             this.lte = lte;
             return this;
         }
-
         public Builder lte(@Nullable String lte) {
             this.lte = Output.ofNullable(lte);
             return this;
-        }
-        public InsightFiltersCriticalityGetArgs build() {
+        }        public InsightFiltersCriticalityGetArgs build() {
             return new InsightFiltersCriticalityGetArgs(eq, gte, lte);
         }
     }

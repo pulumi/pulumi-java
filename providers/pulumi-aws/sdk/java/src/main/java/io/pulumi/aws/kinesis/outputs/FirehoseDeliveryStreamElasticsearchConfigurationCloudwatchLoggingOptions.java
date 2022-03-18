@@ -88,17 +88,14 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLog
             this.enabled = enabled;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = logStreamName;
             return this;
-        }
-        public FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions build() {
+        }        public FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions build() {
             return new FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions(enabled, logGroupName, logStreamName);
         }
     }

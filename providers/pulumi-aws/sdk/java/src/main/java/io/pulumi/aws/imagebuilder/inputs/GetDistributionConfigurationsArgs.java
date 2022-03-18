@@ -58,7 +58,9 @@ public final class GetDistributionConfigurationsArgs extends io.pulumi.resources
             this.filters = filters;
             return this;
         }
-        public GetDistributionConfigurationsArgs build() {
+        public Builder filters(GetDistributionConfigurationsFilter... filters) {
+            return filters(List.of(filters));
+        }        public GetDistributionConfigurationsArgs build() {
             return new GetDistributionConfigurationsArgs(filters);
         }
     }

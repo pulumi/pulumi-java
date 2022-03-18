@@ -56,12 +56,10 @@ public final class TablePointInTimeRecoveryArgs extends io.pulumi.resources.Reso
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public TablePointInTimeRecoveryArgs build() {
+        }        public TablePointInTimeRecoveryArgs build() {
             return new TablePointInTimeRecoveryArgs(enabled);
         }
     }

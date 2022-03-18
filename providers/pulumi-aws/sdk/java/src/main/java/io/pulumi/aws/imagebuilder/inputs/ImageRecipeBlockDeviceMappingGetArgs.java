@@ -108,42 +108,34 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder ebs(@Nullable Output<ImageRecipeBlockDeviceMappingEbsGetArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
-
         public Builder ebs(@Nullable ImageRecipeBlockDeviceMappingEbsGetArgs ebs) {
             this.ebs = Output.ofNullable(ebs);
             return this;
         }
-
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
-
         public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = Output.ofNullable(noDevice);
             return this;
         }
-
         public Builder virtualName(@Nullable Output<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = Output.ofNullable(virtualName);
             return this;
-        }
-        public ImageRecipeBlockDeviceMappingGetArgs build() {
+        }        public ImageRecipeBlockDeviceMappingGetArgs build() {
             return new ImageRecipeBlockDeviceMappingGetArgs(deviceName, ebs, noDevice, virtualName);
         }
     }

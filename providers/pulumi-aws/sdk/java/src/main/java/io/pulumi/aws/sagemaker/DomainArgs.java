@@ -190,92 +190,77 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
-
         public Builder appNetworkAccessType(@Nullable String appNetworkAccessType) {
             this.appNetworkAccessType = Output.ofNullable(appNetworkAccessType);
             return this;
         }
-
         public Builder authMode(Output<String> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
-
         public Builder authMode(String authMode) {
             this.authMode = Output.of(Objects.requireNonNull(authMode));
             return this;
         }
-
         public Builder defaultUserSettings(Output<DomainDefaultUserSettingsArgs> defaultUserSettings) {
             this.defaultUserSettings = Objects.requireNonNull(defaultUserSettings);
             return this;
         }
-
         public Builder defaultUserSettings(DomainDefaultUserSettingsArgs defaultUserSettings) {
             this.defaultUserSettings = Output.of(Objects.requireNonNull(defaultUserSettings));
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<DomainRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable DomainRetentionPolicyArgs retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(appNetworkAccessType, authMode, defaultUserSettings, domainName, kmsKeyId, retentionPolicy, subnetIds, tags, vpcId);
         }
     }

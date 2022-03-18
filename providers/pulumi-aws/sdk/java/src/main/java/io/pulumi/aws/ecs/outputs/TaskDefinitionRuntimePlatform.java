@@ -71,12 +71,10 @@ public final class TaskDefinitionRuntimePlatform {
             this.cpuArchitecture = cpuArchitecture;
             return this;
         }
-
         public Builder operatingSystemFamily(@Nullable String operatingSystemFamily) {
             this.operatingSystemFamily = operatingSystemFamily;
             return this;
-        }
-        public TaskDefinitionRuntimePlatform build() {
+        }        public TaskDefinitionRuntimePlatform build() {
             return new TaskDefinitionRuntimePlatform(cpuArchitecture, operatingSystemFamily);
         }
     }

@@ -90,32 +90,26 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
             this.controlStatus = Objects.requireNonNull(controlStatus);
             return this;
         }
-
         public Builder controlStatus(String controlStatus) {
             this.controlStatus = Output.of(Objects.requireNonNull(controlStatus));
             return this;
         }
-
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
             this.disabledReason = disabledReason;
             return this;
         }
-
         public Builder disabledReason(@Nullable String disabledReason) {
             this.disabledReason = Output.ofNullable(disabledReason);
             return this;
         }
-
         public Builder standardsControlArn(Output<String> standardsControlArn) {
             this.standardsControlArn = Objects.requireNonNull(standardsControlArn);
             return this;
         }
-
         public Builder standardsControlArn(String standardsControlArn) {
             this.standardsControlArn = Output.of(Objects.requireNonNull(standardsControlArn));
             return this;
-        }
-        public StandardsControlArgs build() {
+        }        public StandardsControlArgs build() {
             return new StandardsControlArgs(controlStatus, disabledReason, standardsControlArn);
         }
     }

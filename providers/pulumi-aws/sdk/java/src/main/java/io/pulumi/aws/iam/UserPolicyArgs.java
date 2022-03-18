@@ -106,37 +106,30 @@ public final class UserPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public Builder user(String user) {
             this.user = Output.of(Objects.requireNonNull(user));
             return this;
-        }
-        public UserPolicyArgs build() {
+        }        public UserPolicyArgs build() {
             return new UserPolicyArgs(name, namePrefix, policy, user);
         }
     }

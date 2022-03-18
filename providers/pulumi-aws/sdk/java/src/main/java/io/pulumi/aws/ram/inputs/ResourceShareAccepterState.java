@@ -171,82 +171,69 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             this.invitationArn = invitationArn;
             return this;
         }
-
         public Builder invitationArn(@Nullable String invitationArn) {
             this.invitationArn = Output.ofNullable(invitationArn);
             return this;
         }
-
         public Builder receiverAccountId(@Nullable Output<String> receiverAccountId) {
             this.receiverAccountId = receiverAccountId;
             return this;
         }
-
         public Builder receiverAccountId(@Nullable String receiverAccountId) {
             this.receiverAccountId = Output.ofNullable(receiverAccountId);
             return this;
         }
-
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder senderAccountId(@Nullable Output<String> senderAccountId) {
             this.senderAccountId = senderAccountId;
             return this;
         }
-
         public Builder senderAccountId(@Nullable String senderAccountId) {
             this.senderAccountId = Output.ofNullable(senderAccountId);
             return this;
         }
-
         public Builder shareArn(@Nullable Output<String> shareArn) {
             this.shareArn = shareArn;
             return this;
         }
-
         public Builder shareArn(@Nullable String shareArn) {
             this.shareArn = Output.ofNullable(shareArn);
             return this;
         }
-
         public Builder shareId(@Nullable Output<String> shareId) {
             this.shareId = shareId;
             return this;
         }
-
         public Builder shareId(@Nullable String shareId) {
             this.shareId = Output.ofNullable(shareId);
             return this;
         }
-
         public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
-
         public Builder shareName(@Nullable String shareName) {
             this.shareName = Output.ofNullable(shareName);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ResourceShareAccepterState build() {
+        }        public ResourceShareAccepterState build() {
             return new ResourceShareAccepterState(invitationArn, receiverAccountId, resources, senderAccountId, shareArn, shareId, shareName, status);
         }
     }

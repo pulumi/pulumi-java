@@ -88,17 +88,14 @@ public final class FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOpt
             this.enabled = enabled;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = logStreamName;
             return this;
-        }
-        public FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions build() {
+        }        public FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions build() {
             return new FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions(enabled, logGroupName, logStreamName);
         }
     }

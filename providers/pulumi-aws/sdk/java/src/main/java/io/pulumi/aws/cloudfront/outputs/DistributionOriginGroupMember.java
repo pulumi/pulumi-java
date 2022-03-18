@@ -51,8 +51,7 @@ public final class DistributionOriginGroupMember {
         public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
-        }
-        public DistributionOriginGroupMember build() {
+        }        public DistributionOriginGroupMember build() {
             return new DistributionOriginGroupMember(originId);
         }
     }

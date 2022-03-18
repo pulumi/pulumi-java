@@ -75,22 +75,21 @@ public final class AcceleratorIpSetArgs extends io.pulumi.resources.ResourceArgs
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder ipFamily(@Nullable Output<String> ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
-
         public Builder ipFamily(@Nullable String ipFamily) {
             this.ipFamily = Output.ofNullable(ipFamily);
             return this;
-        }
-        public AcceleratorIpSetArgs build() {
+        }        public AcceleratorIpSetArgs build() {
             return new AcceleratorIpSetArgs(ipAddresses, ipFamily);
         }
     }

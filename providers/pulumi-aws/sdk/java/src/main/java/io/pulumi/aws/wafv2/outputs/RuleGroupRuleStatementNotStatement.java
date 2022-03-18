@@ -53,7 +53,9 @@ public final class RuleGroupRuleStatementNotStatement {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-        public RuleGroupRuleStatementNotStatement build() {
+        public Builder statements(RuleGroupRuleStatementNotStatementStatement... statements) {
+            return statements(List.of(statements));
+        }        public RuleGroupRuleStatementNotStatement build() {
             return new RuleGroupRuleStatementNotStatement(statements);
         }
     }

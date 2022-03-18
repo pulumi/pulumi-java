@@ -73,12 +73,10 @@ public final class IntentDialogCodeHook {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public IntentDialogCodeHook build() {
+        }        public IntentDialogCodeHook build() {
             return new IntentDialogCodeHook(messageVersion, uri);
         }
     }

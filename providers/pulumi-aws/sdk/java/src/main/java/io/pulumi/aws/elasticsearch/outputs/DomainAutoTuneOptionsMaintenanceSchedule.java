@@ -86,17 +86,14 @@ public final class DomainAutoTuneOptionsMaintenanceSchedule {
             this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence);
             return this;
         }
-
         public Builder duration(DomainAutoTuneOptionsMaintenanceScheduleDuration duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder startAt(String startAt) {
             this.startAt = Objects.requireNonNull(startAt);
             return this;
-        }
-        public DomainAutoTuneOptionsMaintenanceSchedule build() {
+        }        public DomainAutoTuneOptionsMaintenanceSchedule build() {
             return new DomainAutoTuneOptionsMaintenanceSchedule(cronExpressionForRecurrence, duration, startAt);
         }
     }

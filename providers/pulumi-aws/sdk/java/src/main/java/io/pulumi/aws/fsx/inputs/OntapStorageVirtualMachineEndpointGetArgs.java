@@ -110,42 +110,46 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends io.pulumi.r
             this.iscses = iscses;
             return this;
         }
-
         public Builder iscses(@Nullable List<OntapStorageVirtualMachineEndpointIscseGetArgs> iscses) {
             this.iscses = Output.ofNullable(iscses);
             return this;
         }
-
+        public Builder iscses(OntapStorageVirtualMachineEndpointIscseGetArgs... iscses) {
+            return iscses(List.of(iscses));
+        }
         public Builder managements(@Nullable Output<List<OntapStorageVirtualMachineEndpointManagementGetArgs>> managements) {
             this.managements = managements;
             return this;
         }
-
         public Builder managements(@Nullable List<OntapStorageVirtualMachineEndpointManagementGetArgs> managements) {
             this.managements = Output.ofNullable(managements);
             return this;
         }
-
+        public Builder managements(OntapStorageVirtualMachineEndpointManagementGetArgs... managements) {
+            return managements(List.of(managements));
+        }
         public Builder nfs(@Nullable Output<List<OntapStorageVirtualMachineEndpointNfGetArgs>> nfs) {
             this.nfs = nfs;
             return this;
         }
-
         public Builder nfs(@Nullable List<OntapStorageVirtualMachineEndpointNfGetArgs> nfs) {
             this.nfs = Output.ofNullable(nfs);
             return this;
         }
-
+        public Builder nfs(OntapStorageVirtualMachineEndpointNfGetArgs... nfs) {
+            return nfs(List.of(nfs));
+        }
         public Builder smbs(@Nullable Output<List<OntapStorageVirtualMachineEndpointSmbGetArgs>> smbs) {
             this.smbs = smbs;
             return this;
         }
-
         public Builder smbs(@Nullable List<OntapStorageVirtualMachineEndpointSmbGetArgs> smbs) {
             this.smbs = Output.ofNullable(smbs);
             return this;
         }
-        public OntapStorageVirtualMachineEndpointGetArgs build() {
+        public Builder smbs(OntapStorageVirtualMachineEndpointSmbGetArgs... smbs) {
+            return smbs(List.of(smbs));
+        }        public OntapStorageVirtualMachineEndpointGetArgs build() {
             return new OntapStorageVirtualMachineEndpointGetArgs(iscses, managements, nfs, smbs);
         }
     }

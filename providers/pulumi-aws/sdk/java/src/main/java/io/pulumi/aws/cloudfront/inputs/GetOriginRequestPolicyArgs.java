@@ -74,12 +74,10 @@ public final class GetOriginRequestPolicyArgs extends io.pulumi.resources.Invoke
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetOriginRequestPolicyArgs build() {
+        }        public GetOriginRequestPolicyArgs build() {
             return new GetOriginRequestPolicyArgs(id, name);
         }
     }

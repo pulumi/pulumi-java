@@ -72,12 +72,10 @@ public final class GetSelectionArgs extends io.pulumi.resources.InvokeArgs {
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
-
         public Builder selectionId(String selectionId) {
             this.selectionId = Objects.requireNonNull(selectionId);
             return this;
-        }
-        public GetSelectionArgs build() {
+        }        public GetSelectionArgs build() {
             return new GetSelectionArgs(planId, selectionId);
         }
     }

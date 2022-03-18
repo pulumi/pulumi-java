@@ -197,92 +197,77 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
             this.checksum = checksum;
             return this;
         }
-
         public Builder checksum(@Nullable String checksum) {
             this.checksum = Output.ofNullable(checksum);
             return this;
         }
-
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
-
         public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Output.ofNullable(createVersion);
             return this;
         }
-
         public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enumerationValues(@Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues) {
             this.enumerationValues = enumerationValues;
             return this;
         }
-
         public Builder enumerationValues(@Nullable List<SlotTypeEnumerationValueGetArgs> enumerationValues) {
             this.enumerationValues = Output.ofNullable(enumerationValues);
             return this;
         }
-
+        public Builder enumerationValues(SlotTypeEnumerationValueGetArgs... enumerationValues) {
+            return enumerationValues(List.of(enumerationValues));
+        }
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-
         public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
             this.lastUpdatedDate = Output.ofNullable(lastUpdatedDate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder valueSelectionStrategy(@Nullable Output<String> valueSelectionStrategy) {
             this.valueSelectionStrategy = valueSelectionStrategy;
             return this;
         }
-
         public Builder valueSelectionStrategy(@Nullable String valueSelectionStrategy) {
             this.valueSelectionStrategy = Output.ofNullable(valueSelectionStrategy);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public SlotTypeState build() {
+        }        public SlotTypeState build() {
             return new SlotTypeState(checksum, createVersion, createdDate, description, enumerationValues, lastUpdatedDate, name, valueSelectionStrategy, version);
         }
     }

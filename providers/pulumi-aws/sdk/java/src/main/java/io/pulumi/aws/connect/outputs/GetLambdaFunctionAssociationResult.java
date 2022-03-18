@@ -69,17 +69,14 @@ public final class GetLambdaFunctionAssociationResult {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
-        }
-        public GetLambdaFunctionAssociationResult build() {
+        }        public GetLambdaFunctionAssociationResult build() {
             return new GetLambdaFunctionAssociationResult(functionArn, id, instanceId);
         }
     }

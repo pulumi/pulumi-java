@@ -106,42 +106,34 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder portfolioId(Output<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
-
         public Builder portfolioId(String portfolioId) {
             this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
             return this;
         }
-
         public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder sourcePortfolioId(@Nullable Output<String> sourcePortfolioId) {
             this.sourcePortfolioId = sourcePortfolioId;
             return this;
         }
-
         public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
             this.sourcePortfolioId = Output.ofNullable(sourcePortfolioId);
             return this;
-        }
-        public ProductPortfolioAssociationArgs build() {
+        }        public ProductPortfolioAssociationArgs build() {
             return new ProductPortfolioAssociationArgs(acceptLanguage, portfolioId, productId, sourcePortfolioId);
         }
     }

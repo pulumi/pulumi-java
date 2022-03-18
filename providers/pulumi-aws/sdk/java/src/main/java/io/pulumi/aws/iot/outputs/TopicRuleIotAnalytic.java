@@ -69,12 +69,10 @@ public final class TopicRuleIotAnalytic {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleIotAnalytic build() {
+        }        public TopicRuleIotAnalytic build() {
             return new TopicRuleIotAnalytic(channelName, roleArn);
         }
     }

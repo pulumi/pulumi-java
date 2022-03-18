@@ -51,8 +51,7 @@ public final class RuleGroupRuleStatementOrStatementStatementXssMatchStatementFi
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument build() {
+        }        public RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument build() {
             return new RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument(name);
         }
     }

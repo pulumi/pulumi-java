@@ -57,12 +57,10 @@ public final class GatewayGatewayNetworkInterfaceArgs extends io.pulumi.resource
             this.ipv4Address = ipv4Address;
             return this;
         }
-
         public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = Output.ofNullable(ipv4Address);
             return this;
-        }
-        public GatewayGatewayNetworkInterfaceArgs build() {
+        }        public GatewayGatewayNetworkInterfaceArgs build() {
             return new GatewayGatewayNetworkInterfaceArgs(ipv4Address);
         }
     }

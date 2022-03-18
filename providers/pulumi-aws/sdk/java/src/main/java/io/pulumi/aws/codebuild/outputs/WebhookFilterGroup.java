@@ -54,7 +54,9 @@ public final class WebhookFilterGroup {
             this.filters = filters;
             return this;
         }
-        public WebhookFilterGroup build() {
+        public Builder filters(WebhookFilterGroupFilter... filters) {
+            return filters(List.of(filters));
+        }        public WebhookFilterGroup build() {
             return new WebhookFilterGroup(filters);
         }
     }

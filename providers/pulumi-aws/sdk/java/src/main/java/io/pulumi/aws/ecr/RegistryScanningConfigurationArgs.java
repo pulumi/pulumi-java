@@ -76,22 +76,21 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<RegistryScanningConfigurationRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(RegistryScanningConfigurationRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder scanType(Output<String> scanType) {
             this.scanType = Objects.requireNonNull(scanType);
             return this;
         }
-
         public Builder scanType(String scanType) {
             this.scanType = Output.of(Objects.requireNonNull(scanType));
             return this;
-        }
-        public RegistryScanningConfigurationArgs build() {
+        }        public RegistryScanningConfigurationArgs build() {
             return new RegistryScanningConfigurationArgs(rules, scanType);
         }
     }

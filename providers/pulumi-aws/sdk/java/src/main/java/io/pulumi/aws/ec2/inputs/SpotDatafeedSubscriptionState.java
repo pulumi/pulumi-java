@@ -74,22 +74,18 @@ public final class SpotDatafeedSubscriptionState extends io.pulumi.resources.Res
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public SpotDatafeedSubscriptionState build() {
+        }        public SpotDatafeedSubscriptionState build() {
             return new SpotDatafeedSubscriptionState(bucket, prefix);
         }
     }

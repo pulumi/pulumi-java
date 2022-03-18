@@ -72,12 +72,13 @@ public final class DistributionTrustedKeyGroupItem {
             this.keyGroupId = keyGroupId;
             return this;
         }
-
         public Builder keyPairIds(@Nullable List<String> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }
-        public DistributionTrustedKeyGroupItem build() {
+        public Builder keyPairIds(String... keyPairIds) {
+            return keyPairIds(List.of(keyPairIds));
+        }        public DistributionTrustedKeyGroupItem build() {
             return new DistributionTrustedKeyGroupItem(keyGroupId, keyPairIds);
         }
     }

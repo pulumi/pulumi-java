@@ -90,32 +90,26 @@ public final class GroupLaunchTemplateArgs extends io.pulumi.resources.ResourceA
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GroupLaunchTemplateArgs build() {
+        }        public GroupLaunchTemplateArgs build() {
             return new GroupLaunchTemplateArgs(id, name, version);
         }
     }

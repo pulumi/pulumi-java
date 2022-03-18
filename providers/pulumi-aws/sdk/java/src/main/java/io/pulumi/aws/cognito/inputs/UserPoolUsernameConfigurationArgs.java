@@ -56,12 +56,10 @@ public final class UserPoolUsernameConfigurationArgs extends io.pulumi.resources
             this.caseSensitive = Objects.requireNonNull(caseSensitive);
             return this;
         }
-
         public Builder caseSensitive(Boolean caseSensitive) {
             this.caseSensitive = Output.of(Objects.requireNonNull(caseSensitive));
             return this;
-        }
-        public UserPoolUsernameConfigurationArgs build() {
+        }        public UserPoolUsernameConfigurationArgs build() {
             return new UserPoolUsernameConfigurationArgs(caseSensitive);
         }
     }

@@ -78,12 +78,13 @@ public final class GetCoipPoolsArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetCoipPoolsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetCoipPoolsArgs build() {
+        }        public GetCoipPoolsArgs build() {
             return new GetCoipPoolsArgs(filters, tags);
         }
     }

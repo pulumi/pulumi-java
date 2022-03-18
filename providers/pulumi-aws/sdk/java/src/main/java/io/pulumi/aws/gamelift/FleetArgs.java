@@ -239,122 +239,104 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             this.buildId = Objects.requireNonNull(buildId);
             return this;
         }
-
         public Builder buildId(String buildId) {
             this.buildId = Output.of(Objects.requireNonNull(buildId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ec2InboundPermissions(@Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions) {
             this.ec2InboundPermissions = ec2InboundPermissions;
             return this;
         }
-
         public Builder ec2InboundPermissions(@Nullable List<FleetEc2InboundPermissionArgs> ec2InboundPermissions) {
             this.ec2InboundPermissions = Output.ofNullable(ec2InboundPermissions);
             return this;
         }
-
+        public Builder ec2InboundPermissions(FleetEc2InboundPermissionArgs... ec2InboundPermissions) {
+            return ec2InboundPermissions(List.of(ec2InboundPermissions));
+        }
         public Builder ec2InstanceType(Output<String> ec2InstanceType) {
             this.ec2InstanceType = Objects.requireNonNull(ec2InstanceType);
             return this;
         }
-
         public Builder ec2InstanceType(String ec2InstanceType) {
             this.ec2InstanceType = Output.of(Objects.requireNonNull(ec2InstanceType));
             return this;
         }
-
         public Builder fleetType(@Nullable Output<String> fleetType) {
             this.fleetType = fleetType;
             return this;
         }
-
         public Builder fleetType(@Nullable String fleetType) {
             this.fleetType = Output.ofNullable(fleetType);
             return this;
         }
-
         public Builder instanceRoleArn(@Nullable Output<String> instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
-
         public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             this.instanceRoleArn = Output.ofNullable(instanceRoleArn);
             return this;
         }
-
         public Builder metricGroups(@Nullable Output<List<String>> metricGroups) {
             this.metricGroups = metricGroups;
             return this;
         }
-
         public Builder metricGroups(@Nullable List<String> metricGroups) {
             this.metricGroups = Output.ofNullable(metricGroups);
             return this;
         }
-
+        public Builder metricGroups(String... metricGroups) {
+            return metricGroups(List.of(metricGroups));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder newGameSessionProtectionPolicy(@Nullable Output<String> newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
-
         public Builder newGameSessionProtectionPolicy(@Nullable String newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = Output.ofNullable(newGameSessionProtectionPolicy);
             return this;
         }
-
         public Builder resourceCreationLimitPolicy(@Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
-
         public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = Output.ofNullable(resourceCreationLimitPolicy);
             return this;
         }
-
         public Builder runtimeConfiguration(@Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
-
         public Builder runtimeConfiguration(@Nullable FleetRuntimeConfigurationArgs runtimeConfiguration) {
             this.runtimeConfiguration = Output.ofNullable(runtimeConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FleetArgs build() {
+        }        public FleetArgs build() {
             return new FleetArgs(buildId, description, ec2InboundPermissions, ec2InstanceType, fleetType, instanceRoleArn, metricGroups, name, newGameSessionProtectionPolicy, resourceCreationLimitPolicy, runtimeConfiguration, tags);
         }
     }

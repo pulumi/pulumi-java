@@ -51,8 +51,7 @@ public final class VirtualNodeSpecLoggingAccessLogFile {
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public VirtualNodeSpecLoggingAccessLogFile build() {
+        }        public VirtualNodeSpecLoggingAccessLogFile build() {
             return new VirtualNodeSpecLoggingAccessLogFile(path);
         }
     }

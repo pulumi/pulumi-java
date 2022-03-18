@@ -174,47 +174,38 @@ public final class GetConnectionResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder awsDevice(String awsDevice) {
             this.awsDevice = Objects.requireNonNull(awsDevice);
             return this;
         }
-
         public Builder bandwidth(String bandwidth) {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ownerAccountId(String ownerAccountId) {
             this.ownerAccountId = Objects.requireNonNull(ownerAccountId);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetConnectionResult build() {
+        }        public GetConnectionResult build() {
             return new GetConnectionResult(arn, awsDevice, bandwidth, id, location, name, ownerAccountId, providerName, tags);
         }
     }

@@ -74,22 +74,18 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
             this.diskId = diskId;
             return this;
         }
-
         public Builder diskId(@Nullable String diskId) {
             this.diskId = Output.ofNullable(diskId);
             return this;
         }
-
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
-
         public Builder gatewayArn(@Nullable String gatewayArn) {
             this.gatewayArn = Output.ofNullable(gatewayArn);
             return this;
-        }
-        public CacheState build() {
+        }        public CacheState build() {
             return new CacheState(diskId, gatewayArn);
         }
     }

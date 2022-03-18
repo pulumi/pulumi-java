@@ -61,12 +61,10 @@ public final class GetRateBasedRuleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRateBasedRuleResult build() {
+        }        public GetRateBasedRuleResult build() {
             return new GetRateBasedRuleResult(id, name);
         }
     }

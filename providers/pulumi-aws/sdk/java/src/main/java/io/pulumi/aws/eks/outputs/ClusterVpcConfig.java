@@ -153,37 +153,39 @@ public final class ClusterVpcConfig {
             this.clusterSecurityGroupId = clusterSecurityGroupId;
             return this;
         }
-
         public Builder endpointPrivateAccess(@Nullable Boolean endpointPrivateAccess) {
             this.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
-
         public Builder endpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
             this.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
-
         public Builder publicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
             this.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
-
+        public Builder publicAccessCidrs(String... publicAccessCidrs) {
+            return publicAccessCidrs(List.of(publicAccessCidrs));
+        }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public ClusterVpcConfig build() {
+        }        public ClusterVpcConfig build() {
             return new ClusterVpcConfig(clusterSecurityGroupId, endpointPrivateAccess, endpointPublicAccess, publicAccessCidrs, securityGroupIds, subnetIds, vpcId);
         }
     }

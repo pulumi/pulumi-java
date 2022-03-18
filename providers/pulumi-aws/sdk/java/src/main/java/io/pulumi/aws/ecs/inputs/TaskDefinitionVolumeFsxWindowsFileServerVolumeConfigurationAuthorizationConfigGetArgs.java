@@ -73,22 +73,18 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
             this.credentialsParameter = Objects.requireNonNull(credentialsParameter);
             return this;
         }
-
         public Builder credentialsParameter(String credentialsParameter) {
             this.credentialsParameter = Output.of(Objects.requireNonNull(credentialsParameter));
             return this;
         }
-
         public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
-        }
-        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs build() {
+        }        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs build() {
             return new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs(credentialsParameter, domain);
         }
     }

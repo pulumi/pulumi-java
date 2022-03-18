@@ -234,112 +234,93 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder forceOverwriteReplicaSecret(@Nullable Output<Boolean> forceOverwriteReplicaSecret) {
             this.forceOverwriteReplicaSecret = forceOverwriteReplicaSecret;
             return this;
         }
-
         public Builder forceOverwriteReplicaSecret(@Nullable Boolean forceOverwriteReplicaSecret) {
             this.forceOverwriteReplicaSecret = Output.ofNullable(forceOverwriteReplicaSecret);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder recoveryWindowInDays(@Nullable Output<Integer> recoveryWindowInDays) {
             this.recoveryWindowInDays = recoveryWindowInDays;
             return this;
         }
-
         public Builder recoveryWindowInDays(@Nullable Integer recoveryWindowInDays) {
             this.recoveryWindowInDays = Output.ofNullable(recoveryWindowInDays);
             return this;
         }
-
         public Builder replicas(@Nullable Output<List<SecretReplicaArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable List<SecretReplicaArgs> replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-
+        public Builder replicas(SecretReplicaArgs... replicas) {
+            return replicas(List.of(replicas));
+        }
         public Builder rotationLambdaArn(@Nullable Output<String> rotationLambdaArn) {
             this.rotationLambdaArn = rotationLambdaArn;
             return this;
         }
-
         public Builder rotationLambdaArn(@Nullable String rotationLambdaArn) {
             this.rotationLambdaArn = Output.ofNullable(rotationLambdaArn);
             return this;
         }
-
         public Builder rotationRules(@Nullable Output<SecretRotationRulesArgs> rotationRules) {
             this.rotationRules = rotationRules;
             return this;
         }
-
         public Builder rotationRules(@Nullable SecretRotationRulesArgs rotationRules) {
             this.rotationRules = Output.ofNullable(rotationRules);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(description, forceOverwriteReplicaSecret, kmsKeyId, name, namePrefix, policy, recoveryWindowInDays, replicas, rotationLambdaArn, rotationRules, tags);
         }
     }

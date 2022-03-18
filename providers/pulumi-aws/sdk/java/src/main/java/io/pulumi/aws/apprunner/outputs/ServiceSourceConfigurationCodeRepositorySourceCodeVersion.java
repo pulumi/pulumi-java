@@ -69,12 +69,10 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersion {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepositorySourceCodeVersion build() {
+        }        public ServiceSourceConfigurationCodeRepositorySourceCodeVersion build() {
             return new ServiceSourceConfigurationCodeRepositorySourceCodeVersion(type, value);
         }
     }

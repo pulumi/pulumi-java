@@ -75,22 +75,18 @@ public final class TopicRuleDynamodbv2Args extends io.pulumi.resources.ResourceA
             this.putItem = putItem;
             return this;
         }
-
         public Builder putItem(@Nullable TopicRuleDynamodbv2PutItemArgs putItem) {
             this.putItem = Output.ofNullable(putItem);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public TopicRuleDynamodbv2Args build() {
+        }        public TopicRuleDynamodbv2Args build() {
             return new TopicRuleDynamodbv2Args(putItem, roleArn);
         }
     }

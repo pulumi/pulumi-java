@@ -57,12 +57,13 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public Builder statements(List<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementArgs> statements) {
             this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
-        public WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementArgs build() {
+        public Builder statements(WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementArgs... statements) {
+            return statements(List.of(statements));
+        }        public WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementArgs build() {
             return new WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementArgs(statements);
         }
     }

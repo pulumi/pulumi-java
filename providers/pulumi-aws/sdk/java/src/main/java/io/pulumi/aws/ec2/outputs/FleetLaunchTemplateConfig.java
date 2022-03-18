@@ -72,12 +72,13 @@ public final class FleetLaunchTemplateConfig {
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
-
         public Builder overrides(@Nullable List<FleetLaunchTemplateConfigOverride> overrides) {
             this.overrides = overrides;
             return this;
         }
-        public FleetLaunchTemplateConfig build() {
+        public Builder overrides(FleetLaunchTemplateConfigOverride... overrides) {
+            return overrides(List.of(overrides));
+        }        public FleetLaunchTemplateConfig build() {
             return new FleetLaunchTemplateConfig(launchTemplateSpecification, overrides);
         }
     }

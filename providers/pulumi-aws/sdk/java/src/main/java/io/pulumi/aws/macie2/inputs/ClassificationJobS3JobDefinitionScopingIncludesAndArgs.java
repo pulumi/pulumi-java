@@ -75,22 +75,18 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndArgs extend
             this.simpleScopeTerm = simpleScopeTerm;
             return this;
         }
-
         public Builder simpleScopeTerm(@Nullable ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs simpleScopeTerm) {
             this.simpleScopeTerm = Output.ofNullable(simpleScopeTerm);
             return this;
         }
-
         public Builder tagScopeTerm(@Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs> tagScopeTerm) {
             this.tagScopeTerm = tagScopeTerm;
             return this;
         }
-
         public Builder tagScopeTerm(@Nullable ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs tagScopeTerm) {
             this.tagScopeTerm = Output.ofNullable(tagScopeTerm);
             return this;
-        }
-        public ClassificationJobS3JobDefinitionScopingIncludesAndArgs build() {
+        }        public ClassificationJobS3JobDefinitionScopingIncludesAndArgs build() {
             return new ClassificationJobS3JobDefinitionScopingIncludesAndArgs(simpleScopeTerm, tagScopeTerm);
         }
     }

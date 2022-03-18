@@ -109,42 +109,40 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             this.propagatingVgws = propagatingVgws;
             return this;
         }
-
         public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
             this.propagatingVgws = Output.ofNullable(propagatingVgws);
             return this;
         }
-
+        public Builder propagatingVgws(String... propagatingVgws) {
+            return propagatingVgws(List.of(propagatingVgws));
+        }
         public Builder routes(@Nullable Output<List<RouteTableRouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable List<RouteTableRouteArgs> routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-
+        public Builder routes(RouteTableRouteArgs... routes) {
+            return routes(List.of(routes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public RouteTableArgs build() {
+        }        public RouteTableArgs build() {
             return new RouteTableArgs(propagatingVgws, routes, tags, vpcId);
         }
     }

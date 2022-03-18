@@ -70,12 +70,10 @@ public final class GatewayRouteSpecGrpcRoute {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder match(GatewayRouteSpecGrpcRouteMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
-        }
-        public GatewayRouteSpecGrpcRoute build() {
+        }        public GatewayRouteSpecGrpcRoute build() {
             return new GatewayRouteSpecGrpcRoute(action, match);
         }
     }

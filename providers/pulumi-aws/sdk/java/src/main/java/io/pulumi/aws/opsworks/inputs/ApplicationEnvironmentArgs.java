@@ -91,32 +91,26 @@ public final class ApplicationEnvironmentArgs extends io.pulumi.resources.Resour
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder secure(@Nullable Output<Boolean> secure) {
             this.secure = secure;
             return this;
         }
-
         public Builder secure(@Nullable Boolean secure) {
             this.secure = Output.ofNullable(secure);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ApplicationEnvironmentArgs build() {
+        }        public ApplicationEnvironmentArgs build() {
             return new ApplicationEnvironmentArgs(key, secure, value);
         }
     }

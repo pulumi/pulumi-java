@@ -137,32 +137,29 @@ public final class CrawlerS3Target {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder dlqEventQueueArn(@Nullable String dlqEventQueueArn) {
             this.dlqEventQueueArn = dlqEventQueueArn;
             return this;
         }
-
         public Builder eventQueueArn(@Nullable String eventQueueArn) {
             this.eventQueueArn = eventQueueArn;
             return this;
         }
-
         public Builder exclusions(@Nullable List<String> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
+        public Builder exclusions(String... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = sampleSize;
             return this;
-        }
-        public CrawlerS3Target build() {
+        }        public CrawlerS3Target build() {
             return new CrawlerS3Target(connectionName, dlqEventQueueArn, eventQueueArn, exclusions, path, sampleSize);
         }
     }

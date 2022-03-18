@@ -251,132 +251,106 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             this.bucketFolder = bucketFolder;
             return this;
         }
-
         public Builder bucketFolder(@Nullable String bucketFolder) {
             this.bucketFolder = Output.ofNullable(bucketFolder);
             return this;
         }
-
         public Builder bucketName(@Nullable Output<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder compressionType(@Nullable Output<String> compressionType) {
             this.compressionType = compressionType;
             return this;
         }
-
         public Builder compressionType(@Nullable String compressionType) {
             this.compressionType = Output.ofNullable(compressionType);
             return this;
         }
-
         public Builder csvDelimiter(@Nullable Output<String> csvDelimiter) {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
-
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
             this.csvDelimiter = Output.ofNullable(csvDelimiter);
             return this;
         }
-
         public Builder csvRowDelimiter(@Nullable Output<String> csvRowDelimiter) {
             this.csvRowDelimiter = csvRowDelimiter;
             return this;
         }
-
         public Builder csvRowDelimiter(@Nullable String csvRowDelimiter) {
             this.csvRowDelimiter = Output.ofNullable(csvRowDelimiter);
             return this;
         }
-
         public Builder dataFormat(@Nullable Output<String> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = Output.ofNullable(dataFormat);
             return this;
         }
-
         public Builder datePartitionEnabled(@Nullable Output<Boolean> datePartitionEnabled) {
             this.datePartitionEnabled = datePartitionEnabled;
             return this;
         }
-
         public Builder datePartitionEnabled(@Nullable Boolean datePartitionEnabled) {
             this.datePartitionEnabled = Output.ofNullable(datePartitionEnabled);
             return this;
         }
-
         public Builder encryptionMode(@Nullable Output<String> encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
-
         public Builder encryptionMode(@Nullable String encryptionMode) {
             this.encryptionMode = Output.ofNullable(encryptionMode);
             return this;
         }
-
         public Builder externalTableDefinition(@Nullable Output<String> externalTableDefinition) {
             this.externalTableDefinition = externalTableDefinition;
             return this;
         }
-
         public Builder externalTableDefinition(@Nullable String externalTableDefinition) {
             this.externalTableDefinition = Output.ofNullable(externalTableDefinition);
             return this;
         }
-
         public Builder parquetTimestampInMillisecond(@Nullable Output<Boolean> parquetTimestampInMillisecond) {
             this.parquetTimestampInMillisecond = parquetTimestampInMillisecond;
             return this;
         }
-
         public Builder parquetTimestampInMillisecond(@Nullable Boolean parquetTimestampInMillisecond) {
             this.parquetTimestampInMillisecond = Output.ofNullable(parquetTimestampInMillisecond);
             return this;
         }
-
         public Builder parquetVersion(@Nullable Output<String> parquetVersion) {
             this.parquetVersion = parquetVersion;
             return this;
         }
-
         public Builder parquetVersion(@Nullable String parquetVersion) {
             this.parquetVersion = Output.ofNullable(parquetVersion);
             return this;
         }
-
         public Builder serverSideEncryptionKmsKeyId(@Nullable Output<String> serverSideEncryptionKmsKeyId) {
             this.serverSideEncryptionKmsKeyId = serverSideEncryptionKmsKeyId;
             return this;
         }
-
         public Builder serverSideEncryptionKmsKeyId(@Nullable String serverSideEncryptionKmsKeyId) {
             this.serverSideEncryptionKmsKeyId = Output.ofNullable(serverSideEncryptionKmsKeyId);
             return this;
         }
-
         public Builder serviceAccessRoleArn(@Nullable Output<String> serviceAccessRoleArn) {
             this.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }
-
         public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
             this.serviceAccessRoleArn = Output.ofNullable(serviceAccessRoleArn);
             return this;
-        }
-        public EndpointS3SettingsArgs build() {
+        }        public EndpointS3SettingsArgs build() {
             return new EndpointS3SettingsArgs(bucketFolder, bucketName, compressionType, csvDelimiter, csvRowDelimiter, dataFormat, datePartitionEnabled, encryptionMode, externalTableDefinition, parquetTimestampInMillisecond, parquetVersion, serverSideEncryptionKmsKeyId, serviceAccessRoleArn);
         }
     }

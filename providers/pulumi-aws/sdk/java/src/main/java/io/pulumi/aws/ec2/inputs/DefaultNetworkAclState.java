@@ -190,92 +190,83 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder defaultNetworkAclId(@Nullable Output<String> defaultNetworkAclId) {
             this.defaultNetworkAclId = defaultNetworkAclId;
             return this;
         }
-
         public Builder defaultNetworkAclId(@Nullable String defaultNetworkAclId) {
             this.defaultNetworkAclId = Output.ofNullable(defaultNetworkAclId);
             return this;
         }
-
         public Builder egress(@Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress) {
             this.egress = egress;
             return this;
         }
-
         public Builder egress(@Nullable List<DefaultNetworkAclEgressGetArgs> egress) {
             this.egress = Output.ofNullable(egress);
             return this;
         }
-
+        public Builder egress(DefaultNetworkAclEgressGetArgs... egress) {
+            return egress(List.of(egress));
+        }
         public Builder ingress(@Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
-
         public Builder ingress(@Nullable List<DefaultNetworkAclIngressGetArgs> ingress) {
             this.ingress = Output.ofNullable(ingress);
             return this;
         }
-
+        public Builder ingress(DefaultNetworkAclIngressGetArgs... ingress) {
+            return ingress(List.of(ingress));
+        }
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public DefaultNetworkAclState build() {
+        }        public DefaultNetworkAclState build() {
             return new DefaultNetworkAclState(arn, defaultNetworkAclId, egress, ingress, ownerId, subnetIds, tags, tagsAll, vpcId);
         }
     }

@@ -76,22 +76,21 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsArgs extends i
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
         }
-
         public Builder defaultResourceSpec(UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
             this.defaultResourceSpec = Output.of(Objects.requireNonNull(defaultResourceSpec));
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
             return this;
         }
-        public UserProfileUserSettingsJupyterServerAppSettingsArgs build() {
+        public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
+            return lifecycleConfigArns(List.of(lifecycleConfigArns));
+        }        public UserProfileUserSettingsJupyterServerAppSettingsArgs build() {
             return new UserProfileUserSettingsJupyterServerAppSettingsArgs(defaultResourceSpec, lifecycleConfigArns);
         }
     }

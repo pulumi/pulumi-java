@@ -187,92 +187,74 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoPlacement(@Nullable Output<String> autoPlacement) {
             this.autoPlacement = autoPlacement;
             return this;
         }
-
         public Builder autoPlacement(@Nullable String autoPlacement) {
             this.autoPlacement = Output.ofNullable(autoPlacement);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
         }
-
         public Builder hostRecovery(@Nullable String hostRecovery) {
             this.hostRecovery = Output.ofNullable(hostRecovery);
             return this;
         }
-
         public Builder instanceFamily(@Nullable Output<String> instanceFamily) {
             this.instanceFamily = instanceFamily;
             return this;
         }
-
         public Builder instanceFamily(@Nullable String instanceFamily) {
             this.instanceFamily = Output.ofNullable(instanceFamily);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DedicatedHostState build() {
+        }        public DedicatedHostState build() {
             return new DedicatedHostState(arn, autoPlacement, availabilityZone, hostRecovery, instanceFamily, instanceType, ownerId, tags, tagsAll);
         }
     }

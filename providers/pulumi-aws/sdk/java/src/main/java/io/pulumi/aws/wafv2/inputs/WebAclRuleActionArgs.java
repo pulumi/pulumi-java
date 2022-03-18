@@ -92,32 +92,26 @@ public final class WebAclRuleActionArgs extends io.pulumi.resources.ResourceArgs
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable WebAclRuleActionAllowArgs allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder block(@Nullable Output<WebAclRuleActionBlockArgs> block) {
             this.block = block;
             return this;
         }
-
         public Builder block(@Nullable WebAclRuleActionBlockArgs block) {
             this.block = Output.ofNullable(block);
             return this;
         }
-
         public Builder count(@Nullable Output<WebAclRuleActionCountArgs> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable WebAclRuleActionCountArgs count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public WebAclRuleActionArgs build() {
+        }        public WebAclRuleActionArgs build() {
             return new WebAclRuleActionArgs(allow, block, count);
         }
     }

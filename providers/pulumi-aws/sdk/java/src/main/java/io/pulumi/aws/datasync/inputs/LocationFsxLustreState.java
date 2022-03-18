@@ -172,82 +172,69 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder fsxFilesystemArn(@Nullable Output<String> fsxFilesystemArn) {
             this.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
-
         public Builder fsxFilesystemArn(@Nullable String fsxFilesystemArn) {
             this.fsxFilesystemArn = Output.ofNullable(fsxFilesystemArn);
             return this;
         }
-
         public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
-
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
             this.securityGroupArns = Output.ofNullable(securityGroupArns);
             return this;
         }
-
+        public Builder securityGroupArns(String... securityGroupArns) {
+            return securityGroupArns(List.of(securityGroupArns));
+        }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public LocationFsxLustreState build() {
+        }        public LocationFsxLustreState build() {
             return new LocationFsxLustreState(arn, creationTime, fsxFilesystemArn, securityGroupArns, subdirectory, tags, tagsAll, uri);
         }
     }

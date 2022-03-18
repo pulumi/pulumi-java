@@ -61,17 +61,14 @@ public final class GetSigningProfileRevocationRecord {
             this.revocationEffectiveFrom = Objects.requireNonNull(revocationEffectiveFrom);
             return this;
         }
-
         public Builder revokedAt(String revokedAt) {
             this.revokedAt = Objects.requireNonNull(revokedAt);
             return this;
         }
-
         public Builder revokedBy(String revokedBy) {
             this.revokedBy = Objects.requireNonNull(revokedBy);
             return this;
-        }
-        public GetSigningProfileRevocationRecord build() {
+        }        public GetSigningProfileRevocationRecord build() {
             return new GetSigningProfileRevocationRecord(revocationEffectiveFrom, revokedAt, revokedBy);
         }
     }

@@ -90,32 +90,26 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
             this.behaviorOnMxFailure = behaviorOnMxFailure;
             return this;
         }
-
         public Builder behaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
             this.behaviorOnMxFailure = Output.ofNullable(behaviorOnMxFailure);
             return this;
         }
-
         public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder mailFromDomain(Output<String> mailFromDomain) {
             this.mailFromDomain = Objects.requireNonNull(mailFromDomain);
             return this;
         }
-
         public Builder mailFromDomain(String mailFromDomain) {
             this.mailFromDomain = Output.of(Objects.requireNonNull(mailFromDomain));
             return this;
-        }
-        public MailFromArgs build() {
+        }        public MailFromArgs build() {
             return new MailFromArgs(behaviorOnMxFailure, domain, mailFromDomain);
         }
     }

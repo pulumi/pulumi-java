@@ -91,32 +91,26 @@ public final class SafetyRuleRuleConfigGetArgs extends io.pulumi.resources.Resou
             this.inverted = Objects.requireNonNull(inverted);
             return this;
         }
-
         public Builder inverted(Boolean inverted) {
             this.inverted = Output.of(Objects.requireNonNull(inverted));
             return this;
         }
-
         public Builder threshold(Output<Integer> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(Integer threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SafetyRuleRuleConfigGetArgs build() {
+        }        public SafetyRuleRuleConfigGetArgs build() {
             return new SafetyRuleRuleConfigGetArgs(inverted, threshold, type);
         }
     }

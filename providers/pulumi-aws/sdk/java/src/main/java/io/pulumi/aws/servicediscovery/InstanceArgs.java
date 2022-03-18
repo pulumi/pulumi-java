@@ -90,32 +90,26 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder attributes(Map<String,String> attributes) {
             this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(attributes, instanceId, serviceId);
         }
     }

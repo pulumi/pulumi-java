@@ -175,82 +175,69 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder operatingRegions(@Nullable Output<List<VpcIpamOperatingRegionGetArgs>> operatingRegions) {
             this.operatingRegions = operatingRegions;
             return this;
         }
-
         public Builder operatingRegions(@Nullable List<VpcIpamOperatingRegionGetArgs> operatingRegions) {
             this.operatingRegions = Output.ofNullable(operatingRegions);
             return this;
         }
-
+        public Builder operatingRegions(VpcIpamOperatingRegionGetArgs... operatingRegions) {
+            return operatingRegions(List.of(operatingRegions));
+        }
         public Builder privateDefaultScopeId(@Nullable Output<String> privateDefaultScopeId) {
             this.privateDefaultScopeId = privateDefaultScopeId;
             return this;
         }
-
         public Builder privateDefaultScopeId(@Nullable String privateDefaultScopeId) {
             this.privateDefaultScopeId = Output.ofNullable(privateDefaultScopeId);
             return this;
         }
-
         public Builder publicDefaultScopeId(@Nullable Output<String> publicDefaultScopeId) {
             this.publicDefaultScopeId = publicDefaultScopeId;
             return this;
         }
-
         public Builder publicDefaultScopeId(@Nullable String publicDefaultScopeId) {
             this.publicDefaultScopeId = Output.ofNullable(publicDefaultScopeId);
             return this;
         }
-
         public Builder scopeCount(@Nullable Output<Integer> scopeCount) {
             this.scopeCount = scopeCount;
             return this;
         }
-
         public Builder scopeCount(@Nullable Integer scopeCount) {
             this.scopeCount = Output.ofNullable(scopeCount);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public VpcIpamState build() {
+        }        public VpcIpamState build() {
             return new VpcIpamState(arn, description, operatingRegions, privateDefaultScopeId, publicDefaultScopeId, scopeCount, tags, tagsAll);
         }
     }

@@ -72,12 +72,10 @@ public final class ListenerRuleActionForwardStickiness {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public ListenerRuleActionForwardStickiness build() {
+        }        public ListenerRuleActionForwardStickiness build() {
             return new ListenerRuleActionForwardStickiness(duration, enabled);
         }
     }

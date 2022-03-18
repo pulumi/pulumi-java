@@ -119,22 +119,18 @@ public final class SizeConstraintSetSizeConstraint {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder fieldToMatch(SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
-        }
-        public SizeConstraintSetSizeConstraint build() {
+        }        public SizeConstraintSetSizeConstraint build() {
             return new SizeConstraintSetSizeConstraint(comparisonOperator, fieldToMatch, size, textTransformation);
         }
     }

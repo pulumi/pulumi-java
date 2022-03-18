@@ -140,32 +140,26 @@ public final class VirtualNodeSpecListener {
             this.connectionPool = connectionPool;
             return this;
         }
-
         public Builder healthCheck(@Nullable VirtualNodeSpecListenerHealthCheck healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder outlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection) {
             this.outlierDetection = outlierDetection;
             return this;
         }
-
         public Builder portMapping(VirtualNodeSpecListenerPortMapping portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
-
         public Builder timeout(@Nullable VirtualNodeSpecListenerTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder tls(@Nullable VirtualNodeSpecListenerTls tls) {
             this.tls = tls;
             return this;
-        }
-        public VirtualNodeSpecListener build() {
+        }        public VirtualNodeSpecListener build() {
             return new VirtualNodeSpecListener(connectionPool, healthCheck, outlierDetection, portMapping, timeout, tls);
         }
     }

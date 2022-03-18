@@ -56,12 +56,10 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeTimeGetA
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
-        }
-        public BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs build() {
+        }        public BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs build() {
             return new BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs(minutes);
         }
     }

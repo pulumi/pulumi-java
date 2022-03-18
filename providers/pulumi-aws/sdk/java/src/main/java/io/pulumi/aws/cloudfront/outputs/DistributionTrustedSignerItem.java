@@ -72,12 +72,13 @@ public final class DistributionTrustedSignerItem {
             this.awsAccountNumber = awsAccountNumber;
             return this;
         }
-
         public Builder keyPairIds(@Nullable List<String> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }
-        public DistributionTrustedSignerItem build() {
+        public Builder keyPairIds(String... keyPairIds) {
+            return keyPairIds(List.of(keyPairIds));
+        }        public DistributionTrustedSignerItem build() {
             return new DistributionTrustedSignerItem(awsAccountNumber, keyPairIds);
         }
     }

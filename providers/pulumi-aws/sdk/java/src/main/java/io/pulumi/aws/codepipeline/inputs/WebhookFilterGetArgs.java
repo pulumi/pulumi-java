@@ -73,22 +73,18 @@ public final class WebhookFilterGetArgs extends io.pulumi.resources.ResourceArgs
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
-
         public Builder jsonPath(String jsonPath) {
             this.jsonPath = Output.of(Objects.requireNonNull(jsonPath));
             return this;
         }
-
         public Builder matchEquals(Output<String> matchEquals) {
             this.matchEquals = Objects.requireNonNull(matchEquals);
             return this;
         }
-
         public Builder matchEquals(String matchEquals) {
             this.matchEquals = Output.of(Objects.requireNonNull(matchEquals));
             return this;
-        }
-        public WebhookFilterGetArgs build() {
+        }        public WebhookFilterGetArgs build() {
             return new WebhookFilterGetArgs(jsonPath, matchEquals);
         }
     }

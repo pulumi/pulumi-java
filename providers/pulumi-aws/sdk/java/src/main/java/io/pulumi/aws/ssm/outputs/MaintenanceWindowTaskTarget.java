@@ -62,12 +62,13 @@ public final class MaintenanceWindowTaskTarget {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public MaintenanceWindowTaskTarget build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public MaintenanceWindowTaskTarget build() {
             return new MaintenanceWindowTaskTarget(key, values);
         }
     }

@@ -141,62 +141,53 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
             this.certificateValidationRecords = certificateValidationRecords;
             return this;
         }
-
         public Builder certificateValidationRecords(@Nullable List<CustomDomainAssociationCertificateValidationRecordGetArgs> certificateValidationRecords) {
             this.certificateValidationRecords = Output.ofNullable(certificateValidationRecords);
             return this;
         }
-
+        public Builder certificateValidationRecords(CustomDomainAssociationCertificateValidationRecordGetArgs... certificateValidationRecords) {
+            return certificateValidationRecords(List.of(certificateValidationRecords));
+        }
         public Builder dnsTarget(@Nullable Output<String> dnsTarget) {
             this.dnsTarget = dnsTarget;
             return this;
         }
-
         public Builder dnsTarget(@Nullable String dnsTarget) {
             this.dnsTarget = Output.ofNullable(dnsTarget);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder enableWwwSubdomain(@Nullable Output<Boolean> enableWwwSubdomain) {
             this.enableWwwSubdomain = enableWwwSubdomain;
             return this;
         }
-
         public Builder enableWwwSubdomain(@Nullable Boolean enableWwwSubdomain) {
             this.enableWwwSubdomain = Output.ofNullable(enableWwwSubdomain);
             return this;
         }
-
         public Builder serviceArn(@Nullable Output<String> serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
-
         public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = Output.ofNullable(serviceArn);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public CustomDomainAssociationState build() {
+        }        public CustomDomainAssociationState build() {
             return new CustomDomainAssociationState(certificateValidationRecords, dnsTarget, domainName, enableWwwSubdomain, serviceArn, status);
         }
     }

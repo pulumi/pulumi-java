@@ -178,82 +178,66 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
             this.accepter = accepter;
             return this;
         }
-
         public Builder accepter(@Nullable VpcPeeringConnectionAccepterArgs accepter) {
             this.accepter = Output.ofNullable(accepter);
             return this;
         }
-
         public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
-
         public Builder autoAccept(@Nullable Boolean autoAccept) {
             this.autoAccept = Output.ofNullable(autoAccept);
             return this;
         }
-
         public Builder peerOwnerId(@Nullable Output<String> peerOwnerId) {
             this.peerOwnerId = peerOwnerId;
             return this;
         }
-
         public Builder peerOwnerId(@Nullable String peerOwnerId) {
             this.peerOwnerId = Output.ofNullable(peerOwnerId);
             return this;
         }
-
         public Builder peerRegion(@Nullable Output<String> peerRegion) {
             this.peerRegion = peerRegion;
             return this;
         }
-
         public Builder peerRegion(@Nullable String peerRegion) {
             this.peerRegion = Output.ofNullable(peerRegion);
             return this;
         }
-
         public Builder peerVpcId(Output<String> peerVpcId) {
             this.peerVpcId = Objects.requireNonNull(peerVpcId);
             return this;
         }
-
         public Builder peerVpcId(String peerVpcId) {
             this.peerVpcId = Output.of(Objects.requireNonNull(peerVpcId));
             return this;
         }
-
         public Builder requester(@Nullable Output<VpcPeeringConnectionRequesterArgs> requester) {
             this.requester = requester;
             return this;
         }
-
         public Builder requester(@Nullable VpcPeeringConnectionRequesterArgs requester) {
             this.requester = Output.ofNullable(requester);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public VpcPeeringConnectionArgs build() {
+        }        public VpcPeeringConnectionArgs build() {
             return new VpcPeeringConnectionArgs(accepter, autoAccept, peerOwnerId, peerRegion, peerVpcId, requester, tags, vpcId);
         }
     }

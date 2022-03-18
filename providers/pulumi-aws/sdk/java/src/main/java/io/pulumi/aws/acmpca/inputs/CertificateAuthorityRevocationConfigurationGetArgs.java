@@ -57,12 +57,10 @@ public final class CertificateAuthorityRevocationConfigurationGetArgs extends io
             this.crlConfiguration = crlConfiguration;
             return this;
         }
-
         public Builder crlConfiguration(@Nullable CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs crlConfiguration) {
             this.crlConfiguration = Output.ofNullable(crlConfiguration);
             return this;
-        }
-        public CertificateAuthorityRevocationConfigurationGetArgs build() {
+        }        public CertificateAuthorityRevocationConfigurationGetArgs build() {
             return new CertificateAuthorityRevocationConfigurationGetArgs(crlConfiguration);
         }
     }

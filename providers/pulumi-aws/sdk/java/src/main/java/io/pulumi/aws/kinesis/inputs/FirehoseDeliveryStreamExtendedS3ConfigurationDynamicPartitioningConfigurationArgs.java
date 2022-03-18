@@ -75,22 +75,18 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
-
         public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = Output.ofNullable(retryDuration);
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs(enabled, retryDuration);
         }
     }

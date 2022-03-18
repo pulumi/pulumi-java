@@ -461,257 +461,206 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
             this.acl = acl;
             return this;
         }
-
         public Builder acl(@Nullable String acl) {
             this.acl = Output.ofNullable(acl);
             return this;
         }
-
         public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucketKeyEnabled(@Nullable Output<Boolean> bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
-
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = Output.ofNullable(bucketKeyEnabled);
             return this;
         }
-
         public Builder cacheControl(@Nullable Output<String> cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
-
         public Builder cacheControl(@Nullable String cacheControl) {
             this.cacheControl = Output.ofNullable(cacheControl);
             return this;
         }
-
         public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentBase64(@Nullable Output<String> contentBase64) {
             this.contentBase64 = contentBase64;
             return this;
         }
-
         public Builder contentBase64(@Nullable String contentBase64) {
             this.contentBase64 = Output.ofNullable(contentBase64);
             return this;
         }
-
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
-
         public Builder contentDisposition(@Nullable String contentDisposition) {
             this.contentDisposition = Output.ofNullable(contentDisposition);
             return this;
         }
-
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
-
         public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
         }
-
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
-
         public Builder contentLanguage(@Nullable String contentLanguage) {
             this.contentLanguage = Output.ofNullable(contentLanguage);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder objectLockLegalHoldStatus(@Nullable Output<String> objectLockLegalHoldStatus) {
             this.objectLockLegalHoldStatus = objectLockLegalHoldStatus;
             return this;
         }
-
         public Builder objectLockLegalHoldStatus(@Nullable String objectLockLegalHoldStatus) {
             this.objectLockLegalHoldStatus = Output.ofNullable(objectLockLegalHoldStatus);
             return this;
         }
-
         public Builder objectLockMode(@Nullable Output<String> objectLockMode) {
             this.objectLockMode = objectLockMode;
             return this;
         }
-
         public Builder objectLockMode(@Nullable String objectLockMode) {
             this.objectLockMode = Output.ofNullable(objectLockMode);
             return this;
         }
-
         public Builder objectLockRetainUntilDate(@Nullable Output<String> objectLockRetainUntilDate) {
             this.objectLockRetainUntilDate = objectLockRetainUntilDate;
             return this;
         }
-
         public Builder objectLockRetainUntilDate(@Nullable String objectLockRetainUntilDate) {
             this.objectLockRetainUntilDate = Output.ofNullable(objectLockRetainUntilDate);
             return this;
         }
-
         public Builder serverSideEncryption(@Nullable Output<String> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
-
         public Builder serverSideEncryption(@Nullable String serverSideEncryption) {
             this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
             return this;
         }
-
         public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable AssetOrArchive source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder sourceHash(@Nullable Output<String> sourceHash) {
             this.sourceHash = sourceHash;
             return this;
         }
-
         public Builder sourceHash(@Nullable String sourceHash) {
             this.sourceHash = Output.ofNullable(sourceHash);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
         }
-
         public Builder websiteRedirect(@Nullable Output<String> websiteRedirect) {
             this.websiteRedirect = websiteRedirect;
             return this;
         }
-
         public Builder websiteRedirect(@Nullable String websiteRedirect) {
             this.websiteRedirect = Output.ofNullable(websiteRedirect);
             return this;
-        }
-        public BucketObjectState build() {
+        }        public BucketObjectState build() {
             return new BucketObjectState(acl, bucket, bucketKeyEnabled, cacheControl, content, contentBase64, contentDisposition, contentEncoding, contentLanguage, contentType, etag, forceDestroy, key, kmsKeyId, metadata, objectLockLegalHoldStatus, objectLockMode, objectLockRetainUntilDate, serverSideEncryption, source, sourceHash, storageClass, tags, tagsAll, versionId, websiteRedirect);
         }
     }

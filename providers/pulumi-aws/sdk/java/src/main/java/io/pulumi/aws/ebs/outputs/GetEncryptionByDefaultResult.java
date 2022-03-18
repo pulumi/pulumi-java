@@ -70,12 +70,10 @@ public final class GetEncryptionByDefaultResult {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetEncryptionByDefaultResult build() {
+        }        public GetEncryptionByDefaultResult build() {
             return new GetEncryptionByDefaultResult(enabled, id);
         }
     }

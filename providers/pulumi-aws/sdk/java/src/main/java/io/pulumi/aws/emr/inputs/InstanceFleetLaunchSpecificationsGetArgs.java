@@ -76,22 +76,24 @@ public final class InstanceFleetLaunchSpecificationsGetArgs extends io.pulumi.re
             this.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
-
         public Builder onDemandSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs> onDemandSpecifications) {
             this.onDemandSpecifications = Output.ofNullable(onDemandSpecifications);
             return this;
         }
-
+        public Builder onDemandSpecifications(InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs... onDemandSpecifications) {
+            return onDemandSpecifications(List.of(onDemandSpecifications));
+        }
         public Builder spotSpecifications(@Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications) {
             this.spotSpecifications = spotSpecifications;
             return this;
         }
-
         public Builder spotSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs> spotSpecifications) {
             this.spotSpecifications = Output.ofNullable(spotSpecifications);
             return this;
         }
-        public InstanceFleetLaunchSpecificationsGetArgs build() {
+        public Builder spotSpecifications(InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs... spotSpecifications) {
+            return spotSpecifications(List.of(spotSpecifications));
+        }        public InstanceFleetLaunchSpecificationsGetArgs build() {
             return new InstanceFleetLaunchSpecificationsGetArgs(onDemandSpecifications, spotSpecifications);
         }
     }

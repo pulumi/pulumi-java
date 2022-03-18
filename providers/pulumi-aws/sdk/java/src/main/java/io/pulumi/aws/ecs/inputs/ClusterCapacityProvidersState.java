@@ -92,32 +92,32 @@ public final class ClusterCapacityProvidersState extends io.pulumi.resources.Res
             this.capacityProviders = capacityProviders;
             return this;
         }
-
         public Builder capacityProviders(@Nullable List<String> capacityProviders) {
             this.capacityProviders = Output.ofNullable(capacityProviders);
             return this;
         }
-
+        public Builder capacityProviders(String... capacityProviders) {
+            return capacityProviders(List.of(capacityProviders));
+        }
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies) {
             this.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
             return this;
         }
-
         public Builder defaultCapacityProviderStrategies(@Nullable List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs> defaultCapacityProviderStrategies) {
             this.defaultCapacityProviderStrategies = Output.ofNullable(defaultCapacityProviderStrategies);
             return this;
         }
-        public ClusterCapacityProvidersState build() {
+        public Builder defaultCapacityProviderStrategies(ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs... defaultCapacityProviderStrategies) {
+            return defaultCapacityProviderStrategies(List.of(defaultCapacityProviderStrategies));
+        }        public ClusterCapacityProvidersState build() {
             return new ClusterCapacityProvidersState(capacityProviders, clusterName, defaultCapacityProviderStrategies);
         }
     }

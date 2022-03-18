@@ -74,22 +74,18 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public Builder ttl(Integer ttl) {
             this.ttl = Output.of(Objects.requireNonNull(ttl));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ServiceDnsConfigDnsRecordGetArgs build() {
+        }        public ServiceDnsConfigDnsRecordGetArgs build() {
             return new ServiceDnsConfigDnsRecordGetArgs(ttl, type);
         }
     }

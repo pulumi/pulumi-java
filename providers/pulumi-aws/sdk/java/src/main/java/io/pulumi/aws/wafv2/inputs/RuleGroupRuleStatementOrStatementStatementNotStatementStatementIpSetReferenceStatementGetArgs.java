@@ -75,22 +75,18 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder ipSetForwardedIpConfig(@Nullable Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs> ipSetForwardedIpConfig) {
             this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
             return this;
         }
-
         public Builder ipSetForwardedIpConfig(@Nullable RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs ipSetForwardedIpConfig) {
             this.ipSetForwardedIpConfig = Output.ofNullable(ipSetForwardedIpConfig);
             return this;
-        }
-        public RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementGetArgs build() {
+        }        public RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementGetArgs build() {
             return new RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementGetArgs(arn, ipSetForwardedIpConfig);
         }
     }

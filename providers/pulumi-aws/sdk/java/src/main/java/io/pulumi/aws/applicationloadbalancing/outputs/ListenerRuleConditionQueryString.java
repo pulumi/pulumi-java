@@ -71,12 +71,10 @@ public final class ListenerRuleConditionQueryString {
             this.key = key;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ListenerRuleConditionQueryString build() {
+        }        public ListenerRuleConditionQueryString build() {
             return new ListenerRuleConditionQueryString(key, value);
         }
     }

@@ -105,22 +105,18 @@ public final class ImageRecipeBlockDeviceMapping {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder ebs(@Nullable ImageRecipeBlockDeviceMappingEbs ebs) {
             this.ebs = ebs;
             return this;
         }
-
         public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = noDevice;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
-        }
-        public ImageRecipeBlockDeviceMapping build() {
+        }        public ImageRecipeBlockDeviceMapping build() {
             return new ImageRecipeBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }
     }

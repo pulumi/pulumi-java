@@ -81,17 +81,17 @@ public final class GetDelegatedAdministratorsResult {
             this.delegatedAdministrators = Objects.requireNonNull(delegatedAdministrators);
             return this;
         }
-
+        public Builder delegatedAdministrators(GetDelegatedAdministratorsDelegatedAdministrator... delegatedAdministrators) {
+            return delegatedAdministrators(List.of(delegatedAdministrators));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
-        }
-        public GetDelegatedAdministratorsResult build() {
+        }        public GetDelegatedAdministratorsResult build() {
             return new GetDelegatedAdministratorsResult(delegatedAdministrators, id, servicePrincipal);
         }
     }

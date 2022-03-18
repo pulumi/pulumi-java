@@ -157,72 +157,58 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
-
         public Builder detectorId(String detectorId) {
             this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
-
         public Builder findingCriteria(Output<FilterFindingCriteriaArgs> findingCriteria) {
             this.findingCriteria = Objects.requireNonNull(findingCriteria);
             return this;
         }
-
         public Builder findingCriteria(FilterFindingCriteriaArgs findingCriteria) {
             this.findingCriteria = Output.of(Objects.requireNonNull(findingCriteria));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rank(Output<Integer> rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
-
         public Builder rank(Integer rank) {
             this.rank = Output.of(Objects.requireNonNull(rank));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FilterArgs build() {
+        }        public FilterArgs build() {
             return new FilterArgs(action, description, detectorId, findingCriteria, name, rank, tags);
         }
     }

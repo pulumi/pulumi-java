@@ -96,22 +96,27 @@ public final class GetAmiIdsResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetAmiIdsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-        public GetAmiIdsResult build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public GetAmiIdsResult build() {
             return new GetAmiIdsResult(arns, filters, id, names);
         }
     }

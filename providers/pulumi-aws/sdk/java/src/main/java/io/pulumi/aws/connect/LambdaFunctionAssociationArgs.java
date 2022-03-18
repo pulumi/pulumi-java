@@ -73,22 +73,18 @@ public final class LambdaFunctionAssociationArgs extends io.pulumi.resources.Res
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder functionArn(String functionArn) {
             this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
-        }
-        public LambdaFunctionAssociationArgs build() {
+        }        public LambdaFunctionAssociationArgs build() {
             return new LambdaFunctionAssociationArgs(functionArn, instanceId);
         }
     }

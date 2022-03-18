@@ -156,72 +156,58 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder connectionsBandwidth(Output<String> connectionsBandwidth) {
             this.connectionsBandwidth = Objects.requireNonNull(connectionsBandwidth);
             return this;
         }
-
         public Builder connectionsBandwidth(String connectionsBandwidth) {
             this.connectionsBandwidth = Output.of(Objects.requireNonNull(connectionsBandwidth));
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
-
         public Builder providerName(@Nullable String providerName) {
             this.providerName = Output.ofNullable(providerName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LinkAggregationGroupArgs build() {
+        }        public LinkAggregationGroupArgs build() {
             return new LinkAggregationGroupArgs(connectionId, connectionsBandwidth, forceDestroy, location, name, providerName, tags);
         }
     }

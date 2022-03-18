@@ -106,42 +106,34 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
-
         public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
-
         public Builder memberName(Output<String> memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
-
         public Builder memberName(String memberName) {
             this.memberName = Output.of(Objects.requireNonNull(memberName));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public GroupMembershipArgs build() {
+        }        public GroupMembershipArgs build() {
             return new GroupMembershipArgs(awsAccountId, groupName, memberName, namespace);
         }
     }

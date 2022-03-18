@@ -90,32 +90,26 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
-
         public Builder classification(String classification) {
             this.classification = Output.of(Objects.requireNonNull(classification));
             return this;
         }
-
         public Builder customPatterns(@Nullable Output<String> customPatterns) {
             this.customPatterns = customPatterns;
             return this;
         }
-
         public Builder customPatterns(@Nullable String customPatterns) {
             this.customPatterns = Output.ofNullable(customPatterns);
             return this;
         }
-
         public Builder grokPattern(Output<String> grokPattern) {
             this.grokPattern = Objects.requireNonNull(grokPattern);
             return this;
         }
-
         public Builder grokPattern(String grokPattern) {
             this.grokPattern = Output.of(Objects.requireNonNull(grokPattern));
             return this;
-        }
-        public ClassifierGrokClassifierGetArgs build() {
+        }        public ClassifierGrokClassifierGetArgs build() {
             return new ClassifierGrokClassifierGetArgs(classification, customPatterns, grokPattern);
         }
     }

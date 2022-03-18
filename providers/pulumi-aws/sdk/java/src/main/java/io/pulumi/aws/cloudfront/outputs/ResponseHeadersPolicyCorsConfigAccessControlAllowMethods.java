@@ -46,7 +46,9 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlAllowMethods {
             this.items = items;
             return this;
         }
-        public ResponseHeadersPolicyCorsConfigAccessControlAllowMethods build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyCorsConfigAccessControlAllowMethods build() {
             return new ResponseHeadersPolicyCorsConfigAccessControlAllowMethods(items);
         }
     }

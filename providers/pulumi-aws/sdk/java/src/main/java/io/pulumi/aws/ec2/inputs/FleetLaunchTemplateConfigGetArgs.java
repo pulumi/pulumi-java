@@ -76,22 +76,21 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
-
         public Builder launchTemplateSpecification(FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
             this.launchTemplateSpecification = Output.of(Objects.requireNonNull(launchTemplateSpecification));
             return this;
         }
-
         public Builder overrides(@Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
-
         public Builder overrides(@Nullable List<FleetLaunchTemplateConfigOverrideGetArgs> overrides) {
             this.overrides = Output.ofNullable(overrides);
             return this;
         }
-        public FleetLaunchTemplateConfigGetArgs build() {
+        public Builder overrides(FleetLaunchTemplateConfigOverrideGetArgs... overrides) {
+            return overrides(List.of(overrides));
+        }        public FleetLaunchTemplateConfigGetArgs build() {
             return new FleetLaunchTemplateConfigGetArgs(launchTemplateSpecification, overrides);
         }
     }

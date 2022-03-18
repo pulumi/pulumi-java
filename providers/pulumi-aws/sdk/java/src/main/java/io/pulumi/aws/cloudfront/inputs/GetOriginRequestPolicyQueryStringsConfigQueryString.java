@@ -52,7 +52,9 @@ public final class GetOriginRequestPolicyQueryStringsConfigQueryString extends i
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GetOriginRequestPolicyQueryStringsConfigQueryString build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public GetOriginRequestPolicyQueryStringsConfigQueryString build() {
             return new GetOriginRequestPolicyQueryStringsConfigQueryString(items);
         }
     }

@@ -107,22 +107,21 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTls {
             this.certificate = certificate;
             return this;
         }
-
         public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = enforce;
             return this;
         }
-
         public Builder ports(@Nullable List<Integer> ports) {
             this.ports = ports;
             return this;
         }
-
+        public Builder ports(Integer... ports) {
+            return ports(List.of(ports));
+        }
         public Builder validation(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTls build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTls build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTls(certificate, enforce, ports, validation);
         }
     }

@@ -69,12 +69,10 @@ public final class WebAclDefaultActionAllowCustomRequestHandlingInsertHeader {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WebAclDefaultActionAllowCustomRequestHandlingInsertHeader build() {
+        }        public WebAclDefaultActionAllowCustomRequestHandlingInsertHeader build() {
             return new WebAclDefaultActionAllowCustomRequestHandlingInsertHeader(name, value);
         }
     }

@@ -72,12 +72,10 @@ public final class ThingGroupProperties {
             this.attributePayload = attributePayload;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
-        }
-        public ThingGroupProperties build() {
+        }        public ThingGroupProperties build() {
             return new ThingGroupProperties(attributePayload, description);
         }
     }

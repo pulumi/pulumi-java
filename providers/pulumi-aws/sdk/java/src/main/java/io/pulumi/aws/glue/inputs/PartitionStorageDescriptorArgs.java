@@ -242,122 +242,107 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             this.bucketColumns = bucketColumns;
             return this;
         }
-
         public Builder bucketColumns(@Nullable List<String> bucketColumns) {
             this.bucketColumns = Output.ofNullable(bucketColumns);
             return this;
         }
-
+        public Builder bucketColumns(String... bucketColumns) {
+            return bucketColumns(List.of(bucketColumns));
+        }
         public Builder columns(@Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<PartitionStorageDescriptorColumnArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-
+        public Builder columns(PartitionStorageDescriptorColumnArgs... columns) {
+            return columns(List.of(columns));
+        }
         public Builder compressed(@Nullable Output<Boolean> compressed) {
             this.compressed = compressed;
             return this;
         }
-
         public Builder compressed(@Nullable Boolean compressed) {
             this.compressed = Output.ofNullable(compressed);
             return this;
         }
-
         public Builder inputFormat(@Nullable Output<String> inputFormat) {
             this.inputFormat = inputFormat;
             return this;
         }
-
         public Builder inputFormat(@Nullable String inputFormat) {
             this.inputFormat = Output.ofNullable(inputFormat);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder numberOfBuckets(@Nullable Output<Integer> numberOfBuckets) {
             this.numberOfBuckets = numberOfBuckets;
             return this;
         }
-
         public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
             this.numberOfBuckets = Output.ofNullable(numberOfBuckets);
             return this;
         }
-
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
-
         public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder serDeInfo(@Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo) {
             this.serDeInfo = serDeInfo;
             return this;
         }
-
         public Builder serDeInfo(@Nullable PartitionStorageDescriptorSerDeInfoArgs serDeInfo) {
             this.serDeInfo = Output.ofNullable(serDeInfo);
             return this;
         }
-
         public Builder skewedInfo(@Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo) {
             this.skewedInfo = skewedInfo;
             return this;
         }
-
         public Builder skewedInfo(@Nullable PartitionStorageDescriptorSkewedInfoArgs skewedInfo) {
             this.skewedInfo = Output.ofNullable(skewedInfo);
             return this;
         }
-
         public Builder sortColumns(@Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns) {
             this.sortColumns = sortColumns;
             return this;
         }
-
         public Builder sortColumns(@Nullable List<PartitionStorageDescriptorSortColumnArgs> sortColumns) {
             this.sortColumns = Output.ofNullable(sortColumns);
             return this;
         }
-
+        public Builder sortColumns(PartitionStorageDescriptorSortColumnArgs... sortColumns) {
+            return sortColumns(List.of(sortColumns));
+        }
         public Builder storedAsSubDirectories(@Nullable Output<Boolean> storedAsSubDirectories) {
             this.storedAsSubDirectories = storedAsSubDirectories;
             return this;
         }
-
         public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
             this.storedAsSubDirectories = Output.ofNullable(storedAsSubDirectories);
             return this;
-        }
-        public PartitionStorageDescriptorArgs build() {
+        }        public PartitionStorageDescriptorArgs build() {
             return new PartitionStorageDescriptorArgs(bucketColumns, columns, compressed, inputFormat, location, numberOfBuckets, outputFormat, parameters, serDeInfo, skewedInfo, sortColumns, storedAsSubDirectories);
         }
     }

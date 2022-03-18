@@ -105,22 +105,18 @@ public final class RuleGroupActivatedRule {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public RuleGroupActivatedRule build() {
+        }        public RuleGroupActivatedRule build() {
             return new RuleGroupActivatedRule(action, priority, ruleId, type);
         }
     }

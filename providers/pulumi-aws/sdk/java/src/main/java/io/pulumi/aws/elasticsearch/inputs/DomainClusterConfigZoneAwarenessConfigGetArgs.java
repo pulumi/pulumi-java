@@ -57,12 +57,10 @@ public final class DomainClusterConfigZoneAwarenessConfigGetArgs extends io.pulu
             this.availabilityZoneCount = availabilityZoneCount;
             return this;
         }
-
         public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
             this.availabilityZoneCount = Output.ofNullable(availabilityZoneCount);
             return this;
-        }
-        public DomainClusterConfigZoneAwarenessConfigGetArgs build() {
+        }        public DomainClusterConfigZoneAwarenessConfigGetArgs build() {
             return new DomainClusterConfigZoneAwarenessConfigGetArgs(availabilityZoneCount);
         }
     }

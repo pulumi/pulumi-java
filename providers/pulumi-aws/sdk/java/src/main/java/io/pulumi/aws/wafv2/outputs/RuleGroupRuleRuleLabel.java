@@ -51,8 +51,7 @@ public final class RuleGroupRuleRuleLabel {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupRuleRuleLabel build() {
+        }        public RuleGroupRuleRuleLabel build() {
             return new RuleGroupRuleRuleLabel(name);
         }
     }

@@ -88,17 +88,14 @@ public final class ResolverSyncConfig {
             this.conflictDetection = conflictDetection;
             return this;
         }
-
         public Builder conflictHandler(@Nullable String conflictHandler) {
             this.conflictHandler = conflictHandler;
             return this;
         }
-
         public Builder lambdaConflictHandlerConfig(@Nullable ResolverSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
             return this;
-        }
-        public ResolverSyncConfig build() {
+        }        public ResolverSyncConfig build() {
             return new ResolverSyncConfig(conflictDetection, conflictHandler, lambdaConflictHandlerConfig);
         }
     }

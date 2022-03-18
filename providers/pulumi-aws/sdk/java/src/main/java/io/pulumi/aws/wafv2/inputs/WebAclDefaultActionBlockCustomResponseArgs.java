@@ -93,32 +93,29 @@ public final class WebAclDefaultActionBlockCustomResponseArgs extends io.pulumi.
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = Output.ofNullable(customResponseBodyKey);
             return this;
         }
-
         public Builder responseCode(Output<Integer> responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Output.of(Objects.requireNonNull(responseCode));
             return this;
         }
-
         public Builder responseHeaders(@Nullable Output<List<WebAclDefaultActionBlockCustomResponseResponseHeaderArgs>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<WebAclDefaultActionBlockCustomResponseResponseHeaderArgs> responseHeaders) {
             this.responseHeaders = Output.ofNullable(responseHeaders);
             return this;
         }
-        public WebAclDefaultActionBlockCustomResponseArgs build() {
+        public Builder responseHeaders(WebAclDefaultActionBlockCustomResponseResponseHeaderArgs... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public WebAclDefaultActionBlockCustomResponseArgs build() {
             return new WebAclDefaultActionBlockCustomResponseArgs(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

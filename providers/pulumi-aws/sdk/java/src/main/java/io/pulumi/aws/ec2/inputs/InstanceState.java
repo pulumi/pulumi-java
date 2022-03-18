@@ -832,477 +832,403 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.ami = ami;
             return this;
         }
-
         public Builder ami(@Nullable String ami) {
             this.ami = Output.ofNullable(ami);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder capacityReservationSpecification(@Nullable Output<InstanceCapacityReservationSpecificationGetArgs> capacityReservationSpecification) {
             this.capacityReservationSpecification = capacityReservationSpecification;
             return this;
         }
-
         public Builder capacityReservationSpecification(@Nullable InstanceCapacityReservationSpecificationGetArgs capacityReservationSpecification) {
             this.capacityReservationSpecification = Output.ofNullable(capacityReservationSpecification);
             return this;
         }
-
         public Builder cpuCoreCount(@Nullable Output<Integer> cpuCoreCount) {
             this.cpuCoreCount = cpuCoreCount;
             return this;
         }
-
         public Builder cpuCoreCount(@Nullable Integer cpuCoreCount) {
             this.cpuCoreCount = Output.ofNullable(cpuCoreCount);
             return this;
         }
-
         public Builder cpuThreadsPerCore(@Nullable Output<Integer> cpuThreadsPerCore) {
             this.cpuThreadsPerCore = cpuThreadsPerCore;
             return this;
         }
-
         public Builder cpuThreadsPerCore(@Nullable Integer cpuThreadsPerCore) {
             this.cpuThreadsPerCore = Output.ofNullable(cpuThreadsPerCore);
             return this;
         }
-
         public Builder creditSpecification(@Nullable Output<InstanceCreditSpecificationGetArgs> creditSpecification) {
             this.creditSpecification = creditSpecification;
             return this;
         }
-
         public Builder creditSpecification(@Nullable InstanceCreditSpecificationGetArgs creditSpecification) {
             this.creditSpecification = Output.ofNullable(creditSpecification);
             return this;
         }
-
         public Builder disableApiTermination(@Nullable Output<Boolean> disableApiTermination) {
             this.disableApiTermination = disableApiTermination;
             return this;
         }
-
         public Builder disableApiTermination(@Nullable Boolean disableApiTermination) {
             this.disableApiTermination = Output.ofNullable(disableApiTermination);
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable List<InstanceEbsBlockDeviceGetArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
-
+        public Builder ebsBlockDevices(InstanceEbsBlockDeviceGetArgs... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
-
         public Builder enclaveOptions(@Nullable Output<InstanceEnclaveOptionsGetArgs> enclaveOptions) {
             this.enclaveOptions = enclaveOptions;
             return this;
         }
-
         public Builder enclaveOptions(@Nullable InstanceEnclaveOptionsGetArgs enclaveOptions) {
             this.enclaveOptions = Output.ofNullable(enclaveOptions);
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable List<InstanceEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
-
+        public Builder ephemeralBlockDevices(InstanceEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder getPasswordData(@Nullable Output<Boolean> getPasswordData) {
             this.getPasswordData = getPasswordData;
             return this;
         }
-
         public Builder getPasswordData(@Nullable Boolean getPasswordData) {
             this.getPasswordData = Output.ofNullable(getPasswordData);
             return this;
         }
-
         public Builder hibernation(@Nullable Output<Boolean> hibernation) {
             this.hibernation = hibernation;
             return this;
         }
-
         public Builder hibernation(@Nullable Boolean hibernation) {
             this.hibernation = Output.ofNullable(hibernation);
             return this;
         }
-
         public Builder hostId(@Nullable Output<String> hostId) {
             this.hostId = hostId;
             return this;
         }
-
         public Builder hostId(@Nullable String hostId) {
             this.hostId = Output.ofNullable(hostId);
             return this;
         }
-
         public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
-
         public Builder instanceInitiatedShutdownBehavior(@Nullable Output<String> instanceInitiatedShutdownBehavior) {
             this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
             return this;
         }
-
         public Builder instanceInitiatedShutdownBehavior(@Nullable String instanceInitiatedShutdownBehavior) {
             this.instanceInitiatedShutdownBehavior = Output.ofNullable(instanceInitiatedShutdownBehavior);
             return this;
         }
-
         public Builder instanceState(@Nullable Output<String> instanceState) {
             this.instanceState = instanceState;
             return this;
         }
-
         public Builder instanceState(@Nullable String instanceState) {
             this.instanceState = Output.ofNullable(instanceState);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<Either<String,InstanceType>> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable Either<String,InstanceType> instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
-
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
             this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
-
+        public Builder ipv6Addresses(String... ipv6Addresses) {
+            return ipv6Addresses(List.of(ipv6Addresses));
+        }
         public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder launchTemplate(@Nullable Output<InstanceLaunchTemplateGetArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
-
         public Builder launchTemplate(@Nullable InstanceLaunchTemplateGetArgs launchTemplate) {
             this.launchTemplate = Output.ofNullable(launchTemplate);
             return this;
         }
-
         public Builder metadataOptions(@Nullable Output<InstanceMetadataOptionsGetArgs> metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
-
         public Builder metadataOptions(@Nullable InstanceMetadataOptionsGetArgs metadataOptions) {
             this.metadataOptions = Output.ofNullable(metadataOptions);
             return this;
         }
-
         public Builder monitoring(@Nullable Output<Boolean> monitoring) {
             this.monitoring = monitoring;
             return this;
         }
-
         public Builder monitoring(@Nullable Boolean monitoring) {
             this.monitoring = Output.ofNullable(monitoring);
             return this;
         }
-
         public Builder networkInterfaces(@Nullable Output<List<InstanceNetworkInterfaceGetArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<InstanceNetworkInterfaceGetArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(InstanceNetworkInterfaceGetArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
-
         public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
-
         public Builder passwordData(@Nullable Output<String> passwordData) {
             this.passwordData = passwordData;
             return this;
         }
-
         public Builder passwordData(@Nullable String passwordData) {
             this.passwordData = Output.ofNullable(passwordData);
             return this;
         }
-
         public Builder placementGroup(@Nullable Output<String> placementGroup) {
             this.placementGroup = placementGroup;
             return this;
         }
-
         public Builder placementGroup(@Nullable String placementGroup) {
             this.placementGroup = Output.ofNullable(placementGroup);
             return this;
         }
-
         public Builder placementPartitionNumber(@Nullable Output<Integer> placementPartitionNumber) {
             this.placementPartitionNumber = placementPartitionNumber;
             return this;
         }
-
         public Builder placementPartitionNumber(@Nullable Integer placementPartitionNumber) {
             this.placementPartitionNumber = Output.ofNullable(placementPartitionNumber);
             return this;
         }
-
         public Builder primaryNetworkInterfaceId(@Nullable Output<String> primaryNetworkInterfaceId) {
             this.primaryNetworkInterfaceId = primaryNetworkInterfaceId;
             return this;
         }
-
         public Builder primaryNetworkInterfaceId(@Nullable String primaryNetworkInterfaceId) {
             this.primaryNetworkInterfaceId = Output.ofNullable(primaryNetworkInterfaceId);
             return this;
         }
-
         public Builder privateDns(@Nullable Output<String> privateDns) {
             this.privateDns = privateDns;
             return this;
         }
-
         public Builder privateDns(@Nullable String privateDns) {
             this.privateDns = Output.ofNullable(privateDns);
             return this;
         }
-
         public Builder privateIp(@Nullable Output<String> privateIp) {
             this.privateIp = privateIp;
             return this;
         }
-
         public Builder privateIp(@Nullable String privateIp) {
             this.privateIp = Output.ofNullable(privateIp);
             return this;
         }
-
         public Builder publicDns(@Nullable Output<String> publicDns) {
             this.publicDns = publicDns;
             return this;
         }
-
         public Builder publicDns(@Nullable String publicDns) {
             this.publicDns = Output.ofNullable(publicDns);
             return this;
         }
-
         public Builder publicIp(@Nullable Output<String> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
-
         public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = Output.ofNullable(publicIp);
             return this;
         }
-
         public Builder rootBlockDevice(@Nullable Output<InstanceRootBlockDeviceGetArgs> rootBlockDevice) {
             this.rootBlockDevice = rootBlockDevice;
             return this;
         }
-
         public Builder rootBlockDevice(@Nullable InstanceRootBlockDeviceGetArgs rootBlockDevice) {
             this.rootBlockDevice = Output.ofNullable(rootBlockDevice);
             return this;
         }
-
         public Builder secondaryPrivateIps(@Nullable Output<List<String>> secondaryPrivateIps) {
             this.secondaryPrivateIps = secondaryPrivateIps;
             return this;
         }
-
         public Builder secondaryPrivateIps(@Nullable List<String> secondaryPrivateIps) {
             this.secondaryPrivateIps = Output.ofNullable(secondaryPrivateIps);
             return this;
         }
-
+        public Builder secondaryPrivateIps(String... secondaryPrivateIps) {
+            return secondaryPrivateIps(List.of(secondaryPrivateIps));
+        }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sourceDestCheck(@Nullable Output<Boolean> sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
-
         public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
             this.sourceDestCheck = Output.ofNullable(sourceDestCheck);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder tenancy(@Nullable Output<Either<String,Tenancy>> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
-
         public Builder tenancy(@Nullable Either<String,Tenancy> tenancy) {
             this.tenancy = Output.ofNullable(tenancy);
             return this;
         }
-
         public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = Output.ofNullable(userData);
             return this;
         }
-
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
             this.userDataBase64 = userDataBase64;
             return this;
         }
-
         public Builder userDataBase64(@Nullable String userDataBase64) {
             this.userDataBase64 = Output.ofNullable(userDataBase64);
             return this;
         }
-
         public Builder volumeTags(@Nullable Output<Map<String,String>> volumeTags) {
             this.volumeTags = volumeTags;
             return this;
         }
-
         public Builder volumeTags(@Nullable Map<String,String> volumeTags) {
             this.volumeTags = Output.ofNullable(volumeTags);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-        public InstanceState build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public InstanceState build() {
             return new InstanceState(ami, arn, associatePublicIpAddress, availabilityZone, capacityReservationSpecification, cpuCoreCount, cpuThreadsPerCore, creditSpecification, disableApiTermination, ebsBlockDevices, ebsOptimized, enclaveOptions, ephemeralBlockDevices, getPasswordData, hibernation, hostId, iamInstanceProfile, instanceInitiatedShutdownBehavior, instanceState, instanceType, ipv6AddressCount, ipv6Addresses, keyName, launchTemplate, metadataOptions, monitoring, networkInterfaces, outpostArn, passwordData, placementGroup, placementPartitionNumber, primaryNetworkInterfaceId, privateDns, privateIp, publicDns, publicIp, rootBlockDevice, secondaryPrivateIps, securityGroups, sourceDestCheck, subnetId, tags, tagsAll, tenancy, userData, userDataBase64, volumeTags, vpcSecurityGroupIds);
         }
     }

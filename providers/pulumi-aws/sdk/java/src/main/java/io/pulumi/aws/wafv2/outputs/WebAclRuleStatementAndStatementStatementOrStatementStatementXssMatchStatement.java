@@ -73,12 +73,13 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementX
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebAclRuleStatementAndStatementStatementOrStatementStatementXssMatchStatement build() {
+        public Builder textTransformations(WebAclRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementAndStatementStatementOrStatementStatementXssMatchStatement build() {
             return new WebAclRuleStatementAndStatementStatementOrStatementStatementXssMatchStatement(fieldToMatch, textTransformations);
         }
     }

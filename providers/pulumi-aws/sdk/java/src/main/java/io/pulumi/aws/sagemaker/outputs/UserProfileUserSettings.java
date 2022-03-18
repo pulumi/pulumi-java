@@ -140,32 +140,29 @@ public final class UserProfileUserSettings {
             this.executionRole = Objects.requireNonNull(executionRole);
             return this;
         }
-
         public Builder jupyterServerAppSettings(@Nullable UserProfileUserSettingsJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
-
         public Builder kernelGatewayAppSettings(@Nullable UserProfileUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sharingSettings(@Nullable UserProfileUserSettingsSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }
-
         public Builder tensorBoardAppSettings(@Nullable UserProfileUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
             this.tensorBoardAppSettings = tensorBoardAppSettings;
             return this;
-        }
-        public UserProfileUserSettings build() {
+        }        public UserProfileUserSettings build() {
             return new UserProfileUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings, tensorBoardAppSettings);
         }
     }

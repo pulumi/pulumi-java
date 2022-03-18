@@ -152,42 +152,34 @@ public final class GetPortfolioResult {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetPortfolioResult build() {
+        }        public GetPortfolioResult build() {
             return new GetPortfolioResult(acceptLanguage, arn, createdTime, description, id, name, providerName, tags);
         }
     }

@@ -70,12 +70,10 @@ public final class VirtualGatewaySpecListenerPortMapping {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public VirtualGatewaySpecListenerPortMapping build() {
+        }        public VirtualGatewaySpecListenerPortMapping build() {
             return new VirtualGatewaySpecListenerPortMapping(port, protocol);
         }
     }

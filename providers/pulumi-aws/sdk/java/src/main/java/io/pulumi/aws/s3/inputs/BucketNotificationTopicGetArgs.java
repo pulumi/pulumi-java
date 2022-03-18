@@ -123,52 +123,45 @@ public final class BucketNotificationTopicGetArgs extends io.pulumi.resources.Re
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
         public Builder events(List<String> events) {
             this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder filterPrefix(@Nullable Output<String> filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
-
         public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = Output.ofNullable(filterPrefix);
             return this;
         }
-
         public Builder filterSuffix(@Nullable Output<String> filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
-
         public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = Output.ofNullable(filterSuffix);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder topicArn(Output<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
-
         public Builder topicArn(String topicArn) {
             this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
-        }
-        public BucketNotificationTopicGetArgs build() {
+        }        public BucketNotificationTopicGetArgs build() {
             return new BucketNotificationTopicGetArgs(events, filterPrefix, filterSuffix, id, topicArn);
         }
     }

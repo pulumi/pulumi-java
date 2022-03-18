@@ -99,17 +99,17 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder revocationConfigurations(@Nullable List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations) {
             this.revocationConfigurations = revocationConfigurations;
             return this;
         }
-
+        public Builder revocationConfigurations(GetCertificateAuthorityRevocationConfiguration... revocationConfigurations) {
+            return revocationConfigurations(List.of(revocationConfigurations));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetCertificateAuthorityArgs build() {
+        }        public GetCertificateAuthorityArgs build() {
             return new GetCertificateAuthorityArgs(arn, revocationConfigurations, tags);
         }
     }

@@ -69,12 +69,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFi
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile(certificateChain, privateKey);
         }
     }

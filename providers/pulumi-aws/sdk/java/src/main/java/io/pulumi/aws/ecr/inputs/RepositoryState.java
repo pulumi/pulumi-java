@@ -190,92 +190,77 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder encryptionConfigurations(@Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations) {
             this.encryptionConfigurations = encryptionConfigurations;
             return this;
         }
-
         public Builder encryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationGetArgs> encryptionConfigurations) {
             this.encryptionConfigurations = Output.ofNullable(encryptionConfigurations);
             return this;
         }
-
+        public Builder encryptionConfigurations(RepositoryEncryptionConfigurationGetArgs... encryptionConfigurations) {
+            return encryptionConfigurations(List.of(encryptionConfigurations));
+        }
         public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
-
         public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationGetArgs imageScanningConfiguration) {
             this.imageScanningConfiguration = Output.ofNullable(imageScanningConfiguration);
             return this;
         }
-
         public Builder imageTagMutability(@Nullable Output<String> imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
-
         public Builder imageTagMutability(@Nullable String imageTagMutability) {
             this.imageTagMutability = Output.ofNullable(imageTagMutability);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = Output.ofNullable(registryId);
             return this;
         }
-
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
-
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = Output.ofNullable(repositoryUrl);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public RepositoryState build() {
+        }        public RepositoryState build() {
             return new RepositoryState(arn, encryptionConfigurations, imageScanningConfiguration, imageTagMutability, name, registryId, repositoryUrl, tags, tagsAll);
         }
     }

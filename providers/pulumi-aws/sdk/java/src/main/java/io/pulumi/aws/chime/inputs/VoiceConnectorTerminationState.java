@@ -141,62 +141,56 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
             this.callingRegions = callingRegions;
             return this;
         }
-
         public Builder callingRegions(@Nullable List<String> callingRegions) {
             this.callingRegions = Output.ofNullable(callingRegions);
             return this;
         }
-
+        public Builder callingRegions(String... callingRegions) {
+            return callingRegions(List.of(callingRegions));
+        }
         public Builder cidrAllowLists(@Nullable Output<List<String>> cidrAllowLists) {
             this.cidrAllowLists = cidrAllowLists;
             return this;
         }
-
         public Builder cidrAllowLists(@Nullable List<String> cidrAllowLists) {
             this.cidrAllowLists = Output.ofNullable(cidrAllowLists);
             return this;
         }
-
+        public Builder cidrAllowLists(String... cidrAllowLists) {
+            return cidrAllowLists(List.of(cidrAllowLists));
+        }
         public Builder cpsLimit(@Nullable Output<Integer> cpsLimit) {
             this.cpsLimit = cpsLimit;
             return this;
         }
-
         public Builder cpsLimit(@Nullable Integer cpsLimit) {
             this.cpsLimit = Output.ofNullable(cpsLimit);
             return this;
         }
-
         public Builder defaultPhoneNumber(@Nullable Output<String> defaultPhoneNumber) {
             this.defaultPhoneNumber = defaultPhoneNumber;
             return this;
         }
-
         public Builder defaultPhoneNumber(@Nullable String defaultPhoneNumber) {
             this.defaultPhoneNumber = Output.ofNullable(defaultPhoneNumber);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder voiceConnectorId(@Nullable Output<String> voiceConnectorId) {
             this.voiceConnectorId = voiceConnectorId;
             return this;
         }
-
         public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
             this.voiceConnectorId = Output.ofNullable(voiceConnectorId);
             return this;
-        }
-        public VoiceConnectorTerminationState build() {
+        }        public VoiceConnectorTerminationState build() {
             return new VoiceConnectorTerminationState(callingRegions, cidrAllowLists, cpsLimit, defaultPhoneNumber, disabled, voiceConnectorId);
         }
     }

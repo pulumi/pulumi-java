@@ -110,42 +110,40 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
-
         public Builder advancedBackupSettings(@Nullable List<PlanAdvancedBackupSettingArgs> advancedBackupSettings) {
             this.advancedBackupSettings = Output.ofNullable(advancedBackupSettings);
             return this;
         }
-
+        public Builder advancedBackupSettings(PlanAdvancedBackupSettingArgs... advancedBackupSettings) {
+            return advancedBackupSettings(List.of(advancedBackupSettings));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rules(Output<List<PlanRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public Builder rules(List<PlanRuleArgs> rules) {
             this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
-
+        public Builder rules(PlanRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PlanArgs build() {
+        }        public PlanArgs build() {
             return new PlanArgs(advancedBackupSettings, name, rules, tags);
         }
     }

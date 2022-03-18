@@ -108,42 +108,34 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
             this.deliveryOptions = deliveryOptions;
             return this;
         }
-
         public Builder deliveryOptions(@Nullable ConfigurationSetDeliveryOptionsArgs deliveryOptions) {
             this.deliveryOptions = Output.ofNullable(deliveryOptions);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder reputationMetricsEnabled(@Nullable Output<Boolean> reputationMetricsEnabled) {
             this.reputationMetricsEnabled = reputationMetricsEnabled;
             return this;
         }
-
         public Builder reputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
             this.reputationMetricsEnabled = Output.ofNullable(reputationMetricsEnabled);
             return this;
         }
-
         public Builder sendingEnabled(@Nullable Output<Boolean> sendingEnabled) {
             this.sendingEnabled = sendingEnabled;
             return this;
         }
-
         public Builder sendingEnabled(@Nullable Boolean sendingEnabled) {
             this.sendingEnabled = Output.ofNullable(sendingEnabled);
             return this;
-        }
-        public ConfigurationSetArgs build() {
+        }        public ConfigurationSetArgs build() {
             return new ConfigurationSetArgs(deliveryOptions, name, reputationMetricsEnabled, sendingEnabled);
         }
     }

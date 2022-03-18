@@ -71,12 +71,10 @@ public final class SigningJobSignedObjectS3 {
             this.bucket = bucket;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public SigningJobSignedObjectS3 build() {
+        }        public SigningJobSignedObjectS3 build() {
             return new SigningJobSignedObjectS3(bucket, key);
         }
     }

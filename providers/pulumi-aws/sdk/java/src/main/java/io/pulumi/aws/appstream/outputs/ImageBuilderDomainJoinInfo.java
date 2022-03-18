@@ -71,12 +71,10 @@ public final class ImageBuilderDomainJoinInfo {
             this.directoryName = directoryName;
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
-        }
-        public ImageBuilderDomainJoinInfo build() {
+        }        public ImageBuilderDomainJoinInfo build() {
             return new ImageBuilderDomainJoinInfo(directoryName, organizationalUnitDistinguishedName);
         }
     }

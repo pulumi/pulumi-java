@@ -136,32 +136,26 @@ public final class ProductProvisioningArtifactParameters {
             this.description = description;
             return this;
         }
-
         public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
             this.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
             this.templatePhysicalId = templatePhysicalId;
             return this;
         }
-
         public Builder templateUrl(@Nullable String templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ProductProvisioningArtifactParameters build() {
+        }        public ProductProvisioningArtifactParameters build() {
             return new ProductProvisioningArtifactParameters(description, disableTemplateValidation, name, templatePhysicalId, templateUrl, type);
         }
     }

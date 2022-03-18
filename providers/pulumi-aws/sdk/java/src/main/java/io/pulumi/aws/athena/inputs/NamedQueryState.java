@@ -122,52 +122,42 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder workgroup(@Nullable Output<String> workgroup) {
             this.workgroup = workgroup;
             return this;
         }
-
         public Builder workgroup(@Nullable String workgroup) {
             this.workgroup = Output.ofNullable(workgroup);
             return this;
-        }
-        public NamedQueryState build() {
+        }        public NamedQueryState build() {
             return new NamedQueryState(database, description, name, query, workgroup);
         }
     }

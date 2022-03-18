@@ -50,8 +50,7 @@ public final class GetInstanceCreditSpecification extends io.pulumi.resources.In
         public Builder cpuCredits(String cpuCredits) {
             this.cpuCredits = Objects.requireNonNull(cpuCredits);
             return this;
-        }
-        public GetInstanceCreditSpecification build() {
+        }        public GetInstanceCreditSpecification build() {
             return new GetInstanceCreditSpecification(cpuCredits);
         }
     }

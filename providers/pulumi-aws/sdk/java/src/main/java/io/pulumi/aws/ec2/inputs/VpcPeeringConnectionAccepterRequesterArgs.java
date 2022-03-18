@@ -93,32 +93,26 @@ public final class VpcPeeringConnectionAccepterRequesterArgs extends io.pulumi.r
             this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
             return this;
         }
-
         public Builder allowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
             this.allowClassicLinkToRemoteVpc = Output.ofNullable(allowClassicLinkToRemoteVpc);
             return this;
         }
-
         public Builder allowRemoteVpcDnsResolution(@Nullable Output<Boolean> allowRemoteVpcDnsResolution) {
             this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
             return this;
         }
-
         public Builder allowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
             this.allowRemoteVpcDnsResolution = Output.ofNullable(allowRemoteVpcDnsResolution);
             return this;
         }
-
         public Builder allowVpcToRemoteClassicLink(@Nullable Output<Boolean> allowVpcToRemoteClassicLink) {
             this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
             return this;
         }
-
         public Builder allowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
             this.allowVpcToRemoteClassicLink = Output.ofNullable(allowVpcToRemoteClassicLink);
             return this;
-        }
-        public VpcPeeringConnectionAccepterRequesterArgs build() {
+        }        public VpcPeeringConnectionAccepterRequesterArgs build() {
             return new VpcPeeringConnectionAccepterRequesterArgs(allowClassicLinkToRemoteVpc, allowRemoteVpcDnsResolution, allowVpcToRemoteClassicLink);
         }
     }

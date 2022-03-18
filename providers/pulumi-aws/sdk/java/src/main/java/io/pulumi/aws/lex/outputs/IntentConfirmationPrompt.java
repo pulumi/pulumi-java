@@ -98,17 +98,17 @@ public final class IntentConfirmationPrompt {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
-
         public Builder messages(List<IntentConfirmationPromptMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(IntentConfirmationPromptMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
-        }
-        public IntentConfirmationPrompt build() {
+        }        public IntentConfirmationPrompt build() {
             return new IntentConfirmationPrompt(maxAttempts, messages, responseCard);
         }
     }

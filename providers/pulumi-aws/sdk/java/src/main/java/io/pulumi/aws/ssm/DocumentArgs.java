@@ -189,92 +189,77 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             this.attachmentsSources = attachmentsSources;
             return this;
         }
-
         public Builder attachmentsSources(@Nullable List<DocumentAttachmentsSourceArgs> attachmentsSources) {
             this.attachmentsSources = Output.ofNullable(attachmentsSources);
             return this;
         }
-
+        public Builder attachmentsSources(DocumentAttachmentsSourceArgs... attachmentsSources) {
+            return attachmentsSources(List.of(attachmentsSources));
+        }
         public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder documentFormat(@Nullable Output<String> documentFormat) {
             this.documentFormat = documentFormat;
             return this;
         }
-
         public Builder documentFormat(@Nullable String documentFormat) {
             this.documentFormat = Output.ofNullable(documentFormat);
             return this;
         }
-
         public Builder documentType(Output<String> documentType) {
             this.documentType = Objects.requireNonNull(documentType);
             return this;
         }
-
         public Builder documentType(String documentType) {
             this.documentType = Output.of(Objects.requireNonNull(documentType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder permissions(@Nullable Output<Map<String,String>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable Map<String,String> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
-
         public Builder targetType(@Nullable String targetType) {
             this.targetType = Output.ofNullable(targetType);
             return this;
         }
-
         public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
-
         public Builder versionName(@Nullable String versionName) {
             this.versionName = Output.ofNullable(versionName);
             return this;
-        }
-        public DocumentArgs build() {
+        }        public DocumentArgs build() {
             return new DocumentArgs(attachmentsSources, content, documentFormat, documentType, name, permissions, tags, targetType, versionName);
         }
     }

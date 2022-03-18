@@ -219,57 +219,46 @@ public final class FirehoseDeliveryStreamHttpEndpointConfiguration {
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder bufferingInterval(@Nullable Integer bufferingInterval) {
             this.bufferingInterval = bufferingInterval;
             return this;
         }
-
         public Builder bufferingSize(@Nullable Integer bufferingSize) {
             this.bufferingSize = bufferingSize;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder requestConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration requestConfiguration) {
             this.requestConfiguration = requestConfiguration;
             return this;
         }
-
         public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public FirehoseDeliveryStreamHttpEndpointConfiguration build() {
+        }        public FirehoseDeliveryStreamHttpEndpointConfiguration build() {
             return new FirehoseDeliveryStreamHttpEndpointConfiguration(accessKey, bufferingInterval, bufferingSize, cloudwatchLoggingOptions, name, processingConfiguration, requestConfiguration, retryDuration, roleArn, s3BackupMode, url);
         }
     }

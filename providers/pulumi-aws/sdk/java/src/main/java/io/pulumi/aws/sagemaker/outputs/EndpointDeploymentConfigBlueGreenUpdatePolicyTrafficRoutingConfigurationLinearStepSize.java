@@ -70,12 +70,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize build() {
+        }        public EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize build() {
             return new EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize(type, value);
         }
     }

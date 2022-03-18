@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs extends 
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }
-
         public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Output.of(Objects.requireNonNull(maxRequests));
             return this;
-        }
-        public VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs build() {
+        }        public VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs build() {
             return new VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs(maxRequests);
         }
     }

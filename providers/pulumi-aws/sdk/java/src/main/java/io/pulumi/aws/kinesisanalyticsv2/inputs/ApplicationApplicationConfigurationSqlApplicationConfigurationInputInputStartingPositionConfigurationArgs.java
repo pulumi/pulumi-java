@@ -57,12 +57,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.inputStartingPosition = inputStartingPosition;
             return this;
         }
-
         public Builder inputStartingPosition(@Nullable String inputStartingPosition) {
             this.inputStartingPosition = Output.ofNullable(inputStartingPosition);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs(inputStartingPosition);
         }
     }

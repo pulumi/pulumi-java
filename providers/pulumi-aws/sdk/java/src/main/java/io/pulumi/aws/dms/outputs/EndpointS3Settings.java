@@ -248,67 +248,54 @@ public final class EndpointS3Settings {
             this.bucketFolder = bucketFolder;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder compressionType(@Nullable String compressionType) {
             this.compressionType = compressionType;
             return this;
         }
-
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
-
         public Builder csvRowDelimiter(@Nullable String csvRowDelimiter) {
             this.csvRowDelimiter = csvRowDelimiter;
             return this;
         }
-
         public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder datePartitionEnabled(@Nullable Boolean datePartitionEnabled) {
             this.datePartitionEnabled = datePartitionEnabled;
             return this;
         }
-
         public Builder encryptionMode(@Nullable String encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
-
         public Builder externalTableDefinition(@Nullable String externalTableDefinition) {
             this.externalTableDefinition = externalTableDefinition;
             return this;
         }
-
         public Builder parquetTimestampInMillisecond(@Nullable Boolean parquetTimestampInMillisecond) {
             this.parquetTimestampInMillisecond = parquetTimestampInMillisecond;
             return this;
         }
-
         public Builder parquetVersion(@Nullable String parquetVersion) {
             this.parquetVersion = parquetVersion;
             return this;
         }
-
         public Builder serverSideEncryptionKmsKeyId(@Nullable String serverSideEncryptionKmsKeyId) {
             this.serverSideEncryptionKmsKeyId = serverSideEncryptionKmsKeyId;
             return this;
         }
-
         public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
             this.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
-        }
-        public EndpointS3Settings build() {
+        }        public EndpointS3Settings build() {
             return new EndpointS3Settings(bucketFolder, bucketName, compressionType, csvDelimiter, csvRowDelimiter, dataFormat, datePartitionEnabled, encryptionMode, externalTableDefinition, parquetTimestampInMillisecond, parquetVersion, serverSideEncryptionKmsKeyId, serviceAccessRoleArn);
         }
     }

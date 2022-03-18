@@ -138,32 +138,35 @@ public final class OptionGroupOption {
             this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
             return this;
         }
-
+        public Builder dbSecurityGroupMemberships(String... dbSecurityGroupMemberships) {
+            return dbSecurityGroupMemberships(List.of(dbSecurityGroupMemberships));
+        }
         public Builder optionName(String optionName) {
             this.optionName = Objects.requireNonNull(optionName);
             return this;
         }
-
         public Builder optionSettings(@Nullable List<OptionGroupOptionOptionSetting> optionSettings) {
             this.optionSettings = optionSettings;
             return this;
         }
-
+        public Builder optionSettings(OptionGroupOptionOptionSetting... optionSettings) {
+            return optionSettings(List.of(optionSettings));
+        }
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
-
         public Builder vpcSecurityGroupMemberships(@Nullable List<String> vpcSecurityGroupMemberships) {
             this.vpcSecurityGroupMemberships = vpcSecurityGroupMemberships;
             return this;
         }
-        public OptionGroupOption build() {
+        public Builder vpcSecurityGroupMemberships(String... vpcSecurityGroupMemberships) {
+            return vpcSecurityGroupMemberships(List.of(vpcSecurityGroupMemberships));
+        }        public OptionGroupOption build() {
             return new OptionGroupOption(dbSecurityGroupMemberships, optionName, optionSettings, port, version, vpcSecurityGroupMemberships);
         }
     }

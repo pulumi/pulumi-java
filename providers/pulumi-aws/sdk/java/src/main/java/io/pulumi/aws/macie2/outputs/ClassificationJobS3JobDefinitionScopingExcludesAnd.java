@@ -72,12 +72,10 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAnd {
             this.simpleScopeTerm = simpleScopeTerm;
             return this;
         }
-
         public Builder tagScopeTerm(@Nullable ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm tagScopeTerm) {
             this.tagScopeTerm = tagScopeTerm;
             return this;
-        }
-        public ClassificationJobS3JobDefinitionScopingExcludesAnd build() {
+        }        public ClassificationJobS3JobDefinitionScopingExcludesAnd build() {
             return new ClassificationJobS3JobDefinitionScopingExcludesAnd(simpleScopeTerm, tagScopeTerm);
         }
     }

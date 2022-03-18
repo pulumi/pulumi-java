@@ -56,12 +56,10 @@ public final class LaunchTemplateElasticGpuSpecificationGetArgs extends io.pulum
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public LaunchTemplateElasticGpuSpecificationGetArgs build() {
+        }        public LaunchTemplateElasticGpuSpecificationGetArgs build() {
             return new LaunchTemplateElasticGpuSpecificationGetArgs(type);
         }
     }

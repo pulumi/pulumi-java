@@ -57,12 +57,10 @@ public final class EventTargetKinesisTargetGetArgs extends io.pulumi.resources.R
             this.partitionKeyPath = partitionKeyPath;
             return this;
         }
-
         public Builder partitionKeyPath(@Nullable String partitionKeyPath) {
             this.partitionKeyPath = Output.ofNullable(partitionKeyPath);
             return this;
-        }
-        public EventTargetKinesisTargetGetArgs build() {
+        }        public EventTargetKinesisTargetGetArgs build() {
             return new EventTargetKinesisTargetGetArgs(partitionKeyPath);
         }
     }

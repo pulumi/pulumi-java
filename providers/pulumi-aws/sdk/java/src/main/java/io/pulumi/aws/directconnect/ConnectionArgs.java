@@ -123,52 +123,42 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
-
         public Builder bandwidth(String bandwidth) {
             this.bandwidth = Output.of(Objects.requireNonNull(bandwidth));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
-
         public Builder providerName(@Nullable String providerName) {
             this.providerName = Output.ofNullable(providerName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ConnectionArgs build() {
+        }        public ConnectionArgs build() {
             return new ConnectionArgs(bandwidth, location, name, providerName, tags);
         }
     }

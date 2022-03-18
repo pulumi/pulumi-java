@@ -162,57 +162,55 @@ public final class GetBucketObjectsResult {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder commonPrefixes(List<String> commonPrefixes) {
             this.commonPrefixes = Objects.requireNonNull(commonPrefixes);
             return this;
         }
-
+        public Builder commonPrefixes(String... commonPrefixes) {
+            return commonPrefixes(List.of(commonPrefixes));
+        }
         public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
-
         public Builder encodingType(@Nullable String encodingType) {
             this.encodingType = encodingType;
             return this;
         }
-
         public Builder fetchOwner(@Nullable Boolean fetchOwner) {
             this.fetchOwner = fetchOwner;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keys(List<String> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }
-
+        public Builder keys(String... keys) {
+            return keys(List.of(keys));
+        }
         public Builder maxKeys(@Nullable Integer maxKeys) {
             this.maxKeys = maxKeys;
             return this;
         }
-
         public Builder owners(List<String> owners) {
             this.owners = Objects.requireNonNull(owners);
             return this;
         }
-
+        public Builder owners(String... owners) {
+            return owners(List.of(owners));
+        }
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder startAfter(@Nullable String startAfter) {
             this.startAfter = startAfter;
             return this;
-        }
-        public GetBucketObjectsResult build() {
+        }        public GetBucketObjectsResult build() {
             return new GetBucketObjectsResult(bucket, commonPrefixes, delimiter, encodingType, fetchOwner, id, keys, maxKeys, owners, prefix, startAfter);
         }
     }

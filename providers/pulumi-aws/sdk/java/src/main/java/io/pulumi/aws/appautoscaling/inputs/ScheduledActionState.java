@@ -203,102 +203,82 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder scalableDimension(@Nullable Output<String> scalableDimension) {
             this.scalableDimension = scalableDimension;
             return this;
         }
-
         public Builder scalableDimension(@Nullable String scalableDimension) {
             this.scalableDimension = Output.ofNullable(scalableDimension);
             return this;
         }
-
         public Builder scalableTargetAction(@Nullable Output<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction) {
             this.scalableTargetAction = scalableTargetAction;
             return this;
         }
-
         public Builder scalableTargetAction(@Nullable ScheduledActionScalableTargetActionGetArgs scalableTargetAction) {
             this.scalableTargetAction = Output.ofNullable(scalableTargetAction);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
-
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
             this.serviceNamespace = Output.ofNullable(serviceNamespace);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder timezone(@Nullable Output<String> timezone) {
             this.timezone = timezone;
             return this;
         }
-
         public Builder timezone(@Nullable String timezone) {
             this.timezone = Output.ofNullable(timezone);
             return this;
-        }
-        public ScheduledActionState build() {
+        }        public ScheduledActionState build() {
             return new ScheduledActionState(arn, endTime, name, resourceId, scalableDimension, scalableTargetAction, schedule, serviceNamespace, startTime, timezone);
         }
     }

@@ -54,8 +54,7 @@ public final class GetClusterCertificateAuthority extends io.pulumi.resources.In
         public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
-        }
-        public GetClusterCertificateAuthority build() {
+        }        public GetClusterCertificateAuthority build() {
             return new GetClusterCertificateAuthority(data);
         }
     }

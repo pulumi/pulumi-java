@@ -88,17 +88,14 @@ public final class ServiceCapacityProviderStrategy {
             this.base = base;
             return this;
         }
-
         public Builder capacityProvider(String capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public ServiceCapacityProviderStrategy build() {
+        }        public ServiceCapacityProviderStrategy build() {
             return new ServiceCapacityProviderStrategy(base, capacityProvider, weight);
         }
     }

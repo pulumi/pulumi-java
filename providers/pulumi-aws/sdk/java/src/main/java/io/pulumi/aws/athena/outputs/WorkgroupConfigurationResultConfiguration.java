@@ -72,12 +72,10 @@ public final class WorkgroupConfigurationResultConfiguration {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = outputLocation;
             return this;
-        }
-        public WorkgroupConfigurationResultConfiguration build() {
+        }        public WorkgroupConfigurationResultConfiguration build() {
             return new WorkgroupConfigurationResultConfiguration(encryptionConfiguration, outputLocation);
         }
     }

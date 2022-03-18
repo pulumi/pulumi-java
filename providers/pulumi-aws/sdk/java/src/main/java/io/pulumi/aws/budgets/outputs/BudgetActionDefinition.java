@@ -89,17 +89,14 @@ public final class BudgetActionDefinition {
             this.iamActionDefinition = iamActionDefinition;
             return this;
         }
-
         public Builder scpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinition scpActionDefinition) {
             this.scpActionDefinition = scpActionDefinition;
             return this;
         }
-
         public Builder ssmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition) {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
-        }
-        public BudgetActionDefinition build() {
+        }        public BudgetActionDefinition build() {
             return new BudgetActionDefinition(iamActionDefinition, scpActionDefinition, ssmActionDefinition);
         }
     }

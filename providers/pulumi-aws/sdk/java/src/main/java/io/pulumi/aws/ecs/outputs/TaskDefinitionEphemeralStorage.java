@@ -51,8 +51,7 @@ public final class TaskDefinitionEphemeralStorage {
         public Builder sizeInGib(Integer sizeInGib) {
             this.sizeInGib = Objects.requireNonNull(sizeInGib);
             return this;
-        }
-        public TaskDefinitionEphemeralStorage build() {
+        }        public TaskDefinitionEphemeralStorage build() {
             return new TaskDefinitionEphemeralStorage(sizeInGib);
         }
     }

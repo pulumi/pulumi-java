@@ -74,22 +74,18 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
             this.encryptionOption = encryptionOption;
             return this;
         }
-
         public Builder encryptionOption(@Nullable String encryptionOption) {
             this.encryptionOption = Output.ofNullable(encryptionOption);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
-        }
-        public WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs build() {
+        }        public WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs build() {
             return new WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs(encryptionOption, kmsKeyArn);
         }
     }

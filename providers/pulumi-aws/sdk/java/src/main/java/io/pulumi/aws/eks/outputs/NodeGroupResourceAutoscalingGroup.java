@@ -53,8 +53,7 @@ public final class NodeGroupResourceAutoscalingGroup {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public NodeGroupResourceAutoscalingGroup build() {
+        }        public NodeGroupResourceAutoscalingGroup build() {
             return new NodeGroupResourceAutoscalingGroup(name);
         }
     }

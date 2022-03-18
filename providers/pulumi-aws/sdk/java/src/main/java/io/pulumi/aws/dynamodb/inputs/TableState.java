@@ -445,242 +445,206 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder attributes(@Nullable Output<List<TableAttributeGetArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<TableAttributeGetArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(TableAttributeGetArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder billingMode(@Nullable Output<String> billingMode) {
             this.billingMode = billingMode;
             return this;
         }
-
         public Builder billingMode(@Nullable String billingMode) {
             this.billingMode = Output.ofNullable(billingMode);
             return this;
         }
-
         public Builder globalSecondaryIndexes(@Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
-
         public Builder globalSecondaryIndexes(@Nullable List<TableGlobalSecondaryIndexGetArgs> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = Output.ofNullable(globalSecondaryIndexes);
             return this;
         }
-
+        public Builder globalSecondaryIndexes(TableGlobalSecondaryIndexGetArgs... globalSecondaryIndexes) {
+            return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
+        }
         public Builder hashKey(@Nullable Output<String> hashKey) {
             this.hashKey = hashKey;
             return this;
         }
-
         public Builder hashKey(@Nullable String hashKey) {
             this.hashKey = Output.ofNullable(hashKey);
             return this;
         }
-
         public Builder localSecondaryIndexes(@Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes) {
             this.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
-
         public Builder localSecondaryIndexes(@Nullable List<TableLocalSecondaryIndexGetArgs> localSecondaryIndexes) {
             this.localSecondaryIndexes = Output.ofNullable(localSecondaryIndexes);
             return this;
         }
-
+        public Builder localSecondaryIndexes(TableLocalSecondaryIndexGetArgs... localSecondaryIndexes) {
+            return localSecondaryIndexes(List.of(localSecondaryIndexes));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pointInTimeRecovery(@Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery) {
             this.pointInTimeRecovery = pointInTimeRecovery;
             return this;
         }
-
         public Builder pointInTimeRecovery(@Nullable TablePointInTimeRecoveryGetArgs pointInTimeRecovery) {
             this.pointInTimeRecovery = Output.ofNullable(pointInTimeRecovery);
             return this;
         }
-
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
-
         public Builder rangeKey(@Nullable String rangeKey) {
             this.rangeKey = Output.ofNullable(rangeKey);
             return this;
         }
-
         public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
             this.readCapacity = readCapacity;
             return this;
         }
-
         public Builder readCapacity(@Nullable Integer readCapacity) {
             this.readCapacity = Output.ofNullable(readCapacity);
             return this;
         }
-
         public Builder replicas(@Nullable Output<List<TableReplicaGetArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable List<TableReplicaGetArgs> replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-
+        public Builder replicas(TableReplicaGetArgs... replicas) {
+            return replicas(List.of(replicas));
+        }
         public Builder restoreDateTime(@Nullable Output<String> restoreDateTime) {
             this.restoreDateTime = restoreDateTime;
             return this;
         }
-
         public Builder restoreDateTime(@Nullable String restoreDateTime) {
             this.restoreDateTime = Output.ofNullable(restoreDateTime);
             return this;
         }
-
         public Builder restoreSourceName(@Nullable Output<String> restoreSourceName) {
             this.restoreSourceName = restoreSourceName;
             return this;
         }
-
         public Builder restoreSourceName(@Nullable String restoreSourceName) {
             this.restoreSourceName = Output.ofNullable(restoreSourceName);
             return this;
         }
-
         public Builder restoreToLatestTime(@Nullable Output<Boolean> restoreToLatestTime) {
             this.restoreToLatestTime = restoreToLatestTime;
             return this;
         }
-
         public Builder restoreToLatestTime(@Nullable Boolean restoreToLatestTime) {
             this.restoreToLatestTime = Output.ofNullable(restoreToLatestTime);
             return this;
         }
-
         public Builder serverSideEncryption(@Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
-
         public Builder serverSideEncryption(@Nullable TableServerSideEncryptionGetArgs serverSideEncryption) {
             this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
             return this;
         }
-
         public Builder streamArn(@Nullable Output<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
-
         public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = Output.ofNullable(streamArn);
             return this;
         }
-
         public Builder streamEnabled(@Nullable Output<Boolean> streamEnabled) {
             this.streamEnabled = streamEnabled;
             return this;
         }
-
         public Builder streamEnabled(@Nullable Boolean streamEnabled) {
             this.streamEnabled = Output.ofNullable(streamEnabled);
             return this;
         }
-
         public Builder streamLabel(@Nullable Output<String> streamLabel) {
             this.streamLabel = streamLabel;
             return this;
         }
-
         public Builder streamLabel(@Nullable String streamLabel) {
             this.streamLabel = Output.ofNullable(streamLabel);
             return this;
         }
-
         public Builder streamViewType(@Nullable Output<String> streamViewType) {
             this.streamViewType = streamViewType;
             return this;
         }
-
         public Builder streamViewType(@Nullable String streamViewType) {
             this.streamViewType = Output.ofNullable(streamViewType);
             return this;
         }
-
         public Builder tableClass(@Nullable Output<String> tableClass) {
             this.tableClass = tableClass;
             return this;
         }
-
         public Builder tableClass(@Nullable String tableClass) {
             this.tableClass = Output.ofNullable(tableClass);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder ttl(@Nullable Output<TableTtlGetArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable TableTtlGetArgs ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
             this.writeCapacity = writeCapacity;
             return this;
         }
-
         public Builder writeCapacity(@Nullable Integer writeCapacity) {
             this.writeCapacity = Output.ofNullable(writeCapacity);
             return this;
-        }
-        public TableState build() {
+        }        public TableState build() {
             return new TableState(arn, attributes, billingMode, globalSecondaryIndexes, hashKey, localSecondaryIndexes, name, pointInTimeRecovery, rangeKey, readCapacity, replicas, restoreDateTime, restoreSourceName, restoreToLatestTime, serverSideEncryption, streamArn, streamEnabled, streamLabel, streamViewType, tableClass, tags, tagsAll, ttl, writeCapacity);
         }
     }

@@ -123,52 +123,42 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder code(String code) {
             this.code = Output.of(Objects.requireNonNull(code));
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publish(@Nullable Output<Boolean> publish) {
             this.publish = publish;
             return this;
         }
-
         public Builder publish(@Nullable Boolean publish) {
             this.publish = Output.ofNullable(publish);
             return this;
         }
-
         public Builder runtime(Output<String> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Output.of(Objects.requireNonNull(runtime));
             return this;
-        }
-        public FunctionArgs build() {
+        }        public FunctionArgs build() {
             return new FunctionArgs(code, comment, name, publish, runtime);
         }
     }

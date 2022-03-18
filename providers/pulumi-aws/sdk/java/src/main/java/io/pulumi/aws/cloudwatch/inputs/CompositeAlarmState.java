@@ -205,102 +205,91 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
             this.actionsEnabled = actionsEnabled;
             return this;
         }
-
         public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
             this.actionsEnabled = Output.ofNullable(actionsEnabled);
             return this;
         }
-
         public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
-
         public Builder alarmActions(@Nullable List<String> alarmActions) {
             this.alarmActions = Output.ofNullable(alarmActions);
             return this;
         }
-
+        public Builder alarmActions(String... alarmActions) {
+            return alarmActions(List.of(alarmActions));
+        }
         public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
-
         public Builder alarmDescription(@Nullable String alarmDescription) {
             this.alarmDescription = Output.ofNullable(alarmDescription);
             return this;
         }
-
         public Builder alarmName(@Nullable Output<String> alarmName) {
             this.alarmName = alarmName;
             return this;
         }
-
         public Builder alarmName(@Nullable String alarmName) {
             this.alarmName = Output.ofNullable(alarmName);
             return this;
         }
-
         public Builder alarmRule(@Nullable Output<String> alarmRule) {
             this.alarmRule = alarmRule;
             return this;
         }
-
         public Builder alarmRule(@Nullable String alarmRule) {
             this.alarmRule = Output.ofNullable(alarmRule);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
-
         public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
             this.insufficientDataActions = Output.ofNullable(insufficientDataActions);
             return this;
         }
-
+        public Builder insufficientDataActions(String... insufficientDataActions) {
+            return insufficientDataActions(List.of(insufficientDataActions));
+        }
         public Builder okActions(@Nullable Output<List<String>> okActions) {
             this.okActions = okActions;
             return this;
         }
-
         public Builder okActions(@Nullable List<String> okActions) {
             this.okActions = Output.ofNullable(okActions);
             return this;
         }
-
+        public Builder okActions(String... okActions) {
+            return okActions(List.of(okActions));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public CompositeAlarmState build() {
+        }        public CompositeAlarmState build() {
             return new CompositeAlarmState(actionsEnabled, alarmActions, alarmDescription, alarmName, alarmRule, arn, insufficientDataActions, okActions, tags, tagsAll);
         }
     }

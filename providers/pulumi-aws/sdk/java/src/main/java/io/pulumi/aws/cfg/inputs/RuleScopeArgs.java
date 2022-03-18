@@ -107,42 +107,37 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.complianceResourceId = complianceResourceId;
             return this;
         }
-
         public Builder complianceResourceId(@Nullable String complianceResourceId) {
             this.complianceResourceId = Output.ofNullable(complianceResourceId);
             return this;
         }
-
         public Builder complianceResourceTypes(@Nullable Output<List<String>> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
-
         public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             this.complianceResourceTypes = Output.ofNullable(complianceResourceTypes);
             return this;
         }
-
+        public Builder complianceResourceTypes(String... complianceResourceTypes) {
+            return complianceResourceTypes(List.of(complianceResourceTypes));
+        }
         public Builder tagKey(@Nullable Output<String> tagKey) {
             this.tagKey = tagKey;
             return this;
         }
-
         public Builder tagKey(@Nullable String tagKey) {
             this.tagKey = Output.ofNullable(tagKey);
             return this;
         }
-
         public Builder tagValue(@Nullable Output<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
-
         public Builder tagValue(@Nullable String tagValue) {
             this.tagValue = Output.ofNullable(tagValue);
             return this;
-        }
-        public RuleScopeArgs build() {
+        }        public RuleScopeArgs build() {
             return new RuleScopeArgs(complianceResourceId, complianceResourceTypes, tagKey, tagValue);
         }
     }

@@ -104,22 +104,18 @@ public final class PipelineArtifactStore {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PipelineArtifactStore build() {
+        }        public PipelineArtifactStore build() {
             return new PipelineArtifactStore(encryptionKey, location, region, type);
         }
     }

@@ -89,17 +89,14 @@ public final class RouteSpecHttpRouteMatchHeader {
             this.invert = invert;
             return this;
         }
-
         public Builder match(@Nullable RouteSpecHttpRouteMatchHeaderMatch match) {
             this.match = match;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RouteSpecHttpRouteMatchHeader build() {
+        }        public RouteSpecHttpRouteMatchHeader build() {
             return new RouteSpecHttpRouteMatchHeader(invert, match, name);
         }
     }

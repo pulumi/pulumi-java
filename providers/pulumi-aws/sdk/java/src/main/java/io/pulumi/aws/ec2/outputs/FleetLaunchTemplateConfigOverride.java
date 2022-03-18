@@ -136,32 +136,26 @@ public final class FleetLaunchTemplateConfigOverride {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
-
         public Builder priority(@Nullable Double priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
-        }
-        public FleetLaunchTemplateConfigOverride build() {
+        }        public FleetLaunchTemplateConfigOverride build() {
             return new FleetLaunchTemplateConfigOverride(availabilityZone, instanceType, maxPrice, priority, subnetId, weightedCapacity);
         }
     }

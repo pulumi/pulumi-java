@@ -74,22 +74,18 @@ public final class RouteRequestParameterGetArgs extends io.pulumi.resources.Reso
             this.requestParameterKey = Objects.requireNonNull(requestParameterKey);
             return this;
         }
-
         public Builder requestParameterKey(String requestParameterKey) {
             this.requestParameterKey = Output.of(Objects.requireNonNull(requestParameterKey));
             return this;
         }
-
         public Builder required(Output<Boolean> required) {
             this.required = Objects.requireNonNull(required);
             return this;
         }
-
         public Builder required(Boolean required) {
             this.required = Output.of(Objects.requireNonNull(required));
             return this;
-        }
-        public RouteRequestParameterGetArgs build() {
+        }        public RouteRequestParameterGetArgs build() {
             return new RouteRequestParameterGetArgs(requestParameterKey, required);
         }
     }

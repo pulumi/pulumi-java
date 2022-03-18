@@ -69,12 +69,10 @@ public final class EventConnectionAuthParametersBasic {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public EventConnectionAuthParametersBasic build() {
+        }        public EventConnectionAuthParametersBasic build() {
             return new EventConnectionAuthParametersBasic(password, username);
         }
     }

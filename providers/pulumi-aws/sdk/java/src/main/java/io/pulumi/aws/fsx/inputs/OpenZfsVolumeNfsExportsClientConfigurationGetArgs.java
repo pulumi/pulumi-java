@@ -74,22 +74,21 @@ public final class OpenZfsVolumeNfsExportsClientConfigurationGetArgs extends io.
             this.clients = Objects.requireNonNull(clients);
             return this;
         }
-
         public Builder clients(String clients) {
             this.clients = Output.of(Objects.requireNonNull(clients));
             return this;
         }
-
         public Builder options(Output<List<String>> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder options(List<String> options) {
             this.options = Output.of(Objects.requireNonNull(options));
             return this;
         }
-        public OpenZfsVolumeNfsExportsClientConfigurationGetArgs build() {
+        public Builder options(String... options) {
+            return options(List.of(options));
+        }        public OpenZfsVolumeNfsExportsClientConfigurationGetArgs build() {
             return new OpenZfsVolumeNfsExportsClientConfigurationGetArgs(clients, options);
         }
     }

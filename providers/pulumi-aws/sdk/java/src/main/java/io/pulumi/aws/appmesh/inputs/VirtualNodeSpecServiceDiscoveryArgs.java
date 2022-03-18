@@ -75,22 +75,18 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
             this.awsCloudMap = awsCloudMap;
             return this;
         }
-
         public Builder awsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs awsCloudMap) {
             this.awsCloudMap = Output.ofNullable(awsCloudMap);
             return this;
         }
-
         public Builder dns(@Nullable Output<VirtualNodeSpecServiceDiscoveryDnsArgs> dns) {
             this.dns = dns;
             return this;
         }
-
         public Builder dns(@Nullable VirtualNodeSpecServiceDiscoveryDnsArgs dns) {
             this.dns = Output.ofNullable(dns);
             return this;
-        }
-        public VirtualNodeSpecServiceDiscoveryArgs build() {
+        }        public VirtualNodeSpecServiceDiscoveryArgs build() {
             return new VirtualNodeSpecServiceDiscoveryArgs(awsCloudMap, dns);
         }
     }

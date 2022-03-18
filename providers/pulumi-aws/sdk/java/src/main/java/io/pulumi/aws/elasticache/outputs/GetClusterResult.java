@@ -389,112 +389,99 @@ public final class GetClusterResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder cacheNodes(List<GetClusterCacheNode> cacheNodes) {
             this.cacheNodes = Objects.requireNonNull(cacheNodes);
             return this;
         }
-
+        public Builder cacheNodes(GetClusterCacheNode... cacheNodes) {
+            return cacheNodes(List.of(cacheNodes));
+        }
         public Builder clusterAddress(String clusterAddress) {
             this.clusterAddress = Objects.requireNonNull(clusterAddress);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder configurationEndpoint(String configurationEndpoint) {
             this.configurationEndpoint = Objects.requireNonNull(configurationEndpoint);
             return this;
         }
-
         public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder maintenanceWindow(String maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
-
         public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
-
         public Builder notificationTopicArn(String notificationTopicArn) {
             this.notificationTopicArn = Objects.requireNonNull(notificationTopicArn);
             return this;
         }
-
         public Builder numCacheNodes(Integer numCacheNodes) {
             this.numCacheNodes = Objects.requireNonNull(numCacheNodes);
             return this;
         }
-
         public Builder parameterGroupName(String parameterGroupName) {
             this.parameterGroupName = Objects.requireNonNull(parameterGroupName);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder replicationGroupId(String replicationGroupId) {
             this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder securityGroupNames(List<String> securityGroupNames) {
             this.securityGroupNames = Objects.requireNonNull(securityGroupNames);
             return this;
         }
-
+        public Builder securityGroupNames(String... securityGroupNames) {
+            return securityGroupNames(List.of(securityGroupNames));
+        }
         public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = Objects.requireNonNull(snapshotRetentionLimit);
             return this;
         }
-
         public Builder snapshotWindow(String snapshotWindow) {
             this.snapshotWindow = Objects.requireNonNull(snapshotWindow);
             return this;
         }
-
         public Builder subnetGroupName(String subnetGroupName) {
             this.subnetGroupName = Objects.requireNonNull(subnetGroupName);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(arn, availabilityZone, cacheNodes, clusterAddress, clusterId, configurationEndpoint, engine, engineVersion, id, maintenanceWindow, nodeType, notificationTopicArn, numCacheNodes, parameterGroupName, port, replicationGroupId, securityGroupIds, securityGroupNames, snapshotRetentionLimit, snapshotWindow, subnetGroupName, tags);
         }
     }

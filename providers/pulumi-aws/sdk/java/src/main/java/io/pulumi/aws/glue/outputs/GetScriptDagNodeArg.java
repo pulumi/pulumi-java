@@ -88,17 +88,14 @@ public final class GetScriptDagNodeArg {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder param(@Nullable Boolean param) {
             this.param = param;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetScriptDagNodeArg build() {
+        }        public GetScriptDagNodeArg build() {
             return new GetScriptDagNodeArg(name, param, value);
         }
     }

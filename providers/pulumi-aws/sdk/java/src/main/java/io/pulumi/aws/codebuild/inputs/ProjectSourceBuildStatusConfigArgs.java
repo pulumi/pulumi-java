@@ -74,22 +74,18 @@ public final class ProjectSourceBuildStatusConfigArgs extends io.pulumi.resource
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder targetUrl(@Nullable Output<String> targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
-
         public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = Output.ofNullable(targetUrl);
             return this;
-        }
-        public ProjectSourceBuildStatusConfigArgs build() {
+        }        public ProjectSourceBuildStatusConfigArgs build() {
             return new ProjectSourceBuildStatusConfigArgs(context, targetUrl);
         }
     }

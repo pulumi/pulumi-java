@@ -89,17 +89,14 @@ public final class VirtualGatewaySpec {
             this.backendDefaults = backendDefaults;
             return this;
         }
-
         public Builder listener(VirtualGatewaySpecListener listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
         }
-
         public Builder logging(@Nullable VirtualGatewaySpecLogging logging) {
             this.logging = logging;
             return this;
-        }
-        public VirtualGatewaySpec build() {
+        }        public VirtualGatewaySpec build() {
             return new VirtualGatewaySpec(backendDefaults, listener, logging);
         }
     }

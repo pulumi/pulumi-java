@@ -72,12 +72,10 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends io.pulumi.
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
-        }
-        public GetLaunchConfigurationEphemeralBlockDevice build() {
+        }        public GetLaunchConfigurationEphemeralBlockDevice build() {
             return new GetLaunchConfigurationEphemeralBlockDevice(deviceName, virtualName);
         }
     }

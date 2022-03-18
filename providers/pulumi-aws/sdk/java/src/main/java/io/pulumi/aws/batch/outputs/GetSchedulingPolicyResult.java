@@ -104,27 +104,25 @@ public final class GetSchedulingPolicyResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder fairSharePolicies(List<GetSchedulingPolicyFairSharePolicy> fairSharePolicies) {
             this.fairSharePolicies = Objects.requireNonNull(fairSharePolicies);
             return this;
         }
-
+        public Builder fairSharePolicies(GetSchedulingPolicyFairSharePolicy... fairSharePolicies) {
+            return fairSharePolicies(List.of(fairSharePolicies));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetSchedulingPolicyResult build() {
+        }        public GetSchedulingPolicyResult build() {
             return new GetSchedulingPolicyResult(arn, fairSharePolicies, id, name, tags);
         }
     }

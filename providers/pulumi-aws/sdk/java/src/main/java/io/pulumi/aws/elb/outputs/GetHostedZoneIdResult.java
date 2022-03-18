@@ -63,12 +63,10 @@ public final class GetHostedZoneIdResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetHostedZoneIdResult build() {
+        }        public GetHostedZoneIdResult build() {
             return new GetHostedZoneIdResult(id, region);
         }
     }

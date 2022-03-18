@@ -140,62 +140,53 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
             this.attributeMapping = attributeMapping;
             return this;
         }
-
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
             this.attributeMapping = Output.ofNullable(attributeMapping);
             return this;
         }
-
         public Builder idpIdentifiers(@Nullable Output<List<String>> idpIdentifiers) {
             this.idpIdentifiers = idpIdentifiers;
             return this;
         }
-
         public Builder idpIdentifiers(@Nullable List<String> idpIdentifiers) {
             this.idpIdentifiers = Output.ofNullable(idpIdentifiers);
             return this;
         }
-
+        public Builder idpIdentifiers(String... idpIdentifiers) {
+            return idpIdentifiers(List.of(idpIdentifiers));
+        }
         public Builder providerDetails(Output<Map<String,String>> providerDetails) {
             this.providerDetails = Objects.requireNonNull(providerDetails);
             return this;
         }
-
         public Builder providerDetails(Map<String,String> providerDetails) {
             this.providerDetails = Output.of(Objects.requireNonNull(providerDetails));
             return this;
         }
-
         public Builder providerName(Output<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Output.of(Objects.requireNonNull(providerName));
             return this;
         }
-
         public Builder providerType(Output<String> providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
-
         public Builder providerType(String providerType) {
             this.providerType = Output.of(Objects.requireNonNull(providerType));
             return this;
         }
-
         public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
-        }
-        public IdentityProviderArgs build() {
+        }        public IdentityProviderArgs build() {
             return new IdentityProviderArgs(attributeMapping, idpIdentifiers, providerDetails, providerName, providerType, userPoolId);
         }
     }

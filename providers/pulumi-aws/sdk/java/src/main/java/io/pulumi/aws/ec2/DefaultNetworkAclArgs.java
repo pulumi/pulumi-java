@@ -126,52 +126,51 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
             this.defaultNetworkAclId = Objects.requireNonNull(defaultNetworkAclId);
             return this;
         }
-
         public Builder defaultNetworkAclId(String defaultNetworkAclId) {
             this.defaultNetworkAclId = Output.of(Objects.requireNonNull(defaultNetworkAclId));
             return this;
         }
-
         public Builder egress(@Nullable Output<List<DefaultNetworkAclEgressArgs>> egress) {
             this.egress = egress;
             return this;
         }
-
         public Builder egress(@Nullable List<DefaultNetworkAclEgressArgs> egress) {
             this.egress = Output.ofNullable(egress);
             return this;
         }
-
+        public Builder egress(DefaultNetworkAclEgressArgs... egress) {
+            return egress(List.of(egress));
+        }
         public Builder ingress(@Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
-
         public Builder ingress(@Nullable List<DefaultNetworkAclIngressArgs> ingress) {
             this.ingress = Output.ofNullable(ingress);
             return this;
         }
-
+        public Builder ingress(DefaultNetworkAclIngressArgs... ingress) {
+            return ingress(List.of(ingress));
+        }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DefaultNetworkAclArgs build() {
+        }        public DefaultNetworkAclArgs build() {
             return new DefaultNetworkAclArgs(defaultNetworkAclId, egress, ingress, subnetIds, tags);
         }
     }

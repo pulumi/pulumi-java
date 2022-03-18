@@ -58,7 +58,9 @@ public final class GetInfrastructureConfigurationsArgs extends io.pulumi.resourc
             this.filters = filters;
             return this;
         }
-        public GetInfrastructureConfigurationsArgs build() {
+        public Builder filters(GetInfrastructureConfigurationsFilter... filters) {
+            return filters(List.of(filters));
+        }        public GetInfrastructureConfigurationsArgs build() {
             return new GetInfrastructureConfigurationsArgs(filters);
         }
     }

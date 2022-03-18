@@ -91,32 +91,26 @@ public final class GraphQLApiLambdaAuthorizerConfigGetArgs extends io.pulumi.res
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
-
         public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = Output.ofNullable(authorizerResultTtlInSeconds);
             return this;
         }
-
         public Builder authorizerUri(Output<String> authorizerUri) {
             this.authorizerUri = Objects.requireNonNull(authorizerUri);
             return this;
         }
-
         public Builder authorizerUri(String authorizerUri) {
             this.authorizerUri = Output.of(Objects.requireNonNull(authorizerUri));
             return this;
         }
-
         public Builder identityValidationExpression(@Nullable Output<String> identityValidationExpression) {
             this.identityValidationExpression = identityValidationExpression;
             return this;
         }
-
         public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
             this.identityValidationExpression = Output.ofNullable(identityValidationExpression);
             return this;
-        }
-        public GraphQLApiLambdaAuthorizerConfigGetArgs build() {
+        }        public GraphQLApiLambdaAuthorizerConfigGetArgs build() {
             return new GraphQLApiLambdaAuthorizerConfigGetArgs(authorizerResultTtlInSeconds, authorizerUri, identityValidationExpression);
         }
     }

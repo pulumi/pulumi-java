@@ -46,7 +46,9 @@ public final class OriginRequestPolicyCookiesConfigCookies {
             this.items = items;
             return this;
         }
-        public OriginRequestPolicyCookiesConfigCookies build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public OriginRequestPolicyCookiesConfigCookies build() {
             return new OriginRequestPolicyCookiesConfigCookies(items);
         }
     }

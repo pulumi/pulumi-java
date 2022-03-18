@@ -70,12 +70,13 @@ public final class GetInstanceTypesFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetInstanceTypesFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetInstanceTypesFilter build() {
             return new GetInstanceTypesFilter(name, values);
         }
     }

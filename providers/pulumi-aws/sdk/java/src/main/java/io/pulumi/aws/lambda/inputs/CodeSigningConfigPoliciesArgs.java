@@ -56,12 +56,10 @@ public final class CodeSigningConfigPoliciesArgs extends io.pulumi.resources.Res
             this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
             return this;
         }
-
         public Builder untrustedArtifactOnDeployment(String untrustedArtifactOnDeployment) {
             this.untrustedArtifactOnDeployment = Output.of(Objects.requireNonNull(untrustedArtifactOnDeployment));
             return this;
-        }
-        public CodeSigningConfigPoliciesArgs build() {
+        }        public CodeSigningConfigPoliciesArgs build() {
             return new CodeSigningConfigPoliciesArgs(untrustedArtifactOnDeployment);
         }
     }

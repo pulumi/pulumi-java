@@ -72,12 +72,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResource {
             this.nlbResource = nlbResource;
             return this;
         }
-
         public Builder r53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
             this.r53Resource = r53Resource;
             return this;
-        }
-        public ResourceSetResourceDnsTargetResourceTargetResource build() {
+        }        public ResourceSetResourceDnsTargetResourceTargetResource build() {
             return new ResourceSetResourceDnsTargetResourceTargetResource(nlbResource, r53Resource);
         }
     }

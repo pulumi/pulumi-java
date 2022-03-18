@@ -86,17 +86,14 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItem {
             this.header = Objects.requireNonNull(header);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ResponseHeadersPolicyCustomHeadersConfigItem build() {
+        }        public ResponseHeadersPolicyCustomHeadersConfigItem build() {
             return new ResponseHeadersPolicyCustomHeadersConfigItem(header, override, value);
         }
     }

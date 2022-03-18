@@ -140,32 +140,26 @@ public final class ResponseHeadersPolicySecurityHeadersConfig {
             this.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
-
         public Builder contentTypeOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptions contentTypeOptions) {
             this.contentTypeOptions = contentTypeOptions;
             return this;
         }
-
         public Builder frameOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptions frameOptions) {
             this.frameOptions = frameOptions;
             return this;
         }
-
         public Builder referrerPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy referrerPolicy) {
             this.referrerPolicy = referrerPolicy;
             return this;
         }
-
         public Builder strictTransportSecurity(@Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity strictTransportSecurity) {
             this.strictTransportSecurity = strictTransportSecurity;
             return this;
         }
-
         public Builder xssProtection(@Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtection xssProtection) {
             this.xssProtection = xssProtection;
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfig build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfig build() {
             return new ResponseHeadersPolicySecurityHeadersConfig(contentSecurityPolicy, contentTypeOptions, frameOptions, referrerPolicy, strictTransportSecurity, xssProtection);
         }
     }

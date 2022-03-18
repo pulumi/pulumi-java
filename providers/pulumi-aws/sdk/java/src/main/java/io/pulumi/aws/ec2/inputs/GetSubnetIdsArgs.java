@@ -94,17 +94,17 @@ public final class GetSubnetIdsArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSubnetIdsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetSubnetIdsArgs build() {
+        }        public GetSubnetIdsArgs build() {
             return new GetSubnetIdsArgs(filters, tags, vpcId);
         }
     }

@@ -74,22 +74,18 @@ public final class PlanAdvancedBackupSettingArgs extends io.pulumi.resources.Res
             this.backupOptions = Objects.requireNonNull(backupOptions);
             return this;
         }
-
         public Builder backupOptions(Map<String,String> backupOptions) {
             this.backupOptions = Output.of(Objects.requireNonNull(backupOptions));
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
-        }
-        public PlanAdvancedBackupSettingArgs build() {
+        }        public PlanAdvancedBackupSettingArgs build() {
             return new PlanAdvancedBackupSettingArgs(backupOptions, resourceType);
         }
     }

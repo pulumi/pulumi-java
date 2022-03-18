@@ -75,22 +75,21 @@ public final class SlotTypeEnumerationValueGetArgs extends io.pulumi.resources.R
             this.synonyms = synonyms;
             return this;
         }
-
         public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SlotTypeEnumerationValueGetArgs build() {
+        }        public SlotTypeEnumerationValueGetArgs build() {
             return new SlotTypeEnumerationValueGetArgs(synonyms, value);
         }
     }

@@ -110,42 +110,37 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs exten
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder enforce(@Nullable Output<Boolean> enforce) {
             this.enforce = enforce;
             return this;
         }
-
         public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = Output.ofNullable(enforce);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<Integer>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<Integer> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(Integer... ports) {
+            return ports(List.of(ports));
+        }
         public Builder validation(Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs> validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }
-
         public Builder validation(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs validation) {
             this.validation = Output.of(Objects.requireNonNull(validation));
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs build() {
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs(certificate, enforce, ports, validation);
         }
     }

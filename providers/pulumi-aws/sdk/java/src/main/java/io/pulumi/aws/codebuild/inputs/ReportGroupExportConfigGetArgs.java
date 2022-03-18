@@ -75,22 +75,18 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
             this.s3Destination = s3Destination;
             return this;
         }
-
         public Builder s3Destination(@Nullable ReportGroupExportConfigS3DestinationGetArgs s3Destination) {
             this.s3Destination = Output.ofNullable(s3Destination);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ReportGroupExportConfigGetArgs build() {
+        }        public ReportGroupExportConfigGetArgs build() {
             return new ReportGroupExportConfigGetArgs(s3Destination, type);
         }
     }

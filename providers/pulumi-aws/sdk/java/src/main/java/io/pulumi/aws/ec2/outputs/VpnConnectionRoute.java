@@ -87,17 +87,14 @@ public final class VpnConnectionRoute {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public VpnConnectionRoute build() {
+        }        public VpnConnectionRoute build() {
             return new VpnConnectionRoute(destinationCidrBlock, source, state);
         }
     }

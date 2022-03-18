@@ -188,92 +188,74 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder auditDestinationArn(@Nullable Output<String> auditDestinationArn) {
             this.auditDestinationArn = auditDestinationArn;
             return this;
         }
-
         public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
             this.auditDestinationArn = Output.ofNullable(auditDestinationArn);
             return this;
         }
-
         public Builder cacheAttributes(@Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes) {
             this.cacheAttributes = cacheAttributes;
             return this;
         }
-
         public Builder cacheAttributes(@Nullable FileSystemAssociationCacheAttributesGetArgs cacheAttributes) {
             this.cacheAttributes = Output.ofNullable(cacheAttributes);
             return this;
         }
-
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
-
         public Builder gatewayArn(@Nullable String gatewayArn) {
             this.gatewayArn = Output.ofNullable(gatewayArn);
             return this;
         }
-
         public Builder locationArn(@Nullable Output<String> locationArn) {
             this.locationArn = locationArn;
             return this;
         }
-
         public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = Output.ofNullable(locationArn);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public FileSystemAssociationState build() {
+        }        public FileSystemAssociationState build() {
             return new FileSystemAssociationState(arn, auditDestinationArn, cacheAttributes, gatewayArn, locationArn, password, tags, tagsAll, username);
         }
     }

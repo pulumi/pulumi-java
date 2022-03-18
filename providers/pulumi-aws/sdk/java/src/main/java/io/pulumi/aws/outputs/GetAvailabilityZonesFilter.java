@@ -70,12 +70,13 @@ public final class GetAvailabilityZonesFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetAvailabilityZonesFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetAvailabilityZonesFilter build() {
             return new GetAvailabilityZonesFilter(name, values);
         }
     }

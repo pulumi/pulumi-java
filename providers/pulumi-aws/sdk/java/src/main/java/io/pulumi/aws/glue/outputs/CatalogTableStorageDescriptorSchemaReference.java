@@ -89,17 +89,14 @@ public final class CatalogTableStorageDescriptorSchemaReference {
             this.schemaId = schemaId;
             return this;
         }
-
         public Builder schemaVersionId(@Nullable String schemaVersionId) {
             this.schemaVersionId = schemaVersionId;
             return this;
         }
-
         public Builder schemaVersionNumber(Integer schemaVersionNumber) {
             this.schemaVersionNumber = Objects.requireNonNull(schemaVersionNumber);
             return this;
-        }
-        public CatalogTableStorageDescriptorSchemaReference build() {
+        }        public CatalogTableStorageDescriptorSchemaReference build() {
             return new CatalogTableStorageDescriptorSchemaReference(schemaId, schemaVersionId, schemaVersionNumber);
         }
     }

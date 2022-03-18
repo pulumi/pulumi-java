@@ -109,42 +109,37 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<RouteSpecHttpRouteMatchHeaderArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(RouteSpecHttpRouteMatchHeaderArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder method(@Nullable Output<String> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable String method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder prefix(Output<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Output.of(Objects.requireNonNull(prefix));
             return this;
         }
-
         public Builder scheme(@Nullable Output<String> scheme) {
             this.scheme = scheme;
             return this;
         }
-
         public Builder scheme(@Nullable String scheme) {
             this.scheme = Output.ofNullable(scheme);
             return this;
-        }
-        public RouteSpecHttpRouteMatchArgs build() {
+        }        public RouteSpecHttpRouteMatchArgs build() {
             return new RouteSpecHttpRouteMatchArgs(headers, method, prefix, scheme);
         }
     }

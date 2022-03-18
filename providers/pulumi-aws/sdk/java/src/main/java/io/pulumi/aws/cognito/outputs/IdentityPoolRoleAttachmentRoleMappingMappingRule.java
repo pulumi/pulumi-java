@@ -101,22 +101,18 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
             this.claim = Objects.requireNonNull(claim);
             return this;
         }
-
         public Builder matchType(String matchType) {
             this.matchType = Objects.requireNonNull(matchType);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public IdentityPoolRoleAttachmentRoleMappingMappingRule build() {
+        }        public IdentityPoolRoleAttachmentRoleMappingMappingRule build() {
             return new IdentityPoolRoleAttachmentRoleMappingMappingRule(claim, matchType, roleArn, value);
         }
     }

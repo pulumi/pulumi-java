@@ -73,22 +73,18 @@ public final class EndpointGroupPortOverrideGetArgs extends io.pulumi.resources.
             this.endpointPort = Objects.requireNonNull(endpointPort);
             return this;
         }
-
         public Builder endpointPort(Integer endpointPort) {
             this.endpointPort = Output.of(Objects.requireNonNull(endpointPort));
             return this;
         }
-
         public Builder listenerPort(Output<Integer> listenerPort) {
             this.listenerPort = Objects.requireNonNull(listenerPort);
             return this;
         }
-
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = Output.of(Objects.requireNonNull(listenerPort));
             return this;
-        }
-        public EndpointGroupPortOverrideGetArgs build() {
+        }        public EndpointGroupPortOverrideGetArgs build() {
             return new EndpointGroupPortOverrideGetArgs(endpointPort, listenerPort);
         }
     }

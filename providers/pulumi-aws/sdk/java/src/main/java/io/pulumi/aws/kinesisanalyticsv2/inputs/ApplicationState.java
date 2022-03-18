@@ -287,152 +287,122 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             this.applicationConfiguration = applicationConfiguration;
             return this;
         }
-
         public Builder applicationConfiguration(@Nullable ApplicationApplicationConfigurationGetArgs applicationConfiguration) {
             this.applicationConfiguration = Output.ofNullable(applicationConfiguration);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable ApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
-
         public Builder createTimestamp(@Nullable Output<String> createTimestamp) {
             this.createTimestamp = createTimestamp;
             return this;
         }
-
         public Builder createTimestamp(@Nullable String createTimestamp) {
             this.createTimestamp = Output.ofNullable(createTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder forceStop(@Nullable Output<Boolean> forceStop) {
             this.forceStop = forceStop;
             return this;
         }
-
         public Builder forceStop(@Nullable Boolean forceStop) {
             this.forceStop = Output.ofNullable(forceStop);
             return this;
         }
-
         public Builder lastUpdateTimestamp(@Nullable Output<String> lastUpdateTimestamp) {
             this.lastUpdateTimestamp = lastUpdateTimestamp;
             return this;
         }
-
         public Builder lastUpdateTimestamp(@Nullable String lastUpdateTimestamp) {
             this.lastUpdateTimestamp = Output.ofNullable(lastUpdateTimestamp);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder runtimeEnvironment(@Nullable Output<String> runtimeEnvironment) {
             this.runtimeEnvironment = runtimeEnvironment;
             return this;
         }
-
         public Builder runtimeEnvironment(@Nullable String runtimeEnvironment) {
             this.runtimeEnvironment = Output.ofNullable(runtimeEnvironment);
             return this;
         }
-
         public Builder serviceExecutionRole(@Nullable Output<String> serviceExecutionRole) {
             this.serviceExecutionRole = serviceExecutionRole;
             return this;
         }
-
         public Builder serviceExecutionRole(@Nullable String serviceExecutionRole) {
             this.serviceExecutionRole = Output.ofNullable(serviceExecutionRole);
             return this;
         }
-
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
-
         public Builder startApplication(@Nullable Boolean startApplication) {
             this.startApplication = Output.ofNullable(startApplication);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder versionId(@Nullable Output<Integer> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable Integer versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
-        }
-        public ApplicationState build() {
+        }        public ApplicationState build() {
             return new ApplicationState(applicationConfiguration, arn, cloudwatchLoggingOptions, createTimestamp, description, forceStop, lastUpdateTimestamp, name, runtimeEnvironment, serviceExecutionRole, startApplication, status, tags, tagsAll, versionId);
         }
     }

@@ -190,92 +190,74 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationConfiguration = applicationConfiguration;
             return this;
         }
-
         public Builder applicationConfiguration(@Nullable ApplicationApplicationConfigurationArgs applicationConfiguration) {
             this.applicationConfiguration = Output.ofNullable(applicationConfiguration);
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable ApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder forceStop(@Nullable Output<Boolean> forceStop) {
             this.forceStop = forceStop;
             return this;
         }
-
         public Builder forceStop(@Nullable Boolean forceStop) {
             this.forceStop = Output.ofNullable(forceStop);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder runtimeEnvironment(Output<String> runtimeEnvironment) {
             this.runtimeEnvironment = Objects.requireNonNull(runtimeEnvironment);
             return this;
         }
-
         public Builder runtimeEnvironment(String runtimeEnvironment) {
             this.runtimeEnvironment = Output.of(Objects.requireNonNull(runtimeEnvironment));
             return this;
         }
-
         public Builder serviceExecutionRole(Output<String> serviceExecutionRole) {
             this.serviceExecutionRole = Objects.requireNonNull(serviceExecutionRole);
             return this;
         }
-
         public Builder serviceExecutionRole(String serviceExecutionRole) {
             this.serviceExecutionRole = Output.of(Objects.requireNonNull(serviceExecutionRole));
             return this;
         }
-
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
-
         public Builder startApplication(@Nullable Boolean startApplication) {
             this.startApplication = Output.ofNullable(startApplication);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationConfiguration, cloudwatchLoggingOptions, description, forceStop, name, runtimeEnvironment, serviceExecutionRole, startApplication, tags);
         }
     }

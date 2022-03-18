@@ -282,152 +282,122 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
-
         public Builder flexcacheEndpointType(@Nullable Output<String> flexcacheEndpointType) {
             this.flexcacheEndpointType = flexcacheEndpointType;
             return this;
         }
-
         public Builder flexcacheEndpointType(@Nullable String flexcacheEndpointType) {
             this.flexcacheEndpointType = Output.ofNullable(flexcacheEndpointType);
             return this;
         }
-
         public Builder junctionPath(@Nullable Output<String> junctionPath) {
             this.junctionPath = junctionPath;
             return this;
         }
-
         public Builder junctionPath(@Nullable String junctionPath) {
             this.junctionPath = Output.ofNullable(junctionPath);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ontapVolumeType(@Nullable Output<String> ontapVolumeType) {
             this.ontapVolumeType = ontapVolumeType;
             return this;
         }
-
         public Builder ontapVolumeType(@Nullable String ontapVolumeType) {
             this.ontapVolumeType = Output.ofNullable(ontapVolumeType);
             return this;
         }
-
         public Builder securityStyle(@Nullable Output<String> securityStyle) {
             this.securityStyle = securityStyle;
             return this;
         }
-
         public Builder securityStyle(@Nullable String securityStyle) {
             this.securityStyle = Output.ofNullable(securityStyle);
             return this;
         }
-
         public Builder sizeInMegabytes(@Nullable Output<Integer> sizeInMegabytes) {
             this.sizeInMegabytes = sizeInMegabytes;
             return this;
         }
-
         public Builder sizeInMegabytes(@Nullable Integer sizeInMegabytes) {
             this.sizeInMegabytes = Output.ofNullable(sizeInMegabytes);
             return this;
         }
-
         public Builder storageEfficiencyEnabled(@Nullable Output<Boolean> storageEfficiencyEnabled) {
             this.storageEfficiencyEnabled = storageEfficiencyEnabled;
             return this;
         }
-
         public Builder storageEfficiencyEnabled(@Nullable Boolean storageEfficiencyEnabled) {
             this.storageEfficiencyEnabled = Output.ofNullable(storageEfficiencyEnabled);
             return this;
         }
-
         public Builder storageVirtualMachineId(@Nullable Output<String> storageVirtualMachineId) {
             this.storageVirtualMachineId = storageVirtualMachineId;
             return this;
         }
-
         public Builder storageVirtualMachineId(@Nullable String storageVirtualMachineId) {
             this.storageVirtualMachineId = Output.ofNullable(storageVirtualMachineId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder tieringPolicy(@Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy) {
             this.tieringPolicy = tieringPolicy;
             return this;
         }
-
         public Builder tieringPolicy(@Nullable OntapVolumeTieringPolicyGetArgs tieringPolicy) {
             this.tieringPolicy = Output.ofNullable(tieringPolicy);
             return this;
         }
-
         public Builder uuid(@Nullable Output<String> uuid) {
             this.uuid = uuid;
             return this;
         }
-
         public Builder uuid(@Nullable String uuid) {
             this.uuid = Output.ofNullable(uuid);
             return this;
         }
-
         public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Output.ofNullable(volumeType);
             return this;
-        }
-        public OntapVolumeState build() {
+        }        public OntapVolumeState build() {
             return new OntapVolumeState(arn, fileSystemId, flexcacheEndpointType, junctionPath, name, ontapVolumeType, securityStyle, sizeInMegabytes, storageEfficiencyEnabled, storageVirtualMachineId, tags, tagsAll, tieringPolicy, uuid, volumeType);
         }
     }

@@ -106,22 +106,24 @@ public final class ObjectLambdaAccessPointConfiguration {
             this.allowedFeatures = allowedFeatures;
             return this;
         }
-
+        public Builder allowedFeatures(String... allowedFeatures) {
+            return allowedFeatures(List.of(allowedFeatures));
+        }
         public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
-
         public Builder supportingAccessPoint(String supportingAccessPoint) {
             this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
             return this;
         }
-
         public Builder transformationConfigurations(List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> transformationConfigurations) {
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }
-        public ObjectLambdaAccessPointConfiguration build() {
+        public Builder transformationConfigurations(ObjectLambdaAccessPointConfigurationTransformationConfiguration... transformationConfigurations) {
+            return transformationConfigurations(List.of(transformationConfigurations));
+        }        public ObjectLambdaAccessPointConfiguration build() {
             return new ObjectLambdaAccessPointConfiguration(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
         }
     }

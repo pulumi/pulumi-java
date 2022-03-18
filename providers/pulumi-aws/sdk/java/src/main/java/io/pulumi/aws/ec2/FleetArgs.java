@@ -208,102 +208,82 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
-
         public Builder excessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = Output.ofNullable(excessCapacityTerminationPolicy);
             return this;
         }
-
         public Builder launchTemplateConfig(Output<FleetLaunchTemplateConfigArgs> launchTemplateConfig) {
             this.launchTemplateConfig = Objects.requireNonNull(launchTemplateConfig);
             return this;
         }
-
         public Builder launchTemplateConfig(FleetLaunchTemplateConfigArgs launchTemplateConfig) {
             this.launchTemplateConfig = Output.of(Objects.requireNonNull(launchTemplateConfig));
             return this;
         }
-
         public Builder onDemandOptions(@Nullable Output<FleetOnDemandOptionsArgs> onDemandOptions) {
             this.onDemandOptions = onDemandOptions;
             return this;
         }
-
         public Builder onDemandOptions(@Nullable FleetOnDemandOptionsArgs onDemandOptions) {
             this.onDemandOptions = Output.ofNullable(onDemandOptions);
             return this;
         }
-
         public Builder replaceUnhealthyInstances(@Nullable Output<Boolean> replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
-
         public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = Output.ofNullable(replaceUnhealthyInstances);
             return this;
         }
-
         public Builder spotOptions(@Nullable Output<FleetSpotOptionsArgs> spotOptions) {
             this.spotOptions = spotOptions;
             return this;
         }
-
         public Builder spotOptions(@Nullable FleetSpotOptionsArgs spotOptions) {
             this.spotOptions = Output.ofNullable(spotOptions);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetCapacitySpecification(Output<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification) {
             this.targetCapacitySpecification = Objects.requireNonNull(targetCapacitySpecification);
             return this;
         }
-
         public Builder targetCapacitySpecification(FleetTargetCapacitySpecificationArgs targetCapacitySpecification) {
             this.targetCapacitySpecification = Output.of(Objects.requireNonNull(targetCapacitySpecification));
             return this;
         }
-
         public Builder terminateInstances(@Nullable Output<Boolean> terminateInstances) {
             this.terminateInstances = terminateInstances;
             return this;
         }
-
         public Builder terminateInstances(@Nullable Boolean terminateInstances) {
             this.terminateInstances = Output.ofNullable(terminateInstances);
             return this;
         }
-
         public Builder terminateInstancesWithExpiration(@Nullable Output<Boolean> terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
-
         public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = Output.ofNullable(terminateInstancesWithExpiration);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public FleetArgs build() {
+        }        public FleetArgs build() {
             return new FleetArgs(excessCapacityTerminationPolicy, launchTemplateConfig, onDemandOptions, replaceUnhealthyInstances, spotOptions, tags, targetCapacitySpecification, terminateInstances, terminateInstancesWithExpiration, type);
         }
     }

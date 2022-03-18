@@ -76,22 +76,21 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sqlInjectionMatchTuples(@Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples) {
             this.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
             return this;
         }
-
         public Builder sqlInjectionMatchTuples(@Nullable List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs> sqlInjectionMatchTuples) {
             this.sqlInjectionMatchTuples = Output.ofNullable(sqlInjectionMatchTuples);
             return this;
         }
-        public SqlInjectionMatchSetArgs build() {
+        public Builder sqlInjectionMatchTuples(SqlInjectionMatchSetSqlInjectionMatchTupleArgs... sqlInjectionMatchTuples) {
+            return sqlInjectionMatchTuples(List.of(sqlInjectionMatchTuples));
+        }        public SqlInjectionMatchSetArgs build() {
             return new SqlInjectionMatchSetArgs(name, sqlInjectionMatchTuples);
         }
     }

@@ -88,17 +88,14 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfiguration {
             this.port = port;
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
-
         public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = startCommand;
             return this;
-        }
-        public ServiceSourceConfigurationImageRepositoryImageConfiguration build() {
+        }        public ServiceSourceConfigurationImageRepositoryImageConfiguration build() {
             return new ServiceSourceConfigurationImageRepositoryImageConfiguration(port, runtimeEnvironmentVariables, startCommand);
         }
     }

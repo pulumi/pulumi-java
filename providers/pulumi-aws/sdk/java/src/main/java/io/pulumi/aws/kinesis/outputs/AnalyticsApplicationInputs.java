@@ -192,47 +192,44 @@ public final class AnalyticsApplicationInputs {
             this.id = id;
             return this;
         }
-
         public Builder kinesisFirehose(@Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
-
         public Builder kinesisStream(@Nullable AnalyticsApplicationInputsKinesisStream kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
-
         public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
-
         public Builder parallelism(@Nullable AnalyticsApplicationInputsParallelism parallelism) {
             this.parallelism = parallelism;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder schema(AnalyticsApplicationInputsSchema schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder startingPositionConfigurations(@Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations) {
             this.startingPositionConfigurations = startingPositionConfigurations;
             return this;
         }
-
+        public Builder startingPositionConfigurations(AnalyticsApplicationInputsStartingPositionConfiguration... startingPositionConfigurations) {
+            return startingPositionConfigurations(List.of(startingPositionConfigurations));
+        }
         public Builder streamNames(@Nullable List<String> streamNames) {
             this.streamNames = streamNames;
             return this;
         }
-        public AnalyticsApplicationInputs build() {
+        public Builder streamNames(String... streamNames) {
+            return streamNames(List.of(streamNames));
+        }        public AnalyticsApplicationInputs build() {
             return new AnalyticsApplicationInputs(id, kinesisFirehose, kinesisStream, namePrefix, parallelism, processingConfiguration, schema, startingPositionConfigurations, streamNames);
         }
     }

@@ -187,87 +187,70 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createDate(@Nullable Output<String> createDate) {
             this.createDate = createDate;
             return this;
         }
-
         public Builder createDate(@Nullable String createDate) {
             this.createDate = Output.ofNullable(createDate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
-
         public Builder uniqueId(@Nullable String uniqueId) {
             this.uniqueId = Output.ofNullable(uniqueId);
             return this;
-        }
-        public InstanceProfileState build() {
+        }        public InstanceProfileState build() {
             return new InstanceProfileState(arn, createDate, name, namePrefix, path, role, tags, tagsAll, uniqueId);
         }
     }

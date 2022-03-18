@@ -171,82 +171,66 @@ public final class LaunchTemplatePlacementArgs extends io.pulumi.resources.Resou
             this.affinity = affinity;
             return this;
         }
-
         public Builder affinity(@Nullable String affinity) {
             this.affinity = Output.ofNullable(affinity);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = Output.ofNullable(groupName);
             return this;
         }
-
         public Builder hostId(@Nullable Output<String> hostId) {
             this.hostId = hostId;
             return this;
         }
-
         public Builder hostId(@Nullable String hostId) {
             this.hostId = Output.ofNullable(hostId);
             return this;
         }
-
         public Builder hostResourceGroupArn(@Nullable Output<String> hostResourceGroupArn) {
             this.hostResourceGroupArn = hostResourceGroupArn;
             return this;
         }
-
         public Builder hostResourceGroupArn(@Nullable String hostResourceGroupArn) {
             this.hostResourceGroupArn = Output.ofNullable(hostResourceGroupArn);
             return this;
         }
-
         public Builder partitionNumber(@Nullable Output<Integer> partitionNumber) {
             this.partitionNumber = partitionNumber;
             return this;
         }
-
         public Builder partitionNumber(@Nullable Integer partitionNumber) {
             this.partitionNumber = Output.ofNullable(partitionNumber);
             return this;
         }
-
         public Builder spreadDomain(@Nullable Output<String> spreadDomain) {
             this.spreadDomain = spreadDomain;
             return this;
         }
-
         public Builder spreadDomain(@Nullable String spreadDomain) {
             this.spreadDomain = Output.ofNullable(spreadDomain);
             return this;
         }
-
         public Builder tenancy(@Nullable Output<String> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
-
         public Builder tenancy(@Nullable String tenancy) {
             this.tenancy = Output.ofNullable(tenancy);
             return this;
-        }
-        public LaunchTemplatePlacementArgs build() {
+        }        public LaunchTemplatePlacementArgs build() {
             return new LaunchTemplatePlacementArgs(affinity, availabilityZone, groupName, hostId, hostResourceGroupArn, partitionNumber, spreadDomain, tenancy);
         }
     }

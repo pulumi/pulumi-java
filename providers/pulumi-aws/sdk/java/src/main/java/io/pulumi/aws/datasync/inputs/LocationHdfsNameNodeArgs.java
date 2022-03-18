@@ -74,22 +74,18 @@ public final class LocationHdfsNameNodeArgs extends io.pulumi.resources.Resource
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder hostname(String hostname) {
             this.hostname = Output.of(Objects.requireNonNull(hostname));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public LocationHdfsNameNodeArgs build() {
+        }        public LocationHdfsNameNodeArgs build() {
             return new LocationHdfsNameNodeArgs(hostname, port);
         }
     }

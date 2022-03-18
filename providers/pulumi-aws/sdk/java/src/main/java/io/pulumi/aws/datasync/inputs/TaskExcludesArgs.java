@@ -74,22 +74,18 @@ public final class TaskExcludesArgs extends io.pulumi.resources.ResourceArgs {
             this.filterType = filterType;
             return this;
         }
-
         public Builder filterType(@Nullable String filterType) {
             this.filterType = Output.ofNullable(filterType);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TaskExcludesArgs build() {
+        }        public TaskExcludesArgs build() {
             return new TaskExcludesArgs(filterType, value);
         }
     }

@@ -126,52 +126,42 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
             this.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
-
         public Builder dagProcessingLogs(@Nullable EnvironmentLoggingConfigurationDagProcessingLogsGetArgs dagProcessingLogs) {
             this.dagProcessingLogs = Output.ofNullable(dagProcessingLogs);
             return this;
         }
-
         public Builder schedulerLogs(@Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs> schedulerLogs) {
             this.schedulerLogs = schedulerLogs;
             return this;
         }
-
         public Builder schedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogsGetArgs schedulerLogs) {
             this.schedulerLogs = Output.ofNullable(schedulerLogs);
             return this;
         }
-
         public Builder taskLogs(@Nullable Output<EnvironmentLoggingConfigurationTaskLogsGetArgs> taskLogs) {
             this.taskLogs = taskLogs;
             return this;
         }
-
         public Builder taskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogsGetArgs taskLogs) {
             this.taskLogs = Output.ofNullable(taskLogs);
             return this;
         }
-
         public Builder webserverLogs(@Nullable Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs> webserverLogs) {
             this.webserverLogs = webserverLogs;
             return this;
         }
-
         public Builder webserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogsGetArgs webserverLogs) {
             this.webserverLogs = Output.ofNullable(webserverLogs);
             return this;
         }
-
         public Builder workerLogs(@Nullable Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs> workerLogs) {
             this.workerLogs = workerLogs;
             return this;
         }
-
         public Builder workerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogsGetArgs workerLogs) {
             this.workerLogs = Output.ofNullable(workerLogs);
             return this;
-        }
-        public EnvironmentLoggingConfigurationGetArgs build() {
+        }        public EnvironmentLoggingConfigurationGetArgs build() {
             return new EnvironmentLoggingConfigurationGetArgs(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);
         }
     }

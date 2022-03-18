@@ -140,62 +140,50 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
             this.activate = Objects.requireNonNull(activate);
             return this;
         }
-
         public Builder activate(Boolean activate) {
             this.activate = Output.of(Objects.requireNonNull(activate));
             return this;
         }
-
         public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
-
         public Builder detectorId(String detectorId) {
             this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
-
         public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IPSetArgs build() {
+        }        public IPSetArgs build() {
             return new IPSetArgs(activate, detectorId, format, location, name, tags);
         }
     }

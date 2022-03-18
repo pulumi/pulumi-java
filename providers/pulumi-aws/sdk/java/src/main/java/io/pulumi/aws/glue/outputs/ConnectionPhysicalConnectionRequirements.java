@@ -88,17 +88,17 @@ public final class ConnectionPhysicalConnectionRequirements {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder securityGroupIdLists(@Nullable List<String> securityGroupIdLists) {
             this.securityGroupIdLists = securityGroupIdLists;
             return this;
         }
-
+        public Builder securityGroupIdLists(String... securityGroupIdLists) {
+            return securityGroupIdLists(List.of(securityGroupIdLists));
+        }
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
-        }
-        public ConnectionPhysicalConnectionRequirements build() {
+        }        public ConnectionPhysicalConnectionRequirements build() {
             return new ConnectionPhysicalConnectionRequirements(availabilityZone, securityGroupIdLists, subnetId);
         }
     }

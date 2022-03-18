@@ -43,8 +43,7 @@ public final class GetLaunchTemplateElasticGpuSpecification {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLaunchTemplateElasticGpuSpecification build() {
+        }        public GetLaunchTemplateElasticGpuSpecification build() {
             return new GetLaunchTemplateElasticGpuSpecification(type);
         }
     }

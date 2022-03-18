@@ -109,22 +109,21 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(GetScriptDagNodeArg... args) {
+            return args(List.of(args));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lineNumber(@Nullable Integer lineNumber) {
             this.lineNumber = lineNumber;
             return this;
         }
-
         public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
-        }
-        public GetScriptDagNode build() {
+        }        public GetScriptDagNode build() {
             return new GetScriptDagNode(args, id, lineNumber, nodeType);
         }
     }

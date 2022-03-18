@@ -109,22 +109,21 @@ public final class GetElasticIpArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetElasticIpFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = publicIp;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetElasticIpArgs build() {
+        }        public GetElasticIpArgs build() {
             return new GetElasticIpArgs(filters, id, publicIp, tags);
         }
     }

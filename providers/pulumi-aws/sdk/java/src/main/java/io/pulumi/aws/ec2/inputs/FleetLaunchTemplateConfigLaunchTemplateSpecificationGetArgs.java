@@ -90,32 +90,26 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
             this.launchTemplateId = launchTemplateId;
             return this;
         }
-
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = Output.ofNullable(launchTemplateId);
             return this;
         }
-
         public Builder launchTemplateName(@Nullable Output<String> launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
-
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = Output.ofNullable(launchTemplateName);
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs build() {
+        }        public FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs build() {
             return new FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs(launchTemplateId, launchTemplateName, version);
         }
     }

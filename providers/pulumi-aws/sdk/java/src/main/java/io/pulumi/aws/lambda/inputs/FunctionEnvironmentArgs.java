@@ -58,12 +58,10 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = Output.ofNullable(variables);
             return this;
-        }
-        public FunctionEnvironmentArgs build() {
+        }        public FunctionEnvironmentArgs build() {
             return new FunctionEnvironmentArgs(variables);
         }
     }

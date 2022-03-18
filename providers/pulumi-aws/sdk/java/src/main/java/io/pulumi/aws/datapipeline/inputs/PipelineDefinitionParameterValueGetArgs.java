@@ -73,22 +73,18 @@ public final class PipelineDefinitionParameterValueGetArgs extends io.pulumi.res
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder stringValue(Output<String> stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Output.of(Objects.requireNonNull(stringValue));
             return this;
-        }
-        public PipelineDefinitionParameterValueGetArgs build() {
+        }        public PipelineDefinitionParameterValueGetArgs build() {
             return new PipelineDefinitionParameterValueGetArgs(id, stringValue);
         }
     }

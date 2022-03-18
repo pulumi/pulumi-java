@@ -90,32 +90,26 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
-
         public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
             this.certificateAuthorityArn = Output.ofNullable(certificateAuthorityArn);
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
-        }
-        public CertificateAuthorityCertificateState build() {
+        }        public CertificateAuthorityCertificateState build() {
             return new CertificateAuthorityCertificateState(certificate, certificateAuthorityArn, certificateChain);
         }
     }

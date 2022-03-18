@@ -272,142 +272,114 @@ public final class VpcArgs extends io.pulumi.resources.ResourceArgs {
             this.assignGeneratedIpv6CidrBlock = assignGeneratedIpv6CidrBlock;
             return this;
         }
-
         public Builder assignGeneratedIpv6CidrBlock(@Nullable Boolean assignGeneratedIpv6CidrBlock) {
             this.assignGeneratedIpv6CidrBlock = Output.ofNullable(assignGeneratedIpv6CidrBlock);
             return this;
         }
-
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder enableClassiclink(@Nullable Output<Boolean> enableClassiclink) {
             this.enableClassiclink = enableClassiclink;
             return this;
         }
-
         public Builder enableClassiclink(@Nullable Boolean enableClassiclink) {
             this.enableClassiclink = Output.ofNullable(enableClassiclink);
             return this;
         }
-
         public Builder enableClassiclinkDnsSupport(@Nullable Output<Boolean> enableClassiclinkDnsSupport) {
             this.enableClassiclinkDnsSupport = enableClassiclinkDnsSupport;
             return this;
         }
-
         public Builder enableClassiclinkDnsSupport(@Nullable Boolean enableClassiclinkDnsSupport) {
             this.enableClassiclinkDnsSupport = Output.ofNullable(enableClassiclinkDnsSupport);
             return this;
         }
-
         public Builder enableDnsHostnames(@Nullable Output<Boolean> enableDnsHostnames) {
             this.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
-
         public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
             this.enableDnsHostnames = Output.ofNullable(enableDnsHostnames);
             return this;
         }
-
         public Builder enableDnsSupport(@Nullable Output<Boolean> enableDnsSupport) {
             this.enableDnsSupport = enableDnsSupport;
             return this;
         }
-
         public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
             this.enableDnsSupport = Output.ofNullable(enableDnsSupport);
             return this;
         }
-
         public Builder instanceTenancy(@Nullable Output<String> instanceTenancy) {
             this.instanceTenancy = instanceTenancy;
             return this;
         }
-
         public Builder instanceTenancy(@Nullable String instanceTenancy) {
             this.instanceTenancy = Output.ofNullable(instanceTenancy);
             return this;
         }
-
         public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
             this.ipv4IpamPoolId = ipv4IpamPoolId;
             return this;
         }
-
         public Builder ipv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
             this.ipv4IpamPoolId = Output.ofNullable(ipv4IpamPoolId);
             return this;
         }
-
         public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
             this.ipv4NetmaskLength = ipv4NetmaskLength;
             return this;
         }
-
         public Builder ipv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
             this.ipv4NetmaskLength = Output.ofNullable(ipv4NetmaskLength);
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
-
         public Builder ipv6CidrBlockNetworkBorderGroup(@Nullable Output<String> ipv6CidrBlockNetworkBorderGroup) {
             this.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
             return this;
         }
-
         public Builder ipv6CidrBlockNetworkBorderGroup(@Nullable String ipv6CidrBlockNetworkBorderGroup) {
             this.ipv6CidrBlockNetworkBorderGroup = Output.ofNullable(ipv6CidrBlockNetworkBorderGroup);
             return this;
         }
-
         public Builder ipv6IpamPoolId(@Nullable Output<String> ipv6IpamPoolId) {
             this.ipv6IpamPoolId = ipv6IpamPoolId;
             return this;
         }
-
         public Builder ipv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
             this.ipv6IpamPoolId = Output.ofNullable(ipv6IpamPoolId);
             return this;
         }
-
         public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
             this.ipv6NetmaskLength = ipv6NetmaskLength;
             return this;
         }
-
         public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
             this.ipv6NetmaskLength = Output.ofNullable(ipv6NetmaskLength);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public VpcArgs build() {
+        }        public VpcArgs build() {
             return new VpcArgs(assignGeneratedIpv6CidrBlock, cidrBlock, enableClassiclink, enableClassiclinkDnsSupport, enableDnsHostnames, enableDnsSupport, instanceTenancy, ipv4IpamPoolId, ipv4NetmaskLength, ipv6CidrBlock, ipv6CidrBlockNetworkBorderGroup, ipv6IpamPoolId, ipv6NetmaskLength, tags);
         }
     }

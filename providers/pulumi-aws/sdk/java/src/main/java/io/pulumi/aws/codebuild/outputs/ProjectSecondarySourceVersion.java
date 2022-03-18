@@ -69,12 +69,10 @@ public final class ProjectSecondarySourceVersion {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
-
         public Builder sourceVersion(String sourceVersion) {
             this.sourceVersion = Objects.requireNonNull(sourceVersion);
             return this;
-        }
-        public ProjectSecondarySourceVersion build() {
+        }        public ProjectSecondarySourceVersion build() {
             return new ProjectSecondarySourceVersion(sourceIdentifier, sourceVersion);
         }
     }

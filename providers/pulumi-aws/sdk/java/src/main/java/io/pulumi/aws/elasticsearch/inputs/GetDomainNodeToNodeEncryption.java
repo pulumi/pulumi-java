@@ -54,8 +54,7 @@ public final class GetDomainNodeToNodeEncryption extends io.pulumi.resources.Inv
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetDomainNodeToNodeEncryption build() {
+        }        public GetDomainNodeToNodeEncryption build() {
             return new GetDomainNodeToNodeEncryption(enabled);
         }
     }

@@ -123,52 +123,42 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
-
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
             return this;
         }
-
         public Builder emailAddress(Output<String> emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder emailAddress(String emailAddress) {
             this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
             return this;
         }
-
         public Builder graphArn(Output<String> graphArn) {
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
-
         public Builder graphArn(String graphArn) {
             this.graphArn = Output.of(Objects.requireNonNull(graphArn));
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
-        }
-        public MemberArgs build() {
+        }        public MemberArgs build() {
             return new MemberArgs(accountId, disableEmailNotification, emailAddress, graphArn, message);
         }
     }

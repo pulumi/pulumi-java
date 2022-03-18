@@ -75,12 +75,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetClusterArgs build() {
+        }        public GetClusterArgs build() {
             return new GetClusterArgs(clusterId, tags);
         }
     }

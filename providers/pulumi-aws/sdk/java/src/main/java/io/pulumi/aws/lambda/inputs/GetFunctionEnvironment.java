@@ -51,8 +51,7 @@ public final class GetFunctionEnvironment extends io.pulumi.resources.InvokeArgs
         public Builder variables(Map<String,String> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
-        }
-        public GetFunctionEnvironment build() {
+        }        public GetFunctionEnvironment build() {
             return new GetFunctionEnvironment(variables);
         }
     }

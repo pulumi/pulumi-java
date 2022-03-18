@@ -54,12 +54,13 @@ public final class GetAmiIdsFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetAmiIdsFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetAmiIdsFilter build() {
             return new GetAmiIdsFilter(name, values);
         }
     }

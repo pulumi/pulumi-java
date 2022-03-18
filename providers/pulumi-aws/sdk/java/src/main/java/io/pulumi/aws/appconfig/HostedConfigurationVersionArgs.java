@@ -122,52 +122,42 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder configurationProfileId(Output<String> configurationProfileId) {
             this.configurationProfileId = Objects.requireNonNull(configurationProfileId);
             return this;
         }
-
         public Builder configurationProfileId(String configurationProfileId) {
             this.configurationProfileId = Output.of(Objects.requireNonNull(configurationProfileId));
             return this;
         }
-
         public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
-        }
-        public HostedConfigurationVersionArgs build() {
+        }        public HostedConfigurationVersionArgs build() {
             return new HostedConfigurationVersionArgs(applicationId, configurationProfileId, content, contentType, description);
         }
     }

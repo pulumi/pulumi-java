@@ -121,32 +121,38 @@ public final class GetSecurityGroupsResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder filters(@Nullable List<GetSecurityGroupsFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSecurityGroupsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcIds(List<String> vpcIds) {
             this.vpcIds = Objects.requireNonNull(vpcIds);
             return this;
         }
-        public GetSecurityGroupsResult build() {
+        public Builder vpcIds(String... vpcIds) {
+            return vpcIds(List.of(vpcIds));
+        }        public GetSecurityGroupsResult build() {
             return new GetSecurityGroupsResult(arns, filters, id, ids, tags, vpcIds);
         }
     }

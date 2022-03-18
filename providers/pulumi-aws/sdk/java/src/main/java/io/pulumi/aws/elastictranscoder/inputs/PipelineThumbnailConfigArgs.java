@@ -74,22 +74,18 @@ public final class PipelineThumbnailConfigArgs extends io.pulumi.resources.Resou
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
-        }
-        public PipelineThumbnailConfigArgs build() {
+        }        public PipelineThumbnailConfigArgs build() {
             return new PipelineThumbnailConfigArgs(bucket, storageClass);
         }
     }

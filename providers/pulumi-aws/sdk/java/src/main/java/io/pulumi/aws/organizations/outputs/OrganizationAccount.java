@@ -119,27 +119,22 @@ public final class OrganizationAccount {
             this.arn = arn;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public OrganizationAccount build() {
+        }        public OrganizationAccount build() {
             return new OrganizationAccount(arn, email, id, name, status);
         }
     }

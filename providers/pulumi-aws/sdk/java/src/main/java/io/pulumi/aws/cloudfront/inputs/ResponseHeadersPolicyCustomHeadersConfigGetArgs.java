@@ -54,12 +54,13 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public ResponseHeadersPolicyCustomHeadersConfigGetArgs build() {
+        public Builder items(ResponseHeadersPolicyCustomHeadersConfigItemGetArgs... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyCustomHeadersConfigGetArgs build() {
             return new ResponseHeadersPolicyCustomHeadersConfigGetArgs(items);
         }
     }

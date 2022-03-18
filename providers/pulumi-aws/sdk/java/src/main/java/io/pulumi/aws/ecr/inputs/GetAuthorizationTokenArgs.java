@@ -56,8 +56,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
         public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
-        }
-        public GetAuthorizationTokenArgs build() {
+        }        public GetAuthorizationTokenArgs build() {
             return new GetAuthorizationTokenArgs(registryId);
         }
     }

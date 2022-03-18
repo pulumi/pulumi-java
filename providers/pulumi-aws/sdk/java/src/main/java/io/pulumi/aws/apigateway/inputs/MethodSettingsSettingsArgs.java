@@ -205,102 +205,82 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
-
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = Output.ofNullable(cacheDataEncrypted);
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = Output.ofNullable(cacheTtlInSeconds);
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = Output.ofNullable(cachingEnabled);
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
             return this;
         }
-
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
-
         public Builder metricsEnabled(@Nullable Output<Boolean> metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
-
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = Output.ofNullable(metricsEnabled);
             return this;
         }
-
         public Builder requireAuthorizationForCacheControl(@Nullable Output<Boolean> requireAuthorizationForCacheControl) {
             this.requireAuthorizationForCacheControl = requireAuthorizationForCacheControl;
             return this;
         }
-
         public Builder requireAuthorizationForCacheControl(@Nullable Boolean requireAuthorizationForCacheControl) {
             this.requireAuthorizationForCacheControl = Output.ofNullable(requireAuthorizationForCacheControl);
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
             return this;
         }
-
         public Builder unauthorizedCacheControlHeaderStrategy(@Nullable Output<String> unauthorizedCacheControlHeaderStrategy) {
             this.unauthorizedCacheControlHeaderStrategy = unauthorizedCacheControlHeaderStrategy;
             return this;
         }
-
         public Builder unauthorizedCacheControlHeaderStrategy(@Nullable String unauthorizedCacheControlHeaderStrategy) {
             this.unauthorizedCacheControlHeaderStrategy = Output.ofNullable(unauthorizedCacheControlHeaderStrategy);
             return this;
-        }
-        public MethodSettingsSettingsArgs build() {
+        }        public MethodSettingsSettingsArgs build() {
             return new MethodSettingsSettingsArgs(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, loggingLevel, metricsEnabled, requireAuthorizationForCacheControl, throttlingBurstLimit, throttlingRateLimit, unauthorizedCacheControlHeaderStrategy);
         }
     }

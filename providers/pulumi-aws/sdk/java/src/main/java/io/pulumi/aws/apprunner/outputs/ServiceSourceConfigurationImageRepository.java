@@ -90,17 +90,14 @@ public final class ServiceSourceConfigurationImageRepository {
             this.imageConfiguration = imageConfiguration;
             return this;
         }
-
         public Builder imageIdentifier(String imageIdentifier) {
             this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
             return this;
         }
-
         public Builder imageRepositoryType(String imageRepositoryType) {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
-        }
-        public ServiceSourceConfigurationImageRepository build() {
+        }        public ServiceSourceConfigurationImageRepository build() {
             return new ServiceSourceConfigurationImageRepository(imageConfiguration, imageIdentifier, imageRepositoryType);
         }
     }

@@ -125,52 +125,45 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
             this.adjustmentType = adjustmentType;
             return this;
         }
-
         public Builder adjustmentType(@Nullable String adjustmentType) {
             this.adjustmentType = Output.ofNullable(adjustmentType);
             return this;
         }
-
         public Builder cooldown(@Nullable Output<Integer> cooldown) {
             this.cooldown = cooldown;
             return this;
         }
-
         public Builder cooldown(@Nullable Integer cooldown) {
             this.cooldown = Output.ofNullable(cooldown);
             return this;
         }
-
         public Builder metricAggregationType(@Nullable Output<String> metricAggregationType) {
             this.metricAggregationType = metricAggregationType;
             return this;
         }
-
         public Builder metricAggregationType(@Nullable String metricAggregationType) {
             this.metricAggregationType = Output.ofNullable(metricAggregationType);
             return this;
         }
-
         public Builder minAdjustmentMagnitude(@Nullable Output<Integer> minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
-
         public Builder minAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = Output.ofNullable(minAdjustmentMagnitude);
             return this;
         }
-
         public Builder stepAdjustments(@Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments) {
             this.stepAdjustments = stepAdjustments;
             return this;
         }
-
         public Builder stepAdjustments(@Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs> stepAdjustments) {
             this.stepAdjustments = Output.ofNullable(stepAdjustments);
             return this;
         }
-        public PolicyStepScalingPolicyConfigurationGetArgs build() {
+        public Builder stepAdjustments(PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs... stepAdjustments) {
+            return stepAdjustments(List.of(stepAdjustments));
+        }        public PolicyStepScalingPolicyConfigurationGetArgs build() {
             return new PolicyStepScalingPolicyConfigurationGetArgs(adjustmentType, cooldown, metricAggregationType, minAdjustmentMagnitude, stepAdjustments);
         }
     }

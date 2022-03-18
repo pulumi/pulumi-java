@@ -56,12 +56,10 @@ public final class UserPoolUserPoolAddOnsGetArgs extends io.pulumi.resources.Res
             this.advancedSecurityMode = Objects.requireNonNull(advancedSecurityMode);
             return this;
         }
-
         public Builder advancedSecurityMode(String advancedSecurityMode) {
             this.advancedSecurityMode = Output.of(Objects.requireNonNull(advancedSecurityMode));
             return this;
-        }
-        public UserPoolUserPoolAddOnsGetArgs build() {
+        }        public UserPoolUserPoolAddOnsGetArgs build() {
             return new UserPoolUserPoolAddOnsGetArgs(advancedSecurityMode);
         }
     }

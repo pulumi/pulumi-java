@@ -69,12 +69,10 @@ public final class InsightFiltersVerificationState {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersVerificationState build() {
+        }        public InsightFiltersVerificationState build() {
             return new InsightFiltersVerificationState(comparison, value);
         }
     }

@@ -71,12 +71,10 @@ public final class PermissionsDatabase {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PermissionsDatabase build() {
+        }        public PermissionsDatabase build() {
             return new PermissionsDatabase(catalogId, name);
         }
     }

@@ -191,47 +191,38 @@ public final class GetIntentResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parentIntentSignature(String parentIntentSignature) {
             this.parentIntentSignature = Objects.requireNonNull(parentIntentSignature);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetIntentResult build() {
+        }        public GetIntentResult build() {
             return new GetIntentResult(arn, checksum, createdDate, description, id, lastUpdatedDate, name, parentIntentSignature, version);
         }
     }

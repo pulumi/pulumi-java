@@ -51,8 +51,7 @@ public final class UserPoolSoftwareTokenMfaConfiguration {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public UserPoolSoftwareTokenMfaConfiguration build() {
+        }        public UserPoolSoftwareTokenMfaConfiguration build() {
             return new UserPoolSoftwareTokenMfaConfiguration(enabled);
         }
     }

@@ -108,42 +108,37 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             this.acceleratorArn = acceleratorArn;
             return this;
         }
-
         public Builder acceleratorArn(@Nullable String acceleratorArn) {
             this.acceleratorArn = Output.ofNullable(acceleratorArn);
             return this;
         }
-
         public Builder clientAffinity(@Nullable Output<String> clientAffinity) {
             this.clientAffinity = clientAffinity;
             return this;
         }
-
         public Builder clientAffinity(@Nullable String clientAffinity) {
             this.clientAffinity = Output.ofNullable(clientAffinity);
             return this;
         }
-
         public Builder portRanges(@Nullable Output<List<ListenerPortRangeGetArgs>> portRanges) {
             this.portRanges = portRanges;
             return this;
         }
-
         public Builder portRanges(@Nullable List<ListenerPortRangeGetArgs> portRanges) {
             this.portRanges = Output.ofNullable(portRanges);
             return this;
         }
-
+        public Builder portRanges(ListenerPortRangeGetArgs... portRanges) {
+            return portRanges(List.of(portRanges));
+        }
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public ListenerState build() {
+        }        public ListenerState build() {
             return new ListenerState(acceleratorArn, clientAffinity, portRanges, protocol);
         }
     }

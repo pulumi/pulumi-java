@@ -91,32 +91,26 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
             this.overrideDynamicGroup = overrideDynamicGroup;
             return this;
         }
-
         public Builder overrideDynamicGroup(@Nullable Boolean overrideDynamicGroup) {
             this.overrideDynamicGroup = Output.ofNullable(overrideDynamicGroup);
             return this;
         }
-
         public Builder thingGroupName(@Nullable Output<String> thingGroupName) {
             this.thingGroupName = thingGroupName;
             return this;
         }
-
         public Builder thingGroupName(@Nullable String thingGroupName) {
             this.thingGroupName = Output.ofNullable(thingGroupName);
             return this;
         }
-
         public Builder thingName(@Nullable Output<String> thingName) {
             this.thingName = thingName;
             return this;
         }
-
         public Builder thingName(@Nullable String thingName) {
             this.thingName = Output.ofNullable(thingName);
             return this;
-        }
-        public ThingGroupMembershipState build() {
+        }        public ThingGroupMembershipState build() {
             return new ThingGroupMembershipState(overrideDynamicGroup, thingGroupName, thingName);
         }
     }

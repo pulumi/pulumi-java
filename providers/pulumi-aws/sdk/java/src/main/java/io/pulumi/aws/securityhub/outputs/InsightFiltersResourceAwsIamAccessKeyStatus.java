@@ -69,12 +69,10 @@ public final class InsightFiltersResourceAwsIamAccessKeyStatus {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceAwsIamAccessKeyStatus build() {
+        }        public InsightFiltersResourceAwsIamAccessKeyStatus build() {
             return new InsightFiltersResourceAwsIamAccessKeyStatus(comparison, value);
         }
     }

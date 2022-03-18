@@ -71,12 +71,10 @@ public final class UserPoolSchemaStringAttributeConstraints {
             this.maxLength = maxLength;
             return this;
         }
-
         public Builder minLength(@Nullable String minLength) {
             this.minLength = minLength;
             return this;
-        }
-        public UserPoolSchemaStringAttributeConstraints build() {
+        }        public UserPoolSchemaStringAttributeConstraints build() {
             return new UserPoolSchemaStringAttributeConstraints(maxLength, minLength);
         }
     }

@@ -95,27 +95,22 @@ public final class GetInvocationResult {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder input(String input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
-        }
-        public GetInvocationResult build() {
+        }        public GetInvocationResult build() {
             return new GetInvocationResult(functionName, id, input, qualifier, result);
         }
     }

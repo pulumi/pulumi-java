@@ -205,102 +205,82 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder deploymentDurationInMinutes(@Nullable Output<Integer> deploymentDurationInMinutes) {
             this.deploymentDurationInMinutes = deploymentDurationInMinutes;
             return this;
         }
-
         public Builder deploymentDurationInMinutes(@Nullable Integer deploymentDurationInMinutes) {
             this.deploymentDurationInMinutes = Output.ofNullable(deploymentDurationInMinutes);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder finalBakeTimeInMinutes(@Nullable Output<Integer> finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
             return this;
         }
-
         public Builder finalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = Output.ofNullable(finalBakeTimeInMinutes);
             return this;
         }
-
         public Builder growthFactor(@Nullable Output<Double> growthFactor) {
             this.growthFactor = growthFactor;
             return this;
         }
-
         public Builder growthFactor(@Nullable Double growthFactor) {
             this.growthFactor = Output.ofNullable(growthFactor);
             return this;
         }
-
         public Builder growthType(@Nullable Output<String> growthType) {
             this.growthType = growthType;
             return this;
         }
-
         public Builder growthType(@Nullable String growthType) {
             this.growthType = Output.ofNullable(growthType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder replicateTo(@Nullable Output<String> replicateTo) {
             this.replicateTo = replicateTo;
             return this;
         }
-
         public Builder replicateTo(@Nullable String replicateTo) {
             this.replicateTo = Output.ofNullable(replicateTo);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DeploymentStrategyState build() {
+        }        public DeploymentStrategyState build() {
             return new DeploymentStrategyState(arn, deploymentDurationInMinutes, description, finalBakeTimeInMinutes, growthFactor, growthType, name, replicateTo, tags, tagsAll);
         }
     }

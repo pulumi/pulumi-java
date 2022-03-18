@@ -207,102 +207,91 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.auths = Objects.requireNonNull(auths);
             return this;
         }
-
         public Builder auths(List<ProxyAuthArgs> auths) {
             this.auths = Output.of(Objects.requireNonNull(auths));
             return this;
         }
-
+        public Builder auths(ProxyAuthArgs... auths) {
+            return auths(List.of(auths));
+        }
         public Builder debugLogging(@Nullable Output<Boolean> debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
-
         public Builder debugLogging(@Nullable Boolean debugLogging) {
             this.debugLogging = Output.ofNullable(debugLogging);
             return this;
         }
-
         public Builder engineFamily(Output<String> engineFamily) {
             this.engineFamily = Objects.requireNonNull(engineFamily);
             return this;
         }
-
         public Builder engineFamily(String engineFamily) {
             this.engineFamily = Output.of(Objects.requireNonNull(engineFamily));
             return this;
         }
-
         public Builder idleClientTimeout(@Nullable Output<Integer> idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
-
         public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
             this.idleClientTimeout = Output.ofNullable(idleClientTimeout);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder requireTls(@Nullable Output<Boolean> requireTls) {
             this.requireTls = requireTls;
             return this;
         }
-
         public Builder requireTls(@Nullable Boolean requireTls) {
             this.requireTls = Output.ofNullable(requireTls);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }
         public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
-
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
-        public ProxyArgs build() {
+        public Builder vpcSubnetIds(String... vpcSubnetIds) {
+            return vpcSubnetIds(List.of(vpcSubnetIds));
+        }        public ProxyArgs build() {
             return new ProxyArgs(auths, debugLogging, engineFamily, idleClientTimeout, name, requireTls, roleArn, tags, vpcSecurityGroupIds, vpcSubnetIds);
         }
     }

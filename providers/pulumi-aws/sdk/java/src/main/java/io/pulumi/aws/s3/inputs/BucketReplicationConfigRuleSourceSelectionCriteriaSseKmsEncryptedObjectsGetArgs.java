@@ -56,12 +56,10 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncry
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs build() {
+        }        public BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs build() {
             return new BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs(status);
         }
     }

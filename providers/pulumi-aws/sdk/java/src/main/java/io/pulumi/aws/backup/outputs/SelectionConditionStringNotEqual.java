@@ -69,12 +69,10 @@ public final class SelectionConditionStringNotEqual {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SelectionConditionStringNotEqual build() {
+        }        public SelectionConditionStringNotEqual build() {
             return new SelectionConditionStringNotEqual(key, value);
         }
     }

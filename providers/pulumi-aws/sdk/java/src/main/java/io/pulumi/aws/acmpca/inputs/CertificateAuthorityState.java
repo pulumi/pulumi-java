@@ -287,152 +287,122 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder certificateAuthorityConfiguration(@Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration) {
             this.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
             return this;
         }
-
         public Builder certificateAuthorityConfiguration(@Nullable CertificateAuthorityCertificateAuthorityConfigurationGetArgs certificateAuthorityConfiguration) {
             this.certificateAuthorityConfiguration = Output.ofNullable(certificateAuthorityConfiguration);
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
-
         public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
-
         public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = Output.ofNullable(certificateSigningRequest);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder notAfter(@Nullable Output<String> notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = Output.ofNullable(notAfter);
             return this;
         }
-
         public Builder notBefore(@Nullable Output<String> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
-
         public Builder notBefore(@Nullable String notBefore) {
             this.notBefore = Output.ofNullable(notBefore);
             return this;
         }
-
         public Builder permanentDeletionTimeInDays(@Nullable Output<Integer> permanentDeletionTimeInDays) {
             this.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
             return this;
         }
-
         public Builder permanentDeletionTimeInDays(@Nullable Integer permanentDeletionTimeInDays) {
             this.permanentDeletionTimeInDays = Output.ofNullable(permanentDeletionTimeInDays);
             return this;
         }
-
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
-
         public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationGetArgs revocationConfiguration) {
             this.revocationConfiguration = Output.ofNullable(revocationConfiguration);
             return this;
         }
-
         public Builder serial(@Nullable Output<String> serial) {
             this.serial = serial;
             return this;
         }
-
         public Builder serial(@Nullable String serial) {
             this.serial = Output.ofNullable(serial);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public CertificateAuthorityState build() {
+        }        public CertificateAuthorityState build() {
             return new CertificateAuthorityState(arn, certificate, certificateAuthorityConfiguration, certificateChain, certificateSigningRequest, enabled, notAfter, notBefore, permanentDeletionTimeInDays, revocationConfiguration, serial, status, tags, tagsAll, type);
         }
     }

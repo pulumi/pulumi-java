@@ -90,17 +90,14 @@ public final class IntentConclusionStatementMessage {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = groupNumber;
             return this;
-        }
-        public IntentConclusionStatementMessage build() {
+        }        public IntentConclusionStatementMessage build() {
             return new IntentConclusionStatementMessage(content, contentType, groupNumber);
         }
     }

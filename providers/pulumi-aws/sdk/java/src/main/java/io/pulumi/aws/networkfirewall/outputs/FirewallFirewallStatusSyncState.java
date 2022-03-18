@@ -73,12 +73,13 @@ public final class FirewallFirewallStatusSyncState {
             this.attachments = attachments;
             return this;
         }
-
+        public Builder attachments(FirewallFirewallStatusSyncStateAttachment... attachments) {
+            return attachments(List.of(attachments));
+        }
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
-        }
-        public FirewallFirewallStatusSyncState build() {
+        }        public FirewallFirewallStatusSyncState build() {
             return new FirewallFirewallStatusSyncState(attachments, availabilityZone);
         }
     }

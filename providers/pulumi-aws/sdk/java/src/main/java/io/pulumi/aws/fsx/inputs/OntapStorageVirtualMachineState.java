@@ -218,112 +218,93 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
-
         public Builder activeDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = Output.ofNullable(activeDirectoryConfiguration);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<OntapStorageVirtualMachineEndpointGetArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(OntapStorageVirtualMachineEndpointGetArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rootVolumeSecurityStyle(@Nullable Output<String> rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = rootVolumeSecurityStyle;
             return this;
         }
-
         public Builder rootVolumeSecurityStyle(@Nullable String rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = Output.ofNullable(rootVolumeSecurityStyle);
             return this;
         }
-
         public Builder subtype(@Nullable Output<String> subtype) {
             this.subtype = subtype;
             return this;
         }
-
         public Builder subtype(@Nullable String subtype) {
             this.subtype = Output.ofNullable(subtype);
             return this;
         }
-
         public Builder svmAdminPassword(@Nullable Output<String> svmAdminPassword) {
             this.svmAdminPassword = svmAdminPassword;
             return this;
         }
-
         public Builder svmAdminPassword(@Nullable String svmAdminPassword) {
             this.svmAdminPassword = Output.ofNullable(svmAdminPassword);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uuid(@Nullable Output<String> uuid) {
             this.uuid = uuid;
             return this;
         }
-
         public Builder uuid(@Nullable String uuid) {
             this.uuid = Output.ofNullable(uuid);
             return this;
-        }
-        public OntapStorageVirtualMachineState build() {
+        }        public OntapStorageVirtualMachineState build() {
             return new OntapStorageVirtualMachineState(activeDirectoryConfiguration, arn, endpoints, fileSystemId, name, rootVolumeSecurityStyle, subtype, svmAdminPassword, tags, tagsAll, uuid);
         }
     }

@@ -87,17 +87,14 @@ public final class CodeRepositoryGitConfig {
             this.branch = branch;
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
-        }
-        public CodeRepositoryGitConfig build() {
+        }        public CodeRepositoryGitConfig build() {
             return new CodeRepositoryGitConfig(branch, repositoryUrl, secretArn);
         }
     }

@@ -56,12 +56,10 @@ public final class ModelInferenceExecutionConfigArgs extends io.pulumi.resources
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
-        }
-        public ModelInferenceExecutionConfigArgs build() {
+        }        public ModelInferenceExecutionConfigArgs build() {
             return new ModelInferenceExecutionConfigArgs(mode);
         }
     }

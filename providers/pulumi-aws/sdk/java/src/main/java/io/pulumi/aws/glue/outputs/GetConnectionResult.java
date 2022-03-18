@@ -184,52 +184,48 @@ public final class GetConnectionResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder connectionProperties(Map<String,String> connectionProperties) {
             this.connectionProperties = Objects.requireNonNull(connectionProperties);
             return this;
         }
-
         public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder matchCriterias(List<String> matchCriterias) {
             this.matchCriterias = Objects.requireNonNull(matchCriterias);
             return this;
         }
-
+        public Builder matchCriterias(String... matchCriterias) {
+            return matchCriterias(List.of(matchCriterias));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder physicalConnectionRequirements(List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements) {
             this.physicalConnectionRequirements = Objects.requireNonNull(physicalConnectionRequirements);
             return this;
         }
-
+        public Builder physicalConnectionRequirements(GetConnectionPhysicalConnectionRequirement... physicalConnectionRequirements) {
+            return physicalConnectionRequirements(List.of(physicalConnectionRequirements));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetConnectionResult build() {
+        }        public GetConnectionResult build() {
             return new GetConnectionResult(arn, catalogId, connectionProperties, connectionType, description, id, matchCriterias, name, physicalConnectionRequirements, tags);
         }
     }

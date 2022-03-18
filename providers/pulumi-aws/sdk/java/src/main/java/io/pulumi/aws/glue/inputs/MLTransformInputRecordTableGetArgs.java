@@ -106,42 +106,34 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public MLTransformInputRecordTableGetArgs build() {
+        }        public MLTransformInputRecordTableGetArgs build() {
             return new MLTransformInputRecordTableGetArgs(catalogId, connectionName, databaseName, tableName);
         }
     }

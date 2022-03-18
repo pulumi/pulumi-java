@@ -172,82 +172,66 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder computePlatform(@Nullable Output<String> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
-
         public Builder computePlatform(@Nullable String computePlatform) {
             this.computePlatform = Output.ofNullable(computePlatform);
             return this;
         }
-
         public Builder githubAccountName(@Nullable Output<String> githubAccountName) {
             this.githubAccountName = githubAccountName;
             return this;
         }
-
         public Builder githubAccountName(@Nullable String githubAccountName) {
             this.githubAccountName = Output.ofNullable(githubAccountName);
             return this;
         }
-
         public Builder linkedToGithub(@Nullable Output<Boolean> linkedToGithub) {
             this.linkedToGithub = linkedToGithub;
             return this;
         }
-
         public Builder linkedToGithub(@Nullable Boolean linkedToGithub) {
             this.linkedToGithub = Output.ofNullable(linkedToGithub);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ApplicationState build() {
+        }        public ApplicationState build() {
             return new ApplicationState(applicationId, arn, computePlatform, githubAccountName, linkedToGithub, name, tags, tagsAll);
         }
     }

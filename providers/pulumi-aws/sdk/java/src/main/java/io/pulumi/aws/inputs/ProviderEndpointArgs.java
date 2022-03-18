@@ -3050,3012 +3050,2410 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             this.accessanalyzer = accessanalyzer;
             return this;
         }
-
         public Builder accessanalyzer(@Nullable String accessanalyzer) {
             this.accessanalyzer = Output.ofNullable(accessanalyzer);
             return this;
         }
-
         public Builder account(@Nullable Output<String> account) {
             this.account = account;
             return this;
         }
-
         public Builder account(@Nullable String account) {
             this.account = Output.ofNullable(account);
             return this;
         }
-
         public Builder acm(@Nullable Output<String> acm) {
             this.acm = acm;
             return this;
         }
-
         public Builder acm(@Nullable String acm) {
             this.acm = Output.ofNullable(acm);
             return this;
         }
-
         public Builder acmpca(@Nullable Output<String> acmpca) {
             this.acmpca = acmpca;
             return this;
         }
-
         public Builder acmpca(@Nullable String acmpca) {
             this.acmpca = Output.ofNullable(acmpca);
             return this;
         }
-
         public Builder alexaforbusiness(@Nullable Output<String> alexaforbusiness) {
             this.alexaforbusiness = alexaforbusiness;
             return this;
         }
-
         public Builder alexaforbusiness(@Nullable String alexaforbusiness) {
             this.alexaforbusiness = Output.ofNullable(alexaforbusiness);
             return this;
         }
-
         public Builder amp(@Nullable Output<String> amp) {
             this.amp = amp;
             return this;
         }
-
         public Builder amp(@Nullable String amp) {
             this.amp = Output.ofNullable(amp);
             return this;
         }
-
         public Builder amplify(@Nullable Output<String> amplify) {
             this.amplify = amplify;
             return this;
         }
-
         public Builder amplify(@Nullable String amplify) {
             this.amplify = Output.ofNullable(amplify);
             return this;
         }
-
         public Builder amplifybackend(@Nullable Output<String> amplifybackend) {
             this.amplifybackend = amplifybackend;
             return this;
         }
-
         public Builder amplifybackend(@Nullable String amplifybackend) {
             this.amplifybackend = Output.ofNullable(amplifybackend);
             return this;
         }
-
         public Builder apigateway(@Nullable Output<String> apigateway) {
             this.apigateway = apigateway;
             return this;
         }
-
         public Builder apigateway(@Nullable String apigateway) {
             this.apigateway = Output.ofNullable(apigateway);
             return this;
         }
-
         public Builder apigatewayv2(@Nullable Output<String> apigatewayv2) {
             this.apigatewayv2 = apigatewayv2;
             return this;
         }
-
         public Builder apigatewayv2(@Nullable String apigatewayv2) {
             this.apigatewayv2 = Output.ofNullable(apigatewayv2);
             return this;
         }
-
         public Builder appautoscaling(@Nullable Output<String> appautoscaling) {
             this.appautoscaling = appautoscaling;
             return this;
         }
-
         public Builder appautoscaling(@Nullable String appautoscaling) {
             this.appautoscaling = Output.ofNullable(appautoscaling);
             return this;
         }
-
         public Builder appconfig(@Nullable Output<String> appconfig) {
             this.appconfig = appconfig;
             return this;
         }
-
         public Builder appconfig(@Nullable String appconfig) {
             this.appconfig = Output.ofNullable(appconfig);
             return this;
         }
-
         public Builder appflow(@Nullable Output<String> appflow) {
             this.appflow = appflow;
             return this;
         }
-
         public Builder appflow(@Nullable String appflow) {
             this.appflow = Output.ofNullable(appflow);
             return this;
         }
-
         public Builder appintegrations(@Nullable Output<String> appintegrations) {
             this.appintegrations = appintegrations;
             return this;
         }
-
         public Builder appintegrations(@Nullable String appintegrations) {
             this.appintegrations = Output.ofNullable(appintegrations);
             return this;
         }
-
         public Builder appintegrationsservice(@Nullable Output<String> appintegrationsservice) {
             this.appintegrationsservice = appintegrationsservice;
             return this;
         }
-
         public Builder appintegrationsservice(@Nullable String appintegrationsservice) {
             this.appintegrationsservice = Output.ofNullable(appintegrationsservice);
             return this;
         }
-
         public Builder applicationautoscaling(@Nullable Output<String> applicationautoscaling) {
             this.applicationautoscaling = applicationautoscaling;
             return this;
         }
-
         public Builder applicationautoscaling(@Nullable String applicationautoscaling) {
             this.applicationautoscaling = Output.ofNullable(applicationautoscaling);
             return this;
         }
-
         public Builder applicationcostprofiler(@Nullable Output<String> applicationcostprofiler) {
             this.applicationcostprofiler = applicationcostprofiler;
             return this;
         }
-
         public Builder applicationcostprofiler(@Nullable String applicationcostprofiler) {
             this.applicationcostprofiler = Output.ofNullable(applicationcostprofiler);
             return this;
         }
-
         public Builder applicationdiscovery(@Nullable Output<String> applicationdiscovery) {
             this.applicationdiscovery = applicationdiscovery;
             return this;
         }
-
         public Builder applicationdiscovery(@Nullable String applicationdiscovery) {
             this.applicationdiscovery = Output.ofNullable(applicationdiscovery);
             return this;
         }
-
         public Builder applicationdiscoveryservice(@Nullable Output<String> applicationdiscoveryservice) {
             this.applicationdiscoveryservice = applicationdiscoveryservice;
             return this;
         }
-
         public Builder applicationdiscoveryservice(@Nullable String applicationdiscoveryservice) {
             this.applicationdiscoveryservice = Output.ofNullable(applicationdiscoveryservice);
             return this;
         }
-
         public Builder applicationinsights(@Nullable Output<String> applicationinsights) {
             this.applicationinsights = applicationinsights;
             return this;
         }
-
         public Builder applicationinsights(@Nullable String applicationinsights) {
             this.applicationinsights = Output.ofNullable(applicationinsights);
             return this;
         }
-
         public Builder appmesh(@Nullable Output<String> appmesh) {
             this.appmesh = appmesh;
             return this;
         }
-
         public Builder appmesh(@Nullable String appmesh) {
             this.appmesh = Output.ofNullable(appmesh);
             return this;
         }
-
         public Builder appregistry(@Nullable Output<String> appregistry) {
             this.appregistry = appregistry;
             return this;
         }
-
         public Builder appregistry(@Nullable String appregistry) {
             this.appregistry = Output.ofNullable(appregistry);
             return this;
         }
-
         public Builder apprunner(@Nullable Output<String> apprunner) {
             this.apprunner = apprunner;
             return this;
         }
-
         public Builder apprunner(@Nullable String apprunner) {
             this.apprunner = Output.ofNullable(apprunner);
             return this;
         }
-
         public Builder appstream(@Nullable Output<String> appstream) {
             this.appstream = appstream;
             return this;
         }
-
         public Builder appstream(@Nullable String appstream) {
             this.appstream = Output.ofNullable(appstream);
             return this;
         }
-
         public Builder appsync(@Nullable Output<String> appsync) {
             this.appsync = appsync;
             return this;
         }
-
         public Builder appsync(@Nullable String appsync) {
             this.appsync = Output.ofNullable(appsync);
             return this;
         }
-
         public Builder athena(@Nullable Output<String> athena) {
             this.athena = athena;
             return this;
         }
-
         public Builder athena(@Nullable String athena) {
             this.athena = Output.ofNullable(athena);
             return this;
         }
-
         public Builder auditmanager(@Nullable Output<String> auditmanager) {
             this.auditmanager = auditmanager;
             return this;
         }
-
         public Builder auditmanager(@Nullable String auditmanager) {
             this.auditmanager = Output.ofNullable(auditmanager);
             return this;
         }
-
         public Builder augmentedairuntime(@Nullable Output<String> augmentedairuntime) {
             this.augmentedairuntime = augmentedairuntime;
             return this;
         }
-
         public Builder augmentedairuntime(@Nullable String augmentedairuntime) {
             this.augmentedairuntime = Output.ofNullable(augmentedairuntime);
             return this;
         }
-
         public Builder autoscaling(@Nullable Output<String> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
-
         public Builder autoscaling(@Nullable String autoscaling) {
             this.autoscaling = Output.ofNullable(autoscaling);
             return this;
         }
-
         public Builder autoscalingplans(@Nullable Output<String> autoscalingplans) {
             this.autoscalingplans = autoscalingplans;
             return this;
         }
-
         public Builder autoscalingplans(@Nullable String autoscalingplans) {
             this.autoscalingplans = Output.ofNullable(autoscalingplans);
             return this;
         }
-
         public Builder backup(@Nullable Output<String> backup) {
             this.backup = backup;
             return this;
         }
-
         public Builder backup(@Nullable String backup) {
             this.backup = Output.ofNullable(backup);
             return this;
         }
-
         public Builder batch(@Nullable Output<String> batch) {
             this.batch = batch;
             return this;
         }
-
         public Builder batch(@Nullable String batch) {
             this.batch = Output.ofNullable(batch);
             return this;
         }
-
         public Builder braket(@Nullable Output<String> braket) {
             this.braket = braket;
             return this;
         }
-
         public Builder braket(@Nullable String braket) {
             this.braket = Output.ofNullable(braket);
             return this;
         }
-
         public Builder budgets(@Nullable Output<String> budgets) {
             this.budgets = budgets;
             return this;
         }
-
         public Builder budgets(@Nullable String budgets) {
             this.budgets = Output.ofNullable(budgets);
             return this;
         }
-
         public Builder chime(@Nullable Output<String> chime) {
             this.chime = chime;
             return this;
         }
-
         public Builder chime(@Nullable String chime) {
             this.chime = Output.ofNullable(chime);
             return this;
         }
-
         public Builder cloud9(@Nullable Output<String> cloud9) {
             this.cloud9 = cloud9;
             return this;
         }
-
         public Builder cloud9(@Nullable String cloud9) {
             this.cloud9 = Output.ofNullable(cloud9);
             return this;
         }
-
         public Builder cloudcontrol(@Nullable Output<String> cloudcontrol) {
             this.cloudcontrol = cloudcontrol;
             return this;
         }
-
         public Builder cloudcontrol(@Nullable String cloudcontrol) {
             this.cloudcontrol = Output.ofNullable(cloudcontrol);
             return this;
         }
-
         public Builder cloudcontrolapi(@Nullable Output<String> cloudcontrolapi) {
             this.cloudcontrolapi = cloudcontrolapi;
             return this;
         }
-
         public Builder cloudcontrolapi(@Nullable String cloudcontrolapi) {
             this.cloudcontrolapi = Output.ofNullable(cloudcontrolapi);
             return this;
         }
-
         public Builder clouddirectory(@Nullable Output<String> clouddirectory) {
             this.clouddirectory = clouddirectory;
             return this;
         }
-
         public Builder clouddirectory(@Nullable String clouddirectory) {
             this.clouddirectory = Output.ofNullable(clouddirectory);
             return this;
         }
-
         public Builder cloudformation(@Nullable Output<String> cloudformation) {
             this.cloudformation = cloudformation;
             return this;
         }
-
         public Builder cloudformation(@Nullable String cloudformation) {
             this.cloudformation = Output.ofNullable(cloudformation);
             return this;
         }
-
         public Builder cloudfront(@Nullable Output<String> cloudfront) {
             this.cloudfront = cloudfront;
             return this;
         }
-
         public Builder cloudfront(@Nullable String cloudfront) {
             this.cloudfront = Output.ofNullable(cloudfront);
             return this;
         }
-
         public Builder cloudhsm(@Nullable Output<String> cloudhsm) {
             this.cloudhsm = cloudhsm;
             return this;
         }
-
         public Builder cloudhsm(@Nullable String cloudhsm) {
             this.cloudhsm = Output.ofNullable(cloudhsm);
             return this;
         }
-
         public Builder cloudhsmv2(@Nullable Output<String> cloudhsmv2) {
             this.cloudhsmv2 = cloudhsmv2;
             return this;
         }
-
         public Builder cloudhsmv2(@Nullable String cloudhsmv2) {
             this.cloudhsmv2 = Output.ofNullable(cloudhsmv2);
             return this;
         }
-
         public Builder cloudsearch(@Nullable Output<String> cloudsearch) {
             this.cloudsearch = cloudsearch;
             return this;
         }
-
         public Builder cloudsearch(@Nullable String cloudsearch) {
             this.cloudsearch = Output.ofNullable(cloudsearch);
             return this;
         }
-
         public Builder cloudsearchdomain(@Nullable Output<String> cloudsearchdomain) {
             this.cloudsearchdomain = cloudsearchdomain;
             return this;
         }
-
         public Builder cloudsearchdomain(@Nullable String cloudsearchdomain) {
             this.cloudsearchdomain = Output.ofNullable(cloudsearchdomain);
             return this;
         }
-
         public Builder cloudtrail(@Nullable Output<String> cloudtrail) {
             this.cloudtrail = cloudtrail;
             return this;
         }
-
         public Builder cloudtrail(@Nullable String cloudtrail) {
             this.cloudtrail = Output.ofNullable(cloudtrail);
             return this;
         }
-
         public Builder cloudwatch(@Nullable Output<String> cloudwatch) {
             this.cloudwatch = cloudwatch;
             return this;
         }
-
         public Builder cloudwatch(@Nullable String cloudwatch) {
             this.cloudwatch = Output.ofNullable(cloudwatch);
             return this;
         }
-
         public Builder cloudwatchevents(@Nullable Output<String> cloudwatchevents) {
             this.cloudwatchevents = cloudwatchevents;
             return this;
         }
-
         public Builder cloudwatchevents(@Nullable String cloudwatchevents) {
             this.cloudwatchevents = Output.ofNullable(cloudwatchevents);
             return this;
         }
-
         public Builder cloudwatchlogs(@Nullable Output<String> cloudwatchlogs) {
             this.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
-
         public Builder cloudwatchlogs(@Nullable String cloudwatchlogs) {
             this.cloudwatchlogs = Output.ofNullable(cloudwatchlogs);
             return this;
         }
-
         public Builder codeartifact(@Nullable Output<String> codeartifact) {
             this.codeartifact = codeartifact;
             return this;
         }
-
         public Builder codeartifact(@Nullable String codeartifact) {
             this.codeartifact = Output.ofNullable(codeartifact);
             return this;
         }
-
         public Builder codebuild(@Nullable Output<String> codebuild) {
             this.codebuild = codebuild;
             return this;
         }
-
         public Builder codebuild(@Nullable String codebuild) {
             this.codebuild = Output.ofNullable(codebuild);
             return this;
         }
-
         public Builder codecommit(@Nullable Output<String> codecommit) {
             this.codecommit = codecommit;
             return this;
         }
-
         public Builder codecommit(@Nullable String codecommit) {
             this.codecommit = Output.ofNullable(codecommit);
             return this;
         }
-
         public Builder codedeploy(@Nullable Output<String> codedeploy) {
             this.codedeploy = codedeploy;
             return this;
         }
-
         public Builder codedeploy(@Nullable String codedeploy) {
             this.codedeploy = Output.ofNullable(codedeploy);
             return this;
         }
-
         public Builder codeguruprofiler(@Nullable Output<String> codeguruprofiler) {
             this.codeguruprofiler = codeguruprofiler;
             return this;
         }
-
         public Builder codeguruprofiler(@Nullable String codeguruprofiler) {
             this.codeguruprofiler = Output.ofNullable(codeguruprofiler);
             return this;
         }
-
         public Builder codegurureviewer(@Nullable Output<String> codegurureviewer) {
             this.codegurureviewer = codegurureviewer;
             return this;
         }
-
         public Builder codegurureviewer(@Nullable String codegurureviewer) {
             this.codegurureviewer = Output.ofNullable(codegurureviewer);
             return this;
         }
-
         public Builder codepipeline(@Nullable Output<String> codepipeline) {
             this.codepipeline = codepipeline;
             return this;
         }
-
         public Builder codepipeline(@Nullable String codepipeline) {
             this.codepipeline = Output.ofNullable(codepipeline);
             return this;
         }
-
         public Builder codestar(@Nullable Output<String> codestar) {
             this.codestar = codestar;
             return this;
         }
-
         public Builder codestar(@Nullable String codestar) {
             this.codestar = Output.ofNullable(codestar);
             return this;
         }
-
         public Builder codestarconnections(@Nullable Output<String> codestarconnections) {
             this.codestarconnections = codestarconnections;
             return this;
         }
-
         public Builder codestarconnections(@Nullable String codestarconnections) {
             this.codestarconnections = Output.ofNullable(codestarconnections);
             return this;
         }
-
         public Builder codestarnotifications(@Nullable Output<String> codestarnotifications) {
             this.codestarnotifications = codestarnotifications;
             return this;
         }
-
         public Builder codestarnotifications(@Nullable String codestarnotifications) {
             this.codestarnotifications = Output.ofNullable(codestarnotifications);
             return this;
         }
-
         public Builder cognitoidentity(@Nullable Output<String> cognitoidentity) {
             this.cognitoidentity = cognitoidentity;
             return this;
         }
-
         public Builder cognitoidentity(@Nullable String cognitoidentity) {
             this.cognitoidentity = Output.ofNullable(cognitoidentity);
             return this;
         }
-
         public Builder cognitoidentityprovider(@Nullable Output<String> cognitoidentityprovider) {
             this.cognitoidentityprovider = cognitoidentityprovider;
             return this;
         }
-
         public Builder cognitoidentityprovider(@Nullable String cognitoidentityprovider) {
             this.cognitoidentityprovider = Output.ofNullable(cognitoidentityprovider);
             return this;
         }
-
         public Builder cognitoidp(@Nullable Output<String> cognitoidp) {
             this.cognitoidp = cognitoidp;
             return this;
         }
-
         public Builder cognitoidp(@Nullable String cognitoidp) {
             this.cognitoidp = Output.ofNullable(cognitoidp);
             return this;
         }
-
         public Builder cognitosync(@Nullable Output<String> cognitosync) {
             this.cognitosync = cognitosync;
             return this;
         }
-
         public Builder cognitosync(@Nullable String cognitosync) {
             this.cognitosync = Output.ofNullable(cognitosync);
             return this;
         }
-
         public Builder comprehend(@Nullable Output<String> comprehend) {
             this.comprehend = comprehend;
             return this;
         }
-
         public Builder comprehend(@Nullable String comprehend) {
             this.comprehend = Output.ofNullable(comprehend);
             return this;
         }
-
         public Builder comprehendmedical(@Nullable Output<String> comprehendmedical) {
             this.comprehendmedical = comprehendmedical;
             return this;
         }
-
         public Builder comprehendmedical(@Nullable String comprehendmedical) {
             this.comprehendmedical = Output.ofNullable(comprehendmedical);
             return this;
         }
-
         public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable String config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder configservice(@Nullable Output<String> configservice) {
             this.configservice = configservice;
             return this;
         }
-
         public Builder configservice(@Nullable String configservice) {
             this.configservice = Output.ofNullable(configservice);
             return this;
         }
-
         public Builder connect(@Nullable Output<String> connect) {
             this.connect = connect;
             return this;
         }
-
         public Builder connect(@Nullable String connect) {
             this.connect = Output.ofNullable(connect);
             return this;
         }
-
         public Builder connectcontactlens(@Nullable Output<String> connectcontactlens) {
             this.connectcontactlens = connectcontactlens;
             return this;
         }
-
         public Builder connectcontactlens(@Nullable String connectcontactlens) {
             this.connectcontactlens = Output.ofNullable(connectcontactlens);
             return this;
         }
-
         public Builder connectparticipant(@Nullable Output<String> connectparticipant) {
             this.connectparticipant = connectparticipant;
             return this;
         }
-
         public Builder connectparticipant(@Nullable String connectparticipant) {
             this.connectparticipant = Output.ofNullable(connectparticipant);
             return this;
         }
-
         public Builder costandusagereportservice(@Nullable Output<String> costandusagereportservice) {
             this.costandusagereportservice = costandusagereportservice;
             return this;
         }
-
         public Builder costandusagereportservice(@Nullable String costandusagereportservice) {
             this.costandusagereportservice = Output.ofNullable(costandusagereportservice);
             return this;
         }
-
         public Builder costexplorer(@Nullable Output<String> costexplorer) {
             this.costexplorer = costexplorer;
             return this;
         }
-
         public Builder costexplorer(@Nullable String costexplorer) {
             this.costexplorer = Output.ofNullable(costexplorer);
             return this;
         }
-
         public Builder cur(@Nullable Output<String> cur) {
             this.cur = cur;
             return this;
         }
-
         public Builder cur(@Nullable String cur) {
             this.cur = Output.ofNullable(cur);
             return this;
         }
-
         public Builder databasemigration(@Nullable Output<String> databasemigration) {
             this.databasemigration = databasemigration;
             return this;
         }
-
         public Builder databasemigration(@Nullable String databasemigration) {
             this.databasemigration = Output.ofNullable(databasemigration);
             return this;
         }
-
         public Builder databasemigrationservice(@Nullable Output<String> databasemigrationservice) {
             this.databasemigrationservice = databasemigrationservice;
             return this;
         }
-
         public Builder databasemigrationservice(@Nullable String databasemigrationservice) {
             this.databasemigrationservice = Output.ofNullable(databasemigrationservice);
             return this;
         }
-
         public Builder dataexchange(@Nullable Output<String> dataexchange) {
             this.dataexchange = dataexchange;
             return this;
         }
-
         public Builder dataexchange(@Nullable String dataexchange) {
             this.dataexchange = Output.ofNullable(dataexchange);
             return this;
         }
-
         public Builder datapipeline(@Nullable Output<String> datapipeline) {
             this.datapipeline = datapipeline;
             return this;
         }
-
         public Builder datapipeline(@Nullable String datapipeline) {
             this.datapipeline = Output.ofNullable(datapipeline);
             return this;
         }
-
         public Builder datasync(@Nullable Output<String> datasync) {
             this.datasync = datasync;
             return this;
         }
-
         public Builder datasync(@Nullable String datasync) {
             this.datasync = Output.ofNullable(datasync);
             return this;
         }
-
         public Builder dax(@Nullable Output<String> dax) {
             this.dax = dax;
             return this;
         }
-
         public Builder dax(@Nullable String dax) {
             this.dax = Output.ofNullable(dax);
             return this;
         }
-
         public Builder detective(@Nullable Output<String> detective) {
             this.detective = detective;
             return this;
         }
-
         public Builder detective(@Nullable String detective) {
             this.detective = Output.ofNullable(detective);
             return this;
         }
-
         public Builder devicefarm(@Nullable Output<String> devicefarm) {
             this.devicefarm = devicefarm;
             return this;
         }
-
         public Builder devicefarm(@Nullable String devicefarm) {
             this.devicefarm = Output.ofNullable(devicefarm);
             return this;
         }
-
         public Builder devopsguru(@Nullable Output<String> devopsguru) {
             this.devopsguru = devopsguru;
             return this;
         }
-
         public Builder devopsguru(@Nullable String devopsguru) {
             this.devopsguru = Output.ofNullable(devopsguru);
             return this;
         }
-
         public Builder directconnect(@Nullable Output<String> directconnect) {
             this.directconnect = directconnect;
             return this;
         }
-
         public Builder directconnect(@Nullable String directconnect) {
             this.directconnect = Output.ofNullable(directconnect);
             return this;
         }
-
         public Builder dlm(@Nullable Output<String> dlm) {
             this.dlm = dlm;
             return this;
         }
-
         public Builder dlm(@Nullable String dlm) {
             this.dlm = Output.ofNullable(dlm);
             return this;
         }
-
         public Builder dms(@Nullable Output<String> dms) {
             this.dms = dms;
             return this;
         }
-
         public Builder dms(@Nullable String dms) {
             this.dms = Output.ofNullable(dms);
             return this;
         }
-
         public Builder docdb(@Nullable Output<String> docdb) {
             this.docdb = docdb;
             return this;
         }
-
         public Builder docdb(@Nullable String docdb) {
             this.docdb = Output.ofNullable(docdb);
             return this;
         }
-
         public Builder ds(@Nullable Output<String> ds) {
             this.ds = ds;
             return this;
         }
-
         public Builder ds(@Nullable String ds) {
             this.ds = Output.ofNullable(ds);
             return this;
         }
-
         public Builder dynamodb(@Nullable Output<String> dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
-
         public Builder dynamodb(@Nullable String dynamodb) {
             this.dynamodb = Output.ofNullable(dynamodb);
             return this;
         }
-
         public Builder dynamodbstreams(@Nullable Output<String> dynamodbstreams) {
             this.dynamodbstreams = dynamodbstreams;
             return this;
         }
-
         public Builder dynamodbstreams(@Nullable String dynamodbstreams) {
             this.dynamodbstreams = Output.ofNullable(dynamodbstreams);
             return this;
         }
-
         public Builder ec2(@Nullable Output<String> ec2) {
             this.ec2 = ec2;
             return this;
         }
-
         public Builder ec2(@Nullable String ec2) {
             this.ec2 = Output.ofNullable(ec2);
             return this;
         }
-
         public Builder ec2instanceconnect(@Nullable Output<String> ec2instanceconnect) {
             this.ec2instanceconnect = ec2instanceconnect;
             return this;
         }
-
         public Builder ec2instanceconnect(@Nullable String ec2instanceconnect) {
             this.ec2instanceconnect = Output.ofNullable(ec2instanceconnect);
             return this;
         }
-
         public Builder ecr(@Nullable Output<String> ecr) {
             this.ecr = ecr;
             return this;
         }
-
         public Builder ecr(@Nullable String ecr) {
             this.ecr = Output.ofNullable(ecr);
             return this;
         }
-
         public Builder ecrpublic(@Nullable Output<String> ecrpublic) {
             this.ecrpublic = ecrpublic;
             return this;
         }
-
         public Builder ecrpublic(@Nullable String ecrpublic) {
             this.ecrpublic = Output.ofNullable(ecrpublic);
             return this;
         }
-
         public Builder ecs(@Nullable Output<String> ecs) {
             this.ecs = ecs;
             return this;
         }
-
         public Builder ecs(@Nullable String ecs) {
             this.ecs = Output.ofNullable(ecs);
             return this;
         }
-
         public Builder efs(@Nullable Output<String> efs) {
             this.efs = efs;
             return this;
         }
-
         public Builder efs(@Nullable String efs) {
             this.efs = Output.ofNullable(efs);
             return this;
         }
-
         public Builder eks(@Nullable Output<String> eks) {
             this.eks = eks;
             return this;
         }
-
         public Builder eks(@Nullable String eks) {
             this.eks = Output.ofNullable(eks);
             return this;
         }
-
         public Builder elasticache(@Nullable Output<String> elasticache) {
             this.elasticache = elasticache;
             return this;
         }
-
         public Builder elasticache(@Nullable String elasticache) {
             this.elasticache = Output.ofNullable(elasticache);
             return this;
         }
-
         public Builder elasticbeanstalk(@Nullable Output<String> elasticbeanstalk) {
             this.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
-
         public Builder elasticbeanstalk(@Nullable String elasticbeanstalk) {
             this.elasticbeanstalk = Output.ofNullable(elasticbeanstalk);
             return this;
         }
-
         public Builder elasticinference(@Nullable Output<String> elasticinference) {
             this.elasticinference = elasticinference;
             return this;
         }
-
         public Builder elasticinference(@Nullable String elasticinference) {
             this.elasticinference = Output.ofNullable(elasticinference);
             return this;
         }
-
         public Builder elasticsearch(@Nullable Output<String> elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
-
         public Builder elasticsearch(@Nullable String elasticsearch) {
             this.elasticsearch = Output.ofNullable(elasticsearch);
             return this;
         }
-
         public Builder elasticsearchservice(@Nullable Output<String> elasticsearchservice) {
             this.elasticsearchservice = elasticsearchservice;
             return this;
         }
-
         public Builder elasticsearchservice(@Nullable String elasticsearchservice) {
             this.elasticsearchservice = Output.ofNullable(elasticsearchservice);
             return this;
         }
-
         public Builder elastictranscoder(@Nullable Output<String> elastictranscoder) {
             this.elastictranscoder = elastictranscoder;
             return this;
         }
-
         public Builder elastictranscoder(@Nullable String elastictranscoder) {
             this.elastictranscoder = Output.ofNullable(elastictranscoder);
             return this;
         }
-
         public Builder elb(@Nullable Output<String> elb) {
             this.elb = elb;
             return this;
         }
-
         public Builder elb(@Nullable String elb) {
             this.elb = Output.ofNullable(elb);
             return this;
         }
-
         public Builder elbv2(@Nullable Output<String> elbv2) {
             this.elbv2 = elbv2;
             return this;
         }
-
         public Builder elbv2(@Nullable String elbv2) {
             this.elbv2 = Output.ofNullable(elbv2);
             return this;
         }
-
         public Builder emr(@Nullable Output<String> emr) {
             this.emr = emr;
             return this;
         }
-
         public Builder emr(@Nullable String emr) {
             this.emr = Output.ofNullable(emr);
             return this;
         }
-
         public Builder emrcontainers(@Nullable Output<String> emrcontainers) {
             this.emrcontainers = emrcontainers;
             return this;
         }
-
         public Builder emrcontainers(@Nullable String emrcontainers) {
             this.emrcontainers = Output.ofNullable(emrcontainers);
             return this;
         }
-
         public Builder es(@Nullable Output<String> es) {
             this.es = es;
             return this;
         }
-
         public Builder es(@Nullable String es) {
             this.es = Output.ofNullable(es);
             return this;
         }
-
         public Builder eventbridge(@Nullable Output<String> eventbridge) {
             this.eventbridge = eventbridge;
             return this;
         }
-
         public Builder eventbridge(@Nullable String eventbridge) {
             this.eventbridge = Output.ofNullable(eventbridge);
             return this;
         }
-
         public Builder events(@Nullable Output<String> events) {
             this.events = events;
             return this;
         }
-
         public Builder events(@Nullable String events) {
             this.events = Output.ofNullable(events);
             return this;
         }
-
         public Builder finspace(@Nullable Output<String> finspace) {
             this.finspace = finspace;
             return this;
         }
-
         public Builder finspace(@Nullable String finspace) {
             this.finspace = Output.ofNullable(finspace);
             return this;
         }
-
         public Builder finspacedata(@Nullable Output<String> finspacedata) {
             this.finspacedata = finspacedata;
             return this;
         }
-
         public Builder finspacedata(@Nullable String finspacedata) {
             this.finspacedata = Output.ofNullable(finspacedata);
             return this;
         }
-
         public Builder firehose(@Nullable Output<String> firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder firehose(@Nullable String firehose) {
             this.firehose = Output.ofNullable(firehose);
             return this;
         }
-
         public Builder fis(@Nullable Output<String> fis) {
             this.fis = fis;
             return this;
         }
-
         public Builder fis(@Nullable String fis) {
             this.fis = Output.ofNullable(fis);
             return this;
         }
-
         public Builder fms(@Nullable Output<String> fms) {
             this.fms = fms;
             return this;
         }
-
         public Builder fms(@Nullable String fms) {
             this.fms = Output.ofNullable(fms);
             return this;
         }
-
         public Builder forecast(@Nullable Output<String> forecast) {
             this.forecast = forecast;
             return this;
         }
-
         public Builder forecast(@Nullable String forecast) {
             this.forecast = Output.ofNullable(forecast);
             return this;
         }
-
         public Builder forecastquery(@Nullable Output<String> forecastquery) {
             this.forecastquery = forecastquery;
             return this;
         }
-
         public Builder forecastquery(@Nullable String forecastquery) {
             this.forecastquery = Output.ofNullable(forecastquery);
             return this;
         }
-
         public Builder forecastqueryservice(@Nullable Output<String> forecastqueryservice) {
             this.forecastqueryservice = forecastqueryservice;
             return this;
         }
-
         public Builder forecastqueryservice(@Nullable String forecastqueryservice) {
             this.forecastqueryservice = Output.ofNullable(forecastqueryservice);
             return this;
         }
-
         public Builder forecastservice(@Nullable Output<String> forecastservice) {
             this.forecastservice = forecastservice;
             return this;
         }
-
         public Builder forecastservice(@Nullable String forecastservice) {
             this.forecastservice = Output.ofNullable(forecastservice);
             return this;
         }
-
         public Builder frauddetector(@Nullable Output<String> frauddetector) {
             this.frauddetector = frauddetector;
             return this;
         }
-
         public Builder frauddetector(@Nullable String frauddetector) {
             this.frauddetector = Output.ofNullable(frauddetector);
             return this;
         }
-
         public Builder fsx(@Nullable Output<String> fsx) {
             this.fsx = fsx;
             return this;
         }
-
         public Builder fsx(@Nullable String fsx) {
             this.fsx = Output.ofNullable(fsx);
             return this;
         }
-
         public Builder gamelift(@Nullable Output<String> gamelift) {
             this.gamelift = gamelift;
             return this;
         }
-
         public Builder gamelift(@Nullable String gamelift) {
             this.gamelift = Output.ofNullable(gamelift);
             return this;
         }
-
         public Builder glacier(@Nullable Output<String> glacier) {
             this.glacier = glacier;
             return this;
         }
-
         public Builder glacier(@Nullable String glacier) {
             this.glacier = Output.ofNullable(glacier);
             return this;
         }
-
         public Builder globalaccelerator(@Nullable Output<String> globalaccelerator) {
             this.globalaccelerator = globalaccelerator;
             return this;
         }
-
         public Builder globalaccelerator(@Nullable String globalaccelerator) {
             this.globalaccelerator = Output.ofNullable(globalaccelerator);
             return this;
         }
-
         public Builder glue(@Nullable Output<String> glue) {
             this.glue = glue;
             return this;
         }
-
         public Builder glue(@Nullable String glue) {
             this.glue = Output.ofNullable(glue);
             return this;
         }
-
         public Builder gluedatabrew(@Nullable Output<String> gluedatabrew) {
             this.gluedatabrew = gluedatabrew;
             return this;
         }
-
         public Builder gluedatabrew(@Nullable String gluedatabrew) {
             this.gluedatabrew = Output.ofNullable(gluedatabrew);
             return this;
         }
-
         public Builder greengrass(@Nullable Output<String> greengrass) {
             this.greengrass = greengrass;
             return this;
         }
-
         public Builder greengrass(@Nullable String greengrass) {
             this.greengrass = Output.ofNullable(greengrass);
             return this;
         }
-
         public Builder greengrassv2(@Nullable Output<String> greengrassv2) {
             this.greengrassv2 = greengrassv2;
             return this;
         }
-
         public Builder greengrassv2(@Nullable String greengrassv2) {
             this.greengrassv2 = Output.ofNullable(greengrassv2);
             return this;
         }
-
         public Builder groundstation(@Nullable Output<String> groundstation) {
             this.groundstation = groundstation;
             return this;
         }
-
         public Builder groundstation(@Nullable String groundstation) {
             this.groundstation = Output.ofNullable(groundstation);
             return this;
         }
-
         public Builder guardduty(@Nullable Output<String> guardduty) {
             this.guardduty = guardduty;
             return this;
         }
-
         public Builder guardduty(@Nullable String guardduty) {
             this.guardduty = Output.ofNullable(guardduty);
             return this;
         }
-
         public Builder health(@Nullable Output<String> health) {
             this.health = health;
             return this;
         }
-
         public Builder health(@Nullable String health) {
             this.health = Output.ofNullable(health);
             return this;
         }
-
         public Builder healthlake(@Nullable Output<String> healthlake) {
             this.healthlake = healthlake;
             return this;
         }
-
         public Builder healthlake(@Nullable String healthlake) {
             this.healthlake = Output.ofNullable(healthlake);
             return this;
         }
-
         public Builder honeycode(@Nullable Output<String> honeycode) {
             this.honeycode = honeycode;
             return this;
         }
-
         public Builder honeycode(@Nullable String honeycode) {
             this.honeycode = Output.ofNullable(honeycode);
             return this;
         }
-
         public Builder iam(@Nullable Output<String> iam) {
             this.iam = iam;
             return this;
         }
-
         public Builder iam(@Nullable String iam) {
             this.iam = Output.ofNullable(iam);
             return this;
         }
-
         public Builder identitystore(@Nullable Output<String> identitystore) {
             this.identitystore = identitystore;
             return this;
         }
-
         public Builder identitystore(@Nullable String identitystore) {
             this.identitystore = Output.ofNullable(identitystore);
             return this;
         }
-
         public Builder imagebuilder(@Nullable Output<String> imagebuilder) {
             this.imagebuilder = imagebuilder;
             return this;
         }
-
         public Builder imagebuilder(@Nullable String imagebuilder) {
             this.imagebuilder = Output.ofNullable(imagebuilder);
             return this;
         }
-
         public Builder inspector(@Nullable Output<String> inspector) {
             this.inspector = inspector;
             return this;
         }
-
         public Builder inspector(@Nullable String inspector) {
             this.inspector = Output.ofNullable(inspector);
             return this;
         }
-
         public Builder iot(@Nullable Output<String> iot) {
             this.iot = iot;
             return this;
         }
-
         public Builder iot(@Nullable String iot) {
             this.iot = Output.ofNullable(iot);
             return this;
         }
-
         public Builder iot1clickdevices(@Nullable Output<String> iot1clickdevices) {
             this.iot1clickdevices = iot1clickdevices;
             return this;
         }
-
         public Builder iot1clickdevices(@Nullable String iot1clickdevices) {
             this.iot1clickdevices = Output.ofNullable(iot1clickdevices);
             return this;
         }
-
         public Builder iot1clickdevicesservice(@Nullable Output<String> iot1clickdevicesservice) {
             this.iot1clickdevicesservice = iot1clickdevicesservice;
             return this;
         }
-
         public Builder iot1clickdevicesservice(@Nullable String iot1clickdevicesservice) {
             this.iot1clickdevicesservice = Output.ofNullable(iot1clickdevicesservice);
             return this;
         }
-
         public Builder iot1clickprojects(@Nullable Output<String> iot1clickprojects) {
             this.iot1clickprojects = iot1clickprojects;
             return this;
         }
-
         public Builder iot1clickprojects(@Nullable String iot1clickprojects) {
             this.iot1clickprojects = Output.ofNullable(iot1clickprojects);
             return this;
         }
-
         public Builder iotanalytics(@Nullable Output<String> iotanalytics) {
             this.iotanalytics = iotanalytics;
             return this;
         }
-
         public Builder iotanalytics(@Nullable String iotanalytics) {
             this.iotanalytics = Output.ofNullable(iotanalytics);
             return this;
         }
-
         public Builder iotdataplane(@Nullable Output<String> iotdataplane) {
             this.iotdataplane = iotdataplane;
             return this;
         }
-
         public Builder iotdataplane(@Nullable String iotdataplane) {
             this.iotdataplane = Output.ofNullable(iotdataplane);
             return this;
         }
-
         public Builder iotdeviceadvisor(@Nullable Output<String> iotdeviceadvisor) {
             this.iotdeviceadvisor = iotdeviceadvisor;
             return this;
         }
-
         public Builder iotdeviceadvisor(@Nullable String iotdeviceadvisor) {
             this.iotdeviceadvisor = Output.ofNullable(iotdeviceadvisor);
             return this;
         }
-
         public Builder iotevents(@Nullable Output<String> iotevents) {
             this.iotevents = iotevents;
             return this;
         }
-
         public Builder iotevents(@Nullable String iotevents) {
             this.iotevents = Output.ofNullable(iotevents);
             return this;
         }
-
         public Builder ioteventsdata(@Nullable Output<String> ioteventsdata) {
             this.ioteventsdata = ioteventsdata;
             return this;
         }
-
         public Builder ioteventsdata(@Nullable String ioteventsdata) {
             this.ioteventsdata = Output.ofNullable(ioteventsdata);
             return this;
         }
-
         public Builder iotfleethub(@Nullable Output<String> iotfleethub) {
             this.iotfleethub = iotfleethub;
             return this;
         }
-
         public Builder iotfleethub(@Nullable String iotfleethub) {
             this.iotfleethub = Output.ofNullable(iotfleethub);
             return this;
         }
-
         public Builder iotjobsdataplane(@Nullable Output<String> iotjobsdataplane) {
             this.iotjobsdataplane = iotjobsdataplane;
             return this;
         }
-
         public Builder iotjobsdataplane(@Nullable String iotjobsdataplane) {
             this.iotjobsdataplane = Output.ofNullable(iotjobsdataplane);
             return this;
         }
-
         public Builder iotsecuretunneling(@Nullable Output<String> iotsecuretunneling) {
             this.iotsecuretunneling = iotsecuretunneling;
             return this;
         }
-
         public Builder iotsecuretunneling(@Nullable String iotsecuretunneling) {
             this.iotsecuretunneling = Output.ofNullable(iotsecuretunneling);
             return this;
         }
-
         public Builder iotsitewise(@Nullable Output<String> iotsitewise) {
             this.iotsitewise = iotsitewise;
             return this;
         }
-
         public Builder iotsitewise(@Nullable String iotsitewise) {
             this.iotsitewise = Output.ofNullable(iotsitewise);
             return this;
         }
-
         public Builder iotthingsgraph(@Nullable Output<String> iotthingsgraph) {
             this.iotthingsgraph = iotthingsgraph;
             return this;
         }
-
         public Builder iotthingsgraph(@Nullable String iotthingsgraph) {
             this.iotthingsgraph = Output.ofNullable(iotthingsgraph);
             return this;
         }
-
         public Builder iotwireless(@Nullable Output<String> iotwireless) {
             this.iotwireless = iotwireless;
             return this;
         }
-
         public Builder iotwireless(@Nullable String iotwireless) {
             this.iotwireless = Output.ofNullable(iotwireless);
             return this;
         }
-
         public Builder kafka(@Nullable Output<String> kafka) {
             this.kafka = kafka;
             return this;
         }
-
         public Builder kafka(@Nullable String kafka) {
             this.kafka = Output.ofNullable(kafka);
             return this;
         }
-
         public Builder kafkaconnect(@Nullable Output<String> kafkaconnect) {
             this.kafkaconnect = kafkaconnect;
             return this;
         }
-
         public Builder kafkaconnect(@Nullable String kafkaconnect) {
             this.kafkaconnect = Output.ofNullable(kafkaconnect);
             return this;
         }
-
         public Builder kendra(@Nullable Output<String> kendra) {
             this.kendra = kendra;
             return this;
         }
-
         public Builder kendra(@Nullable String kendra) {
             this.kendra = Output.ofNullable(kendra);
             return this;
         }
-
         public Builder kinesis(@Nullable Output<String> kinesis) {
             this.kinesis = kinesis;
             return this;
         }
-
         public Builder kinesis(@Nullable String kinesis) {
             this.kinesis = Output.ofNullable(kinesis);
             return this;
         }
-
         public Builder kinesisanalytics(@Nullable Output<String> kinesisanalytics) {
             this.kinesisanalytics = kinesisanalytics;
             return this;
         }
-
         public Builder kinesisanalytics(@Nullable String kinesisanalytics) {
             this.kinesisanalytics = Output.ofNullable(kinesisanalytics);
             return this;
         }
-
         public Builder kinesisanalyticsv2(@Nullable Output<String> kinesisanalyticsv2) {
             this.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
-
         public Builder kinesisanalyticsv2(@Nullable String kinesisanalyticsv2) {
             this.kinesisanalyticsv2 = Output.ofNullable(kinesisanalyticsv2);
             return this;
         }
-
         public Builder kinesisvideo(@Nullable Output<String> kinesisvideo) {
             this.kinesisvideo = kinesisvideo;
             return this;
         }
-
         public Builder kinesisvideo(@Nullable String kinesisvideo) {
             this.kinesisvideo = Output.ofNullable(kinesisvideo);
             return this;
         }
-
         public Builder kinesisvideoarchivedmedia(@Nullable Output<String> kinesisvideoarchivedmedia) {
             this.kinesisvideoarchivedmedia = kinesisvideoarchivedmedia;
             return this;
         }
-
         public Builder kinesisvideoarchivedmedia(@Nullable String kinesisvideoarchivedmedia) {
             this.kinesisvideoarchivedmedia = Output.ofNullable(kinesisvideoarchivedmedia);
             return this;
         }
-
         public Builder kinesisvideomedia(@Nullable Output<String> kinesisvideomedia) {
             this.kinesisvideomedia = kinesisvideomedia;
             return this;
         }
-
         public Builder kinesisvideomedia(@Nullable String kinesisvideomedia) {
             this.kinesisvideomedia = Output.ofNullable(kinesisvideomedia);
             return this;
         }
-
         public Builder kinesisvideosignalingchannels(@Nullable Output<String> kinesisvideosignalingchannels) {
             this.kinesisvideosignalingchannels = kinesisvideosignalingchannels;
             return this;
         }
-
         public Builder kinesisvideosignalingchannels(@Nullable String kinesisvideosignalingchannels) {
             this.kinesisvideosignalingchannels = Output.ofNullable(kinesisvideosignalingchannels);
             return this;
         }
-
         public Builder kms(@Nullable Output<String> kms) {
             this.kms = kms;
             return this;
         }
-
         public Builder kms(@Nullable String kms) {
             this.kms = Output.ofNullable(kms);
             return this;
         }
-
         public Builder lakeformation(@Nullable Output<String> lakeformation) {
             this.lakeformation = lakeformation;
             return this;
         }
-
         public Builder lakeformation(@Nullable String lakeformation) {
             this.lakeformation = Output.ofNullable(lakeformation);
             return this;
         }
-
         public Builder lambda(@Nullable Output<String> lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder lambda(@Nullable String lambda) {
             this.lambda = Output.ofNullable(lambda);
             return this;
         }
-
         public Builder lexmodelbuilding(@Nullable Output<String> lexmodelbuilding) {
             this.lexmodelbuilding = lexmodelbuilding;
             return this;
         }
-
         public Builder lexmodelbuilding(@Nullable String lexmodelbuilding) {
             this.lexmodelbuilding = Output.ofNullable(lexmodelbuilding);
             return this;
         }
-
         public Builder lexmodelbuildingservice(@Nullable Output<String> lexmodelbuildingservice) {
             this.lexmodelbuildingservice = lexmodelbuildingservice;
             return this;
         }
-
         public Builder lexmodelbuildingservice(@Nullable String lexmodelbuildingservice) {
             this.lexmodelbuildingservice = Output.ofNullable(lexmodelbuildingservice);
             return this;
         }
-
         public Builder lexmodels(@Nullable Output<String> lexmodels) {
             this.lexmodels = lexmodels;
             return this;
         }
-
         public Builder lexmodels(@Nullable String lexmodels) {
             this.lexmodels = Output.ofNullable(lexmodels);
             return this;
         }
-
         public Builder lexmodelsv2(@Nullable Output<String> lexmodelsv2) {
             this.lexmodelsv2 = lexmodelsv2;
             return this;
         }
-
         public Builder lexmodelsv2(@Nullable String lexmodelsv2) {
             this.lexmodelsv2 = Output.ofNullable(lexmodelsv2);
             return this;
         }
-
         public Builder lexruntime(@Nullable Output<String> lexruntime) {
             this.lexruntime = lexruntime;
             return this;
         }
-
         public Builder lexruntime(@Nullable String lexruntime) {
             this.lexruntime = Output.ofNullable(lexruntime);
             return this;
         }
-
         public Builder lexruntimeservice(@Nullable Output<String> lexruntimeservice) {
             this.lexruntimeservice = lexruntimeservice;
             return this;
         }
-
         public Builder lexruntimeservice(@Nullable String lexruntimeservice) {
             this.lexruntimeservice = Output.ofNullable(lexruntimeservice);
             return this;
         }
-
         public Builder lexruntimev2(@Nullable Output<String> lexruntimev2) {
             this.lexruntimev2 = lexruntimev2;
             return this;
         }
-
         public Builder lexruntimev2(@Nullable String lexruntimev2) {
             this.lexruntimev2 = Output.ofNullable(lexruntimev2);
             return this;
         }
-
         public Builder licensemanager(@Nullable Output<String> licensemanager) {
             this.licensemanager = licensemanager;
             return this;
         }
-
         public Builder licensemanager(@Nullable String licensemanager) {
             this.licensemanager = Output.ofNullable(licensemanager);
             return this;
         }
-
         public Builder lightsail(@Nullable Output<String> lightsail) {
             this.lightsail = lightsail;
             return this;
         }
-
         public Builder lightsail(@Nullable String lightsail) {
             this.lightsail = Output.ofNullable(lightsail);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder lookoutequipment(@Nullable Output<String> lookoutequipment) {
             this.lookoutequipment = lookoutequipment;
             return this;
         }
-
         public Builder lookoutequipment(@Nullable String lookoutequipment) {
             this.lookoutequipment = Output.ofNullable(lookoutequipment);
             return this;
         }
-
         public Builder lookoutforvision(@Nullable Output<String> lookoutforvision) {
             this.lookoutforvision = lookoutforvision;
             return this;
         }
-
         public Builder lookoutforvision(@Nullable String lookoutforvision) {
             this.lookoutforvision = Output.ofNullable(lookoutforvision);
             return this;
         }
-
         public Builder lookoutmetrics(@Nullable Output<String> lookoutmetrics) {
             this.lookoutmetrics = lookoutmetrics;
             return this;
         }
-
         public Builder lookoutmetrics(@Nullable String lookoutmetrics) {
             this.lookoutmetrics = Output.ofNullable(lookoutmetrics);
             return this;
         }
-
         public Builder machinelearning(@Nullable Output<String> machinelearning) {
             this.machinelearning = machinelearning;
             return this;
         }
-
         public Builder machinelearning(@Nullable String machinelearning) {
             this.machinelearning = Output.ofNullable(machinelearning);
             return this;
         }
-
         public Builder macie(@Nullable Output<String> macie) {
             this.macie = macie;
             return this;
         }
-
         public Builder macie(@Nullable String macie) {
             this.macie = Output.ofNullable(macie);
             return this;
         }
-
         public Builder macie2(@Nullable Output<String> macie2) {
             this.macie2 = macie2;
             return this;
         }
-
         public Builder macie2(@Nullable String macie2) {
             this.macie2 = Output.ofNullable(macie2);
             return this;
         }
-
         public Builder managedblockchain(@Nullable Output<String> managedblockchain) {
             this.managedblockchain = managedblockchain;
             return this;
         }
-
         public Builder managedblockchain(@Nullable String managedblockchain) {
             this.managedblockchain = Output.ofNullable(managedblockchain);
             return this;
         }
-
         public Builder marketplacecatalog(@Nullable Output<String> marketplacecatalog) {
             this.marketplacecatalog = marketplacecatalog;
             return this;
         }
-
         public Builder marketplacecatalog(@Nullable String marketplacecatalog) {
             this.marketplacecatalog = Output.ofNullable(marketplacecatalog);
             return this;
         }
-
         public Builder marketplacecommerceanalytics(@Nullable Output<String> marketplacecommerceanalytics) {
             this.marketplacecommerceanalytics = marketplacecommerceanalytics;
             return this;
         }
-
         public Builder marketplacecommerceanalytics(@Nullable String marketplacecommerceanalytics) {
             this.marketplacecommerceanalytics = Output.ofNullable(marketplacecommerceanalytics);
             return this;
         }
-
         public Builder marketplaceentitlement(@Nullable Output<String> marketplaceentitlement) {
             this.marketplaceentitlement = marketplaceentitlement;
             return this;
         }
-
         public Builder marketplaceentitlement(@Nullable String marketplaceentitlement) {
             this.marketplaceentitlement = Output.ofNullable(marketplaceentitlement);
             return this;
         }
-
         public Builder marketplaceentitlementservice(@Nullable Output<String> marketplaceentitlementservice) {
             this.marketplaceentitlementservice = marketplaceentitlementservice;
             return this;
         }
-
         public Builder marketplaceentitlementservice(@Nullable String marketplaceentitlementservice) {
             this.marketplaceentitlementservice = Output.ofNullable(marketplaceentitlementservice);
             return this;
         }
-
         public Builder marketplacemetering(@Nullable Output<String> marketplacemetering) {
             this.marketplacemetering = marketplacemetering;
             return this;
         }
-
         public Builder marketplacemetering(@Nullable String marketplacemetering) {
             this.marketplacemetering = Output.ofNullable(marketplacemetering);
             return this;
         }
-
         public Builder mediaconnect(@Nullable Output<String> mediaconnect) {
             this.mediaconnect = mediaconnect;
             return this;
         }
-
         public Builder mediaconnect(@Nullable String mediaconnect) {
             this.mediaconnect = Output.ofNullable(mediaconnect);
             return this;
         }
-
         public Builder mediaconvert(@Nullable Output<String> mediaconvert) {
             this.mediaconvert = mediaconvert;
             return this;
         }
-
         public Builder mediaconvert(@Nullable String mediaconvert) {
             this.mediaconvert = Output.ofNullable(mediaconvert);
             return this;
         }
-
         public Builder medialive(@Nullable Output<String> medialive) {
             this.medialive = medialive;
             return this;
         }
-
         public Builder medialive(@Nullable String medialive) {
             this.medialive = Output.ofNullable(medialive);
             return this;
         }
-
         public Builder mediapackage(@Nullable Output<String> mediapackage) {
             this.mediapackage = mediapackage;
             return this;
         }
-
         public Builder mediapackage(@Nullable String mediapackage) {
             this.mediapackage = Output.ofNullable(mediapackage);
             return this;
         }
-
         public Builder mediapackagevod(@Nullable Output<String> mediapackagevod) {
             this.mediapackagevod = mediapackagevod;
             return this;
         }
-
         public Builder mediapackagevod(@Nullable String mediapackagevod) {
             this.mediapackagevod = Output.ofNullable(mediapackagevod);
             return this;
         }
-
         public Builder mediastore(@Nullable Output<String> mediastore) {
             this.mediastore = mediastore;
             return this;
         }
-
         public Builder mediastore(@Nullable String mediastore) {
             this.mediastore = Output.ofNullable(mediastore);
             return this;
         }
-
         public Builder mediastoredata(@Nullable Output<String> mediastoredata) {
             this.mediastoredata = mediastoredata;
             return this;
         }
-
         public Builder mediastoredata(@Nullable String mediastoredata) {
             this.mediastoredata = Output.ofNullable(mediastoredata);
             return this;
         }
-
         public Builder mediatailor(@Nullable Output<String> mediatailor) {
             this.mediatailor = mediatailor;
             return this;
         }
-
         public Builder mediatailor(@Nullable String mediatailor) {
             this.mediatailor = Output.ofNullable(mediatailor);
             return this;
         }
-
         public Builder memorydb(@Nullable Output<String> memorydb) {
             this.memorydb = memorydb;
             return this;
         }
-
         public Builder memorydb(@Nullable String memorydb) {
             this.memorydb = Output.ofNullable(memorydb);
             return this;
         }
-
         public Builder mgn(@Nullable Output<String> mgn) {
             this.mgn = mgn;
             return this;
         }
-
         public Builder mgn(@Nullable String mgn) {
             this.mgn = Output.ofNullable(mgn);
             return this;
         }
-
         public Builder migrationhub(@Nullable Output<String> migrationhub) {
             this.migrationhub = migrationhub;
             return this;
         }
-
         public Builder migrationhub(@Nullable String migrationhub) {
             this.migrationhub = Output.ofNullable(migrationhub);
             return this;
         }
-
         public Builder migrationhubconfig(@Nullable Output<String> migrationhubconfig) {
             this.migrationhubconfig = migrationhubconfig;
             return this;
         }
-
         public Builder migrationhubconfig(@Nullable String migrationhubconfig) {
             this.migrationhubconfig = Output.ofNullable(migrationhubconfig);
             return this;
         }
-
         public Builder mobile(@Nullable Output<String> mobile) {
             this.mobile = mobile;
             return this;
         }
-
         public Builder mobile(@Nullable String mobile) {
             this.mobile = Output.ofNullable(mobile);
             return this;
         }
-
         public Builder mobileanalytics(@Nullable Output<String> mobileanalytics) {
             this.mobileanalytics = mobileanalytics;
             return this;
         }
-
         public Builder mobileanalytics(@Nullable String mobileanalytics) {
             this.mobileanalytics = Output.ofNullable(mobileanalytics);
             return this;
         }
-
         public Builder mq(@Nullable Output<String> mq) {
             this.mq = mq;
             return this;
         }
-
         public Builder mq(@Nullable String mq) {
             this.mq = Output.ofNullable(mq);
             return this;
         }
-
         public Builder mturk(@Nullable Output<String> mturk) {
             this.mturk = mturk;
             return this;
         }
-
         public Builder mturk(@Nullable String mturk) {
             this.mturk = Output.ofNullable(mturk);
             return this;
         }
-
         public Builder mwaa(@Nullable Output<String> mwaa) {
             this.mwaa = mwaa;
             return this;
         }
-
         public Builder mwaa(@Nullable String mwaa) {
             this.mwaa = Output.ofNullable(mwaa);
             return this;
         }
-
         public Builder neptune(@Nullable Output<String> neptune) {
             this.neptune = neptune;
             return this;
         }
-
         public Builder neptune(@Nullable String neptune) {
             this.neptune = Output.ofNullable(neptune);
             return this;
         }
-
         public Builder networkfirewall(@Nullable Output<String> networkfirewall) {
             this.networkfirewall = networkfirewall;
             return this;
         }
-
         public Builder networkfirewall(@Nullable String networkfirewall) {
             this.networkfirewall = Output.ofNullable(networkfirewall);
             return this;
         }
-
         public Builder networkmanager(@Nullable Output<String> networkmanager) {
             this.networkmanager = networkmanager;
             return this;
         }
-
         public Builder networkmanager(@Nullable String networkmanager) {
             this.networkmanager = Output.ofNullable(networkmanager);
             return this;
         }
-
         public Builder nimblestudio(@Nullable Output<String> nimblestudio) {
             this.nimblestudio = nimblestudio;
             return this;
         }
-
         public Builder nimblestudio(@Nullable String nimblestudio) {
             this.nimblestudio = Output.ofNullable(nimblestudio);
             return this;
         }
-
         public Builder opsworks(@Nullable Output<String> opsworks) {
             this.opsworks = opsworks;
             return this;
         }
-
         public Builder opsworks(@Nullable String opsworks) {
             this.opsworks = Output.ofNullable(opsworks);
             return this;
         }
-
         public Builder opsworkscm(@Nullable Output<String> opsworkscm) {
             this.opsworkscm = opsworkscm;
             return this;
         }
-
         public Builder opsworkscm(@Nullable String opsworkscm) {
             this.opsworkscm = Output.ofNullable(opsworkscm);
             return this;
         }
-
         public Builder organizations(@Nullable Output<String> organizations) {
             this.organizations = organizations;
             return this;
         }
-
         public Builder organizations(@Nullable String organizations) {
             this.organizations = Output.ofNullable(organizations);
             return this;
         }
-
         public Builder outposts(@Nullable Output<String> outposts) {
             this.outposts = outposts;
             return this;
         }
-
         public Builder outposts(@Nullable String outposts) {
             this.outposts = Output.ofNullable(outposts);
             return this;
         }
-
         public Builder personalize(@Nullable Output<String> personalize) {
             this.personalize = personalize;
             return this;
         }
-
         public Builder personalize(@Nullable String personalize) {
             this.personalize = Output.ofNullable(personalize);
             return this;
         }
-
         public Builder personalizeevents(@Nullable Output<String> personalizeevents) {
             this.personalizeevents = personalizeevents;
             return this;
         }
-
         public Builder personalizeevents(@Nullable String personalizeevents) {
             this.personalizeevents = Output.ofNullable(personalizeevents);
             return this;
         }
-
         public Builder personalizeruntime(@Nullable Output<String> personalizeruntime) {
             this.personalizeruntime = personalizeruntime;
             return this;
         }
-
         public Builder personalizeruntime(@Nullable String personalizeruntime) {
             this.personalizeruntime = Output.ofNullable(personalizeruntime);
             return this;
         }
-
         public Builder pi(@Nullable Output<String> pi) {
             this.pi = pi;
             return this;
         }
-
         public Builder pi(@Nullable String pi) {
             this.pi = Output.ofNullable(pi);
             return this;
         }
-
         public Builder pinpoint(@Nullable Output<String> pinpoint) {
             this.pinpoint = pinpoint;
             return this;
         }
-
         public Builder pinpoint(@Nullable String pinpoint) {
             this.pinpoint = Output.ofNullable(pinpoint);
             return this;
         }
-
         public Builder pinpointemail(@Nullable Output<String> pinpointemail) {
             this.pinpointemail = pinpointemail;
             return this;
         }
-
         public Builder pinpointemail(@Nullable String pinpointemail) {
             this.pinpointemail = Output.ofNullable(pinpointemail);
             return this;
         }
-
         public Builder pinpointsmsvoice(@Nullable Output<String> pinpointsmsvoice) {
             this.pinpointsmsvoice = pinpointsmsvoice;
             return this;
         }
-
         public Builder pinpointsmsvoice(@Nullable String pinpointsmsvoice) {
             this.pinpointsmsvoice = Output.ofNullable(pinpointsmsvoice);
             return this;
         }
-
         public Builder polly(@Nullable Output<String> polly) {
             this.polly = polly;
             return this;
         }
-
         public Builder polly(@Nullable String polly) {
             this.polly = Output.ofNullable(polly);
             return this;
         }
-
         public Builder pricing(@Nullable Output<String> pricing) {
             this.pricing = pricing;
             return this;
         }
-
         public Builder pricing(@Nullable String pricing) {
             this.pricing = Output.ofNullable(pricing);
             return this;
         }
-
         public Builder prometheus(@Nullable Output<String> prometheus) {
             this.prometheus = prometheus;
             return this;
         }
-
         public Builder prometheus(@Nullable String prometheus) {
             this.prometheus = Output.ofNullable(prometheus);
             return this;
         }
-
         public Builder prometheusservice(@Nullable Output<String> prometheusservice) {
             this.prometheusservice = prometheusservice;
             return this;
         }
-
         public Builder prometheusservice(@Nullable String prometheusservice) {
             this.prometheusservice = Output.ofNullable(prometheusservice);
             return this;
         }
-
         public Builder proton(@Nullable Output<String> proton) {
             this.proton = proton;
             return this;
         }
-
         public Builder proton(@Nullable String proton) {
             this.proton = Output.ofNullable(proton);
             return this;
         }
-
         public Builder qldb(@Nullable Output<String> qldb) {
             this.qldb = qldb;
             return this;
         }
-
         public Builder qldb(@Nullable String qldb) {
             this.qldb = Output.ofNullable(qldb);
             return this;
         }
-
         public Builder qldbsession(@Nullable Output<String> qldbsession) {
             this.qldbsession = qldbsession;
             return this;
         }
-
         public Builder qldbsession(@Nullable String qldbsession) {
             this.qldbsession = Output.ofNullable(qldbsession);
             return this;
         }
-
         public Builder quicksight(@Nullable Output<String> quicksight) {
             this.quicksight = quicksight;
             return this;
         }
-
         public Builder quicksight(@Nullable String quicksight) {
             this.quicksight = Output.ofNullable(quicksight);
             return this;
         }
-
         public Builder ram(@Nullable Output<String> ram) {
             this.ram = ram;
             return this;
         }
-
         public Builder ram(@Nullable String ram) {
             this.ram = Output.ofNullable(ram);
             return this;
         }
-
         public Builder rds(@Nullable Output<String> rds) {
             this.rds = rds;
             return this;
         }
-
         public Builder rds(@Nullable String rds) {
             this.rds = Output.ofNullable(rds);
             return this;
         }
-
         public Builder rdsdata(@Nullable Output<String> rdsdata) {
             this.rdsdata = rdsdata;
             return this;
         }
-
         public Builder rdsdata(@Nullable String rdsdata) {
             this.rdsdata = Output.ofNullable(rdsdata);
             return this;
         }
-
         public Builder rdsdataservice(@Nullable Output<String> rdsdataservice) {
             this.rdsdataservice = rdsdataservice;
             return this;
         }
-
         public Builder rdsdataservice(@Nullable String rdsdataservice) {
             this.rdsdataservice = Output.ofNullable(rdsdataservice);
             return this;
         }
-
         public Builder redshift(@Nullable Output<String> redshift) {
             this.redshift = redshift;
             return this;
         }
-
         public Builder redshift(@Nullable String redshift) {
             this.redshift = Output.ofNullable(redshift);
             return this;
         }
-
         public Builder redshiftdata(@Nullable Output<String> redshiftdata) {
             this.redshiftdata = redshiftdata;
             return this;
         }
-
         public Builder redshiftdata(@Nullable String redshiftdata) {
             this.redshiftdata = Output.ofNullable(redshiftdata);
             return this;
         }
-
         public Builder rekognition(@Nullable Output<String> rekognition) {
             this.rekognition = rekognition;
             return this;
         }
-
         public Builder rekognition(@Nullable String rekognition) {
             this.rekognition = Output.ofNullable(rekognition);
             return this;
         }
-
         public Builder resourcegroups(@Nullable Output<String> resourcegroups) {
             this.resourcegroups = resourcegroups;
             return this;
         }
-
         public Builder resourcegroups(@Nullable String resourcegroups) {
             this.resourcegroups = Output.ofNullable(resourcegroups);
             return this;
         }
-
         public Builder resourcegroupstagging(@Nullable Output<String> resourcegroupstagging) {
             this.resourcegroupstagging = resourcegroupstagging;
             return this;
         }
-
         public Builder resourcegroupstagging(@Nullable String resourcegroupstagging) {
             this.resourcegroupstagging = Output.ofNullable(resourcegroupstagging);
             return this;
         }
-
         public Builder resourcegroupstaggingapi(@Nullable Output<String> resourcegroupstaggingapi) {
             this.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
-
         public Builder resourcegroupstaggingapi(@Nullable String resourcegroupstaggingapi) {
             this.resourcegroupstaggingapi = Output.ofNullable(resourcegroupstaggingapi);
             return this;
         }
-
         public Builder robomaker(@Nullable Output<String> robomaker) {
             this.robomaker = robomaker;
             return this;
         }
-
         public Builder robomaker(@Nullable String robomaker) {
             this.robomaker = Output.ofNullable(robomaker);
             return this;
         }
-
         public Builder route53(@Nullable Output<String> route53) {
             this.route53 = route53;
             return this;
         }
-
         public Builder route53(@Nullable String route53) {
             this.route53 = Output.ofNullable(route53);
             return this;
         }
-
         public Builder route53domains(@Nullable Output<String> route53domains) {
             this.route53domains = route53domains;
             return this;
         }
-
         public Builder route53domains(@Nullable String route53domains) {
             this.route53domains = Output.ofNullable(route53domains);
             return this;
         }
-
         public Builder route53recoverycontrolconfig(@Nullable Output<String> route53recoverycontrolconfig) {
             this.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
-
         public Builder route53recoverycontrolconfig(@Nullable String route53recoverycontrolconfig) {
             this.route53recoverycontrolconfig = Output.ofNullable(route53recoverycontrolconfig);
             return this;
         }
-
         public Builder route53recoveryreadiness(@Nullable Output<String> route53recoveryreadiness) {
             this.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
-
         public Builder route53recoveryreadiness(@Nullable String route53recoveryreadiness) {
             this.route53recoveryreadiness = Output.ofNullable(route53recoveryreadiness);
             return this;
         }
-
         public Builder route53resolver(@Nullable Output<String> route53resolver) {
             this.route53resolver = route53resolver;
             return this;
         }
-
         public Builder route53resolver(@Nullable String route53resolver) {
             this.route53resolver = Output.ofNullable(route53resolver);
             return this;
         }
-
         public Builder s3(@Nullable Output<String> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable String s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder s3control(@Nullable Output<String> s3control) {
             this.s3control = s3control;
             return this;
         }
-
         public Builder s3control(@Nullable String s3control) {
             this.s3control = Output.ofNullable(s3control);
             return this;
         }
-
         public Builder s3outposts(@Nullable Output<String> s3outposts) {
             this.s3outposts = s3outposts;
             return this;
         }
-
         public Builder s3outposts(@Nullable String s3outposts) {
             this.s3outposts = Output.ofNullable(s3outposts);
             return this;
         }
-
         public Builder sagemaker(@Nullable Output<String> sagemaker) {
             this.sagemaker = sagemaker;
             return this;
         }
-
         public Builder sagemaker(@Nullable String sagemaker) {
             this.sagemaker = Output.ofNullable(sagemaker);
             return this;
         }
-
         public Builder sagemakeredgemanager(@Nullable Output<String> sagemakeredgemanager) {
             this.sagemakeredgemanager = sagemakeredgemanager;
             return this;
         }
-
         public Builder sagemakeredgemanager(@Nullable String sagemakeredgemanager) {
             this.sagemakeredgemanager = Output.ofNullable(sagemakeredgemanager);
             return this;
         }
-
         public Builder sagemakerfeaturestoreruntime(@Nullable Output<String> sagemakerfeaturestoreruntime) {
             this.sagemakerfeaturestoreruntime = sagemakerfeaturestoreruntime;
             return this;
         }
-
         public Builder sagemakerfeaturestoreruntime(@Nullable String sagemakerfeaturestoreruntime) {
             this.sagemakerfeaturestoreruntime = Output.ofNullable(sagemakerfeaturestoreruntime);
             return this;
         }
-
         public Builder sagemakerruntime(@Nullable Output<String> sagemakerruntime) {
             this.sagemakerruntime = sagemakerruntime;
             return this;
         }
-
         public Builder sagemakerruntime(@Nullable String sagemakerruntime) {
             this.sagemakerruntime = Output.ofNullable(sagemakerruntime);
             return this;
         }
-
         public Builder savingsplans(@Nullable Output<String> savingsplans) {
             this.savingsplans = savingsplans;
             return this;
         }
-
         public Builder savingsplans(@Nullable String savingsplans) {
             this.savingsplans = Output.ofNullable(savingsplans);
             return this;
         }
-
         public Builder schemas(@Nullable Output<String> schemas) {
             this.schemas = schemas;
             return this;
         }
-
         public Builder schemas(@Nullable String schemas) {
             this.schemas = Output.ofNullable(schemas);
             return this;
         }
-
         public Builder sdb(@Nullable Output<String> sdb) {
             this.sdb = sdb;
             return this;
         }
-
         public Builder sdb(@Nullable String sdb) {
             this.sdb = Output.ofNullable(sdb);
             return this;
         }
-
         public Builder secretsmanager(@Nullable Output<String> secretsmanager) {
             this.secretsmanager = secretsmanager;
             return this;
         }
-
         public Builder secretsmanager(@Nullable String secretsmanager) {
             this.secretsmanager = Output.ofNullable(secretsmanager);
             return this;
         }
-
         public Builder securityhub(@Nullable Output<String> securityhub) {
             this.securityhub = securityhub;
             return this;
         }
-
         public Builder securityhub(@Nullable String securityhub) {
             this.securityhub = Output.ofNullable(securityhub);
             return this;
         }
-
         public Builder serverlessapplicationrepository(@Nullable Output<String> serverlessapplicationrepository) {
             this.serverlessapplicationrepository = serverlessapplicationrepository;
             return this;
         }
-
         public Builder serverlessapplicationrepository(@Nullable String serverlessapplicationrepository) {
             this.serverlessapplicationrepository = Output.ofNullable(serverlessapplicationrepository);
             return this;
         }
-
         public Builder serverlessapprepo(@Nullable Output<String> serverlessapprepo) {
             this.serverlessapprepo = serverlessapprepo;
             return this;
         }
-
         public Builder serverlessapprepo(@Nullable String serverlessapprepo) {
             this.serverlessapprepo = Output.ofNullable(serverlessapprepo);
             return this;
         }
-
         public Builder serverlessrepo(@Nullable Output<String> serverlessrepo) {
             this.serverlessrepo = serverlessrepo;
             return this;
         }
-
         public Builder serverlessrepo(@Nullable String serverlessrepo) {
             this.serverlessrepo = Output.ofNullable(serverlessrepo);
             return this;
         }
-
         public Builder servicecatalog(@Nullable Output<String> servicecatalog) {
             this.servicecatalog = servicecatalog;
             return this;
         }
-
         public Builder servicecatalog(@Nullable String servicecatalog) {
             this.servicecatalog = Output.ofNullable(servicecatalog);
             return this;
         }
-
         public Builder servicediscovery(@Nullable Output<String> servicediscovery) {
             this.servicediscovery = servicediscovery;
             return this;
         }
-
         public Builder servicediscovery(@Nullable String servicediscovery) {
             this.servicediscovery = Output.ofNullable(servicediscovery);
             return this;
         }
-
         public Builder servicequotas(@Nullable Output<String> servicequotas) {
             this.servicequotas = servicequotas;
             return this;
         }
-
         public Builder servicequotas(@Nullable String servicequotas) {
             this.servicequotas = Output.ofNullable(servicequotas);
             return this;
         }
-
         public Builder ses(@Nullable Output<String> ses) {
             this.ses = ses;
             return this;
         }
-
         public Builder ses(@Nullable String ses) {
             this.ses = Output.ofNullable(ses);
             return this;
         }
-
         public Builder sesv2(@Nullable Output<String> sesv2) {
             this.sesv2 = sesv2;
             return this;
         }
-
         public Builder sesv2(@Nullable String sesv2) {
             this.sesv2 = Output.ofNullable(sesv2);
             return this;
         }
-
         public Builder sfn(@Nullable Output<String> sfn) {
             this.sfn = sfn;
             return this;
         }
-
         public Builder sfn(@Nullable String sfn) {
             this.sfn = Output.ofNullable(sfn);
             return this;
         }
-
         public Builder shield(@Nullable Output<String> shield) {
             this.shield = shield;
             return this;
         }
-
         public Builder shield(@Nullable String shield) {
             this.shield = Output.ofNullable(shield);
             return this;
         }
-
         public Builder signer(@Nullable Output<String> signer) {
             this.signer = signer;
             return this;
         }
-
         public Builder signer(@Nullable String signer) {
             this.signer = Output.ofNullable(signer);
             return this;
         }
-
         public Builder simpledb(@Nullable Output<String> simpledb) {
             this.simpledb = simpledb;
             return this;
         }
-
         public Builder simpledb(@Nullable String simpledb) {
             this.simpledb = Output.ofNullable(simpledb);
             return this;
         }
-
         public Builder sms(@Nullable Output<String> sms) {
             this.sms = sms;
             return this;
         }
-
         public Builder sms(@Nullable String sms) {
             this.sms = Output.ofNullable(sms);
             return this;
         }
-
         public Builder snowball(@Nullable Output<String> snowball) {
             this.snowball = snowball;
             return this;
         }
-
         public Builder snowball(@Nullable String snowball) {
             this.snowball = Output.ofNullable(snowball);
             return this;
         }
-
         public Builder sns(@Nullable Output<String> sns) {
             this.sns = sns;
             return this;
         }
-
         public Builder sns(@Nullable String sns) {
             this.sns = Output.ofNullable(sns);
             return this;
         }
-
         public Builder sqs(@Nullable Output<String> sqs) {
             this.sqs = sqs;
             return this;
         }
-
         public Builder sqs(@Nullable String sqs) {
             this.sqs = Output.ofNullable(sqs);
             return this;
         }
-
         public Builder ssm(@Nullable Output<String> ssm) {
             this.ssm = ssm;
             return this;
         }
-
         public Builder ssm(@Nullable String ssm) {
             this.ssm = Output.ofNullable(ssm);
             return this;
         }
-
         public Builder ssmcontacts(@Nullable Output<String> ssmcontacts) {
             this.ssmcontacts = ssmcontacts;
             return this;
         }
-
         public Builder ssmcontacts(@Nullable String ssmcontacts) {
             this.ssmcontacts = Output.ofNullable(ssmcontacts);
             return this;
         }
-
         public Builder ssmincidents(@Nullable Output<String> ssmincidents) {
             this.ssmincidents = ssmincidents;
             return this;
         }
-
         public Builder ssmincidents(@Nullable String ssmincidents) {
             this.ssmincidents = Output.ofNullable(ssmincidents);
             return this;
         }
-
         public Builder sso(@Nullable Output<String> sso) {
             this.sso = sso;
             return this;
         }
-
         public Builder sso(@Nullable String sso) {
             this.sso = Output.ofNullable(sso);
             return this;
         }
-
         public Builder ssoadmin(@Nullable Output<String> ssoadmin) {
             this.ssoadmin = ssoadmin;
             return this;
         }
-
         public Builder ssoadmin(@Nullable String ssoadmin) {
             this.ssoadmin = Output.ofNullable(ssoadmin);
             return this;
         }
-
         public Builder ssooidc(@Nullable Output<String> ssooidc) {
             this.ssooidc = ssooidc;
             return this;
         }
-
         public Builder ssooidc(@Nullable String ssooidc) {
             this.ssooidc = Output.ofNullable(ssooidc);
             return this;
         }
-
         public Builder stepfunctions(@Nullable Output<String> stepfunctions) {
             this.stepfunctions = stepfunctions;
             return this;
         }
-
         public Builder stepfunctions(@Nullable String stepfunctions) {
             this.stepfunctions = Output.ofNullable(stepfunctions);
             return this;
         }
-
         public Builder storagegateway(@Nullable Output<String> storagegateway) {
             this.storagegateway = storagegateway;
             return this;
         }
-
         public Builder storagegateway(@Nullable String storagegateway) {
             this.storagegateway = Output.ofNullable(storagegateway);
             return this;
         }
-
         public Builder sts(@Nullable Output<String> sts) {
             this.sts = sts;
             return this;
         }
-
         public Builder sts(@Nullable String sts) {
             this.sts = Output.ofNullable(sts);
             return this;
         }
-
         public Builder support(@Nullable Output<String> support) {
             this.support = support;
             return this;
         }
-
         public Builder support(@Nullable String support) {
             this.support = Output.ofNullable(support);
             return this;
         }
-
         public Builder swf(@Nullable Output<String> swf) {
             this.swf = swf;
             return this;
         }
-
         public Builder swf(@Nullable String swf) {
             this.swf = Output.ofNullable(swf);
             return this;
         }
-
         public Builder synthetics(@Nullable Output<String> synthetics) {
             this.synthetics = synthetics;
             return this;
         }
-
         public Builder synthetics(@Nullable String synthetics) {
             this.synthetics = Output.ofNullable(synthetics);
             return this;
         }
-
         public Builder textract(@Nullable Output<String> textract) {
             this.textract = textract;
             return this;
         }
-
         public Builder textract(@Nullable String textract) {
             this.textract = Output.ofNullable(textract);
             return this;
         }
-
         public Builder timestreamquery(@Nullable Output<String> timestreamquery) {
             this.timestreamquery = timestreamquery;
             return this;
         }
-
         public Builder timestreamquery(@Nullable String timestreamquery) {
             this.timestreamquery = Output.ofNullable(timestreamquery);
             return this;
         }
-
         public Builder timestreamwrite(@Nullable Output<String> timestreamwrite) {
             this.timestreamwrite = timestreamwrite;
             return this;
         }
-
         public Builder timestreamwrite(@Nullable String timestreamwrite) {
             this.timestreamwrite = Output.ofNullable(timestreamwrite);
             return this;
         }
-
         public Builder transcribe(@Nullable Output<String> transcribe) {
             this.transcribe = transcribe;
             return this;
         }
-
         public Builder transcribe(@Nullable String transcribe) {
             this.transcribe = Output.ofNullable(transcribe);
             return this;
         }
-
         public Builder transcribeservice(@Nullable Output<String> transcribeservice) {
             this.transcribeservice = transcribeservice;
             return this;
         }
-
         public Builder transcribeservice(@Nullable String transcribeservice) {
             this.transcribeservice = Output.ofNullable(transcribeservice);
             return this;
         }
-
         public Builder transcribestreaming(@Nullable Output<String> transcribestreaming) {
             this.transcribestreaming = transcribestreaming;
             return this;
         }
-
         public Builder transcribestreaming(@Nullable String transcribestreaming) {
             this.transcribestreaming = Output.ofNullable(transcribestreaming);
             return this;
         }
-
         public Builder transcribestreamingservice(@Nullable Output<String> transcribestreamingservice) {
             this.transcribestreamingservice = transcribestreamingservice;
             return this;
         }
-
         public Builder transcribestreamingservice(@Nullable String transcribestreamingservice) {
             this.transcribestreamingservice = Output.ofNullable(transcribestreamingservice);
             return this;
         }
-
         public Builder transfer(@Nullable Output<String> transfer) {
             this.transfer = transfer;
             return this;
         }
-
         public Builder transfer(@Nullable String transfer) {
             this.transfer = Output.ofNullable(transfer);
             return this;
         }
-
         public Builder translate(@Nullable Output<String> translate) {
             this.translate = translate;
             return this;
         }
-
         public Builder translate(@Nullable String translate) {
             this.translate = Output.ofNullable(translate);
             return this;
         }
-
         public Builder waf(@Nullable Output<String> waf) {
             this.waf = waf;
             return this;
         }
-
         public Builder waf(@Nullable String waf) {
             this.waf = Output.ofNullable(waf);
             return this;
         }
-
         public Builder wafregional(@Nullable Output<String> wafregional) {
             this.wafregional = wafregional;
             return this;
         }
-
         public Builder wafregional(@Nullable String wafregional) {
             this.wafregional = Output.ofNullable(wafregional);
             return this;
         }
-
         public Builder wafv2(@Nullable Output<String> wafv2) {
             this.wafv2 = wafv2;
             return this;
         }
-
         public Builder wafv2(@Nullable String wafv2) {
             this.wafv2 = Output.ofNullable(wafv2);
             return this;
         }
-
         public Builder wellarchitected(@Nullable Output<String> wellarchitected) {
             this.wellarchitected = wellarchitected;
             return this;
         }
-
         public Builder wellarchitected(@Nullable String wellarchitected) {
             this.wellarchitected = Output.ofNullable(wellarchitected);
             return this;
         }
-
         public Builder workdocs(@Nullable Output<String> workdocs) {
             this.workdocs = workdocs;
             return this;
         }
-
         public Builder workdocs(@Nullable String workdocs) {
             this.workdocs = Output.ofNullable(workdocs);
             return this;
         }
-
         public Builder worklink(@Nullable Output<String> worklink) {
             this.worklink = worklink;
             return this;
         }
-
         public Builder worklink(@Nullable String worklink) {
             this.worklink = Output.ofNullable(worklink);
             return this;
         }
-
         public Builder workmail(@Nullable Output<String> workmail) {
             this.workmail = workmail;
             return this;
         }
-
         public Builder workmail(@Nullable String workmail) {
             this.workmail = Output.ofNullable(workmail);
             return this;
         }
-
         public Builder workmailmessageflow(@Nullable Output<String> workmailmessageflow) {
             this.workmailmessageflow = workmailmessageflow;
             return this;
         }
-
         public Builder workmailmessageflow(@Nullable String workmailmessageflow) {
             this.workmailmessageflow = Output.ofNullable(workmailmessageflow);
             return this;
         }
-
         public Builder workspaces(@Nullable Output<String> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
-
         public Builder workspaces(@Nullable String workspaces) {
             this.workspaces = Output.ofNullable(workspaces);
             return this;
         }
-
         public Builder xray(@Nullable Output<String> xray) {
             this.xray = xray;
             return this;
         }
-
         public Builder xray(@Nullable String xray) {
             this.xray = Output.ofNullable(xray);
             return this;
-        }
-        public ProviderEndpointArgs build() {
+        }        public ProviderEndpointArgs build() {
             final var built = new ProviderEndpointArgs();
 
             built.accessanalyzer = accessanalyzer;

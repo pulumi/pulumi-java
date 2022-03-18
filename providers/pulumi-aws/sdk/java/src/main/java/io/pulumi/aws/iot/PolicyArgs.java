@@ -74,22 +74,18 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
-        }
-        public PolicyArgs build() {
+        }        public PolicyArgs build() {
             return new PolicyArgs(name, policy);
         }
     }

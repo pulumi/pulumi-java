@@ -98,17 +98,17 @@ public final class IntentSlotValueElicitationPrompt {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
-
         public Builder messages(List<IntentSlotValueElicitationPromptMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(IntentSlotValueElicitationPromptMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
-        }
-        public IntentSlotValueElicitationPrompt build() {
+        }        public IntentSlotValueElicitationPrompt build() {
             return new IntentSlotValueElicitationPrompt(maxAttempts, messages, responseCard);
         }
     }

@@ -57,12 +57,10 @@ public final class ClusterConfigurationGetArgs extends io.pulumi.resources.Resou
             this.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }
-
         public Builder executeCommandConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationGetArgs executeCommandConfiguration) {
             this.executeCommandConfiguration = Output.ofNullable(executeCommandConfiguration);
             return this;
-        }
-        public ClusterConfigurationGetArgs build() {
+        }        public ClusterConfigurationGetArgs build() {
             return new ClusterConfigurationGetArgs(executeCommandConfiguration);
         }
     }

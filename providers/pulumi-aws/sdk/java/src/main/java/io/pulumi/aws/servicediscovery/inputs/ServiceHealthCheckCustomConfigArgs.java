@@ -57,12 +57,10 @@ public final class ServiceHealthCheckCustomConfigArgs extends io.pulumi.resource
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
-        }
-        public ServiceHealthCheckCustomConfigArgs build() {
+        }        public ServiceHealthCheckCustomConfigArgs build() {
             return new ServiceHealthCheckCustomConfigArgs(failureThreshold);
         }
     }

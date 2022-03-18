@@ -85,17 +85,14 @@ public final class GetOrganizationalUnitsChildren {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetOrganizationalUnitsChildren build() {
+        }        public GetOrganizationalUnitsChildren build() {
             return new GetOrganizationalUnitsChildren(arn, id, name);
         }
     }

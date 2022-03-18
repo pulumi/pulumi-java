@@ -204,97 +204,78 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
             this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
             return this;
         }
-
         public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = Output.ofNullable(confirmationTimeoutInMinutes);
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
             this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
             return this;
         }
-
         public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder endpointAutoConfirms(@Nullable Output<Boolean> endpointAutoConfirms) {
             this.endpointAutoConfirms = endpointAutoConfirms;
             return this;
         }
-
         public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
             this.endpointAutoConfirms = Output.ofNullable(endpointAutoConfirms);
             return this;
         }
-
         public Builder filterPolicy(@Nullable Output<String> filterPolicy) {
             this.filterPolicy = filterPolicy;
             return this;
         }
-
         public Builder filterPolicy(@Nullable String filterPolicy) {
             this.filterPolicy = Output.ofNullable(filterPolicy);
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder rawMessageDelivery(@Nullable Output<Boolean> rawMessageDelivery) {
             this.rawMessageDelivery = rawMessageDelivery;
             return this;
         }
-
         public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
             this.rawMessageDelivery = Output.ofNullable(rawMessageDelivery);
             return this;
         }
-
         public Builder redrivePolicy(@Nullable Output<String> redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
-
         public Builder redrivePolicy(@Nullable String redrivePolicy) {
             this.redrivePolicy = Output.ofNullable(redrivePolicy);
             return this;
         }
-
         public Builder subscriptionRoleArn(@Nullable Output<String> subscriptionRoleArn) {
             this.subscriptionRoleArn = subscriptionRoleArn;
             return this;
         }
-
         public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
             this.subscriptionRoleArn = Output.ofNullable(subscriptionRoleArn);
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public TopicSubscriptionArgs build() {
+        }        public TopicSubscriptionArgs build() {
             return new TopicSubscriptionArgs(confirmationTimeoutInMinutes, deliveryPolicy, endpoint, endpointAutoConfirms, filterPolicy, protocol, rawMessageDelivery, redrivePolicy, subscriptionRoleArn, topic);
         }
     }

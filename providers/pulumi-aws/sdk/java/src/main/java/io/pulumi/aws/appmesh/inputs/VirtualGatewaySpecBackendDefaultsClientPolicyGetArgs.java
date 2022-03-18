@@ -57,12 +57,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs extends 
             this.tls = tls;
             return this;
         }
-
         public Builder tls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsGetArgs tls) {
             this.tls = Output.ofNullable(tls);
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs(tls);
         }
     }

@@ -173,77 +173,62 @@ public final class TopicRuleErrorAction {
             this.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
-
         public Builder cloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric) {
             this.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
-
         public Builder dynamodb(@Nullable TopicRuleErrorActionDynamodb dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
-
         public Builder dynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2) {
             this.dynamodbv2 = dynamodbv2;
             return this;
         }
-
         public Builder elasticsearch(@Nullable TopicRuleErrorActionElasticsearch elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
-
         public Builder firehose(@Nullable TopicRuleErrorActionFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder iotAnalytics(@Nullable TopicRuleErrorActionIotAnalytics iotAnalytics) {
             this.iotAnalytics = iotAnalytics;
             return this;
         }
-
         public Builder iotEvents(@Nullable TopicRuleErrorActionIotEvents iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
-
         public Builder kinesis(@Nullable TopicRuleErrorActionKinesis kinesis) {
             this.kinesis = kinesis;
             return this;
         }
-
         public Builder lambda(@Nullable TopicRuleErrorActionLambda lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder republish(@Nullable TopicRuleErrorActionRepublish republish) {
             this.republish = republish;
             return this;
         }
-
         public Builder s3(@Nullable TopicRuleErrorActionS3 s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder sns(@Nullable TopicRuleErrorActionSns sns) {
             this.sns = sns;
             return this;
         }
-
         public Builder sqs(@Nullable TopicRuleErrorActionSqs sqs) {
             this.sqs = sqs;
             return this;
         }
-
         public Builder stepFunctions(@Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
             this.stepFunctions = stepFunctions;
             return this;
-        }
-        public TopicRuleErrorAction build() {
+        }        public TopicRuleErrorAction build() {
             return new TopicRuleErrorAction(cloudwatchAlarm, cloudwatchMetric, dynamodb, dynamodbv2, elasticsearch, firehose, iotAnalytics, iotEvents, kinesis, lambda, republish, s3, sns, sqs, stepFunctions);
         }
     }

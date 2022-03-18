@@ -57,12 +57,13 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementArgs e
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public Builder statements(List<RuleGroupRuleStatementAndStatementStatementNotStatementStatementArgs> statements) {
             this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
-        public RuleGroupRuleStatementAndStatementStatementNotStatementArgs build() {
+        public Builder statements(RuleGroupRuleStatementAndStatementStatementNotStatementStatementArgs... statements) {
+            return statements(List.of(statements));
+        }        public RuleGroupRuleStatementAndStatementStatementNotStatementArgs build() {
             return new RuleGroupRuleStatementAndStatementStatementNotStatementArgs(statements);
         }
     }

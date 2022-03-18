@@ -56,12 +56,10 @@ public final class ClusterEncryptionConfigProviderArgs extends io.pulumi.resourc
             this.keyArn = Objects.requireNonNull(keyArn);
             return this;
         }
-
         public Builder keyArn(String keyArn) {
             this.keyArn = Output.of(Objects.requireNonNull(keyArn));
             return this;
-        }
-        public ClusterEncryptionConfigProviderArgs build() {
+        }        public ClusterEncryptionConfigProviderArgs build() {
             return new ClusterEncryptionConfigProviderArgs(keyArn);
         }
     }

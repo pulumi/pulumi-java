@@ -286,152 +286,140 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             this.acceptanceRequired = acceptanceRequired;
             return this;
         }
-
         public Builder acceptanceRequired(@Nullable Boolean acceptanceRequired) {
             this.acceptanceRequired = Output.ofNullable(acceptanceRequired);
             return this;
         }
-
         public Builder allowedPrincipals(@Nullable Output<List<String>> allowedPrincipals) {
             this.allowedPrincipals = allowedPrincipals;
             return this;
         }
-
         public Builder allowedPrincipals(@Nullable List<String> allowedPrincipals) {
             this.allowedPrincipals = Output.ofNullable(allowedPrincipals);
             return this;
         }
-
+        public Builder allowedPrincipals(String... allowedPrincipals) {
+            return allowedPrincipals(List.of(allowedPrincipals));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder baseEndpointDnsNames(@Nullable Output<List<String>> baseEndpointDnsNames) {
             this.baseEndpointDnsNames = baseEndpointDnsNames;
             return this;
         }
-
         public Builder baseEndpointDnsNames(@Nullable List<String> baseEndpointDnsNames) {
             this.baseEndpointDnsNames = Output.ofNullable(baseEndpointDnsNames);
             return this;
         }
-
+        public Builder baseEndpointDnsNames(String... baseEndpointDnsNames) {
+            return baseEndpointDnsNames(List.of(baseEndpointDnsNames));
+        }
         public Builder gatewayLoadBalancerArns(@Nullable Output<List<String>> gatewayLoadBalancerArns) {
             this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
             return this;
         }
-
         public Builder gatewayLoadBalancerArns(@Nullable List<String> gatewayLoadBalancerArns) {
             this.gatewayLoadBalancerArns = Output.ofNullable(gatewayLoadBalancerArns);
             return this;
         }
-
+        public Builder gatewayLoadBalancerArns(String... gatewayLoadBalancerArns) {
+            return gatewayLoadBalancerArns(List.of(gatewayLoadBalancerArns));
+        }
         public Builder managesVpcEndpoints(@Nullable Output<Boolean> managesVpcEndpoints) {
             this.managesVpcEndpoints = managesVpcEndpoints;
             return this;
         }
-
         public Builder managesVpcEndpoints(@Nullable Boolean managesVpcEndpoints) {
             this.managesVpcEndpoints = Output.ofNullable(managesVpcEndpoints);
             return this;
         }
-
         public Builder networkLoadBalancerArns(@Nullable Output<List<String>> networkLoadBalancerArns) {
             this.networkLoadBalancerArns = networkLoadBalancerArns;
             return this;
         }
-
         public Builder networkLoadBalancerArns(@Nullable List<String> networkLoadBalancerArns) {
             this.networkLoadBalancerArns = Output.ofNullable(networkLoadBalancerArns);
             return this;
         }
-
+        public Builder networkLoadBalancerArns(String... networkLoadBalancerArns) {
+            return networkLoadBalancerArns(List.of(networkLoadBalancerArns));
+        }
         public Builder privateDnsName(@Nullable Output<String> privateDnsName) {
             this.privateDnsName = privateDnsName;
             return this;
         }
-
         public Builder privateDnsName(@Nullable String privateDnsName) {
             this.privateDnsName = Output.ofNullable(privateDnsName);
             return this;
         }
-
         public Builder privateDnsNameConfigurations(@Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations) {
             this.privateDnsNameConfigurations = privateDnsNameConfigurations;
             return this;
         }
-
         public Builder privateDnsNameConfigurations(@Nullable List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs> privateDnsNameConfigurations) {
             this.privateDnsNameConfigurations = Output.ofNullable(privateDnsNameConfigurations);
             return this;
         }
-
+        public Builder privateDnsNameConfigurations(VpcEndpointServicePrivateDnsNameConfigurationGetArgs... privateDnsNameConfigurations) {
+            return privateDnsNameConfigurations(List.of(privateDnsNameConfigurations));
+        }
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder serviceType(@Nullable Output<String> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
-
         public Builder serviceType(@Nullable String serviceType) {
             this.serviceType = Output.ofNullable(serviceType);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public VpcEndpointServiceState build() {
+        }        public VpcEndpointServiceState build() {
             return new VpcEndpointServiceState(acceptanceRequired, allowedPrincipals, arn, availabilityZones, baseEndpointDnsNames, gatewayLoadBalancerArns, managesVpcEndpoints, networkLoadBalancerArns, privateDnsName, privateDnsNameConfigurations, serviceName, serviceType, state, tags, tagsAll);
         }
     }

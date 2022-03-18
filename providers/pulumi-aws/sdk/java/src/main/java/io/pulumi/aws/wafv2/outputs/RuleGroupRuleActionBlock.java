@@ -53,8 +53,7 @@ public final class RuleGroupRuleActionBlock {
         public Builder customResponse(@Nullable RuleGroupRuleActionBlockCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
-        }
-        public RuleGroupRuleActionBlock build() {
+        }        public RuleGroupRuleActionBlock build() {
             return new RuleGroupRuleActionBlock(customResponse);
         }
     }

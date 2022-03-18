@@ -87,17 +87,17 @@ public final class UserPosixProfile {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
-
         public Builder secondaryGids(@Nullable List<Integer> secondaryGids) {
             this.secondaryGids = secondaryGids;
             return this;
         }
-
+        public Builder secondaryGids(Integer... secondaryGids) {
+            return secondaryGids(List.of(secondaryGids));
+        }
         public Builder uid(Integer uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public UserPosixProfile build() {
+        }        public UserPosixProfile build() {
             return new UserPosixProfile(gid, secondaryGids, uid);
         }
     }

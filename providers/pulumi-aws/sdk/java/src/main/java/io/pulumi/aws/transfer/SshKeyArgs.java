@@ -89,32 +89,26 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder body(String body) {
             this.body = Output.of(Objects.requireNonNull(body));
             return this;
         }
-
         public Builder serverId(Output<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
-
         public Builder serverId(String serverId) {
             this.serverId = Output.of(Objects.requireNonNull(serverId));
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public SshKeyArgs build() {
+        }        public SshKeyArgs build() {
             return new SshKeyArgs(body, serverId, userName);
         }
     }

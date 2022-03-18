@@ -65,22 +65,18 @@ public final class LaunchConfigurationEphemeralBlockDeviceArgs extends io.pulumi
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder virtualName(Output<String> virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Output.of(Objects.requireNonNull(virtualName));
             return this;
-        }
-        public LaunchConfigurationEphemeralBlockDeviceArgs build() {
+        }        public LaunchConfigurationEphemeralBlockDeviceArgs build() {
             return new LaunchConfigurationEphemeralBlockDeviceArgs(deviceName, virtualName);
         }
     }

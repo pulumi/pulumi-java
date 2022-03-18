@@ -63,17 +63,14 @@ public final class SigningJobRevocationRecord {
             this.reason = reason;
             return this;
         }
-
         public Builder revokedAt(@Nullable String revokedAt) {
             this.revokedAt = revokedAt;
             return this;
         }
-
         public Builder revokedBy(@Nullable String revokedBy) {
             this.revokedBy = revokedBy;
             return this;
-        }
-        public SigningJobRevocationRecord build() {
+        }        public SigningJobRevocationRecord build() {
             return new SigningJobRevocationRecord(reason, revokedAt, revokedBy);
         }
     }

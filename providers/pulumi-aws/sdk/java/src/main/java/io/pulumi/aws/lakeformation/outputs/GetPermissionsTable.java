@@ -104,22 +104,18 @@ public final class GetPermissionsTable {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = wildcard;
             return this;
-        }
-        public GetPermissionsTable build() {
+        }        public GetPermissionsTable build() {
             return new GetPermissionsTable(catalogId, databaseName, name, wildcard);
         }
     }

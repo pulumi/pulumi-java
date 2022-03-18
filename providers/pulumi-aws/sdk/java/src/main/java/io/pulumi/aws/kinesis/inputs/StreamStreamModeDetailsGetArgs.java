@@ -56,12 +56,10 @@ public final class StreamStreamModeDetailsGetArgs extends io.pulumi.resources.Re
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }
-
         public Builder streamMode(String streamMode) {
             this.streamMode = Output.of(Objects.requireNonNull(streamMode));
             return this;
-        }
-        public StreamStreamModeDetailsGetArgs build() {
+        }        public StreamStreamModeDetailsGetArgs build() {
             return new StreamStreamModeDetailsGetArgs(streamMode);
         }
     }

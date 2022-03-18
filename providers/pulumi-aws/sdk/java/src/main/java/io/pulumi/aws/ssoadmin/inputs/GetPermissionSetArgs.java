@@ -107,22 +107,18 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetPermissionSetArgs build() {
+        }        public GetPermissionSetArgs build() {
             return new GetPermissionSetArgs(arn, instanceArn, name, tags);
         }
     }

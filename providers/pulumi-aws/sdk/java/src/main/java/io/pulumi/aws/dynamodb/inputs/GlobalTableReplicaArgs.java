@@ -56,12 +56,10 @@ public final class GlobalTableReplicaArgs extends io.pulumi.resources.ResourceAr
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
-
         public Builder regionName(String regionName) {
             this.regionName = Output.of(Objects.requireNonNull(regionName));
             return this;
-        }
-        public GlobalTableReplicaArgs build() {
+        }        public GlobalTableReplicaArgs build() {
             return new GlobalTableReplicaArgs(regionName);
         }
     }

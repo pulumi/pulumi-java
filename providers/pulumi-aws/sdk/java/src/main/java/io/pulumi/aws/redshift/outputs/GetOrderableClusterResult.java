@@ -103,32 +103,32 @@ public final class GetOrderableClusterResult {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder clusterType(String clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
-
         public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
-
         public Builder preferredNodeTypes(@Nullable List<String> preferredNodeTypes) {
             this.preferredNodeTypes = preferredNodeTypes;
             return this;
         }
-        public GetOrderableClusterResult build() {
+        public Builder preferredNodeTypes(String... preferredNodeTypes) {
+            return preferredNodeTypes(List.of(preferredNodeTypes));
+        }        public GetOrderableClusterResult build() {
             return new GetOrderableClusterResult(availabilityZones, clusterType, clusterVersion, id, nodeType, preferredNodeTypes);
         }
     }

@@ -69,12 +69,10 @@ public final class AnalyticsApplicationInputsKinesisStream {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AnalyticsApplicationInputsKinesisStream build() {
+        }        public AnalyticsApplicationInputsKinesisStream build() {
             return new AnalyticsApplicationInputsKinesisStream(resourceArn, roleArn);
         }
     }

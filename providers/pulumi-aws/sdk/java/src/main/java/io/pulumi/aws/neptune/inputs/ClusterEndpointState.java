@@ -184,92 +184,80 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder clusterEndpointIdentifier(@Nullable Output<String> clusterEndpointIdentifier) {
             this.clusterEndpointIdentifier = clusterEndpointIdentifier;
             return this;
         }
-
         public Builder clusterEndpointIdentifier(@Nullable String clusterEndpointIdentifier) {
             this.clusterEndpointIdentifier = Output.ofNullable(clusterEndpointIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
-
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
             this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder endpointType(@Nullable Output<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
-
         public Builder excludedMembers(@Nullable Output<List<String>> excludedMembers) {
             this.excludedMembers = excludedMembers;
             return this;
         }
-
         public Builder excludedMembers(@Nullable List<String> excludedMembers) {
             this.excludedMembers = Output.ofNullable(excludedMembers);
             return this;
         }
-
+        public Builder excludedMembers(String... excludedMembers) {
+            return excludedMembers(List.of(excludedMembers));
+        }
         public Builder staticMembers(@Nullable Output<List<String>> staticMembers) {
             this.staticMembers = staticMembers;
             return this;
         }
-
         public Builder staticMembers(@Nullable List<String> staticMembers) {
             this.staticMembers = Output.ofNullable(staticMembers);
             return this;
         }
-
+        public Builder staticMembers(String... staticMembers) {
+            return staticMembers(List.of(staticMembers));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ClusterEndpointState build() {
+        }        public ClusterEndpointState build() {
             return new ClusterEndpointState(arn, clusterEndpointIdentifier, clusterIdentifier, endpoint, endpointType, excludedMembers, staticMembers, tags, tagsAll);
         }
     }

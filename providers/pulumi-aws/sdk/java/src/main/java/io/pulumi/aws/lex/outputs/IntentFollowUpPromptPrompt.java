@@ -98,17 +98,17 @@ public final class IntentFollowUpPromptPrompt {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
-
         public Builder messages(List<IntentFollowUpPromptPromptMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(IntentFollowUpPromptPromptMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
-        }
-        public IntentFollowUpPromptPrompt build() {
+        }        public IntentFollowUpPromptPrompt build() {
             return new IntentFollowUpPromptPrompt(maxAttempts, messages, responseCard);
         }
     }

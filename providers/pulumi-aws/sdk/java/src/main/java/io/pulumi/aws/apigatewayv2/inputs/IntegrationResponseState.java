@@ -139,62 +139,50 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder contentHandlingStrategy(@Nullable Output<String> contentHandlingStrategy) {
             this.contentHandlingStrategy = contentHandlingStrategy;
             return this;
         }
-
         public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
             this.contentHandlingStrategy = Output.ofNullable(contentHandlingStrategy);
             return this;
         }
-
         public Builder integrationId(@Nullable Output<String> integrationId) {
             this.integrationId = integrationId;
             return this;
         }
-
         public Builder integrationId(@Nullable String integrationId) {
             this.integrationId = Output.ofNullable(integrationId);
             return this;
         }
-
         public Builder integrationResponseKey(@Nullable Output<String> integrationResponseKey) {
             this.integrationResponseKey = integrationResponseKey;
             return this;
         }
-
         public Builder integrationResponseKey(@Nullable String integrationResponseKey) {
             this.integrationResponseKey = Output.ofNullable(integrationResponseKey);
             return this;
         }
-
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
-
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
             this.responseTemplates = Output.ofNullable(responseTemplates);
             return this;
         }
-
         public Builder templateSelectionExpression(@Nullable Output<String> templateSelectionExpression) {
             this.templateSelectionExpression = templateSelectionExpression;
             return this;
         }
-
         public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
             this.templateSelectionExpression = Output.ofNullable(templateSelectionExpression);
             return this;
-        }
-        public IntegrationResponseState build() {
+        }        public IntegrationResponseState build() {
             return new IntegrationResponseState(apiId, contentHandlingStrategy, integrationId, integrationResponseKey, responseTemplates, templateSelectionExpression);
         }
     }

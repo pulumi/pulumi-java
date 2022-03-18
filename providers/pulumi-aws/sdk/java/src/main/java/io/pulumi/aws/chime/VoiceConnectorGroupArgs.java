@@ -76,22 +76,21 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
             this.connectors = connectors;
             return this;
         }
-
         public Builder connectors(@Nullable List<VoiceConnectorGroupConnectorArgs> connectors) {
             this.connectors = Output.ofNullable(connectors);
             return this;
         }
-
+        public Builder connectors(VoiceConnectorGroupConnectorArgs... connectors) {
+            return connectors(List.of(connectors));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public VoiceConnectorGroupArgs build() {
+        }        public VoiceConnectorGroupArgs build() {
             return new VoiceConnectorGroupArgs(connectors, name);
         }
     }

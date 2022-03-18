@@ -75,17 +75,20 @@ public final class GetResourcesResourceTagMappingListComplianceDetail {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
-
         public Builder keysWithNoncompliantValues(List<String> keysWithNoncompliantValues) {
             this.keysWithNoncompliantValues = Objects.requireNonNull(keysWithNoncompliantValues);
             return this;
         }
-
+        public Builder keysWithNoncompliantValues(String... keysWithNoncompliantValues) {
+            return keysWithNoncompliantValues(List.of(keysWithNoncompliantValues));
+        }
         public Builder nonCompliantKeys(List<String> nonCompliantKeys) {
             this.nonCompliantKeys = Objects.requireNonNull(nonCompliantKeys);
             return this;
         }
-        public GetResourcesResourceTagMappingListComplianceDetail build() {
+        public Builder nonCompliantKeys(String... nonCompliantKeys) {
+            return nonCompliantKeys(List.of(nonCompliantKeys));
+        }        public GetResourcesResourceTagMappingListComplianceDetail build() {
             return new GetResourcesResourceTagMappingListComplianceDetail(complianceStatus, keysWithNoncompliantValues, nonCompliantKeys);
         }
     }

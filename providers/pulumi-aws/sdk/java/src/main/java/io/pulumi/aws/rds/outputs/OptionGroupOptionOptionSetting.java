@@ -69,12 +69,10 @@ public final class OptionGroupOptionOptionSetting {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public OptionGroupOptionOptionSetting build() {
+        }        public OptionGroupOptionOptionSetting build() {
             return new OptionGroupOptionOptionSetting(name, value);
         }
     }

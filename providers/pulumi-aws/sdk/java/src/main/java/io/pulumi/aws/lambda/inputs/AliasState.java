@@ -155,72 +155,58 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
-
         public Builder functionName(@Nullable String functionName) {
             this.functionName = Output.ofNullable(functionName);
             return this;
         }
-
         public Builder functionVersion(@Nullable Output<String> functionVersion) {
             this.functionVersion = functionVersion;
             return this;
         }
-
         public Builder functionVersion(@Nullable String functionVersion) {
             this.functionVersion = Output.ofNullable(functionVersion);
             return this;
         }
-
         public Builder invokeArn(@Nullable Output<String> invokeArn) {
             this.invokeArn = invokeArn;
             return this;
         }
-
         public Builder invokeArn(@Nullable String invokeArn) {
             this.invokeArn = Output.ofNullable(invokeArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder routingConfig(@Nullable Output<AliasRoutingConfigGetArgs> routingConfig) {
             this.routingConfig = routingConfig;
             return this;
         }
-
         public Builder routingConfig(@Nullable AliasRoutingConfigGetArgs routingConfig) {
             this.routingConfig = Output.ofNullable(routingConfig);
             return this;
-        }
-        public AliasState build() {
+        }        public AliasState build() {
             return new AliasState(arn, description, functionName, functionVersion, invokeArn, name, routingConfig);
         }
     }

@@ -75,22 +75,18 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.hiveJsonSerDe = hiveJsonSerDe;
             return this;
         }
-
         public Builder hiveJsonSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs hiveJsonSerDe) {
             this.hiveJsonSerDe = Output.ofNullable(hiveJsonSerDe);
             return this;
         }
-
         public Builder openXJsonSerDe(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs> openXJsonSerDe) {
             this.openXJsonSerDe = openXJsonSerDe;
             return this;
         }
-
         public Builder openXJsonSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs openXJsonSerDe) {
             this.openXJsonSerDe = Output.ofNullable(openXJsonSerDe);
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerArgs build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerArgs(hiveJsonSerDe, openXJsonSerDe);
         }
     }

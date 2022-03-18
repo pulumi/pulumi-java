@@ -110,27 +110,28 @@ public final class GetLocationResult {
             this.availablePortSpeeds = Objects.requireNonNull(availablePortSpeeds);
             return this;
         }
-
+        public Builder availablePortSpeeds(String... availablePortSpeeds) {
+            return availablePortSpeeds(List.of(availablePortSpeeds));
+        }
         public Builder availableProviders(List<String> availableProviders) {
             this.availableProviders = Objects.requireNonNull(availableProviders);
             return this;
         }
-
+        public Builder availableProviders(String... availableProviders) {
+            return availableProviders(List.of(availableProviders));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder locationCode(String locationCode) {
             this.locationCode = Objects.requireNonNull(locationCode);
             return this;
         }
-
         public Builder locationName(String locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
-        }
-        public GetLocationResult build() {
+        }        public GetLocationResult build() {
             return new GetLocationResult(availablePortSpeeds, availableProviders, id, locationCode, locationName);
         }
     }

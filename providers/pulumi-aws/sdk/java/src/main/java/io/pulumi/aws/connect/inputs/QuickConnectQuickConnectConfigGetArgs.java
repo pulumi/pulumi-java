@@ -110,42 +110,43 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
             this.phoneConfigs = phoneConfigs;
             return this;
         }
-
         public Builder phoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfigGetArgs> phoneConfigs) {
             this.phoneConfigs = Output.ofNullable(phoneConfigs);
             return this;
         }
-
+        public Builder phoneConfigs(QuickConnectQuickConnectConfigPhoneConfigGetArgs... phoneConfigs) {
+            return phoneConfigs(List.of(phoneConfigs));
+        }
         public Builder queueConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs) {
             this.queueConfigs = queueConfigs;
             return this;
         }
-
         public Builder queueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfigGetArgs> queueConfigs) {
             this.queueConfigs = Output.ofNullable(queueConfigs);
             return this;
         }
-
+        public Builder queueConfigs(QuickConnectQuickConnectConfigQueueConfigGetArgs... queueConfigs) {
+            return queueConfigs(List.of(queueConfigs));
+        }
         public Builder quickConnectType(Output<String> quickConnectType) {
             this.quickConnectType = Objects.requireNonNull(quickConnectType);
             return this;
         }
-
         public Builder quickConnectType(String quickConnectType) {
             this.quickConnectType = Output.of(Objects.requireNonNull(quickConnectType));
             return this;
         }
-
         public Builder userConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs) {
             this.userConfigs = userConfigs;
             return this;
         }
-
         public Builder userConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfigGetArgs> userConfigs) {
             this.userConfigs = Output.ofNullable(userConfigs);
             return this;
         }
-        public QuickConnectQuickConnectConfigGetArgs build() {
+        public Builder userConfigs(QuickConnectQuickConnectConfigUserConfigGetArgs... userConfigs) {
+            return userConfigs(List.of(userConfigs));
+        }        public QuickConnectQuickConnectConfigGetArgs build() {
             return new QuickConnectQuickConnectConfigGetArgs(phoneConfigs, queueConfigs, quickConnectType, userConfigs);
         }
     }

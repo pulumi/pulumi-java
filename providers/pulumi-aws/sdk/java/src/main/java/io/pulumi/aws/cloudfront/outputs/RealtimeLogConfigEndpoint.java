@@ -70,12 +70,10 @@ public final class RealtimeLogConfigEndpoint {
             this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig);
             return this;
         }
-
         public Builder streamType(String streamType) {
             this.streamType = Objects.requireNonNull(streamType);
             return this;
-        }
-        public RealtimeLogConfigEndpoint build() {
+        }        public RealtimeLogConfigEndpoint build() {
             return new RealtimeLogConfigEndpoint(kinesisStreamConfig, streamType);
         }
     }

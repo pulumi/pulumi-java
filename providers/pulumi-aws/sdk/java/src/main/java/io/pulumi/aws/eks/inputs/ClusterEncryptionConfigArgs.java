@@ -75,22 +75,21 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder provider(ClusterEncryptionConfigProviderArgs provider) {
             this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
-
         public Builder resources(Output<List<String>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(List<String> resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
-        public ClusterEncryptionConfigArgs build() {
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }        public ClusterEncryptionConfigArgs build() {
             return new ClusterEncryptionConfigArgs(provider, resources);
         }
     }

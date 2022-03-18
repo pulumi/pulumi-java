@@ -51,8 +51,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSing
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader build() {
+        }        public RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader build() {
             return new RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader(name);
         }
     }

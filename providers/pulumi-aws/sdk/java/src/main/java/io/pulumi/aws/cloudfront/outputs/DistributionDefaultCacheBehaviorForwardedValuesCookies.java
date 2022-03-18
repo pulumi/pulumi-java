@@ -81,12 +81,13 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookies {
             this.forward = Objects.requireNonNull(forward);
             return this;
         }
-
         public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
             this.whitelistedNames = whitelistedNames;
             return this;
         }
-        public DistributionDefaultCacheBehaviorForwardedValuesCookies build() {
+        public Builder whitelistedNames(String... whitelistedNames) {
+            return whitelistedNames(List.of(whitelistedNames));
+        }        public DistributionDefaultCacheBehaviorForwardedValuesCookies build() {
             return new DistributionDefaultCacheBehaviorForwardedValuesCookies(forward, whitelistedNames);
         }
     }

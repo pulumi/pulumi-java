@@ -56,12 +56,10 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp2Args extends io.pul
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }
-
         public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Output.of(Objects.requireNonNull(maxRequests));
             return this;
-        }
-        public VirtualNodeSpecListenerConnectionPoolHttp2Args build() {
+        }        public VirtualNodeSpecListenerConnectionPoolHttp2Args build() {
             return new VirtualNodeSpecListenerConnectionPoolHttp2Args(maxRequests);
         }
     }

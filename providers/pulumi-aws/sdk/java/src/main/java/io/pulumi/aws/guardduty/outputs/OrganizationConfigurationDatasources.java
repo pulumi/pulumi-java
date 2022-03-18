@@ -53,8 +53,7 @@ public final class OrganizationConfigurationDatasources {
         public Builder s3Logs(@Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
             this.s3Logs = s3Logs;
             return this;
-        }
-        public OrganizationConfigurationDatasources build() {
+        }        public OrganizationConfigurationDatasources build() {
             return new OrganizationConfigurationDatasources(s3Logs);
         }
     }

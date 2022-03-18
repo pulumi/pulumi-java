@@ -75,12 +75,13 @@ public final class GetInternetGatewayFilter extends io.pulumi.resources.InvokeAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetInternetGatewayFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetInternetGatewayFilter build() {
             return new GetInternetGatewayFilter(name, values);
         }
     }

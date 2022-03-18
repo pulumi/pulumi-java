@@ -51,8 +51,7 @@ public final class WebAclRuleStatementOrStatementStatementSizeConstraintStatemen
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument build() {
+        }        public WebAclRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument build() {
             return new WebAclRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument(name);
         }
     }

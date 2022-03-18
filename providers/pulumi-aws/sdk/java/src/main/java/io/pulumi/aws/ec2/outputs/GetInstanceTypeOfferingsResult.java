@@ -121,32 +121,38 @@ public final class GetInstanceTypeOfferingsResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetInstanceTypeOfferingsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }
-
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }
         public Builder locationType(@Nullable String locationType) {
             this.locationType = locationType;
             return this;
         }
-
         public Builder locationTypes(List<String> locationTypes) {
             this.locationTypes = Objects.requireNonNull(locationTypes);
             return this;
         }
-
+        public Builder locationTypes(String... locationTypes) {
+            return locationTypes(List.of(locationTypes));
+        }
         public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-        public GetInstanceTypeOfferingsResult build() {
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }        public GetInstanceTypeOfferingsResult build() {
             return new GetInstanceTypeOfferingsResult(filters, id, instanceTypes, locationType, locationTypes, locations);
         }
     }

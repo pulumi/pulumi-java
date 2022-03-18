@@ -103,22 +103,18 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
             this.bucketAccountId = bucketAccountId;
             return this;
         }
-
         public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination build() {
+        }        public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination build() {
             return new AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination(bucketAccountId, bucketArn, format, prefix);
         }
     }

@@ -106,42 +106,34 @@ public final class ProxyAuthGetArgs extends io.pulumi.resources.ResourceArgs {
             this.authScheme = authScheme;
             return this;
         }
-
         public Builder authScheme(@Nullable String authScheme) {
             this.authScheme = Output.ofNullable(authScheme);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder iamAuth(@Nullable Output<String> iamAuth) {
             this.iamAuth = iamAuth;
             return this;
         }
-
         public Builder iamAuth(@Nullable String iamAuth) {
             this.iamAuth = Output.ofNullable(iamAuth);
             return this;
         }
-
         public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Output.ofNullable(secretArn);
             return this;
-        }
-        public ProxyAuthGetArgs build() {
+        }        public ProxyAuthGetArgs build() {
             return new ProxyAuthGetArgs(authScheme, description, iamAuth, secretArn);
         }
     }

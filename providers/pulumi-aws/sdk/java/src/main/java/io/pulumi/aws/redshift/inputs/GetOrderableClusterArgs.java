@@ -107,22 +107,21 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
             this.clusterType = clusterType;
             return this;
         }
-
         public Builder clusterVersion(@Nullable String clusterVersion) {
             this.clusterVersion = clusterVersion;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder preferredNodeTypes(@Nullable List<String> preferredNodeTypes) {
             this.preferredNodeTypes = preferredNodeTypes;
             return this;
         }
-        public GetOrderableClusterArgs build() {
+        public Builder preferredNodeTypes(String... preferredNodeTypes) {
+            return preferredNodeTypes(List.of(preferredNodeTypes));
+        }        public GetOrderableClusterArgs build() {
             return new GetOrderableClusterArgs(clusterType, clusterVersion, nodeType, preferredNodeTypes);
         }
     }

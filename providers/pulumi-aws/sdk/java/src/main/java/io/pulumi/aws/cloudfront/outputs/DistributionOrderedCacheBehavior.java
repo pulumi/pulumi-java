@@ -421,102 +421,100 @@ public final class DistributionOrderedCacheBehavior {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
-
+        public Builder allowedMethods(String... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder cachePolicyId(@Nullable String cachePolicyId) {
             this.cachePolicyId = cachePolicyId;
             return this;
         }
-
         public Builder cachedMethods(List<String> cachedMethods) {
             this.cachedMethods = Objects.requireNonNull(cachedMethods);
             return this;
         }
-
+        public Builder cachedMethods(String... cachedMethods) {
+            return cachedMethods(List.of(cachedMethods));
+        }
         public Builder compress(@Nullable Boolean compress) {
             this.compress = compress;
             return this;
         }
-
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder fieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
             this.fieldLevelEncryptionId = fieldLevelEncryptionId;
             return this;
         }
-
         public Builder forwardedValues(@Nullable DistributionOrderedCacheBehaviorForwardedValues forwardedValues) {
             this.forwardedValues = forwardedValues;
             return this;
         }
-
         public Builder functionAssociations(@Nullable List<DistributionOrderedCacheBehaviorFunctionAssociation> functionAssociations) {
             this.functionAssociations = functionAssociations;
             return this;
         }
-
+        public Builder functionAssociations(DistributionOrderedCacheBehaviorFunctionAssociation... functionAssociations) {
+            return functionAssociations(List.of(functionAssociations));
+        }
         public Builder lambdaFunctionAssociations(@Nullable List<DistributionOrderedCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations) {
             this.lambdaFunctionAssociations = lambdaFunctionAssociations;
             return this;
         }
-
+        public Builder lambdaFunctionAssociations(DistributionOrderedCacheBehaviorLambdaFunctionAssociation... lambdaFunctionAssociations) {
+            return lambdaFunctionAssociations(List.of(lambdaFunctionAssociations));
+        }
         public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
-
         public Builder minTtl(@Nullable Integer minTtl) {
             this.minTtl = minTtl;
             return this;
         }
-
         public Builder originRequestPolicyId(@Nullable String originRequestPolicyId) {
             this.originRequestPolicyId = originRequestPolicyId;
             return this;
         }
-
         public Builder pathPattern(String pathPattern) {
             this.pathPattern = Objects.requireNonNull(pathPattern);
             return this;
         }
-
         public Builder realtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
             this.realtimeLogConfigArn = realtimeLogConfigArn;
             return this;
         }
-
         public Builder responseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
             this.responseHeadersPolicyId = responseHeadersPolicyId;
             return this;
         }
-
         public Builder smoothStreaming(@Nullable Boolean smoothStreaming) {
             this.smoothStreaming = smoothStreaming;
             return this;
         }
-
         public Builder targetOriginId(String targetOriginId) {
             this.targetOriginId = Objects.requireNonNull(targetOriginId);
             return this;
         }
-
         public Builder trustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
             this.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
-
+        public Builder trustedKeyGroups(String... trustedKeyGroups) {
+            return trustedKeyGroups(List.of(trustedKeyGroups));
+        }
         public Builder trustedSigners(@Nullable List<String> trustedSigners) {
             this.trustedSigners = trustedSigners;
             return this;
         }
-
+        public Builder trustedSigners(String... trustedSigners) {
+            return trustedSigners(List.of(trustedSigners));
+        }
         public Builder viewerProtocolPolicy(String viewerProtocolPolicy) {
             this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
             return this;
-        }
-        public DistributionOrderedCacheBehavior build() {
+        }        public DistributionOrderedCacheBehavior build() {
             return new DistributionOrderedCacheBehavior(allowedMethods, cachePolicyId, cachedMethods, compress, defaultTtl, fieldLevelEncryptionId, forwardedValues, functionAssociations, lambdaFunctionAssociations, maxTtl, minTtl, originRequestPolicyId, pathPattern, realtimeLogConfigArn, responseHeadersPolicyId, smoothStreaming, targetOriginId, trustedKeyGroups, trustedSigners, viewerProtocolPolicy);
         }
     }

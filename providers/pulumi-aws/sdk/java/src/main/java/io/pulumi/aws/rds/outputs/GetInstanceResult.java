@@ -665,202 +665,177 @@ public final class GetInstanceResult {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder allocatedStorage(Integer allocatedStorage) {
             this.allocatedStorage = Objects.requireNonNull(allocatedStorage);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Objects.requireNonNull(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = Objects.requireNonNull(backupRetentionPeriod);
             return this;
         }
-
         public Builder caCertIdentifier(String caCertIdentifier) {
             this.caCertIdentifier = Objects.requireNonNull(caCertIdentifier);
             return this;
         }
-
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
-
         public Builder dbInstanceArn(String dbInstanceArn) {
             this.dbInstanceArn = Objects.requireNonNull(dbInstanceArn);
             return this;
         }
-
         public Builder dbInstanceClass(String dbInstanceClass) {
             this.dbInstanceClass = Objects.requireNonNull(dbInstanceClass);
             return this;
         }
-
         public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier);
             return this;
         }
-
         public Builder dbInstancePort(Integer dbInstancePort) {
             this.dbInstancePort = Objects.requireNonNull(dbInstancePort);
             return this;
         }
-
         public Builder dbName(String dbName) {
             this.dbName = Objects.requireNonNull(dbName);
             return this;
         }
-
         public Builder dbParameterGroups(List<String> dbParameterGroups) {
             this.dbParameterGroups = Objects.requireNonNull(dbParameterGroups);
             return this;
         }
-
+        public Builder dbParameterGroups(String... dbParameterGroups) {
+            return dbParameterGroups(List.of(dbParameterGroups));
+        }
         public Builder dbSecurityGroups(List<String> dbSecurityGroups) {
             this.dbSecurityGroups = Objects.requireNonNull(dbSecurityGroups);
             return this;
         }
-
+        public Builder dbSecurityGroups(String... dbSecurityGroups) {
+            return dbSecurityGroups(List.of(dbSecurityGroups));
+        }
         public Builder dbSubnetGroup(String dbSubnetGroup) {
             this.dbSubnetGroup = Objects.requireNonNull(dbSubnetGroup);
             return this;
         }
-
         public Builder enabledCloudwatchLogsExports(List<String> enabledCloudwatchLogsExports) {
             this.enabledCloudwatchLogsExports = Objects.requireNonNull(enabledCloudwatchLogsExports);
             return this;
         }
-
+        public Builder enabledCloudwatchLogsExports(String... enabledCloudwatchLogsExports) {
+            return enabledCloudwatchLogsExports(List.of(enabledCloudwatchLogsExports));
+        }
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder licenseModel(String licenseModel) {
             this.licenseModel = Objects.requireNonNull(licenseModel);
             return this;
         }
-
         public Builder masterUsername(String masterUsername) {
             this.masterUsername = Objects.requireNonNull(masterUsername);
             return this;
         }
-
         public Builder monitoringInterval(Integer monitoringInterval) {
             this.monitoringInterval = Objects.requireNonNull(monitoringInterval);
             return this;
         }
-
         public Builder monitoringRoleArn(String monitoringRoleArn) {
             this.monitoringRoleArn = Objects.requireNonNull(monitoringRoleArn);
             return this;
         }
-
         public Builder multiAz(Boolean multiAz) {
             this.multiAz = Objects.requireNonNull(multiAz);
             return this;
         }
-
         public Builder optionGroupMemberships(List<String> optionGroupMemberships) {
             this.optionGroupMemberships = Objects.requireNonNull(optionGroupMemberships);
             return this;
         }
-
+        public Builder optionGroupMemberships(String... optionGroupMemberships) {
+            return optionGroupMemberships(List.of(optionGroupMemberships));
+        }
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder preferredBackupWindow(String preferredBackupWindow) {
             this.preferredBackupWindow = Objects.requireNonNull(preferredBackupWindow);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Objects.requireNonNull(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder publiclyAccessible(Boolean publiclyAccessible) {
             this.publiclyAccessible = Objects.requireNonNull(publiclyAccessible);
             return this;
         }
-
         public Builder replicateSourceDb(String replicateSourceDb) {
             this.replicateSourceDb = Objects.requireNonNull(replicateSourceDb);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder storageEncrypted(Boolean storageEncrypted) {
             this.storageEncrypted = Objects.requireNonNull(storageEncrypted);
             return this;
         }
-
         public Builder storageType(String storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder timezone(String timezone) {
             this.timezone = Objects.requireNonNull(timezone);
             return this;
         }
-
         public Builder vpcSecurityGroups(List<String> vpcSecurityGroups) {
             this.vpcSecurityGroups = Objects.requireNonNull(vpcSecurityGroups);
             return this;
         }
-        public GetInstanceResult build() {
+        public Builder vpcSecurityGroups(String... vpcSecurityGroups) {
+            return vpcSecurityGroups(List.of(vpcSecurityGroups));
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(address, allocatedStorage, autoMinorVersionUpgrade, availabilityZone, backupRetentionPeriod, caCertIdentifier, dbClusterIdentifier, dbInstanceArn, dbInstanceClass, dbInstanceIdentifier, dbInstancePort, dbName, dbParameterGroups, dbSecurityGroups, dbSubnetGroup, enabledCloudwatchLogsExports, endpoint, engine, engineVersion, hostedZoneId, id, iops, kmsKeyId, licenseModel, masterUsername, monitoringInterval, monitoringRoleArn, multiAz, optionGroupMemberships, port, preferredBackupWindow, preferredMaintenanceWindow, publiclyAccessible, replicateSourceDb, resourceId, storageEncrypted, storageType, tags, timezone, vpcSecurityGroups);
         }
     }

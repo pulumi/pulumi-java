@@ -75,22 +75,18 @@ public final class ListenerRuleActionForwardStickinessGetArgs extends io.pulumi.
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(Integer duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ListenerRuleActionForwardStickinessGetArgs build() {
+        }        public ListenerRuleActionForwardStickinessGetArgs build() {
             return new ListenerRuleActionForwardStickinessGetArgs(duration, enabled);
         }
     }

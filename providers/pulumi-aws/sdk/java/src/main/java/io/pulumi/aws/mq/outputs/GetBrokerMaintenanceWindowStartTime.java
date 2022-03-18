@@ -61,17 +61,14 @@ public final class GetBrokerMaintenanceWindowStartTime {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder timeOfDay(String timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
-        }
-        public GetBrokerMaintenanceWindowStartTime build() {
+        }        public GetBrokerMaintenanceWindowStartTime build() {
             return new GetBrokerMaintenanceWindowStartTime(dayOfWeek, timeOfDay, timeZone);
         }
     }

@@ -53,8 +53,7 @@ public final class RemediationConfigurationExecutionControls {
         public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls) {
             this.ssmControls = ssmControls;
             return this;
-        }
-        public RemediationConfigurationExecutionControls build() {
+        }        public RemediationConfigurationExecutionControls build() {
             return new RemediationConfigurationExecutionControls(ssmControls);
         }
     }

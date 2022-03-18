@@ -74,22 +74,18 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
             this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
             return this;
         }
-
         public Builder challengeRequiredOnNewDevice(@Nullable Boolean challengeRequiredOnNewDevice) {
             this.challengeRequiredOnNewDevice = Output.ofNullable(challengeRequiredOnNewDevice);
             return this;
         }
-
         public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt) {
             this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
             return this;
         }
-
         public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
             this.deviceOnlyRememberedOnUserPrompt = Output.ofNullable(deviceOnlyRememberedOnUserPrompt);
             return this;
-        }
-        public UserPoolDeviceConfigurationArgs build() {
+        }        public UserPoolDeviceConfigurationArgs build() {
             return new UserPoolDeviceConfigurationArgs(challengeRequiredOnNewDevice, deviceOnlyRememberedOnUserPrompt);
         }
     }

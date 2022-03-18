@@ -56,12 +56,10 @@ public final class VirtualNodeSpecLoggingAccessLogFileArgs extends io.pulumi.res
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public VirtualNodeSpecLoggingAccessLogFileArgs build() {
+        }        public VirtualNodeSpecLoggingAccessLogFileArgs build() {
             return new VirtualNodeSpecLoggingAccessLogFileArgs(path);
         }
     }

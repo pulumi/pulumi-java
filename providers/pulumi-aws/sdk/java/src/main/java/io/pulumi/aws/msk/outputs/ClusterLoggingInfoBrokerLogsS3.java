@@ -88,17 +88,14 @@ public final class ClusterLoggingInfoBrokerLogsS3 {
             this.bucket = bucket;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public ClusterLoggingInfoBrokerLogsS3 build() {
+        }        public ClusterLoggingInfoBrokerLogsS3 build() {
             return new ClusterLoggingInfoBrokerLogsS3(bucket, enabled, prefix);
         }
     }

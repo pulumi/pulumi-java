@@ -74,22 +74,21 @@ public final class BudgetActionDefinitionScpActionDefinitionGetArgs extends io.p
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
-
         public Builder targetIds(Output<List<String>> targetIds) {
             this.targetIds = Objects.requireNonNull(targetIds);
             return this;
         }
-
         public Builder targetIds(List<String> targetIds) {
             this.targetIds = Output.of(Objects.requireNonNull(targetIds));
             return this;
         }
-        public BudgetActionDefinitionScpActionDefinitionGetArgs build() {
+        public Builder targetIds(String... targetIds) {
+            return targetIds(List.of(targetIds));
+        }        public BudgetActionDefinitionScpActionDefinitionGetArgs build() {
             return new BudgetActionDefinitionScpActionDefinitionGetArgs(policyId, targetIds);
         }
     }

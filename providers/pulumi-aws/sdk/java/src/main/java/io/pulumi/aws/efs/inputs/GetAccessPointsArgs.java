@@ -54,8 +54,7 @@ public final class GetAccessPointsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
-        }
-        public GetAccessPointsArgs build() {
+        }        public GetAccessPointsArgs build() {
             return new GetAccessPointsArgs(fileSystemId);
         }
     }

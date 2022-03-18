@@ -158,72 +158,58 @@ public final class BucketReplicationConfigurationRuleDestinationArgs extends io.
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
-
         public Builder accessControlTranslation(@Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs accessControlTranslation) {
             this.accessControlTranslation = Output.ofNullable(accessControlTranslation);
             return this;
         }
-
         public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder metrics(@Nullable Output<BucketReplicationConfigurationRuleDestinationMetricsArgs> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable BucketReplicationConfigurationRuleDestinationMetricsArgs metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
         public Builder replicaKmsKeyId(@Nullable Output<String> replicaKmsKeyId) {
             this.replicaKmsKeyId = replicaKmsKeyId;
             return this;
         }
-
         public Builder replicaKmsKeyId(@Nullable String replicaKmsKeyId) {
             this.replicaKmsKeyId = Output.ofNullable(replicaKmsKeyId);
             return this;
         }
-
         public Builder replicationTime(@Nullable Output<BucketReplicationConfigurationRuleDestinationReplicationTimeArgs> replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
-
         public Builder replicationTime(@Nullable BucketReplicationConfigurationRuleDestinationReplicationTimeArgs replicationTime) {
             this.replicationTime = Output.ofNullable(replicationTime);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
-        }
-        public BucketReplicationConfigurationRuleDestinationArgs build() {
+        }        public BucketReplicationConfigurationRuleDestinationArgs build() {
             return new BucketReplicationConfigurationRuleDestinationArgs(accessControlTranslation, accountId, bucket, metrics, replicaKmsKeyId, replicationTime, storageClass);
         }
     }

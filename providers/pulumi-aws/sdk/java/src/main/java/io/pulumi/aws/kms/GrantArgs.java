@@ -174,82 +174,75 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             this.constraints = constraints;
             return this;
         }
-
         public Builder constraints(@Nullable List<GrantConstraintArgs> constraints) {
             this.constraints = Output.ofNullable(constraints);
             return this;
         }
-
+        public Builder constraints(GrantConstraintArgs... constraints) {
+            return constraints(List.of(constraints));
+        }
         public Builder grantCreationTokens(@Nullable Output<List<String>> grantCreationTokens) {
             this.grantCreationTokens = grantCreationTokens;
             return this;
         }
-
         public Builder grantCreationTokens(@Nullable List<String> grantCreationTokens) {
             this.grantCreationTokens = Output.ofNullable(grantCreationTokens);
             return this;
         }
-
+        public Builder grantCreationTokens(String... grantCreationTokens) {
+            return grantCreationTokens(List.of(grantCreationTokens));
+        }
         public Builder granteePrincipal(Output<String> granteePrincipal) {
             this.granteePrincipal = Objects.requireNonNull(granteePrincipal);
             return this;
         }
-
         public Builder granteePrincipal(String granteePrincipal) {
             this.granteePrincipal = Output.of(Objects.requireNonNull(granteePrincipal));
             return this;
         }
-
         public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operations(Output<List<String>> operations) {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
-
         public Builder operations(List<String> operations) {
             this.operations = Output.of(Objects.requireNonNull(operations));
             return this;
         }
-
+        public Builder operations(String... operations) {
+            return operations(List.of(operations));
+        }
         public Builder retireOnDelete(@Nullable Output<Boolean> retireOnDelete) {
             this.retireOnDelete = retireOnDelete;
             return this;
         }
-
         public Builder retireOnDelete(@Nullable Boolean retireOnDelete) {
             this.retireOnDelete = Output.ofNullable(retireOnDelete);
             return this;
         }
-
         public Builder retiringPrincipal(@Nullable Output<String> retiringPrincipal) {
             this.retiringPrincipal = retiringPrincipal;
             return this;
         }
-
         public Builder retiringPrincipal(@Nullable String retiringPrincipal) {
             this.retiringPrincipal = Output.ofNullable(retiringPrincipal);
             return this;
-        }
-        public GrantArgs build() {
+        }        public GrantArgs build() {
             return new GrantArgs(constraints, grantCreationTokens, granteePrincipal, keyId, name, operations, retireOnDelete, retiringPrincipal);
         }
     }

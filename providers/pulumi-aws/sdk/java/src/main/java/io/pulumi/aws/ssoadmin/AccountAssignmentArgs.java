@@ -138,62 +138,50 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder permissionSetArn(Output<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
-
         public Builder permissionSetArn(String permissionSetArn) {
             this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
             return this;
         }
-
         public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public Builder principalType(Output<String> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public Builder principalType(String principalType) {
             this.principalType = Output.of(Objects.requireNonNull(principalType));
             return this;
         }
-
         public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
-
         public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
-
         public Builder targetType(@Nullable String targetType) {
             this.targetType = Output.ofNullable(targetType);
             return this;
-        }
-        public AccountAssignmentArgs build() {
+        }        public AccountAssignmentArgs build() {
             return new AccountAssignmentArgs(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);
         }
     }

@@ -90,32 +90,26 @@ public final class ListenerRuleActionFixedResponseArgs extends io.pulumi.resourc
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder messageBody(@Nullable Output<String> messageBody) {
             this.messageBody = messageBody;
             return this;
         }
-
         public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = Output.ofNullable(messageBody);
             return this;
         }
-
         public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Output.ofNullable(statusCode);
             return this;
-        }
-        public ListenerRuleActionFixedResponseArgs build() {
+        }        public ListenerRuleActionFixedResponseArgs build() {
             return new ListenerRuleActionFixedResponseArgs(contentType, messageBody, statusCode);
         }
     }

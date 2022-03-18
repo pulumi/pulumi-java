@@ -173,82 +173,66 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets) {
             this.deploymentTargets = deploymentTargets;
             return this;
         }
-
         public Builder deploymentTargets(@Nullable StackSetInstanceDeploymentTargetsGetArgs deploymentTargets) {
             this.deploymentTargets = Output.ofNullable(deploymentTargets);
             return this;
         }
-
         public Builder organizationalUnitId(@Nullable Output<String> organizationalUnitId) {
             this.organizationalUnitId = organizationalUnitId;
             return this;
         }
-
         public Builder organizationalUnitId(@Nullable String organizationalUnitId) {
             this.organizationalUnitId = Output.ofNullable(organizationalUnitId);
             return this;
         }
-
         public Builder parameterOverrides(@Nullable Output<Map<String,String>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
-
         public Builder parameterOverrides(@Nullable Map<String,String> parameterOverrides) {
             this.parameterOverrides = Output.ofNullable(parameterOverrides);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder retainStack(@Nullable Output<Boolean> retainStack) {
             this.retainStack = retainStack;
             return this;
         }
-
         public Builder retainStack(@Nullable Boolean retainStack) {
             this.retainStack = Output.ofNullable(retainStack);
             return this;
         }
-
         public Builder stackId(@Nullable Output<String> stackId) {
             this.stackId = stackId;
             return this;
         }
-
         public Builder stackId(@Nullable String stackId) {
             this.stackId = Output.ofNullable(stackId);
             return this;
         }
-
         public Builder stackSetName(@Nullable Output<String> stackSetName) {
             this.stackSetName = stackSetName;
             return this;
         }
-
         public Builder stackSetName(@Nullable String stackSetName) {
             this.stackSetName = Output.ofNullable(stackSetName);
             return this;
-        }
-        public StackSetInstanceState build() {
+        }        public StackSetInstanceState build() {
             return new StackSetInstanceState(accountId, deploymentTargets, organizationalUnitId, parameterOverrides, region, retainStack, stackId, stackSetName);
         }
     }

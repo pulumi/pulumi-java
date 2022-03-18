@@ -69,12 +69,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
-
         public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
-        }
-        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter build() {
+        }        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter build() {
             return new FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter(parameterName, parameterValue);
         }
     }

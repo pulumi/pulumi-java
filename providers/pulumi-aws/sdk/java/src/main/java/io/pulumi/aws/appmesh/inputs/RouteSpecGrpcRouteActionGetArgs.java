@@ -58,12 +58,13 @@ public final class RouteSpecGrpcRouteActionGetArgs extends io.pulumi.resources.R
             this.weightedTargets = Objects.requireNonNull(weightedTargets);
             return this;
         }
-
         public Builder weightedTargets(List<RouteSpecGrpcRouteActionWeightedTargetGetArgs> weightedTargets) {
             this.weightedTargets = Output.of(Objects.requireNonNull(weightedTargets));
             return this;
         }
-        public RouteSpecGrpcRouteActionGetArgs build() {
+        public Builder weightedTargets(RouteSpecGrpcRouteActionWeightedTargetGetArgs... weightedTargets) {
+            return weightedTargets(List.of(weightedTargets));
+        }        public RouteSpecGrpcRouteActionGetArgs build() {
             return new RouteSpecGrpcRouteActionGetArgs(weightedTargets);
         }
     }

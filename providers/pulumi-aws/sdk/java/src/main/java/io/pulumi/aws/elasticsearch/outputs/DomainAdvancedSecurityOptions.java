@@ -88,17 +88,14 @@ public final class DomainAdvancedSecurityOptions {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
-
         public Builder masterUserOptions(@Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions) {
             this.masterUserOptions = masterUserOptions;
             return this;
-        }
-        public DomainAdvancedSecurityOptions build() {
+        }        public DomainAdvancedSecurityOptions build() {
             return new DomainAdvancedSecurityOptions(enabled, internalUserDatabaseEnabled, masterUserOptions);
         }
     }

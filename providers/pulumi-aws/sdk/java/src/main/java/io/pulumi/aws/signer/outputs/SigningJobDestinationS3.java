@@ -71,12 +71,10 @@ public final class SigningJobDestinationS3 {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public SigningJobDestinationS3 build() {
+        }        public SigningJobDestinationS3 build() {
             return new SigningJobDestinationS3(bucket, prefix);
         }
     }

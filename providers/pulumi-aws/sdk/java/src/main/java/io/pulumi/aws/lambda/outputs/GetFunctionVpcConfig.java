@@ -62,17 +62,20 @@ public final class GetFunctionVpcConfig {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetFunctionVpcConfig build() {
+        }        public GetFunctionVpcConfig build() {
             return new GetFunctionVpcConfig(securityGroupIds, subnetIds, vpcId);
         }
     }

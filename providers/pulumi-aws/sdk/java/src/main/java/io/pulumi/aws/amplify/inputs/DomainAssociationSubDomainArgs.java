@@ -107,42 +107,34 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
-
         public Builder branchName(String branchName) {
             this.branchName = Output.of(Objects.requireNonNull(branchName));
             return this;
         }
-
         public Builder dnsRecord(@Nullable Output<String> dnsRecord) {
             this.dnsRecord = dnsRecord;
             return this;
         }
-
         public Builder dnsRecord(@Nullable String dnsRecord) {
             this.dnsRecord = Output.ofNullable(dnsRecord);
             return this;
         }
-
         public Builder prefix(Output<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Output.of(Objects.requireNonNull(prefix));
             return this;
         }
-
         public Builder verified(@Nullable Output<Boolean> verified) {
             this.verified = verified;
             return this;
         }
-
         public Builder verified(@Nullable Boolean verified) {
             this.verified = Output.ofNullable(verified);
             return this;
-        }
-        public DomainAssociationSubDomainArgs build() {
+        }        public DomainAssociationSubDomainArgs build() {
             return new DomainAssociationSubDomainArgs(branchName, dnsRecord, prefix, verified);
         }
     }

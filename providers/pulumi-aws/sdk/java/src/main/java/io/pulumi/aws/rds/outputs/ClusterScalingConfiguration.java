@@ -121,27 +121,22 @@ public final class ClusterScalingConfiguration {
             this.autoPause = autoPause;
             return this;
         }
-
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
-
         public Builder secondsUntilAutoPause(@Nullable Integer secondsUntilAutoPause) {
             this.secondsUntilAutoPause = secondsUntilAutoPause;
             return this;
         }
-
         public Builder timeoutAction(@Nullable String timeoutAction) {
             this.timeoutAction = timeoutAction;
             return this;
-        }
-        public ClusterScalingConfiguration build() {
+        }        public ClusterScalingConfiguration build() {
             return new ClusterScalingConfiguration(autoPause, maxCapacity, minCapacity, secondsUntilAutoPause, timeoutAction);
         }
     }

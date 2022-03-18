@@ -88,17 +88,14 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
             this.enabled = enabled;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = logStreamName;
             return this;
-        }
-        public FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions build() {
+        }        public FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions build() {
             return new FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions(enabled, logGroupName, logStreamName);
         }
     }

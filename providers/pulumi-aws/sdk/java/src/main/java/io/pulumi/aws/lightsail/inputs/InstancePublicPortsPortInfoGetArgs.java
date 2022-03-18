@@ -108,42 +108,37 @@ public final class InstancePublicPortsPortInfoGetArgs extends io.pulumi.resource
             this.cidrs = cidrs;
             return this;
         }
-
         public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = Output.ofNullable(cidrs);
             return this;
         }
-
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }
         public Builder fromPort(Output<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder fromPort(Integer fromPort) {
             this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder toPort(Output<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Output.of(Objects.requireNonNull(toPort));
             return this;
-        }
-        public InstancePublicPortsPortInfoGetArgs build() {
+        }        public InstancePublicPortsPortInfoGetArgs build() {
             return new InstancePublicPortsPortInfoGetArgs(cidrs, fromPort, protocol, toPort);
         }
     }

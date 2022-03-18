@@ -92,32 +92,29 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ingress(Output<List<SecurityGroupIngressArgs>> ingress) {
             this.ingress = Objects.requireNonNull(ingress);
             return this;
         }
-
         public Builder ingress(List<SecurityGroupIngressArgs> ingress) {
             this.ingress = Output.of(Objects.requireNonNull(ingress));
             return this;
         }
-
+        public Builder ingress(SecurityGroupIngressArgs... ingress) {
+            return ingress(List.of(ingress));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SecurityGroupArgs build() {
+        }        public SecurityGroupArgs build() {
             return new SecurityGroupArgs(description, ingress, name);
         }
     }

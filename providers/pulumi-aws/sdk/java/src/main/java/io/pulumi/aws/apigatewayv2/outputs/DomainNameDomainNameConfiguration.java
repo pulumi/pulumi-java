@@ -121,27 +121,22 @@ public final class DomainNameDomainNameConfiguration {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
-
         public Builder targetDomainName(@Nullable String targetDomainName) {
             this.targetDomainName = targetDomainName;
             return this;
-        }
-        public DomainNameDomainNameConfiguration build() {
+        }        public DomainNameDomainNameConfiguration build() {
             return new DomainNameDomainNameConfiguration(certificateArn, endpointType, hostedZoneId, securityPolicy, targetDomainName);
         }
     }

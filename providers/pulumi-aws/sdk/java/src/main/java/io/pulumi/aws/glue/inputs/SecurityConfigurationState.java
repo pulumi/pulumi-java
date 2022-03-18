@@ -75,22 +75,18 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable SecurityConfigurationEncryptionConfigurationGetArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SecurityConfigurationState build() {
+        }        public SecurityConfigurationState build() {
             return new SecurityConfigurationState(encryptionConfiguration, name);
         }
     }

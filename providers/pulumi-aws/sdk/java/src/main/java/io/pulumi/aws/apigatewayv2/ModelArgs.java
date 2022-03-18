@@ -122,52 +122,42 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder schema(Output<String> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(String schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
-        }
-        public ModelArgs build() {
+        }        public ModelArgs build() {
             return new ModelArgs(apiId, contentType, description, name, schema);
         }
     }

@@ -53,7 +53,9 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch build() {
+        public Builder exacts(String... exacts) {
+            return exacts(List.of(exacts));
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch(exacts);
         }
     }

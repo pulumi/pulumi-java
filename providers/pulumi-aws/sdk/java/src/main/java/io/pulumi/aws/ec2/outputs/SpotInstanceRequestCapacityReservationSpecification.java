@@ -72,12 +72,10 @@ public final class SpotInstanceRequestCapacityReservationSpecification {
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
-        }
-        public SpotInstanceRequestCapacityReservationSpecification build() {
+        }        public SpotInstanceRequestCapacityReservationSpecification build() {
             return new SpotInstanceRequestCapacityReservationSpecification(capacityReservationPreference, capacityReservationTarget);
         }
     }

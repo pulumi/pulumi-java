@@ -148,62 +148,50 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
             this.allocationId = allocationId;
             return this;
         }
-
         public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = Output.ofNullable(allocationId);
             return this;
         }
-
         public Builder allowReassociation(@Nullable Output<Boolean> allowReassociation) {
             this.allowReassociation = allowReassociation;
             return this;
         }
-
         public Builder allowReassociation(@Nullable Boolean allowReassociation) {
             this.allowReassociation = Output.ofNullable(allowReassociation);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder publicIp(@Nullable Output<String> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
-
         public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = Output.ofNullable(publicIp);
             return this;
-        }
-        public EipAssociationState build() {
+        }        public EipAssociationState build() {
             return new EipAssociationState(allocationId, allowReassociation, instanceId, networkInterfaceId, privateIpAddress, publicIp);
         }
     }

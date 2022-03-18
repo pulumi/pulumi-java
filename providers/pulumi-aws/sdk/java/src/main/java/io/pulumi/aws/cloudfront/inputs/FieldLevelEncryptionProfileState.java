@@ -123,52 +123,42 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
             this.callerReference = callerReference;
             return this;
         }
-
         public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Output.ofNullable(callerReference);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder encryptionEntities(@Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities) {
             this.encryptionEntities = encryptionEntities;
             return this;
         }
-
         public Builder encryptionEntities(@Nullable FieldLevelEncryptionProfileEncryptionEntitiesGetArgs encryptionEntities) {
             this.encryptionEntities = Output.ofNullable(encryptionEntities);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public FieldLevelEncryptionProfileState build() {
+        }        public FieldLevelEncryptionProfileState build() {
             return new FieldLevelEncryptionProfileState(callerReference, comment, encryptionEntities, etag, name);
         }
     }

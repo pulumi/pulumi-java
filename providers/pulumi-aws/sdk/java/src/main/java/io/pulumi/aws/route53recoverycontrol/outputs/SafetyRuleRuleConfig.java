@@ -87,17 +87,14 @@ public final class SafetyRuleRuleConfig {
             this.inverted = Objects.requireNonNull(inverted);
             return this;
         }
-
         public Builder threshold(Integer threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SafetyRuleRuleConfig build() {
+        }        public SafetyRuleRuleConfig build() {
             return new SafetyRuleRuleConfig(inverted, threshold, type);
         }
     }

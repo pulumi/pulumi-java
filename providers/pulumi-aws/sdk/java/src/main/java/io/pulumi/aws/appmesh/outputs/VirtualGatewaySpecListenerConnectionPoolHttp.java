@@ -71,12 +71,10 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttp {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
-
         public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
-        }
-        public VirtualGatewaySpecListenerConnectionPoolHttp build() {
+        }        public VirtualGatewaySpecListenerConnectionPoolHttp build() {
             return new VirtualGatewaySpecListenerConnectionPoolHttp(maxConnections, maxPendingRequests);
         }
     }

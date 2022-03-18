@@ -188,92 +188,74 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
-
         public Builder diskId(String diskId) {
             this.diskId = Output.of(Objects.requireNonNull(diskId));
             return this;
         }
-
         public Builder gatewayArn(Output<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
-
         public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
-
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
-
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
             return this;
         }
-
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
-
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
-
         public Builder preserveExistingData(Output<Boolean> preserveExistingData) {
             this.preserveExistingData = Objects.requireNonNull(preserveExistingData);
             return this;
         }
-
         public Builder preserveExistingData(Boolean preserveExistingData) {
             this.preserveExistingData = Output.of(Objects.requireNonNull(preserveExistingData));
             return this;
         }
-
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetName(Output<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
-
         public Builder targetName(String targetName) {
             this.targetName = Output.of(Objects.requireNonNull(targetName));
             return this;
-        }
-        public StoredIscsiVolumeArgs build() {
+        }        public StoredIscsiVolumeArgs build() {
             return new StoredIscsiVolumeArgs(diskId, gatewayArn, kmsEncrypted, kmsKey, networkInterfaceId, preserveExistingData, snapshotId, tags, targetName);
         }
     }

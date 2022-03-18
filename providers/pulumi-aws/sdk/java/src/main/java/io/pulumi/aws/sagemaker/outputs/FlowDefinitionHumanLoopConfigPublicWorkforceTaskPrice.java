@@ -53,8 +53,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice {
         public Builder amountInUsd(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd) {
             this.amountInUsd = amountInUsd;
             return this;
-        }
-        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice build() {
+        }        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice build() {
             return new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice(amountInUsd);
         }
     }

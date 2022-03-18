@@ -250,132 +250,106 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
             this.aspectRatio = aspectRatio;
             return this;
         }
-
         public Builder aspectRatio(@Nullable String aspectRatio) {
             this.aspectRatio = Output.ofNullable(aspectRatio);
             return this;
         }
-
         public Builder bitRate(@Nullable Output<String> bitRate) {
             this.bitRate = bitRate;
             return this;
         }
-
         public Builder bitRate(@Nullable String bitRate) {
             this.bitRate = Output.ofNullable(bitRate);
             return this;
         }
-
         public Builder codec(@Nullable Output<String> codec) {
             this.codec = codec;
             return this;
         }
-
         public Builder codec(@Nullable String codec) {
             this.codec = Output.ofNullable(codec);
             return this;
         }
-
         public Builder displayAspectRatio(@Nullable Output<String> displayAspectRatio) {
             this.displayAspectRatio = displayAspectRatio;
             return this;
         }
-
         public Builder displayAspectRatio(@Nullable String displayAspectRatio) {
             this.displayAspectRatio = Output.ofNullable(displayAspectRatio);
             return this;
         }
-
         public Builder fixedGop(@Nullable Output<String> fixedGop) {
             this.fixedGop = fixedGop;
             return this;
         }
-
         public Builder fixedGop(@Nullable String fixedGop) {
             this.fixedGop = Output.ofNullable(fixedGop);
             return this;
         }
-
         public Builder frameRate(@Nullable Output<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
-
         public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = Output.ofNullable(frameRate);
             return this;
         }
-
         public Builder keyframesMaxDist(@Nullable Output<String> keyframesMaxDist) {
             this.keyframesMaxDist = keyframesMaxDist;
             return this;
         }
-
         public Builder keyframesMaxDist(@Nullable String keyframesMaxDist) {
             this.keyframesMaxDist = Output.ofNullable(keyframesMaxDist);
             return this;
         }
-
         public Builder maxFrameRate(@Nullable Output<String> maxFrameRate) {
             this.maxFrameRate = maxFrameRate;
             return this;
         }
-
         public Builder maxFrameRate(@Nullable String maxFrameRate) {
             this.maxFrameRate = Output.ofNullable(maxFrameRate);
             return this;
         }
-
         public Builder maxHeight(@Nullable Output<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
-
         public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = Output.ofNullable(maxHeight);
             return this;
         }
-
         public Builder maxWidth(@Nullable Output<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
-
         public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = Output.ofNullable(maxWidth);
             return this;
         }
-
         public Builder paddingPolicy(@Nullable Output<String> paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
-
         public Builder paddingPolicy(@Nullable String paddingPolicy) {
             this.paddingPolicy = Output.ofNullable(paddingPolicy);
             return this;
         }
-
         public Builder resolution(@Nullable Output<String> resolution) {
             this.resolution = resolution;
             return this;
         }
-
         public Builder resolution(@Nullable String resolution) {
             this.resolution = Output.ofNullable(resolution);
             return this;
         }
-
         public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
-
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = Output.ofNullable(sizingPolicy);
             return this;
-        }
-        public PresetVideoArgs build() {
+        }        public PresetVideoArgs build() {
             return new PresetVideoArgs(aspectRatio, bitRate, codec, displayAspectRatio, fixedGop, frameRate, keyframesMaxDist, maxFrameRate, maxHeight, maxWidth, paddingPolicy, resolution, sizingPolicy);
         }
     }

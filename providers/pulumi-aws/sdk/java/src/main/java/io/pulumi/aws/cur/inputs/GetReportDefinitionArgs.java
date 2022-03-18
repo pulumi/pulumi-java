@@ -54,8 +54,7 @@ public final class GetReportDefinitionArgs extends io.pulumi.resources.InvokeArg
         public Builder reportName(String reportName) {
             this.reportName = Objects.requireNonNull(reportName);
             return this;
-        }
-        public GetReportDefinitionArgs build() {
+        }        public GetReportDefinitionArgs build() {
             return new GetReportDefinitionArgs(reportName);
         }
     }

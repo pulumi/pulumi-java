@@ -76,22 +76,21 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
             this.keyword = Objects.requireNonNull(keyword);
             return this;
         }
-
         public Builder keyword(String keyword) {
             this.keyword = Output.of(Objects.requireNonNull(keyword));
             return this;
         }
-
         public Builder settings(@Nullable Output<List<String>> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable List<String> settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs build() {
+        public Builder settings(String... settings) {
+            return settings(List.of(settings));
+        }        public RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs(keyword, settings);
         }
     }

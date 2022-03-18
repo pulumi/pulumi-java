@@ -71,12 +71,10 @@ public final class StackSetAutoDeployment {
             this.enabled = enabled;
             return this;
         }
-
         public Builder retainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
             this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
-        }
-        public StackSetAutoDeployment build() {
+        }        public StackSetAutoDeployment build() {
             return new StackSetAutoDeployment(enabled, retainStacksOnAccountRemoval);
         }
     }

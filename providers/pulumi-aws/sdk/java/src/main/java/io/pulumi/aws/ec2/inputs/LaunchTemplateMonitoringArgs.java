@@ -57,12 +57,10 @@ public final class LaunchTemplateMonitoringArgs extends io.pulumi.resources.Reso
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public LaunchTemplateMonitoringArgs build() {
+        }        public LaunchTemplateMonitoringArgs build() {
             return new LaunchTemplateMonitoringArgs(enabled);
         }
     }

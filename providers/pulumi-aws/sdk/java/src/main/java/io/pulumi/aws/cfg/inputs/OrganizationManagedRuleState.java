@@ -219,112 +219,96 @@ public final class OrganizationManagedRuleState extends io.pulumi.resources.Reso
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder excludedAccounts(@Nullable Output<List<String>> excludedAccounts) {
             this.excludedAccounts = excludedAccounts;
             return this;
         }
-
         public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
             this.excludedAccounts = Output.ofNullable(excludedAccounts);
             return this;
         }
-
+        public Builder excludedAccounts(String... excludedAccounts) {
+            return excludedAccounts(List.of(excludedAccounts));
+        }
         public Builder inputParameters(@Nullable Output<String> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
-
         public Builder inputParameters(@Nullable String inputParameters) {
             this.inputParameters = Output.ofNullable(inputParameters);
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceIdScope(@Nullable Output<String> resourceIdScope) {
             this.resourceIdScope = resourceIdScope;
             return this;
         }
-
         public Builder resourceIdScope(@Nullable String resourceIdScope) {
             this.resourceIdScope = Output.ofNullable(resourceIdScope);
             return this;
         }
-
         public Builder resourceTypesScopes(@Nullable Output<List<String>> resourceTypesScopes) {
             this.resourceTypesScopes = resourceTypesScopes;
             return this;
         }
-
         public Builder resourceTypesScopes(@Nullable List<String> resourceTypesScopes) {
             this.resourceTypesScopes = Output.ofNullable(resourceTypesScopes);
             return this;
         }
-
+        public Builder resourceTypesScopes(String... resourceTypesScopes) {
+            return resourceTypesScopes(List.of(resourceTypesScopes));
+        }
         public Builder ruleIdentifier(@Nullable Output<String> ruleIdentifier) {
             this.ruleIdentifier = ruleIdentifier;
             return this;
         }
-
         public Builder ruleIdentifier(@Nullable String ruleIdentifier) {
             this.ruleIdentifier = Output.ofNullable(ruleIdentifier);
             return this;
         }
-
         public Builder tagKeyScope(@Nullable Output<String> tagKeyScope) {
             this.tagKeyScope = tagKeyScope;
             return this;
         }
-
         public Builder tagKeyScope(@Nullable String tagKeyScope) {
             this.tagKeyScope = Output.ofNullable(tagKeyScope);
             return this;
         }
-
         public Builder tagValueScope(@Nullable Output<String> tagValueScope) {
             this.tagValueScope = tagValueScope;
             return this;
         }
-
         public Builder tagValueScope(@Nullable String tagValueScope) {
             this.tagValueScope = Output.ofNullable(tagValueScope);
             return this;
-        }
-        public OrganizationManagedRuleState build() {
+        }        public OrganizationManagedRuleState build() {
             return new OrganizationManagedRuleState(arn, description, excludedAccounts, inputParameters, maximumExecutionFrequency, name, resourceIdScope, resourceTypesScopes, ruleIdentifier, tagKeyScope, tagValueScope);
         }
     }

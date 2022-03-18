@@ -90,32 +90,26 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth);
             return this;
         }
-
         public Builder evaluateTargetHealth(Boolean evaluateTargetHealth) {
             this.evaluateTargetHealth = Output.of(Objects.requireNonNull(evaluateTargetHealth));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder zoneId(Output<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
-
         public Builder zoneId(String zoneId) {
             this.zoneId = Output.of(Objects.requireNonNull(zoneId));
             return this;
-        }
-        public RecordAliasArgs build() {
+        }        public RecordAliasArgs build() {
             return new RecordAliasArgs(evaluateTargetHealth, name, zoneId);
         }
     }

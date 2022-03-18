@@ -138,62 +138,50 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
             this.instanceArn = instanceArn;
             return this;
         }
-
         public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = Output.ofNullable(instanceArn);
             return this;
         }
-
         public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
-
         public Builder permissionSetArn(@Nullable String permissionSetArn) {
             this.permissionSetArn = Output.ofNullable(permissionSetArn);
             return this;
         }
-
         public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder principalType(@Nullable Output<String> principalType) {
             this.principalType = principalType;
             return this;
         }
-
         public Builder principalType(@Nullable String principalType) {
             this.principalType = Output.ofNullable(principalType);
             return this;
         }
-
         public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = Output.ofNullable(targetId);
             return this;
         }
-
         public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
-
         public Builder targetType(@Nullable String targetType) {
             this.targetType = Output.ofNullable(targetType);
             return this;
-        }
-        public AccountAssignmentState build() {
+        }        public AccountAssignmentState build() {
             return new AccountAssignmentState(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);
         }
     }

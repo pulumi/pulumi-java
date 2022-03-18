@@ -69,12 +69,10 @@ public final class ParameterGroupParameter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ParameterGroupParameter build() {
+        }        public ParameterGroupParameter build() {
             return new ParameterGroupParameter(name, value);
         }
     }

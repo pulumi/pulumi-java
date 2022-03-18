@@ -88,22 +88,18 @@ public final class GetClusterCacheNode {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public GetClusterCacheNode build() {
+        }        public GetClusterCacheNode build() {
             return new GetClusterCacheNode(address, availabilityZone, id, port);
         }
     }

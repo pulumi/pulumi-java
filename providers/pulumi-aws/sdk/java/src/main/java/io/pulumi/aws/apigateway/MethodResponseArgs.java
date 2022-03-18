@@ -142,57 +142,46 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
-
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
             this.responseModels = Output.ofNullable(responseModels);
             return this;
         }
-
         public Builder responseParameters(@Nullable Output<Map<String,Boolean>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder responseParameters(@Nullable Map<String,Boolean> responseParameters) {
             this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
-
         public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
-
         public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
-        }
-        public MethodResponseArgs build() {
+        }        public MethodResponseArgs build() {
             return new MethodResponseArgs(httpMethod, resourceId, responseModels, responseParameters, restApi, statusCode);
         }
     }

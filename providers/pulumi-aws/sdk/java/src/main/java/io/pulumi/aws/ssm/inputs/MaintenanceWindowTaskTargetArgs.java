@@ -70,22 +70,21 @@ public final class MaintenanceWindowTaskTargetArgs extends io.pulumi.resources.R
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public MaintenanceWindowTaskTargetArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public MaintenanceWindowTaskTargetArgs build() {
             return new MaintenanceWindowTaskTargetArgs(key, values);
         }
     }

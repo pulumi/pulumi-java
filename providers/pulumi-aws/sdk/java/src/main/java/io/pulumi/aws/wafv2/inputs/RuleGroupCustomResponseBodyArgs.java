@@ -89,32 +89,26 @@ public final class RuleGroupCustomResponseBodyArgs extends io.pulumi.resources.R
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
-        }
-        public RuleGroupCustomResponseBodyArgs build() {
+        }        public RuleGroupCustomResponseBodyArgs build() {
             return new RuleGroupCustomResponseBodyArgs(content, contentType, key);
         }
     }

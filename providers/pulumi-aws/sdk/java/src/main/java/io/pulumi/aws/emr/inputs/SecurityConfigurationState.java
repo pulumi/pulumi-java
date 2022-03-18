@@ -107,42 +107,34 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable String configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
-        }
-        public SecurityConfigurationState build() {
+        }        public SecurityConfigurationState build() {
             return new SecurityConfigurationState(configuration, creationDate, name, namePrefix);
         }
     }

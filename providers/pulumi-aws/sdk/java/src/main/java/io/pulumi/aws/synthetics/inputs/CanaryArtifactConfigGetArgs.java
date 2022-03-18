@@ -57,12 +57,10 @@ public final class CanaryArtifactConfigGetArgs extends io.pulumi.resources.Resou
             this.s3Encryption = s3Encryption;
             return this;
         }
-
         public Builder s3Encryption(@Nullable CanaryArtifactConfigS3EncryptionGetArgs s3Encryption) {
             this.s3Encryption = Output.ofNullable(s3Encryption);
             return this;
-        }
-        public CanaryArtifactConfigGetArgs build() {
+        }        public CanaryArtifactConfigGetArgs build() {
             return new CanaryArtifactConfigGetArgs(s3Encryption);
         }
     }

@@ -88,17 +88,17 @@ public final class UsagePlanApiStage {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder throttles(@Nullable List<UsagePlanApiStageThrottle> throttles) {
             this.throttles = throttles;
             return this;
         }
-        public UsagePlanApiStage build() {
+        public Builder throttles(UsagePlanApiStageThrottle... throttles) {
+            return throttles(List.of(throttles));
+        }        public UsagePlanApiStage build() {
             return new UsagePlanApiStage(apiId, stage, throttles);
         }
     }

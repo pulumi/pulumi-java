@@ -56,12 +56,10 @@ public final class VpcIpamOperatingRegionGetArgs extends io.pulumi.resources.Res
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
-
         public Builder regionName(String regionName) {
             this.regionName = Output.of(Objects.requireNonNull(regionName));
             return this;
-        }
-        public VpcIpamOperatingRegionGetArgs build() {
+        }        public VpcIpamOperatingRegionGetArgs build() {
             return new VpcIpamOperatingRegionGetArgs(regionName);
         }
     }

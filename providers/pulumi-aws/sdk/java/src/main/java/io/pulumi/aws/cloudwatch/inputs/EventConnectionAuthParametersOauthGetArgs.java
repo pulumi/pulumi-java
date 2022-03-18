@@ -108,42 +108,34 @@ public final class EventConnectionAuthParametersOauthGetArgs extends io.pulumi.r
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
-
         public Builder clientParameters(@Nullable Output<EventConnectionAuthParametersOauthClientParametersGetArgs> clientParameters) {
             this.clientParameters = clientParameters;
             return this;
         }
-
         public Builder clientParameters(@Nullable EventConnectionAuthParametersOauthClientParametersGetArgs clientParameters) {
             this.clientParameters = Output.ofNullable(clientParameters);
             return this;
         }
-
         public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
-
         public Builder oauthHttpParameters(Output<EventConnectionAuthParametersOauthOauthHttpParametersGetArgs> oauthHttpParameters) {
             this.oauthHttpParameters = Objects.requireNonNull(oauthHttpParameters);
             return this;
         }
-
         public Builder oauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParametersGetArgs oauthHttpParameters) {
             this.oauthHttpParameters = Output.of(Objects.requireNonNull(oauthHttpParameters));
             return this;
-        }
-        public EventConnectionAuthParametersOauthGetArgs build() {
+        }        public EventConnectionAuthParametersOauthGetArgs build() {
             return new EventConnectionAuthParametersOauthGetArgs(authorizationEndpoint, clientParameters, httpMethod, oauthHttpParameters);
         }
     }

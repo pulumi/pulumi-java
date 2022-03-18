@@ -89,32 +89,26 @@ public final class AnalyticsApplicationReferenceDataSourcesS3Args extends io.pul
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder bucketArn(String bucketArn) {
             this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
-
         public Builder fileKey(Output<String> fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
-
         public Builder fileKey(String fileKey) {
             this.fileKey = Output.of(Objects.requireNonNull(fileKey));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesS3Args build() {
+        }        public AnalyticsApplicationReferenceDataSourcesS3Args build() {
             return new AnalyticsApplicationReferenceDataSourcesS3Args(bucketArn, fileKey, roleArn);
         }
     }

@@ -121,37 +121,36 @@ public final class GetCoipPoolResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder filters(@Nullable List<GetCoipPoolFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetCoipPoolFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }
-
         public Builder poolCidrs(List<String> poolCidrs) {
             this.poolCidrs = Objects.requireNonNull(poolCidrs);
             return this;
         }
-
+        public Builder poolCidrs(String... poolCidrs) {
+            return poolCidrs(List.of(poolCidrs));
+        }
         public Builder poolId(String poolId) {
             this.poolId = Objects.requireNonNull(poolId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetCoipPoolResult build() {
+        }        public GetCoipPoolResult build() {
             return new GetCoipPoolResult(arn, filters, id, localGatewayRouteTableId, poolCidrs, poolId, tags);
         }
     }

@@ -106,42 +106,34 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public VpcEndpointServicePrivateDnsNameConfigurationArgs build() {
+        }        public VpcEndpointServicePrivateDnsNameConfigurationArgs build() {
             return new VpcEndpointServicePrivateDnsNameConfigurationArgs(name, state, type, value);
         }
     }

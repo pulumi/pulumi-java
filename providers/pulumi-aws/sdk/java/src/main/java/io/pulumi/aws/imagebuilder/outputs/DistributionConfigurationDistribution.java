@@ -106,22 +106,21 @@ public final class DistributionConfigurationDistribution {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
-
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
-
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
-
+        public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
+            return licenseConfigurationArns(List.of(licenseConfigurationArns));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public DistributionConfigurationDistribution build() {
+        }        public DistributionConfigurationDistribution build() {
             return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, licenseConfigurationArns, region);
         }
     }

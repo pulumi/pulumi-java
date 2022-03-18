@@ -78,12 +78,13 @@ public final class GetLocalGatewaysArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewaysFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetLocalGatewaysArgs build() {
+        }        public GetLocalGatewaysArgs build() {
             return new GetLocalGatewaysArgs(filters, tags);
         }
     }

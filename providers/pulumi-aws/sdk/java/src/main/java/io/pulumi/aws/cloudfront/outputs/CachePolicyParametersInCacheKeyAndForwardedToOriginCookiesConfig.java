@@ -72,12 +72,10 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
-
         public Builder cookies(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies cookies) {
             this.cookies = cookies;
             return this;
-        }
-        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig build() {
+        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(cookieBehavior, cookies);
         }
     }

@@ -75,22 +75,18 @@ public final class TableTtlGetArgs extends io.pulumi.resources.ResourceArgs {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder attributeName(String attributeName) {
             this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public TableTtlGetArgs build() {
+        }        public TableTtlGetArgs build() {
             return new TableTtlGetArgs(attributeName, enabled);
         }
     }

@@ -194,92 +194,80 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
             this.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
             return this;
         }
-
         public Builder abortIncompleteMultipartUploadDays(@Nullable Integer abortIncompleteMultipartUploadDays) {
             this.abortIncompleteMultipartUploadDays = Output.ofNullable(abortIncompleteMultipartUploadDays);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder expiration(@Nullable Output<BucketLifecycleRuleExpirationArgs> expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder expiration(@Nullable BucketLifecycleRuleExpirationArgs expiration) {
             this.expiration = Output.ofNullable(expiration);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder noncurrentVersionExpiration(@Nullable Output<BucketLifecycleRuleNoncurrentVersionExpirationArgs> noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
-
         public Builder noncurrentVersionExpiration(@Nullable BucketLifecycleRuleNoncurrentVersionExpirationArgs noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = Output.ofNullable(noncurrentVersionExpiration);
             return this;
         }
-
         public Builder noncurrentVersionTransitions(@Nullable Output<List<BucketLifecycleRuleNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
-
         public Builder noncurrentVersionTransitions(@Nullable List<BucketLifecycleRuleNoncurrentVersionTransitionArgs> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = Output.ofNullable(noncurrentVersionTransitions);
             return this;
         }
-
+        public Builder noncurrentVersionTransitions(BucketLifecycleRuleNoncurrentVersionTransitionArgs... noncurrentVersionTransitions) {
+            return noncurrentVersionTransitions(List.of(noncurrentVersionTransitions));
+        }
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transitions(@Nullable Output<List<BucketLifecycleRuleTransitionArgs>> transitions) {
             this.transitions = transitions;
             return this;
         }
-
         public Builder transitions(@Nullable List<BucketLifecycleRuleTransitionArgs> transitions) {
             this.transitions = Output.ofNullable(transitions);
             return this;
         }
-        public BucketLifecycleRuleArgs build() {
+        public Builder transitions(BucketLifecycleRuleTransitionArgs... transitions) {
+            return transitions(List.of(transitions));
+        }        public BucketLifecycleRuleArgs build() {
             return new BucketLifecycleRuleArgs(abortIncompleteMultipartUploadDays, enabled, expiration, id, noncurrentVersionExpiration, noncurrentVersionTransitions, prefix, tags, transitions);
         }
     }

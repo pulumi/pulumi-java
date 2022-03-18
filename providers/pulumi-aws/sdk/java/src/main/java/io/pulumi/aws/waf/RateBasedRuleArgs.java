@@ -142,62 +142,53 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder predicates(@Nullable Output<List<RateBasedRulePredicateArgs>> predicates) {
             this.predicates = predicates;
             return this;
         }
-
         public Builder predicates(@Nullable List<RateBasedRulePredicateArgs> predicates) {
             this.predicates = Output.ofNullable(predicates);
             return this;
         }
-
+        public Builder predicates(RateBasedRulePredicateArgs... predicates) {
+            return predicates(List.of(predicates));
+        }
         public Builder rateKey(Output<String> rateKey) {
             this.rateKey = Objects.requireNonNull(rateKey);
             return this;
         }
-
         public Builder rateKey(String rateKey) {
             this.rateKey = Output.of(Objects.requireNonNull(rateKey));
             return this;
         }
-
         public Builder rateLimit(Output<Integer> rateLimit) {
             this.rateLimit = Objects.requireNonNull(rateLimit);
             return this;
         }
-
         public Builder rateLimit(Integer rateLimit) {
             this.rateLimit = Output.of(Objects.requireNonNull(rateLimit));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RateBasedRuleArgs build() {
+        }        public RateBasedRuleArgs build() {
             return new RateBasedRuleArgs(metricName, name, predicates, rateKey, rateLimit, tags);
         }
     }

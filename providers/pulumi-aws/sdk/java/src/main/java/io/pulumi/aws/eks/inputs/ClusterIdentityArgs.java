@@ -58,12 +58,13 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.oidcs = oidcs;
             return this;
         }
-
         public Builder oidcs(@Nullable List<ClusterIdentityOidcArgs> oidcs) {
             this.oidcs = Output.ofNullable(oidcs);
             return this;
         }
-        public ClusterIdentityArgs build() {
+        public Builder oidcs(ClusterIdentityOidcArgs... oidcs) {
+            return oidcs(List.of(oidcs));
+        }        public ClusterIdentityArgs build() {
             return new ClusterIdentityArgs(oidcs);
         }
     }

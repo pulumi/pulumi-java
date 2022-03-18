@@ -86,32 +86,26 @@ public final class OpenZfsVolumeUserAndGroupQuotaGetArgs extends io.pulumi.resou
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(Integer id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder storageCapacityQuotaGib(Output<Integer> storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib);
             return this;
         }
-
         public Builder storageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Output.of(Objects.requireNonNull(storageCapacityQuotaGib));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public OpenZfsVolumeUserAndGroupQuotaGetArgs build() {
+        }        public OpenZfsVolumeUserAndGroupQuotaGetArgs build() {
             return new OpenZfsVolumeUserAndGroupQuotaGetArgs(id, storageCapacityQuotaGib, type);
         }
     }

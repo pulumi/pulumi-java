@@ -57,12 +57,10 @@ public final class GlobalSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.globalSettings = Objects.requireNonNull(globalSettings);
             return this;
         }
-
         public Builder globalSettings(Map<String,String> globalSettings) {
             this.globalSettings = Output.of(Objects.requireNonNull(globalSettings));
             return this;
-        }
-        public GlobalSettingsArgs build() {
+        }        public GlobalSettingsArgs build() {
             return new GlobalSettingsArgs(globalSettings);
         }
     }

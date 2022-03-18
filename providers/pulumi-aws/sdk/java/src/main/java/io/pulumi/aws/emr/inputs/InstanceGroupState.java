@@ -214,112 +214,93 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-
         public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
             this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
-
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
-
         public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = Output.ofNullable(bidPrice);
             return this;
         }
-
         public Builder clusterId(@Nullable Output<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
-
         public Builder configurationsJson(@Nullable Output<String> configurationsJson) {
             this.configurationsJson = configurationsJson;
             return this;
         }
-
         public Builder configurationsJson(@Nullable String configurationsJson) {
             this.configurationsJson = Output.ofNullable(configurationsJson);
             return this;
         }
-
         public Builder ebsConfigs(@Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
-
         public Builder ebsConfigs(@Nullable List<InstanceGroupEbsConfigGetArgs> ebsConfigs) {
             this.ebsConfigs = Output.ofNullable(ebsConfigs);
             return this;
         }
-
+        public Builder ebsConfigs(InstanceGroupEbsConfigGetArgs... ebsConfigs) {
+            return ebsConfigs(List.of(ebsConfigs));
+        }
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
-
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder runningInstanceCount(@Nullable Output<Integer> runningInstanceCount) {
             this.runningInstanceCount = runningInstanceCount;
             return this;
         }
-
         public Builder runningInstanceCount(@Nullable Integer runningInstanceCount) {
             this.runningInstanceCount = Output.ofNullable(runningInstanceCount);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public InstanceGroupState build() {
+        }        public InstanceGroupState build() {
             return new InstanceGroupState(autoscalingPolicy, bidPrice, clusterId, configurationsJson, ebsConfigs, ebsOptimized, instanceCount, instanceType, name, runningInstanceCount, status);
         }
     }

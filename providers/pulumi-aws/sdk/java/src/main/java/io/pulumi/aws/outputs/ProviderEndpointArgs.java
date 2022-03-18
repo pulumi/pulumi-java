@@ -2146,1507 +2146,1206 @@ public final class ProviderEndpointArgs {
             this.accessanalyzer = accessanalyzer;
             return this;
         }
-
         public Builder account(@Nullable Output<String> account) {
             this.account = account;
             return this;
         }
-
         public Builder acm(@Nullable Output<String> acm) {
             this.acm = acm;
             return this;
         }
-
         public Builder acmpca(@Nullable Output<String> acmpca) {
             this.acmpca = acmpca;
             return this;
         }
-
         public Builder alexaforbusiness(@Nullable Output<String> alexaforbusiness) {
             this.alexaforbusiness = alexaforbusiness;
             return this;
         }
-
         public Builder amp(@Nullable Output<String> amp) {
             this.amp = amp;
             return this;
         }
-
         public Builder amplify(@Nullable Output<String> amplify) {
             this.amplify = amplify;
             return this;
         }
-
         public Builder amplifybackend(@Nullable Output<String> amplifybackend) {
             this.amplifybackend = amplifybackend;
             return this;
         }
-
         public Builder apigateway(@Nullable Output<String> apigateway) {
             this.apigateway = apigateway;
             return this;
         }
-
         public Builder apigatewayv2(@Nullable Output<String> apigatewayv2) {
             this.apigatewayv2 = apigatewayv2;
             return this;
         }
-
         public Builder appautoscaling(@Nullable Output<String> appautoscaling) {
             this.appautoscaling = appautoscaling;
             return this;
         }
-
         public Builder appconfig(@Nullable Output<String> appconfig) {
             this.appconfig = appconfig;
             return this;
         }
-
         public Builder appflow(@Nullable Output<String> appflow) {
             this.appflow = appflow;
             return this;
         }
-
         public Builder appintegrations(@Nullable Output<String> appintegrations) {
             this.appintegrations = appintegrations;
             return this;
         }
-
         public Builder appintegrationsservice(@Nullable Output<String> appintegrationsservice) {
             this.appintegrationsservice = appintegrationsservice;
             return this;
         }
-
         public Builder applicationautoscaling(@Nullable Output<String> applicationautoscaling) {
             this.applicationautoscaling = applicationautoscaling;
             return this;
         }
-
         public Builder applicationcostprofiler(@Nullable Output<String> applicationcostprofiler) {
             this.applicationcostprofiler = applicationcostprofiler;
             return this;
         }
-
         public Builder applicationdiscovery(@Nullable Output<String> applicationdiscovery) {
             this.applicationdiscovery = applicationdiscovery;
             return this;
         }
-
         public Builder applicationdiscoveryservice(@Nullable Output<String> applicationdiscoveryservice) {
             this.applicationdiscoveryservice = applicationdiscoveryservice;
             return this;
         }
-
         public Builder applicationinsights(@Nullable Output<String> applicationinsights) {
             this.applicationinsights = applicationinsights;
             return this;
         }
-
         public Builder appmesh(@Nullable Output<String> appmesh) {
             this.appmesh = appmesh;
             return this;
         }
-
         public Builder appregistry(@Nullable Output<String> appregistry) {
             this.appregistry = appregistry;
             return this;
         }
-
         public Builder apprunner(@Nullable Output<String> apprunner) {
             this.apprunner = apprunner;
             return this;
         }
-
         public Builder appstream(@Nullable Output<String> appstream) {
             this.appstream = appstream;
             return this;
         }
-
         public Builder appsync(@Nullable Output<String> appsync) {
             this.appsync = appsync;
             return this;
         }
-
         public Builder athena(@Nullable Output<String> athena) {
             this.athena = athena;
             return this;
         }
-
         public Builder auditmanager(@Nullable Output<String> auditmanager) {
             this.auditmanager = auditmanager;
             return this;
         }
-
         public Builder augmentedairuntime(@Nullable Output<String> augmentedairuntime) {
             this.augmentedairuntime = augmentedairuntime;
             return this;
         }
-
         public Builder autoscaling(@Nullable Output<String> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
-
         public Builder autoscalingplans(@Nullable Output<String> autoscalingplans) {
             this.autoscalingplans = autoscalingplans;
             return this;
         }
-
         public Builder backup(@Nullable Output<String> backup) {
             this.backup = backup;
             return this;
         }
-
         public Builder batch(@Nullable Output<String> batch) {
             this.batch = batch;
             return this;
         }
-
         public Builder braket(@Nullable Output<String> braket) {
             this.braket = braket;
             return this;
         }
-
         public Builder budgets(@Nullable Output<String> budgets) {
             this.budgets = budgets;
             return this;
         }
-
         public Builder chime(@Nullable Output<String> chime) {
             this.chime = chime;
             return this;
         }
-
         public Builder cloud9(@Nullable Output<String> cloud9) {
             this.cloud9 = cloud9;
             return this;
         }
-
         public Builder cloudcontrol(@Nullable Output<String> cloudcontrol) {
             this.cloudcontrol = cloudcontrol;
             return this;
         }
-
         public Builder cloudcontrolapi(@Nullable Output<String> cloudcontrolapi) {
             this.cloudcontrolapi = cloudcontrolapi;
             return this;
         }
-
         public Builder clouddirectory(@Nullable Output<String> clouddirectory) {
             this.clouddirectory = clouddirectory;
             return this;
         }
-
         public Builder cloudformation(@Nullable Output<String> cloudformation) {
             this.cloudformation = cloudformation;
             return this;
         }
-
         public Builder cloudfront(@Nullable Output<String> cloudfront) {
             this.cloudfront = cloudfront;
             return this;
         }
-
         public Builder cloudhsm(@Nullable Output<String> cloudhsm) {
             this.cloudhsm = cloudhsm;
             return this;
         }
-
         public Builder cloudhsmv2(@Nullable Output<String> cloudhsmv2) {
             this.cloudhsmv2 = cloudhsmv2;
             return this;
         }
-
         public Builder cloudsearch(@Nullable Output<String> cloudsearch) {
             this.cloudsearch = cloudsearch;
             return this;
         }
-
         public Builder cloudsearchdomain(@Nullable Output<String> cloudsearchdomain) {
             this.cloudsearchdomain = cloudsearchdomain;
             return this;
         }
-
         public Builder cloudtrail(@Nullable Output<String> cloudtrail) {
             this.cloudtrail = cloudtrail;
             return this;
         }
-
         public Builder cloudwatch(@Nullable Output<String> cloudwatch) {
             this.cloudwatch = cloudwatch;
             return this;
         }
-
         public Builder cloudwatchevents(@Nullable Output<String> cloudwatchevents) {
             this.cloudwatchevents = cloudwatchevents;
             return this;
         }
-
         public Builder cloudwatchlogs(@Nullable Output<String> cloudwatchlogs) {
             this.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
-
         public Builder codeartifact(@Nullable Output<String> codeartifact) {
             this.codeartifact = codeartifact;
             return this;
         }
-
         public Builder codebuild(@Nullable Output<String> codebuild) {
             this.codebuild = codebuild;
             return this;
         }
-
         public Builder codecommit(@Nullable Output<String> codecommit) {
             this.codecommit = codecommit;
             return this;
         }
-
         public Builder codedeploy(@Nullable Output<String> codedeploy) {
             this.codedeploy = codedeploy;
             return this;
         }
-
         public Builder codeguruprofiler(@Nullable Output<String> codeguruprofiler) {
             this.codeguruprofiler = codeguruprofiler;
             return this;
         }
-
         public Builder codegurureviewer(@Nullable Output<String> codegurureviewer) {
             this.codegurureviewer = codegurureviewer;
             return this;
         }
-
         public Builder codepipeline(@Nullable Output<String> codepipeline) {
             this.codepipeline = codepipeline;
             return this;
         }
-
         public Builder codestar(@Nullable Output<String> codestar) {
             this.codestar = codestar;
             return this;
         }
-
         public Builder codestarconnections(@Nullable Output<String> codestarconnections) {
             this.codestarconnections = codestarconnections;
             return this;
         }
-
         public Builder codestarnotifications(@Nullable Output<String> codestarnotifications) {
             this.codestarnotifications = codestarnotifications;
             return this;
         }
-
         public Builder cognitoidentity(@Nullable Output<String> cognitoidentity) {
             this.cognitoidentity = cognitoidentity;
             return this;
         }
-
         public Builder cognitoidentityprovider(@Nullable Output<String> cognitoidentityprovider) {
             this.cognitoidentityprovider = cognitoidentityprovider;
             return this;
         }
-
         public Builder cognitoidp(@Nullable Output<String> cognitoidp) {
             this.cognitoidp = cognitoidp;
             return this;
         }
-
         public Builder cognitosync(@Nullable Output<String> cognitosync) {
             this.cognitosync = cognitosync;
             return this;
         }
-
         public Builder comprehend(@Nullable Output<String> comprehend) {
             this.comprehend = comprehend;
             return this;
         }
-
         public Builder comprehendmedical(@Nullable Output<String> comprehendmedical) {
             this.comprehendmedical = comprehendmedical;
             return this;
         }
-
         public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
-
         public Builder configservice(@Nullable Output<String> configservice) {
             this.configservice = configservice;
             return this;
         }
-
         public Builder connect(@Nullable Output<String> connect) {
             this.connect = connect;
             return this;
         }
-
         public Builder connectcontactlens(@Nullable Output<String> connectcontactlens) {
             this.connectcontactlens = connectcontactlens;
             return this;
         }
-
         public Builder connectparticipant(@Nullable Output<String> connectparticipant) {
             this.connectparticipant = connectparticipant;
             return this;
         }
-
         public Builder costandusagereportservice(@Nullable Output<String> costandusagereportservice) {
             this.costandusagereportservice = costandusagereportservice;
             return this;
         }
-
         public Builder costexplorer(@Nullable Output<String> costexplorer) {
             this.costexplorer = costexplorer;
             return this;
         }
-
         public Builder cur(@Nullable Output<String> cur) {
             this.cur = cur;
             return this;
         }
-
         public Builder databasemigration(@Nullable Output<String> databasemigration) {
             this.databasemigration = databasemigration;
             return this;
         }
-
         public Builder databasemigrationservice(@Nullable Output<String> databasemigrationservice) {
             this.databasemigrationservice = databasemigrationservice;
             return this;
         }
-
         public Builder dataexchange(@Nullable Output<String> dataexchange) {
             this.dataexchange = dataexchange;
             return this;
         }
-
         public Builder datapipeline(@Nullable Output<String> datapipeline) {
             this.datapipeline = datapipeline;
             return this;
         }
-
         public Builder datasync(@Nullable Output<String> datasync) {
             this.datasync = datasync;
             return this;
         }
-
         public Builder dax(@Nullable Output<String> dax) {
             this.dax = dax;
             return this;
         }
-
         public Builder detective(@Nullable Output<String> detective) {
             this.detective = detective;
             return this;
         }
-
         public Builder devicefarm(@Nullable Output<String> devicefarm) {
             this.devicefarm = devicefarm;
             return this;
         }
-
         public Builder devopsguru(@Nullable Output<String> devopsguru) {
             this.devopsguru = devopsguru;
             return this;
         }
-
         public Builder directconnect(@Nullable Output<String> directconnect) {
             this.directconnect = directconnect;
             return this;
         }
-
         public Builder dlm(@Nullable Output<String> dlm) {
             this.dlm = dlm;
             return this;
         }
-
         public Builder dms(@Nullable Output<String> dms) {
             this.dms = dms;
             return this;
         }
-
         public Builder docdb(@Nullable Output<String> docdb) {
             this.docdb = docdb;
             return this;
         }
-
         public Builder ds(@Nullable Output<String> ds) {
             this.ds = ds;
             return this;
         }
-
         public Builder dynamodb(@Nullable Output<String> dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
-
         public Builder dynamodbstreams(@Nullable Output<String> dynamodbstreams) {
             this.dynamodbstreams = dynamodbstreams;
             return this;
         }
-
         public Builder ec2(@Nullable Output<String> ec2) {
             this.ec2 = ec2;
             return this;
         }
-
         public Builder ec2instanceconnect(@Nullable Output<String> ec2instanceconnect) {
             this.ec2instanceconnect = ec2instanceconnect;
             return this;
         }
-
         public Builder ecr(@Nullable Output<String> ecr) {
             this.ecr = ecr;
             return this;
         }
-
         public Builder ecrpublic(@Nullable Output<String> ecrpublic) {
             this.ecrpublic = ecrpublic;
             return this;
         }
-
         public Builder ecs(@Nullable Output<String> ecs) {
             this.ecs = ecs;
             return this;
         }
-
         public Builder efs(@Nullable Output<String> efs) {
             this.efs = efs;
             return this;
         }
-
         public Builder eks(@Nullable Output<String> eks) {
             this.eks = eks;
             return this;
         }
-
         public Builder elasticache(@Nullable Output<String> elasticache) {
             this.elasticache = elasticache;
             return this;
         }
-
         public Builder elasticbeanstalk(@Nullable Output<String> elasticbeanstalk) {
             this.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
-
         public Builder elasticinference(@Nullable Output<String> elasticinference) {
             this.elasticinference = elasticinference;
             return this;
         }
-
         public Builder elasticsearch(@Nullable Output<String> elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
-
         public Builder elasticsearchservice(@Nullable Output<String> elasticsearchservice) {
             this.elasticsearchservice = elasticsearchservice;
             return this;
         }
-
         public Builder elastictranscoder(@Nullable Output<String> elastictranscoder) {
             this.elastictranscoder = elastictranscoder;
             return this;
         }
-
         public Builder elb(@Nullable Output<String> elb) {
             this.elb = elb;
             return this;
         }
-
         public Builder elbv2(@Nullable Output<String> elbv2) {
             this.elbv2 = elbv2;
             return this;
         }
-
         public Builder emr(@Nullable Output<String> emr) {
             this.emr = emr;
             return this;
         }
-
         public Builder emrcontainers(@Nullable Output<String> emrcontainers) {
             this.emrcontainers = emrcontainers;
             return this;
         }
-
         public Builder es(@Nullable Output<String> es) {
             this.es = es;
             return this;
         }
-
         public Builder eventbridge(@Nullable Output<String> eventbridge) {
             this.eventbridge = eventbridge;
             return this;
         }
-
         public Builder events(@Nullable Output<String> events) {
             this.events = events;
             return this;
         }
-
         public Builder finspace(@Nullable Output<String> finspace) {
             this.finspace = finspace;
             return this;
         }
-
         public Builder finspacedata(@Nullable Output<String> finspacedata) {
             this.finspacedata = finspacedata;
             return this;
         }
-
         public Builder firehose(@Nullable Output<String> firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder fis(@Nullable Output<String> fis) {
             this.fis = fis;
             return this;
         }
-
         public Builder fms(@Nullable Output<String> fms) {
             this.fms = fms;
             return this;
         }
-
         public Builder forecast(@Nullable Output<String> forecast) {
             this.forecast = forecast;
             return this;
         }
-
         public Builder forecastquery(@Nullable Output<String> forecastquery) {
             this.forecastquery = forecastquery;
             return this;
         }
-
         public Builder forecastqueryservice(@Nullable Output<String> forecastqueryservice) {
             this.forecastqueryservice = forecastqueryservice;
             return this;
         }
-
         public Builder forecastservice(@Nullable Output<String> forecastservice) {
             this.forecastservice = forecastservice;
             return this;
         }
-
         public Builder frauddetector(@Nullable Output<String> frauddetector) {
             this.frauddetector = frauddetector;
             return this;
         }
-
         public Builder fsx(@Nullable Output<String> fsx) {
             this.fsx = fsx;
             return this;
         }
-
         public Builder gamelift(@Nullable Output<String> gamelift) {
             this.gamelift = gamelift;
             return this;
         }
-
         public Builder glacier(@Nullable Output<String> glacier) {
             this.glacier = glacier;
             return this;
         }
-
         public Builder globalaccelerator(@Nullable Output<String> globalaccelerator) {
             this.globalaccelerator = globalaccelerator;
             return this;
         }
-
         public Builder glue(@Nullable Output<String> glue) {
             this.glue = glue;
             return this;
         }
-
         public Builder gluedatabrew(@Nullable Output<String> gluedatabrew) {
             this.gluedatabrew = gluedatabrew;
             return this;
         }
-
         public Builder greengrass(@Nullable Output<String> greengrass) {
             this.greengrass = greengrass;
             return this;
         }
-
         public Builder greengrassv2(@Nullable Output<String> greengrassv2) {
             this.greengrassv2 = greengrassv2;
             return this;
         }
-
         public Builder groundstation(@Nullable Output<String> groundstation) {
             this.groundstation = groundstation;
             return this;
         }
-
         public Builder guardduty(@Nullable Output<String> guardduty) {
             this.guardduty = guardduty;
             return this;
         }
-
         public Builder health(@Nullable Output<String> health) {
             this.health = health;
             return this;
         }
-
         public Builder healthlake(@Nullable Output<String> healthlake) {
             this.healthlake = healthlake;
             return this;
         }
-
         public Builder honeycode(@Nullable Output<String> honeycode) {
             this.honeycode = honeycode;
             return this;
         }
-
         public Builder iam(@Nullable Output<String> iam) {
             this.iam = iam;
             return this;
         }
-
         public Builder identitystore(@Nullable Output<String> identitystore) {
             this.identitystore = identitystore;
             return this;
         }
-
         public Builder imagebuilder(@Nullable Output<String> imagebuilder) {
             this.imagebuilder = imagebuilder;
             return this;
         }
-
         public Builder inspector(@Nullable Output<String> inspector) {
             this.inspector = inspector;
             return this;
         }
-
         public Builder iot(@Nullable Output<String> iot) {
             this.iot = iot;
             return this;
         }
-
         public Builder iot1clickdevices(@Nullable Output<String> iot1clickdevices) {
             this.iot1clickdevices = iot1clickdevices;
             return this;
         }
-
         public Builder iot1clickdevicesservice(@Nullable Output<String> iot1clickdevicesservice) {
             this.iot1clickdevicesservice = iot1clickdevicesservice;
             return this;
         }
-
         public Builder iot1clickprojects(@Nullable Output<String> iot1clickprojects) {
             this.iot1clickprojects = iot1clickprojects;
             return this;
         }
-
         public Builder iotanalytics(@Nullable Output<String> iotanalytics) {
             this.iotanalytics = iotanalytics;
             return this;
         }
-
         public Builder iotdataplane(@Nullable Output<String> iotdataplane) {
             this.iotdataplane = iotdataplane;
             return this;
         }
-
         public Builder iotdeviceadvisor(@Nullable Output<String> iotdeviceadvisor) {
             this.iotdeviceadvisor = iotdeviceadvisor;
             return this;
         }
-
         public Builder iotevents(@Nullable Output<String> iotevents) {
             this.iotevents = iotevents;
             return this;
         }
-
         public Builder ioteventsdata(@Nullable Output<String> ioteventsdata) {
             this.ioteventsdata = ioteventsdata;
             return this;
         }
-
         public Builder iotfleethub(@Nullable Output<String> iotfleethub) {
             this.iotfleethub = iotfleethub;
             return this;
         }
-
         public Builder iotjobsdataplane(@Nullable Output<String> iotjobsdataplane) {
             this.iotjobsdataplane = iotjobsdataplane;
             return this;
         }
-
         public Builder iotsecuretunneling(@Nullable Output<String> iotsecuretunneling) {
             this.iotsecuretunneling = iotsecuretunneling;
             return this;
         }
-
         public Builder iotsitewise(@Nullable Output<String> iotsitewise) {
             this.iotsitewise = iotsitewise;
             return this;
         }
-
         public Builder iotthingsgraph(@Nullable Output<String> iotthingsgraph) {
             this.iotthingsgraph = iotthingsgraph;
             return this;
         }
-
         public Builder iotwireless(@Nullable Output<String> iotwireless) {
             this.iotwireless = iotwireless;
             return this;
         }
-
         public Builder kafka(@Nullable Output<String> kafka) {
             this.kafka = kafka;
             return this;
         }
-
         public Builder kafkaconnect(@Nullable Output<String> kafkaconnect) {
             this.kafkaconnect = kafkaconnect;
             return this;
         }
-
         public Builder kendra(@Nullable Output<String> kendra) {
             this.kendra = kendra;
             return this;
         }
-
         public Builder kinesis(@Nullable Output<String> kinesis) {
             this.kinesis = kinesis;
             return this;
         }
-
         public Builder kinesisanalytics(@Nullable Output<String> kinesisanalytics) {
             this.kinesisanalytics = kinesisanalytics;
             return this;
         }
-
         public Builder kinesisanalyticsv2(@Nullable Output<String> kinesisanalyticsv2) {
             this.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
-
         public Builder kinesisvideo(@Nullable Output<String> kinesisvideo) {
             this.kinesisvideo = kinesisvideo;
             return this;
         }
-
         public Builder kinesisvideoarchivedmedia(@Nullable Output<String> kinesisvideoarchivedmedia) {
             this.kinesisvideoarchivedmedia = kinesisvideoarchivedmedia;
             return this;
         }
-
         public Builder kinesisvideomedia(@Nullable Output<String> kinesisvideomedia) {
             this.kinesisvideomedia = kinesisvideomedia;
             return this;
         }
-
         public Builder kinesisvideosignalingchannels(@Nullable Output<String> kinesisvideosignalingchannels) {
             this.kinesisvideosignalingchannels = kinesisvideosignalingchannels;
             return this;
         }
-
         public Builder kms(@Nullable Output<String> kms) {
             this.kms = kms;
             return this;
         }
-
         public Builder lakeformation(@Nullable Output<String> lakeformation) {
             this.lakeformation = lakeformation;
             return this;
         }
-
         public Builder lambda(@Nullable Output<String> lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder lexmodelbuilding(@Nullable Output<String> lexmodelbuilding) {
             this.lexmodelbuilding = lexmodelbuilding;
             return this;
         }
-
         public Builder lexmodelbuildingservice(@Nullable Output<String> lexmodelbuildingservice) {
             this.lexmodelbuildingservice = lexmodelbuildingservice;
             return this;
         }
-
         public Builder lexmodels(@Nullable Output<String> lexmodels) {
             this.lexmodels = lexmodels;
             return this;
         }
-
         public Builder lexmodelsv2(@Nullable Output<String> lexmodelsv2) {
             this.lexmodelsv2 = lexmodelsv2;
             return this;
         }
-
         public Builder lexruntime(@Nullable Output<String> lexruntime) {
             this.lexruntime = lexruntime;
             return this;
         }
-
         public Builder lexruntimeservice(@Nullable Output<String> lexruntimeservice) {
             this.lexruntimeservice = lexruntimeservice;
             return this;
         }
-
         public Builder lexruntimev2(@Nullable Output<String> lexruntimev2) {
             this.lexruntimev2 = lexruntimev2;
             return this;
         }
-
         public Builder licensemanager(@Nullable Output<String> licensemanager) {
             this.licensemanager = licensemanager;
             return this;
         }
-
         public Builder lightsail(@Nullable Output<String> lightsail) {
             this.lightsail = lightsail;
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder lookoutequipment(@Nullable Output<String> lookoutequipment) {
             this.lookoutequipment = lookoutequipment;
             return this;
         }
-
         public Builder lookoutforvision(@Nullable Output<String> lookoutforvision) {
             this.lookoutforvision = lookoutforvision;
             return this;
         }
-
         public Builder lookoutmetrics(@Nullable Output<String> lookoutmetrics) {
             this.lookoutmetrics = lookoutmetrics;
             return this;
         }
-
         public Builder machinelearning(@Nullable Output<String> machinelearning) {
             this.machinelearning = machinelearning;
             return this;
         }
-
         public Builder macie(@Nullable Output<String> macie) {
             this.macie = macie;
             return this;
         }
-
         public Builder macie2(@Nullable Output<String> macie2) {
             this.macie2 = macie2;
             return this;
         }
-
         public Builder managedblockchain(@Nullable Output<String> managedblockchain) {
             this.managedblockchain = managedblockchain;
             return this;
         }
-
         public Builder marketplacecatalog(@Nullable Output<String> marketplacecatalog) {
             this.marketplacecatalog = marketplacecatalog;
             return this;
         }
-
         public Builder marketplacecommerceanalytics(@Nullable Output<String> marketplacecommerceanalytics) {
             this.marketplacecommerceanalytics = marketplacecommerceanalytics;
             return this;
         }
-
         public Builder marketplaceentitlement(@Nullable Output<String> marketplaceentitlement) {
             this.marketplaceentitlement = marketplaceentitlement;
             return this;
         }
-
         public Builder marketplaceentitlementservice(@Nullable Output<String> marketplaceentitlementservice) {
             this.marketplaceentitlementservice = marketplaceentitlementservice;
             return this;
         }
-
         public Builder marketplacemetering(@Nullable Output<String> marketplacemetering) {
             this.marketplacemetering = marketplacemetering;
             return this;
         }
-
         public Builder mediaconnect(@Nullable Output<String> mediaconnect) {
             this.mediaconnect = mediaconnect;
             return this;
         }
-
         public Builder mediaconvert(@Nullable Output<String> mediaconvert) {
             this.mediaconvert = mediaconvert;
             return this;
         }
-
         public Builder medialive(@Nullable Output<String> medialive) {
             this.medialive = medialive;
             return this;
         }
-
         public Builder mediapackage(@Nullable Output<String> mediapackage) {
             this.mediapackage = mediapackage;
             return this;
         }
-
         public Builder mediapackagevod(@Nullable Output<String> mediapackagevod) {
             this.mediapackagevod = mediapackagevod;
             return this;
         }
-
         public Builder mediastore(@Nullable Output<String> mediastore) {
             this.mediastore = mediastore;
             return this;
         }
-
         public Builder mediastoredata(@Nullable Output<String> mediastoredata) {
             this.mediastoredata = mediastoredata;
             return this;
         }
-
         public Builder mediatailor(@Nullable Output<String> mediatailor) {
             this.mediatailor = mediatailor;
             return this;
         }
-
         public Builder memorydb(@Nullable Output<String> memorydb) {
             this.memorydb = memorydb;
             return this;
         }
-
         public Builder mgn(@Nullable Output<String> mgn) {
             this.mgn = mgn;
             return this;
         }
-
         public Builder migrationhub(@Nullable Output<String> migrationhub) {
             this.migrationhub = migrationhub;
             return this;
         }
-
         public Builder migrationhubconfig(@Nullable Output<String> migrationhubconfig) {
             this.migrationhubconfig = migrationhubconfig;
             return this;
         }
-
         public Builder mobile(@Nullable Output<String> mobile) {
             this.mobile = mobile;
             return this;
         }
-
         public Builder mobileanalytics(@Nullable Output<String> mobileanalytics) {
             this.mobileanalytics = mobileanalytics;
             return this;
         }
-
         public Builder mq(@Nullable Output<String> mq) {
             this.mq = mq;
             return this;
         }
-
         public Builder mturk(@Nullable Output<String> mturk) {
             this.mturk = mturk;
             return this;
         }
-
         public Builder mwaa(@Nullable Output<String> mwaa) {
             this.mwaa = mwaa;
             return this;
         }
-
         public Builder neptune(@Nullable Output<String> neptune) {
             this.neptune = neptune;
             return this;
         }
-
         public Builder networkfirewall(@Nullable Output<String> networkfirewall) {
             this.networkfirewall = networkfirewall;
             return this;
         }
-
         public Builder networkmanager(@Nullable Output<String> networkmanager) {
             this.networkmanager = networkmanager;
             return this;
         }
-
         public Builder nimblestudio(@Nullable Output<String> nimblestudio) {
             this.nimblestudio = nimblestudio;
             return this;
         }
-
         public Builder opsworks(@Nullable Output<String> opsworks) {
             this.opsworks = opsworks;
             return this;
         }
-
         public Builder opsworkscm(@Nullable Output<String> opsworkscm) {
             this.opsworkscm = opsworkscm;
             return this;
         }
-
         public Builder organizations(@Nullable Output<String> organizations) {
             this.organizations = organizations;
             return this;
         }
-
         public Builder outposts(@Nullable Output<String> outposts) {
             this.outposts = outposts;
             return this;
         }
-
         public Builder personalize(@Nullable Output<String> personalize) {
             this.personalize = personalize;
             return this;
         }
-
         public Builder personalizeevents(@Nullable Output<String> personalizeevents) {
             this.personalizeevents = personalizeevents;
             return this;
         }
-
         public Builder personalizeruntime(@Nullable Output<String> personalizeruntime) {
             this.personalizeruntime = personalizeruntime;
             return this;
         }
-
         public Builder pi(@Nullable Output<String> pi) {
             this.pi = pi;
             return this;
         }
-
         public Builder pinpoint(@Nullable Output<String> pinpoint) {
             this.pinpoint = pinpoint;
             return this;
         }
-
         public Builder pinpointemail(@Nullable Output<String> pinpointemail) {
             this.pinpointemail = pinpointemail;
             return this;
         }
-
         public Builder pinpointsmsvoice(@Nullable Output<String> pinpointsmsvoice) {
             this.pinpointsmsvoice = pinpointsmsvoice;
             return this;
         }
-
         public Builder polly(@Nullable Output<String> polly) {
             this.polly = polly;
             return this;
         }
-
         public Builder pricing(@Nullable Output<String> pricing) {
             this.pricing = pricing;
             return this;
         }
-
         public Builder prometheus(@Nullable Output<String> prometheus) {
             this.prometheus = prometheus;
             return this;
         }
-
         public Builder prometheusservice(@Nullable Output<String> prometheusservice) {
             this.prometheusservice = prometheusservice;
             return this;
         }
-
         public Builder proton(@Nullable Output<String> proton) {
             this.proton = proton;
             return this;
         }
-
         public Builder qldb(@Nullable Output<String> qldb) {
             this.qldb = qldb;
             return this;
         }
-
         public Builder qldbsession(@Nullable Output<String> qldbsession) {
             this.qldbsession = qldbsession;
             return this;
         }
-
         public Builder quicksight(@Nullable Output<String> quicksight) {
             this.quicksight = quicksight;
             return this;
         }
-
         public Builder ram(@Nullable Output<String> ram) {
             this.ram = ram;
             return this;
         }
-
         public Builder rds(@Nullable Output<String> rds) {
             this.rds = rds;
             return this;
         }
-
         public Builder rdsdata(@Nullable Output<String> rdsdata) {
             this.rdsdata = rdsdata;
             return this;
         }
-
         public Builder rdsdataservice(@Nullable Output<String> rdsdataservice) {
             this.rdsdataservice = rdsdataservice;
             return this;
         }
-
         public Builder redshift(@Nullable Output<String> redshift) {
             this.redshift = redshift;
             return this;
         }
-
         public Builder redshiftdata(@Nullable Output<String> redshiftdata) {
             this.redshiftdata = redshiftdata;
             return this;
         }
-
         public Builder rekognition(@Nullable Output<String> rekognition) {
             this.rekognition = rekognition;
             return this;
         }
-
         public Builder resourcegroups(@Nullable Output<String> resourcegroups) {
             this.resourcegroups = resourcegroups;
             return this;
         }
-
         public Builder resourcegroupstagging(@Nullable Output<String> resourcegroupstagging) {
             this.resourcegroupstagging = resourcegroupstagging;
             return this;
         }
-
         public Builder resourcegroupstaggingapi(@Nullable Output<String> resourcegroupstaggingapi) {
             this.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
-
         public Builder robomaker(@Nullable Output<String> robomaker) {
             this.robomaker = robomaker;
             return this;
         }
-
         public Builder route53(@Nullable Output<String> route53) {
             this.route53 = route53;
             return this;
         }
-
         public Builder route53domains(@Nullable Output<String> route53domains) {
             this.route53domains = route53domains;
             return this;
         }
-
         public Builder route53recoverycontrolconfig(@Nullable Output<String> route53recoverycontrolconfig) {
             this.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
-
         public Builder route53recoveryreadiness(@Nullable Output<String> route53recoveryreadiness) {
             this.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
-
         public Builder route53resolver(@Nullable Output<String> route53resolver) {
             this.route53resolver = route53resolver;
             return this;
         }
-
         public Builder s3(@Nullable Output<String> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3control(@Nullable Output<String> s3control) {
             this.s3control = s3control;
             return this;
         }
-
         public Builder s3outposts(@Nullable Output<String> s3outposts) {
             this.s3outposts = s3outposts;
             return this;
         }
-
         public Builder sagemaker(@Nullable Output<String> sagemaker) {
             this.sagemaker = sagemaker;
             return this;
         }
-
         public Builder sagemakeredgemanager(@Nullable Output<String> sagemakeredgemanager) {
             this.sagemakeredgemanager = sagemakeredgemanager;
             return this;
         }
-
         public Builder sagemakerfeaturestoreruntime(@Nullable Output<String> sagemakerfeaturestoreruntime) {
             this.sagemakerfeaturestoreruntime = sagemakerfeaturestoreruntime;
             return this;
         }
-
         public Builder sagemakerruntime(@Nullable Output<String> sagemakerruntime) {
             this.sagemakerruntime = sagemakerruntime;
             return this;
         }
-
         public Builder savingsplans(@Nullable Output<String> savingsplans) {
             this.savingsplans = savingsplans;
             return this;
         }
-
         public Builder schemas(@Nullable Output<String> schemas) {
             this.schemas = schemas;
             return this;
         }
-
         public Builder sdb(@Nullable Output<String> sdb) {
             this.sdb = sdb;
             return this;
         }
-
         public Builder secretsmanager(@Nullable Output<String> secretsmanager) {
             this.secretsmanager = secretsmanager;
             return this;
         }
-
         public Builder securityhub(@Nullable Output<String> securityhub) {
             this.securityhub = securityhub;
             return this;
         }
-
         public Builder serverlessapplicationrepository(@Nullable Output<String> serverlessapplicationrepository) {
             this.serverlessapplicationrepository = serverlessapplicationrepository;
             return this;
         }
-
         public Builder serverlessapprepo(@Nullable Output<String> serverlessapprepo) {
             this.serverlessapprepo = serverlessapprepo;
             return this;
         }
-
         public Builder serverlessrepo(@Nullable Output<String> serverlessrepo) {
             this.serverlessrepo = serverlessrepo;
             return this;
         }
-
         public Builder servicecatalog(@Nullable Output<String> servicecatalog) {
             this.servicecatalog = servicecatalog;
             return this;
         }
-
         public Builder servicediscovery(@Nullable Output<String> servicediscovery) {
             this.servicediscovery = servicediscovery;
             return this;
         }
-
         public Builder servicequotas(@Nullable Output<String> servicequotas) {
             this.servicequotas = servicequotas;
             return this;
         }
-
         public Builder ses(@Nullable Output<String> ses) {
             this.ses = ses;
             return this;
         }
-
         public Builder sesv2(@Nullable Output<String> sesv2) {
             this.sesv2 = sesv2;
             return this;
         }
-
         public Builder sfn(@Nullable Output<String> sfn) {
             this.sfn = sfn;
             return this;
         }
-
         public Builder shield(@Nullable Output<String> shield) {
             this.shield = shield;
             return this;
         }
-
         public Builder signer(@Nullable Output<String> signer) {
             this.signer = signer;
             return this;
         }
-
         public Builder simpledb(@Nullable Output<String> simpledb) {
             this.simpledb = simpledb;
             return this;
         }
-
         public Builder sms(@Nullable Output<String> sms) {
             this.sms = sms;
             return this;
         }
-
         public Builder snowball(@Nullable Output<String> snowball) {
             this.snowball = snowball;
             return this;
         }
-
         public Builder sns(@Nullable Output<String> sns) {
             this.sns = sns;
             return this;
         }
-
         public Builder sqs(@Nullable Output<String> sqs) {
             this.sqs = sqs;
             return this;
         }
-
         public Builder ssm(@Nullable Output<String> ssm) {
             this.ssm = ssm;
             return this;
         }
-
         public Builder ssmcontacts(@Nullable Output<String> ssmcontacts) {
             this.ssmcontacts = ssmcontacts;
             return this;
         }
-
         public Builder ssmincidents(@Nullable Output<String> ssmincidents) {
             this.ssmincidents = ssmincidents;
             return this;
         }
-
         public Builder sso(@Nullable Output<String> sso) {
             this.sso = sso;
             return this;
         }
-
         public Builder ssoadmin(@Nullable Output<String> ssoadmin) {
             this.ssoadmin = ssoadmin;
             return this;
         }
-
         public Builder ssooidc(@Nullable Output<String> ssooidc) {
             this.ssooidc = ssooidc;
             return this;
         }
-
         public Builder stepfunctions(@Nullable Output<String> stepfunctions) {
             this.stepfunctions = stepfunctions;
             return this;
         }
-
         public Builder storagegateway(@Nullable Output<String> storagegateway) {
             this.storagegateway = storagegateway;
             return this;
         }
-
         public Builder sts(@Nullable Output<String> sts) {
             this.sts = sts;
             return this;
         }
-
         public Builder support(@Nullable Output<String> support) {
             this.support = support;
             return this;
         }
-
         public Builder swf(@Nullable Output<String> swf) {
             this.swf = swf;
             return this;
         }
-
         public Builder synthetics(@Nullable Output<String> synthetics) {
             this.synthetics = synthetics;
             return this;
         }
-
         public Builder textract(@Nullable Output<String> textract) {
             this.textract = textract;
             return this;
         }
-
         public Builder timestreamquery(@Nullable Output<String> timestreamquery) {
             this.timestreamquery = timestreamquery;
             return this;
         }
-
         public Builder timestreamwrite(@Nullable Output<String> timestreamwrite) {
             this.timestreamwrite = timestreamwrite;
             return this;
         }
-
         public Builder transcribe(@Nullable Output<String> transcribe) {
             this.transcribe = transcribe;
             return this;
         }
-
         public Builder transcribeservice(@Nullable Output<String> transcribeservice) {
             this.transcribeservice = transcribeservice;
             return this;
         }
-
         public Builder transcribestreaming(@Nullable Output<String> transcribestreaming) {
             this.transcribestreaming = transcribestreaming;
             return this;
         }
-
         public Builder transcribestreamingservice(@Nullable Output<String> transcribestreamingservice) {
             this.transcribestreamingservice = transcribestreamingservice;
             return this;
         }
-
         public Builder transfer(@Nullable Output<String> transfer) {
             this.transfer = transfer;
             return this;
         }
-
         public Builder translate(@Nullable Output<String> translate) {
             this.translate = translate;
             return this;
         }
-
         public Builder waf(@Nullable Output<String> waf) {
             this.waf = waf;
             return this;
         }
-
         public Builder wafregional(@Nullable Output<String> wafregional) {
             this.wafregional = wafregional;
             return this;
         }
-
         public Builder wafv2(@Nullable Output<String> wafv2) {
             this.wafv2 = wafv2;
             return this;
         }
-
         public Builder wellarchitected(@Nullable Output<String> wellarchitected) {
             this.wellarchitected = wellarchitected;
             return this;
         }
-
         public Builder workdocs(@Nullable Output<String> workdocs) {
             this.workdocs = workdocs;
             return this;
         }
-
         public Builder worklink(@Nullable Output<String> worklink) {
             this.worklink = worklink;
             return this;
         }
-
         public Builder workmail(@Nullable Output<String> workmail) {
             this.workmail = workmail;
             return this;
         }
-
         public Builder workmailmessageflow(@Nullable Output<String> workmailmessageflow) {
             this.workmailmessageflow = workmailmessageflow;
             return this;
         }
-
         public Builder workspaces(@Nullable Output<String> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
-
         public Builder xray(@Nullable Output<String> xray) {
             this.xray = xray;
             return this;
-        }
-        public ProviderEndpointArgs build() {
+        }        public ProviderEndpointArgs build() {
             final var built = new ProviderEndpointArgs();
 
             built.accessanalyzer = accessanalyzer;

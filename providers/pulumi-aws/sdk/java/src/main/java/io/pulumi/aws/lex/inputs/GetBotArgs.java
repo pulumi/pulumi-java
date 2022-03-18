@@ -74,12 +74,10 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetBotArgs build() {
+        }        public GetBotArgs build() {
             return new GetBotArgs(name, version);
         }
     }

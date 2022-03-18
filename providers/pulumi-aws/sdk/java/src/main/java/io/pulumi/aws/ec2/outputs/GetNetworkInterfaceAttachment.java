@@ -70,22 +70,18 @@ public final class GetNetworkInterfaceAttachment {
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
-
         public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceOwnerId(String instanceOwnerId) {
             this.instanceOwnerId = Objects.requireNonNull(instanceOwnerId);
             return this;
-        }
-        public GetNetworkInterfaceAttachment build() {
+        }        public GetNetworkInterfaceAttachment build() {
             return new GetNetworkInterfaceAttachment(attachmentId, deviceIndex, instanceId, instanceOwnerId);
         }
     }

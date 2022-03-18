@@ -92,32 +92,29 @@ public final class GlobalTableState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder replicas(@Nullable Output<List<GlobalTableReplicaGetArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable List<GlobalTableReplicaGetArgs> replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-        public GlobalTableState build() {
+        public Builder replicas(GlobalTableReplicaGetArgs... replicas) {
+            return replicas(List.of(replicas));
+        }        public GlobalTableState build() {
             return new GlobalTableState(arn, name, replicas);
         }
     }

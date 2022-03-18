@@ -90,17 +90,14 @@ public final class ClusterLogging {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }
-        public ClusterLogging build() {
+        }        public ClusterLogging build() {
             return new ClusterLogging(bucketName, enable, s3KeyPrefix);
         }
     }

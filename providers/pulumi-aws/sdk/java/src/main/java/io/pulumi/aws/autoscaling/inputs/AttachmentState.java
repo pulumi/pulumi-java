@@ -90,32 +90,26 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
             this.albTargetGroupArn = albTargetGroupArn;
             return this;
         }
-
         public Builder albTargetGroupArn(@Nullable String albTargetGroupArn) {
             this.albTargetGroupArn = Output.ofNullable(albTargetGroupArn);
             return this;
         }
-
         public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
             this.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
-
         public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
             this.autoscalingGroupName = Output.ofNullable(autoscalingGroupName);
             return this;
         }
-
         public Builder elb(@Nullable Output<String> elb) {
             this.elb = elb;
             return this;
         }
-
         public Builder elb(@Nullable String elb) {
             this.elb = Output.ofNullable(elb);
             return this;
-        }
-        public AttachmentState build() {
+        }        public AttachmentState build() {
             return new AttachmentState(albTargetGroupArn, autoscalingGroupName, elb);
         }
     }

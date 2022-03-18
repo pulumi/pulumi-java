@@ -69,12 +69,10 @@ public final class GetAccountAliasResult {
             this.accountAlias = Objects.requireNonNull(accountAlias);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetAccountAliasResult build() {
+        }        public GetAccountAliasResult build() {
             return new GetAccountAliasResult(accountAlias, id);
         }
     }

@@ -75,22 +75,18 @@ public final class VirtualNodeSpecListenerTimeoutGrpcGetArgs extends io.pulumi.r
             this.idle = idle;
             return this;
         }
-
         public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutGrpcIdleGetArgs idle) {
             this.idle = Output.ofNullable(idle);
             return this;
         }
-
         public Builder perRequest(@Nullable Output<VirtualNodeSpecListenerTimeoutGrpcPerRequestGetArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
-
         public Builder perRequest(@Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequestGetArgs perRequest) {
             this.perRequest = Output.ofNullable(perRequest);
             return this;
-        }
-        public VirtualNodeSpecListenerTimeoutGrpcGetArgs build() {
+        }        public VirtualNodeSpecListenerTimeoutGrpcGetArgs build() {
             return new VirtualNodeSpecListenerTimeoutGrpcGetArgs(idle, perRequest);
         }
     }

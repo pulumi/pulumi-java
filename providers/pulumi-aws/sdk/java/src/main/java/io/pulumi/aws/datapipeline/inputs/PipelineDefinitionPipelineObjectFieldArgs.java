@@ -90,32 +90,26 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder refValue(@Nullable Output<String> refValue) {
             this.refValue = refValue;
             return this;
         }
-
         public Builder refValue(@Nullable String refValue) {
             this.refValue = Output.ofNullable(refValue);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
-        }
-        public PipelineDefinitionPipelineObjectFieldArgs build() {
+        }        public PipelineDefinitionPipelineObjectFieldArgs build() {
             return new PipelineDefinitionPipelineObjectFieldArgs(key, refValue, stringValue);
         }
     }

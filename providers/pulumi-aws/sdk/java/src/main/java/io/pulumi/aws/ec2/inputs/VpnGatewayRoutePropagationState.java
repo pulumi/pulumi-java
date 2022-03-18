@@ -74,22 +74,18 @@ public final class VpnGatewayRoutePropagationState extends io.pulumi.resources.R
             this.routeTableId = routeTableId;
             return this;
         }
-
         public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = Output.ofNullable(routeTableId);
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
-        }
-        public VpnGatewayRoutePropagationState build() {
+        }        public VpnGatewayRoutePropagationState build() {
             return new VpnGatewayRoutePropagationState(routeTableId, vpnGatewayId);
         }
     }

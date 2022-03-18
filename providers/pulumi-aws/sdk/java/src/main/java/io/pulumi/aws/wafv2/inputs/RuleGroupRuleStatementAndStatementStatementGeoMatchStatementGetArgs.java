@@ -76,22 +76,21 @@ public final class RuleGroupRuleStatementAndStatementStatementGeoMatchStatementG
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
-
         public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Output.of(Objects.requireNonNull(countryCodes));
             return this;
         }
-
+        public Builder countryCodes(String... countryCodes) {
+            return countryCodes(List.of(countryCodes));
+        }
         public Builder forwardedIpConfig(@Nullable Output<RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
-
         public Builder forwardedIpConfig(@Nullable RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs forwardedIpConfig) {
             this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
             return this;
-        }
-        public RuleGroupRuleStatementAndStatementStatementGeoMatchStatementGetArgs build() {
+        }        public RuleGroupRuleStatementAndStatementStatementGeoMatchStatementGetArgs build() {
             return new RuleGroupRuleStatementAndStatementStatementGeoMatchStatementGetArgs(countryCodes, forwardedIpConfig);
         }
     }

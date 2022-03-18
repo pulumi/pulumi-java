@@ -91,32 +91,26 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
             this.cidr = cidr;
             return this;
         }
-
         public Builder cidr(@Nullable String cidr) {
             this.cidr = Output.ofNullable(cidr);
             return this;
         }
-
         public Builder securityGroupName(@Nullable Output<String> securityGroupName) {
             this.securityGroupName = securityGroupName;
             return this;
         }
-
         public Builder securityGroupName(@Nullable String securityGroupName) {
             this.securityGroupName = Output.ofNullable(securityGroupName);
             return this;
         }
-
         public Builder securityGroupOwnerId(@Nullable Output<String> securityGroupOwnerId) {
             this.securityGroupOwnerId = securityGroupOwnerId;
             return this;
         }
-
         public Builder securityGroupOwnerId(@Nullable String securityGroupOwnerId) {
             this.securityGroupOwnerId = Output.ofNullable(securityGroupOwnerId);
             return this;
-        }
-        public SecurityGroupIngressArgs build() {
+        }        public SecurityGroupIngressArgs build() {
             return new SecurityGroupIngressArgs(cidr, securityGroupName, securityGroupOwnerId);
         }
     }

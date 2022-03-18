@@ -151,37 +151,48 @@ public final class TrailAdvancedEventSelectorFieldSelector {
             this.endsWiths = endsWiths;
             return this;
         }
-
+        public Builder endsWiths(String... endsWiths) {
+            return endsWiths(List.of(endsWiths));
+        }
         public Builder equals(@Nullable List<String> equals) {
             this.equals = equals;
             return this;
         }
-
+        public Builder equals(String... equals) {
+            return equals(List.of(equals));
+        }
         public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder notEndsWiths(@Nullable List<String> notEndsWiths) {
             this.notEndsWiths = notEndsWiths;
             return this;
         }
-
+        public Builder notEndsWiths(String... notEndsWiths) {
+            return notEndsWiths(List.of(notEndsWiths));
+        }
         public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
-
+        public Builder notEquals(String... notEquals) {
+            return notEquals(List.of(notEquals));
+        }
         public Builder notStartsWiths(@Nullable List<String> notStartsWiths) {
             this.notStartsWiths = notStartsWiths;
             return this;
         }
-
+        public Builder notStartsWiths(String... notStartsWiths) {
+            return notStartsWiths(List.of(notStartsWiths));
+        }
         public Builder startsWiths(@Nullable List<String> startsWiths) {
             this.startsWiths = startsWiths;
             return this;
         }
-        public TrailAdvancedEventSelectorFieldSelector build() {
+        public Builder startsWiths(String... startsWiths) {
+            return startsWiths(List.of(startsWiths));
+        }        public TrailAdvancedEventSelectorFieldSelector build() {
             return new TrailAdvancedEventSelectorFieldSelector(endsWiths, equals, field, notEndsWiths, notEquals, notStartsWiths, startsWiths);
         }
     }

@@ -156,72 +156,58 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder poolName(@Nullable Output<String> poolName) {
             this.poolName = poolName;
             return this;
         }
-
         public Builder poolName(@Nullable String poolName) {
             this.poolName = Output.ofNullable(poolName);
             return this;
         }
-
         public Builder retentionLockTimeInDays(@Nullable Output<Integer> retentionLockTimeInDays) {
             this.retentionLockTimeInDays = retentionLockTimeInDays;
             return this;
         }
-
         public Builder retentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
             this.retentionLockTimeInDays = Output.ofNullable(retentionLockTimeInDays);
             return this;
         }
-
         public Builder retentionLockType(@Nullable Output<String> retentionLockType) {
             this.retentionLockType = retentionLockType;
             return this;
         }
-
         public Builder retentionLockType(@Nullable String retentionLockType) {
             this.retentionLockType = Output.ofNullable(retentionLockType);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public TapePoolState build() {
+        }        public TapePoolState build() {
             return new TapePoolState(arn, poolName, retentionLockTimeInDays, retentionLockType, storageClass, tags, tagsAll);
         }
     }

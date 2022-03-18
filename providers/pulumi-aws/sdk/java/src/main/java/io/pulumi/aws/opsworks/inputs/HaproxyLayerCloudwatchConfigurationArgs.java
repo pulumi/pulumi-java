@@ -68,22 +68,21 @@ public final class HaproxyLayerCloudwatchConfigurationArgs extends io.pulumi.res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<HaproxyLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<HaproxyLayerCloudwatchConfigurationLogStreamArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public HaproxyLayerCloudwatchConfigurationArgs build() {
+        public Builder logStreams(HaproxyLayerCloudwatchConfigurationLogStreamArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public HaproxyLayerCloudwatchConfigurationArgs build() {
             return new HaproxyLayerCloudwatchConfigurationArgs(enabled, logStreams);
         }
     }

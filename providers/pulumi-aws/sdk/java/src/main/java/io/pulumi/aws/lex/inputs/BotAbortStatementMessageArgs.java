@@ -92,32 +92,26 @@ public final class BotAbortStatementMessageArgs extends io.pulumi.resources.Reso
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder groupNumber(@Nullable Output<Integer> groupNumber) {
             this.groupNumber = groupNumber;
             return this;
         }
-
         public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = Output.ofNullable(groupNumber);
             return this;
-        }
-        public BotAbortStatementMessageArgs build() {
+        }        public BotAbortStatementMessageArgs build() {
             return new BotAbortStatementMessageArgs(content, contentType, groupNumber);
         }
     }

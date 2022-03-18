@@ -74,12 +74,13 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
-
         public Builder queryStrings(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
             this.queryStrings = Objects.requireNonNull(queryStrings);
             return this;
         }
-        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig build() {
+        public Builder queryStrings(GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig build() {
             return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(queryStringBehavior, queryStrings);
         }
     }

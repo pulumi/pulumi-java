@@ -70,22 +70,18 @@ public final class OrganizationRootPolicyTypeGetArgs extends io.pulumi.resources
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public OrganizationRootPolicyTypeGetArgs build() {
+        }        public OrganizationRootPolicyTypeGetArgs build() {
             return new OrganizationRootPolicyTypeGetArgs(status, type);
         }
     }

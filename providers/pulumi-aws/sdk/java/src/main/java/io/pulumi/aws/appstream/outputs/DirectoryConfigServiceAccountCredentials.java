@@ -69,12 +69,10 @@ public final class DirectoryConfigServiceAccountCredentials {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountPassword(String accountPassword) {
             this.accountPassword = Objects.requireNonNull(accountPassword);
             return this;
-        }
-        public DirectoryConfigServiceAccountCredentials build() {
+        }        public DirectoryConfigServiceAccountCredentials build() {
             return new DirectoryConfigServiceAccountCredentials(accountName, accountPassword);
         }
     }

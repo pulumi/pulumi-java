@@ -72,12 +72,10 @@ public final class VirtualGatewaySpecListenerTlsValidationTrust {
             this.file = file;
             return this;
         }
-
         public Builder sds(@Nullable VirtualGatewaySpecListenerTlsValidationTrustSds sds) {
             this.sds = sds;
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsValidationTrust build() {
+        }        public VirtualGatewaySpecListenerTlsValidationTrust build() {
             return new VirtualGatewaySpecListenerTlsValidationTrust(file, sds);
         }
     }

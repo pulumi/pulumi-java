@@ -91,32 +91,26 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
-        }
-        public DeploymentArgs build() {
+        }        public DeploymentArgs build() {
             return new DeploymentArgs(apiId, description, triggers);
         }
     }

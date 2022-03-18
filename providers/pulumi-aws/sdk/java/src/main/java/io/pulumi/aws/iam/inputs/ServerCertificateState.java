@@ -227,112 +227,90 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
-
         public Builder certificateBody(@Nullable String certificateBody) {
             this.certificateBody = Output.ofNullable(certificateBody);
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
-
         public Builder expiration(@Nullable Output<String> expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder expiration(@Nullable String expiration) {
             this.expiration = Output.ofNullable(expiration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uploadDate(@Nullable Output<String> uploadDate) {
             this.uploadDate = uploadDate;
             return this;
         }
-
         public Builder uploadDate(@Nullable String uploadDate) {
             this.uploadDate = Output.ofNullable(uploadDate);
             return this;
-        }
-        public ServerCertificateState build() {
+        }        public ServerCertificateState build() {
             return new ServerCertificateState(arn, certificateBody, certificateChain, expiration, name, namePrefix, path, privateKey, tags, tagsAll, uploadDate);
         }
     }

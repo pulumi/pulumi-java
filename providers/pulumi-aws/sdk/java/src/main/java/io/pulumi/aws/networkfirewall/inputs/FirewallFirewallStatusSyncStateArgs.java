@@ -76,22 +76,21 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
             this.attachments = attachments;
             return this;
         }
-
         public Builder attachments(@Nullable List<FirewallFirewallStatusSyncStateAttachmentArgs> attachments) {
             this.attachments = Output.ofNullable(attachments);
             return this;
         }
-
+        public Builder attachments(FirewallFirewallStatusSyncStateAttachmentArgs... attachments) {
+            return attachments(List.of(attachments));
+        }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
-        }
-        public FirewallFirewallStatusSyncStateArgs build() {
+        }        public FirewallFirewallStatusSyncStateArgs build() {
             return new FirewallFirewallStatusSyncStateArgs(attachments, availabilityZone);
         }
     }

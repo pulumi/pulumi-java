@@ -70,12 +70,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder ruleDefinition(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition ruleDefinition) {
             this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule build() {
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule(priority, ruleDefinition);
         }
     }

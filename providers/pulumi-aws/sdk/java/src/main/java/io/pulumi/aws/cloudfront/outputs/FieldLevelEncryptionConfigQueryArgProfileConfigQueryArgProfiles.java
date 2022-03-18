@@ -46,7 +46,9 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
             this.items = items;
             return this;
         }
-        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles build() {
+        public Builder items(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem... items) {
+            return items(List.of(items));
+        }        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles build() {
             return new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles(items);
         }
     }

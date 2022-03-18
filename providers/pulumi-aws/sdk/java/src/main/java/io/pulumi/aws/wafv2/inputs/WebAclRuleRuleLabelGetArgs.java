@@ -56,12 +56,10 @@ public final class WebAclRuleRuleLabelGetArgs extends io.pulumi.resources.Resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleRuleLabelGetArgs build() {
+        }        public WebAclRuleRuleLabelGetArgs build() {
             return new WebAclRuleRuleLabelGetArgs(name);
         }
     }

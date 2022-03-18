@@ -51,8 +51,7 @@ public final class VirtualServiceSpecProviderVirtualNode {
         public Builder virtualNodeName(String virtualNodeName) {
             this.virtualNodeName = Objects.requireNonNull(virtualNodeName);
             return this;
-        }
-        public VirtualServiceSpecProviderVirtualNode build() {
+        }        public VirtualServiceSpecProviderVirtualNode build() {
             return new VirtualServiceSpecProviderVirtualNode(virtualNodeName);
         }
     }

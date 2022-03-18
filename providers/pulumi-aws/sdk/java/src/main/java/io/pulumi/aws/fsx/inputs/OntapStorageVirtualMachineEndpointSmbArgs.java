@@ -75,22 +75,21 @@ public final class OntapStorageVirtualMachineEndpointSmbArgs extends io.pulumi.r
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-        public OntapStorageVirtualMachineEndpointSmbArgs build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public OntapStorageVirtualMachineEndpointSmbArgs build() {
             return new OntapStorageVirtualMachineEndpointSmbArgs(dnsName, ipAddresses);
         }
     }

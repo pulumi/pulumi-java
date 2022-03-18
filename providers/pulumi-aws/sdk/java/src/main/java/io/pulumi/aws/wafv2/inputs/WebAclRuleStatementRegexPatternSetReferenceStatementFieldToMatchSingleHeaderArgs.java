@@ -56,12 +56,10 @@ public final class WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMa
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs build() {
+        }        public WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs build() {
             return new WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs(name);
         }
     }

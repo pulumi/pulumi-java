@@ -57,12 +57,10 @@ public final class JobNotificationPropertyArgs extends io.pulumi.resources.Resou
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
         }
-
         public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
             this.notifyDelayAfter = Output.ofNullable(notifyDelayAfter);
             return this;
-        }
-        public JobNotificationPropertyArgs build() {
+        }        public JobNotificationPropertyArgs build() {
             return new JobNotificationPropertyArgs(notifyDelayAfter);
         }
     }

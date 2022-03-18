@@ -91,32 +91,26 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
             this.desiredInstanceType = desiredInstanceType;
             return this;
         }
-
         public Builder desiredInstanceType(@Nullable String desiredInstanceType) {
             this.desiredInstanceType = Output.ofNullable(desiredInstanceType);
             return this;
         }
-
         public Builder desiredPartitionCount(@Nullable Output<Integer> desiredPartitionCount) {
             this.desiredPartitionCount = desiredPartitionCount;
             return this;
         }
-
         public Builder desiredPartitionCount(@Nullable Integer desiredPartitionCount) {
             this.desiredPartitionCount = Output.ofNullable(desiredPartitionCount);
             return this;
         }
-
         public Builder desiredReplicationCount(@Nullable Output<Integer> desiredReplicationCount) {
             this.desiredReplicationCount = desiredReplicationCount;
             return this;
         }
-
         public Builder desiredReplicationCount(@Nullable Integer desiredReplicationCount) {
             this.desiredReplicationCount = Output.ofNullable(desiredReplicationCount);
             return this;
-        }
-        public DomainScalingParametersGetArgs build() {
+        }        public DomainScalingParametersGetArgs build() {
             return new DomainScalingParametersGetArgs(desiredInstanceType, desiredPartitionCount, desiredReplicationCount);
         }
     }

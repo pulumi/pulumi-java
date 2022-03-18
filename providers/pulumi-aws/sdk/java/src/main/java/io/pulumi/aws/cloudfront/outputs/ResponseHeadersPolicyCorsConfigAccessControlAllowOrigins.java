@@ -46,7 +46,9 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins {
             this.items = items;
             return this;
         }
-        public ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins build() {
             return new ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins(items);
         }
     }

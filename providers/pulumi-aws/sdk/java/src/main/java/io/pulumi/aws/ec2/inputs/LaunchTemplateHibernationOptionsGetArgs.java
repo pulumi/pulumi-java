@@ -56,12 +56,10 @@ public final class LaunchTemplateHibernationOptionsGetArgs extends io.pulumi.res
             this.configured = Objects.requireNonNull(configured);
             return this;
         }
-
         public Builder configured(Boolean configured) {
             this.configured = Output.of(Objects.requireNonNull(configured));
             return this;
-        }
-        public LaunchTemplateHibernationOptionsGetArgs build() {
+        }        public LaunchTemplateHibernationOptionsGetArgs build() {
             return new LaunchTemplateHibernationOptionsGetArgs(configured);
         }
     }

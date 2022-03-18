@@ -196,102 +196,82 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             this.adjustable = adjustable;
             return this;
         }
-
         public Builder adjustable(@Nullable Boolean adjustable) {
             this.adjustable = Output.ofNullable(adjustable);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder defaultValue(@Nullable Output<Double> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable Double defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder quotaCode(@Nullable Output<String> quotaCode) {
             this.quotaCode = quotaCode;
             return this;
         }
-
         public Builder quotaCode(@Nullable String quotaCode) {
             this.quotaCode = Output.ofNullable(quotaCode);
             return this;
         }
-
         public Builder quotaName(@Nullable Output<String> quotaName) {
             this.quotaName = quotaName;
             return this;
         }
-
         public Builder quotaName(@Nullable String quotaName) {
             this.quotaName = Output.ofNullable(quotaName);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder requestStatus(@Nullable Output<String> requestStatus) {
             this.requestStatus = requestStatus;
             return this;
         }
-
         public Builder requestStatus(@Nullable String requestStatus) {
             this.requestStatus = Output.ofNullable(requestStatus);
             return this;
         }
-
         public Builder serviceCode(@Nullable Output<String> serviceCode) {
             this.serviceCode = serviceCode;
             return this;
         }
-
         public Builder serviceCode(@Nullable String serviceCode) {
             this.serviceCode = Output.ofNullable(serviceCode);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder value(@Nullable Output<Double> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ServiceQuotaState build() {
+        }        public ServiceQuotaState build() {
             return new ServiceQuotaState(adjustable, arn, defaultValue, quotaCode, quotaName, requestId, requestStatus, serviceCode, serviceName, value);
         }
     }

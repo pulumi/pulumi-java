@@ -56,12 +56,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(domainName);
         }
     }

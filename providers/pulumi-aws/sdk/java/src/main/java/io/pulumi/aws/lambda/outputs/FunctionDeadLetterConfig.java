@@ -51,8 +51,7 @@ public final class FunctionDeadLetterConfig {
         public Builder targetArn(String targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
-        }
-        public FunctionDeadLetterConfig build() {
+        }        public FunctionDeadLetterConfig build() {
             return new FunctionDeadLetterConfig(targetArn);
         }
     }

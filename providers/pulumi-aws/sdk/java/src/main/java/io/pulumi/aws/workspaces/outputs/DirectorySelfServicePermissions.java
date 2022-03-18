@@ -119,27 +119,22 @@ public final class DirectorySelfServicePermissions {
             this.changeComputeType = changeComputeType;
             return this;
         }
-
         public Builder increaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
             this.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
-
         public Builder rebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
             this.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
-
         public Builder restartWorkspace(@Nullable Boolean restartWorkspace) {
             this.restartWorkspace = restartWorkspace;
             return this;
         }
-
         public Builder switchRunningMode(@Nullable Boolean switchRunningMode) {
             this.switchRunningMode = switchRunningMode;
             return this;
-        }
-        public DirectorySelfServicePermissions build() {
+        }        public DirectorySelfServicePermissions build() {
             return new DirectorySelfServicePermissions(changeComputeType, increaseVolumeSize, rebuildWorkspace, restartWorkspace, switchRunningMode);
         }
     }

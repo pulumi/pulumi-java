@@ -91,32 +91,26 @@ public final class FunctionSyncConfigGetArgs extends io.pulumi.resources.Resourc
             this.conflictDetection = conflictDetection;
             return this;
         }
-
         public Builder conflictDetection(@Nullable String conflictDetection) {
             this.conflictDetection = Output.ofNullable(conflictDetection);
             return this;
         }
-
         public Builder conflictHandler(@Nullable Output<String> conflictHandler) {
             this.conflictHandler = conflictHandler;
             return this;
         }
-
         public Builder conflictHandler(@Nullable String conflictHandler) {
             this.conflictHandler = Output.ofNullable(conflictHandler);
             return this;
         }
-
         public Builder lambdaConflictHandlerConfig(@Nullable Output<FunctionSyncConfigLambdaConflictHandlerConfigGetArgs> lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
             return this;
         }
-
         public Builder lambdaConflictHandlerConfig(@Nullable FunctionSyncConfigLambdaConflictHandlerConfigGetArgs lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = Output.ofNullable(lambdaConflictHandlerConfig);
             return this;
-        }
-        public FunctionSyncConfigGetArgs build() {
+        }        public FunctionSyncConfigGetArgs build() {
             return new FunctionSyncConfigGetArgs(conflictDetection, conflictHandler, lambdaConflictHandlerConfig);
         }
     }

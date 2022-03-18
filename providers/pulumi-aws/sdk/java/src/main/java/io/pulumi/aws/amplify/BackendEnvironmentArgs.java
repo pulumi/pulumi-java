@@ -106,42 +106,34 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder deploymentArtifacts(@Nullable Output<String> deploymentArtifacts) {
             this.deploymentArtifacts = deploymentArtifacts;
             return this;
         }
-
         public Builder deploymentArtifacts(@Nullable String deploymentArtifacts) {
             this.deploymentArtifacts = Output.ofNullable(deploymentArtifacts);
             return this;
         }
-
         public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
-
         public Builder stackName(@Nullable Output<String> stackName) {
             this.stackName = stackName;
             return this;
         }
-
         public Builder stackName(@Nullable String stackName) {
             this.stackName = Output.ofNullable(stackName);
             return this;
-        }
-        public BackendEnvironmentArgs build() {
+        }        public BackendEnvironmentArgs build() {
             return new BackendEnvironmentArgs(appId, deploymentArtifacts, environmentName, stackName);
         }
     }

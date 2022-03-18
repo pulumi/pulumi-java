@@ -92,32 +92,32 @@ public final class ConfigurationAggregatorAccountAggregationSourceGetArgs extend
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
-
         public Builder accountIds(List<String> accountIds) {
             this.accountIds = Output.of(Objects.requireNonNull(accountIds));
             return this;
         }
-
+        public Builder accountIds(String... accountIds) {
+            return accountIds(List.of(accountIds));
+        }
         public Builder allRegions(@Nullable Output<Boolean> allRegions) {
             this.allRegions = allRegions;
             return this;
         }
-
         public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = Output.ofNullable(allRegions);
             return this;
         }
-
         public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = Output.ofNullable(regions);
             return this;
         }
-        public ConfigurationAggregatorAccountAggregationSourceGetArgs build() {
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }        public ConfigurationAggregatorAccountAggregationSourceGetArgs build() {
             return new ConfigurationAggregatorAccountAggregationSourceGetArgs(accountIds, allRegions, regions);
         }
     }

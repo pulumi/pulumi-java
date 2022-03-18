@@ -69,12 +69,10 @@ public final class TableAttribute {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TableAttribute build() {
+        }        public TableAttribute build() {
             return new TableAttribute(name, type);
         }
     }

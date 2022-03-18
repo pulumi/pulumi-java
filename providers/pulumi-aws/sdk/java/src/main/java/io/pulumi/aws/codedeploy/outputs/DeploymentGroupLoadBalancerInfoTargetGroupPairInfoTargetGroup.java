@@ -51,8 +51,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup build() {
+        }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup build() {
             return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup(name);
         }
     }

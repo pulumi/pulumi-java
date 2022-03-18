@@ -75,22 +75,21 @@ public final class AuthorizerJwtConfigurationArgs extends io.pulumi.resources.Re
             this.audiences = audiences;
             return this;
         }
-
         public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = Output.ofNullable(audiences);
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = Output.ofNullable(issuer);
             return this;
-        }
-        public AuthorizerJwtConfigurationArgs build() {
+        }        public AuthorizerJwtConfigurationArgs build() {
             return new AuthorizerJwtConfigurationArgs(audiences, issuer);
         }
     }

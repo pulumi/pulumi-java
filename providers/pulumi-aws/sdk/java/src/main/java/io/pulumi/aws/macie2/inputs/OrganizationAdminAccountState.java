@@ -57,12 +57,10 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
             this.adminAccountId = adminAccountId;
             return this;
         }
-
         public Builder adminAccountId(@Nullable String adminAccountId) {
             this.adminAccountId = Output.ofNullable(adminAccountId);
             return this;
-        }
-        public OrganizationAdminAccountState build() {
+        }        public OrganizationAdminAccountState build() {
             return new OrganizationAdminAccountState(adminAccountId);
         }
     }

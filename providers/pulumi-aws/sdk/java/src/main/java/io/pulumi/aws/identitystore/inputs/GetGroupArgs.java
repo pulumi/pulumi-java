@@ -92,17 +92,17 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
+        public Builder filters(GetGroupFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder identityStoreId(String identityStoreId) {
             this.identityStoreId = Objects.requireNonNull(identityStoreId);
             return this;
-        }
-        public GetGroupArgs build() {
+        }        public GetGroupArgs build() {
             return new GetGroupArgs(filters, groupId, identityStoreId);
         }
     }

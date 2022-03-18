@@ -92,32 +92,26 @@ public final class ScheduledActionTargetActionArgs extends io.pulumi.resources.R
             this.pauseCluster = pauseCluster;
             return this;
         }
-
         public Builder pauseCluster(@Nullable ScheduledActionTargetActionPauseClusterArgs pauseCluster) {
             this.pauseCluster = Output.ofNullable(pauseCluster);
             return this;
         }
-
         public Builder resizeCluster(@Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster) {
             this.resizeCluster = resizeCluster;
             return this;
         }
-
         public Builder resizeCluster(@Nullable ScheduledActionTargetActionResizeClusterArgs resizeCluster) {
             this.resizeCluster = Output.ofNullable(resizeCluster);
             return this;
         }
-
         public Builder resumeCluster(@Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster) {
             this.resumeCluster = resumeCluster;
             return this;
         }
-
         public Builder resumeCluster(@Nullable ScheduledActionTargetActionResumeClusterArgs resumeCluster) {
             this.resumeCluster = Output.ofNullable(resumeCluster);
             return this;
-        }
-        public ScheduledActionTargetActionArgs build() {
+        }        public ScheduledActionTargetActionArgs build() {
             return new ScheduledActionTargetActionArgs(pauseCluster, resizeCluster, resumeCluster);
         }
     }

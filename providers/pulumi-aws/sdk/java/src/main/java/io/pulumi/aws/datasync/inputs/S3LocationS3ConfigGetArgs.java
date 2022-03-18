@@ -56,12 +56,10 @@ public final class S3LocationS3ConfigGetArgs extends io.pulumi.resources.Resourc
             this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn);
             return this;
         }
-
         public Builder bucketAccessRoleArn(String bucketAccessRoleArn) {
             this.bucketAccessRoleArn = Output.of(Objects.requireNonNull(bucketAccessRoleArn));
             return this;
-        }
-        public S3LocationS3ConfigGetArgs build() {
+        }        public S3LocationS3ConfigGetArgs build() {
             return new S3LocationS3ConfigGetArgs(bucketAccessRoleArn);
         }
     }

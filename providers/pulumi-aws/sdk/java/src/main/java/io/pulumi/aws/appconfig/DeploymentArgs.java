@@ -155,72 +155,58 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder configurationProfileId(Output<String> configurationProfileId) {
             this.configurationProfileId = Objects.requireNonNull(configurationProfileId);
             return this;
         }
-
         public Builder configurationProfileId(String configurationProfileId) {
             this.configurationProfileId = Output.of(Objects.requireNonNull(configurationProfileId));
             return this;
         }
-
         public Builder configurationVersion(Output<String> configurationVersion) {
             this.configurationVersion = Objects.requireNonNull(configurationVersion);
             return this;
         }
-
         public Builder configurationVersion(String configurationVersion) {
             this.configurationVersion = Output.of(Objects.requireNonNull(configurationVersion));
             return this;
         }
-
         public Builder deploymentStrategyId(Output<String> deploymentStrategyId) {
             this.deploymentStrategyId = Objects.requireNonNull(deploymentStrategyId);
             return this;
         }
-
         public Builder deploymentStrategyId(String deploymentStrategyId) {
             this.deploymentStrategyId = Output.of(Objects.requireNonNull(deploymentStrategyId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DeploymentArgs build() {
+        }        public DeploymentArgs build() {
             return new DeploymentArgs(applicationId, configurationProfileId, configurationVersion, deploymentStrategyId, description, environmentId, tags);
         }
     }

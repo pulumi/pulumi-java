@@ -56,12 +56,10 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderGetArgs build() {
+        }        public WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderGetArgs build() {
             return new WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderGetArgs(name);
         }
     }

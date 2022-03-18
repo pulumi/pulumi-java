@@ -141,62 +141,56 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder fargateProfileName(@Nullable Output<String> fargateProfileName) {
             this.fargateProfileName = fargateProfileName;
             return this;
         }
-
         public Builder fargateProfileName(@Nullable String fargateProfileName) {
             this.fargateProfileName = Output.ofNullable(fargateProfileName);
             return this;
         }
-
         public Builder podExecutionRoleArn(Output<String> podExecutionRoleArn) {
             this.podExecutionRoleArn = Objects.requireNonNull(podExecutionRoleArn);
             return this;
         }
-
         public Builder podExecutionRoleArn(String podExecutionRoleArn) {
             this.podExecutionRoleArn = Output.of(Objects.requireNonNull(podExecutionRoleArn));
             return this;
         }
-
         public Builder selectors(Output<List<FargateProfileSelectorArgs>> selectors) {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
-
         public Builder selectors(List<FargateProfileSelectorArgs> selectors) {
             this.selectors = Output.of(Objects.requireNonNull(selectors));
             return this;
         }
-
+        public Builder selectors(FargateProfileSelectorArgs... selectors) {
+            return selectors(List.of(selectors));
+        }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FargateProfileArgs build() {
+        }        public FargateProfileArgs build() {
             return new FargateProfileArgs(clusterName, fargateProfileName, podExecutionRoleArn, selectors, subnetIds, tags);
         }
     }

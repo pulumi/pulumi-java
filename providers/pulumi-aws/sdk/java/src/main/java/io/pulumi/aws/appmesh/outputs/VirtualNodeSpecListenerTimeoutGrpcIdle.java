@@ -70,12 +70,10 @@ public final class VirtualNodeSpecListenerTimeoutGrpcIdle {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public VirtualNodeSpecListenerTimeoutGrpcIdle build() {
+        }        public VirtualNodeSpecListenerTimeoutGrpcIdle build() {
             return new VirtualNodeSpecListenerTimeoutGrpcIdle(unit, value);
         }
     }

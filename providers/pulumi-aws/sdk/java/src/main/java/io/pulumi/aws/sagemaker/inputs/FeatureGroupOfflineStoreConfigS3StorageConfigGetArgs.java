@@ -74,22 +74,18 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs extends 
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder s3Uri(Output<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
             return this;
-        }
-        public FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs build() {
+        }        public FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs build() {
             return new FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs(kmsKeyId, s3Uri);
         }
     }

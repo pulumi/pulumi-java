@@ -73,22 +73,18 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public RuleGroupRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatementGetArgs build() {
+        }        public RuleGroupRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatementGetArgs build() {
             return new RuleGroupRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatementGetArgs(key, scope);
         }
     }

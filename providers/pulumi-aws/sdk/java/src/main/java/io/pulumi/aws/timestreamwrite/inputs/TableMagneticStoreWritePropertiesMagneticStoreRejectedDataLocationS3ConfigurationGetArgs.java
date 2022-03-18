@@ -106,42 +106,34 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder encryptionOption(@Nullable Output<String> encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
-
         public Builder encryptionOption(@Nullable String encryptionOption) {
             this.encryptionOption = Output.ofNullable(encryptionOption);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = Output.ofNullable(objectKeyPrefix);
             return this;
-        }
-        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs build() {
+        }        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs build() {
             return new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs(bucketName, encryptionOption, kmsKeyId, objectKeyPrefix);
         }
     }

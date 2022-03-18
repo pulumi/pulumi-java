@@ -242,72 +242,61 @@ public final class GetDedicatedHostResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder autoPlacement(String autoPlacement) {
             this.autoPlacement = Objects.requireNonNull(autoPlacement);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder cores(Integer cores) {
             this.cores = Objects.requireNonNull(cores);
             return this;
         }
-
         public Builder filters(@Nullable List<GetDedicatedHostFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetDedicatedHostFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
         }
-
         public Builder hostRecovery(String hostRecovery) {
             this.hostRecovery = Objects.requireNonNull(hostRecovery);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceFamily(String instanceFamily) {
             this.instanceFamily = Objects.requireNonNull(instanceFamily);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder sockets(Integer sockets) {
             this.sockets = Objects.requireNonNull(sockets);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder totalVcpus(Integer totalVcpus) {
             this.totalVcpus = Objects.requireNonNull(totalVcpus);
             return this;
-        }
-        public GetDedicatedHostResult build() {
+        }        public GetDedicatedHostResult build() {
             return new GetDedicatedHostResult(arn, autoPlacement, availabilityZone, cores, filters, hostId, hostRecovery, id, instanceFamily, instanceType, ownerId, sockets, tags, totalVcpus);
         }
     }

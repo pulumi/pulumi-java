@@ -144,62 +144,53 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
             this.hostHeader = hostHeader;
             return this;
         }
-
         public Builder hostHeader(@Nullable ListenerRuleConditionHostHeaderGetArgs hostHeader) {
             this.hostHeader = Output.ofNullable(hostHeader);
             return this;
         }
-
         public Builder httpHeader(@Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader) {
             this.httpHeader = httpHeader;
             return this;
         }
-
         public Builder httpHeader(@Nullable ListenerRuleConditionHttpHeaderGetArgs httpHeader) {
             this.httpHeader = Output.ofNullable(httpHeader);
             return this;
         }
-
         public Builder httpRequestMethod(@Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod) {
             this.httpRequestMethod = httpRequestMethod;
             return this;
         }
-
         public Builder httpRequestMethod(@Nullable ListenerRuleConditionHttpRequestMethodGetArgs httpRequestMethod) {
             this.httpRequestMethod = Output.ofNullable(httpRequestMethod);
             return this;
         }
-
         public Builder pathPattern(@Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
-
         public Builder pathPattern(@Nullable ListenerRuleConditionPathPatternGetArgs pathPattern) {
             this.pathPattern = Output.ofNullable(pathPattern);
             return this;
         }
-
         public Builder queryStrings(@Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-
         public Builder queryStrings(@Nullable List<ListenerRuleConditionQueryStringGetArgs> queryStrings) {
             this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
-
+        public Builder queryStrings(ListenerRuleConditionQueryStringGetArgs... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }
         public Builder sourceIp(@Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
-
         public Builder sourceIp(@Nullable ListenerRuleConditionSourceIpGetArgs sourceIp) {
             this.sourceIp = Output.ofNullable(sourceIp);
             return this;
-        }
-        public ListenerRuleConditionGetArgs build() {
+        }        public ListenerRuleConditionGetArgs build() {
             return new ListenerRuleConditionGetArgs(hostHeader, httpHeader, httpRequestMethod, pathPattern, queryStrings, sourceIp);
         }
     }

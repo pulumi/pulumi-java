@@ -56,12 +56,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             this.addressDefinition = Objects.requireNonNull(addressDefinition);
             return this;
         }
-
         public Builder addressDefinition(String addressDefinition) {
             this.addressDefinition = Output.of(Objects.requireNonNull(addressDefinition));
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs build() {
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs(addressDefinition);
         }
     }

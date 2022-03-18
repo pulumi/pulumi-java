@@ -108,42 +108,37 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
             this.consoleAccess = consoleAccess;
             return this;
         }
-
         public Builder consoleAccess(@Nullable Boolean consoleAccess) {
             this.consoleAccess = Output.ofNullable(consoleAccess);
             return this;
         }
-
         public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = Output.ofNullable(groups);
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public BrokerUserGetArgs build() {
+        }        public BrokerUserGetArgs build() {
             return new BrokerUserGetArgs(consoleAccess, groups, password, username);
         }
     }

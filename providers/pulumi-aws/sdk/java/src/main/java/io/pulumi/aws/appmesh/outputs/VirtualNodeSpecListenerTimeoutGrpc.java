@@ -72,12 +72,10 @@ public final class VirtualNodeSpecListenerTimeoutGrpc {
             this.idle = idle;
             return this;
         }
-
         public Builder perRequest(@Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest) {
             this.perRequest = perRequest;
             return this;
-        }
-        public VirtualNodeSpecListenerTimeoutGrpc build() {
+        }        public VirtualNodeSpecListenerTimeoutGrpc build() {
             return new VirtualNodeSpecListenerTimeoutGrpc(idle, perRequest);
         }
     }

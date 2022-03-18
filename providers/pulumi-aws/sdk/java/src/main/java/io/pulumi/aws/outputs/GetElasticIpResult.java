@@ -289,82 +289,69 @@ public final class GetElasticIpResult {
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }
-
         public Builder carrierIp(String carrierIp) {
             this.carrierIp = Objects.requireNonNull(carrierIp);
             return this;
         }
-
         public Builder customerOwnedIp(String customerOwnedIp) {
             this.customerOwnedIp = Objects.requireNonNull(customerOwnedIp);
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Objects.requireNonNull(customerOwnedIpv4Pool);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder filters(@Nullable List<GetElasticIpFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetElasticIpFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder networkInterfaceOwnerId(String networkInterfaceOwnerId) {
             this.networkInterfaceOwnerId = Objects.requireNonNull(networkInterfaceOwnerId);
             return this;
         }
-
         public Builder privateDns(String privateDns) {
             this.privateDns = Objects.requireNonNull(privateDns);
             return this;
         }
-
         public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
-
         public Builder publicDns(String publicDns) {
             this.publicDns = Objects.requireNonNull(publicDns);
             return this;
         }
-
         public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
         }
-
         public Builder publicIpv4Pool(String publicIpv4Pool) {
             this.publicIpv4Pool = Objects.requireNonNull(publicIpv4Pool);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetElasticIpResult build() {
+        }        public GetElasticIpResult build() {
             return new GetElasticIpResult(associationId, carrierIp, customerOwnedIp, customerOwnedIpv4Pool, domain, filters, id, instanceId, networkInterfaceId, networkInterfaceOwnerId, privateDns, privateIp, publicDns, publicIp, publicIpv4Pool, tags);
         }
     }

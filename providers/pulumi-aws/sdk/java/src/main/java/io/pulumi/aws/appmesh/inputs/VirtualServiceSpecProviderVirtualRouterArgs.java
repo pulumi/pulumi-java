@@ -56,12 +56,10 @@ public final class VirtualServiceSpecProviderVirtualRouterArgs extends io.pulumi
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
-
         public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Output.of(Objects.requireNonNull(virtualRouterName));
             return this;
-        }
-        public VirtualServiceSpecProviderVirtualRouterArgs build() {
+        }        public VirtualServiceSpecProviderVirtualRouterArgs build() {
             return new VirtualServiceSpecProviderVirtualRouterArgs(virtualRouterName);
         }
     }

@@ -53,8 +53,7 @@ public final class IntegrationTlsConfig {
         public Builder serverNameToVerify(@Nullable String serverNameToVerify) {
             this.serverNameToVerify = serverNameToVerify;
             return this;
-        }
-        public IntegrationTlsConfig build() {
+        }        public IntegrationTlsConfig build() {
             return new IntegrationTlsConfig(serverNameToVerify);
         }
     }

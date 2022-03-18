@@ -70,12 +70,13 @@ public final class CrawlerCatalogTarget {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder tables(List<String> tables) {
             this.tables = Objects.requireNonNull(tables);
             return this;
         }
-        public CrawlerCatalogTarget build() {
+        public Builder tables(String... tables) {
+            return tables(List.of(tables));
+        }        public CrawlerCatalogTarget build() {
             return new CrawlerCatalogTarget(databaseName, tables);
         }
     }

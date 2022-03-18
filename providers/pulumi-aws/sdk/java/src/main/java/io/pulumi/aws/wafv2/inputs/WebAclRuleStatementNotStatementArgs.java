@@ -57,12 +57,13 @@ public final class WebAclRuleStatementNotStatementArgs extends io.pulumi.resourc
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public Builder statements(List<WebAclRuleStatementNotStatementStatementArgs> statements) {
             this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
-        public WebAclRuleStatementNotStatementArgs build() {
+        public Builder statements(WebAclRuleStatementNotStatementStatementArgs... statements) {
+            return statements(List.of(statements));
+        }        public WebAclRuleStatementNotStatementArgs build() {
             return new WebAclRuleStatementNotStatementArgs(statements);
         }
     }

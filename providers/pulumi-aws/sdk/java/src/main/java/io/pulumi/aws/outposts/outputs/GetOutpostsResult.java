@@ -118,37 +118,36 @@ public final class GetOutpostsResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
-        }
-        public GetOutpostsResult build() {
+        }        public GetOutpostsResult build() {
             return new GetOutpostsResult(arns, availabilityZone, availabilityZoneId, id, ids, ownerId, siteId);
         }
     }

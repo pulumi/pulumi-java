@@ -78,22 +78,18 @@ public final class SizeConstraintSetSizeConstraintFieldToMatchArgs extends io.pu
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SizeConstraintSetSizeConstraintFieldToMatchArgs build() {
+        }        public SizeConstraintSetSizeConstraintFieldToMatchArgs build() {
             return new SizeConstraintSetSizeConstraintFieldToMatchArgs(data, type);
         }
     }

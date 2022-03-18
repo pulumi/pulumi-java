@@ -70,12 +70,10 @@ public final class BucketIntelligentTieringConfigurationTiering {
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
-
         public Builder days(Integer days) {
             this.days = Objects.requireNonNull(days);
             return this;
-        }
-        public BucketIntelligentTieringConfigurationTiering build() {
+        }        public BucketIntelligentTieringConfigurationTiering build() {
             return new BucketIntelligentTieringConfigurationTiering(accessTier, days);
         }
     }

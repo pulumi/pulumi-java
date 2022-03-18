@@ -108,42 +108,34 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends io.pu
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder s3(Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
-
         public Builder s3(AnalyticsApplicationReferenceDataSourcesS3GetArgs s3) {
             this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
         }
-
         public Builder schema(Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(AnalyticsApplicationReferenceDataSourcesSchemaGetArgs schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesGetArgs build() {
+        }        public AnalyticsApplicationReferenceDataSourcesGetArgs build() {
             return new AnalyticsApplicationReferenceDataSourcesGetArgs(id, s3, schema, tableName);
         }
     }

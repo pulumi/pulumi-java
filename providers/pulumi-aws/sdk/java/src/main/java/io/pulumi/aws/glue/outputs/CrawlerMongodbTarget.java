@@ -88,17 +88,14 @@ public final class CrawlerMongodbTarget {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder scanAll(@Nullable Boolean scanAll) {
             this.scanAll = scanAll;
             return this;
-        }
-        public CrawlerMongodbTarget build() {
+        }        public CrawlerMongodbTarget build() {
             return new CrawlerMongodbTarget(connectionName, path, scanAll);
         }
     }

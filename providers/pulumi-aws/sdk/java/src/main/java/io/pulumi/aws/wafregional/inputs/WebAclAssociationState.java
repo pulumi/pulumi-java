@@ -74,22 +74,18 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
-
         public Builder webAclId(@Nullable Output<String> webAclId) {
             this.webAclId = webAclId;
             return this;
         }
-
         public Builder webAclId(@Nullable String webAclId) {
             this.webAclId = Output.ofNullable(webAclId);
             return this;
-        }
-        public WebAclAssociationState build() {
+        }        public WebAclAssociationState build() {
             return new WebAclAssociationState(resourceArn, webAclId);
         }
     }

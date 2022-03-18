@@ -107,42 +107,37 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
             this.connectionEvents = Objects.requireNonNull(connectionEvents);
             return this;
         }
-
         public Builder connectionEvents(List<String> connectionEvents) {
             this.connectionEvents = Output.of(Objects.requireNonNull(connectionEvents));
             return this;
         }
-
+        public Builder connectionEvents(String... connectionEvents) {
+            return connectionEvents(List.of(connectionEvents));
+        }
         public Builder connectionNotificationArn(Output<String> connectionNotificationArn) {
             this.connectionNotificationArn = Objects.requireNonNull(connectionNotificationArn);
             return this;
         }
-
         public Builder connectionNotificationArn(String connectionNotificationArn) {
             this.connectionNotificationArn = Output.of(Objects.requireNonNull(connectionNotificationArn));
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
-
         public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
-
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
             return this;
-        }
-        public VpcEndpointConnectionNotificationArgs build() {
+        }        public VpcEndpointConnectionNotificationArgs build() {
             return new VpcEndpointConnectionNotificationArgs(connectionEvents, connectionNotificationArn, vpcEndpointId, vpcEndpointServiceId);
         }
     }

@@ -151,72 +151,58 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
             this.peerAccountId = peerAccountId;
             return this;
         }
-
         public Builder peerAccountId(@Nullable String peerAccountId) {
             this.peerAccountId = Output.ofNullable(peerAccountId);
             return this;
         }
-
         public Builder peerRegion(@Nullable Output<String> peerRegion) {
             this.peerRegion = peerRegion;
             return this;
         }
-
         public Builder peerRegion(@Nullable String peerRegion) {
             this.peerRegion = Output.ofNullable(peerRegion);
             return this;
         }
-
         public Builder peerTransitGatewayId(@Nullable Output<String> peerTransitGatewayId) {
             this.peerTransitGatewayId = peerTransitGatewayId;
             return this;
         }
-
         public Builder peerTransitGatewayId(@Nullable String peerTransitGatewayId) {
             this.peerTransitGatewayId = Output.ofNullable(peerTransitGatewayId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
-
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = Output.ofNullable(transitGatewayId);
             return this;
-        }
-        public TransitGatewayPeeringAttachmentAccepterState build() {
+        }        public TransitGatewayPeeringAttachmentAccepterState build() {
             return new TransitGatewayPeeringAttachmentAccepterState(peerAccountId, peerRegion, peerTransitGatewayId, tags, tagsAll, transitGatewayAttachmentId, transitGatewayId);
         }
     }

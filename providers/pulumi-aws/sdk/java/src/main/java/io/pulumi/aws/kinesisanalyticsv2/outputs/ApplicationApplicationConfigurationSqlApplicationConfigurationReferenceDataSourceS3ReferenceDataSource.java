@@ -69,12 +69,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder fileKey(String fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource(bucketArn, fileKey);
         }
     }

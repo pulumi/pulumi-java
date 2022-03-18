@@ -158,72 +158,61 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder artifactStore(@Nullable Output<PipelineArtifactStoreGetArgs> artifactStore) {
             this.artifactStore = artifactStore;
             return this;
         }
-
         public Builder artifactStore(@Nullable PipelineArtifactStoreGetArgs artifactStore) {
             this.artifactStore = Output.ofNullable(artifactStore);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder stages(@Nullable Output<List<PipelineStageGetArgs>> stages) {
             this.stages = stages;
             return this;
         }
-
         public Builder stages(@Nullable List<PipelineStageGetArgs> stages) {
             this.stages = Output.ofNullable(stages);
             return this;
         }
-
+        public Builder stages(PipelineStageGetArgs... stages) {
+            return stages(List.of(stages));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public PipelineState build() {
+        }        public PipelineState build() {
             return new PipelineState(arn, artifactStore, name, roleArn, stages, tags, tagsAll);
         }
     }

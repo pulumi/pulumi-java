@@ -86,17 +86,20 @@ public final class ProjectVpcConfig {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public ProjectVpcConfig build() {
+        }        public ProjectVpcConfig build() {
             return new ProjectVpcConfig(securityGroupIds, subnets, vpcId);
         }
     }

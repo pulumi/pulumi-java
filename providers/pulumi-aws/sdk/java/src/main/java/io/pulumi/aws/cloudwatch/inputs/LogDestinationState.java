@@ -106,42 +106,34 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
-
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Output.ofNullable(targetArn);
             return this;
-        }
-        public LogDestinationState build() {
+        }        public LogDestinationState build() {
             return new LogDestinationState(arn, name, roleArn, targetArn);
         }
     }

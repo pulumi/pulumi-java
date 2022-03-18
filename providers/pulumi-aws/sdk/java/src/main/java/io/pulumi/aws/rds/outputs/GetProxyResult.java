@@ -241,67 +241,63 @@ public final class GetProxyResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder auths(List<GetProxyAuth> auths) {
             this.auths = Objects.requireNonNull(auths);
             return this;
         }
-
+        public Builder auths(GetProxyAuth... auths) {
+            return auths(List.of(auths));
+        }
         public Builder debugLogging(Boolean debugLogging) {
             this.debugLogging = Objects.requireNonNull(debugLogging);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder engineFamily(String engineFamily) {
             this.engineFamily = Objects.requireNonNull(engineFamily);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder idleClientTimeout(Integer idleClientTimeout) {
             this.idleClientTimeout = Objects.requireNonNull(idleClientTimeout);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder requireTls(Boolean requireTls) {
             this.requireTls = Objects.requireNonNull(requireTls);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }
-
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
-        public GetProxyResult build() {
+        public Builder vpcSubnetIds(String... vpcSubnetIds) {
+            return vpcSubnetIds(List.of(vpcSubnetIds));
+        }        public GetProxyResult build() {
             return new GetProxyResult(arn, auths, debugLogging, endpoint, engineFamily, id, idleClientTimeout, name, requireTls, roleArn, vpcId, vpcSecurityGroupIds, vpcSubnetIds);
         }
     }

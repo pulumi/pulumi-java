@@ -73,22 +73,18 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder permission(Output<String> permission) {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }
-
         public Builder permission(String permission) {
             this.permission = Output.of(Objects.requireNonNull(permission));
             return this;
-        }
-        public StackUserSettingArgs build() {
+        }        public StackUserSettingArgs build() {
             return new StackUserSettingArgs(action, permission);
         }
     }

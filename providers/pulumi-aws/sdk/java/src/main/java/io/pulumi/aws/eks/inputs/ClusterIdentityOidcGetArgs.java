@@ -57,12 +57,10 @@ public final class ClusterIdentityOidcGetArgs extends io.pulumi.resources.Resour
             this.issuer = issuer;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = Output.ofNullable(issuer);
             return this;
-        }
-        public ClusterIdentityOidcGetArgs build() {
+        }        public ClusterIdentityOidcGetArgs build() {
             return new ClusterIdentityOidcGetArgs(issuer);
         }
     }

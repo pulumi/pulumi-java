@@ -73,22 +73,18 @@ public final class ThingPrincipalAttachmentArgs extends io.pulumi.resources.Reso
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public Builder thing(Output<String> thing) {
             this.thing = Objects.requireNonNull(thing);
             return this;
         }
-
         public Builder thing(String thing) {
             this.thing = Output.of(Objects.requireNonNull(thing));
             return this;
-        }
-        public ThingPrincipalAttachmentArgs build() {
+        }        public ThingPrincipalAttachmentArgs build() {
             return new ThingPrincipalAttachmentArgs(principal, thing);
         }
     }

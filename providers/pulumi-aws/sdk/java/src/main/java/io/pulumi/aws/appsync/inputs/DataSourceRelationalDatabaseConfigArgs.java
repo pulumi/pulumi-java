@@ -75,22 +75,18 @@ public final class DataSourceRelationalDatabaseConfigArgs extends io.pulumi.reso
             this.httpEndpointConfig = httpEndpointConfig;
             return this;
         }
-
         public Builder httpEndpointConfig(@Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs httpEndpointConfig) {
             this.httpEndpointConfig = Output.ofNullable(httpEndpointConfig);
             return this;
         }
-
         public Builder sourceType(@Nullable Output<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = Output.ofNullable(sourceType);
             return this;
-        }
-        public DataSourceRelationalDatabaseConfigArgs build() {
+        }        public DataSourceRelationalDatabaseConfigArgs build() {
             return new DataSourceRelationalDatabaseConfigArgs(httpEndpointConfig, sourceType);
         }
     }

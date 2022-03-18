@@ -54,12 +54,13 @@ public final class GetVpcIamPoolFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetVpcIamPoolFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetVpcIamPoolFilter build() {
             return new GetVpcIamPoolFilter(name, values);
         }
     }

@@ -119,27 +119,22 @@ public final class SecretReplica {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder lastAccessedDate(@Nullable String lastAccessedDate) {
             this.lastAccessedDate = lastAccessedDate;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
-        }
-        public SecretReplica build() {
+        }        public SecretReplica build() {
             return new SecretReplica(kmsKeyId, lastAccessedDate, region, status, statusMessage);
         }
     }

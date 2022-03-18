@@ -81,22 +81,18 @@ public final class EnvironmentAllSetting {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EnvironmentAllSetting build() {
+        }        public EnvironmentAllSetting build() {
             return new EnvironmentAllSetting(name, namespace, resource, value);
         }
     }

@@ -72,12 +72,10 @@ public final class ResolverRuleTargetIp {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public ResolverRuleTargetIp build() {
+        }        public ResolverRuleTargetIp build() {
             return new ResolverRuleTargetIp(ip, port);
         }
     }

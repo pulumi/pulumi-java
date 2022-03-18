@@ -127,52 +127,45 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.endpointOptions = endpointOptions;
             return this;
         }
-
         public Builder endpointOptions(@Nullable DomainEndpointOptionsArgs endpointOptions) {
             this.endpointOptions = Output.ofNullable(endpointOptions);
             return this;
         }
-
         public Builder indexFields(@Nullable Output<List<DomainIndexFieldArgs>> indexFields) {
             this.indexFields = indexFields;
             return this;
         }
-
         public Builder indexFields(@Nullable List<DomainIndexFieldArgs> indexFields) {
             this.indexFields = Output.ofNullable(indexFields);
             return this;
         }
-
+        public Builder indexFields(DomainIndexFieldArgs... indexFields) {
+            return indexFields(List.of(indexFields));
+        }
         public Builder multiAz(@Nullable Output<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
-
         public Builder multiAz(@Nullable Boolean multiAz) {
             this.multiAz = Output.ofNullable(multiAz);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scalingParameters(@Nullable Output<DomainScalingParametersArgs> scalingParameters) {
             this.scalingParameters = scalingParameters;
             return this;
         }
-
         public Builder scalingParameters(@Nullable DomainScalingParametersArgs scalingParameters) {
             this.scalingParameters = Output.ofNullable(scalingParameters);
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(endpointOptions, indexFields, multiAz, name, scalingParameters);
         }
     }

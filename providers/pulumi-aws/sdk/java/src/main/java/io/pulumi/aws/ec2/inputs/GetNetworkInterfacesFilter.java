@@ -74,12 +74,13 @@ public final class GetNetworkInterfacesFilter extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetNetworkInterfacesFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetNetworkInterfacesFilter build() {
             return new GetNetworkInterfacesFilter(name, values);
         }
     }

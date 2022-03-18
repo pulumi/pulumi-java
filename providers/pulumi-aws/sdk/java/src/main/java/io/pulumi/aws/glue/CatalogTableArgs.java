@@ -273,142 +273,120 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder partitionIndices(@Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices) {
             this.partitionIndices = partitionIndices;
             return this;
         }
-
         public Builder partitionIndices(@Nullable List<CatalogTablePartitionIndexArgs> partitionIndices) {
             this.partitionIndices = Output.ofNullable(partitionIndices);
             return this;
         }
-
+        public Builder partitionIndices(CatalogTablePartitionIndexArgs... partitionIndices) {
+            return partitionIndices(List.of(partitionIndices));
+        }
         public Builder partitionKeys(@Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
-
         public Builder partitionKeys(@Nullable List<CatalogTablePartitionKeyArgs> partitionKeys) {
             this.partitionKeys = Output.ofNullable(partitionKeys);
             return this;
         }
-
+        public Builder partitionKeys(CatalogTablePartitionKeyArgs... partitionKeys) {
+            return partitionKeys(List.of(partitionKeys));
+        }
         public Builder retention(@Nullable Output<Integer> retention) {
             this.retention = retention;
             return this;
         }
-
         public Builder retention(@Nullable Integer retention) {
             this.retention = Output.ofNullable(retention);
             return this;
         }
-
         public Builder storageDescriptor(@Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
             return this;
         }
-
         public Builder storageDescriptor(@Nullable CatalogTableStorageDescriptorArgs storageDescriptor) {
             this.storageDescriptor = Output.ofNullable(storageDescriptor);
             return this;
         }
-
         public Builder tableType(@Nullable Output<String> tableType) {
             this.tableType = tableType;
             return this;
         }
-
         public Builder tableType(@Nullable String tableType) {
             this.tableType = Output.ofNullable(tableType);
             return this;
         }
-
         public Builder targetTable(@Nullable Output<CatalogTableTargetTableArgs> targetTable) {
             this.targetTable = targetTable;
             return this;
         }
-
         public Builder targetTable(@Nullable CatalogTableTargetTableArgs targetTable) {
             this.targetTable = Output.ofNullable(targetTable);
             return this;
         }
-
         public Builder viewExpandedText(@Nullable Output<String> viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
             return this;
         }
-
         public Builder viewExpandedText(@Nullable String viewExpandedText) {
             this.viewExpandedText = Output.ofNullable(viewExpandedText);
             return this;
         }
-
         public Builder viewOriginalText(@Nullable Output<String> viewOriginalText) {
             this.viewOriginalText = viewOriginalText;
             return this;
         }
-
         public Builder viewOriginalText(@Nullable String viewOriginalText) {
             this.viewOriginalText = Output.ofNullable(viewOriginalText);
             return this;
-        }
-        public CatalogTableArgs build() {
+        }        public CatalogTableArgs build() {
             return new CatalogTableArgs(catalogId, databaseName, description, name, owner, parameters, partitionIndices, partitionKeys, retention, storageDescriptor, tableType, targetTable, viewExpandedText, viewOriginalText);
         }
     }

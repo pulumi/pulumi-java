@@ -51,8 +51,7 @@ public final class VpcIpamOperatingRegion {
         public Builder regionName(String regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
-        }
-        public VpcIpamOperatingRegion build() {
+        }        public VpcIpamOperatingRegion build() {
             return new VpcIpamOperatingRegion(regionName);
         }
     }

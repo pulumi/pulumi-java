@@ -61,12 +61,10 @@ public final class GetTableAttribute {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetTableAttribute build() {
+        }        public GetTableAttribute build() {
             return new GetTableAttribute(name, type);
         }
     }

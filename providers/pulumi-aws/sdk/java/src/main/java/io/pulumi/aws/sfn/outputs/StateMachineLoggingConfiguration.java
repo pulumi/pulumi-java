@@ -88,17 +88,14 @@ public final class StateMachineLoggingConfiguration {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
-
         public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = logDestination;
             return this;
-        }
-        public StateMachineLoggingConfiguration build() {
+        }        public StateMachineLoggingConfiguration build() {
             return new StateMachineLoggingConfiguration(includeExecutionData, level, logDestination);
         }
     }

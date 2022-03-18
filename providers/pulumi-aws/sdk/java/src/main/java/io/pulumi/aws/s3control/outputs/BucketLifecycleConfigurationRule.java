@@ -122,27 +122,22 @@ public final class BucketLifecycleConfigurationRule {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
-
         public Builder expiration(@Nullable BucketLifecycleConfigurationRuleExpiration expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder filter(@Nullable BucketLifecycleConfigurationRuleFilter filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public BucketLifecycleConfigurationRule build() {
+        }        public BucketLifecycleConfigurationRule build() {
             return new BucketLifecycleConfigurationRule(abortIncompleteMultipartUpload, expiration, filter, id, status);
         }
     }

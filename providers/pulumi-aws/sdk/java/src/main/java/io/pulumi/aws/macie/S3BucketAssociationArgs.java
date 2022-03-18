@@ -107,42 +107,34 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder classificationType(@Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType) {
             this.classificationType = classificationType;
             return this;
         }
-
         public Builder classificationType(@Nullable S3BucketAssociationClassificationTypeArgs classificationType) {
             this.classificationType = Output.ofNullable(classificationType);
             return this;
         }
-
         public Builder memberAccountId(@Nullable Output<String> memberAccountId) {
             this.memberAccountId = memberAccountId;
             return this;
         }
-
         public Builder memberAccountId(@Nullable String memberAccountId) {
             this.memberAccountId = Output.ofNullable(memberAccountId);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public S3BucketAssociationArgs build() {
+        }        public S3BucketAssociationArgs build() {
             return new S3BucketAssociationArgs(bucketName, classificationType, memberAccountId, prefix);
         }
     }

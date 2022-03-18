@@ -127,32 +127,26 @@ public final class GetEventSourceResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetEventSourceResult build() {
+        }        public GetEventSourceResult build() {
             return new GetEventSourceResult(arn, createdBy, id, name, namePrefix, state);
         }
     }

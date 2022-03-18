@@ -71,12 +71,10 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
             this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
-        }
-        public SecurityConfigurationEncryptionConfigurationCloudwatchEncryption build() {
+        }        public SecurityConfigurationEncryptionConfigurationCloudwatchEncryption build() {
             return new SecurityConfigurationEncryptionConfigurationCloudwatchEncryption(cloudwatchEncryptionMode, kmsKeyArn);
         }
     }

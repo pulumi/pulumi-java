@@ -57,12 +57,10 @@ public final class ClusterCertificateAuthorityArgs extends io.pulumi.resources.R
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
-        }
-        public ClusterCertificateAuthorityArgs build() {
+        }        public ClusterCertificateAuthorityArgs build() {
             return new ClusterCertificateAuthorityArgs(data);
         }
     }

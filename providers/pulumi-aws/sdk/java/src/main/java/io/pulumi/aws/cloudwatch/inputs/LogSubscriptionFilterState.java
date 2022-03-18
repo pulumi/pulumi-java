@@ -138,57 +138,46 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
             this.destinationArn = destinationArn;
             return this;
         }
-
         public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = Output.ofNullable(destinationArn);
             return this;
         }
-
         public Builder distribution(@Nullable Output<String> distribution) {
             this.distribution = distribution;
             return this;
         }
-
         public Builder distribution(@Nullable String distribution) {
             this.distribution = Output.ofNullable(distribution);
             return this;
         }
-
         public Builder filterPattern(@Nullable Output<String> filterPattern) {
             this.filterPattern = filterPattern;
             return this;
         }
-
         public Builder filterPattern(@Nullable String filterPattern) {
             this.filterPattern = Output.ofNullable(filterPattern);
             return this;
         }
-
         public Builder logGroup(@Nullable Output<String> logGroup) {
             this.logGroup = logGroup;
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public LogSubscriptionFilterState build() {
+        }        public LogSubscriptionFilterState build() {
             return new LogSubscriptionFilterState(destinationArn, distribution, filterPattern, logGroup, name, roleArn);
         }
     }

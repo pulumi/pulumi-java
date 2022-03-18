@@ -156,72 +156,61 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             this.branchFilter = branchFilter;
             return this;
         }
-
         public Builder branchFilter(@Nullable String branchFilter) {
             this.branchFilter = Output.ofNullable(branchFilter);
             return this;
         }
-
         public Builder buildType(@Nullable Output<String> buildType) {
             this.buildType = buildType;
             return this;
         }
-
         public Builder buildType(@Nullable String buildType) {
             this.buildType = Output.ofNullable(buildType);
             return this;
         }
-
         public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups) {
             this.filterGroups = filterGroups;
             return this;
         }
-
         public Builder filterGroups(@Nullable List<WebhookFilterGroupGetArgs> filterGroups) {
             this.filterGroups = Output.ofNullable(filterGroups);
             return this;
         }
-
+        public Builder filterGroups(WebhookFilterGroupGetArgs... filterGroups) {
+            return filterGroups(List.of(filterGroups));
+        }
         public Builder payloadUrl(@Nullable Output<String> payloadUrl) {
             this.payloadUrl = payloadUrl;
             return this;
         }
-
         public Builder payloadUrl(@Nullable String payloadUrl) {
             this.payloadUrl = Output.ofNullable(payloadUrl);
             return this;
         }
-
         public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = Output.ofNullable(projectName);
             return this;
         }
-
         public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = Output.ofNullable(secret);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public WebhookState build() {
+        }        public WebhookState build() {
             return new WebhookState(branchFilter, buildType, filterGroups, payloadUrl, projectName, secret, url);
         }
     }

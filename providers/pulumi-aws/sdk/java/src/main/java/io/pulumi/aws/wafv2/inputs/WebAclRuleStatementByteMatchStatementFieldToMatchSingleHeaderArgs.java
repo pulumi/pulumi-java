@@ -56,12 +56,10 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeader
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs build() {
+        }        public WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs build() {
             return new WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs(name);
         }
     }

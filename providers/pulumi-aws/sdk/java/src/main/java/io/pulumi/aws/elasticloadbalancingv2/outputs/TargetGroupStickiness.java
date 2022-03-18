@@ -105,22 +105,18 @@ public final class TargetGroupStickiness {
             this.cookieDuration = cookieDuration;
             return this;
         }
-
         public Builder cookieName(@Nullable String cookieName) {
             this.cookieName = cookieName;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TargetGroupStickiness build() {
+        }        public TargetGroupStickiness build() {
             return new TargetGroupStickiness(cookieDuration, cookieName, enabled, type);
         }
     }

@@ -139,62 +139,53 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
             this.associationId = associationId;
             return this;
         }
-
         public Builder associationId(@Nullable String associationId) {
             this.associationId = Output.ofNullable(associationId);
             return this;
         }
-
         public Builder clientVpnEndpointId(@Nullable Output<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
-
         public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
             this.clientVpnEndpointId = Output.ofNullable(clientVpnEndpointId);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public NetworkAssociationState build() {
+        }        public NetworkAssociationState build() {
             return new NetworkAssociationState(associationId, clientVpnEndpointId, securityGroups, status, subnetId, vpcId);
         }
     }

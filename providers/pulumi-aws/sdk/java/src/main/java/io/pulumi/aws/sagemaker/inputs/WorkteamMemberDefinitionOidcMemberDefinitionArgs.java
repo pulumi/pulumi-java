@@ -57,12 +57,13 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionArgs extends io.p
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
         public Builder groups(List<String> groups) {
             this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
-        public WorkteamMemberDefinitionOidcMemberDefinitionArgs build() {
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }        public WorkteamMemberDefinitionOidcMemberDefinitionArgs build() {
             return new WorkteamMemberDefinitionOidcMemberDefinitionArgs(groups);
         }
     }

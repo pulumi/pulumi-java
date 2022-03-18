@@ -59,12 +59,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
-        }
-        public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs build() {
+        }        public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs build() {
             return new DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(action);
         }
     }

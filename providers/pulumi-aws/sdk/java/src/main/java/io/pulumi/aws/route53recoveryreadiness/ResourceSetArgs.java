@@ -109,42 +109,37 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceSetName = Objects.requireNonNull(resourceSetName);
             return this;
         }
-
         public Builder resourceSetName(String resourceSetName) {
             this.resourceSetName = Output.of(Objects.requireNonNull(resourceSetName));
             return this;
         }
-
         public Builder resourceSetType(Output<String> resourceSetType) {
             this.resourceSetType = Objects.requireNonNull(resourceSetType);
             return this;
         }
-
         public Builder resourceSetType(String resourceSetType) {
             this.resourceSetType = Output.of(Objects.requireNonNull(resourceSetType));
             return this;
         }
-
         public Builder resources(Output<List<ResourceSetResourceArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(List<ResourceSetResourceArgs> resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
-
+        public Builder resources(ResourceSetResourceArgs... resources) {
+            return resources(List.of(resources));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResourceSetArgs build() {
+        }        public ResourceSetArgs build() {
             return new ResourceSetArgs(resourceSetName, resourceSetType, resources, tags);
         }
     }

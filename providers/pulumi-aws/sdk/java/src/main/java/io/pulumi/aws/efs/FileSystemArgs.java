@@ -193,92 +193,74 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             this.availabilityZoneName = availabilityZoneName;
             return this;
         }
-
         public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
             this.availabilityZoneName = Output.ofNullable(availabilityZoneName);
             return this;
         }
-
         public Builder creationToken(@Nullable Output<String> creationToken) {
             this.creationToken = creationToken;
             return this;
         }
-
         public Builder creationToken(@Nullable String creationToken) {
             this.creationToken = Output.ofNullable(creationToken);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder lifecyclePolicy(@Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
-
         public Builder lifecyclePolicy(@Nullable FileSystemLifecyclePolicyArgs lifecyclePolicy) {
             this.lifecyclePolicy = Output.ofNullable(lifecyclePolicy);
             return this;
         }
-
         public Builder performanceMode(@Nullable Output<String> performanceMode) {
             this.performanceMode = performanceMode;
             return this;
         }
-
         public Builder performanceMode(@Nullable String performanceMode) {
             this.performanceMode = Output.ofNullable(performanceMode);
             return this;
         }
-
         public Builder provisionedThroughputInMibps(@Nullable Output<Double> provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
-
         public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = Output.ofNullable(provisionedThroughputInMibps);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder throughputMode(@Nullable Output<String> throughputMode) {
             this.throughputMode = throughputMode;
             return this;
         }
-
         public Builder throughputMode(@Nullable String throughputMode) {
             this.throughputMode = Output.ofNullable(throughputMode);
             return this;
-        }
-        public FileSystemArgs build() {
+        }        public FileSystemArgs build() {
             return new FileSystemArgs(availabilityZoneName, creationToken, encrypted, kmsKeyId, lifecyclePolicy, performanceMode, provisionedThroughputInMibps, tags, throughputMode);
         }
     }

@@ -74,22 +74,18 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
             this.invitationId = invitationId;
             return this;
         }
-
         public Builder invitationId(@Nullable String invitationId) {
             this.invitationId = Output.ofNullable(invitationId);
             return this;
         }
-
         public Builder masterId(@Nullable Output<String> masterId) {
             this.masterId = masterId;
             return this;
         }
-
         public Builder masterId(@Nullable String masterId) {
             this.masterId = Output.ofNullable(masterId);
             return this;
-        }
-        public InviteAccepterState build() {
+        }        public InviteAccepterState build() {
             return new InviteAccepterState(invitationId, masterId);
         }
     }

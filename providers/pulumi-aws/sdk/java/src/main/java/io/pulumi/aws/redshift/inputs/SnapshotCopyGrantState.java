@@ -123,52 +123,42 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder snapshotCopyGrantName(@Nullable Output<String> snapshotCopyGrantName) {
             this.snapshotCopyGrantName = snapshotCopyGrantName;
             return this;
         }
-
         public Builder snapshotCopyGrantName(@Nullable String snapshotCopyGrantName) {
             this.snapshotCopyGrantName = Output.ofNullable(snapshotCopyGrantName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public SnapshotCopyGrantState build() {
+        }        public SnapshotCopyGrantState build() {
             return new SnapshotCopyGrantState(arn, kmsKeyId, snapshotCopyGrantName, tags, tagsAll);
         }
     }

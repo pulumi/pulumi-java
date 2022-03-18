@@ -91,32 +91,26 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder logConfiguration(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
-
         public Builder logConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs logConfiguration) {
             this.logConfiguration = Output.ofNullable(logConfiguration);
             return this;
         }
-
         public Builder logging(@Nullable Output<String> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable String logging) {
             this.logging = Output.ofNullable(logging);
             return this;
-        }
-        public ClusterConfigurationExecuteCommandConfigurationGetArgs build() {
+        }        public ClusterConfigurationExecuteCommandConfigurationGetArgs build() {
             return new ClusterConfigurationExecuteCommandConfigurationGetArgs(kmsKeyId, logConfiguration, logging);
         }
     }

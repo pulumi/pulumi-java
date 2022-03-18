@@ -81,12 +81,13 @@ public final class IntentConclusionStatement {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(IntentConclusionStatementMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
-        }
-        public IntentConclusionStatement build() {
+        }        public IntentConclusionStatement build() {
             return new IntentConclusionStatement(messages, responseCard);
         }
     }

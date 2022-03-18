@@ -56,12 +56,10 @@ public final class OrganizationAdminAccountArgs extends io.pulumi.resources.Reso
             this.adminAccountId = Objects.requireNonNull(adminAccountId);
             return this;
         }
-
         public Builder adminAccountId(String adminAccountId) {
             this.adminAccountId = Output.of(Objects.requireNonNull(adminAccountId));
             return this;
-        }
-        public OrganizationAdminAccountArgs build() {
+        }        public OrganizationAdminAccountArgs build() {
             return new OrganizationAdminAccountArgs(adminAccountId);
         }
     }

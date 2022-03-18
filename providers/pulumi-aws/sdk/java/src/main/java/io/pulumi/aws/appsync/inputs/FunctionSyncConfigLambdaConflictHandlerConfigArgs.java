@@ -57,12 +57,10 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfigArgs extends io.
             this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
             return this;
         }
-
         public Builder lambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
             this.lambdaConflictHandlerArn = Output.ofNullable(lambdaConflictHandlerArn);
             return this;
-        }
-        public FunctionSyncConfigLambdaConflictHandlerConfigArgs build() {
+        }        public FunctionSyncConfigLambdaConflictHandlerConfigArgs build() {
             return new FunctionSyncConfigLambdaConflictHandlerConfigArgs(lambdaConflictHandlerArn);
         }
     }

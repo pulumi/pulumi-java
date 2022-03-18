@@ -451,252 +451,208 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             this.architecture = architecture;
             return this;
         }
-
         public Builder architecture(@Nullable String architecture) {
             this.architecture = Output.ofNullable(architecture);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable List<AmiEbsBlockDeviceGetArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
-
+        public Builder ebsBlockDevices(AmiEbsBlockDeviceGetArgs... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder enaSupport(@Nullable Output<Boolean> enaSupport) {
             this.enaSupport = enaSupport;
             return this;
         }
-
         public Builder enaSupport(@Nullable Boolean enaSupport) {
             this.enaSupport = Output.ofNullable(enaSupport);
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable List<AmiEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
-
+        public Builder ephemeralBlockDevices(AmiEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder hypervisor(@Nullable Output<String> hypervisor) {
             this.hypervisor = hypervisor;
             return this;
         }
-
         public Builder hypervisor(@Nullable String hypervisor) {
             this.hypervisor = Output.ofNullable(hypervisor);
             return this;
         }
-
         public Builder imageLocation(@Nullable Output<String> imageLocation) {
             this.imageLocation = imageLocation;
             return this;
         }
-
         public Builder imageLocation(@Nullable String imageLocation) {
             this.imageLocation = Output.ofNullable(imageLocation);
             return this;
         }
-
         public Builder imageOwnerAlias(@Nullable Output<String> imageOwnerAlias) {
             this.imageOwnerAlias = imageOwnerAlias;
             return this;
         }
-
         public Builder imageOwnerAlias(@Nullable String imageOwnerAlias) {
             this.imageOwnerAlias = Output.ofNullable(imageOwnerAlias);
             return this;
         }
-
         public Builder imageType(@Nullable Output<String> imageType) {
             this.imageType = imageType;
             return this;
         }
-
         public Builder imageType(@Nullable String imageType) {
             this.imageType = Output.ofNullable(imageType);
             return this;
         }
-
         public Builder kernelId(@Nullable Output<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
-
         public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = Output.ofNullable(kernelId);
             return this;
         }
-
         public Builder manageEbsSnapshots(@Nullable Output<Boolean> manageEbsSnapshots) {
             this.manageEbsSnapshots = manageEbsSnapshots;
             return this;
         }
-
         public Builder manageEbsSnapshots(@Nullable Boolean manageEbsSnapshots) {
             this.manageEbsSnapshots = Output.ofNullable(manageEbsSnapshots);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder platformDetails(@Nullable Output<String> platformDetails) {
             this.platformDetails = platformDetails;
             return this;
         }
-
         public Builder platformDetails(@Nullable String platformDetails) {
             this.platformDetails = Output.ofNullable(platformDetails);
             return this;
         }
-
         public Builder $public(@Nullable Output<Boolean> $public) {
             this.$public = $public;
             return this;
         }
-
         public Builder $public(@Nullable Boolean $public) {
             this.$public = Output.ofNullable($public);
             return this;
         }
-
         public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
-
         public Builder ramdiskId(@Nullable String ramdiskId) {
             this.ramdiskId = Output.ofNullable(ramdiskId);
             return this;
         }
-
         public Builder rootDeviceName(@Nullable Output<String> rootDeviceName) {
             this.rootDeviceName = rootDeviceName;
             return this;
         }
-
         public Builder rootDeviceName(@Nullable String rootDeviceName) {
             this.rootDeviceName = Output.ofNullable(rootDeviceName);
             return this;
         }
-
         public Builder rootSnapshotId(@Nullable Output<String> rootSnapshotId) {
             this.rootSnapshotId = rootSnapshotId;
             return this;
         }
-
         public Builder rootSnapshotId(@Nullable String rootSnapshotId) {
             this.rootSnapshotId = Output.ofNullable(rootSnapshotId);
             return this;
         }
-
         public Builder sriovNetSupport(@Nullable Output<String> sriovNetSupport) {
             this.sriovNetSupport = sriovNetSupport;
             return this;
         }
-
         public Builder sriovNetSupport(@Nullable String sriovNetSupport) {
             this.sriovNetSupport = Output.ofNullable(sriovNetSupport);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder usageOperation(@Nullable Output<String> usageOperation) {
             this.usageOperation = usageOperation;
             return this;
         }
-
         public Builder usageOperation(@Nullable String usageOperation) {
             this.usageOperation = Output.ofNullable(usageOperation);
             return this;
         }
-
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
             this.virtualizationType = virtualizationType;
             return this;
         }
-
         public Builder virtualizationType(@Nullable String virtualizationType) {
             this.virtualizationType = Output.ofNullable(virtualizationType);
             return this;
-        }
-        public AmiState build() {
+        }        public AmiState build() {
             return new AmiState(architecture, arn, description, ebsBlockDevices, enaSupport, ephemeralBlockDevices, hypervisor, imageLocation, imageOwnerAlias, imageType, kernelId, manageEbsSnapshots, name, ownerId, platform, platformDetails, $public, ramdiskId, rootDeviceName, rootSnapshotId, sriovNetSupport, tags, tagsAll, usageOperation, virtualizationType);
         }
     }

@@ -51,8 +51,7 @@ public final class GetDomainClusterConfigZoneAwarenessConfig {
         public Builder availabilityZoneCount(Integer availabilityZoneCount) {
             this.availabilityZoneCount = Objects.requireNonNull(availabilityZoneCount);
             return this;
-        }
-        public GetDomainClusterConfigZoneAwarenessConfig build() {
+        }        public GetDomainClusterConfigZoneAwarenessConfig build() {
             return new GetDomainClusterConfigZoneAwarenessConfig(availabilityZoneCount);
         }
     }

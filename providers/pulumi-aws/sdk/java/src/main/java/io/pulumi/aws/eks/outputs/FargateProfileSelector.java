@@ -71,12 +71,10 @@ public final class FargateProfileSelector {
             this.labels = labels;
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public FargateProfileSelector build() {
+        }        public FargateProfileSelector build() {
             return new FargateProfileSelector(labels, namespace);
         }
     }

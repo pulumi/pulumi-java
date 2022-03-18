@@ -91,32 +91,26 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
             this.accessPointArn = accessPointArn;
             return this;
         }
-
         public Builder accessPointArn(@Nullable String accessPointArn) {
             this.accessPointArn = Output.ofNullable(accessPointArn);
             return this;
         }
-
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
-
         public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = Output.ofNullable(hasPublicAccessPolicy);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public AccessPointPolicyState build() {
+        }        public AccessPointPolicyState build() {
             return new AccessPointPolicyState(accessPointArn, hasPublicAccessPolicy, policy);
         }
     }

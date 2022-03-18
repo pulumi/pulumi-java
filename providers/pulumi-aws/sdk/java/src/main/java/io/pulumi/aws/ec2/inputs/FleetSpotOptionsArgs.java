@@ -108,42 +108,34 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = Output.ofNullable(instancePoolsToUseCount);
             return this;
         }
-
         public Builder maintenanceStrategies(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
-
         public Builder maintenanceStrategies(@Nullable FleetSpotOptionsMaintenanceStrategiesArgs maintenanceStrategies) {
             this.maintenanceStrategies = Output.ofNullable(maintenanceStrategies);
             return this;
-        }
-        public FleetSpotOptionsArgs build() {
+        }        public FleetSpotOptionsArgs build() {
             return new FleetSpotOptionsArgs(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies);
         }
     }

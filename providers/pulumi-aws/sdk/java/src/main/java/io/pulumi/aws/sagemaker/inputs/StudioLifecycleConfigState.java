@@ -139,62 +139,50 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder studioLifecycleConfigAppType(@Nullable Output<String> studioLifecycleConfigAppType) {
             this.studioLifecycleConfigAppType = studioLifecycleConfigAppType;
             return this;
         }
-
         public Builder studioLifecycleConfigAppType(@Nullable String studioLifecycleConfigAppType) {
             this.studioLifecycleConfigAppType = Output.ofNullable(studioLifecycleConfigAppType);
             return this;
         }
-
         public Builder studioLifecycleConfigContent(@Nullable Output<String> studioLifecycleConfigContent) {
             this.studioLifecycleConfigContent = studioLifecycleConfigContent;
             return this;
         }
-
         public Builder studioLifecycleConfigContent(@Nullable String studioLifecycleConfigContent) {
             this.studioLifecycleConfigContent = Output.ofNullable(studioLifecycleConfigContent);
             return this;
         }
-
         public Builder studioLifecycleConfigName(@Nullable Output<String> studioLifecycleConfigName) {
             this.studioLifecycleConfigName = studioLifecycleConfigName;
             return this;
         }
-
         public Builder studioLifecycleConfigName(@Nullable String studioLifecycleConfigName) {
             this.studioLifecycleConfigName = Output.ofNullable(studioLifecycleConfigName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public StudioLifecycleConfigState build() {
+        }        public StudioLifecycleConfigState build() {
             return new StudioLifecycleConfigState(arn, studioLifecycleConfigAppType, studioLifecycleConfigContent, studioLifecycleConfigName, tags, tagsAll);
         }
     }

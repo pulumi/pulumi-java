@@ -75,22 +75,18 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.csvMappingParameters = csvMappingParameters;
             return this;
         }
-
         public Builder csvMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersArgs csvMappingParameters) {
             this.csvMappingParameters = Output.ofNullable(csvMappingParameters);
             return this;
         }
-
         public Builder jsonMappingParameters(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs> jsonMappingParameters) {
             this.jsonMappingParameters = jsonMappingParameters;
             return this;
         }
-
         public Builder jsonMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs jsonMappingParameters) {
             this.jsonMappingParameters = Output.ofNullable(jsonMappingParameters);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersArgs(csvMappingParameters, jsonMappingParameters);
         }
     }

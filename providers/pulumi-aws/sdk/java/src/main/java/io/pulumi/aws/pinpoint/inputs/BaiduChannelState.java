@@ -107,42 +107,34 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
             this.apiKey = apiKey;
             return this;
         }
-
         public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = Output.ofNullable(apiKey);
             return this;
         }
-
         public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder secretKey(@Nullable Output<String> secretKey) {
             this.secretKey = secretKey;
             return this;
         }
-
         public Builder secretKey(@Nullable String secretKey) {
             this.secretKey = Output.ofNullable(secretKey);
             return this;
-        }
-        public BaiduChannelState build() {
+        }        public BaiduChannelState build() {
             return new BaiduChannelState(apiKey, applicationId, enabled, secretKey);
         }
     }

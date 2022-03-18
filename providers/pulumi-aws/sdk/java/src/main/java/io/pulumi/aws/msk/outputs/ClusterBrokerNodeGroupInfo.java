@@ -121,27 +121,28 @@ public final class ClusterBrokerNodeGroupInfo {
             this.azDistribution = azDistribution;
             return this;
         }
-
         public Builder clientSubnets(List<String> clientSubnets) {
             this.clientSubnets = Objects.requireNonNull(clientSubnets);
             return this;
         }
-
+        public Builder clientSubnets(String... clientSubnets) {
+            return clientSubnets(List.of(clientSubnets));
+        }
         public Builder ebsVolumeSize(Integer ebsVolumeSize) {
             this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-        public ClusterBrokerNodeGroupInfo build() {
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }        public ClusterBrokerNodeGroupInfo build() {
             return new ClusterBrokerNodeGroupInfo(azDistribution, clientSubnets, ebsVolumeSize, instanceType, securityGroups);
         }
     }

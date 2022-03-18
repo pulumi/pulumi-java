@@ -120,27 +120,31 @@ public final class ServerEndpointDetails {
             this.addressAllocationIds = addressAllocationIds;
             return this;
         }
-
+        public Builder addressAllocationIds(String... addressAllocationIds) {
+            return addressAllocationIds(List.of(addressAllocationIds));
+        }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public ServerEndpointDetails build() {
+        }        public ServerEndpointDetails build() {
             return new ServerEndpointDetails(addressAllocationIds, securityGroupIds, subnetIds, vpcEndpointId, vpcId);
         }
     }

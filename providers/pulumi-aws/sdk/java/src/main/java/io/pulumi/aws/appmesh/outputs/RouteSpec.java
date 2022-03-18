@@ -125,27 +125,22 @@ public final class RouteSpec {
             this.grpcRoute = grpcRoute;
             return this;
         }
-
         public Builder http2Route(@Nullable RouteSpecHttp2Route http2Route) {
             this.http2Route = http2Route;
             return this;
         }
-
         public Builder httpRoute(@Nullable RouteSpecHttpRoute httpRoute) {
             this.httpRoute = httpRoute;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder tcpRoute(@Nullable RouteSpecTcpRoute tcpRoute) {
             this.tcpRoute = tcpRoute;
             return this;
-        }
-        public RouteSpec build() {
+        }        public RouteSpec build() {
             return new RouteSpec(grpcRoute, http2Route, httpRoute, priority, tcpRoute);
         }
     }

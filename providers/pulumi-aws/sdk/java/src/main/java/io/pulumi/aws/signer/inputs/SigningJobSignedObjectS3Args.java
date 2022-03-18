@@ -74,22 +74,18 @@ public final class SigningJobSignedObjectS3Args extends io.pulumi.resources.Reso
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public SigningJobSignedObjectS3Args build() {
+        }        public SigningJobSignedObjectS3Args build() {
             return new SigningJobSignedObjectS3Args(bucket, key);
         }
     }

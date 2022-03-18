@@ -51,8 +51,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNa
         public Builder labelName(String labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
-        }
-        public WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition build() {
+        }        public WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition build() {
             return new WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition(labelName);
         }
     }

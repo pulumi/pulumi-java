@@ -72,12 +72,10 @@ public final class GroupMixedInstancesPolicy {
             this.instancesDistribution = instancesDistribution;
             return this;
         }
-
         public Builder launchTemplate(GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
             this.launchTemplate = Objects.requireNonNull(launchTemplate);
             return this;
-        }
-        public GroupMixedInstancesPolicy build() {
+        }        public GroupMixedInstancesPolicy build() {
             return new GroupMixedInstancesPolicy(instancesDistribution, launchTemplate);
         }
     }

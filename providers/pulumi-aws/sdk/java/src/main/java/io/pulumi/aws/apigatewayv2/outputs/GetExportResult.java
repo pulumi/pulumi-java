@@ -120,42 +120,34 @@ public final class GetExportResult {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder exportVersion(@Nullable String exportVersion) {
             this.exportVersion = exportVersion;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder includeExtensions(@Nullable Boolean includeExtensions) {
             this.includeExtensions = includeExtensions;
             return this;
         }
-
         public Builder outputType(String outputType) {
             this.outputType = Objects.requireNonNull(outputType);
             return this;
         }
-
         public Builder specification(String specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
-        }
-        public GetExportResult build() {
+        }        public GetExportResult build() {
             return new GetExportResult(apiId, body, exportVersion, id, includeExtensions, outputType, specification, stageName);
         }
     }

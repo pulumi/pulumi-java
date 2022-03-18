@@ -68,22 +68,21 @@ public final class NodejsAppLayerCloudwatchConfigurationArgs extends io.pulumi.r
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<NodejsAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<NodejsAppLayerCloudwatchConfigurationLogStreamArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public NodejsAppLayerCloudwatchConfigurationArgs build() {
+        public Builder logStreams(NodejsAppLayerCloudwatchConfigurationLogStreamArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public NodejsAppLayerCloudwatchConfigurationArgs build() {
             return new NodejsAppLayerCloudwatchConfigurationArgs(enabled, logStreams);
         }
     }

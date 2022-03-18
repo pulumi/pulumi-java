@@ -160,42 +160,37 @@ public final class GetClusterResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder pendingTasksCount(Integer pendingTasksCount) {
             this.pendingTasksCount = Objects.requireNonNull(pendingTasksCount);
             return this;
         }
-
         public Builder registeredContainerInstancesCount(Integer registeredContainerInstancesCount) {
             this.registeredContainerInstancesCount = Objects.requireNonNull(registeredContainerInstancesCount);
             return this;
         }
-
         public Builder runningTasksCount(Integer runningTasksCount) {
             this.runningTasksCount = Objects.requireNonNull(runningTasksCount);
             return this;
         }
-
         public Builder settings(List<GetClusterSetting> settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
-
+        public Builder settings(GetClusterSetting... settings) {
+            return settings(List.of(settings));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(arn, clusterName, id, pendingTasksCount, registeredContainerInstancesCount, runningTasksCount, settings, status);
         }
     }

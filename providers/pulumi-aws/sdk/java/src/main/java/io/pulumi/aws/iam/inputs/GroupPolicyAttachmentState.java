@@ -74,17 +74,14 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
             this.group = group;
             return this;
         }
-
         public Builder policyArn(@Nullable Output<String> policyArn) {
             this.policyArn = policyArn;
             return this;
         }
-
         public Builder policyArn(@Nullable String policyArn) {
             this.policyArn = Output.ofNullable(policyArn);
             return this;
-        }
-        public GroupPolicyAttachmentState build() {
+        }        public GroupPolicyAttachmentState build() {
             return new GroupPolicyAttachmentState(group, policyArn);
         }
     }

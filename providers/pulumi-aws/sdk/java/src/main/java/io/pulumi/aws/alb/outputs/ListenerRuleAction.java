@@ -165,42 +165,34 @@ public final class ListenerRuleAction {
             this.authenticateCognito = authenticateCognito;
             return this;
         }
-
         public Builder authenticateOidc(@Nullable ListenerRuleActionAuthenticateOidc authenticateOidc) {
             this.authenticateOidc = authenticateOidc;
             return this;
         }
-
         public Builder fixedResponse(@Nullable ListenerRuleActionFixedResponse fixedResponse) {
             this.fixedResponse = fixedResponse;
             return this;
         }
-
         public Builder forward(@Nullable ListenerRuleActionForward forward) {
             this.forward = forward;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
-
         public Builder redirect(@Nullable ListenerRuleActionRedirect redirect) {
             this.redirect = redirect;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListenerRuleAction build() {
+        }        public ListenerRuleAction build() {
             return new ListenerRuleAction(authenticateCognito, authenticateOidc, fixedResponse, forward, order, redirect, targetGroupArn, type);
         }
     }

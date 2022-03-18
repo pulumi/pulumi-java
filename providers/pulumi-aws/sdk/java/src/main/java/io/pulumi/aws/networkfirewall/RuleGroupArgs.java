@@ -157,72 +157,58 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
-
         public Builder capacity(Integer capacity) {
             this.capacity = Output.of(Objects.requireNonNull(capacity));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ruleGroup(@Nullable Output<RuleGroupRuleGroupArgs> ruleGroup) {
             this.ruleGroup = ruleGroup;
             return this;
         }
-
         public Builder ruleGroup(@Nullable RuleGroupRuleGroupArgs ruleGroup) {
             this.ruleGroup = Output.ofNullable(ruleGroup);
             return this;
         }
-
         public Builder rules(@Nullable Output<String> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable String rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RuleGroupArgs build() {
+        }        public RuleGroupArgs build() {
             return new RuleGroupArgs(capacity, description, name, ruleGroup, rules, tags, type);
         }
     }

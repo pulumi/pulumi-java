@@ -126,52 +126,42 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable WebAclRuleActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder overrideAction(@Nullable Output<WebAclRuleOverrideActionArgs> overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
-
         public Builder overrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
             this.overrideAction = Output.ofNullable(overrideAction);
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder ruleId(Output<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Output.of(Objects.requireNonNull(ruleId));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public WebAclRuleArgs build() {
+        }        public WebAclRuleArgs build() {
             return new WebAclRuleArgs(action, overrideAction, priority, ruleId, type);
         }
     }

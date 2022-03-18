@@ -71,12 +71,10 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
-        }
-        public FeatureGroupOfflineStoreConfigS3StorageConfig build() {
+        }        public FeatureGroupOfflineStoreConfigS3StorageConfig build() {
             return new FeatureGroupOfflineStoreConfigS3StorageConfig(kmsKeyId, s3Uri);
         }
     }

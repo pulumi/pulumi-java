@@ -54,8 +54,7 @@ public final class GetFirehoseDeliveryStreamArgs extends io.pulumi.resources.Inv
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetFirehoseDeliveryStreamArgs build() {
+        }        public GetFirehoseDeliveryStreamArgs build() {
             return new GetFirehoseDeliveryStreamArgs(name);
         }
     }

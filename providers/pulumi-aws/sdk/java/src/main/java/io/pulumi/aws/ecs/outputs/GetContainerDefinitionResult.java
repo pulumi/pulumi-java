@@ -200,57 +200,46 @@ public final class GetContainerDefinitionResult {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder cpu(Integer cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder disableNetworking(Boolean disableNetworking) {
             this.disableNetworking = Objects.requireNonNull(disableNetworking);
             return this;
         }
-
         public Builder dockerLabels(Map<String,String> dockerLabels) {
             this.dockerLabels = Objects.requireNonNull(dockerLabels);
             return this;
         }
-
         public Builder environment(Map<String,String> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder imageDigest(String imageDigest) {
             this.imageDigest = Objects.requireNonNull(imageDigest);
             return this;
         }
-
         public Builder memory(Integer memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
-
         public Builder memoryReservation(Integer memoryReservation) {
             this.memoryReservation = Objects.requireNonNull(memoryReservation);
             return this;
         }
-
         public Builder taskDefinition(String taskDefinition) {
             this.taskDefinition = Objects.requireNonNull(taskDefinition);
             return this;
-        }
-        public GetContainerDefinitionResult build() {
+        }        public GetContainerDefinitionResult build() {
             return new GetContainerDefinitionResult(containerName, cpu, disableNetworking, dockerLabels, environment, id, image, imageDigest, memory, memoryReservation, taskDefinition);
         }
     }

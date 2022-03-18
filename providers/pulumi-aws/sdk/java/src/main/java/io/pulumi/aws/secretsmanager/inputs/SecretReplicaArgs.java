@@ -122,52 +122,42 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder lastAccessedDate(@Nullable Output<String> lastAccessedDate) {
             this.lastAccessedDate = lastAccessedDate;
             return this;
         }
-
         public Builder lastAccessedDate(@Nullable String lastAccessedDate) {
             this.lastAccessedDate = Output.ofNullable(lastAccessedDate);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder statusMessage(@Nullable Output<String> statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = Output.ofNullable(statusMessage);
             return this;
-        }
-        public SecretReplicaArgs build() {
+        }        public SecretReplicaArgs build() {
             return new SecretReplicaArgs(kmsKeyId, lastAccessedDate, region, status, statusMessage);
         }
     }

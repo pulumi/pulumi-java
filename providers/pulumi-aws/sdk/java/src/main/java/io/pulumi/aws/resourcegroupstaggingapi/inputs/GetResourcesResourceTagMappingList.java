@@ -91,17 +91,17 @@ public final class GetResourcesResourceTagMappingList extends io.pulumi.resource
             this.complianceDetails = Objects.requireNonNull(complianceDetails);
             return this;
         }
-
+        public Builder complianceDetails(GetResourcesResourceTagMappingListComplianceDetail... complianceDetails) {
+            return complianceDetails(List.of(complianceDetails));
+        }
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetResourcesResourceTagMappingList build() {
+        }        public GetResourcesResourceTagMappingList build() {
             return new GetResourcesResourceTagMappingList(complianceDetails, resourceArn, tags);
         }
     }

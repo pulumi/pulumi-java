@@ -85,17 +85,14 @@ public final class RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIp
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder position(String position) {
             this.position = Objects.requireNonNull(position);
             return this;
-        }
-        public RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig build() {
+        }        public RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig build() {
             return new RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig(fallbackBehavior, headerName, position);
         }
     }

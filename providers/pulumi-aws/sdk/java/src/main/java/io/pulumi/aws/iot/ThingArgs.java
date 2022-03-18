@@ -91,32 +91,26 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder thingTypeName(@Nullable Output<String> thingTypeName) {
             this.thingTypeName = thingTypeName;
             return this;
         }
-
         public Builder thingTypeName(@Nullable String thingTypeName) {
             this.thingTypeName = Output.ofNullable(thingTypeName);
             return this;
-        }
-        public ThingArgs build() {
+        }        public ThingArgs build() {
             return new ThingArgs(attributes, name, thingTypeName);
         }
     }

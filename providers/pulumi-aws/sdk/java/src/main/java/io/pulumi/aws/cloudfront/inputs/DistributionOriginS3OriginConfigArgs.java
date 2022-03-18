@@ -57,12 +57,10 @@ public final class DistributionOriginS3OriginConfigArgs extends io.pulumi.resour
             this.originAccessIdentity = Objects.requireNonNull(originAccessIdentity);
             return this;
         }
-
         public Builder originAccessIdentity(String originAccessIdentity) {
             this.originAccessIdentity = Output.of(Objects.requireNonNull(originAccessIdentity));
             return this;
-        }
-        public DistributionOriginS3OriginConfigArgs build() {
+        }        public DistributionOriginS3OriginConfigArgs build() {
             return new DistributionOriginS3OriginConfigArgs(originAccessIdentity);
         }
     }

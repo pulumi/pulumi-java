@@ -91,32 +91,26 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder encryptionEntities(Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities) {
             this.encryptionEntities = Objects.requireNonNull(encryptionEntities);
             return this;
         }
-
         public Builder encryptionEntities(FieldLevelEncryptionProfileEncryptionEntitiesArgs encryptionEntities) {
             this.encryptionEntities = Output.of(Objects.requireNonNull(encryptionEntities));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public FieldLevelEncryptionProfileArgs build() {
+        }        public FieldLevelEncryptionProfileArgs build() {
             return new FieldLevelEncryptionProfileArgs(comment, encryptionEntities, name);
         }
     }

@@ -88,17 +88,14 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
             this.enabled = enabled;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = logStreamName;
             return this;
-        }
-        public FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions build() {
+        }        public FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions(enabled, logGroupName, logStreamName);
         }
     }

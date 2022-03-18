@@ -71,12 +71,10 @@ public final class UserPoolDeviceConfiguration {
             this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
             return this;
         }
-
         public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
             this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
             return this;
-        }
-        public UserPoolDeviceConfiguration build() {
+        }        public UserPoolDeviceConfiguration build() {
             return new UserPoolDeviceConfiguration(challengeRequiredOnNewDevice, deviceOnlyRememberedOnUserPrompt);
         }
     }

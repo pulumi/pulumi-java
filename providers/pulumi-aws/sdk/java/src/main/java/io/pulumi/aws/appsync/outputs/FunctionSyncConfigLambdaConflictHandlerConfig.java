@@ -53,8 +53,7 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfig {
         public Builder lambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
             this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
             return this;
-        }
-        public FunctionSyncConfigLambdaConflictHandlerConfig build() {
+        }        public FunctionSyncConfigLambdaConflictHandlerConfig build() {
             return new FunctionSyncConfigLambdaConflictHandlerConfig(lambdaConflictHandlerArn);
         }
     }

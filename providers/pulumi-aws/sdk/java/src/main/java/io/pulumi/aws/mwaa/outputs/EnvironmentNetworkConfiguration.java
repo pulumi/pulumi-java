@@ -70,12 +70,16 @@ public final class EnvironmentNetworkConfiguration {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-        public EnvironmentNetworkConfiguration build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public EnvironmentNetworkConfiguration build() {
             return new EnvironmentNetworkConfiguration(securityGroupIds, subnetIds);
         }
     }

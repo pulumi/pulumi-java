@@ -71,12 +71,10 @@ public final class WorkgroupConfigurationEngineVersion {
             this.effectiveEngineVersion = effectiveEngineVersion;
             return this;
         }
-
         public Builder selectedEngineVersion(@Nullable String selectedEngineVersion) {
             this.selectedEngineVersion = selectedEngineVersion;
             return this;
-        }
-        public WorkgroupConfigurationEngineVersion build() {
+        }        public WorkgroupConfigurationEngineVersion build() {
             return new WorkgroupConfigurationEngineVersion(effectiveEngineVersion, selectedEngineVersion);
         }
     }

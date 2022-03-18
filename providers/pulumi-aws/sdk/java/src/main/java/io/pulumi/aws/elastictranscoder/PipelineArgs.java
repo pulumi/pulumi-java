@@ -208,102 +208,88 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.awsKmsKeyArn = awsKmsKeyArn;
             return this;
         }
-
         public Builder awsKmsKeyArn(@Nullable String awsKmsKeyArn) {
             this.awsKmsKeyArn = Output.ofNullable(awsKmsKeyArn);
             return this;
         }
-
         public Builder contentConfig(@Nullable Output<PipelineContentConfigArgs> contentConfig) {
             this.contentConfig = contentConfig;
             return this;
         }
-
         public Builder contentConfig(@Nullable PipelineContentConfigArgs contentConfig) {
             this.contentConfig = Output.ofNullable(contentConfig);
             return this;
         }
-
         public Builder contentConfigPermissions(@Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions) {
             this.contentConfigPermissions = contentConfigPermissions;
             return this;
         }
-
         public Builder contentConfigPermissions(@Nullable List<PipelineContentConfigPermissionArgs> contentConfigPermissions) {
             this.contentConfigPermissions = Output.ofNullable(contentConfigPermissions);
             return this;
         }
-
+        public Builder contentConfigPermissions(PipelineContentConfigPermissionArgs... contentConfigPermissions) {
+            return contentConfigPermissions(List.of(contentConfigPermissions));
+        }
         public Builder inputBucket(Output<String> inputBucket) {
             this.inputBucket = Objects.requireNonNull(inputBucket);
             return this;
         }
-
         public Builder inputBucket(String inputBucket) {
             this.inputBucket = Output.of(Objects.requireNonNull(inputBucket));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notifications(@Nullable Output<PipelineNotificationsArgs> notifications) {
             this.notifications = notifications;
             return this;
         }
-
         public Builder notifications(@Nullable PipelineNotificationsArgs notifications) {
             this.notifications = Output.ofNullable(notifications);
             return this;
         }
-
         public Builder outputBucket(@Nullable Output<String> outputBucket) {
             this.outputBucket = outputBucket;
             return this;
         }
-
         public Builder outputBucket(@Nullable String outputBucket) {
             this.outputBucket = Output.ofNullable(outputBucket);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder thumbnailConfig(@Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig) {
             this.thumbnailConfig = thumbnailConfig;
             return this;
         }
-
         public Builder thumbnailConfig(@Nullable PipelineThumbnailConfigArgs thumbnailConfig) {
             this.thumbnailConfig = Output.ofNullable(thumbnailConfig);
             return this;
         }
-
         public Builder thumbnailConfigPermissions(@Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
             this.thumbnailConfigPermissions = thumbnailConfigPermissions;
             return this;
         }
-
         public Builder thumbnailConfigPermissions(@Nullable List<PipelineThumbnailConfigPermissionArgs> thumbnailConfigPermissions) {
             this.thumbnailConfigPermissions = Output.ofNullable(thumbnailConfigPermissions);
             return this;
         }
-        public PipelineArgs build() {
+        public Builder thumbnailConfigPermissions(PipelineThumbnailConfigPermissionArgs... thumbnailConfigPermissions) {
+            return thumbnailConfigPermissions(List.of(thumbnailConfigPermissions));
+        }        public PipelineArgs build() {
             return new PipelineArgs(awsKmsKeyArn, contentConfig, contentConfigPermissions, inputBucket, name, notifications, outputBucket, role, thumbnailConfig, thumbnailConfigPermissions);
         }
     }

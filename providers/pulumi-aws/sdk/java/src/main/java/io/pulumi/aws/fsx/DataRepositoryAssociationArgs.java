@@ -191,92 +191,74 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
             this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
             return this;
         }
-
         public Builder batchImportMetaDataOnCreate(@Nullable Boolean batchImportMetaDataOnCreate) {
             this.batchImportMetaDataOnCreate = Output.ofNullable(batchImportMetaDataOnCreate);
             return this;
         }
-
         public Builder dataRepositoryPath(Output<String> dataRepositoryPath) {
             this.dataRepositoryPath = Objects.requireNonNull(dataRepositoryPath);
             return this;
         }
-
         public Builder dataRepositoryPath(String dataRepositoryPath) {
             this.dataRepositoryPath = Output.of(Objects.requireNonNull(dataRepositoryPath));
             return this;
         }
-
         public Builder deleteDataInFilesystem(@Nullable Output<Boolean> deleteDataInFilesystem) {
             this.deleteDataInFilesystem = deleteDataInFilesystem;
             return this;
         }
-
         public Builder deleteDataInFilesystem(@Nullable Boolean deleteDataInFilesystem) {
             this.deleteDataInFilesystem = Output.ofNullable(deleteDataInFilesystem);
             return this;
         }
-
         public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
-
         public Builder fileSystemPath(Output<String> fileSystemPath) {
             this.fileSystemPath = Objects.requireNonNull(fileSystemPath);
             return this;
         }
-
         public Builder fileSystemPath(String fileSystemPath) {
             this.fileSystemPath = Output.of(Objects.requireNonNull(fileSystemPath));
             return this;
         }
-
         public Builder importedFileChunkSize(@Nullable Output<Integer> importedFileChunkSize) {
             this.importedFileChunkSize = importedFileChunkSize;
             return this;
         }
-
         public Builder importedFileChunkSize(@Nullable Integer importedFileChunkSize) {
             this.importedFileChunkSize = Output.ofNullable(importedFileChunkSize);
             return this;
         }
-
         public Builder s3(@Nullable Output<DataRepositoryAssociationS3Args> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable DataRepositoryAssociationS3Args s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DataRepositoryAssociationArgs build() {
+        }        public DataRepositoryAssociationArgs build() {
             return new DataRepositoryAssociationArgs(batchImportMetaDataOnCreate, dataRepositoryPath, deleteDataInFilesystem, fileSystemId, fileSystemPath, importedFileChunkSize, s3, tags, tagsAll);
         }
     }

@@ -209,57 +209,58 @@ public final class GetVpcDhcpOptionsResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder dhcpOptionsId(String dhcpOptionsId) {
             this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainNameServers(List<String> domainNameServers) {
             this.domainNameServers = Objects.requireNonNull(domainNameServers);
             return this;
         }
-
+        public Builder domainNameServers(String... domainNameServers) {
+            return domainNameServers(List.of(domainNameServers));
+        }
         public Builder filters(@Nullable List<GetVpcDhcpOptionsFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcDhcpOptionsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder netbiosNameServers(List<String> netbiosNameServers) {
             this.netbiosNameServers = Objects.requireNonNull(netbiosNameServers);
             return this;
         }
-
+        public Builder netbiosNameServers(String... netbiosNameServers) {
+            return netbiosNameServers(List.of(netbiosNameServers));
+        }
         public Builder netbiosNodeType(String netbiosNodeType) {
             this.netbiosNodeType = Objects.requireNonNull(netbiosNodeType);
             return this;
         }
-
         public Builder ntpServers(List<String> ntpServers) {
             this.ntpServers = Objects.requireNonNull(ntpServers);
             return this;
         }
-
+        public Builder ntpServers(String... ntpServers) {
+            return ntpServers(List.of(ntpServers));
+        }
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetVpcDhcpOptionsResult build() {
+        }        public GetVpcDhcpOptionsResult build() {
             return new GetVpcDhcpOptionsResult(arn, dhcpOptionsId, domainName, domainNameServers, filters, id, netbiosNameServers, netbiosNodeType, ntpServers, ownerId, tags);
         }
     }

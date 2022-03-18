@@ -240,122 +240,101 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
-
         public Builder glueVersion(@Nullable String glueVersion) {
             this.glueVersion = Output.ofNullable(glueVersion);
             return this;
         }
-
         public Builder inputRecordTables(Output<List<MLTransformInputRecordTableArgs>> inputRecordTables) {
             this.inputRecordTables = Objects.requireNonNull(inputRecordTables);
             return this;
         }
-
         public Builder inputRecordTables(List<MLTransformInputRecordTableArgs> inputRecordTables) {
             this.inputRecordTables = Output.of(Objects.requireNonNull(inputRecordTables));
             return this;
         }
-
+        public Builder inputRecordTables(MLTransformInputRecordTableArgs... inputRecordTables) {
+            return inputRecordTables(List.of(inputRecordTables));
+        }
         public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder maxCapacity(@Nullable Double maxCapacity) {
             this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
-
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
-
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
             return this;
         }
-
         public Builder parameters(Output<MLTransformParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(MLTransformParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder workerType(@Nullable Output<String> workerType) {
             this.workerType = workerType;
             return this;
         }
-
         public Builder workerType(@Nullable String workerType) {
             this.workerType = Output.ofNullable(workerType);
             return this;
-        }
-        public MLTransformArgs build() {
+        }        public MLTransformArgs build() {
             return new MLTransformArgs(description, glueVersion, inputRecordTables, maxCapacity, maxRetries, name, numberOfWorkers, parameters, roleArn, tags, timeout, workerType);
         }
     }

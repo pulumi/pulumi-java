@@ -76,22 +76,21 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs exte
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
             this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
             return this;
         }
-        public DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs build() {
+        public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
+            return lifecycleConfigArns(List.of(lifecycleConfigArns));
+        }        public DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs build() {
             return new DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs(defaultResourceSpec, lifecycleConfigArns);
         }
     }

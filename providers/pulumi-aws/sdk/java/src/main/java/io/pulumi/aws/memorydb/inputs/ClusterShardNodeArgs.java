@@ -105,42 +105,37 @@ public final class ClusterShardNodeArgs extends io.pulumi.resources.ResourceArgs
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<ClusterShardNodeEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<ClusterShardNodeEndpointArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(ClusterShardNodeEndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ClusterShardNodeArgs build() {
+        }        public ClusterShardNodeArgs build() {
             return new ClusterShardNodeArgs(availabilityZone, createTime, endpoints, name);
         }
     }

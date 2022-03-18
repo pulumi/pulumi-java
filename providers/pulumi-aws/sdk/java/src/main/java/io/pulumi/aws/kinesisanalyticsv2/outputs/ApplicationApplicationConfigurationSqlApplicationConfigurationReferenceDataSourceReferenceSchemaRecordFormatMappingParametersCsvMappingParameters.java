@@ -69,12 +69,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
             return this;
         }
-
         public Builder recordRowDelimiter(String recordRowDelimiter) {
             this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters(recordColumnDelimiter, recordRowDelimiter);
         }
     }

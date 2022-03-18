@@ -107,42 +107,34 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }
-
         public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Output.of(Objects.requireNonNull(allocationStrategy));
             return this;
         }
-
         public Builder blockDurationMinutes(@Nullable Output<Integer> blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
-
         public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
             this.blockDurationMinutes = Output.ofNullable(blockDurationMinutes);
             return this;
         }
-
         public Builder timeoutAction(Output<String> timeoutAction) {
             this.timeoutAction = Objects.requireNonNull(timeoutAction);
             return this;
         }
-
         public Builder timeoutAction(String timeoutAction) {
             this.timeoutAction = Output.of(Objects.requireNonNull(timeoutAction));
             return this;
         }
-
         public Builder timeoutDurationMinutes(Output<Integer> timeoutDurationMinutes) {
             this.timeoutDurationMinutes = Objects.requireNonNull(timeoutDurationMinutes);
             return this;
         }
-
         public Builder timeoutDurationMinutes(Integer timeoutDurationMinutes) {
             this.timeoutDurationMinutes = Output.of(Objects.requireNonNull(timeoutDurationMinutes));
             return this;
-        }
-        public ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs build() {
+        }        public ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs build() {
             return new ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs(allocationStrategy, blockDurationMinutes, timeoutAction, timeoutDurationMinutes);
         }
     }

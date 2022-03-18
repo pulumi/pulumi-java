@@ -91,32 +91,26 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(domain, encryptionKey, tags);
         }
     }

@@ -75,22 +75,18 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
             this.awsKmsKeyId = awsKmsKeyId;
             return this;
         }
-
         public Builder awsKmsKeyId(@Nullable String awsKmsKeyId) {
             this.awsKmsKeyId = Output.ofNullable(awsKmsKeyId);
             return this;
         }
-
         public Builder returnConnectionPasswordEncrypted(Output<Boolean> returnConnectionPasswordEncrypted) {
             this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
             return this;
         }
-
         public Builder returnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
             this.returnConnectionPasswordEncrypted = Output.of(Objects.requireNonNull(returnConnectionPasswordEncrypted));
             return this;
-        }
-        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs build() {
+        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs build() {
             return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs(awsKmsKeyId, returnConnectionPasswordEncrypted);
         }
     }
