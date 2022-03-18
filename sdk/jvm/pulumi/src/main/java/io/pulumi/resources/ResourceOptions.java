@@ -91,6 +91,10 @@ public abstract class ResourceOptions {
             return (B) this;
         }
 
+        public B dependsOn(Resource... dependsOn) {
+            return this.dependsOn(List.of(dependsOn));
+        }
+
         public B dependsOn(@Nullable Output<List<Resource>> dependsOn) {
             options.dependsOn = dependsOn;
             return (B) this;
@@ -104,6 +108,10 @@ public abstract class ResourceOptions {
         public B protect(boolean protect) {
             options.protect = protect;
             return (B) this;
+        }
+
+        public B ignoreChanges(String... ignoreChanges) {
+            return this.ignoreChanges(List.of(ignoreChanges));
         }
 
         public B ignoreChanges(@Nullable List<String> ignoreChanges) {
@@ -126,9 +134,17 @@ public abstract class ResourceOptions {
             return (B) this;
         }
 
+        public B resourceTransformations(ResourceTransformation... resourceTransformations) {
+            return this.resourceTransformations(List.of(resourceTransformations));
+        }
+
         public B resourceTransformations(@Nullable List<ResourceTransformation> resourceTransformations) {
             options.resourceTransformations = resourceTransformations;
             return (B) this;
+        }
+
+        public B aliases(Output<Alias>... aliases) {
+            return this.aliases(List.of(aliases));
         }
 
         public B aliases(@Nullable List<Output<Alias>> aliases) {
@@ -139,6 +155,10 @@ public abstract class ResourceOptions {
         public B urn(@Nullable String urn) {
             options.urn = urn;
             return (B) this;
+        }
+
+        public B replaceOnChanges(String... replaceOnChanges) {
+            return this.replaceOnChanges(List.of(replaceOnChanges));
         }
 
         public B replaceOnChanges(@Nullable List<String> replaceOnChanges) {
