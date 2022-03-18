@@ -70,22 +70,18 @@ public final class CreationRoleProviderArgs extends io.pulumi.resources.Resource
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder provider(Provider provider) {
             this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
-
         public Builder role(Output<Role> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(Role role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public CreationRoleProviderArgs build() {
+        }        public CreationRoleProviderArgs build() {
             return new CreationRoleProviderArgs(provider, role);
         }
     }

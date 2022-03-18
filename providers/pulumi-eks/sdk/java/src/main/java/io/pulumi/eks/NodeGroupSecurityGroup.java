@@ -47,22 +47,6 @@ public class NodeGroupSecurityGroup extends io.pulumi.resources.ComponentResourc
         return this.securityGroupRule;
     }
 
-    public interface BuilderApplicator {
-        public void apply(NodeGroupSecurityGroupArgs.Builder a);
-    }
-    private static io.pulumi.eks.NodeGroupSecurityGroupArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.eks.NodeGroupSecurityGroupArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public NodeGroupSecurityGroup(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
