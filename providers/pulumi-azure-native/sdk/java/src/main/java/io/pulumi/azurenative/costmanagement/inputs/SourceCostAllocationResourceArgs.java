@@ -96,32 +96,29 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceType(Output<Either<String,CostAllocationResourceType>> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(Either<String,CostAllocationResourceType> resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public SourceCostAllocationResourceArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public SourceCostAllocationResourceArgs build() {
             return new SourceCostAllocationResourceArgs(name, resourceType, values);
         }
     }

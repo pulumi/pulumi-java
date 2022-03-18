@@ -88,17 +88,14 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
             this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tapConfigurationName(String tapConfigurationName) {
             this.tapConfigurationName = Objects.requireNonNull(tapConfigurationName);
             return this;
-        }
-        public GetNetworkInterfaceTapConfigurationArgs build() {
+        }        public GetNetworkInterfaceTapConfigurationArgs build() {
             return new GetNetworkInterfaceTapConfigurationArgs(networkInterfaceName, resourceGroupName, tapConfigurationName);
         }
     }

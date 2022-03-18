@@ -122,52 +122,42 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownershipId(@Nullable Output<String> ownershipId) {
             this.ownershipId = ownershipId;
             return this;
         }
-
         public Builder ownershipId(@Nullable String ownershipId) {
             this.ownershipId = Output.ofNullable(ownershipId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DomainOwnershipIdentifierArgs build() {
+        }        public DomainOwnershipIdentifierArgs build() {
             return new DomainOwnershipIdentifierArgs(domainName, kind, name, ownershipId, resourceGroupName);
         }
     }

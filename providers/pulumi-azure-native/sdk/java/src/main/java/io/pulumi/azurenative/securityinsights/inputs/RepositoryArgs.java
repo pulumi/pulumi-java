@@ -128,52 +128,45 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.branch = branch;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = Output.ofNullable(branch);
             return this;
         }
-
         public Builder deploymentLogsUrl(@Nullable Output<String> deploymentLogsUrl) {
             this.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
-
         public Builder deploymentLogsUrl(@Nullable String deploymentLogsUrl) {
             this.deploymentLogsUrl = Output.ofNullable(deploymentLogsUrl);
             return this;
         }
-
         public Builder displayUrl(@Nullable Output<String> displayUrl) {
             this.displayUrl = displayUrl;
             return this;
         }
-
         public Builder displayUrl(@Nullable String displayUrl) {
             this.displayUrl = Output.ofNullable(displayUrl);
             return this;
         }
-
         public Builder pathMapping(@Nullable Output<List<ContentPathMapArgs>> pathMapping) {
             this.pathMapping = pathMapping;
             return this;
         }
-
         public Builder pathMapping(@Nullable List<ContentPathMapArgs> pathMapping) {
             this.pathMapping = Output.ofNullable(pathMapping);
             return this;
         }
-
+        public Builder pathMapping(ContentPathMapArgs... pathMapping) {
+            return pathMapping(List.of(pathMapping));
+        }
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public RepositoryArgs build() {
+        }        public RepositoryArgs build() {
             return new RepositoryArgs(branch, deploymentLogsUrl, displayUrl, pathMapping, url);
         }
     }

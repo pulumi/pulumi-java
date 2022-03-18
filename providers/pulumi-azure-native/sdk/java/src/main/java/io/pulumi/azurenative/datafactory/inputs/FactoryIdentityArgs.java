@@ -82,22 +82,18 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,FactoryIdentityType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public FactoryIdentityArgs build() {
+        }        public FactoryIdentityArgs build() {
             return new FactoryIdentityArgs(type, userAssignedIdentities);
         }
     }

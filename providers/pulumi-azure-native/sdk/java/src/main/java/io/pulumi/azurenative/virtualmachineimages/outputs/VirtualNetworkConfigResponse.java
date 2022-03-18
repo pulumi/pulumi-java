@@ -53,8 +53,7 @@ public final class VirtualNetworkConfigResponse {
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
-        }
-        public VirtualNetworkConfigResponse build() {
+        }        public VirtualNetworkConfigResponse build() {
             return new VirtualNetworkConfigResponse(subnetId);
         }
     }

@@ -80,22 +80,21 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
-
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = Output.ofNullable(loadBalancerConfigurations);
             return this;
         }
-
+        public Builder loadBalancerConfigurations(LoadBalancerConfigurationArgs... loadBalancerConfigurations) {
+            return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
+        }
         public Builder swappableCloudService(@Nullable Output<SubResourceArgs> swappableCloudService) {
             this.swappableCloudService = swappableCloudService;
             return this;
         }
-
         public Builder swappableCloudService(@Nullable SubResourceArgs swappableCloudService) {
             this.swappableCloudService = Output.ofNullable(swappableCloudService);
             return this;
-        }
-        public CloudServiceNetworkProfileArgs build() {
+        }        public CloudServiceNetworkProfileArgs build() {
             return new CloudServiceNetworkProfileArgs(loadBalancerConfigurations, swappableCloudService);
         }
     }

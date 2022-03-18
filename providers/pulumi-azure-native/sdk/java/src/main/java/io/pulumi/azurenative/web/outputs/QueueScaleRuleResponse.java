@@ -90,17 +90,17 @@ public final class QueueScaleRuleResponse {
             this.auth = auth;
             return this;
         }
-
+        public Builder auth(ScaleRuleAuthResponse... auth) {
+            return auth(List.of(auth));
+        }
         public Builder queueLength(@Nullable Integer queueLength) {
             this.queueLength = queueLength;
             return this;
         }
-
         public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
-        }
-        public QueueScaleRuleResponse build() {
+        }        public QueueScaleRuleResponse build() {
             return new QueueScaleRuleResponse(auth, queueLength, queueName);
         }
     }

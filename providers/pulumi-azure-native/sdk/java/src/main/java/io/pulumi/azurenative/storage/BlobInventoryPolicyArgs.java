@@ -107,42 +107,34 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder blobInventoryPolicyName(@Nullable Output<String> blobInventoryPolicyName) {
             this.blobInventoryPolicyName = blobInventoryPolicyName;
             return this;
         }
-
         public Builder blobInventoryPolicyName(@Nullable String blobInventoryPolicyName) {
             this.blobInventoryPolicyName = Output.ofNullable(blobInventoryPolicyName);
             return this;
         }
-
         public Builder policy(Output<BlobInventoryPolicySchemaArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(BlobInventoryPolicySchemaArgs policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public BlobInventoryPolicyArgs build() {
+        }        public BlobInventoryPolicyArgs build() {
             return new BlobInventoryPolicyArgs(accountName, blobInventoryPolicyName, policy, resourceGroupName);
         }
     }

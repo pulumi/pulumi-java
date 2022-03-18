@@ -124,52 +124,42 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             this.dataSetMappingName = dataSetMappingName;
             return this;
         }
-
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
             this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
             return this;
         }
-
         public Builder kind(Output<Either<String,DataSetMappingKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,DataSetMappingKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
-        }
-        public DataSetMappingArgs build() {
+        }        public DataSetMappingArgs build() {
             return new DataSetMappingArgs(accountName, dataSetMappingName, kind, resourceGroupName, shareSubscriptionName);
         }
     }

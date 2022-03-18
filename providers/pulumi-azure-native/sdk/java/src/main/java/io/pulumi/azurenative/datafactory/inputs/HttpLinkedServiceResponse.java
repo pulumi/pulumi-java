@@ -279,72 +279,61 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authHeaders(@Nullable Object authHeaders) {
             this.authHeaders = authHeaders;
             return this;
         }
-
         public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder certThumbprint(@Nullable Object certThumbprint) {
             this.certThumbprint = certThumbprint;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder embeddedCertData(@Nullable Object embeddedCertData) {
             this.embeddedCertData = embeddedCertData;
             return this;
         }
-
         public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
             this.enableServerCertificateValidation = enableServerCertificateValidation;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = userName;
             return this;
-        }
-        public HttpLinkedServiceResponse build() {
+        }        public HttpLinkedServiceResponse build() {
             return new HttpLinkedServiceResponse(annotations, authHeaders, authenticationType, certThumbprint, connectVia, description, embeddedCertData, enableServerCertificateValidation, encryptedCredential, parameters, password, type, url, userName);
         }
     }

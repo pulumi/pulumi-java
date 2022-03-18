@@ -224,112 +224,90 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
             this.allowedGroups = allowedGroups;
             return this;
         }
-
         public Builder allowedGroups(@Nullable Object allowedGroups) {
             this.allowedGroups = Output.ofNullable(allowedGroups);
             return this;
         }
-
         public Builder dateFilterColumn(@Nullable Output<Object> dateFilterColumn) {
             this.dateFilterColumn = dateFilterColumn;
             return this;
         }
-
         public Builder dateFilterColumn(@Nullable Object dateFilterColumn) {
             this.dateFilterColumn = Output.ofNullable(dateFilterColumn);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder endTime(@Nullable Output<Object> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable Object endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder outputColumns(@Nullable Output<Object> outputColumns) {
             this.outputColumns = outputColumns;
             return this;
         }
-
         public Builder outputColumns(@Nullable Object outputColumns) {
             this.outputColumns = Output.ofNullable(outputColumns);
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
-
         public Builder startTime(@Nullable Output<Object> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable Object startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userScopeFilterUri(@Nullable Output<Object> userScopeFilterUri) {
             this.userScopeFilterUri = userScopeFilterUri;
             return this;
         }
-
         public Builder userScopeFilterUri(@Nullable Object userScopeFilterUri) {
             this.userScopeFilterUri = Output.ofNullable(userScopeFilterUri);
             return this;
-        }
-        public Office365SourceArgs build() {
+        }        public Office365SourceArgs build() {
             return new Office365SourceArgs(allowedGroups, dateFilterColumn, disableMetricsCollection, endTime, maxConcurrentConnections, outputColumns, sourceRetryCount, sourceRetryWait, startTime, type, userScopeFilterUri);
         }
     }

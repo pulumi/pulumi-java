@@ -78,22 +78,18 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
             this.functionAlias = functionAlias;
             return this;
         }
-
         public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = Output.ofNullable(functionAlias);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
-        }
-        public NonAzureQueryPropertiesArgs build() {
+        }        public NonAzureQueryPropertiesArgs build() {
             return new NonAzureQueryPropertiesArgs(functionAlias, workspaceId);
         }
     }

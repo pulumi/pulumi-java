@@ -86,32 +86,26 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder specification(@Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification) {
             this.specification = specification;
             return this;
         }
-
         public Builder specification(@Nullable DefaultRolloutPropertiesSpecificationArgs specification) {
             this.specification = Output.ofNullable(specification);
             return this;
         }
-
         public Builder status(@Nullable Output<DefaultRolloutPropertiesStatusArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable DefaultRolloutPropertiesStatusArgs status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public DefaultRolloutPropertiesArgs build() {
+        }        public DefaultRolloutPropertiesArgs build() {
             return new DefaultRolloutPropertiesArgs(provisioningState, specification, status);
         }
     }

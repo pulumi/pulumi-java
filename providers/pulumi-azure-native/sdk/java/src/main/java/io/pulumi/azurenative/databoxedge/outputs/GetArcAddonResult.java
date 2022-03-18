@@ -248,67 +248,54 @@ public final class GetArcAddonResult {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
-
         public Builder hostPlatformType(String hostPlatformType) {
             this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceLocation(String resourceLocation) {
             this.resourceLocation = Objects.requireNonNull(resourceLocation);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetArcAddonResult build() {
+        }        public GetArcAddonResult build() {
             return new GetArcAddonResult(hostPlatform, hostPlatformType, id, kind, name, provisioningState, resourceGroupName, resourceLocation, resourceName, subscriptionId, systemData, type, version);
         }
     }

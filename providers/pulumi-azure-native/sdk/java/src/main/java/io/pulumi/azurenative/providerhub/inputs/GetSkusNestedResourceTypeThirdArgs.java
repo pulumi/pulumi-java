@@ -136,32 +136,26 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
             this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst);
             return this;
         }
-
         public Builder nestedResourceTypeSecond(String nestedResourceTypeSecond) {
             this.nestedResourceTypeSecond = Objects.requireNonNull(nestedResourceTypeSecond);
             return this;
         }
-
         public Builder nestedResourceTypeThird(String nestedResourceTypeThird) {
             this.nestedResourceTypeThird = Objects.requireNonNull(nestedResourceTypeThird);
             return this;
         }
-
         public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder sku(String sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
-        }
-        public GetSkusNestedResourceTypeThirdArgs build() {
+        }        public GetSkusNestedResourceTypeThirdArgs build() {
             return new GetSkusNestedResourceTypeThirdArgs(nestedResourceTypeFirst, nestedResourceTypeSecond, nestedResourceTypeThird, providerNamespace, resourceType, sku);
         }
     }

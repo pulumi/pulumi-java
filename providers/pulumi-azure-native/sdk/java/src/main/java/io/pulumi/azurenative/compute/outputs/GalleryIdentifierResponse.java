@@ -51,8 +51,7 @@ public final class GalleryIdentifierResponse {
         public Builder uniqueName(String uniqueName) {
             this.uniqueName = Objects.requireNonNull(uniqueName);
             return this;
-        }
-        public GalleryIdentifierResponse build() {
+        }        public GalleryIdentifierResponse build() {
             return new GalleryIdentifierResponse(uniqueName);
         }
     }

@@ -61,12 +61,10 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = Output.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
-        }
-        public StreamingPolicyWidevineConfigurationArgs build() {
+        }        public StreamingPolicyWidevineConfigurationArgs build() {
             return new StreamingPolicyWidevineConfigurationArgs(customLicenseAcquisitionUrlTemplate);
         }
     }

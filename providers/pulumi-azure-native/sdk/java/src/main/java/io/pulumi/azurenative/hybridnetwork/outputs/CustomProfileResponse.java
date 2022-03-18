@@ -53,8 +53,7 @@ public final class CustomProfileResponse {
         public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
             this.metadataConfigurationPath = metadataConfigurationPath;
             return this;
-        }
-        public CustomProfileResponse build() {
+        }        public CustomProfileResponse build() {
             return new CustomProfileResponse(metadataConfigurationPath);
         }
     }

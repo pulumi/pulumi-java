@@ -154,72 +154,58 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder groupId(Output<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
-
         public Builder managedPrivateEndpointName(@Nullable Output<String> managedPrivateEndpointName) {
             this.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
-
         public Builder managedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
             this.managedPrivateEndpointName = Output.ofNullable(managedPrivateEndpointName);
             return this;
         }
-
         public Builder privateLinkResourceId(Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
             return this;
         }
-
         public Builder privateLinkResourceId(String privateLinkResourceId) {
             this.privateLinkResourceId = Output.of(Objects.requireNonNull(privateLinkResourceId));
             return this;
         }
-
         public Builder privateLinkResourceRegion(@Nullable Output<String> privateLinkResourceRegion) {
             this.privateLinkResourceRegion = privateLinkResourceRegion;
             return this;
         }
-
         public Builder privateLinkResourceRegion(@Nullable String privateLinkResourceRegion) {
             this.privateLinkResourceRegion = Output.ofNullable(privateLinkResourceRegion);
             return this;
         }
-
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ManagedPrivateEndpointArgs build() {
+        }        public ManagedPrivateEndpointArgs build() {
             return new ManagedPrivateEndpointArgs(clusterName, groupId, managedPrivateEndpointName, privateLinkResourceId, privateLinkResourceRegion, requestMessage, resourceGroupName);
         }
     }

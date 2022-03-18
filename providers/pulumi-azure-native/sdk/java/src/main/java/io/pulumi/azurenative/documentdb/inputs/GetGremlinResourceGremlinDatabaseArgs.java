@@ -88,17 +88,14 @@ public final class GetGremlinResourceGremlinDatabaseArgs extends io.pulumi.resou
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetGremlinResourceGremlinDatabaseArgs build() {
+        }        public GetGremlinResourceGremlinDatabaseArgs build() {
             return new GetGremlinResourceGremlinDatabaseArgs(accountName, databaseName, resourceGroupName);
         }
     }

@@ -107,22 +107,18 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
             this.expand = expand;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder recurse(@Nullable Boolean recurse) {
             this.recurse = recurse;
             return this;
-        }
-        public GetManagementGroupArgs build() {
+        }        public GetManagementGroupArgs build() {
             return new GetManagementGroupArgs(expand, filter, groupId, recurse);
         }
     }

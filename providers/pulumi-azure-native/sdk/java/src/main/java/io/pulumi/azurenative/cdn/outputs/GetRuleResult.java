@@ -217,52 +217,48 @@ public final class GetRuleResult {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(Object... actions) {
+            return actions(List.of(actions));
+        }
         public Builder conditions(@Nullable List<Object> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(Object... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder matchProcessingBehavior(@Nullable String matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRuleResult build() {
+        }        public GetRuleResult build() {
             return new GetRuleResult(actions, conditions, deploymentStatus, id, matchProcessingBehavior, name, order, provisioningState, systemData, type);
         }
     }

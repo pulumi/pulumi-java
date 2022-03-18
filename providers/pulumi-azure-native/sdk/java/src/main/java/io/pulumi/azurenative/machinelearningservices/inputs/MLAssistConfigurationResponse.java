@@ -129,27 +129,22 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
             this.inferencingComputeBinding = Objects.requireNonNull(inferencingComputeBinding);
             return this;
         }
-
         public Builder mlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
             this.mlAssistEnabled = mlAssistEnabled;
             return this;
         }
-
         public Builder modelNamePrefix(String modelNamePrefix) {
             this.modelNamePrefix = Objects.requireNonNull(modelNamePrefix);
             return this;
         }
-
         public Builder prelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
             this.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
             return this;
         }
-
         public Builder trainingComputeBinding(ComputeBindingResponse trainingComputeBinding) {
             this.trainingComputeBinding = Objects.requireNonNull(trainingComputeBinding);
             return this;
-        }
-        public MLAssistConfigurationResponse build() {
+        }        public MLAssistConfigurationResponse build() {
             return new MLAssistConfigurationResponse(inferencingComputeBinding, mlAssistEnabled, modelNamePrefix, prelabelAccuracyThreshold, trainingComputeBinding);
         }
     }

@@ -56,8 +56,7 @@ public final class GetClientTokenArgs extends io.pulumi.resources.InvokeArgs {
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
-        }
-        public GetClientTokenArgs build() {
+        }        public GetClientTokenArgs build() {
             return new GetClientTokenArgs(endpoint);
         }
     }

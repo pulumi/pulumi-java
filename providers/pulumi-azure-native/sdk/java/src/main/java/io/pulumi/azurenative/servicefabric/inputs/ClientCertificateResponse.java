@@ -111,22 +111,18 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
             this.commonName = commonName;
             return this;
         }
-
         public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
-
         public Builder issuerThumbprint(@Nullable String issuerThumbprint) {
             this.issuerThumbprint = issuerThumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public ClientCertificateResponse build() {
+        }        public ClientCertificateResponse build() {
             return new ClientCertificateResponse(commonName, isAdmin, issuerThumbprint, thumbprint);
         }
     }

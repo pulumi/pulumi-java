@@ -259,67 +259,57 @@ public final class DpmContainerResponse {
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder canReRegister(@Nullable Boolean canReRegister) {
             this.canReRegister = canReRegister;
             return this;
         }
-
         public Builder containerId(@Nullable String containerId) {
             this.containerId = containerId;
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder dpmAgentVersion(@Nullable String dpmAgentVersion) {
             this.dpmAgentVersion = dpmAgentVersion;
             return this;
         }
-
         public Builder dpmServers(@Nullable List<String> dpmServers) {
             this.dpmServers = dpmServers;
             return this;
         }
-
+        public Builder dpmServers(String... dpmServers) {
+            return dpmServers(List.of(dpmServers));
+        }
         public Builder extendedInfo(@Nullable DPMContainerExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
-
         public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public Builder upgradeAvailable(@Nullable Boolean upgradeAvailable) {
             this.upgradeAvailable = upgradeAvailable;
             return this;
-        }
-        public DpmContainerResponse build() {
+        }        public DpmContainerResponse build() {
             return new DpmContainerResponse(backupManagementType, canReRegister, containerId, containerType, dpmAgentVersion, dpmServers, extendedInfo, friendlyName, healthStatus, protectedItemCount, protectionStatus, registrationStatus, upgradeAvailable);
         }
     }

@@ -143,62 +143,50 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
             this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion);
             return this;
         }
-
         public Builder cognitiveServiceRegion(String cognitiveServiceRegion) {
             this.cognitiveServiceRegion = Output.of(Objects.requireNonNull(cognitiveServiceRegion));
             return this;
         }
-
         public Builder cognitiveServiceSubscriptionKey(Output<String> cognitiveServiceSubscriptionKey) {
             this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey);
             return this;
         }
-
         public Builder cognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
             this.cognitiveServiceSubscriptionKey = Output.of(Objects.requireNonNull(cognitiveServiceSubscriptionKey));
             return this;
         }
-
         public Builder customSpeechModelId(@Nullable Output<String> customSpeechModelId) {
             this.customSpeechModelId = customSpeechModelId;
             return this;
         }
-
         public Builder customSpeechModelId(@Nullable String customSpeechModelId) {
             this.customSpeechModelId = Output.ofNullable(customSpeechModelId);
             return this;
         }
-
         public Builder customVoiceDeploymentId(@Nullable Output<String> customVoiceDeploymentId) {
             this.customVoiceDeploymentId = customVoiceDeploymentId;
             return this;
         }
-
         public Builder customVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
             this.customVoiceDeploymentId = Output.ofNullable(customVoiceDeploymentId);
             return this;
         }
-
         public Builder isDefaultBotForCogSvcAccount(@Nullable Output<Boolean> isDefaultBotForCogSvcAccount) {
             this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
             return this;
         }
-
         public Builder isDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
             this.isDefaultBotForCogSvcAccount = Output.ofNullable(isDefaultBotForCogSvcAccount);
             return this;
         }
-
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
-        }
-        public DirectLineSpeechChannelPropertiesArgs build() {
+        }        public DirectLineSpeechChannelPropertiesArgs build() {
             return new DirectLineSpeechChannelPropertiesArgs(cognitiveServiceRegion, cognitiveServiceSubscriptionKey, customSpeechModelId, customVoiceDeploymentId, isDefaultBotForCogSvcAccount, isEnabled);
         }
     }

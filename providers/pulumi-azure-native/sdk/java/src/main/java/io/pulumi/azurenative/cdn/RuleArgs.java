@@ -197,82 +197,72 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<Object> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(Object... actions) {
+            return actions(List.of(actions));
+        }
         public Builder conditions(@Nullable Output<List<Object>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<Object> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(Object... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder matchProcessingBehavior(@Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
-
         public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
             this.matchProcessingBehavior = Output.ofNullable(matchProcessingBehavior);
             return this;
         }
-
         public Builder order(Output<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Output.of(Objects.requireNonNull(order));
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder ruleSetName(Output<String> ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
         }
-
         public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Output.of(Objects.requireNonNull(ruleSetName));
             return this;
-        }
-        public RuleArgs build() {
+        }        public RuleArgs build() {
             return new RuleArgs(actions, conditions, matchProcessingBehavior, order, profileName, resourceGroupName, ruleName, ruleSetName);
         }
     }

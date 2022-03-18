@@ -114,42 +114,37 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
             this.actionSet = actionSet;
             return this;
         }
-
         public Builder actionSet(@Nullable ApplicationGatewayRewriteRuleActionSetArgs actionSet) {
             this.actionSet = Output.ofNullable(actionSet);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<ApplicationGatewayRewriteRuleConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(ApplicationGatewayRewriteRuleConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ruleSequence(@Nullable Output<Integer> ruleSequence) {
             this.ruleSequence = ruleSequence;
             return this;
         }
-
         public Builder ruleSequence(@Nullable Integer ruleSequence) {
             this.ruleSequence = Output.ofNullable(ruleSequence);
             return this;
-        }
-        public ApplicationGatewayRewriteRuleArgs build() {
+        }        public ApplicationGatewayRewriteRuleArgs build() {
             return new ApplicationGatewayRewriteRuleArgs(actionSet, conditions, name, ruleSequence);
         }
     }

@@ -257,132 +257,112 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.customerSecrets = customerSecrets;
             return this;
         }
-
         public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
             this.customerSecrets = Output.ofNullable(customerSecrets);
             return this;
         }
-
+        public Builder customerSecrets(CustomerSecretArgs... customerSecrets) {
+            return customerSecrets(List.of(customerSecrets));
+        }
         public Builder dataManagerName(Output<String> dataManagerName) {
             this.dataManagerName = Objects.requireNonNull(dataManagerName);
             return this;
         }
-
         public Builder dataManagerName(String dataManagerName) {
             this.dataManagerName = Output.of(Objects.requireNonNull(dataManagerName));
             return this;
         }
-
         public Builder dataServiceInput(@Nullable Output<Object> dataServiceInput) {
             this.dataServiceInput = dataServiceInput;
             return this;
         }
-
         public Builder dataServiceInput(@Nullable Object dataServiceInput) {
             this.dataServiceInput = Output.ofNullable(dataServiceInput);
             return this;
         }
-
         public Builder dataServiceName(Output<String> dataServiceName) {
             this.dataServiceName = Objects.requireNonNull(dataServiceName);
             return this;
         }
-
         public Builder dataServiceName(String dataServiceName) {
             this.dataServiceName = Output.of(Objects.requireNonNull(dataServiceName));
             return this;
         }
-
         public Builder dataSinkId(Output<String> dataSinkId) {
             this.dataSinkId = Objects.requireNonNull(dataSinkId);
             return this;
         }
-
         public Builder dataSinkId(String dataSinkId) {
             this.dataSinkId = Output.of(Objects.requireNonNull(dataSinkId));
             return this;
         }
-
         public Builder dataSourceId(Output<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
-
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
-
         public Builder jobDefinitionName(@Nullable Output<String> jobDefinitionName) {
             this.jobDefinitionName = jobDefinitionName;
             return this;
         }
-
         public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
             this.jobDefinitionName = Output.ofNullable(jobDefinitionName);
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder runLocation(@Nullable Output<RunLocation> runLocation) {
             this.runLocation = runLocation;
             return this;
         }
-
         public Builder runLocation(@Nullable RunLocation runLocation) {
             this.runLocation = Output.ofNullable(runLocation);
             return this;
         }
-
         public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
-
         public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
             this.schedules = Output.ofNullable(schedules);
             return this;
         }
-
+        public Builder schedules(ScheduleArgs... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder state(Output<State> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(State state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
-
         public Builder userConfirmation(@Nullable Output<UserConfirmation> userConfirmation) {
             this.userConfirmation = userConfirmation;
             return this;
         }
-
         public Builder userConfirmation(@Nullable UserConfirmation userConfirmation) {
             this.userConfirmation = Output.ofNullable(userConfirmation);
             return this;
-        }
-        public JobDefinitionArgs build() {
+        }        public JobDefinitionArgs build() {
             return new JobDefinitionArgs(customerSecrets, dataManagerName, dataServiceInput, dataServiceName, dataSinkId, dataSourceId, jobDefinitionName, lastModifiedTime, resourceGroupName, runLocation, schedules, state, userConfirmation);
         }
     }

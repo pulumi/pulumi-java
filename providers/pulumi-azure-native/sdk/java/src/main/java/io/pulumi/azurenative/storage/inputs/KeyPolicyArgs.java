@@ -60,12 +60,10 @@ public final class KeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
             return this;
         }
-
         public Builder keyExpirationPeriodInDays(Integer keyExpirationPeriodInDays) {
             this.keyExpirationPeriodInDays = Output.of(Objects.requireNonNull(keyExpirationPeriodInDays));
             return this;
-        }
-        public KeyPolicyArgs build() {
+        }        public KeyPolicyArgs build() {
             return new KeyPolicyArgs(keyExpirationPeriodInDays);
         }
     }

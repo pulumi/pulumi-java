@@ -80,12 +80,13 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends io.pulumi.re
             this.galleries = galleries;
             return this;
         }
-
+        public Builder galleries(WorkbookTemplateGalleryResponse... galleries) {
+            return galleries(List.of(galleries));
+        }
         public Builder templateData(@Nullable Object templateData) {
             this.templateData = templateData;
             return this;
-        }
-        public WorkbookTemplateLocalizedGalleryResponse build() {
+        }        public WorkbookTemplateLocalizedGalleryResponse build() {
             return new WorkbookTemplateLocalizedGalleryResponse(galleries, templateData);
         }
     }

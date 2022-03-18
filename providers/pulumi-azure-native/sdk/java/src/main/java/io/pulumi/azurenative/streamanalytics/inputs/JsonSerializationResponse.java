@@ -95,17 +95,14 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
             this.encoding = encoding;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JsonSerializationResponse build() {
+        }        public JsonSerializationResponse build() {
             return new JsonSerializationResponse(encoding, format, type);
         }
     }

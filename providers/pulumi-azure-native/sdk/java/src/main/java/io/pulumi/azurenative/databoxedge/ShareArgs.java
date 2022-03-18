@@ -244,122 +244,104 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             this.accessProtocol = Objects.requireNonNull(accessProtocol);
             return this;
         }
-
         public Builder accessProtocol(Either<String,ShareAccessProtocol> accessProtocol) {
             this.accessProtocol = Output.of(Objects.requireNonNull(accessProtocol));
             return this;
         }
-
         public Builder azureContainerInfo(@Nullable Output<AzureContainerInfoArgs> azureContainerInfo) {
             this.azureContainerInfo = azureContainerInfo;
             return this;
         }
-
         public Builder azureContainerInfo(@Nullable AzureContainerInfoArgs azureContainerInfo) {
             this.azureContainerInfo = Output.ofNullable(azureContainerInfo);
             return this;
         }
-
         public Builder clientAccessRights(@Nullable Output<List<ClientAccessRightArgs>> clientAccessRights) {
             this.clientAccessRights = clientAccessRights;
             return this;
         }
-
         public Builder clientAccessRights(@Nullable List<ClientAccessRightArgs> clientAccessRights) {
             this.clientAccessRights = Output.ofNullable(clientAccessRights);
             return this;
         }
-
+        public Builder clientAccessRights(ClientAccessRightArgs... clientAccessRights) {
+            return clientAccessRights(List.of(clientAccessRights));
+        }
         public Builder dataPolicy(@Nullable Output<Either<String,DataPolicy>> dataPolicy) {
             this.dataPolicy = dataPolicy;
             return this;
         }
-
         public Builder dataPolicy(@Nullable Either<String,DataPolicy> dataPolicy) {
             this.dataPolicy = Output.ofNullable(dataPolicy);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder monitoringStatus(Output<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
-
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Output.of(Objects.requireNonNull(monitoringStatus));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder refreshDetails(@Nullable Output<RefreshDetailsArgs> refreshDetails) {
             this.refreshDetails = refreshDetails;
             return this;
         }
-
         public Builder refreshDetails(@Nullable RefreshDetailsArgs refreshDetails) {
             this.refreshDetails = Output.ofNullable(refreshDetails);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareStatus(Output<Either<String,ShareStatus>> shareStatus) {
             this.shareStatus = Objects.requireNonNull(shareStatus);
             return this;
         }
-
         public Builder shareStatus(Either<String,ShareStatus> shareStatus) {
             this.shareStatus = Output.of(Objects.requireNonNull(shareStatus));
             return this;
         }
-
         public Builder userAccessRights(@Nullable Output<List<UserAccessRightArgs>> userAccessRights) {
             this.userAccessRights = userAccessRights;
             return this;
         }
-
         public Builder userAccessRights(@Nullable List<UserAccessRightArgs> userAccessRights) {
             this.userAccessRights = Output.ofNullable(userAccessRights);
             return this;
         }
-        public ShareArgs build() {
+        public Builder userAccessRights(UserAccessRightArgs... userAccessRights) {
+            return userAccessRights(List.of(userAccessRights));
+        }        public ShareArgs build() {
             return new ShareArgs(accessProtocol, azureContainerInfo, clientAccessRights, dataPolicy, description, deviceName, monitoringStatus, name, refreshDetails, resourceGroupName, shareStatus, userAccessRights);
         }
     }

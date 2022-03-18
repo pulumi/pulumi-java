@@ -95,32 +95,26 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder streamingUnits(@Nullable Output<Integer> streamingUnits) {
             this.streamingUnits = streamingUnits;
             return this;
         }
-
         public Builder streamingUnits(@Nullable Integer streamingUnits) {
             this.streamingUnits = Output.ofNullable(streamingUnits);
             return this;
-        }
-        public TransformationArgs build() {
+        }        public TransformationArgs build() {
             return new TransformationArgs(name, query, streamingUnits);
         }
     }

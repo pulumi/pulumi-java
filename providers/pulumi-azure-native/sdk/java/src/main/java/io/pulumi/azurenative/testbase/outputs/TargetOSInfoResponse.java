@@ -70,12 +70,13 @@ public final class TargetOSInfoResponse {
             this.osUpdateType = Objects.requireNonNull(osUpdateType);
             return this;
         }
-
         public Builder targetOSs(List<String> targetOSs) {
             this.targetOSs = Objects.requireNonNull(targetOSs);
             return this;
         }
-        public TargetOSInfoResponse build() {
+        public Builder targetOSs(String... targetOSs) {
+            return targetOSs(List.of(targetOSs));
+        }        public TargetOSInfoResponse build() {
             return new TargetOSInfoResponse(osUpdateType, targetOSs);
         }
     }

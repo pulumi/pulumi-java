@@ -165,72 +165,61 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder baseUrl(Output<Object> baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
-
         public Builder baseUrl(Object baseUrl) {
             this.baseUrl = Output.of(Objects.requireNonNull(baseUrl));
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AzureKeyVaultLinkedServiceArgs build() {
+        }        public AzureKeyVaultLinkedServiceArgs build() {
             return new AzureKeyVaultLinkedServiceArgs(annotations, baseUrl, connectVia, credential, description, parameters, type);
         }
     }

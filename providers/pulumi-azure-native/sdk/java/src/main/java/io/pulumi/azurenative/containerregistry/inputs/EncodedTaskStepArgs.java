@@ -145,62 +145,53 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
             this.contextAccessToken = contextAccessToken;
             return this;
         }
-
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = Output.ofNullable(contextAccessToken);
             return this;
         }
-
         public Builder contextPath(@Nullable Output<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
-
         public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = Output.ofNullable(contextPath);
             return this;
         }
-
         public Builder encodedTaskContent(Output<String> encodedTaskContent) {
             this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
             return this;
         }
-
         public Builder encodedTaskContent(String encodedTaskContent) {
             this.encodedTaskContent = Output.of(Objects.requireNonNull(encodedTaskContent));
             return this;
         }
-
         public Builder encodedValuesContent(@Nullable Output<String> encodedValuesContent) {
             this.encodedValuesContent = encodedValuesContent;
             return this;
         }
-
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             this.encodedValuesContent = Output.ofNullable(encodedValuesContent);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder values(@Nullable Output<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<SetValueArgs> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public EncodedTaskStepArgs build() {
+        public Builder values(SetValueArgs... values) {
+            return values(List.of(values));
+        }        public EncodedTaskStepArgs build() {
             return new EncodedTaskStepArgs(contextAccessToken, contextPath, encodedTaskContent, encodedValuesContent, type, values);
         }
     }

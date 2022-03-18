@@ -60,8 +60,7 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends io.pulumi.re
         public Builder upgradeChannel(@Nullable String upgradeChannel) {
             this.upgradeChannel = upgradeChannel;
             return this;
-        }
-        public ManagedClusterAutoUpgradeProfileResponse build() {
+        }        public ManagedClusterAutoUpgradeProfileResponse build() {
             return new ManagedClusterAutoUpgradeProfileResponse(upgradeChannel);
         }
     }

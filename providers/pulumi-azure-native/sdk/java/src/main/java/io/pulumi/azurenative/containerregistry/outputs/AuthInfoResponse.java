@@ -120,27 +120,22 @@ public final class AuthInfoResponse {
             this.expiresIn = expiresIn;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public Builder tokenType(String tokenType) {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
-        }
-        public AuthInfoResponse build() {
+        }        public AuthInfoResponse build() {
             return new AuthInfoResponse(expiresIn, refreshToken, scope, token, tokenType);
         }
     }

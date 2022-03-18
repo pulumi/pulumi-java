@@ -205,52 +205,48 @@ public final class GetPolicySetDefinitionResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder policyDefinitionGroups(@Nullable List<PolicyDefinitionGroupResponse> policyDefinitionGroups) {
             this.policyDefinitionGroups = policyDefinitionGroups;
             return this;
         }
-
+        public Builder policyDefinitionGroups(PolicyDefinitionGroupResponse... policyDefinitionGroups) {
+            return policyDefinitionGroups(List.of(policyDefinitionGroups));
+        }
         public Builder policyDefinitions(List<PolicyDefinitionReferenceResponse> policyDefinitions) {
             this.policyDefinitions = Objects.requireNonNull(policyDefinitions);
             return this;
         }
-
+        public Builder policyDefinitions(PolicyDefinitionReferenceResponse... policyDefinitions) {
+            return policyDefinitions(List.of(policyDefinitions));
+        }
         public Builder policyType(@Nullable String policyType) {
             this.policyType = policyType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPolicySetDefinitionResult build() {
+        }        public GetPolicySetDefinitionResult build() {
             return new GetPolicySetDefinitionResult(description, displayName, id, metadata, name, parameters, policyDefinitionGroups, policyDefinitions, policyType, type);
         }
     }

@@ -156,72 +156,64 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
             this.attachedConnections = attachedConnections;
             return this;
         }
-
         public Builder attachedConnections(@Nullable List<String> attachedConnections) {
             this.attachedConnections = Output.ofNullable(attachedConnections);
             return this;
         }
-
+        public Builder attachedConnections(String... attachedConnections) {
+            return attachedConnections(List.of(attachedConnections));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routeTableName(@Nullable Output<String> routeTableName) {
             this.routeTableName = routeTableName;
             return this;
         }
-
         public Builder routeTableName(@Nullable String routeTableName) {
             this.routeTableName = Output.ofNullable(routeTableName);
             return this;
         }
-
         public Builder routes(@Nullable Output<List<VirtualHubRouteV2Args>> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable List<VirtualHubRouteV2Args> routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-
+        public Builder routes(VirtualHubRouteV2Args... routes) {
+            return routes(List.of(routes));
+        }
         public Builder virtualHubName(Output<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
             return this;
-        }
-        public VirtualHubRouteTableV2Args build() {
+        }        public VirtualHubRouteTableV2Args build() {
             return new VirtualHubRouteTableV2Args(attachedConnections, id, name, resourceGroupName, routeTableName, routes, virtualHubName);
         }
     }

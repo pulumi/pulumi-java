@@ -92,17 +92,17 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
             this.associations = associations;
             return this;
         }
-
+        public Builder associations(SecurityPolicyWebApplicationFirewallAssociationResponse... associations) {
+            return associations(List.of(associations));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder wafPolicy(@Nullable ResourceReferenceResponse wafPolicy) {
             this.wafPolicy = wafPolicy;
             return this;
-        }
-        public SecurityPolicyWebApplicationFirewallParametersResponse build() {
+        }        public SecurityPolicyWebApplicationFirewallParametersResponse build() {
             return new SecurityPolicyWebApplicationFirewallParametersResponse(associations, type, wafPolicy);
         }
     }

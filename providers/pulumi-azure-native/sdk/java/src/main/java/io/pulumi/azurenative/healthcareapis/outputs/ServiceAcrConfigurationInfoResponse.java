@@ -54,7 +54,9 @@ public final class ServiceAcrConfigurationInfoResponse {
             this.loginServers = loginServers;
             return this;
         }
-        public ServiceAcrConfigurationInfoResponse build() {
+        public Builder loginServers(String... loginServers) {
+            return loginServers(List.of(loginServers));
+        }        public ServiceAcrConfigurationInfoResponse build() {
             return new ServiceAcrConfigurationInfoResponse(loginServers);
         }
     }

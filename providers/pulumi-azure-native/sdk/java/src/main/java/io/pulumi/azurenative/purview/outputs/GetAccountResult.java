@@ -354,97 +354,81 @@ public final class GetAccountResult {
             this.cloudConnectors = cloudConnectors;
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder createdByObjectId(String createdByObjectId) {
             this.createdByObjectId = Objects.requireNonNull(createdByObjectId);
             return this;
         }
-
         public Builder endpoints(AccountPropertiesResponseEndpoints endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
-
         public Builder managedResources(AccountPropertiesResponseManagedResources managedResources) {
             this.managedResources = Objects.requireNonNull(managedResources);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder sku(AccountResponseSku sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder systemData(AccountPropertiesResponseSystemData systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAccountResult build() {
+        }        public GetAccountResult build() {
             return new GetAccountResult(cloudConnectors, createdAt, createdBy, createdByObjectId, endpoints, friendlyName, id, identity, location, managedResourceGroupName, managedResources, name, privateEndpointConnections, provisioningState, publicNetworkAccess, sku, systemData, tags, type);
         }
     }

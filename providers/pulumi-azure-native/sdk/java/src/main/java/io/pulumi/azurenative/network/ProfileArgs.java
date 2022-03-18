@@ -293,152 +293,128 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
             return this;
         }
-
         public Builder allowedEndpointRecordTypes(@Nullable List<Either<String,AllowedEndpointRecordType>> allowedEndpointRecordTypes) {
             this.allowedEndpointRecordTypes = Output.ofNullable(allowedEndpointRecordTypes);
             return this;
         }
-
+        public Builder allowedEndpointRecordTypes(Either<String,AllowedEndpointRecordType>... allowedEndpointRecordTypes) {
+            return allowedEndpointRecordTypes(List.of(allowedEndpointRecordTypes));
+        }
         public Builder dnsConfig(@Nullable Output<DnsConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder dnsConfig(@Nullable DnsConfigArgs dnsConfig) {
             this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<EndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(EndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maxReturn(@Nullable Output<Double> maxReturn) {
             this.maxReturn = maxReturn;
             return this;
         }
-
         public Builder maxReturn(@Nullable Double maxReturn) {
             this.maxReturn = Output.ofNullable(maxReturn);
             return this;
         }
-
         public Builder monitorConfig(@Nullable Output<MonitorConfigArgs> monitorConfig) {
             this.monitorConfig = monitorConfig;
             return this;
         }
-
         public Builder monitorConfig(@Nullable MonitorConfigArgs monitorConfig) {
             this.monitorConfig = Output.ofNullable(monitorConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = Output.ofNullable(profileName);
             return this;
         }
-
         public Builder profileStatus(@Nullable Output<Either<String,ProfileStatus>> profileStatus) {
             this.profileStatus = profileStatus;
             return this;
         }
-
         public Builder profileStatus(@Nullable Either<String,ProfileStatus> profileStatus) {
             this.profileStatus = Output.ofNullable(profileStatus);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder trafficRoutingMethod(@Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod) {
             this.trafficRoutingMethod = trafficRoutingMethod;
             return this;
         }
-
         public Builder trafficRoutingMethod(@Nullable Either<String,TrafficRoutingMethod> trafficRoutingMethod) {
             this.trafficRoutingMethod = Output.ofNullable(trafficRoutingMethod);
             return this;
         }
-
         public Builder trafficViewEnrollmentStatus(@Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus) {
             this.trafficViewEnrollmentStatus = trafficViewEnrollmentStatus;
             return this;
         }
-
         public Builder trafficViewEnrollmentStatus(@Nullable Either<String,TrafficViewEnrollmentStatus> trafficViewEnrollmentStatus) {
             this.trafficViewEnrollmentStatus = Output.ofNullable(trafficViewEnrollmentStatus);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ProfileArgs build() {
+        }        public ProfileArgs build() {
             return new ProfileArgs(allowedEndpointRecordTypes, dnsConfig, endpoints, id, location, maxReturn, monitorConfig, name, profileName, profileStatus, resourceGroupName, tags, trafficRoutingMethod, trafficViewEnrollmentStatus, type);
         }
     }

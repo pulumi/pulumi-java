@@ -78,12 +78,10 @@ public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.Invo
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public TimeSeriesIdPropertyResponse build() {
+        }        public TimeSeriesIdPropertyResponse build() {
             return new TimeSeriesIdPropertyResponse(name, type);
         }
     }

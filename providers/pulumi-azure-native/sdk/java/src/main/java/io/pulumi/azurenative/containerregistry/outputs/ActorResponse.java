@@ -53,8 +53,7 @@ public final class ActorResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ActorResponse build() {
+        }        public ActorResponse build() {
             return new ActorResponse(name);
         }
     }

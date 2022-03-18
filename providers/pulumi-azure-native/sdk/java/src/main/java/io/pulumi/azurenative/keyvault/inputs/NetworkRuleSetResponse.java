@@ -113,22 +113,24 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
             this.bypass = bypass;
             return this;
         }
-
         public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder ipRules(@Nullable List<IPRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
-
+        public Builder ipRules(IPRuleResponse... ipRules) {
+            return ipRules(List.of(ipRules));
+        }
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-        public NetworkRuleSetResponse build() {
+        public Builder virtualNetworkRules(VirtualNetworkRuleResponse... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }        public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(bypass, defaultAction, ipRules, virtualNetworkRules);
         }
     }

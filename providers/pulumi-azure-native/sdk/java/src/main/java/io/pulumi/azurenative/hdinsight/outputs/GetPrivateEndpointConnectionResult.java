@@ -168,42 +168,34 @@ public final class GetPrivateEndpointConnectionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkIdentifier(String linkIdentifier) {
             this.linkIdentifier = Objects.requireNonNull(linkIdentifier);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPrivateEndpointConnectionResult build() {
+        }        public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(id, linkIdentifier, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }
     }

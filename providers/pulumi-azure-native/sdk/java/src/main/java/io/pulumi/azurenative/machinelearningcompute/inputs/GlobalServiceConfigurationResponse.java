@@ -113,22 +113,18 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
             this.autoScale = autoScale;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder serviceAuth(@Nullable ServiceAuthConfigurationResponse serviceAuth) {
             this.serviceAuth = serviceAuth;
             return this;
         }
-
         public Builder ssl(@Nullable SslConfigurationResponse ssl) {
             this.ssl = ssl;
             return this;
-        }
-        public GlobalServiceConfigurationResponse build() {
+        }        public GlobalServiceConfigurationResponse build() {
             return new GlobalServiceConfigurationResponse(autoScale, etag, serviceAuth, ssl);
         }
     }

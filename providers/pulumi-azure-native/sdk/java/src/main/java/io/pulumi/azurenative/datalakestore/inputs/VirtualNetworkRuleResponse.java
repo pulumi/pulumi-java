@@ -108,22 +108,18 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VirtualNetworkRuleResponse build() {
+        }        public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, name, subnetId, type);
         }
     }

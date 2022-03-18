@@ -59,8 +59,7 @@ public final class RolloutIdentityAuthenticationResponse extends io.pulumi.resou
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RolloutIdentityAuthenticationResponse build() {
+        }        public RolloutIdentityAuthenticationResponse build() {
             return new RolloutIdentityAuthenticationResponse(type);
         }
     }

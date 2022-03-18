@@ -722,212 +722,182 @@ public final class A2AReplicationDetailsResponse {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder fabricObjectId(@Nullable String fabricObjectId) {
             this.fabricObjectId = fabricObjectId;
             return this;
         }
-
         public Builder initialPrimaryFabricLocation(String initialPrimaryFabricLocation) {
             this.initialPrimaryFabricLocation = Objects.requireNonNull(initialPrimaryFabricLocation);
             return this;
         }
-
         public Builder initialPrimaryZone(String initialPrimaryZone) {
             this.initialPrimaryZone = Objects.requireNonNull(initialPrimaryZone);
             return this;
         }
-
         public Builder initialRecoveryFabricLocation(String initialRecoveryFabricLocation) {
             this.initialRecoveryFabricLocation = Objects.requireNonNull(initialRecoveryFabricLocation);
             return this;
         }
-
         public Builder initialRecoveryZone(String initialRecoveryZone) {
             this.initialRecoveryZone = Objects.requireNonNull(initialRecoveryZone);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder isReplicationAgentUpdateRequired(@Nullable Boolean isReplicationAgentUpdateRequired) {
             this.isReplicationAgentUpdateRequired = isReplicationAgentUpdateRequired;
             return this;
         }
-
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
-
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
-
         public Builder lifecycleId(@Nullable String lifecycleId) {
             this.lifecycleId = lifecycleId;
             return this;
         }
-
         public Builder managementId(@Nullable String managementId) {
             this.managementId = managementId;
             return this;
         }
-
         public Builder monitoringJobType(@Nullable String monitoringJobType) {
             this.monitoringJobType = monitoringJobType;
             return this;
         }
-
         public Builder monitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
             this.monitoringPercentageCompletion = monitoringPercentageCompletion;
             return this;
         }
-
         public Builder multiVmGroupCreateOption(@Nullable String multiVmGroupCreateOption) {
             this.multiVmGroupCreateOption = multiVmGroupCreateOption;
             return this;
         }
-
         public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
             this.multiVmGroupId = multiVmGroupId;
             return this;
         }
-
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder primaryFabricLocation(@Nullable String primaryFabricLocation) {
             this.primaryFabricLocation = primaryFabricLocation;
             return this;
         }
-
         public Builder protectedDisks(@Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks) {
             this.protectedDisks = protectedDisks;
             return this;
         }
-
+        public Builder protectedDisks(A2AProtectedDiskDetailsResponse... protectedDisks) {
+            return protectedDisks(List.of(protectedDisks));
+        }
         public Builder protectedManagedDisks(@Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks) {
             this.protectedManagedDisks = protectedManagedDisks;
             return this;
         }
-
+        public Builder protectedManagedDisks(A2AProtectedManagedDiskDetailsResponse... protectedManagedDisks) {
+            return protectedManagedDisks(List.of(protectedManagedDisks));
+        }
         public Builder recoveryAvailabilitySet(@Nullable String recoveryAvailabilitySet) {
             this.recoveryAvailabilitySet = recoveryAvailabilitySet;
             return this;
         }
-
         public Builder recoveryAvailabilityZone(@Nullable String recoveryAvailabilityZone) {
             this.recoveryAvailabilityZone = recoveryAvailabilityZone;
             return this;
         }
-
         public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
             this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
-
         public Builder recoveryAzureVMName(@Nullable String recoveryAzureVMName) {
             this.recoveryAzureVMName = recoveryAzureVMName;
             return this;
         }
-
         public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
             this.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
-
         public Builder recoveryBootDiagStorageAccountId(@Nullable String recoveryBootDiagStorageAccountId) {
             this.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
             return this;
         }
-
         public Builder recoveryCloudService(@Nullable String recoveryCloudService) {
             this.recoveryCloudService = recoveryCloudService;
             return this;
         }
-
         public Builder recoveryFabricLocation(@Nullable String recoveryFabricLocation) {
             this.recoveryFabricLocation = recoveryFabricLocation;
             return this;
         }
-
         public Builder recoveryFabricObjectId(@Nullable String recoveryFabricObjectId) {
             this.recoveryFabricObjectId = recoveryFabricObjectId;
             return this;
         }
-
         public Builder recoveryProximityPlacementGroupId(@Nullable String recoveryProximityPlacementGroupId) {
             this.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
             return this;
         }
-
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
-
         public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
             this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
-
         public Builder selectedTfoAzureNetworkId(@Nullable String selectedTfoAzureNetworkId) {
             this.selectedTfoAzureNetworkId = selectedTfoAzureNetworkId;
             return this;
         }
-
         public Builder testFailoverRecoveryFabricObjectId(@Nullable String testFailoverRecoveryFabricObjectId) {
             this.testFailoverRecoveryFabricObjectId = testFailoverRecoveryFabricObjectId;
             return this;
         }
-
         public Builder tfoAzureVMName(@Nullable String tfoAzureVMName) {
             this.tfoAzureVMName = tfoAzureVMName;
             return this;
         }
-
         public Builder unprotectedDisks(@Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks) {
             this.unprotectedDisks = unprotectedDisks;
             return this;
         }
-
+        public Builder unprotectedDisks(A2AUnprotectedDiskDetailsResponse... unprotectedDisks) {
+            return unprotectedDisks(List.of(unprotectedDisks));
+        }
         public Builder vmEncryptionType(String vmEncryptionType) {
             this.vmEncryptionType = Objects.requireNonNull(vmEncryptionType);
             return this;
         }
-
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
-
+        public Builder vmNics(VMNicDetailsResponse... vmNics) {
+            return vmNics(List.of(vmNics));
+        }
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
-
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public Builder vmSyncedConfigDetails(@Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails) {
             this.vmSyncedConfigDetails = vmSyncedConfigDetails;
             return this;
-        }
-        public A2AReplicationDetailsResponse build() {
+        }        public A2AReplicationDetailsResponse build() {
             return new A2AReplicationDetailsResponse(agentVersion, fabricObjectId, initialPrimaryFabricLocation, initialPrimaryZone, initialRecoveryFabricLocation, initialRecoveryZone, instanceType, isReplicationAgentUpdateRequired, lastHeartbeat, lastRpoCalculatedTime, lifecycleId, managementId, monitoringJobType, monitoringPercentageCompletion, multiVmGroupCreateOption, multiVmGroupId, multiVmGroupName, osType, primaryFabricLocation, protectedDisks, protectedManagedDisks, recoveryAvailabilitySet, recoveryAvailabilityZone, recoveryAzureResourceGroupId, recoveryAzureVMName, recoveryAzureVMSize, recoveryBootDiagStorageAccountId, recoveryCloudService, recoveryFabricLocation, recoveryFabricObjectId, recoveryProximityPlacementGroupId, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedTfoAzureNetworkId, testFailoverRecoveryFabricObjectId, tfoAzureVMName, unprotectedDisks, vmEncryptionType, vmNics, vmProtectionState, vmProtectionStateDescription, vmSyncedConfigDetails);
         }
     }

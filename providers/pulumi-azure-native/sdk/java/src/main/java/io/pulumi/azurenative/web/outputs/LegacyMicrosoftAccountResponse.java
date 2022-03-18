@@ -106,22 +106,18 @@ public final class LegacyMicrosoftAccountResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder login(@Nullable LoginScopesResponse login) {
             this.login = login;
             return this;
         }
-
         public Builder registration(@Nullable ClientRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }
-
         public Builder validation(@Nullable AllowedAudiencesValidationResponse validation) {
             this.validation = validation;
             return this;
-        }
-        public LegacyMicrosoftAccountResponse build() {
+        }        public LegacyMicrosoftAccountResponse build() {
             return new LegacyMicrosoftAccountResponse(enabled, login, registration, validation);
         }
     }

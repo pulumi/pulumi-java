@@ -254,132 +254,106 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
             this.azureResourceName = azureResourceName;
             return this;
         }
-
         public Builder azureResourceName(@Nullable String azureResourceName) {
             this.azureResourceName = Output.ofNullable(azureResourceName);
             return this;
         }
-
         public Builder azureResourceType(@Nullable Output<AzureResourceType> azureResourceType) {
             this.azureResourceType = azureResourceType;
             return this;
         }
-
         public Builder azureResourceType(@Nullable AzureResourceType azureResourceType) {
             this.azureResourceType = Output.ofNullable(azureResourceType);
             return this;
         }
-
         public Builder customHostNameDnsRecordType(@Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType) {
             this.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
-
         public Builder customHostNameDnsRecordType(@Nullable CustomHostNameDnsRecordType customHostNameDnsRecordType) {
             this.customHostNameDnsRecordType = Output.ofNullable(customHostNameDnsRecordType);
             return this;
         }
-
         public Builder domainId(@Nullable Output<String> domainId) {
             this.domainId = domainId;
             return this;
         }
-
         public Builder domainId(@Nullable String domainId) {
             this.domainId = Output.ofNullable(domainId);
             return this;
         }
-
         public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = Output.ofNullable(hostName);
             return this;
         }
-
         public Builder hostNameType(@Nullable Output<HostNameType> hostNameType) {
             this.hostNameType = hostNameType;
             return this;
         }
-
         public Builder hostNameType(@Nullable HostNameType hostNameType) {
             this.hostNameType = Output.ofNullable(hostNameType);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder siteName(@Nullable Output<String> siteName) {
             this.siteName = siteName;
             return this;
         }
-
         public Builder siteName(@Nullable String siteName) {
             this.siteName = Output.ofNullable(siteName);
             return this;
         }
-
         public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public Builder sslState(@Nullable Output<SslState> sslState) {
             this.sslState = sslState;
             return this;
         }
-
         public Builder sslState(@Nullable SslState sslState) {
             this.sslState = Output.ofNullable(sslState);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
-        }
-        public WebAppHostNameBindingSlotArgs build() {
+        }        public WebAppHostNameBindingSlotArgs build() {
             return new WebAppHostNameBindingSlotArgs(azureResourceName, azureResourceType, customHostNameDnsRecordType, domainId, hostName, hostNameType, kind, name, resourceGroupName, siteName, slot, sslState, thumbprint);
         }
     }

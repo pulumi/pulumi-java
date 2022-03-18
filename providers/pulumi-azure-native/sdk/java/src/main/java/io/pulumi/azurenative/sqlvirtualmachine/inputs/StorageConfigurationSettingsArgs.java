@@ -130,52 +130,42 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
-
         public Builder diskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
             this.diskConfigurationType = Output.ofNullable(diskConfigurationType);
             return this;
         }
-
         public Builder sqlDataSettings(@Nullable Output<SQLStorageSettingsArgs> sqlDataSettings) {
             this.sqlDataSettings = sqlDataSettings;
             return this;
         }
-
         public Builder sqlDataSettings(@Nullable SQLStorageSettingsArgs sqlDataSettings) {
             this.sqlDataSettings = Output.ofNullable(sqlDataSettings);
             return this;
         }
-
         public Builder sqlLogSettings(@Nullable Output<SQLStorageSettingsArgs> sqlLogSettings) {
             this.sqlLogSettings = sqlLogSettings;
             return this;
         }
-
         public Builder sqlLogSettings(@Nullable SQLStorageSettingsArgs sqlLogSettings) {
             this.sqlLogSettings = Output.ofNullable(sqlLogSettings);
             return this;
         }
-
         public Builder sqlTempDbSettings(@Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings) {
             this.sqlTempDbSettings = sqlTempDbSettings;
             return this;
         }
-
         public Builder sqlTempDbSettings(@Nullable SQLStorageSettingsArgs sqlTempDbSettings) {
             this.sqlTempDbSettings = Output.ofNullable(sqlTempDbSettings);
             return this;
         }
-
         public Builder storageWorkloadType(@Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType) {
             this.storageWorkloadType = storageWorkloadType;
             return this;
         }
-
         public Builder storageWorkloadType(@Nullable Either<String,StorageWorkloadType> storageWorkloadType) {
             this.storageWorkloadType = Output.ofNullable(storageWorkloadType);
             return this;
-        }
-        public StorageConfigurationSettingsArgs build() {
+        }        public StorageConfigurationSettingsArgs build() {
             return new StorageConfigurationSettingsArgs(diskConfigurationType, sqlDataSettings, sqlLogSettings, sqlTempDbSettings, storageWorkloadType);
         }
     }

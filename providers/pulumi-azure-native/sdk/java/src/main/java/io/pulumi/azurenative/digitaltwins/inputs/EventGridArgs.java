@@ -161,72 +161,58 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
             this.accessKey1 = Objects.requireNonNull(accessKey1);
             return this;
         }
-
         public Builder accessKey1(String accessKey1) {
             this.accessKey1 = Output.of(Objects.requireNonNull(accessKey1));
             return this;
         }
-
         public Builder accessKey2(@Nullable Output<String> accessKey2) {
             this.accessKey2 = accessKey2;
             return this;
         }
-
         public Builder accessKey2(@Nullable String accessKey2) {
             this.accessKey2 = Output.ofNullable(accessKey2);
             return this;
         }
-
         public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
-
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = Output.ofNullable(deadLetterSecret);
             return this;
         }
-
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
-
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = Output.ofNullable(deadLetterUri);
             return this;
         }
-
         public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder topicEndpoint(Output<String> topicEndpoint) {
             this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
             return this;
         }
-
         public Builder topicEndpoint(String topicEndpoint) {
             this.topicEndpoint = Output.of(Objects.requireNonNull(topicEndpoint));
             return this;
-        }
-        public EventGridArgs build() {
+        }        public EventGridArgs build() {
             return new EventGridArgs(accessKey1, accessKey2, authenticationType, deadLetterSecret, deadLetterUri, endpointType, topicEndpoint);
         }
     }

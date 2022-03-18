@@ -81,22 +81,18 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
             this.bindingType = bindingType;
             return this;
         }
-
         public Builder bindingType(@Nullable Either<String,BindingType> bindingType) {
             this.bindingType = Output.ofNullable(bindingType);
             return this;
         }
-
         public Builder launchProperties(@Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
             this.launchProperties = launchProperties;
             return this;
         }
-
         public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesArgs launchProperties) {
             this.launchProperties = Output.ofNullable(launchProperties);
             return this;
-        }
-        public BuildpackBindingPropertiesArgs build() {
+        }        public BuildpackBindingPropertiesArgs build() {
             return new BuildpackBindingPropertiesArgs(bindingType, launchProperties);
         }
     }

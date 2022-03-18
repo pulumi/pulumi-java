@@ -112,22 +112,18 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
             this.certificateSource = Objects.requireNonNull(certificateSource);
             return this;
         }
-
         public Builder certificateSourceParameters(KeyVaultCertificateSourceParametersResponse certificateSourceParameters) {
             this.certificateSourceParameters = Objects.requireNonNull(certificateSourceParameters);
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-
         public Builder protocolType(String protocolType) {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
-        }
-        public UserManagedHttpsParametersResponse build() {
+        }        public UserManagedHttpsParametersResponse build() {
             return new UserManagedHttpsParametersResponse(certificateSource, certificateSourceParameters, minimumTlsVersion, protocolType);
         }
     }

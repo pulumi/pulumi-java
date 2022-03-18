@@ -69,22 +69,18 @@ public final class OperationsDefinitionResponseDisplay {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public OperationsDefinitionResponseDisplay build() {
+        }        public OperationsDefinitionResponseDisplay build() {
             return new OperationsDefinitionResponseDisplay(description, operation, provider, resource);
         }
     }

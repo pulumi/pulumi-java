@@ -271,142 +271,117 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable Either<String,Compression> compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder consumerGroup(Output<String> consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
-
         public Builder consumerGroup(String consumerGroup) {
             this.consumerGroup = Output.of(Objects.requireNonNull(consumerGroup));
             return this;
         }
-
         public Builder dataConnectionName(@Nullable Output<String> dataConnectionName) {
             this.dataConnectionName = dataConnectionName;
             return this;
         }
-
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
             this.dataConnectionName = Output.ofNullable(dataConnectionName);
             return this;
         }
-
         public Builder dataFormat(@Nullable Output<Either<String,EventHubDataFormat>> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder dataFormat(@Nullable Either<String,EventHubDataFormat> dataFormat) {
             this.dataFormat = Output.ofNullable(dataFormat);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder eventHubResourceId(Output<String> eventHubResourceId) {
             this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
             return this;
         }
-
         public Builder eventHubResourceId(String eventHubResourceId) {
             this.eventHubResourceId = Output.of(Objects.requireNonNull(eventHubResourceId));
             return this;
         }
-
         public Builder eventSystemProperties(@Nullable Output<List<String>> eventSystemProperties) {
             this.eventSystemProperties = eventSystemProperties;
             return this;
         }
-
         public Builder eventSystemProperties(@Nullable List<String> eventSystemProperties) {
             this.eventSystemProperties = Output.ofNullable(eventSystemProperties);
             return this;
         }
-
+        public Builder eventSystemProperties(String... eventSystemProperties) {
+            return eventSystemProperties(List.of(eventSystemProperties));
+        }
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder kustoPoolName(Output<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
-
         public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
-
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
             this.mappingRuleName = Output.ofNullable(mappingRuleName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public EventHubDataConnectionArgs build() {
+        }        public EventHubDataConnectionArgs build() {
             return new EventHubDataConnectionArgs(compression, consumerGroup, dataConnectionName, dataFormat, databaseName, eventHubResourceId, eventSystemProperties, kind, kustoPoolName, location, mappingRuleName, resourceGroupName, tableName, workspaceName);
         }
     }

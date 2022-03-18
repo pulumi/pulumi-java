@@ -53,8 +53,7 @@ public final class HttpProxyConfigurationResponse {
         public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
-        }
-        public HttpProxyConfigurationResponse build() {
+        }        public HttpProxyConfigurationResponse build() {
             return new HttpProxyConfigurationResponse(httpsProxy);
         }
     }

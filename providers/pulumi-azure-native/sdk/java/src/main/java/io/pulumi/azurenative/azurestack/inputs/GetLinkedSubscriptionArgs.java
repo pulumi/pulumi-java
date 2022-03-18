@@ -72,12 +72,10 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
             this.linkedSubscriptionName = Objects.requireNonNull(linkedSubscriptionName);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
-        }
-        public GetLinkedSubscriptionArgs build() {
+        }        public GetLinkedSubscriptionArgs build() {
             return new GetLinkedSubscriptionArgs(linkedSubscriptionName, resourceGroup);
         }
     }

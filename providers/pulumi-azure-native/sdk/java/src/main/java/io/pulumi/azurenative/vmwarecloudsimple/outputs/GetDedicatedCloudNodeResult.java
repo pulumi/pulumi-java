@@ -346,97 +346,78 @@ public final class GetDedicatedCloudNodeResult {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
-
         public Builder availabilityZoneName(String availabilityZoneName) {
             this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
             return this;
         }
-
         public Builder cloudRackName(String cloudRackName) {
             this.cloudRackName = Objects.requireNonNull(cloudRackName);
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodesCount(Integer nodesCount) {
             this.nodesCount = Objects.requireNonNull(nodesCount);
             return this;
         }
-
         public Builder placementGroupId(String placementGroupId) {
             this.placementGroupId = Objects.requireNonNull(placementGroupId);
             return this;
         }
-
         public Builder placementGroupName(String placementGroupName) {
             this.placementGroupName = Objects.requireNonNull(placementGroupName);
             return this;
         }
-
         public Builder privateCloudId(String privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder purchaseId(String purchaseId) {
             this.purchaseId = Objects.requireNonNull(purchaseId);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vmwareClusterName(String vmwareClusterName) {
             this.vmwareClusterName = Objects.requireNonNull(vmwareClusterName);
             return this;
-        }
-        public GetDedicatedCloudNodeResult build() {
+        }        public GetDedicatedCloudNodeResult build() {
             return new GetDedicatedCloudNodeResult(availabilityZoneId, availabilityZoneName, cloudRackName, created, id, location, name, nodesCount, placementGroupId, placementGroupName, privateCloudId, privateCloudName, provisioningState, purchaseId, sku, status, tags, type, vmwareClusterName);
         }
     }

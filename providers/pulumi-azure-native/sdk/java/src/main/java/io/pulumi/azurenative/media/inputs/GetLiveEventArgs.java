@@ -88,17 +88,14 @@ public final class GetLiveEventArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder liveEventName(String liveEventName) {
             this.liveEventName = Objects.requireNonNull(liveEventName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLiveEventArgs build() {
+        }        public GetLiveEventArgs build() {
             return new GetLiveEventArgs(accountName, liveEventName, resourceGroupName);
         }
     }

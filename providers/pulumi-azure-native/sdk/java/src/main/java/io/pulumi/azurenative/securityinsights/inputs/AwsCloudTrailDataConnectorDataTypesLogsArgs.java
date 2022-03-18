@@ -63,12 +63,10 @@ public final class AwsCloudTrailDataConnectorDataTypesLogsArgs extends io.pulumi
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,DataTypeState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public AwsCloudTrailDataConnectorDataTypesLogsArgs build() {
+        }        public AwsCloudTrailDataConnectorDataTypesLogsArgs build() {
             return new AwsCloudTrailDataConnectorDataTypesLogsArgs(state);
         }
     }

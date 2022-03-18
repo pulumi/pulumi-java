@@ -174,37 +174,30 @@ public final class BinarySourceResponse extends io.pulumi.resources.InvokeArgs {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder formatSettings(@Nullable BinaryReadSettingsResponse formatSettings) {
             this.formatSettings = formatSettings;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder storeSettings(@Nullable Object storeSettings) {
             this.storeSettings = storeSettings;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BinarySourceResponse build() {
+        }        public BinarySourceResponse build() {
             return new BinarySourceResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }
     }

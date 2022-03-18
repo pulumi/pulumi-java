@@ -192,92 +192,74 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.addressMailing = addressMailing;
             return this;
         }
-
         public Builder addressMailing(@Nullable AddressArgs addressMailing) {
             this.addressMailing = Output.ofNullable(addressMailing);
             return this;
         }
-
         public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder fax(@Nullable Output<String> fax) {
             this.fax = fax;
             return this;
         }
-
         public Builder fax(@Nullable String fax) {
             this.fax = Output.ofNullable(fax);
             return this;
         }
-
         public Builder jobTitle(@Nullable Output<String> jobTitle) {
             this.jobTitle = jobTitle;
             return this;
         }
-
         public Builder jobTitle(@Nullable String jobTitle) {
             this.jobTitle = Output.ofNullable(jobTitle);
             return this;
         }
-
         public Builder nameFirst(Output<String> nameFirst) {
             this.nameFirst = Objects.requireNonNull(nameFirst);
             return this;
         }
-
         public Builder nameFirst(String nameFirst) {
             this.nameFirst = Output.of(Objects.requireNonNull(nameFirst));
             return this;
         }
-
         public Builder nameLast(Output<String> nameLast) {
             this.nameLast = Objects.requireNonNull(nameLast);
             return this;
         }
-
         public Builder nameLast(String nameLast) {
             this.nameLast = Output.of(Objects.requireNonNull(nameLast));
             return this;
         }
-
         public Builder nameMiddle(@Nullable Output<String> nameMiddle) {
             this.nameMiddle = nameMiddle;
             return this;
         }
-
         public Builder nameMiddle(@Nullable String nameMiddle) {
             this.nameMiddle = Output.ofNullable(nameMiddle);
             return this;
         }
-
         public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = Output.ofNullable(organization);
             return this;
         }
-
         public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
-        }
-        public ContactArgs build() {
+        }        public ContactArgs build() {
             return new ContactArgs(addressMailing, email, fax, jobTitle, nameFirst, nameLast, nameMiddle, organization, phone);
         }
     }

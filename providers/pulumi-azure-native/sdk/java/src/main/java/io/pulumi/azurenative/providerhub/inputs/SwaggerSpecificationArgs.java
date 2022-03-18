@@ -67,22 +67,21 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
             this.apiVersions = apiVersions;
             return this;
         }
-
         public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = Output.ofNullable(apiVersions);
             return this;
         }
-
+        public Builder apiVersions(String... apiVersions) {
+            return apiVersions(List.of(apiVersions));
+        }
         public Builder swaggerSpecFolderUri(@Nullable Output<String> swaggerSpecFolderUri) {
             this.swaggerSpecFolderUri = swaggerSpecFolderUri;
             return this;
         }
-
         public Builder swaggerSpecFolderUri(@Nullable String swaggerSpecFolderUri) {
             this.swaggerSpecFolderUri = Output.ofNullable(swaggerSpecFolderUri);
             return this;
-        }
-        public SwaggerSpecificationArgs build() {
+        }        public SwaggerSpecificationArgs build() {
             return new SwaggerSpecificationArgs(apiVersions, swaggerSpecFolderUri);
         }
     }

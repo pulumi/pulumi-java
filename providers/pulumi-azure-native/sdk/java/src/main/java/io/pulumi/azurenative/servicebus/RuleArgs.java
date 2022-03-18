@@ -190,92 +190,74 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable ActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder correlationFilter(@Nullable Output<CorrelationFilterArgs> correlationFilter) {
             this.correlationFilter = correlationFilter;
             return this;
         }
-
         public Builder correlationFilter(@Nullable CorrelationFilterArgs correlationFilter) {
             this.correlationFilter = Output.ofNullable(correlationFilter);
             return this;
         }
-
         public Builder filterType(@Nullable Output<FilterType> filterType) {
             this.filterType = filterType;
             return this;
         }
-
         public Builder filterType(@Nullable FilterType filterType) {
             this.filterType = Output.ofNullable(filterType);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder sqlFilter(@Nullable Output<SqlFilterArgs> sqlFilter) {
             this.sqlFilter = sqlFilter;
             return this;
         }
-
         public Builder sqlFilter(@Nullable SqlFilterArgs sqlFilter) {
             this.sqlFilter = Output.ofNullable(sqlFilter);
             return this;
         }
-
         public Builder subscriptionName(Output<String> subscriptionName) {
             this.subscriptionName = Objects.requireNonNull(subscriptionName);
             return this;
         }
-
         public Builder subscriptionName(String subscriptionName) {
             this.subscriptionName = Output.of(Objects.requireNonNull(subscriptionName));
             return this;
         }
-
         public Builder topicName(Output<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Output.of(Objects.requireNonNull(topicName));
             return this;
-        }
-        public RuleArgs build() {
+        }        public RuleArgs build() {
             return new RuleArgs(action, correlationFilter, filterType, namespaceName, resourceGroupName, ruleName, sqlFilter, subscriptionName, topicName);
         }
     }

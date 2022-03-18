@@ -318,162 +318,133 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
             this.azureDiskType = Objects.requireNonNull(azureDiskType);
             return this;
         }
-
         public Builder azureDiskType(Either<String,AzureDiskType> azureDiskType) {
             this.azureDiskType = Output.of(Objects.requireNonNull(azureDiskType));
             return this;
         }
-
         public Builder azureHybridUseBenefit(Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit) {
             this.azureHybridUseBenefit = Objects.requireNonNull(azureHybridUseBenefit);
             return this;
         }
-
         public Builder azureHybridUseBenefit(Either<String,AzureHybridUseBenefit> azureHybridUseBenefit) {
             this.azureHybridUseBenefit = Output.of(Objects.requireNonNull(azureHybridUseBenefit));
             return this;
         }
-
         public Builder azureLocation(Output<Either<String,AzureLocation>> azureLocation) {
             this.azureLocation = Objects.requireNonNull(azureLocation);
             return this;
         }
-
         public Builder azureLocation(Either<String,AzureLocation> azureLocation) {
             this.azureLocation = Output.of(Objects.requireNonNull(azureLocation));
             return this;
         }
-
         public Builder azureOfferCode(Output<Either<String,AzureOfferCode>> azureOfferCode) {
             this.azureOfferCode = Objects.requireNonNull(azureOfferCode);
             return this;
         }
-
         public Builder azureOfferCode(Either<String,AzureOfferCode> azureOfferCode) {
             this.azureOfferCode = Output.of(Objects.requireNonNull(azureOfferCode));
             return this;
         }
-
         public Builder azurePricingTier(Output<Either<String,AzurePricingTier>> azurePricingTier) {
             this.azurePricingTier = Objects.requireNonNull(azurePricingTier);
             return this;
         }
-
         public Builder azurePricingTier(Either<String,AzurePricingTier> azurePricingTier) {
             this.azurePricingTier = Output.of(Objects.requireNonNull(azurePricingTier));
             return this;
         }
-
         public Builder azureStorageRedundancy(Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy) {
             this.azureStorageRedundancy = Objects.requireNonNull(azureStorageRedundancy);
             return this;
         }
-
         public Builder azureStorageRedundancy(Either<String,AzureStorageRedundancy> azureStorageRedundancy) {
             this.azureStorageRedundancy = Output.of(Objects.requireNonNull(azureStorageRedundancy));
             return this;
         }
-
         public Builder azureVmFamilies(Output<List<Either<String,AzureVmFamily>>> azureVmFamilies) {
             this.azureVmFamilies = Objects.requireNonNull(azureVmFamilies);
             return this;
         }
-
         public Builder azureVmFamilies(List<Either<String,AzureVmFamily>> azureVmFamilies) {
             this.azureVmFamilies = Output.of(Objects.requireNonNull(azureVmFamilies));
             return this;
         }
-
+        public Builder azureVmFamilies(Either<String,AzureVmFamily>... azureVmFamilies) {
+            return azureVmFamilies(List.of(azureVmFamilies));
+        }
         public Builder currency(Output<Either<String,Currency>> currency) {
             this.currency = Objects.requireNonNull(currency);
             return this;
         }
-
         public Builder currency(Either<String,Currency> currency) {
             this.currency = Output.of(Objects.requireNonNull(currency));
             return this;
         }
-
         public Builder discountPercentage(Output<Double> discountPercentage) {
             this.discountPercentage = Objects.requireNonNull(discountPercentage);
             return this;
         }
-
         public Builder discountPercentage(Double discountPercentage) {
             this.discountPercentage = Output.of(Objects.requireNonNull(discountPercentage));
             return this;
         }
-
         public Builder percentile(Output<Either<String,Percentile>> percentile) {
             this.percentile = Objects.requireNonNull(percentile);
             return this;
         }
-
         public Builder percentile(Either<String,Percentile> percentile) {
             this.percentile = Output.of(Objects.requireNonNull(percentile));
             return this;
         }
-
         public Builder reservedInstance(Output<Either<String,ReservedInstance>> reservedInstance) {
             this.reservedInstance = Objects.requireNonNull(reservedInstance);
             return this;
         }
-
         public Builder reservedInstance(Either<String,ReservedInstance> reservedInstance) {
             this.reservedInstance = Output.of(Objects.requireNonNull(reservedInstance));
             return this;
         }
-
         public Builder scalingFactor(Output<Double> scalingFactor) {
             this.scalingFactor = Objects.requireNonNull(scalingFactor);
             return this;
         }
-
         public Builder scalingFactor(Double scalingFactor) {
             this.scalingFactor = Output.of(Objects.requireNonNull(scalingFactor));
             return this;
         }
-
         public Builder sizingCriterion(Output<Either<String,AssessmentSizingCriterion>> sizingCriterion) {
             this.sizingCriterion = Objects.requireNonNull(sizingCriterion);
             return this;
         }
-
         public Builder sizingCriterion(Either<String,AssessmentSizingCriterion> sizingCriterion) {
             this.sizingCriterion = Output.of(Objects.requireNonNull(sizingCriterion));
             return this;
         }
-
         public Builder stage(Output<Either<String,AssessmentStage>> stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder stage(Either<String,AssessmentStage> stage) {
             this.stage = Output.of(Objects.requireNonNull(stage));
             return this;
         }
-
         public Builder timeRange(Output<Either<String,TimeRange>> timeRange) {
             this.timeRange = Objects.requireNonNull(timeRange);
             return this;
         }
-
         public Builder timeRange(Either<String,TimeRange> timeRange) {
             this.timeRange = Output.of(Objects.requireNonNull(timeRange));
             return this;
         }
-
         public Builder vmUptime(Output<VmUptimeArgs> vmUptime) {
             this.vmUptime = Objects.requireNonNull(vmUptime);
             return this;
         }
-
         public Builder vmUptime(VmUptimeArgs vmUptime) {
             this.vmUptime = Output.of(Objects.requireNonNull(vmUptime));
             return this;
-        }
-        public AssessmentPropertiesArgs build() {
+        }        public AssessmentPropertiesArgs build() {
             return new AssessmentPropertiesArgs(azureDiskType, azureHybridUseBenefit, azureLocation, azureOfferCode, azurePricingTier, azureStorageRedundancy, azureVmFamilies, currency, discountPercentage, percentile, reservedInstance, scalingFactor, sizingCriterion, stage, timeRange, vmUptime);
         }
     }

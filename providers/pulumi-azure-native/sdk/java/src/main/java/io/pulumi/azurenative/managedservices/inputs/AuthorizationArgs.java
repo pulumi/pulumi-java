@@ -111,42 +111,37 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
             this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
             return this;
         }
-
         public Builder delegatedRoleDefinitionIds(@Nullable List<String> delegatedRoleDefinitionIds) {
             this.delegatedRoleDefinitionIds = Output.ofNullable(delegatedRoleDefinitionIds);
             return this;
         }
-
+        public Builder delegatedRoleDefinitionIds(String... delegatedRoleDefinitionIds) {
+            return delegatedRoleDefinitionIds(List.of(delegatedRoleDefinitionIds));
+        }
         public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public Builder principalIdDisplayName(@Nullable Output<String> principalIdDisplayName) {
             this.principalIdDisplayName = principalIdDisplayName;
             return this;
         }
-
         public Builder principalIdDisplayName(@Nullable String principalIdDisplayName) {
             this.principalIdDisplayName = Output.ofNullable(principalIdDisplayName);
             return this;
         }
-
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
             return this;
-        }
-        public AuthorizationArgs build() {
+        }        public AuthorizationArgs build() {
             return new AuthorizationArgs(delegatedRoleDefinitionIds, principalId, principalIdDisplayName, roleDefinitionId);
         }
     }

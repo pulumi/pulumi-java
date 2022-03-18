@@ -127,52 +127,42 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
-
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = Output.ofNullable(sha256Checksum);
             return this;
         }
-
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
-
         public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = Output.ofNullable(sourceUri);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ImageTemplateFileCustomizerArgs build() {
+        }        public ImageTemplateFileCustomizerArgs build() {
             return new ImageTemplateFileCustomizerArgs(destination, name, sha256Checksum, sourceUri, type);
         }
     }

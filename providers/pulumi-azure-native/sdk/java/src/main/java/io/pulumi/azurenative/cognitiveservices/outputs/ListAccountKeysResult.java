@@ -71,12 +71,10 @@ public final class ListAccountKeysResult {
             this.key1 = key1;
             return this;
         }
-
         public Builder key2(@Nullable String key2) {
             this.key2 = key2;
             return this;
-        }
-        public ListAccountKeysResult build() {
+        }        public ListAccountKeysResult build() {
             return new ListAccountKeysResult(key1, key2);
         }
     }

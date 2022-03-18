@@ -61,12 +61,10 @@ public final class ExpressRouteCircuitPeeringIdArgs extends io.pulumi.resources.
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public ExpressRouteCircuitPeeringIdArgs build() {
+        }        public ExpressRouteCircuitPeeringIdArgs build() {
             return new ExpressRouteCircuitPeeringIdArgs(id);
         }
     }

@@ -271,142 +271,114 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalData = additionalData;
             return this;
         }
-
         public Builder additionalData(@Nullable AssignmentPropertiesAdditionalDataArgs additionalData) {
             this.additionalData = Output.ofNullable(additionalData);
             return this;
         }
-
         public Builder assignedComponent(@Nullable Output<AssignedComponentItemArgs> assignedComponent) {
             this.assignedComponent = assignedComponent;
             return this;
         }
-
         public Builder assignedComponent(@Nullable AssignedComponentItemArgs assignedComponent) {
             this.assignedComponent = Output.ofNullable(assignedComponent);
             return this;
         }
-
         public Builder assignedStandard(@Nullable Output<AssignedStandardItemArgs> assignedStandard) {
             this.assignedStandard = assignedStandard;
             return this;
         }
-
         public Builder assignedStandard(@Nullable AssignedStandardItemArgs assignedStandard) {
             this.assignedStandard = Output.ofNullable(assignedStandard);
             return this;
         }
-
         public Builder assignmentId(@Nullable Output<String> assignmentId) {
             this.assignmentId = assignmentId;
             return this;
         }
-
         public Builder assignmentId(@Nullable String assignmentId) {
             this.assignmentId = Output.ofNullable(assignmentId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder effect(@Nullable Output<String> effect) {
             this.effect = effect;
             return this;
         }
-
         public Builder effect(@Nullable String effect) {
             this.effect = Output.ofNullable(effect);
             return this;
         }
-
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
-
         public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = Output.ofNullable(expiresOn);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AssignmentArgs build() {
+        }        public AssignmentArgs build() {
             return new AssignmentArgs(additionalData, assignedComponent, assignedStandard, assignmentId, description, displayName, effect, expiresOn, kind, location, metadata, resourceGroupName, scope, tags);
         }
     }

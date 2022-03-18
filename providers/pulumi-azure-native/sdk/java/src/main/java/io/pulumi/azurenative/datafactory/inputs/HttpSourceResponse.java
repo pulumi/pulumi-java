@@ -144,32 +144,26 @@ public final class HttpSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
             this.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public HttpSourceResponse build() {
+        }        public HttpSourceResponse build() {
             return new HttpSourceResponse(disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, type);
         }
     }

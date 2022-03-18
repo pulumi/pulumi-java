@@ -209,52 +209,45 @@ public final class AmazonS3CompatibleLinkedServiceResponse {
             this.accessKeyId = accessKeyId;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder forcePathStyle(@Nullable Object forcePathStyle) {
             this.forcePathStyle = forcePathStyle;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder secretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey) {
             this.secretAccessKey = secretAccessKey;
             return this;
         }
-
         public Builder serviceUrl(@Nullable Object serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AmazonS3CompatibleLinkedServiceResponse build() {
+        }        public AmazonS3CompatibleLinkedServiceResponse build() {
             return new AmazonS3CompatibleLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, forcePathStyle, parameters, secretAccessKey, serviceUrl, type);
         }
     }

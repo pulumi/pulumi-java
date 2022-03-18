@@ -186,92 +186,74 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder identity(@Nullable Output<ObjectAnchorsAccountIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ObjectAnchorsAccountIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(@Nullable Output<SkuArgs> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable SkuArgs kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder plan(@Nullable Output<IdentityArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable IdentityArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ObjectAnchorsAccountArgs build() {
+        }        public ObjectAnchorsAccountArgs build() {
             return new ObjectAnchorsAccountArgs(accountName, identity, kind, location, plan, resourceGroupName, sku, storageAccountName, tags);
         }
     }

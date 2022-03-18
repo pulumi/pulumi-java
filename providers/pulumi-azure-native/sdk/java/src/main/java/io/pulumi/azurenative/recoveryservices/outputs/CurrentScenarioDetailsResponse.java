@@ -87,17 +87,14 @@ public final class CurrentScenarioDetailsResponse {
             this.jobId = jobId;
             return this;
         }
-
         public Builder scenarioName(@Nullable String scenarioName) {
             this.scenarioName = scenarioName;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public CurrentScenarioDetailsResponse build() {
+        }        public CurrentScenarioDetailsResponse build() {
             return new CurrentScenarioDetailsResponse(jobId, scenarioName, startTime);
         }
     }

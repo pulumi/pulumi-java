@@ -171,42 +171,37 @@ public final class GetAvailabilityGroupListenerResult {
             this.availabilityGroupName = availabilityGroupName;
             return this;
         }
-
         public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
             this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
-
+        public Builder loadBalancerConfigurations(LoadBalancerConfigurationResponse... loadBalancerConfigurations) {
+            return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAvailabilityGroupListenerResult build() {
+        }        public GetAvailabilityGroupListenerResult build() {
             return new GetAvailabilityGroupListenerResult(availabilityGroupName, createDefaultAvailabilityGroupIfNotExist, id, loadBalancerConfigurations, name, port, provisioningState, type);
         }
     }

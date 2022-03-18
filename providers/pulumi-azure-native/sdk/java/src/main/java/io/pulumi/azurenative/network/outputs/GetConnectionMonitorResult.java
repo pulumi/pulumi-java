@@ -353,97 +353,90 @@ public final class GetConnectionMonitorResult {
             this.autoStart = autoStart;
             return this;
         }
-
         public Builder connectionMonitorType(String connectionMonitorType) {
             this.connectionMonitorType = Objects.requireNonNull(connectionMonitorType);
             return this;
         }
-
         public Builder destination(@Nullable ConnectionMonitorDestinationResponse destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder endpoints(@Nullable List<ConnectionMonitorEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(ConnectionMonitorEndpointResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder monitoringIntervalInSeconds(@Nullable Integer monitoringIntervalInSeconds) {
             this.monitoringIntervalInSeconds = monitoringIntervalInSeconds;
             return this;
         }
-
         public Builder monitoringStatus(String monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder outputs(@Nullable List<ConnectionMonitorOutputResponse> outputs) {
             this.outputs = outputs;
             return this;
         }
-
+        public Builder outputs(ConnectionMonitorOutputResponse... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder source(@Nullable ConnectionMonitorSourceResponse source) {
             this.source = source;
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder testConfigurations(@Nullable List<ConnectionMonitorTestConfigurationResponse> testConfigurations) {
             this.testConfigurations = testConfigurations;
             return this;
         }
-
+        public Builder testConfigurations(ConnectionMonitorTestConfigurationResponse... testConfigurations) {
+            return testConfigurations(List.of(testConfigurations));
+        }
         public Builder testGroups(@Nullable List<ConnectionMonitorTestGroupResponse> testGroups) {
             this.testGroups = testGroups;
             return this;
         }
-
+        public Builder testGroups(ConnectionMonitorTestGroupResponse... testGroups) {
+            return testGroups(List.of(testGroups));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetConnectionMonitorResult build() {
+        }        public GetConnectionMonitorResult build() {
             return new GetConnectionMonitorResult(autoStart, connectionMonitorType, destination, endpoints, etag, id, location, monitoringIntervalInSeconds, monitoringStatus, name, notes, outputs, provisioningState, source, startTime, tags, testConfigurations, testGroups, type);
         }
     }

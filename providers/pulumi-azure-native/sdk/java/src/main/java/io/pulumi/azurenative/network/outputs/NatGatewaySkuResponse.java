@@ -53,8 +53,7 @@ public final class NatGatewaySkuResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public NatGatewaySkuResponse build() {
+        }        public NatGatewaySkuResponse build() {
             return new NatGatewaySkuResponse(name);
         }
     }

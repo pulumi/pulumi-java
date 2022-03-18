@@ -97,32 +97,26 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
-
         public Builder capacity(Integer capacity) {
             this.capacity = Output.of(Objects.requireNonNull(capacity));
             return this;
         }
-
         public Builder family(Output<Either<String,SkuFamily>> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder family(Either<String,SkuFamily> family) {
             this.family = Output.of(Objects.requireNonNull(family));
             return this;
         }
-
         public Builder name(Output<Either<String,SkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(Either<String,SkuName> name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public SkuArgs build() {
+        }        public SkuArgs build() {
             return new SkuArgs(capacity, family, name);
         }
     }

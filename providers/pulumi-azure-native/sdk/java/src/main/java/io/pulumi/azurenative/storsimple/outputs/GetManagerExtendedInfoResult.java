@@ -215,57 +215,46 @@ public final class GetManagerExtendedInfoResult {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = encryptionKeyThumbprint;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder integrityKey(String integrityKey) {
             this.integrityKey = Objects.requireNonNull(integrityKey);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder portalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
             this.portalCertificateThumbprint = portalCertificateThumbprint;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetManagerExtendedInfoResult build() {
+        }        public GetManagerExtendedInfoResult build() {
             return new GetManagerExtendedInfoResult(algorithm, encryptionKey, encryptionKeyThumbprint, etag, id, integrityKey, kind, name, portalCertificateThumbprint, type, version);
         }
     }

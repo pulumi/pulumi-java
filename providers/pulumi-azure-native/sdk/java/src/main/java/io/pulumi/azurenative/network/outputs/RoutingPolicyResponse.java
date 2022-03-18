@@ -86,17 +86,17 @@ public final class RoutingPolicyResponse {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
-
+        public Builder destinations(String... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
-        }
-        public RoutingPolicyResponse build() {
+        }        public RoutingPolicyResponse build() {
             return new RoutingPolicyResponse(destinations, name, nextHop);
         }
     }

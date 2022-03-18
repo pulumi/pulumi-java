@@ -78,17 +78,14 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
             this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
             return this;
         }
-
         public Builder crossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
             this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
             return this;
         }
-
         public Builder validationRequired(@Nullable Boolean validationRequired) {
             this.validationRequired = validationRequired;
             return this;
-        }
-        public ResourceTypeRegistrationPropertiesResponseResourceMovePolicy build() {
+        }        public ResourceTypeRegistrationPropertiesResponseResourceMovePolicy build() {
             return new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(crossResourceGroupMoveEnabled, crossSubscriptionMoveEnabled, validationRequired);
         }
     }

@@ -357,97 +357,102 @@ public final class GetRecordSetResult {
             this.aRecords = aRecords;
             return this;
         }
-
+        public Builder aRecords(ARecordResponse... aRecords) {
+            return aRecords(List.of(aRecords));
+        }
         public Builder aaaaRecords(@Nullable List<AaaaRecordResponse> aaaaRecords) {
             this.aaaaRecords = aaaaRecords;
             return this;
         }
-
+        public Builder aaaaRecords(AaaaRecordResponse... aaaaRecords) {
+            return aaaaRecords(List.of(aaaaRecords));
+        }
         public Builder caaRecords(@Nullable List<CaaRecordResponse> caaRecords) {
             this.caaRecords = caaRecords;
             return this;
         }
-
+        public Builder caaRecords(CaaRecordResponse... caaRecords) {
+            return caaRecords(List.of(caaRecords));
+        }
         public Builder cnameRecord(@Nullable CnameRecordResponse cnameRecord) {
             this.cnameRecord = cnameRecord;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder mxRecords(@Nullable List<MxRecordResponse> mxRecords) {
             this.mxRecords = mxRecords;
             return this;
         }
-
+        public Builder mxRecords(MxRecordResponse... mxRecords) {
+            return mxRecords(List.of(mxRecords));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nsRecords(@Nullable List<NsRecordResponse> nsRecords) {
             this.nsRecords = nsRecords;
             return this;
         }
-
+        public Builder nsRecords(NsRecordResponse... nsRecords) {
+            return nsRecords(List.of(nsRecords));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder ptrRecords(@Nullable List<PtrRecordResponse> ptrRecords) {
             this.ptrRecords = ptrRecords;
             return this;
         }
-
+        public Builder ptrRecords(PtrRecordResponse... ptrRecords) {
+            return ptrRecords(List.of(ptrRecords));
+        }
         public Builder soaRecord(@Nullable SoaRecordResponse soaRecord) {
             this.soaRecord = soaRecord;
             return this;
         }
-
         public Builder srvRecords(@Nullable List<SrvRecordResponse> srvRecords) {
             this.srvRecords = srvRecords;
             return this;
         }
-
+        public Builder srvRecords(SrvRecordResponse... srvRecords) {
+            return srvRecords(List.of(srvRecords));
+        }
         public Builder targetResource(@Nullable SubResourceResponse targetResource) {
             this.targetResource = targetResource;
             return this;
         }
-
         public Builder ttl(@Nullable Double ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder txtRecords(@Nullable List<TxtRecordResponse> txtRecords) {
             this.txtRecords = txtRecords;
             return this;
         }
-
+        public Builder txtRecords(TxtRecordResponse... txtRecords) {
+            return txtRecords(List.of(txtRecords));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRecordSetResult build() {
+        }        public GetRecordSetResult build() {
             return new GetRecordSetResult(aRecords, aaaaRecords, caaRecords, cnameRecord, etag, fqdn, id, metadata, mxRecords, name, nsRecords, provisioningState, ptrRecords, soaRecord, srvRecords, targetResource, ttl, txtRecords, type);
         }
     }

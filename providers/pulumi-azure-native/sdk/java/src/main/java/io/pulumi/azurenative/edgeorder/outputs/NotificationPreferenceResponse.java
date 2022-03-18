@@ -70,12 +70,10 @@ public final class NotificationPreferenceResponse {
             this.sendNotification = Objects.requireNonNull(sendNotification);
             return this;
         }
-
         public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
-        }
-        public NotificationPreferenceResponse build() {
+        }        public NotificationPreferenceResponse build() {
             return new NotificationPreferenceResponse(sendNotification, stageName);
         }
     }

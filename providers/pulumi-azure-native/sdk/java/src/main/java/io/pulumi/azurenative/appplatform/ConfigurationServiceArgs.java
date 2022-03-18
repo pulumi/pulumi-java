@@ -107,42 +107,34 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
             this.configurationServiceName = configurationServiceName;
             return this;
         }
-
         public Builder configurationServiceName(@Nullable String configurationServiceName) {
             this.configurationServiceName = Output.ofNullable(configurationServiceName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ConfigurationServicePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ConfigurationServicePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public ConfigurationServiceArgs build() {
+        }        public ConfigurationServiceArgs build() {
             return new ConfigurationServiceArgs(configurationServiceName, properties, resourceGroupName, serviceName);
         }
     }

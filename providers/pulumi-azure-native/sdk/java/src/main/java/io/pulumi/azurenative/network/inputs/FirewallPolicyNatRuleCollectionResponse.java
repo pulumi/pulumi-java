@@ -134,27 +134,25 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
             this.action = action;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder ruleCollectionType(String ruleCollectionType) {
             this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType);
             return this;
         }
-
         public Builder rules(@Nullable List<Object> rules) {
             this.rules = rules;
             return this;
         }
-        public FirewallPolicyNatRuleCollectionResponse build() {
+        public Builder rules(Object... rules) {
+            return rules(List.of(rules));
+        }        public FirewallPolicyNatRuleCollectionResponse build() {
             return new FirewallPolicyNatRuleCollectionResponse(action, name, priority, ruleCollectionType, rules);
         }
     }

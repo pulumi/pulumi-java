@@ -60,8 +60,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public PrivateEndpointResponse build() {
+        }        public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(id);
         }
     }

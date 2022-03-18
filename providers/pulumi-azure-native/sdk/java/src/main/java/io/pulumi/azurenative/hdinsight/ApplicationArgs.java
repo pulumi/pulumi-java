@@ -124,52 +124,42 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder properties(@Nullable Output<ApplicationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ApplicationPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationName, clusterName, properties, resourceGroupName, tags);
         }
     }

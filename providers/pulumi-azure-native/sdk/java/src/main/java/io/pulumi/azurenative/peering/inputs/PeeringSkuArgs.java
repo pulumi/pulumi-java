@@ -114,42 +114,34 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.family = family;
             return this;
         }
-
         public Builder family(@Nullable Either<String,Family> family) {
             this.family = Output.ofNullable(family);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder size(@Nullable Output<Either<String,Size>> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Either<String,Size> size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,Tier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,Tier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public PeeringSkuArgs build() {
+        }        public PeeringSkuArgs build() {
             return new PeeringSkuArgs(family, name, size, tier);
         }
     }

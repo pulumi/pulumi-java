@@ -144,62 +144,50 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
-
         public Builder createdByType(@Nullable Output<Either<String,IdentityType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder createdByType(@Nullable Either<String,IdentityType> createdByType) {
             this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Output<Either<String,IdentityType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Either<String,IdentityType> lastModifiedByType) {
             this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
-        }
-        public SystemDataArgs build() {
+        }        public SystemDataArgs build() {
             return new SystemDataArgs(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }
     }

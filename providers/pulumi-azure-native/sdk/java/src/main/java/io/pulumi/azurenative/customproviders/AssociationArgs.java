@@ -90,32 +90,26 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             this.associationName = associationName;
             return this;
         }
-
         public Builder associationName(@Nullable String associationName) {
             this.associationName = Output.ofNullable(associationName);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
-
         public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = Output.ofNullable(targetResourceId);
             return this;
-        }
-        public AssociationArgs build() {
+        }        public AssociationArgs build() {
             return new AssociationArgs(associationName, scope, targetResourceId);
         }
     }

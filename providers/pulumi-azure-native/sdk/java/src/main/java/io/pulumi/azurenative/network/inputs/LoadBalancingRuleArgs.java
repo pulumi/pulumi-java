@@ -260,132 +260,106 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
             this.backendAddressPool = backendAddressPool;
             return this;
         }
-
         public Builder backendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
             this.backendAddressPool = Output.ofNullable(backendAddressPool);
             return this;
         }
-
         public Builder backendPort(@Nullable Output<Integer> backendPort) {
             this.backendPort = backendPort;
             return this;
         }
-
         public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = Output.ofNullable(backendPort);
             return this;
         }
-
         public Builder disableOutboundSnat(@Nullable Output<Boolean> disableOutboundSnat) {
             this.disableOutboundSnat = disableOutboundSnat;
             return this;
         }
-
         public Builder disableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
             this.disableOutboundSnat = Output.ofNullable(disableOutboundSnat);
             return this;
         }
-
         public Builder enableFloatingIP(@Nullable Output<Boolean> enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
-
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = Output.ofNullable(enableFloatingIP);
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = Output.ofNullable(enableTcpReset);
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
             this.frontendIPConfiguration = Output.ofNullable(frontendIPConfiguration);
             return this;
         }
-
         public Builder frontendPort(Output<Integer> frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
-
         public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Output.of(Objects.requireNonNull(frontendPort));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
-
         public Builder loadDistribution(@Nullable Output<Either<String,LoadDistribution>> loadDistribution) {
             this.loadDistribution = loadDistribution;
             return this;
         }
-
         public Builder loadDistribution(@Nullable Either<String,LoadDistribution> loadDistribution) {
             this.loadDistribution = Output.ofNullable(loadDistribution);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder probe(@Nullable Output<SubResourceArgs> probe) {
             this.probe = probe;
             return this;
         }
-
         public Builder probe(@Nullable SubResourceArgs probe) {
             this.probe = Output.ofNullable(probe);
             return this;
         }
-
         public Builder protocol(Output<Either<String,TransportProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,TransportProtocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public LoadBalancingRuleArgs build() {
+        }        public LoadBalancingRuleArgs build() {
             return new LoadBalancingRuleArgs(backendAddressPool, backendPort, disableOutboundSnat, enableFloatingIP, enableTcpReset, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, loadDistribution, name, probe, protocol);
         }
     }

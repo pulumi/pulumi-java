@@ -97,32 +97,26 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
             this.additionalCopyOptions = additionalCopyOptions;
             return this;
         }
-
         public Builder additionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
             this.additionalCopyOptions = Output.ofNullable(additionalCopyOptions);
             return this;
         }
-
         public Builder additionalFormatOptions(@Nullable Output<Map<String,Object>> additionalFormatOptions) {
             this.additionalFormatOptions = additionalFormatOptions;
             return this;
         }
-
         public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
             this.additionalFormatOptions = Output.ofNullable(additionalFormatOptions);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SnowflakeImportCopyCommandArgs build() {
+        }        public SnowflakeImportCopyCommandArgs build() {
             return new SnowflakeImportCopyCommandArgs(additionalCopyOptions, additionalFormatOptions, type);
         }
     }

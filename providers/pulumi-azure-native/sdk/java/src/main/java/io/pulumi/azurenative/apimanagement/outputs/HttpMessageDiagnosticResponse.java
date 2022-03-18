@@ -90,17 +90,17 @@ public final class HttpMessageDiagnosticResponse {
             this.body = body;
             return this;
         }
-
         public Builder dataMasking(@Nullable DataMaskingResponse dataMasking) {
             this.dataMasking = dataMasking;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
-        public HttpMessageDiagnosticResponse build() {
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }        public HttpMessageDiagnosticResponse build() {
             return new HttpMessageDiagnosticResponse(body, dataMasking, headers);
         }
     }

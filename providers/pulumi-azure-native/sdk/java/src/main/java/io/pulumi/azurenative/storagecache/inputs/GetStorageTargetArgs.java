@@ -88,17 +88,14 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
             this.cacheName = Objects.requireNonNull(cacheName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder storageTargetName(String storageTargetName) {
             this.storageTargetName = Objects.requireNonNull(storageTargetName);
             return this;
-        }
-        public GetStorageTargetArgs build() {
+        }        public GetStorageTargetArgs build() {
             return new GetStorageTargetArgs(cacheName, resourceGroupName, storageTargetName);
         }
     }

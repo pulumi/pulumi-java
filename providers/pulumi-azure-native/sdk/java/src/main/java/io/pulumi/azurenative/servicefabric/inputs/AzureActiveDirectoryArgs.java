@@ -94,32 +94,26 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
             this.clientApplication = clientApplication;
             return this;
         }
-
         public Builder clientApplication(@Nullable String clientApplication) {
             this.clientApplication = Output.ofNullable(clientApplication);
             return this;
         }
-
         public Builder clusterApplication(@Nullable Output<String> clusterApplication) {
             this.clusterApplication = clusterApplication;
             return this;
         }
-
         public Builder clusterApplication(@Nullable String clusterApplication) {
             this.clusterApplication = Output.ofNullable(clusterApplication);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public AzureActiveDirectoryArgs build() {
+        }        public AzureActiveDirectoryArgs build() {
             return new AzureActiveDirectoryArgs(clientApplication, clusterApplication, tenantId);
         }
     }

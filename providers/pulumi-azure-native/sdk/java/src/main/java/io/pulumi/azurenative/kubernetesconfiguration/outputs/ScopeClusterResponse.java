@@ -53,8 +53,7 @@ public final class ScopeClusterResponse {
         public Builder releaseNamespace(@Nullable String releaseNamespace) {
             this.releaseNamespace = releaseNamespace;
             return this;
-        }
-        public ScopeClusterResponse build() {
+        }        public ScopeClusterResponse build() {
             return new ScopeClusterResponse(releaseNamespace);
         }
     }

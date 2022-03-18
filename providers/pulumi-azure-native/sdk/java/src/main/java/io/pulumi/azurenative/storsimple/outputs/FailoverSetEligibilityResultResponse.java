@@ -72,12 +72,10 @@ public final class FailoverSetEligibilityResultResponse {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder isEligibleForFailover(@Nullable Boolean isEligibleForFailover) {
             this.isEligibleForFailover = isEligibleForFailover;
             return this;
-        }
-        public FailoverSetEligibilityResultResponse build() {
+        }        public FailoverSetEligibilityResultResponse build() {
             return new FailoverSetEligibilityResultResponse(errorMessage, isEligibleForFailover);
         }
     }

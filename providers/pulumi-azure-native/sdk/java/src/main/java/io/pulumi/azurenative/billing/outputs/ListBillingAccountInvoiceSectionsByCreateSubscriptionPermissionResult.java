@@ -72,12 +72,13 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(@Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value) {
             this.value = value;
             return this;
         }
-        public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult build() {
+        public Builder value(InvoiceSectionWithCreateSubPermissionResponse... value) {
+            return value(List.of(value));
+        }        public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult build() {
             return new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult(nextLink, value);
         }
     }

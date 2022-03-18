@@ -120,27 +120,22 @@ public final class VirtualDiskResponse {
             this.controllerId = Objects.requireNonNull(controllerId);
             return this;
         }
-
         public Builder independenceMode(String independenceMode) {
             this.independenceMode = Objects.requireNonNull(independenceMode);
             return this;
         }
-
         public Builder totalSize(Integer totalSize) {
             this.totalSize = Objects.requireNonNull(totalSize);
             return this;
         }
-
         public Builder virtualDiskId(@Nullable String virtualDiskId) {
             this.virtualDiskId = virtualDiskId;
             return this;
         }
-
         public Builder virtualDiskName(String virtualDiskName) {
             this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
             return this;
-        }
-        public VirtualDiskResponse build() {
+        }        public VirtualDiskResponse build() {
             return new VirtualDiskResponse(controllerId, independenceMode, totalSize, virtualDiskId, virtualDiskName);
         }
     }

@@ -115,42 +115,37 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
             this.allowedValues = allowedValues;
             return this;
         }
-
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
             this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
-
+        public Builder allowedValues(Object... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ParameterDefinitionsValueMetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ParameterType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ParameterDefinitionsValueArgs build() {
+        }        public ParameterDefinitionsValueArgs build() {
             return new ParameterDefinitionsValueArgs(allowedValues, defaultValue, metadata, type);
         }
     }

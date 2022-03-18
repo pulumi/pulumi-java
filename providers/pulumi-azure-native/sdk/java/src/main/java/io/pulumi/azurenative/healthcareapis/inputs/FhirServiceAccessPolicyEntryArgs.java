@@ -60,12 +60,10 @@ public final class FhirServiceAccessPolicyEntryArgs extends io.pulumi.resources.
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
-        }
-        public FhirServiceAccessPolicyEntryArgs build() {
+        }        public FhirServiceAccessPolicyEntryArgs build() {
             return new FhirServiceAccessPolicyEntryArgs(objectId);
         }
     }

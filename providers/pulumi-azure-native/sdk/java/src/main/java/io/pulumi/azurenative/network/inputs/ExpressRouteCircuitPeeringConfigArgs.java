@@ -128,52 +128,48 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
             this.advertisedCommunities = advertisedCommunities;
             return this;
         }
-
         public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
             this.advertisedCommunities = Output.ofNullable(advertisedCommunities);
             return this;
         }
-
+        public Builder advertisedCommunities(String... advertisedCommunities) {
+            return advertisedCommunities(List.of(advertisedCommunities));
+        }
         public Builder advertisedPublicPrefixes(@Nullable Output<List<String>> advertisedPublicPrefixes) {
             this.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
-
         public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
             this.advertisedPublicPrefixes = Output.ofNullable(advertisedPublicPrefixes);
             return this;
         }
-
+        public Builder advertisedPublicPrefixes(String... advertisedPublicPrefixes) {
+            return advertisedPublicPrefixes(List.of(advertisedPublicPrefixes));
+        }
         public Builder customerASN(@Nullable Output<Integer> customerASN) {
             this.customerASN = customerASN;
             return this;
         }
-
         public Builder customerASN(@Nullable Integer customerASN) {
             this.customerASN = Output.ofNullable(customerASN);
             return this;
         }
-
         public Builder legacyMode(@Nullable Output<Integer> legacyMode) {
             this.legacyMode = legacyMode;
             return this;
         }
-
         public Builder legacyMode(@Nullable Integer legacyMode) {
             this.legacyMode = Output.ofNullable(legacyMode);
             return this;
         }
-
         public Builder routingRegistryName(@Nullable Output<String> routingRegistryName) {
             this.routingRegistryName = routingRegistryName;
             return this;
         }
-
         public Builder routingRegistryName(@Nullable String routingRegistryName) {
             this.routingRegistryName = Output.ofNullable(routingRegistryName);
             return this;
-        }
-        public ExpressRouteCircuitPeeringConfigArgs build() {
+        }        public ExpressRouteCircuitPeeringConfigArgs build() {
             return new ExpressRouteCircuitPeeringConfigArgs(advertisedCommunities, advertisedPublicPrefixes, customerASN, legacyMode, routingRegistryName);
         }
     }

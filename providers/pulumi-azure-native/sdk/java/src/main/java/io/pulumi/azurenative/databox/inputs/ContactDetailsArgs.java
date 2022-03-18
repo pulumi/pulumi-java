@@ -144,62 +144,56 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.contactName = Objects.requireNonNull(contactName);
             return this;
         }
-
         public Builder contactName(String contactName) {
             this.contactName = Output.of(Objects.requireNonNull(contactName));
             return this;
         }
-
         public Builder emailList(Output<List<String>> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
-
         public Builder emailList(List<String> emailList) {
             this.emailList = Output.of(Objects.requireNonNull(emailList));
             return this;
         }
-
+        public Builder emailList(String... emailList) {
+            return emailList(List.of(emailList));
+        }
         public Builder mobile(@Nullable Output<String> mobile) {
             this.mobile = mobile;
             return this;
         }
-
         public Builder mobile(@Nullable String mobile) {
             this.mobile = Output.ofNullable(mobile);
             return this;
         }
-
         public Builder notificationPreference(@Nullable Output<List<NotificationPreferenceArgs>> notificationPreference) {
             this.notificationPreference = notificationPreference;
             return this;
         }
-
         public Builder notificationPreference(@Nullable List<NotificationPreferenceArgs> notificationPreference) {
             this.notificationPreference = Output.ofNullable(notificationPreference);
             return this;
         }
-
+        public Builder notificationPreference(NotificationPreferenceArgs... notificationPreference) {
+            return notificationPreference(List.of(notificationPreference));
+        }
         public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
         }
-
         public Builder phoneExtension(@Nullable Output<String> phoneExtension) {
             this.phoneExtension = phoneExtension;
             return this;
         }
-
         public Builder phoneExtension(@Nullable String phoneExtension) {
             this.phoneExtension = Output.ofNullable(phoneExtension);
             return this;
-        }
-        public ContactDetailsArgs build() {
+        }        public ContactDetailsArgs build() {
             return new ContactDetailsArgs(contactName, emailList, mobile, notificationPreference, phone, phoneExtension);
         }
     }

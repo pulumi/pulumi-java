@@ -53,8 +53,7 @@ public final class ApiPortalCustomDomainPropertiesResponse {
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public ApiPortalCustomDomainPropertiesResponse build() {
+        }        public ApiPortalCustomDomainPropertiesResponse build() {
             return new ApiPortalCustomDomainPropertiesResponse(thumbprint);
         }
     }

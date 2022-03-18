@@ -96,17 +96,14 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public MHSMPrivateEndpointConnectionItemResponse build() {
+        }        public MHSMPrivateEndpointConnectionItemResponse build() {
             return new MHSMPrivateEndpointConnectionItemResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }
     }

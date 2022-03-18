@@ -94,17 +94,14 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
             this.allowPublicIp = allowPublicIp;
             return this;
         }
-
         public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public SubnetResponse build() {
+        }        public SubnetResponse build() {
             return new SubnetResponse(allowPublicIp, labSubnetName, resourceId);
         }
     }

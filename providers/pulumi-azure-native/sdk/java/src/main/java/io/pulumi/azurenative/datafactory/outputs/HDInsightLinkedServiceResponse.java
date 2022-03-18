@@ -258,67 +258,57 @@ public final class HDInsightLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder clusterUri(Object clusterUri) {
             this.clusterUri = Objects.requireNonNull(clusterUri);
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder fileSystem(@Nullable Object fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName) {
             this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
-
         public Builder isEspEnabled(@Nullable Object isEspEnabled) {
             this.isEspEnabled = isEspEnabled;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = userName;
             return this;
-        }
-        public HDInsightLinkedServiceResponse build() {
+        }        public HDInsightLinkedServiceResponse build() {
             return new HDInsightLinkedServiceResponse(annotations, clusterUri, connectVia, description, encryptedCredential, fileSystem, hcatalogLinkedServiceName, isEspEnabled, linkedServiceName, parameters, password, type, userName);
         }
     }

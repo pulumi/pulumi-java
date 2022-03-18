@@ -387,107 +387,95 @@ public final class GetApplicationDefinitionResult {
             this.artifacts = artifacts;
             return this;
         }
-
+        public Builder artifacts(ApplicationDefinitionArtifactResponse... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder authorizations(@Nullable List<ApplicationAuthorizationResponse> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
-
+        public Builder authorizations(ApplicationAuthorizationResponse... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder createUiDefinition(@Nullable Object createUiDefinition) {
             this.createUiDefinition = createUiDefinition;
             return this;
         }
-
         public Builder deploymentPolicy(@Nullable ApplicationDeploymentPolicyResponse deploymentPolicy) {
             this.deploymentPolicy = deploymentPolicy;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder lockLevel(String lockLevel) {
             this.lockLevel = Objects.requireNonNull(lockLevel);
             return this;
         }
-
         public Builder lockingPolicy(@Nullable ApplicationPackageLockingPolicyDefinitionResponse lockingPolicy) {
             this.lockingPolicy = lockingPolicy;
             return this;
         }
-
         public Builder mainTemplate(@Nullable Object mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managementPolicy(@Nullable ApplicationManagementPolicyResponse managementPolicy) {
             this.managementPolicy = managementPolicy;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationPolicy(@Nullable ApplicationNotificationPolicyResponse notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
-
         public Builder packageFileUri(@Nullable String packageFileUri) {
             this.packageFileUri = packageFileUri;
             return this;
         }
-
         public Builder policies(@Nullable List<ApplicationPolicyResponse> policies) {
             this.policies = policies;
             return this;
         }
-
+        public Builder policies(ApplicationPolicyResponse... policies) {
+            return policies(List.of(policies));
+        }
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApplicationDefinitionResult build() {
+        }        public GetApplicationDefinitionResult build() {
             return new GetApplicationDefinitionResult(artifacts, authorizations, createUiDefinition, deploymentPolicy, description, displayName, id, isEnabled, location, lockLevel, lockingPolicy, mainTemplate, managedBy, managementPolicy, name, notificationPolicy, packageFileUri, policies, sku, tags, type);
         }
     }

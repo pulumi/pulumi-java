@@ -120,27 +120,22 @@ public final class GetReplicationProtectionContainerMappingArgs extends io.pulum
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder mappingName(String mappingName) {
             this.mappingName = Objects.requireNonNull(mappingName);
             return this;
         }
-
         public Builder protectionContainerName(String protectionContainerName) {
             this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetReplicationProtectionContainerMappingArgs build() {
+        }        public GetReplicationProtectionContainerMappingArgs build() {
             return new GetReplicationProtectionContainerMappingArgs(fabricName, mappingName, protectionContainerName, resourceGroupName, resourceName);
         }
     }

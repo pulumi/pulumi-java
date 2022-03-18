@@ -51,8 +51,7 @@ public final class DateAfterCreationResponse {
         public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
             this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
             return this;
-        }
-        public DateAfterCreationResponse build() {
+        }        public DateAfterCreationResponse build() {
             return new DateAfterCreationResponse(daysAfterCreationGreaterThan);
         }
     }

@@ -105,22 +105,18 @@ public final class SelectVideoTrackByAttributeResponse {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filterValue(@Nullable String filterValue) {
             this.filterValue = filterValue;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public SelectVideoTrackByAttributeResponse build() {
+        }        public SelectVideoTrackByAttributeResponse build() {
             return new SelectVideoTrackByAttributeResponse(attribute, filter, filterValue, odataType);
         }
     }

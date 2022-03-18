@@ -72,12 +72,10 @@ public final class GetRegistryCredentialsArgs extends io.pulumi.resources.Invoke
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRegistryCredentialsArgs build() {
+        }        public GetRegistryCredentialsArgs build() {
             return new GetRegistryCredentialsArgs(registryName, resourceGroupName);
         }
     }

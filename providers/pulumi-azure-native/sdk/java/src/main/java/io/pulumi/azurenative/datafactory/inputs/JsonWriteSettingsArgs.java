@@ -80,22 +80,18 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             this.filePattern = filePattern;
             return this;
         }
-
         public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = Output.ofNullable(filePattern);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public JsonWriteSettingsArgs build() {
+        }        public JsonWriteSettingsArgs build() {
             return new JsonWriteSettingsArgs(filePattern, type);
         }
     }

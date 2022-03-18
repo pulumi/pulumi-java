@@ -119,27 +119,22 @@ public final class EnterpriseChannelNodeResponse {
             this.azureLocation = Objects.requireNonNull(azureLocation);
             return this;
         }
-
         public Builder azureSku(String azureSku) {
             this.azureSku = Objects.requireNonNull(azureSku);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public EnterpriseChannelNodeResponse build() {
+        }        public EnterpriseChannelNodeResponse build() {
             return new EnterpriseChannelNodeResponse(azureLocation, azureSku, id, name, state);
         }
     }

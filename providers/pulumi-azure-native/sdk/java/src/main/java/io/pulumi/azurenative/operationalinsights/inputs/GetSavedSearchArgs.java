@@ -88,17 +88,14 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder savedSearchId(String savedSearchId) {
             this.savedSearchId = Objects.requireNonNull(savedSearchId);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetSavedSearchArgs build() {
+        }        public GetSavedSearchArgs build() {
             return new GetSavedSearchArgs(resourceGroupName, savedSearchId, workspaceName);
         }
     }

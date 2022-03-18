@@ -117,42 +117,34 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.caching = caching;
             return this;
         }
-
         public Builder caching(@Nullable CachingType caching) {
             this.caching = Output.ofNullable(caching);
             return this;
         }
-
         public Builder diskSizeGB(Output<Integer> diskSizeGB) {
             this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
             return this;
         }
-
         public Builder diskSizeGB(Integer diskSizeGB) {
             this.diskSizeGB = Output.of(Objects.requireNonNull(diskSizeGB));
             return this;
         }
-
         public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<StorageAccountType> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable StorageAccountType storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
-        }
-        public DataDiskArgs build() {
+        }        public DataDiskArgs build() {
             return new DataDiskArgs(caching, diskSizeGB, lun, storageAccountType);
         }
     }

@@ -415,117 +415,106 @@ public final class GetManagedClusterResult {
             this.addonFeatures = addonFeatures;
             return this;
         }
-
+        public Builder addonFeatures(String... addonFeatures) {
+            return addonFeatures(List.of(addonFeatures));
+        }
         public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminUserName(String adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
-
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
-
         public Builder clientConnectionPort(@Nullable Integer clientConnectionPort) {
             this.clientConnectionPort = clientConnectionPort;
             return this;
         }
-
         public Builder clients(@Nullable List<ClientCertificateResponse> clients) {
             this.clients = clients;
             return this;
         }
-
+        public Builder clients(ClientCertificateResponse... clients) {
+            return clients(List.of(clients));
+        }
         public Builder clusterCertificateThumbprint(String clusterCertificateThumbprint) {
             this.clusterCertificateThumbprint = Objects.requireNonNull(clusterCertificateThumbprint);
             return this;
         }
-
         public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterState(String clusterState) {
             this.clusterState = Objects.requireNonNull(clusterState);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionResponse> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
-
+        public Builder fabricSettings(SettingsSectionDescriptionResponse... fabricSettings) {
+            return fabricSettings(List.of(fabricSettings));
+        }
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder httpGatewayConnectionPort(@Nullable Integer httpGatewayConnectionPort) {
             this.httpGatewayConnectionPort = httpGatewayConnectionPort;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleResponse> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
-
+        public Builder loadBalancingRules(LoadBalancingRuleResponse... loadBalancingRules) {
+            return loadBalancingRules(List.of(loadBalancingRules));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetManagedClusterResult build() {
+        }        public GetManagedClusterResult build() {
             return new GetManagedClusterResult(addonFeatures, adminPassword, adminUserName, azureActiveDirectory, clientConnectionPort, clients, clusterCertificateThumbprint, clusterCodeVersion, clusterId, clusterState, dnsName, etag, fabricSettings, fqdn, httpGatewayConnectionPort, id, loadBalancingRules, location, name, provisioningState, sku, tags, type);
         }
     }

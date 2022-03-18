@@ -78,22 +78,18 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
             this.accountUrl = accountUrl;
             return this;
         }
-
         public Builder accountUrl(@Nullable String accountUrl) {
             this.accountUrl = Output.ofNullable(accountUrl);
             return this;
         }
-
         public Builder filesystem(@Nullable Output<String> filesystem) {
             this.filesystem = filesystem;
             return this;
         }
-
         public Builder filesystem(@Nullable String filesystem) {
             this.filesystem = Output.ofNullable(filesystem);
             return this;
-        }
-        public DataLakeStorageAccountDetailsArgs build() {
+        }        public DataLakeStorageAccountDetailsArgs build() {
             return new DataLakeStorageAccountDetailsArgs(accountUrl, filesystem);
         }
     }

@@ -122,52 +122,42 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
             this.actualProcessName = Objects.requireNonNull(actualProcessName);
             return this;
         }
-
         public Builder actualProcessName(String actualProcessName) {
             this.actualProcessName = Output.of(Objects.requireNonNull(actualProcessName));
             return this;
         }
-
         public Builder favoriteProcessResourceName(@Nullable Output<String> favoriteProcessResourceName) {
             this.favoriteProcessResourceName = favoriteProcessResourceName;
             return this;
         }
-
         public Builder favoriteProcessResourceName(@Nullable String favoriteProcessResourceName) {
             this.favoriteProcessResourceName = Output.ofNullable(favoriteProcessResourceName);
             return this;
         }
-
         public Builder packageName(Output<String> packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
-
         public Builder packageName(String packageName) {
             this.packageName = Output.of(Objects.requireNonNull(packageName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
-
         public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
             return this;
-        }
-        public FavoriteProcessArgs build() {
+        }        public FavoriteProcessArgs build() {
             return new FavoriteProcessArgs(actualProcessName, favoriteProcessResourceName, packageName, resourceGroupName, testBaseAccountName);
         }
     }

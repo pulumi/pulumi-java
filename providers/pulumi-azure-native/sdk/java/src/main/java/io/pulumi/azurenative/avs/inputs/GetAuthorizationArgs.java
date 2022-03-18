@@ -88,17 +88,14 @@ public final class GetAuthorizationArgs extends io.pulumi.resources.InvokeArgs {
             this.authorizationName = Objects.requireNonNull(authorizationName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAuthorizationArgs build() {
+        }        public GetAuthorizationArgs build() {
             return new GetAuthorizationArgs(authorizationName, privateCloudName, resourceGroupName);
         }
     }

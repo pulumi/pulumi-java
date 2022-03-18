@@ -61,12 +61,10 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public StorageAccountPropertiesArgs build() {
+        }        public StorageAccountPropertiesArgs build() {
             return new StorageAccountPropertiesArgs(resourceId);
         }
     }

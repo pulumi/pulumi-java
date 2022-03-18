@@ -78,22 +78,18 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable String secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
-
         public Builder triggerParameter(@Nullable Output<String> triggerParameter) {
             this.triggerParameter = triggerParameter;
             return this;
         }
-
         public Builder triggerParameter(@Nullable String triggerParameter) {
             this.triggerParameter = Output.ofNullable(triggerParameter);
             return this;
-        }
-        public ScaleRuleAuthArgs build() {
+        }        public ScaleRuleAuthArgs build() {
             return new ScaleRuleAuthArgs(secretRef, triggerParameter);
         }
     }

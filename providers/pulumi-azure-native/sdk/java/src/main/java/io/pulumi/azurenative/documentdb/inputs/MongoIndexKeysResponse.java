@@ -62,7 +62,9 @@ public final class MongoIndexKeysResponse extends io.pulumi.resources.InvokeArgs
             this.keys = keys;
             return this;
         }
-        public MongoIndexKeysResponse build() {
+        public Builder keys(String... keys) {
+            return keys(List.of(keys));
+        }        public MongoIndexKeysResponse build() {
             return new MongoIndexKeysResponse(keys);
         }
     }

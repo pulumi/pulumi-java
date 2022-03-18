@@ -252,67 +252,63 @@ public final class GetVirtualNetworkResult {
             this.allowedSubnets = allowedSubnets;
             return this;
         }
-
+        public Builder allowedSubnets(SubnetResponse... allowedSubnets) {
+            return allowedSubnets(List.of(allowedSubnets));
+        }
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder externalProviderResourceId(@Nullable String externalProviderResourceId) {
             this.externalProviderResourceId = externalProviderResourceId;
             return this;
         }
-
         public Builder externalSubnets(List<ExternalSubnetResponse> externalSubnets) {
             this.externalSubnets = Objects.requireNonNull(externalSubnets);
             return this;
         }
-
+        public Builder externalSubnets(ExternalSubnetResponse... externalSubnets) {
+            return externalSubnets(List.of(externalSubnets));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder subnetOverrides(@Nullable List<SubnetOverrideResponse> subnetOverrides) {
             this.subnetOverrides = subnetOverrides;
             return this;
         }
-
+        public Builder subnetOverrides(SubnetOverrideResponse... subnetOverrides) {
+            return subnetOverrides(List.of(subnetOverrides));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
-        }
-        public GetVirtualNetworkResult build() {
+        }        public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(allowedSubnets, createdDate, description, externalProviderResourceId, externalSubnets, id, location, name, provisioningState, subnetOverrides, tags, type, uniqueIdentifier);
         }
     }

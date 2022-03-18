@@ -62,12 +62,13 @@ public final class ServiceAcrConfigurationInfoArgs extends io.pulumi.resources.R
             this.loginServers = loginServers;
             return this;
         }
-
         public Builder loginServers(@Nullable List<String> loginServers) {
             this.loginServers = Output.ofNullable(loginServers);
             return this;
         }
-        public ServiceAcrConfigurationInfoArgs build() {
+        public Builder loginServers(String... loginServers) {
+            return loginServers(List.of(loginServers));
+        }        public ServiceAcrConfigurationInfoArgs build() {
             return new ServiceAcrConfigurationInfoArgs(loginServers);
         }
     }

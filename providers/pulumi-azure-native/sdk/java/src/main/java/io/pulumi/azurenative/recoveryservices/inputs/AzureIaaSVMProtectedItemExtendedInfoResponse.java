@@ -96,17 +96,14 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends io.pulum
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-
         public Builder policyInconsistent(@Nullable Boolean policyInconsistent) {
             this.policyInconsistent = policyInconsistent;
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
-        }
-        public AzureIaaSVMProtectedItemExtendedInfoResponse build() {
+        }        public AzureIaaSVMProtectedItemExtendedInfoResponse build() {
             return new AzureIaaSVMProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyInconsistent, recoveryPointCount);
         }
     }

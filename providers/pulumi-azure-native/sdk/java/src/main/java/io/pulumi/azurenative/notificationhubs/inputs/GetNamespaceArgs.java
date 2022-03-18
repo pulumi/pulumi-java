@@ -72,12 +72,10 @@ public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNamespaceArgs build() {
+        }        public GetNamespaceArgs build() {
             return new GetNamespaceArgs(namespaceName, resourceGroupName);
         }
     }

@@ -95,32 +95,26 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
-
         public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = Output.ofNullable(isValidated);
             return this;
-        }
-        public TelegramChannelPropertiesArgs build() {
+        }        public TelegramChannelPropertiesArgs build() {
             return new TelegramChannelPropertiesArgs(accessToken, isEnabled, isValidated);
         }
     }

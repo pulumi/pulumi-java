@@ -139,62 +139,50 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
             this.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
             return this;
         }
-
         public Builder guestConfigurationAssignmentName(@Nullable String guestConfigurationAssignmentName) {
             this.guestConfigurationAssignmentName = Output.ofNullable(guestConfigurationAssignmentName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable GuestConfigurationAssignmentPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder vmName(Output<String> vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
-
         public Builder vmName(String vmName) {
             this.vmName = Output.of(Objects.requireNonNull(vmName));
             return this;
-        }
-        public GuestConfigurationAssignmentArgs build() {
+        }        public GuestConfigurationAssignmentArgs build() {
             return new GuestConfigurationAssignmentArgs(guestConfigurationAssignmentName, location, name, properties, resourceGroupName, vmName);
         }
     }

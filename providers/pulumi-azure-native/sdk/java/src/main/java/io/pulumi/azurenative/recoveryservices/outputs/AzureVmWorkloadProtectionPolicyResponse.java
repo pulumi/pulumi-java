@@ -142,32 +142,29 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder makePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
             this.makePolicyConsistent = makePolicyConsistent;
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder settings(@Nullable SettingsResponse settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
-
+        public Builder subProtectionPolicy(SubProtectionPolicyResponse... subProtectionPolicy) {
+            return subProtectionPolicy(List.of(subProtectionPolicy));
+        }
         public Builder workLoadType(@Nullable String workLoadType) {
             this.workLoadType = workLoadType;
             return this;
-        }
-        public AzureVmWorkloadProtectionPolicyResponse build() {
+        }        public AzureVmWorkloadProtectionPolicyResponse build() {
             return new AzureVmWorkloadProtectionPolicyResponse(backupManagementType, makePolicyConsistent, protectedItemsCount, settings, subProtectionPolicy, workLoadType);
         }
     }

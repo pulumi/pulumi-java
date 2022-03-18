@@ -95,17 +95,14 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
             this.name = name;
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
-        }
-        public LogAnalyticsDestinationResponse build() {
+        }        public LogAnalyticsDestinationResponse build() {
             return new LogAnalyticsDestinationResponse(name, workspaceId, workspaceResourceId);
         }
     }

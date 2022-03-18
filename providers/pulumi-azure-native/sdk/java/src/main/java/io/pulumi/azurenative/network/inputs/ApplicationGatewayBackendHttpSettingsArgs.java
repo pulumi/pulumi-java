@@ -294,152 +294,128 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             this.affinityCookieName = affinityCookieName;
             return this;
         }
-
         public Builder affinityCookieName(@Nullable String affinityCookieName) {
             this.affinityCookieName = Output.ofNullable(affinityCookieName);
             return this;
         }
-
         public Builder authenticationCertificates(@Nullable Output<List<SubResourceArgs>> authenticationCertificates) {
             this.authenticationCertificates = authenticationCertificates;
             return this;
         }
-
         public Builder authenticationCertificates(@Nullable List<SubResourceArgs> authenticationCertificates) {
             this.authenticationCertificates = Output.ofNullable(authenticationCertificates);
             return this;
         }
-
+        public Builder authenticationCertificates(SubResourceArgs... authenticationCertificates) {
+            return authenticationCertificates(List.of(authenticationCertificates));
+        }
         public Builder connectionDraining(@Nullable Output<ApplicationGatewayConnectionDrainingArgs> connectionDraining) {
             this.connectionDraining = connectionDraining;
             return this;
         }
-
         public Builder connectionDraining(@Nullable ApplicationGatewayConnectionDrainingArgs connectionDraining) {
             this.connectionDraining = Output.ofNullable(connectionDraining);
             return this;
         }
-
         public Builder cookieBasedAffinity(@Nullable Output<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity) {
             this.cookieBasedAffinity = cookieBasedAffinity;
             return this;
         }
-
         public Builder cookieBasedAffinity(@Nullable Either<String,ApplicationGatewayCookieBasedAffinity> cookieBasedAffinity) {
             this.cookieBasedAffinity = Output.ofNullable(cookieBasedAffinity);
             return this;
         }
-
         public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = Output.ofNullable(hostName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder pickHostNameFromBackendAddress(@Nullable Output<Boolean> pickHostNameFromBackendAddress) {
             this.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
             return this;
         }
-
         public Builder pickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
             this.pickHostNameFromBackendAddress = Output.ofNullable(pickHostNameFromBackendAddress);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder probe(@Nullable Output<SubResourceArgs> probe) {
             this.probe = probe;
             return this;
         }
-
         public Builder probe(@Nullable SubResourceArgs probe) {
             this.probe = Output.ofNullable(probe);
             return this;
         }
-
         public Builder probeEnabled(@Nullable Output<Boolean> probeEnabled) {
             this.probeEnabled = probeEnabled;
             return this;
         }
-
         public Builder probeEnabled(@Nullable Boolean probeEnabled) {
             this.probeEnabled = Output.ofNullable(probeEnabled);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder requestTimeout(@Nullable Output<Integer> requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
-
         public Builder requestTimeout(@Nullable Integer requestTimeout) {
             this.requestTimeout = Output.ofNullable(requestTimeout);
             return this;
         }
-
         public Builder trustedRootCertificates(@Nullable Output<List<SubResourceArgs>> trustedRootCertificates) {
             this.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
-
         public Builder trustedRootCertificates(@Nullable List<SubResourceArgs> trustedRootCertificates) {
             this.trustedRootCertificates = Output.ofNullable(trustedRootCertificates);
             return this;
         }
-        public ApplicationGatewayBackendHttpSettingsArgs build() {
+        public Builder trustedRootCertificates(SubResourceArgs... trustedRootCertificates) {
+            return trustedRootCertificates(List.of(trustedRootCertificates));
+        }        public ApplicationGatewayBackendHttpSettingsArgs build() {
             return new ApplicationGatewayBackendHttpSettingsArgs(affinityCookieName, authenticationCertificates, connectionDraining, cookieBasedAffinity, hostName, id, name, path, pickHostNameFromBackendAddress, port, probe, probeEnabled, protocol, requestTimeout, trustedRootCertificates);
         }
     }

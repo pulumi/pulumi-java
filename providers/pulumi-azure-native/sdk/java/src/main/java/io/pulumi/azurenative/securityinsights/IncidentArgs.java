@@ -274,142 +274,117 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             this.classification = classification;
             return this;
         }
-
         public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
             this.classification = Output.ofNullable(classification);
             return this;
         }
-
         public Builder classificationComment(@Nullable Output<String> classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
-
         public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = Output.ofNullable(classificationComment);
             return this;
         }
-
         public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
-
         public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
             this.classificationReason = Output.ofNullable(classificationReason);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder firstActivityTimeUtc(@Nullable Output<String> firstActivityTimeUtc) {
             this.firstActivityTimeUtc = firstActivityTimeUtc;
             return this;
         }
-
         public Builder firstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
             this.firstActivityTimeUtc = Output.ofNullable(firstActivityTimeUtc);
             return this;
         }
-
         public Builder incidentId(@Nullable Output<String> incidentId) {
             this.incidentId = incidentId;
             return this;
         }
-
         public Builder incidentId(@Nullable String incidentId) {
             this.incidentId = Output.ofNullable(incidentId);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(IncidentLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder lastActivityTimeUtc(@Nullable Output<String> lastActivityTimeUtc) {
             this.lastActivityTimeUtc = lastActivityTimeUtc;
             return this;
         }
-
         public Builder lastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
             this.lastActivityTimeUtc = Output.ofNullable(lastActivityTimeUtc);
             return this;
         }
-
         public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder severity(Output<Either<String,IncidentSeverity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder severity(Either<String,IncidentSeverity> severity) {
             this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
-
         public Builder status(Output<Either<String,IncidentStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(Either<String,IncidentStatus> status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public IncidentArgs build() {
+        }        public IncidentArgs build() {
             return new IncidentArgs(classification, classificationComment, classificationReason, description, firstActivityTimeUtc, incidentId, labels, lastActivityTimeUtc, owner, resourceGroupName, severity, status, title, workspaceName);
         }
     }

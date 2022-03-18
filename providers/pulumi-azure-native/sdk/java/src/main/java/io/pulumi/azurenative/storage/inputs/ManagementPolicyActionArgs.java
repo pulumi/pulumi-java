@@ -96,32 +96,26 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
             this.baseBlob = baseBlob;
             return this;
         }
-
         public Builder baseBlob(@Nullable ManagementPolicyBaseBlobArgs baseBlob) {
             this.baseBlob = Output.ofNullable(baseBlob);
             return this;
         }
-
         public Builder snapshot(@Nullable Output<ManagementPolicySnapShotArgs> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
-
         public Builder snapshot(@Nullable ManagementPolicySnapShotArgs snapshot) {
             this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
-
         public Builder version(@Nullable Output<ManagementPolicyVersionArgs> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable ManagementPolicyVersionArgs version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ManagementPolicyActionArgs build() {
+        }        public ManagementPolicyActionArgs build() {
             return new ManagementPolicyActionArgs(baseBlob, snapshot, version);
         }
     }

@@ -212,52 +212,45 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
             this.caching = caching;
             return this;
         }
-
         public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
-
         public Builder diffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
             this.diffDiskSettings = diffDiskSettings;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder image(@Nullable VirtualHardDiskResponse image) {
             this.image = image;
             return this;
         }
-
         public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder vhdContainers(@Nullable List<String> vhdContainers) {
             this.vhdContainers = vhdContainers;
             return this;
         }
-
+        public Builder vhdContainers(String... vhdContainers) {
+            return vhdContainers(List.of(vhdContainers));
+        }
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
-        }
-        public VirtualMachineScaleSetOSDiskResponse build() {
+        }        public VirtualMachineScaleSetOSDiskResponse build() {
             return new VirtualMachineScaleSetOSDiskResponse(caching, createOption, diffDiskSettings, diskSizeGB, image, managedDisk, name, osType, vhdContainers, writeAcceleratorEnabled);
         }
     }

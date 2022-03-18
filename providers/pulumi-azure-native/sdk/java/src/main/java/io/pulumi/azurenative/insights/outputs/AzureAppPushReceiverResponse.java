@@ -69,12 +69,10 @@ public final class AzureAppPushReceiverResponse {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AzureAppPushReceiverResponse build() {
+        }        public AzureAppPushReceiverResponse build() {
             return new AzureAppPushReceiverResponse(emailAddress, name);
         }
     }

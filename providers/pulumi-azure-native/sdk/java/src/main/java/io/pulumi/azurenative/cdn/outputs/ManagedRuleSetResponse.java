@@ -106,22 +106,21 @@ public final class ManagedRuleSetResponse {
             this.anomalyScore = anomalyScore;
             return this;
         }
-
         public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
-
+        public Builder ruleGroupOverrides(ManagedRuleGroupOverrideResponse... ruleGroupOverrides) {
+            return ruleGroupOverrides(List.of(ruleGroupOverrides));
+        }
         public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
-
         public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
-        }
-        public ManagedRuleSetResponse build() {
+        }        public ManagedRuleSetResponse build() {
             return new ManagedRuleSetResponse(anomalyScore, ruleGroupOverrides, ruleSetType, ruleSetVersion);
         }
     }

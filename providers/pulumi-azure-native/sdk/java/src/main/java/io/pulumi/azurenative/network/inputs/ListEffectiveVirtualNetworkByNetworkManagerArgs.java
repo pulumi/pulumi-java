@@ -123,27 +123,22 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
             this.conditionalMembers = conditionalMembers;
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder top(@Nullable Integer top) {
             this.top = top;
             return this;
-        }
-        public ListEffectiveVirtualNetworkByNetworkManagerArgs build() {
+        }        public ListEffectiveVirtualNetworkByNetworkManagerArgs build() {
             return new ListEffectiveVirtualNetworkByNetworkManagerArgs(conditionalMembers, networkManagerName, resourceGroupName, skipToken, top);
         }
     }

@@ -80,12 +80,10 @@ public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resour
             this.localizedValueNames = localizedValueNames;
             return this;
         }
-
         public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
-        }
-        public ProfileEnumValidValuesFormatResponse build() {
+        }        public ProfileEnumValidValuesFormatResponse build() {
             return new ProfileEnumValidValuesFormatResponse(localizedValueNames, value);
         }
     }

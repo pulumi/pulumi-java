@@ -76,12 +76,10 @@ public final class ResourceGuardOperationResponse extends io.pulumi.resources.In
             this.requestResourceType = Objects.requireNonNull(requestResourceType);
             return this;
         }
-
         public Builder vaultCriticalOperation(String vaultCriticalOperation) {
             this.vaultCriticalOperation = Objects.requireNonNull(vaultCriticalOperation);
             return this;
-        }
-        public ResourceGuardOperationResponse build() {
+        }        public ResourceGuardOperationResponse build() {
             return new ResourceGuardOperationResponse(requestResourceType, vaultCriticalOperation);
         }
     }

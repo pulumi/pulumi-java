@@ -296,152 +296,125 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountKey(@Nullable Object accountKey) {
             this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder azureCloudType(@Nullable Output<Object> azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
-
         public Builder azureCloudType(@Nullable Object azureCloudType) {
             this.azureCloudType = Output.ofNullable(azureCloudType);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder servicePrincipalCredential(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
             this.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
-
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
             this.servicePrincipalCredential = Output.ofNullable(servicePrincipalCredential);
             return this;
         }
-
         public Builder servicePrincipalCredentialType(@Nullable Output<Object> servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
-
         public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = Output.ofNullable(servicePrincipalCredentialType);
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
             return this;
         }
-
         public Builder tenant(@Nullable Output<Object> tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder tenant(@Nullable Object tenant) {
             this.tenant = Output.ofNullable(tenant);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public AzureBlobFSLinkedServiceArgs build() {
+        }        public AzureBlobFSLinkedServiceArgs build() {
             return new AzureBlobFSLinkedServiceArgs(accountKey, annotations, azureCloudType, connectVia, credential, description, encryptedCredential, parameters, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, servicePrincipalKey, tenant, type, url);
         }
     }

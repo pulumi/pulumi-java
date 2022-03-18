@@ -155,37 +155,33 @@ public final class GetHybridRunbookWorkerGroupResult {
             this.credential = credential;
             return this;
         }
-
         public Builder groupType(@Nullable String groupType) {
             this.groupType = groupType;
             return this;
         }
-
         public Builder hybridRunbookWorkers(@Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers) {
             this.hybridRunbookWorkers = hybridRunbookWorkers;
             return this;
         }
-
+        public Builder hybridRunbookWorkers(HybridRunbookWorkerLegacyResponse... hybridRunbookWorkers) {
+            return hybridRunbookWorkers(List.of(hybridRunbookWorkers));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetHybridRunbookWorkerGroupResult build() {
+        }        public GetHybridRunbookWorkerGroupResult build() {
             return new GetHybridRunbookWorkerGroupResult(credential, groupType, hybridRunbookWorkers, id, name, systemData, type);
         }
     }

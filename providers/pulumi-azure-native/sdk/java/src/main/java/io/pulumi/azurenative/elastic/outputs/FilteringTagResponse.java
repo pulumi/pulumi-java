@@ -87,17 +87,14 @@ public final class FilteringTagResponse {
             this.action = action;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public FilteringTagResponse build() {
+        }        public FilteringTagResponse build() {
             return new FilteringTagResponse(action, name, value);
         }
     }

@@ -234,62 +234,50 @@ public final class RestSourceResponse {
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
             this.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder paginationRules(@Nullable Object paginationRules) {
             this.paginationRules = paginationRules;
             return this;
         }
-
         public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = requestBody;
             return this;
         }
-
         public Builder requestInterval(@Nullable Object requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
-
         public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RestSourceResponse build() {
+        }        public RestSourceResponse build() {
             return new RestSourceResponse(additionalColumns, additionalHeaders, disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, paginationRules, requestBody, requestInterval, requestMethod, sourceRetryCount, sourceRetryWait, type);
         }
     }

@@ -122,27 +122,25 @@ public final class ColumnSpecificationResponse {
             this.$enum = $enum;
             return this;
         }
-
+        public Builder $enum(Object... $enum) {
+            return $enum(List.of($enum));
+        }
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
             this.xMsIsnullable = xMsIsnullable;
             return this;
         }
-
         public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
             this.xMsIsordered = xMsIsordered;
             return this;
-        }
-        public ColumnSpecificationResponse build() {
+        }        public ColumnSpecificationResponse build() {
             return new ColumnSpecificationResponse($enum, format, type, xMsIsnullable, xMsIsordered);
         }
     }

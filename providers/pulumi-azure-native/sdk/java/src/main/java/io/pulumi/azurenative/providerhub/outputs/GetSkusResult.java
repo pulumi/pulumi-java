@@ -94,22 +94,18 @@ public final class GetSkusResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(SkuResourceResponseProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSkusResult build() {
+        }        public GetSkusResult build() {
             return new GetSkusResult(id, name, properties, type);
         }
     }

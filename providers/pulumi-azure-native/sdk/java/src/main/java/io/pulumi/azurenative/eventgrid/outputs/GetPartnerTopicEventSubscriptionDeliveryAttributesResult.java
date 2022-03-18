@@ -56,7 +56,9 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesResult {
             this.value = value;
             return this;
         }
-        public GetPartnerTopicEventSubscriptionDeliveryAttributesResult build() {
+        public Builder value(Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>... value) {
+            return value(List.of(value));
+        }        public GetPartnerTopicEventSubscriptionDeliveryAttributesResult build() {
             return new GetPartnerTopicEventSubscriptionDeliveryAttributesResult(value);
         }
     }

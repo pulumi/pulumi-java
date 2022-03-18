@@ -95,17 +95,14 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
             this.actionConfiguration = Objects.requireNonNull(actionConfiguration);
             return this;
         }
-
         public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
-        }
-        public AutomationRuleModifyPropertiesActionResponse build() {
+        }        public AutomationRuleModifyPropertiesActionResponse build() {
             return new AutomationRuleModifyPropertiesActionResponse(actionConfiguration, actionType, order);
         }
     }

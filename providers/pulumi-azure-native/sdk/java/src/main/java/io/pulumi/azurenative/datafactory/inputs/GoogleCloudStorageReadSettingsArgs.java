@@ -257,132 +257,106 @@ public final class GoogleCloudStorageReadSettingsArgs extends io.pulumi.resource
             this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
-
         public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
             this.deleteFilesAfterCompletion = Output.ofNullable(deleteFilesAfterCompletion);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = Output.ofNullable(enablePartitionDiscovery);
             return this;
         }
-
         public Builder fileListPath(@Nullable Output<Object> fileListPath) {
             this.fileListPath = fileListPath;
             return this;
         }
-
         public Builder fileListPath(@Nullable Object fileListPath) {
             this.fileListPath = Output.ofNullable(fileListPath);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder modifiedDatetimeEnd(@Nullable Output<Object> modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
-
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = Output.ofNullable(modifiedDatetimeEnd);
             return this;
         }
-
         public Builder modifiedDatetimeStart(@Nullable Output<Object> modifiedDatetimeStart) {
             this.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
-
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             this.modifiedDatetimeStart = Output.ofNullable(modifiedDatetimeStart);
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = Output.ofNullable(partitionRootPath);
             return this;
         }
-
         public Builder prefix(@Nullable Output<Object> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable Object prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder recursive(@Nullable Output<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder recursive(@Nullable Object recursive) {
             this.recursive = Output.ofNullable(recursive);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder wildcardFileName(@Nullable Output<Object> wildcardFileName) {
             this.wildcardFileName = wildcardFileName;
             return this;
         }
-
         public Builder wildcardFileName(@Nullable Object wildcardFileName) {
             this.wildcardFileName = Output.ofNullable(wildcardFileName);
             return this;
         }
-
         public Builder wildcardFolderPath(@Nullable Output<Object> wildcardFolderPath) {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-
         public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
             this.wildcardFolderPath = Output.ofNullable(wildcardFolderPath);
             return this;
-        }
-        public GoogleCloudStorageReadSettingsArgs build() {
+        }        public GoogleCloudStorageReadSettingsArgs build() {
             return new GoogleCloudStorageReadSettingsArgs(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, prefix, recursive, type, wildcardFileName, wildcardFolderPath);
         }
     }

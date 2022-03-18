@@ -143,62 +143,50 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
             this.acceptedTerms = acceptedTerms;
             return this;
         }
-
         public Builder acceptedTerms(@Nullable Boolean acceptedTerms) {
             this.acceptedTerms = Output.ofNullable(acceptedTerms);
             return this;
         }
-
         public Builder callingWebHook(@Nullable Output<String> callingWebHook) {
             this.callingWebHook = callingWebHook;
             return this;
         }
-
         public Builder callingWebHook(@Nullable String callingWebHook) {
             this.callingWebHook = Output.ofNullable(callingWebHook);
             return this;
         }
-
         public Builder deploymentEnvironment(@Nullable Output<String> deploymentEnvironment) {
             this.deploymentEnvironment = deploymentEnvironment;
             return this;
         }
-
         public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
             this.deploymentEnvironment = Output.ofNullable(deploymentEnvironment);
             return this;
         }
-
         public Builder enableCalling(@Nullable Output<Boolean> enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
-
         public Builder enableCalling(@Nullable Boolean enableCalling) {
             this.enableCalling = Output.ofNullable(enableCalling);
             return this;
         }
-
         public Builder incomingCallRoute(@Nullable Output<String> incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
-
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             this.incomingCallRoute = Output.ofNullable(incomingCallRoute);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
-        }
-        public MsTeamsChannelPropertiesArgs build() {
+        }        public MsTeamsChannelPropertiesArgs build() {
             return new MsTeamsChannelPropertiesArgs(acceptedTerms, callingWebHook, deploymentEnvironment, enableCalling, incomingCallRoute, isEnabled);
         }
     }

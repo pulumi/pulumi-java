@@ -96,32 +96,26 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
-
         public Builder matchVariable(Either<String,ManagedRuleExclusionMatchVariable> matchVariable) {
             this.matchVariable = Output.of(Objects.requireNonNull(matchVariable));
             return this;
         }
-
         public Builder selector(Output<String> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
-
         public Builder selectorMatchOperator(Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public Builder selectorMatchOperator(Either<String,ManagedRuleExclusionSelectorMatchOperator> selectorMatchOperator) {
             this.selectorMatchOperator = Output.of(Objects.requireNonNull(selectorMatchOperator));
             return this;
-        }
-        public ManagedRuleExclusionArgs build() {
+        }        public ManagedRuleExclusionArgs build() {
             return new ManagedRuleExclusionArgs(matchVariable, selector, selectorMatchOperator);
         }
     }

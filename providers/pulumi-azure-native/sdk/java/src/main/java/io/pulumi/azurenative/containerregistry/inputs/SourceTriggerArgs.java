@@ -115,42 +115,37 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder sourceRepository(Output<SourcePropertiesArgs> sourceRepository) {
             this.sourceRepository = Objects.requireNonNull(sourceRepository);
             return this;
         }
-
         public Builder sourceRepository(SourcePropertiesArgs sourceRepository) {
             this.sourceRepository = Output.of(Objects.requireNonNull(sourceRepository));
             return this;
         }
-
         public Builder sourceTriggerEvents(Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents) {
             this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents);
             return this;
         }
-
         public Builder sourceTriggerEvents(List<Either<String,SourceTriggerEvent>> sourceTriggerEvents) {
             this.sourceTriggerEvents = Output.of(Objects.requireNonNull(sourceTriggerEvents));
             return this;
         }
-
+        public Builder sourceTriggerEvents(Either<String,SourceTriggerEvent>... sourceTriggerEvents) {
+            return sourceTriggerEvents(List.of(sourceTriggerEvents));
+        }
         public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public SourceTriggerArgs build() {
+        }        public SourceTriggerArgs build() {
             return new SourceTriggerArgs(name, sourceRepository, sourceTriggerEvents, status);
         }
     }

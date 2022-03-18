@@ -87,17 +87,14 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public SecurityAssessmentMetadataPartnerDataResponse build() {
+        }        public SecurityAssessmentMetadataPartnerDataResponse build() {
             return new SecurityAssessmentMetadataPartnerDataResponse(partnerName, productName, secret);
         }
     }

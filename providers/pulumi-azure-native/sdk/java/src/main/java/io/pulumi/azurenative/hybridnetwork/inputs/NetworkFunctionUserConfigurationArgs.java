@@ -114,42 +114,37 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder osProfile(@Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable NetworkFunctionUserConfigurationOsProfileArgs osProfile) {
             this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
-
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder userDataParameters(@Nullable Output<Object> userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }
-
         public Builder userDataParameters(@Nullable Object userDataParameters) {
             this.userDataParameters = Output.ofNullable(userDataParameters);
             return this;
-        }
-        public NetworkFunctionUserConfigurationArgs build() {
+        }        public NetworkFunctionUserConfigurationArgs build() {
             return new NetworkFunctionUserConfigurationArgs(networkInterfaces, osProfile, roleName, userDataParameters);
         }
     }

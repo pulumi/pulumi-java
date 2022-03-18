@@ -218,102 +218,82 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.access = access;
             return this;
         }
-
         public Builder access(@Nullable String access) {
             this.access = Output.ofNullable(access);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationAddressPrefix(@Nullable Output<String> destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
-
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
             this.destinationAddressPrefix = Output.ofNullable(destinationAddressPrefix);
             return this;
         }
-
         public Builder destinationPortRange(@Nullable Output<String> destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
-
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
             this.destinationPortRange = Output.ofNullable(destinationPortRange);
             return this;
         }
-
         public Builder direction(@Nullable Output<String> direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = Output.ofNullable(direction);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder sourceAddressPrefix(@Nullable Output<String> sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
-
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
             this.sourceAddressPrefix = Output.ofNullable(sourceAddressPrefix);
             return this;
         }
-
         public Builder sourcePortRange(@Nullable Output<String> sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
-
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
             this.sourcePortRange = Output.ofNullable(sourcePortRange);
             return this;
-        }
-        public NsgSecurityRuleArgs build() {
+        }        public NsgSecurityRuleArgs build() {
             return new NsgSecurityRuleArgs(access, description, destinationAddressPrefix, destinationPortRange, direction, name, priority, protocol, sourceAddressPrefix, sourcePortRange);
         }
     }

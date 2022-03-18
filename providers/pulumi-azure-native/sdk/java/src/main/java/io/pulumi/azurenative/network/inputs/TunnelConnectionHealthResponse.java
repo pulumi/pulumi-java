@@ -125,27 +125,22 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
-
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
             this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
             return this;
         }
-
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
             return this;
         }
-
         public Builder lastConnectionEstablishedUtcTime(String lastConnectionEstablishedUtcTime) {
             this.lastConnectionEstablishedUtcTime = Objects.requireNonNull(lastConnectionEstablishedUtcTime);
             return this;
         }
-
         public Builder tunnel(String tunnel) {
             this.tunnel = Objects.requireNonNull(tunnel);
             return this;
-        }
-        public TunnelConnectionHealthResponse build() {
+        }        public TunnelConnectionHealthResponse build() {
             return new TunnelConnectionHealthResponse(connectionStatus, egressBytesTransferred, ingressBytesTransferred, lastConnectionEstablishedUtcTime, tunnel);
         }
     }

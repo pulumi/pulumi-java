@@ -193,92 +193,74 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.dispositionNotificationTo = dispositionNotificationTo;
             return this;
         }
-
         public Builder dispositionNotificationTo(@Nullable String dispositionNotificationTo) {
             this.dispositionNotificationTo = Output.ofNullable(dispositionNotificationTo);
             return this;
         }
-
         public Builder mdnText(@Nullable Output<String> mdnText) {
             this.mdnText = mdnText;
             return this;
         }
-
         public Builder mdnText(@Nullable String mdnText) {
             this.mdnText = Output.ofNullable(mdnText);
             return this;
         }
-
         public Builder micHashingAlgorithm(Output<Either<String,HashingAlgorithm>> micHashingAlgorithm) {
             this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm);
             return this;
         }
-
         public Builder micHashingAlgorithm(Either<String,HashingAlgorithm> micHashingAlgorithm) {
             this.micHashingAlgorithm = Output.of(Objects.requireNonNull(micHashingAlgorithm));
             return this;
         }
-
         public Builder needMDN(Output<Boolean> needMDN) {
             this.needMDN = Objects.requireNonNull(needMDN);
             return this;
         }
-
         public Builder needMDN(Boolean needMDN) {
             this.needMDN = Output.of(Objects.requireNonNull(needMDN));
             return this;
         }
-
         public Builder receiptDeliveryUrl(@Nullable Output<String> receiptDeliveryUrl) {
             this.receiptDeliveryUrl = receiptDeliveryUrl;
             return this;
         }
-
         public Builder receiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
             this.receiptDeliveryUrl = Output.ofNullable(receiptDeliveryUrl);
             return this;
         }
-
         public Builder sendInboundMDNToMessageBox(Output<Boolean> sendInboundMDNToMessageBox) {
             this.sendInboundMDNToMessageBox = Objects.requireNonNull(sendInboundMDNToMessageBox);
             return this;
         }
-
         public Builder sendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
             this.sendInboundMDNToMessageBox = Output.of(Objects.requireNonNull(sendInboundMDNToMessageBox));
             return this;
         }
-
         public Builder sendMDNAsynchronously(Output<Boolean> sendMDNAsynchronously) {
             this.sendMDNAsynchronously = Objects.requireNonNull(sendMDNAsynchronously);
             return this;
         }
-
         public Builder sendMDNAsynchronously(Boolean sendMDNAsynchronously) {
             this.sendMDNAsynchronously = Output.of(Objects.requireNonNull(sendMDNAsynchronously));
             return this;
         }
-
         public Builder signMDN(Output<Boolean> signMDN) {
             this.signMDN = Objects.requireNonNull(signMDN);
             return this;
         }
-
         public Builder signMDN(Boolean signMDN) {
             this.signMDN = Output.of(Objects.requireNonNull(signMDN));
             return this;
         }
-
         public Builder signOutboundMDNIfOptional(Output<Boolean> signOutboundMDNIfOptional) {
             this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
             return this;
         }
-
         public Builder signOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
             this.signOutboundMDNIfOptional = Output.of(Objects.requireNonNull(signOutboundMDNIfOptional));
             return this;
-        }
-        public AS2MdnSettingsArgs build() {
+        }        public AS2MdnSettingsArgs build() {
             return new AS2MdnSettingsArgs(dispositionNotificationTo, mdnText, micHashingAlgorithm, needMDN, receiptDeliveryUrl, sendInboundMDNToMessageBox, sendMDNAsynchronously, signMDN, signOutboundMDNIfOptional);
         }
     }

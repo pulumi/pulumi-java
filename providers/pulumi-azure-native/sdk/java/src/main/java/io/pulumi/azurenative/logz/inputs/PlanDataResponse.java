@@ -106,22 +106,18 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
             this.billingCycle = billingCycle;
             return this;
         }
-
         public Builder effectiveDate(@Nullable String effectiveDate) {
             this.effectiveDate = effectiveDate;
             return this;
         }
-
         public Builder planDetails(@Nullable String planDetails) {
             this.planDetails = planDetails;
             return this;
         }
-
         public Builder usageType(@Nullable String usageType) {
             this.usageType = usageType;
             return this;
-        }
-        public PlanDataResponse build() {
+        }        public PlanDataResponse build() {
             return new PlanDataResponse(billingCycle, effectiveDate, planDetails, usageType);
         }
     }

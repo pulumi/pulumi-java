@@ -88,17 +88,14 @@ public final class ListSubAccountVMHostsArgs extends io.pulumi.resources.InvokeA
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder subAccountName(String subAccountName) {
             this.subAccountName = Objects.requireNonNull(subAccountName);
             return this;
-        }
-        public ListSubAccountVMHostsArgs build() {
+        }        public ListSubAccountVMHostsArgs build() {
             return new ListSubAccountVMHostsArgs(monitorName, resourceGroupName, subAccountName);
         }
     }

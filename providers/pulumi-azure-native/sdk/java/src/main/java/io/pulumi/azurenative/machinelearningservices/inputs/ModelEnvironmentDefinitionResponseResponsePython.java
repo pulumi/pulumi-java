@@ -108,22 +108,18 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
             this.baseCondaEnvironment = baseCondaEnvironment;
             return this;
         }
-
         public Builder condaDependencies(@Nullable Object condaDependencies) {
             this.condaDependencies = condaDependencies;
             return this;
         }
-
         public Builder interpreterPath(@Nullable String interpreterPath) {
             this.interpreterPath = interpreterPath;
             return this;
         }
-
         public Builder userManagedDependencies(@Nullable Boolean userManagedDependencies) {
             this.userManagedDependencies = userManagedDependencies;
             return this;
-        }
-        public ModelEnvironmentDefinitionResponseResponsePython build() {
+        }        public ModelEnvironmentDefinitionResponseResponsePython build() {
             return new ModelEnvironmentDefinitionResponseResponsePython(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);
         }
     }

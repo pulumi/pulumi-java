@@ -61,12 +61,10 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
             this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
             return this;
-        }
-        public CacheEncryptionSettingsArgs build() {
+        }        public CacheEncryptionSettingsArgs build() {
             return new CacheEncryptionSettingsArgs(keyEncryptionKey);
         }
     }

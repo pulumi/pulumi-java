@@ -140,32 +140,26 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
             this.convertImpliedDecimal = Objects.requireNonNull(convertImpliedDecimal);
             return this;
         }
-
         public Builder createEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
             this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators);
             return this;
         }
-
         public Builder maskSecurityInfo(Boolean maskSecurityInfo) {
             this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo);
             return this;
         }
-
         public Builder preserveInterchange(Boolean preserveInterchange) {
             this.preserveInterchange = Objects.requireNonNull(preserveInterchange);
             return this;
         }
-
         public Builder suspendInterchangeOnError(Boolean suspendInterchangeOnError) {
             this.suspendInterchangeOnError = Objects.requireNonNull(suspendInterchangeOnError);
             return this;
         }
-
         public Builder useDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
-        }
-        public X12ProcessingSettingsResponse build() {
+        }        public X12ProcessingSettingsResponse build() {
             return new X12ProcessingSettingsResponse(convertImpliedDecimal, createEmptyXmlTagsForTrailingSeparators, maskSecurityInfo, preserveInterchange, suspendInterchangeOnError, useDotAsDecimalSeparator);
         }
     }

@@ -72,12 +72,10 @@ public final class ConnectionMonitorOutputResponse {
             this.type = type;
             return this;
         }
-
         public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
             this.workspaceSettings = workspaceSettings;
             return this;
-        }
-        public ConnectionMonitorOutputResponse build() {
+        }        public ConnectionMonitorOutputResponse build() {
             return new ConnectionMonitorOutputResponse(type, workspaceSettings);
         }
     }

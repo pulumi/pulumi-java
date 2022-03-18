@@ -104,22 +104,18 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetHybridConnectionAuthorizationRuleArgs build() {
+        }        public GetHybridConnectionAuthorizationRuleArgs build() {
             return new GetHybridConnectionAuthorizationRuleArgs(authorizationRuleName, hybridConnectionName, namespaceName, resourceGroupName);
         }
     }

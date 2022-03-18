@@ -225,57 +225,49 @@ public final class InformixLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(@Nullable Object authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectionString(Object connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder credential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = userName;
             return this;
-        }
-        public InformixLinkedServiceResponse build() {
+        }        public InformixLinkedServiceResponse build() {
             return new InformixLinkedServiceResponse(annotations, authenticationType, connectVia, connectionString, credential, description, encryptedCredential, parameters, password, type, userName);
         }
     }

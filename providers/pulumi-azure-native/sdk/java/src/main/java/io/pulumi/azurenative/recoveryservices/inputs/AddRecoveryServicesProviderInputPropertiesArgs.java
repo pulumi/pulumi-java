@@ -127,52 +127,42 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
             this.authenticationIdentityInput = Objects.requireNonNull(authenticationIdentityInput);
             return this;
         }
-
         public Builder authenticationIdentityInput(IdentityProviderInputArgs authenticationIdentityInput) {
             this.authenticationIdentityInput = Output.of(Objects.requireNonNull(authenticationIdentityInput));
             return this;
         }
-
         public Builder dataPlaneAuthenticationIdentityInput(@Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput) {
             this.dataPlaneAuthenticationIdentityInput = dataPlaneAuthenticationIdentityInput;
             return this;
         }
-
         public Builder dataPlaneAuthenticationIdentityInput(@Nullable IdentityProviderInputArgs dataPlaneAuthenticationIdentityInput) {
             this.dataPlaneAuthenticationIdentityInput = Output.ofNullable(dataPlaneAuthenticationIdentityInput);
             return this;
         }
-
         public Builder machineId(@Nullable Output<String> machineId) {
             this.machineId = machineId;
             return this;
         }
-
         public Builder machineId(@Nullable String machineId) {
             this.machineId = Output.ofNullable(machineId);
             return this;
         }
-
         public Builder machineName(Output<String> machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
-
         public Builder machineName(String machineName) {
             this.machineName = Output.of(Objects.requireNonNull(machineName));
             return this;
         }
-
         public Builder resourceAccessIdentityInput(Output<IdentityProviderInputArgs> resourceAccessIdentityInput) {
             this.resourceAccessIdentityInput = Objects.requireNonNull(resourceAccessIdentityInput);
             return this;
         }
-
         public Builder resourceAccessIdentityInput(IdentityProviderInputArgs resourceAccessIdentityInput) {
             this.resourceAccessIdentityInput = Output.of(Objects.requireNonNull(resourceAccessIdentityInput));
             return this;
-        }
-        public AddRecoveryServicesProviderInputPropertiesArgs build() {
+        }        public AddRecoveryServicesProviderInputPropertiesArgs build() {
             return new AddRecoveryServicesProviderInputPropertiesArgs(authenticationIdentityInput, dataPlaneAuthenticationIdentityInput, machineId, machineName, resourceAccessIdentityInput);
         }
     }

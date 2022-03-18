@@ -157,37 +157,30 @@ public final class ServiceBusTopicMessageResponse extends io.pulumi.resources.In
             this.authentication = authentication;
             return this;
         }
-
         public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties) {
             this.brokeredMessageProperties = brokeredMessageProperties;
             return this;
         }
-
         public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
             this.customMessageProperties = customMessageProperties;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder topicPath(@Nullable String topicPath) {
             this.topicPath = topicPath;
             return this;
         }
-
         public Builder transportType(@Nullable String transportType) {
             this.transportType = transportType;
             return this;
-        }
-        public ServiceBusTopicMessageResponse build() {
+        }        public ServiceBusTopicMessageResponse build() {
             return new ServiceBusTopicMessageResponse(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, topicPath, transportType);
         }
     }

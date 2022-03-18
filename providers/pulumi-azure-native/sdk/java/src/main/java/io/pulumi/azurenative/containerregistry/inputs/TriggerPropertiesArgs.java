@@ -97,32 +97,32 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.baseImageTrigger = baseImageTrigger;
             return this;
         }
-
         public Builder baseImageTrigger(@Nullable BaseImageTriggerArgs baseImageTrigger) {
             this.baseImageTrigger = Output.ofNullable(baseImageTrigger);
             return this;
         }
-
         public Builder sourceTriggers(@Nullable Output<List<SourceTriggerArgs>> sourceTriggers) {
             this.sourceTriggers = sourceTriggers;
             return this;
         }
-
         public Builder sourceTriggers(@Nullable List<SourceTriggerArgs> sourceTriggers) {
             this.sourceTriggers = Output.ofNullable(sourceTriggers);
             return this;
         }
-
+        public Builder sourceTriggers(SourceTriggerArgs... sourceTriggers) {
+            return sourceTriggers(List.of(sourceTriggers));
+        }
         public Builder timerTriggers(@Nullable Output<List<TimerTriggerArgs>> timerTriggers) {
             this.timerTriggers = timerTriggers;
             return this;
         }
-
         public Builder timerTriggers(@Nullable List<TimerTriggerArgs> timerTriggers) {
             this.timerTriggers = Output.ofNullable(timerTriggers);
             return this;
         }
-        public TriggerPropertiesArgs build() {
+        public Builder timerTriggers(TimerTriggerArgs... timerTriggers) {
+            return timerTriggers(List.of(timerTriggers));
+        }        public TriggerPropertiesArgs build() {
             return new TriggerPropertiesArgs(baseImageTrigger, sourceTriggers, timerTriggers);
         }
     }

@@ -237,122 +237,98 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.aadClientId = Objects.requireNonNull(aadClientId);
             return this;
         }
-
         public Builder aadClientId(String aadClientId) {
             this.aadClientId = Output.of(Objects.requireNonNull(aadClientId));
             return this;
         }
-
         public Builder aadTenantId(Output<String> aadTenantId) {
             this.aadTenantId = Objects.requireNonNull(aadTenantId);
             return this;
         }
-
         public Builder aadTenantId(String aadTenantId) {
             this.aadTenantId = Output.of(Objects.requireNonNull(aadTenantId));
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
-
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
             this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
             this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(aadClientId, aadTenantId, clusterName, createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType, location, resourceGroupName, tags);
         }
     }

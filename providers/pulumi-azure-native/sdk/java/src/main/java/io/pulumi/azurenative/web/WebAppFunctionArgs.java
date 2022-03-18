@@ -317,172 +317,138 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable Object config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder configHref(@Nullable Output<String> configHref) {
             this.configHref = configHref;
             return this;
         }
-
         public Builder configHref(@Nullable String configHref) {
             this.configHref = Output.ofNullable(configHref);
             return this;
         }
-
         public Builder files(@Nullable Output<Map<String,String>> files) {
             this.files = files;
             return this;
         }
-
         public Builder files(@Nullable Map<String,String> files) {
             this.files = Output.ofNullable(files);
             return this;
         }
-
         public Builder functionAppId(@Nullable Output<String> functionAppId) {
             this.functionAppId = functionAppId;
             return this;
         }
-
         public Builder functionAppId(@Nullable String functionAppId) {
             this.functionAppId = Output.ofNullable(functionAppId);
             return this;
         }
-
         public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
-
         public Builder functionName(@Nullable String functionName) {
             this.functionName = Output.ofNullable(functionName);
             return this;
         }
-
         public Builder href(@Nullable Output<String> href) {
             this.href = href;
             return this;
         }
-
         public Builder href(@Nullable String href) {
             this.href = Output.ofNullable(href);
             return this;
         }
-
         public Builder invokeUrlTemplate(@Nullable Output<String> invokeUrlTemplate) {
             this.invokeUrlTemplate = invokeUrlTemplate;
             return this;
         }
-
         public Builder invokeUrlTemplate(@Nullable String invokeUrlTemplate) {
             this.invokeUrlTemplate = Output.ofNullable(invokeUrlTemplate);
             return this;
         }
-
         public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
             this.isDisabled = isDisabled;
             return this;
         }
-
         public Builder isDisabled(@Nullable Boolean isDisabled) {
             this.isDisabled = Output.ofNullable(isDisabled);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder language(@Nullable Output<String> language) {
             this.language = language;
             return this;
         }
-
         public Builder language(@Nullable String language) {
             this.language = Output.ofNullable(language);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scriptHref(@Nullable Output<String> scriptHref) {
             this.scriptHref = scriptHref;
             return this;
         }
-
         public Builder scriptHref(@Nullable String scriptHref) {
             this.scriptHref = Output.ofNullable(scriptHref);
             return this;
         }
-
         public Builder scriptRootPathHref(@Nullable Output<String> scriptRootPathHref) {
             this.scriptRootPathHref = scriptRootPathHref;
             return this;
         }
-
         public Builder scriptRootPathHref(@Nullable String scriptRootPathHref) {
             this.scriptRootPathHref = Output.ofNullable(scriptRootPathHref);
             return this;
         }
-
         public Builder secretsFileHref(@Nullable Output<String> secretsFileHref) {
             this.secretsFileHref = secretsFileHref;
             return this;
         }
-
         public Builder secretsFileHref(@Nullable String secretsFileHref) {
             this.secretsFileHref = Output.ofNullable(secretsFileHref);
             return this;
         }
-
         public Builder testData(@Nullable Output<String> testData) {
             this.testData = testData;
             return this;
         }
-
         public Builder testData(@Nullable String testData) {
             this.testData = Output.ofNullable(testData);
             return this;
         }
-
         public Builder testDataHref(@Nullable Output<String> testDataHref) {
             this.testDataHref = testDataHref;
             return this;
         }
-
         public Builder testDataHref(@Nullable String testDataHref) {
             this.testDataHref = Output.ofNullable(testDataHref);
             return this;
-        }
-        public WebAppFunctionArgs build() {
+        }        public WebAppFunctionArgs build() {
             return new WebAppFunctionArgs(config, configHref, files, functionAppId, functionName, href, invokeUrlTemplate, isDisabled, kind, language, name, resourceGroupName, scriptHref, scriptRootPathHref, secretsFileHref, testData, testDataHref);
         }
     }

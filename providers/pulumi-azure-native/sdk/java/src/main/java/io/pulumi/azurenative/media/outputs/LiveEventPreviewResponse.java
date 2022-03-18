@@ -122,27 +122,25 @@ public final class LiveEventPreviewResponse {
             this.accessControl = accessControl;
             return this;
         }
-
         public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
-
         public Builder endpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(LiveEventEndpointResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder previewLocator(@Nullable String previewLocator) {
             this.previewLocator = previewLocator;
             return this;
         }
-
         public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
             this.streamingPolicyName = streamingPolicyName;
             return this;
-        }
-        public LiveEventPreviewResponse build() {
+        }        public LiveEventPreviewResponse build() {
             return new LiveEventPreviewResponse(accessControl, alternativeMediaId, endpoints, previewLocator, streamingPolicyName);
         }
     }

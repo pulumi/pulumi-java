@@ -160,72 +160,58 @@ public final class SharePointOnlineListSourceArgs extends io.pulumi.resources.Re
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder httpRequestTimeout(@Nullable Output<Object> httpRequestTimeout) {
             this.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
-
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
             this.httpRequestTimeout = Output.ofNullable(httpRequestTimeout);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder query(@Nullable Output<Object> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable Object query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SharePointOnlineListSourceArgs build() {
+        }        public SharePointOnlineListSourceArgs build() {
             return new SharePointOnlineListSourceArgs(disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }
     }

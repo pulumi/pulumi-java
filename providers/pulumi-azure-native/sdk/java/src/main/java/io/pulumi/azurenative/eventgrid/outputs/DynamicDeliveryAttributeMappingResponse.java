@@ -89,17 +89,14 @@ public final class DynamicDeliveryAttributeMappingResponse {
             this.name = name;
             return this;
         }
-
         public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = sourceField;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DynamicDeliveryAttributeMappingResponse build() {
+        }        public DynamicDeliveryAttributeMappingResponse build() {
             return new DynamicDeliveryAttributeMappingResponse(name, sourceField, type);
         }
     }

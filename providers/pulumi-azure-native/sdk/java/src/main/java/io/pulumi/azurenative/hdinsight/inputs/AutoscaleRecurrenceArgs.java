@@ -80,22 +80,21 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable List<AutoscaleScheduleArgs> schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
+        public Builder schedule(AutoscaleScheduleArgs... schedule) {
+            return schedule(List.of(schedule));
+        }
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public AutoscaleRecurrenceArgs build() {
+        }        public AutoscaleRecurrenceArgs build() {
             return new AutoscaleRecurrenceArgs(schedule, timeZone);
         }
     }

@@ -112,42 +112,34 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
             this.blueprint = blueprint;
             return this;
         }
-
         public Builder blueprint(@Nullable String blueprint) {
             this.blueprint = Output.ofNullable(blueprint);
             return this;
         }
-
         public Builder componentVersion(@Nullable Output<Map<String,String>> componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
-
         public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
             this.componentVersion = Output.ofNullable(componentVersion);
             return this;
         }
-
         public Builder configurations(@Nullable Output<Object> configurations) {
             this.configurations = configurations;
             return this;
         }
-
         public Builder configurations(@Nullable Object configurations) {
             this.configurations = Output.ofNullable(configurations);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public ClusterDefinitionArgs build() {
+        }        public ClusterDefinitionArgs build() {
             return new ClusterDefinitionArgs(blueprint, componentVersion, configurations, kind);
         }
     }

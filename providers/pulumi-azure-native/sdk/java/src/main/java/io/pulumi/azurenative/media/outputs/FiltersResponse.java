@@ -109,22 +109,21 @@ public final class FiltersResponse {
             this.crop = crop;
             return this;
         }
-
         public Builder deinterlace(@Nullable DeinterlaceResponse deinterlace) {
             this.deinterlace = deinterlace;
             return this;
         }
-
         public Builder overlays(@Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays) {
             this.overlays = overlays;
             return this;
         }
-
+        public Builder overlays(Either<AudioOverlayResponse,VideoOverlayResponse>... overlays) {
+            return overlays(List.of(overlays));
+        }
         public Builder rotation(@Nullable String rotation) {
             this.rotation = rotation;
             return this;
-        }
-        public FiltersResponse build() {
+        }        public FiltersResponse build() {
             return new FiltersResponse(crop, deinterlace, overlays, rotation);
         }
     }

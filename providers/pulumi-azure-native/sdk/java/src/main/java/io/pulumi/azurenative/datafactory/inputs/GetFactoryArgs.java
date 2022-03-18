@@ -72,12 +72,10 @@ public final class GetFactoryArgs extends io.pulumi.resources.InvokeArgs {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFactoryArgs build() {
+        }        public GetFactoryArgs build() {
             return new GetFactoryArgs(factoryName, resourceGroupName);
         }
     }

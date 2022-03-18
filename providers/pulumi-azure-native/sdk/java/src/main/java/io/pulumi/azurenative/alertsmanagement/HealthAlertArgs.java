@@ -191,92 +191,80 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<HealthAlertActionArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(HealthAlertActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder criteria(Output<HealthAlertCriteriaArgs> criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
-
         public Builder criteria(HealthAlertCriteriaArgs criteria) {
             this.criteria = Output.of(Objects.requireNonNull(criteria));
             return this;
         }
-
         public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public HealthAlertArgs build() {
+        }        public HealthAlertArgs build() {
             return new HealthAlertArgs(actions, criteria, description, enabled, location, resourceGroupName, ruleName, scopes, tags);
         }
     }

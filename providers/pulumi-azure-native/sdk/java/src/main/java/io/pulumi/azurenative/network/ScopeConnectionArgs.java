@@ -138,62 +138,50 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder scopeConnectionName(@Nullable Output<String> scopeConnectionName) {
             this.scopeConnectionName = scopeConnectionName;
             return this;
         }
-
         public Builder scopeConnectionName(@Nullable String scopeConnectionName) {
             this.scopeConnectionName = Output.ofNullable(scopeConnectionName);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public ScopeConnectionArgs build() {
+        }        public ScopeConnectionArgs build() {
             return new ScopeConnectionArgs(description, networkManagerName, resourceGroupName, resourceId, scopeConnectionName, tenantId);
         }
     }

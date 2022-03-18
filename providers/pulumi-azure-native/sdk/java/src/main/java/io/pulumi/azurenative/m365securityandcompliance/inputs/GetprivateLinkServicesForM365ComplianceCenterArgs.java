@@ -72,12 +72,10 @@ public final class GetprivateLinkServicesForM365ComplianceCenterArgs extends io.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetprivateLinkServicesForM365ComplianceCenterArgs build() {
+        }        public GetprivateLinkServicesForM365ComplianceCenterArgs build() {
             return new GetprivateLinkServicesForM365ComplianceCenterArgs(resourceGroupName, resourceName);
         }
     }

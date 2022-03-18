@@ -106,22 +106,21 @@ public final class ContainerInstanceViewResponse {
             this.currentState = currentState;
             return this;
         }
-
         public Builder events(@Nullable List<ContainerEventResponse> events) {
             this.events = events;
             return this;
         }
-
+        public Builder events(ContainerEventResponse... events) {
+            return events(List.of(events));
+        }
         public Builder previousState(@Nullable ContainerStateResponse previousState) {
             this.previousState = previousState;
             return this;
         }
-
         public Builder restartCount(@Nullable Integer restartCount) {
             this.restartCount = restartCount;
             return this;
-        }
-        public ContainerInstanceViewResponse build() {
+        }        public ContainerInstanceViewResponse build() {
             return new ContainerInstanceViewResponse(currentState, events, previousState, restartCount);
         }
     }

@@ -53,8 +53,7 @@ public final class ContinuousModeBackupPolicyResponse {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ContinuousModeBackupPolicyResponse build() {
+        }        public ContinuousModeBackupPolicyResponse build() {
             return new ContinuousModeBackupPolicyResponse(type);
         }
     }

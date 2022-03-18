@@ -60,8 +60,7 @@ public final class DefenderForServersAwsOfferingResponseDefenderForServers exten
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = cloudRoleArn;
             return this;
-        }
-        public DefenderForServersAwsOfferingResponseDefenderForServers build() {
+        }        public DefenderForServersAwsOfferingResponseDefenderForServers build() {
             return new DefenderForServersAwsOfferingResponseDefenderForServers(cloudRoleArn);
         }
     }

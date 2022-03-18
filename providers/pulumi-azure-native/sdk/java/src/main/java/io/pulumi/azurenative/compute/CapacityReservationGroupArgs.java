@@ -124,52 +124,45 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
             this.capacityReservationGroupName = capacityReservationGroupName;
             return this;
         }
-
         public Builder capacityReservationGroupName(@Nullable String capacityReservationGroupName) {
             this.capacityReservationGroupName = Output.ofNullable(capacityReservationGroupName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public CapacityReservationGroupArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public CapacityReservationGroupArgs build() {
             return new CapacityReservationGroupArgs(capacityReservationGroupName, location, resourceGroupName, tags, zones);
         }
     }

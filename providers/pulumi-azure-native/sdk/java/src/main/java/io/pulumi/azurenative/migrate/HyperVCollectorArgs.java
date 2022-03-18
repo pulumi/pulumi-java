@@ -115,52 +115,42 @@ public final class HyperVCollectorArgs extends io.pulumi.resources.ResourceArgs 
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder hyperVCollectorName(@Nullable Output<String> hyperVCollectorName) {
             this.hyperVCollectorName = hyperVCollectorName;
             return this;
         }
-
         public Builder hyperVCollectorName(@Nullable String hyperVCollectorName) {
             this.hyperVCollectorName = Output.ofNullable(hyperVCollectorName);
             return this;
         }
-
         public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
-
         public Builder properties(@Nullable Output<CollectorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable CollectorPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public HyperVCollectorArgs build() {
+        }        public HyperVCollectorArgs build() {
             return new HyperVCollectorArgs(eTag, hyperVCollectorName, projectName, properties, resourceGroupName);
         }
     }

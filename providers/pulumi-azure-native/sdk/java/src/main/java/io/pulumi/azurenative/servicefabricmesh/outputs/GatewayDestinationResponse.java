@@ -85,17 +85,14 @@ public final class GatewayDestinationResponse {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GatewayDestinationResponse build() {
+        }        public GatewayDestinationResponse build() {
             return new GatewayDestinationResponse(applicationName, endpointName, serviceName);
         }
     }

@@ -79,22 +79,18 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
             this.convention = convention;
             return this;
         }
-
         public Builder convention(@Nullable CookieExpirationConvention convention) {
             this.convention = Output.ofNullable(convention);
             return this;
         }
-
         public Builder timeToExpiration(@Nullable Output<String> timeToExpiration) {
             this.timeToExpiration = timeToExpiration;
             return this;
         }
-
         public Builder timeToExpiration(@Nullable String timeToExpiration) {
             this.timeToExpiration = Output.ofNullable(timeToExpiration);
             return this;
-        }
-        public CookieExpirationArgs build() {
+        }        public CookieExpirationArgs build() {
             return new CookieExpirationArgs(convention, timeToExpiration);
         }
     }

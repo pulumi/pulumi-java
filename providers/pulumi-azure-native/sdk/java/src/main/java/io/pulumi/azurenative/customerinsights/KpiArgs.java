@@ -322,172 +322,147 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             this.aliases = aliases;
             return this;
         }
-
         public Builder aliases(@Nullable List<KpiAliasArgs> aliases) {
             this.aliases = Output.ofNullable(aliases);
             return this;
         }
-
+        public Builder aliases(KpiAliasArgs... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder calculationWindow(Output<CalculationWindowTypes> calculationWindow) {
             this.calculationWindow = Objects.requireNonNull(calculationWindow);
             return this;
         }
-
         public Builder calculationWindow(CalculationWindowTypes calculationWindow) {
             this.calculationWindow = Output.of(Objects.requireNonNull(calculationWindow));
             return this;
         }
-
         public Builder calculationWindowFieldName(@Nullable Output<String> calculationWindowFieldName) {
             this.calculationWindowFieldName = calculationWindowFieldName;
             return this;
         }
-
         public Builder calculationWindowFieldName(@Nullable String calculationWindowFieldName) {
             this.calculationWindowFieldName = Output.ofNullable(calculationWindowFieldName);
             return this;
         }
-
         public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder entityType(Output<EntityTypes> entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
-
         public Builder entityType(EntityTypes entityType) {
             this.entityType = Output.of(Objects.requireNonNull(entityType));
             return this;
         }
-
         public Builder entityTypeName(Output<String> entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
-
         public Builder entityTypeName(String entityTypeName) {
             this.entityTypeName = Output.of(Objects.requireNonNull(entityTypeName));
             return this;
         }
-
         public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
-
         public Builder extracts(@Nullable Output<List<KpiExtractArgs>> extracts) {
             this.extracts = extracts;
             return this;
         }
-
         public Builder extracts(@Nullable List<KpiExtractArgs> extracts) {
             this.extracts = Output.ofNullable(extracts);
             return this;
         }
-
+        public Builder extracts(KpiExtractArgs... extracts) {
+            return extracts(List.of(extracts));
+        }
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder function(Output<KpiFunctions> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder function(KpiFunctions function) {
             this.function = Output.of(Objects.requireNonNull(function));
             return this;
         }
-
         public Builder groupBy(@Nullable Output<List<String>> groupBy) {
             this.groupBy = groupBy;
             return this;
         }
-
         public Builder groupBy(@Nullable List<String> groupBy) {
             this.groupBy = Output.ofNullable(groupBy);
             return this;
         }
-
+        public Builder groupBy(String... groupBy) {
+            return groupBy(List.of(groupBy));
+        }
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder kpiName(@Nullable Output<String> kpiName) {
             this.kpiName = kpiName;
             return this;
         }
-
         public Builder kpiName(@Nullable String kpiName) {
             this.kpiName = Output.ofNullable(kpiName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder thresHolds(@Nullable Output<KpiThresholdsArgs> thresHolds) {
             this.thresHolds = thresHolds;
             return this;
         }
-
         public Builder thresHolds(@Nullable KpiThresholdsArgs thresHolds) {
             this.thresHolds = Output.ofNullable(thresHolds);
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
-        }
-        public KpiArgs build() {
+        }        public KpiArgs build() {
             return new KpiArgs(aliases, calculationWindow, calculationWindowFieldName, description, displayName, entityType, entityTypeName, expression, extracts, filter, function, groupBy, hubName, kpiName, resourceGroupName, thresHolds, unit);
         }
     }

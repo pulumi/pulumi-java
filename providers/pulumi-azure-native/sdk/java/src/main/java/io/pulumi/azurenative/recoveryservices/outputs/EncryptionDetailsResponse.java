@@ -87,17 +87,14 @@ public final class EncryptionDetailsResponse {
             this.kekCertExpiryDate = kekCertExpiryDate;
             return this;
         }
-
         public Builder kekCertThumbprint(@Nullable String kekCertThumbprint) {
             this.kekCertThumbprint = kekCertThumbprint;
             return this;
         }
-
         public Builder kekState(@Nullable String kekState) {
             this.kekState = kekState;
             return this;
-        }
-        public EncryptionDetailsResponse build() {
+        }        public EncryptionDetailsResponse build() {
             return new EncryptionDetailsResponse(kekCertExpiryDate, kekCertThumbprint, kekState);
         }
     }

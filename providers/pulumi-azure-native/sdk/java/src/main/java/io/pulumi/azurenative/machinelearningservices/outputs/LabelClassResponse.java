@@ -72,12 +72,10 @@ public final class LabelClassResponse {
             this.displayName = displayName;
             return this;
         }
-
         public Builder subclasses(@Nullable Map<String,LabelClassResponse> subclasses) {
             this.subclasses = subclasses;
             return this;
-        }
-        public LabelClassResponse build() {
+        }        public LabelClassResponse build() {
             return new LabelClassResponse(displayName, subclasses);
         }
     }

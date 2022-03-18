@@ -54,8 +54,7 @@ public final class GetSubscriptionDiagnosticSettingArgs extends io.pulumi.resour
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSubscriptionDiagnosticSettingArgs build() {
+        }        public GetSubscriptionDiagnosticSettingArgs build() {
             return new GetSubscriptionDiagnosticSettingArgs(name);
         }
     }

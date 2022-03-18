@@ -58,8 +58,7 @@ public final class NsgReferenceResponse extends io.pulumi.resources.InvokeArgs {
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
-        }
-        public NsgReferenceResponse build() {
+        }        public NsgReferenceResponse build() {
             return new NsgReferenceResponse(sourceArmResourceId);
         }
     }

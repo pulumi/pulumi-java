@@ -157,72 +157,58 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
             this.customFragment = customFragment;
             return this;
         }
-
         public Builder customFragment(@Nullable String customFragment) {
             this.customFragment = Output.ofNullable(customFragment);
             return this;
         }
-
         public Builder customHostname(@Nullable Output<String> customHostname) {
             this.customHostname = customHostname;
             return this;
         }
-
         public Builder customHostname(@Nullable String customHostname) {
             this.customHostname = Output.ofNullable(customHostname);
             return this;
         }
-
         public Builder customPath(@Nullable Output<String> customPath) {
             this.customPath = customPath;
             return this;
         }
-
         public Builder customPath(@Nullable String customPath) {
             this.customPath = Output.ofNullable(customPath);
             return this;
         }
-
         public Builder customQueryString(@Nullable Output<String> customQueryString) {
             this.customQueryString = customQueryString;
             return this;
         }
-
         public Builder customQueryString(@Nullable String customQueryString) {
             this.customQueryString = Output.ofNullable(customQueryString);
             return this;
         }
-
         public Builder destinationProtocol(@Nullable Output<Either<String,DestinationProtocol>> destinationProtocol) {
             this.destinationProtocol = destinationProtocol;
             return this;
         }
-
         public Builder destinationProtocol(@Nullable Either<String,DestinationProtocol> destinationProtocol) {
             this.destinationProtocol = Output.ofNullable(destinationProtocol);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder redirectType(Output<Either<String,RedirectType>> redirectType) {
             this.redirectType = Objects.requireNonNull(redirectType);
             return this;
         }
-
         public Builder redirectType(Either<String,RedirectType> redirectType) {
             this.redirectType = Output.of(Objects.requireNonNull(redirectType));
             return this;
-        }
-        public UrlRedirectActionParametersArgs build() {
+        }        public UrlRedirectActionParametersArgs build() {
             return new UrlRedirectActionParametersArgs(customFragment, customHostname, customPath, customQueryString, destinationProtocol, odataType, redirectType);
         }
     }

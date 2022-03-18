@@ -381,107 +381,95 @@ public final class VpnSiteLinkConnectionResponse {
             this.connectionBandwidth = connectionBandwidth;
             return this;
         }
-
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
-
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
             this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
             return this;
         }
-
         public Builder egressNatRules(@Nullable List<SubResourceResponse> egressNatRules) {
             this.egressNatRules = egressNatRules;
             return this;
         }
-
+        public Builder egressNatRules(SubResourceResponse... egressNatRules) {
+            return egressNatRules(List.of(egressNatRules));
+        }
         public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
-
         public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
             this.enableRateLimiting = enableRateLimiting;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
             return this;
         }
-
         public Builder ingressNatRules(@Nullable List<SubResourceResponse> ingressNatRules) {
             this.ingressNatRules = ingressNatRules;
             return this;
         }
-
+        public Builder ingressNatRules(SubResourceResponse... ingressNatRules) {
+            return ingressNatRules(List.of(ingressNatRules));
+        }
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
-
+        public Builder ipsecPolicies(IpsecPolicyResponse... ipsecPolicies) {
+            return ipsecPolicies(List.of(ipsecPolicies));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
-
         public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
-
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
-
         public Builder vpnConnectionProtocolType(@Nullable String vpnConnectionProtocolType) {
             this.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
-
         public Builder vpnLinkConnectionMode(@Nullable String vpnLinkConnectionMode) {
             this.vpnLinkConnectionMode = vpnLinkConnectionMode;
             return this;
         }
-
         public Builder vpnSiteLink(@Nullable SubResourceResponse vpnSiteLink) {
             this.vpnSiteLink = vpnSiteLink;
             return this;
-        }
-        public VpnSiteLinkConnectionResponse build() {
+        }        public VpnSiteLinkConnectionResponse build() {
             return new VpnSiteLinkConnectionResponse(connectionBandwidth, connectionStatus, egressBytesTransferred, egressNatRules, enableBgp, enableRateLimiting, etag, id, ingressBytesTransferred, ingressNatRules, ipsecPolicies, name, provisioningState, routingWeight, sharedKey, type, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, vpnConnectionProtocolType, vpnLinkConnectionMode, vpnSiteLink);
         }
     }

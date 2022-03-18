@@ -72,12 +72,10 @@ public final class DataFlowStagingInfoResponse {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             this.linkedService = linkedService;
             return this;
-        }
-        public DataFlowStagingInfoResponse build() {
+        }        public DataFlowStagingInfoResponse build() {
             return new DataFlowStagingInfoResponse(folderPath, linkedService);
         }
     }

@@ -207,52 +207,45 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder dnsSettings(@Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
-
         public Builder dscpConfiguration(@Nullable SubResourceResponse dscpConfiguration) {
             this.dscpConfiguration = dscpConfiguration;
             return this;
         }
-
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
-
         public Builder enableFpga(@Nullable Boolean enableFpga) {
             this.enableFpga = enableFpga;
             return this;
         }
-
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
-
         public Builder ipConfigurations(List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(VirtualMachineNetworkInterfaceIPConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable SubResourceResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
-        }
-        public VirtualMachineNetworkInterfaceConfigurationResponse build() {
+        }        public VirtualMachineNetworkInterfaceConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceConfigurationResponse(deleteOption, dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableFpga, enableIPForwarding, ipConfigurations, name, networkSecurityGroup, primary);
         }
     }

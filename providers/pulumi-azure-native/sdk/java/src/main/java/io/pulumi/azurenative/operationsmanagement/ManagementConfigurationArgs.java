@@ -107,42 +107,34 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managementConfigurationName(@Nullable Output<String> managementConfigurationName) {
             this.managementConfigurationName = managementConfigurationName;
             return this;
         }
-
         public Builder managementConfigurationName(@Nullable String managementConfigurationName) {
             this.managementConfigurationName = Output.ofNullable(managementConfigurationName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ManagementConfigurationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ManagementConfigurationPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ManagementConfigurationArgs build() {
+        }        public ManagementConfigurationArgs build() {
             return new ManagementConfigurationArgs(location, managementConfigurationName, properties, resourceGroupName);
         }
     }

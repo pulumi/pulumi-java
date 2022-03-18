@@ -123,27 +123,22 @@ public final class OrderStatusResponse {
             this.additionalOrderDetails = Objects.requireNonNull(additionalOrderDetails);
             return this;
         }
-
         public Builder comments(@Nullable String comments) {
             this.comments = comments;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder trackingInformation(TrackingInfoResponse trackingInformation) {
             this.trackingInformation = Objects.requireNonNull(trackingInformation);
             return this;
         }
-
         public Builder updateDateTime(String updateDateTime) {
             this.updateDateTime = Objects.requireNonNull(updateDateTime);
             return this;
-        }
-        public OrderStatusResponse build() {
+        }        public OrderStatusResponse build() {
             return new OrderStatusResponse(additionalOrderDetails, comments, status, trackingInformation, updateDateTime);
         }
     }

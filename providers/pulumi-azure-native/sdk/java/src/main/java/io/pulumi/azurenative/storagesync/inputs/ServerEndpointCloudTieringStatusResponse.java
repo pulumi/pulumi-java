@@ -210,52 +210,42 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
             this.cachePerformance = Objects.requireNonNull(cachePerformance);
             return this;
         }
-
         public Builder datePolicyStatus(CloudTieringDatePolicyStatusResponse datePolicyStatus) {
             this.datePolicyStatus = Objects.requireNonNull(datePolicyStatus);
             return this;
         }
-
         public Builder filesNotTiering(CloudTieringFilesNotTieringResponse filesNotTiering) {
             this.filesNotTiering = Objects.requireNonNull(filesNotTiering);
             return this;
         }
-
         public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
-
         public Builder healthLastUpdatedTimestamp(String healthLastUpdatedTimestamp) {
             this.healthLastUpdatedTimestamp = Objects.requireNonNull(healthLastUpdatedTimestamp);
             return this;
         }
-
         public Builder lastCloudTieringResult(Integer lastCloudTieringResult) {
             this.lastCloudTieringResult = Objects.requireNonNull(lastCloudTieringResult);
             return this;
         }
-
         public Builder lastSuccessTimestamp(String lastSuccessTimestamp) {
             this.lastSuccessTimestamp = Objects.requireNonNull(lastSuccessTimestamp);
             return this;
         }
-
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public Builder spaceSavings(CloudTieringSpaceSavingsResponse spaceSavings) {
             this.spaceSavings = Objects.requireNonNull(spaceSavings);
             return this;
         }
-
         public Builder volumeFreeSpacePolicyStatus(CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
             this.volumeFreeSpacePolicyStatus = Objects.requireNonNull(volumeFreeSpacePolicyStatus);
             return this;
-        }
-        public ServerEndpointCloudTieringStatusResponse build() {
+        }        public ServerEndpointCloudTieringStatusResponse build() {
             return new ServerEndpointCloudTieringStatusResponse(cachePerformance, datePolicyStatus, filesNotTiering, health, healthLastUpdatedTimestamp, lastCloudTieringResult, lastSuccessTimestamp, lastUpdatedTimestamp, spaceSavings, volumeFreeSpacePolicyStatus);
         }
     }

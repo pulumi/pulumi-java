@@ -101,22 +101,18 @@ public final class GetOutboundFirewallRuleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOutboundFirewallRuleResult build() {
+        }        public GetOutboundFirewallRuleResult build() {
             return new GetOutboundFirewallRuleResult(id, name, provisioningState, type);
         }
     }

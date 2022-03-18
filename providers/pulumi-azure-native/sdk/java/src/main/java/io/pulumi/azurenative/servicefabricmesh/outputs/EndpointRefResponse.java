@@ -53,8 +53,7 @@ public final class EndpointRefResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public EndpointRefResponse build() {
+        }        public EndpointRefResponse build() {
             return new EndpointRefResponse(name);
         }
     }

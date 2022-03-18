@@ -149,32 +149,32 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
             this.aggregation = aggregation;
             return this;
         }
-
         public Builder configuration(@Nullable ReportConfigDatasetConfigurationResponse configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder filter(@Nullable ReportConfigFilterResponse filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder granularity(@Nullable String granularity) {
             this.granularity = granularity;
             return this;
         }
-
         public Builder grouping(@Nullable List<ReportConfigGroupingResponse> grouping) {
             this.grouping = grouping;
             return this;
         }
-
+        public Builder grouping(ReportConfigGroupingResponse... grouping) {
+            return grouping(List.of(grouping));
+        }
         public Builder sorting(@Nullable List<ReportConfigSortingResponse> sorting) {
             this.sorting = sorting;
             return this;
         }
-        public ReportConfigDatasetResponse build() {
+        public Builder sorting(ReportConfigSortingResponse... sorting) {
+            return sorting(List.of(sorting));
+        }        public ReportConfigDatasetResponse build() {
             return new ReportConfigDatasetResponse(aggregation, configuration, filter, granularity, grouping, sorting);
         }
     }

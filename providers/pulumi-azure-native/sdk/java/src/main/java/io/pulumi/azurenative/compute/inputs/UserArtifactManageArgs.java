@@ -90,32 +90,26 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
             this.install = Objects.requireNonNull(install);
             return this;
         }
-
         public Builder install(String install) {
             this.install = Output.of(Objects.requireNonNull(install));
             return this;
         }
-
         public Builder remove(Output<String> remove) {
             this.remove = Objects.requireNonNull(remove);
             return this;
         }
-
         public Builder remove(String remove) {
             this.remove = Output.of(Objects.requireNonNull(remove));
             return this;
         }
-
         public Builder update(@Nullable Output<String> update) {
             this.update = update;
             return this;
         }
-
         public Builder update(@Nullable String update) {
             this.update = Output.ofNullable(update);
             return this;
-        }
-        public UserArtifactManageArgs build() {
+        }        public UserArtifactManageArgs build() {
             return new UserArtifactManageArgs(install, remove, update);
         }
     }

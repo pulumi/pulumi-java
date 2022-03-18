@@ -62,7 +62,9 @@ public final class DedicatedCapacityAdministratorsResponse extends io.pulumi.res
             this.members = members;
             return this;
         }
-        public DedicatedCapacityAdministratorsResponse build() {
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }        public DedicatedCapacityAdministratorsResponse build() {
             return new DedicatedCapacityAdministratorsResponse(members);
         }
     }

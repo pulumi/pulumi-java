@@ -174,82 +174,69 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.customerSecrets = customerSecrets;
             return this;
         }
-
         public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
             this.customerSecrets = Output.ofNullable(customerSecrets);
             return this;
         }
-
+        public Builder customerSecrets(CustomerSecretArgs... customerSecrets) {
+            return customerSecrets(List.of(customerSecrets));
+        }
         public Builder dataManagerName(Output<String> dataManagerName) {
             this.dataManagerName = Objects.requireNonNull(dataManagerName);
             return this;
         }
-
         public Builder dataManagerName(String dataManagerName) {
             this.dataManagerName = Output.of(Objects.requireNonNull(dataManagerName));
             return this;
         }
-
         public Builder dataStoreName(@Nullable Output<String> dataStoreName) {
             this.dataStoreName = dataStoreName;
             return this;
         }
-
         public Builder dataStoreName(@Nullable String dataStoreName) {
             this.dataStoreName = Output.ofNullable(dataStoreName);
             return this;
         }
-
         public Builder dataStoreTypeId(Output<String> dataStoreTypeId) {
             this.dataStoreTypeId = Objects.requireNonNull(dataStoreTypeId);
             return this;
         }
-
         public Builder dataStoreTypeId(String dataStoreTypeId) {
             this.dataStoreTypeId = Output.of(Objects.requireNonNull(dataStoreTypeId));
             return this;
         }
-
         public Builder extendedProperties(@Nullable Output<Object> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
-
         public Builder extendedProperties(@Nullable Object extendedProperties) {
             this.extendedProperties = Output.ofNullable(extendedProperties);
             return this;
         }
-
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
             this.repositoryId = repositoryId;
             return this;
         }
-
         public Builder repositoryId(@Nullable String repositoryId) {
             this.repositoryId = Output.ofNullable(repositoryId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder state(Output<State> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(State state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
-        }
-        public DataStoreArgs build() {
+        }        public DataStoreArgs build() {
             return new DataStoreArgs(customerSecrets, dataManagerName, dataStoreName, dataStoreTypeId, extendedProperties, repositoryId, resourceGroupName, state);
         }
     }

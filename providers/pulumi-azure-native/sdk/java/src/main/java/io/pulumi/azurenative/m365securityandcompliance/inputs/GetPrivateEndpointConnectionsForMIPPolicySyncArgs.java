@@ -88,17 +88,14 @@ public final class GetPrivateEndpointConnectionsForMIPPolicySyncArgs extends io.
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetPrivateEndpointConnectionsForMIPPolicySyncArgs build() {
+        }        public GetPrivateEndpointConnectionsForMIPPolicySyncArgs build() {
             return new GetPrivateEndpointConnectionsForMIPPolicySyncArgs(privateEndpointConnectionName, resourceGroupName, resourceName);
         }
     }

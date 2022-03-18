@@ -61,12 +61,10 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
-        }
-        public ScopeNamespaceArgs build() {
+        }        public ScopeNamespaceArgs build() {
             return new ScopeNamespaceArgs(targetNamespace);
         }
     }

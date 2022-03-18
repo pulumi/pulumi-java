@@ -80,22 +80,18 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
-
         public Builder specification(String specification) {
             this.specification = Output.of(Objects.requireNonNull(specification));
             return this;
         }
-
         public Builder validationType(@Nullable Output<Either<String,ValidationType>> validationType) {
             this.validationType = validationType;
             return this;
         }
-
         public Builder validationType(@Nullable Either<String,ValidationType> validationType) {
             this.validationType = Output.ofNullable(validationType);
             return this;
-        }
-        public CustomRPValidationsArgs build() {
+        }        public CustomRPValidationsArgs build() {
             return new CustomRPValidationsArgs(specification, validationType);
         }
     }

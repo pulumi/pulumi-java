@@ -88,17 +88,14 @@ public final class ManagementEventAggregationConditionResponse {
             this.operator = operator;
             return this;
         }
-
         public Builder threshold(@Nullable Double threshold) {
             this.threshold = threshold;
             return this;
         }
-
         public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = windowSize;
             return this;
-        }
-        public ManagementEventAggregationConditionResponse build() {
+        }        public ManagementEventAggregationConditionResponse build() {
             return new ManagementEventAggregationConditionResponse(operator, threshold, windowSize);
         }
     }

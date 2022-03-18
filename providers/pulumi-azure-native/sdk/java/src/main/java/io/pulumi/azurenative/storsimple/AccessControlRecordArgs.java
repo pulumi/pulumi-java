@@ -123,52 +123,42 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
             this.accessControlRecordName = accessControlRecordName;
             return this;
         }
-
         public Builder accessControlRecordName(@Nullable String accessControlRecordName) {
             this.accessControlRecordName = Output.ofNullable(accessControlRecordName);
             return this;
         }
-
         public Builder initiatorName(Output<String> initiatorName) {
             this.initiatorName = Objects.requireNonNull(initiatorName);
             return this;
         }
-
         public Builder initiatorName(String initiatorName) {
             this.initiatorName = Output.of(Objects.requireNonNull(initiatorName));
             return this;
         }
-
         public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Kind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public AccessControlRecordArgs build() {
+        }        public AccessControlRecordArgs build() {
             return new AccessControlRecordArgs(accessControlRecordName, initiatorName, kind, managerName, resourceGroupName);
         }
     }

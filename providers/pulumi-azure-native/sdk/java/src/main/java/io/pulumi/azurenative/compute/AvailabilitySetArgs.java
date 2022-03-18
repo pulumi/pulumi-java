@@ -191,92 +191,77 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             this.availabilitySetName = availabilitySetName;
             return this;
         }
-
         public Builder availabilitySetName(@Nullable String availabilitySetName) {
             this.availabilitySetName = Output.ofNullable(availabilitySetName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder platformFaultDomainCount(@Nullable Output<Integer> platformFaultDomainCount) {
             this.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
-
         public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = Output.ofNullable(platformFaultDomainCount);
             return this;
         }
-
         public Builder platformUpdateDomainCount(@Nullable Output<Integer> platformUpdateDomainCount) {
             this.platformUpdateDomainCount = platformUpdateDomainCount;
             return this;
         }
-
         public Builder platformUpdateDomainCount(@Nullable Integer platformUpdateDomainCount) {
             this.platformUpdateDomainCount = Output.ofNullable(platformUpdateDomainCount);
             return this;
         }
-
         public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
-
         public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
             this.proximityPlacementGroup = Output.ofNullable(proximityPlacementGroup);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualMachines(@Nullable Output<List<SubResourceArgs>> virtualMachines) {
             this.virtualMachines = virtualMachines;
             return this;
         }
-
         public Builder virtualMachines(@Nullable List<SubResourceArgs> virtualMachines) {
             this.virtualMachines = Output.ofNullable(virtualMachines);
             return this;
         }
-        public AvailabilitySetArgs build() {
+        public Builder virtualMachines(SubResourceArgs... virtualMachines) {
+            return virtualMachines(List.of(virtualMachines));
+        }        public AvailabilitySetArgs build() {
             return new AvailabilitySetArgs(availabilitySetName, location, platformFaultDomainCount, platformUpdateDomainCount, proximityPlacementGroup, resourceGroupName, sku, tags, virtualMachines);
         }
     }

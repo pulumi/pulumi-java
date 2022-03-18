@@ -90,17 +90,14 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetImageArgs build() {
+        }        public GetImageArgs build() {
             return new GetImageArgs(expand, imageName, resourceGroupName);
         }
     }

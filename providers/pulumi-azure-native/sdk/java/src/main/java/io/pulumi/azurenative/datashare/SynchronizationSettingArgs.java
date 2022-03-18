@@ -124,52 +124,42 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder kind(Output<Either<String,SynchronizationSettingKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,SynchronizationSettingKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
-
         public Builder synchronizationSettingName(@Nullable Output<String> synchronizationSettingName) {
             this.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
-
         public Builder synchronizationSettingName(@Nullable String synchronizationSettingName) {
             this.synchronizationSettingName = Output.ofNullable(synchronizationSettingName);
             return this;
-        }
-        public SynchronizationSettingArgs build() {
+        }        public SynchronizationSettingArgs build() {
             return new SynchronizationSettingArgs(accountName, kind, resourceGroupName, shareName, synchronizationSettingName);
         }
     }

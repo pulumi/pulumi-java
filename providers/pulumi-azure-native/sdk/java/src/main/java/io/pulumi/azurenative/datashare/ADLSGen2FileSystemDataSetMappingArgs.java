@@ -203,102 +203,82 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder dataSetId(Output<String> dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
-
         public Builder dataSetId(String dataSetId) {
             this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
             return this;
         }
-
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             this.dataSetMappingName = dataSetMappingName;
             return this;
         }
-
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
             this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
             return this;
         }
-
         public Builder fileSystem(Output<String> fileSystem) {
             this.fileSystem = Objects.requireNonNull(fileSystem);
             return this;
         }
-
         public Builder fileSystem(String fileSystem) {
             this.fileSystem = Output.of(Objects.requireNonNull(fileSystem));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
-
         public Builder storageAccountName(Output<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
             return this;
         }
-
         public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
-        }
-        public ADLSGen2FileSystemDataSetMappingArgs build() {
+        }        public ADLSGen2FileSystemDataSetMappingArgs build() {
             return new ADLSGen2FileSystemDataSetMappingArgs(accountName, dataSetId, dataSetMappingName, fileSystem, kind, resourceGroup, resourceGroupName, shareSubscriptionName, storageAccountName, subscriptionId);
         }
     }

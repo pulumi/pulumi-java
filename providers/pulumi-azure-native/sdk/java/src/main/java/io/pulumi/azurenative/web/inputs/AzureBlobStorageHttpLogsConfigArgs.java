@@ -98,32 +98,26 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
-
         public Builder sasUrl(@Nullable Output<String> sasUrl) {
             this.sasUrl = sasUrl;
             return this;
         }
-
         public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = Output.ofNullable(sasUrl);
             return this;
-        }
-        public AzureBlobStorageHttpLogsConfigArgs build() {
+        }        public AzureBlobStorageHttpLogsConfigArgs build() {
             return new AzureBlobStorageHttpLogsConfigArgs(enabled, retentionInDays, sasUrl);
         }
     }

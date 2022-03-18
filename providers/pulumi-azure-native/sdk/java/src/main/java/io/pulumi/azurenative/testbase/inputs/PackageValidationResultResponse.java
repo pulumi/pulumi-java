@@ -94,17 +94,17 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(String... errors) {
+            return errors(List.of(errors));
+        }
         public Builder isValid(Boolean isValid) {
             this.isValid = Objects.requireNonNull(isValid);
             return this;
         }
-
         public Builder validationName(String validationName) {
             this.validationName = Objects.requireNonNull(validationName);
             return this;
-        }
-        public PackageValidationResultResponse build() {
+        }        public PackageValidationResultResponse build() {
             return new PackageValidationResultResponse(errors, isValid, validationName);
         }
     }

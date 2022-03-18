@@ -95,32 +95,26 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public ConnectionMonitorDestinationArgs build() {
+        }        public ConnectionMonitorDestinationArgs build() {
             return new ConnectionMonitorDestinationArgs(address, port, resourceId);
         }
     }

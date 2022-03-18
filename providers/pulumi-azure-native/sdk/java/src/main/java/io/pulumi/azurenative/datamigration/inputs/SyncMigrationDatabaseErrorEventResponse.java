@@ -92,17 +92,14 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
             this.eventText = Objects.requireNonNull(eventText);
             return this;
         }
-
         public Builder eventTypeString(String eventTypeString) {
             this.eventTypeString = Objects.requireNonNull(eventTypeString);
             return this;
         }
-
         public Builder timestampString(String timestampString) {
             this.timestampString = Objects.requireNonNull(timestampString);
             return this;
-        }
-        public SyncMigrationDatabaseErrorEventResponse build() {
+        }        public SyncMigrationDatabaseErrorEventResponse build() {
             return new SyncMigrationDatabaseErrorEventResponse(eventText, eventTypeString, timestampString);
         }
     }

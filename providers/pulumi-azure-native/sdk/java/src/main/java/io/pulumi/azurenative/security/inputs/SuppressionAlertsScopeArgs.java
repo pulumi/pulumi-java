@@ -57,12 +57,13 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
-
         public Builder allOf(List<ScopeElementArgs> allOf) {
             this.allOf = Output.of(Objects.requireNonNull(allOf));
             return this;
         }
-        public SuppressionAlertsScopeArgs build() {
+        public Builder allOf(ScopeElementArgs... allOf) {
+            return allOf(List.of(allOf));
+        }        public SuppressionAlertsScopeArgs build() {
             return new SuppressionAlertsScopeArgs(allOf);
         }
     }

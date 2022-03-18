@@ -56,12 +56,10 @@ public final class AppLogsConfigurationResponse {
             this.destination = destination;
             return this;
         }
-
         public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
             this.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
-        }
-        public AppLogsConfigurationResponse build() {
+        }        public AppLogsConfigurationResponse build() {
             return new AppLogsConfigurationResponse(destination, logAnalyticsConfiguration);
         }
     }

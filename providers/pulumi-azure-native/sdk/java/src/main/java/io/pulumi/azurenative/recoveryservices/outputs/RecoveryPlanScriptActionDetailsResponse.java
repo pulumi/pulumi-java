@@ -105,22 +105,18 @@ public final class RecoveryPlanScriptActionDetailsResponse {
             this.fabricLocation = Objects.requireNonNull(fabricLocation);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public RecoveryPlanScriptActionDetailsResponse build() {
+        }        public RecoveryPlanScriptActionDetailsResponse build() {
             return new RecoveryPlanScriptActionDetailsResponse(fabricLocation, instanceType, path, timeout);
         }
     }

@@ -156,37 +156,33 @@ public final class GetFirewallPolicyRuleCollectionGroupResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder ruleCollections(@Nullable List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>> ruleCollections) {
             this.ruleCollections = ruleCollections;
             return this;
         }
-
+        public Builder ruleCollections(Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>... ruleCollections) {
+            return ruleCollections(List.of(ruleCollections));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetFirewallPolicyRuleCollectionGroupResult build() {
+        }        public GetFirewallPolicyRuleCollectionGroupResult build() {
             return new GetFirewallPolicyRuleCollectionGroupResult(etag, id, name, priority, provisioningState, ruleCollections, type);
         }
     }

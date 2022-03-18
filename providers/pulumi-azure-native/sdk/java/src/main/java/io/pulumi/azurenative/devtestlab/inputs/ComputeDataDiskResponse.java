@@ -111,22 +111,18 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
-
         public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = diskUri;
             return this;
         }
-
         public Builder managedDiskId(@Nullable String managedDiskId) {
             this.managedDiskId = managedDiskId;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ComputeDataDiskResponse build() {
+        }        public ComputeDataDiskResponse build() {
             return new ComputeDataDiskResponse(diskSizeGiB, diskUri, managedDiskId, name);
         }
     }

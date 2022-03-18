@@ -58,8 +58,7 @@ public final class LogAnalyticsOutputResponse extends io.pulumi.resources.Invoke
         public Builder output(String output) {
             this.output = Objects.requireNonNull(output);
             return this;
-        }
-        public LogAnalyticsOutputResponse build() {
+        }        public LogAnalyticsOutputResponse build() {
             return new LogAnalyticsOutputResponse(output);
         }
     }

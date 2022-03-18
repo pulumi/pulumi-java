@@ -62,7 +62,9 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
             this.staticRoutes = staticRoutes;
             return this;
         }
-        public VnetRouteResponse build() {
+        public Builder staticRoutes(StaticRouteResponse... staticRoutes) {
+            return staticRoutes(List.of(staticRoutes));
+        }        public VnetRouteResponse build() {
             return new VnetRouteResponse(staticRoutes);
         }
     }

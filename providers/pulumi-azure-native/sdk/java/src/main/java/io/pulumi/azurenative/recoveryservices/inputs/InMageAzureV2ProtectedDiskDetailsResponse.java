@@ -288,77 +288,62 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
             this.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
-
         public Builder diskId(@Nullable String diskId) {
             this.diskId = diskId;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskResized(@Nullable String diskResized) {
             this.diskResized = diskResized;
             return this;
         }
-
         public Builder fileSystemCapacityInBytes(@Nullable Double fileSystemCapacityInBytes) {
             this.fileSystemCapacityInBytes = fileSystemCapacityInBytes;
             return this;
         }
-
         public Builder healthErrorCode(@Nullable String healthErrorCode) {
             this.healthErrorCode = healthErrorCode;
             return this;
         }
-
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
-
         public Builder protectionStage(@Nullable String protectionStage) {
             this.protectionStage = protectionStage;
             return this;
         }
-
         public Builder psDataInMegaBytes(@Nullable Double psDataInMegaBytes) {
             this.psDataInMegaBytes = psDataInMegaBytes;
             return this;
         }
-
         public Builder resyncDurationInSeconds(@Nullable Double resyncDurationInSeconds) {
             this.resyncDurationInSeconds = resyncDurationInSeconds;
             return this;
         }
-
         public Builder resyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
             this.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
-
         public Builder resyncRequired(@Nullable String resyncRequired) {
             this.resyncRequired = resyncRequired;
             return this;
         }
-
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
-
         public Builder sourceDataInMegaBytes(@Nullable Double sourceDataInMegaBytes) {
             this.sourceDataInMegaBytes = sourceDataInMegaBytes;
             return this;
         }
-
         public Builder targetDataInMegaBytes(@Nullable Double targetDataInMegaBytes) {
             this.targetDataInMegaBytes = targetDataInMegaBytes;
             return this;
-        }
-        public InMageAzureV2ProtectedDiskDetailsResponse build() {
+        }        public InMageAzureV2ProtectedDiskDetailsResponse build() {
             return new InMageAzureV2ProtectedDiskDetailsResponse(diskCapacityInBytes, diskId, diskName, diskResized, fileSystemCapacityInBytes, healthErrorCode, lastRpoCalculatedTime, protectionStage, psDataInMegaBytes, resyncDurationInSeconds, resyncProgressPercentage, resyncRequired, rpoInSeconds, sourceDataInMegaBytes, targetDataInMegaBytes);
         }
     }

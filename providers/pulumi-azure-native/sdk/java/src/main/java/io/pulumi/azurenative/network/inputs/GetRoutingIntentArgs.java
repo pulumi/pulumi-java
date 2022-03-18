@@ -88,17 +88,14 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder routingIntentName(String routingIntentName) {
             this.routingIntentName = Objects.requireNonNull(routingIntentName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
-        }
-        public GetRoutingIntentArgs build() {
+        }        public GetRoutingIntentArgs build() {
             return new GetRoutingIntentArgs(resourceGroupName, routingIntentName, virtualHubName);
         }
     }

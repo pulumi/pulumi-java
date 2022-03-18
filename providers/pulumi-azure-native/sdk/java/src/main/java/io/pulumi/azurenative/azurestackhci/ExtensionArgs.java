@@ -318,172 +318,138 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.arcSettingName = Objects.requireNonNull(arcSettingName);
             return this;
         }
-
         public Builder arcSettingName(String arcSettingName) {
             this.arcSettingName = Output.of(Objects.requireNonNull(arcSettingName));
             return this;
         }
-
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
-
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
             this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
-
         public Builder extensionName(@Nullable Output<String> extensionName) {
             this.extensionName = extensionName;
             return this;
         }
-
         public Builder extensionName(@Nullable String extensionName) {
             this.extensionName = Output.ofNullable(extensionName);
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
             this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
-
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder settings(@Nullable Output<Object> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable Object settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
-        }
-        public ExtensionArgs build() {
+        }        public ExtensionArgs build() {
             return new ExtensionArgs(arcSettingName, autoUpgradeMinorVersion, clusterName, createdAt, createdBy, createdByType, extensionName, forceUpdateTag, lastModifiedAt, lastModifiedBy, lastModifiedByType, protectedSettings, publisher, resourceGroupName, settings, type, typeHandlerVersion);
         }
     }

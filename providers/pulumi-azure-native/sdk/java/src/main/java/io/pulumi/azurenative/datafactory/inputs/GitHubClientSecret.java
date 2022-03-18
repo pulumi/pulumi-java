@@ -78,12 +78,10 @@ public final class GitHubClientSecret extends io.pulumi.resources.InvokeArgs {
             this.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
-
         public Builder byoaSecretName(@Nullable String byoaSecretName) {
             this.byoaSecretName = byoaSecretName;
             return this;
-        }
-        public GitHubClientSecret build() {
+        }        public GitHubClientSecret build() {
             return new GitHubClientSecret(byoaSecretAkvUrl, byoaSecretName);
         }
     }

@@ -88,17 +88,14 @@ public final class GetManagedNetworkGroupArgs extends io.pulumi.resources.Invoke
             this.managedNetworkGroupName = Objects.requireNonNull(managedNetworkGroupName);
             return this;
         }
-
         public Builder managedNetworkName(String managedNetworkName) {
             this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedNetworkGroupArgs build() {
+        }        public GetManagedNetworkGroupArgs build() {
             return new GetManagedNetworkGroupArgs(managedNetworkGroupName, managedNetworkName, resourceGroupName);
         }
     }

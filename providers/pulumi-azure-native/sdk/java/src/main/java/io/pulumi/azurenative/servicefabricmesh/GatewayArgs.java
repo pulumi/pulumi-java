@@ -191,92 +191,80 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationNetwork(Output<NetworkRefArgs> destinationNetwork) {
             this.destinationNetwork = Objects.requireNonNull(destinationNetwork);
             return this;
         }
-
         public Builder destinationNetwork(NetworkRefArgs destinationNetwork) {
             this.destinationNetwork = Output.of(Objects.requireNonNull(destinationNetwork));
             return this;
         }
-
         public Builder gatewayResourceName(@Nullable Output<String> gatewayResourceName) {
             this.gatewayResourceName = gatewayResourceName;
             return this;
         }
-
         public Builder gatewayResourceName(@Nullable String gatewayResourceName) {
             this.gatewayResourceName = Output.ofNullable(gatewayResourceName);
             return this;
         }
-
         public Builder http(@Nullable Output<List<HttpConfigArgs>> http) {
             this.http = http;
             return this;
         }
-
         public Builder http(@Nullable List<HttpConfigArgs> http) {
             this.http = Output.ofNullable(http);
             return this;
         }
-
+        public Builder http(HttpConfigArgs... http) {
+            return http(List.of(http));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sourceNetwork(Output<NetworkRefArgs> sourceNetwork) {
             this.sourceNetwork = Objects.requireNonNull(sourceNetwork);
             return this;
         }
-
         public Builder sourceNetwork(NetworkRefArgs sourceNetwork) {
             this.sourceNetwork = Output.of(Objects.requireNonNull(sourceNetwork));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tcp(@Nullable Output<List<TcpConfigArgs>> tcp) {
             this.tcp = tcp;
             return this;
         }
-
         public Builder tcp(@Nullable List<TcpConfigArgs> tcp) {
             this.tcp = Output.ofNullable(tcp);
             return this;
         }
-        public GatewayArgs build() {
+        public Builder tcp(TcpConfigArgs... tcp) {
+            return tcp(List.of(tcp));
+        }        public GatewayArgs build() {
             return new GatewayArgs(description, destinationNetwork, gatewayResourceName, http, location, resourceGroupName, sourceNetwork, tags, tcp);
         }
     }

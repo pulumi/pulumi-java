@@ -129,52 +129,45 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable KeyAttributesArgs attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder curveName(@Nullable Output<Either<String,JsonWebKeyCurveName>> curveName) {
             this.curveName = curveName;
             return this;
         }
-
         public Builder curveName(@Nullable Either<String,JsonWebKeyCurveName> curveName) {
             this.curveName = Output.ofNullable(curveName);
             return this;
         }
-
         public Builder keyOps(@Nullable Output<List<Either<String,JsonWebKeyOperation>>> keyOps) {
             this.keyOps = keyOps;
             return this;
         }
-
         public Builder keyOps(@Nullable List<Either<String,JsonWebKeyOperation>> keyOps) {
             this.keyOps = Output.ofNullable(keyOps);
             return this;
         }
-
+        public Builder keyOps(Either<String,JsonWebKeyOperation>... keyOps) {
+            return keyOps(List.of(keyOps));
+        }
         public Builder keySize(@Nullable Output<Integer> keySize) {
             this.keySize = keySize;
             return this;
         }
-
         public Builder keySize(@Nullable Integer keySize) {
             this.keySize = Output.ofNullable(keySize);
             return this;
         }
-
         public Builder kty(@Nullable Output<Either<String,JsonWebKeyType>> kty) {
             this.kty = kty;
             return this;
         }
-
         public Builder kty(@Nullable Either<String,JsonWebKeyType> kty) {
             this.kty = Output.ofNullable(kty);
             return this;
-        }
-        public KeyPropertiesArgs build() {
+        }        public KeyPropertiesArgs build() {
             return new KeyPropertiesArgs(attributes, curveName, keyOps, keySize, kty);
         }
     }

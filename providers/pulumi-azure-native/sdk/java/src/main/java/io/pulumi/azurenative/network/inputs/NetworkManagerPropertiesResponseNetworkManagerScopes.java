@@ -79,12 +79,16 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
             this.managementGroups = managementGroups;
             return this;
         }
-
+        public Builder managementGroups(String... managementGroups) {
+            return managementGroups(List.of(managementGroups));
+        }
         public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
-        public NetworkManagerPropertiesResponseNetworkManagerScopes build() {
+        public Builder subscriptions(String... subscriptions) {
+            return subscriptions(List.of(subscriptions));
+        }        public NetworkManagerPropertiesResponseNetworkManagerScopes build() {
             return new NetworkManagerPropertiesResponseNetworkManagerScopes(managementGroups, subscriptions);
         }
     }

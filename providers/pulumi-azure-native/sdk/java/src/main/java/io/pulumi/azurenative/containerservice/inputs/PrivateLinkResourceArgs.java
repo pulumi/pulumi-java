@@ -127,52 +127,45 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder requiredMembers(@Nullable Output<List<String>> requiredMembers) {
             this.requiredMembers = requiredMembers;
             return this;
         }
-
         public Builder requiredMembers(@Nullable List<String> requiredMembers) {
             this.requiredMembers = Output.ofNullable(requiredMembers);
             return this;
         }
-
+        public Builder requiredMembers(String... requiredMembers) {
+            return requiredMembers(List.of(requiredMembers));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public PrivateLinkResourceArgs build() {
+        }        public PrivateLinkResourceArgs build() {
             return new PrivateLinkResourceArgs(groupId, id, name, requiredMembers, type);
         }
     }

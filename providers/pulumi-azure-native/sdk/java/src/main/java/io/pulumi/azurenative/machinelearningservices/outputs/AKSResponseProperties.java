@@ -156,37 +156,33 @@ public final class AKSResponseProperties {
             this.agentCount = agentCount;
             return this;
         }
-
         public Builder agentVmSize(@Nullable String agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
-
         public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration) {
             this.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
-
         public Builder clusterFqdn(@Nullable String clusterFqdn) {
             this.clusterFqdn = clusterFqdn;
             return this;
         }
-
         public Builder clusterPurpose(@Nullable String clusterPurpose) {
             this.clusterPurpose = clusterPurpose;
             return this;
         }
-
         public Builder sslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
             this.sslConfiguration = sslConfiguration;
             return this;
         }
-
         public Builder systemServices(List<SystemServiceResponse> systemServices) {
             this.systemServices = Objects.requireNonNull(systemServices);
             return this;
         }
-        public AKSResponseProperties build() {
+        public Builder systemServices(SystemServiceResponse... systemServices) {
+            return systemServices(List.of(systemServices));
+        }        public AKSResponseProperties build() {
             return new AKSResponseProperties(agentCount, agentVmSize, aksNetworkingConfiguration, clusterFqdn, clusterPurpose, sslConfiguration, systemServices);
         }
     }

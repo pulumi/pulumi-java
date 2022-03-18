@@ -157,72 +157,58 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable UserIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder secretStore(@Nullable Output<UserSecretStoreArgs> secretStore) {
             this.secretStore = secretStore;
             return this;
         }
-
         public Builder secretStore(@Nullable UserSecretStoreArgs secretStore) {
             this.secretStore = Output.ofNullable(secretStore);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(identity, labName, location, name, resourceGroupName, secretStore, tags);
         }
     }

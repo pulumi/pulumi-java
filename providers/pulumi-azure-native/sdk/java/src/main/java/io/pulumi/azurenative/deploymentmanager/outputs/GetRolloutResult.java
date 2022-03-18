@@ -270,72 +270,64 @@ public final class GetRolloutResult {
             this.artifactSourceId = artifactSourceId;
             return this;
         }
-
         public Builder buildVersion(String buildVersion) {
             this.buildVersion = Objects.requireNonNull(buildVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationInfo(RolloutOperationInfoResponse operationInfo) {
             this.operationInfo = Objects.requireNonNull(operationInfo);
             return this;
         }
-
         public Builder services(List<ServiceResponse> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-
+        public Builder services(ServiceResponse... services) {
+            return services(List.of(services));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder stepGroups(List<StepGroupResponse> stepGroups) {
             this.stepGroups = Objects.requireNonNull(stepGroups);
             return this;
         }
-
+        public Builder stepGroups(StepGroupResponse... stepGroups) {
+            return stepGroups(List.of(stepGroups));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetServiceTopologyId(String targetServiceTopologyId) {
             this.targetServiceTopologyId = Objects.requireNonNull(targetServiceTopologyId);
             return this;
         }
-
         public Builder totalRetryAttempts(Integer totalRetryAttempts) {
             this.totalRetryAttempts = Objects.requireNonNull(totalRetryAttempts);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRolloutResult build() {
+        }        public GetRolloutResult build() {
             return new GetRolloutResult(artifactSourceId, buildVersion, id, identity, location, name, operationInfo, services, status, stepGroups, tags, targetServiceTopologyId, totalRetryAttempts, type);
         }
     }

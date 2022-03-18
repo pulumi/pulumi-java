@@ -71,12 +71,10 @@ public final class ListAccountKeysResult {
             this.atlasKafkaPrimaryEndpoint = atlasKafkaPrimaryEndpoint;
             return this;
         }
-
         public Builder atlasKafkaSecondaryEndpoint(@Nullable String atlasKafkaSecondaryEndpoint) {
             this.atlasKafkaSecondaryEndpoint = atlasKafkaSecondaryEndpoint;
             return this;
-        }
-        public ListAccountKeysResult build() {
+        }        public ListAccountKeysResult build() {
             return new ListAccountKeysResult(atlasKafkaPrimaryEndpoint, atlasKafkaSecondaryEndpoint);
         }
     }

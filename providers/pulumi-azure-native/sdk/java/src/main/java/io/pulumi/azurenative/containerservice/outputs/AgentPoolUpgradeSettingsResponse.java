@@ -53,8 +53,7 @@ public final class AgentPoolUpgradeSettingsResponse {
         public Builder maxSurge(@Nullable String maxSurge) {
             this.maxSurge = maxSurge;
             return this;
-        }
-        public AgentPoolUpgradeSettingsResponse build() {
+        }        public AgentPoolUpgradeSettingsResponse build() {
             return new AgentPoolUpgradeSettingsResponse(maxSurge);
         }
     }

@@ -111,42 +111,34 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public SrvRecordArgs build() {
+        }        public SrvRecordArgs build() {
             return new SrvRecordArgs(port, priority, target, weight);
         }
     }

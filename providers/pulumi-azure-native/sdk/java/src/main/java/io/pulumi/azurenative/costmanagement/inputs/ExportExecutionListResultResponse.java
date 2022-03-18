@@ -60,7 +60,9 @@ public final class ExportExecutionListResultResponse extends io.pulumi.resources
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ExportExecutionListResultResponse build() {
+        public Builder value(ExportExecutionResponse... value) {
+            return value(List.of(value));
+        }        public ExportExecutionListResultResponse build() {
             return new ExportExecutionListResultResponse(value);
         }
     }

@@ -216,57 +216,46 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder errorPrefix(String errorPrefix) {
             this.errorPrefix = Objects.requireNonNull(errorPrefix);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder itemsCompletedCount(Double itemsCompletedCount) {
             this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount);
             return this;
         }
-
         public Builder itemsCount(Double itemsCount) {
             this.itemsCount = Objects.requireNonNull(itemsCount);
             return this;
         }
-
         public Builder objectName(String objectName) {
             this.objectName = Objects.requireNonNull(objectName);
             return this;
         }
-
         public Builder resultPrefix(String resultPrefix) {
             this.resultPrefix = Objects.requireNonNull(resultPrefix);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
-        }
-        public MigrateSqlServerSqlDbTaskOutputTableLevelResponse build() {
+        }        public MigrateSqlServerSqlDbTaskOutputTableLevelResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputTableLevelResponse(endedOn, errorPrefix, id, itemsCompletedCount, itemsCount, objectName, resultPrefix, resultType, startedOn, state, statusMessage);
         }
     }

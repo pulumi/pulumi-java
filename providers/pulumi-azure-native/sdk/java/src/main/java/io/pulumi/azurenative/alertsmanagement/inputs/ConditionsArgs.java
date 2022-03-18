@@ -158,72 +158,58 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
             this.alertContext = alertContext;
             return this;
         }
-
         public Builder alertContext(@Nullable ConditionArgs alertContext) {
             this.alertContext = Output.ofNullable(alertContext);
             return this;
         }
-
         public Builder alertRuleId(@Nullable Output<ConditionArgs> alertRuleId) {
             this.alertRuleId = alertRuleId;
             return this;
         }
-
         public Builder alertRuleId(@Nullable ConditionArgs alertRuleId) {
             this.alertRuleId = Output.ofNullable(alertRuleId);
             return this;
         }
-
         public Builder description(@Nullable Output<ConditionArgs> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable ConditionArgs description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder monitorCondition(@Nullable Output<ConditionArgs> monitorCondition) {
             this.monitorCondition = monitorCondition;
             return this;
         }
-
         public Builder monitorCondition(@Nullable ConditionArgs monitorCondition) {
             this.monitorCondition = Output.ofNullable(monitorCondition);
             return this;
         }
-
         public Builder monitorService(@Nullable Output<ConditionArgs> monitorService) {
             this.monitorService = monitorService;
             return this;
         }
-
         public Builder monitorService(@Nullable ConditionArgs monitorService) {
             this.monitorService = Output.ofNullable(monitorService);
             return this;
         }
-
         public Builder severity(@Nullable Output<ConditionArgs> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable ConditionArgs severity) {
             this.severity = Output.ofNullable(severity);
             return this;
         }
-
         public Builder targetResourceType(@Nullable Output<ConditionArgs> targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }
-
         public Builder targetResourceType(@Nullable ConditionArgs targetResourceType) {
             this.targetResourceType = Output.ofNullable(targetResourceType);
             return this;
-        }
-        public ConditionsArgs build() {
+        }        public ConditionsArgs build() {
             return new ConditionsArgs(alertContext, alertRuleId, description, monitorCondition, monitorService, severity, targetResourceType);
         }
     }

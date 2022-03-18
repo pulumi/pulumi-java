@@ -67,22 +67,21 @@ public final class EtwProviderConfigurationArgs extends io.pulumi.resources.Reso
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
         public Builder events(List<EtwEventConfigurationArgs> events) {
             this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
-
+        public Builder events(EtwEventConfigurationArgs... events) {
+            return events(List.of(events));
+        }
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public EtwProviderConfigurationArgs build() {
+        }        public EtwProviderConfigurationArgs build() {
             return new EtwProviderConfigurationArgs(events, id);
         }
     }

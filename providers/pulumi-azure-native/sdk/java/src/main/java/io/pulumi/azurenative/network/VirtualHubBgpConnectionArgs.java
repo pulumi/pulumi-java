@@ -155,72 +155,58 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder peerAsn(@Nullable Output<Double> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public Builder peerAsn(@Nullable Double peerAsn) {
             this.peerAsn = Output.ofNullable(peerAsn);
             return this;
         }
-
         public Builder peerIp(@Nullable Output<String> peerIp) {
             this.peerIp = peerIp;
             return this;
         }
-
         public Builder peerIp(@Nullable String peerIp) {
             this.peerIp = Output.ofNullable(peerIp);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder virtualHubName(Output<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
             return this;
-        }
-        public VirtualHubBgpConnectionArgs build() {
+        }        public VirtualHubBgpConnectionArgs build() {
             return new VirtualHubBgpConnectionArgs(connectionName, id, name, peerAsn, peerIp, resourceGroupName, virtualHubName);
         }
     }

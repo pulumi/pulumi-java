@@ -176,82 +176,66 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             this.httpsCAFile = httpsCAFile;
             return this;
         }
-
         public Builder httpsCAFile(@Nullable String httpsCAFile) {
             this.httpsCAFile = Output.ofNullable(httpsCAFile);
             return this;
         }
-
         public Builder httpsUser(@Nullable Output<String> httpsUser) {
             this.httpsUser = httpsUser;
             return this;
         }
-
         public Builder httpsUser(@Nullable String httpsUser) {
             this.httpsUser = Output.ofNullable(httpsUser);
             return this;
         }
-
         public Builder localAuthRef(@Nullable Output<String> localAuthRef) {
             this.localAuthRef = localAuthRef;
             return this;
         }
-
         public Builder localAuthRef(@Nullable String localAuthRef) {
             this.localAuthRef = Output.ofNullable(localAuthRef);
             return this;
         }
-
         public Builder repositoryRef(@Nullable Output<RepositoryRefDefinitionArgs> repositoryRef) {
             this.repositoryRef = repositoryRef;
             return this;
         }
-
         public Builder repositoryRef(@Nullable RepositoryRefDefinitionArgs repositoryRef) {
             this.repositoryRef = Output.ofNullable(repositoryRef);
             return this;
         }
-
         public Builder sshKnownHosts(@Nullable Output<String> sshKnownHosts) {
             this.sshKnownHosts = sshKnownHosts;
             return this;
         }
-
         public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
             this.sshKnownHosts = Output.ofNullable(sshKnownHosts);
             return this;
         }
-
         public Builder syncIntervalInSeconds(@Nullable Output<Double> syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
-
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = Output.ofNullable(syncIntervalInSeconds);
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public GitRepositoryDefinitionArgs build() {
+        }        public GitRepositoryDefinitionArgs build() {
             return new GitRepositoryDefinitionArgs(httpsCAFile, httpsUser, localAuthRef, repositoryRef, sshKnownHosts, syncIntervalInSeconds, timeoutInSeconds, url);
         }
     }

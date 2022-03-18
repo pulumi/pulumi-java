@@ -177,42 +177,34 @@ public final class GetEntityArgs extends io.pulumi.resources.InvokeArgs {
             this.filter = filter;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder search(@Nullable String search) {
             this.search = search;
             return this;
         }
-
         public Builder select(@Nullable String select) {
             this.select = select;
             return this;
         }
-
         public Builder skip(@Nullable Integer skip) {
             this.skip = skip;
             return this;
         }
-
         public Builder skiptoken(@Nullable String skiptoken) {
             this.skiptoken = skiptoken;
             return this;
         }
-
         public Builder top(@Nullable Integer top) {
             this.top = top;
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetEntityArgs build() {
+        }        public GetEntityArgs build() {
             return new GetEntityArgs(filter, groupName, search, select, skip, skiptoken, top, view);
         }
     }

@@ -216,57 +216,46 @@ public final class GetPartnerResult {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder etag(@Nullable Integer etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder partnerId(@Nullable String partnerId) {
             this.partnerId = partnerId;
             return this;
         }
-
         public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = partnerName;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedTime(@Nullable String updatedTime) {
             this.updatedTime = updatedTime;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
-        }
-        public GetPartnerResult build() {
+        }        public GetPartnerResult build() {
             return new GetPartnerResult(createdTime, etag, id, name, objectId, partnerId, partnerName, tenantId, type, updatedTime, version);
         }
     }

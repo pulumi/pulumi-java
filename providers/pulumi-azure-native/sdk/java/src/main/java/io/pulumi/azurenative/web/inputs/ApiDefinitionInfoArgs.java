@@ -61,12 +61,10 @@ public final class ApiDefinitionInfoArgs extends io.pulumi.resources.ResourceArg
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public ApiDefinitionInfoArgs build() {
+        }        public ApiDefinitionInfoArgs build() {
             return new ApiDefinitionInfoArgs(url);
         }
     }

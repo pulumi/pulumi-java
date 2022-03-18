@@ -54,7 +54,9 @@ public final class StorageProfileResponse {
             this.storageaccounts = storageaccounts;
             return this;
         }
-        public StorageProfileResponse build() {
+        public Builder storageaccounts(StorageAccountResponse... storageaccounts) {
+            return storageaccounts(List.of(storageaccounts));
+        }        public StorageProfileResponse build() {
             return new StorageProfileResponse(storageaccounts);
         }
     }

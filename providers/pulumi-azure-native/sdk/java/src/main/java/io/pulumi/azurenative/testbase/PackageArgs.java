@@ -222,112 +222,96 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder applicationName(String applicationName) {
             this.applicationName = Output.of(Objects.requireNonNull(applicationName));
             return this;
         }
-
         public Builder blobPath(Output<String> blobPath) {
             this.blobPath = Objects.requireNonNull(blobPath);
             return this;
         }
-
         public Builder blobPath(String blobPath) {
             this.blobPath = Output.of(Objects.requireNonNull(blobPath));
             return this;
         }
-
         public Builder flightingRing(Output<String> flightingRing) {
             this.flightingRing = Objects.requireNonNull(flightingRing);
             return this;
         }
-
         public Builder flightingRing(String flightingRing) {
             this.flightingRing = Output.of(Objects.requireNonNull(flightingRing));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = Output.ofNullable(packageName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetOSList(Output<List<TargetOSInfoArgs>> targetOSList) {
             this.targetOSList = Objects.requireNonNull(targetOSList);
             return this;
         }
-
         public Builder targetOSList(List<TargetOSInfoArgs> targetOSList) {
             this.targetOSList = Output.of(Objects.requireNonNull(targetOSList));
             return this;
         }
-
+        public Builder targetOSList(TargetOSInfoArgs... targetOSList) {
+            return targetOSList(List.of(targetOSList));
+        }
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
-
         public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
             return this;
         }
-
         public Builder tests(Output<List<TestArgs>> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
-
         public Builder tests(List<TestArgs> tests) {
             this.tests = Output.of(Objects.requireNonNull(tests));
             return this;
         }
-
+        public Builder tests(TestArgs... tests) {
+            return tests(List.of(tests));
+        }
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public PackageArgs build() {
+        }        public PackageArgs build() {
             return new PackageArgs(applicationName, blobPath, flightingRing, location, packageName, resourceGroupName, tags, targetOSList, testBaseAccountName, tests, version);
         }
     }

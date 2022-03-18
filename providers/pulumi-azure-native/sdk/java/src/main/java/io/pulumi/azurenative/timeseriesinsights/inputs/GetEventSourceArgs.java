@@ -88,17 +88,14 @@ public final class GetEventSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder eventSourceName(String eventSourceName) {
             this.eventSourceName = Objects.requireNonNull(eventSourceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetEventSourceArgs build() {
+        }        public GetEventSourceArgs build() {
             return new GetEventSourceArgs(environmentName, eventSourceName, resourceGroupName);
         }
     }

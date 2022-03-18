@@ -78,22 +78,18 @@ public final class AzPowerShellSetupArgs extends io.pulumi.resources.ResourceArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public AzPowerShellSetupArgs build() {
+        }        public AzPowerShellSetupArgs build() {
             return new AzPowerShellSetupArgs(type, version);
         }
     }

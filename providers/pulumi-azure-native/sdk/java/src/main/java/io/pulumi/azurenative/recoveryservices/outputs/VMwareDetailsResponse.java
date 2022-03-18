@@ -576,167 +576,143 @@ public final class VMwareDetailsResponse {
             this.agentCount = agentCount;
             return this;
         }
-
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             this.agentVersionDetails = agentVersionDetails;
             return this;
         }
-
         public Builder availableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
             this.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
-
         public Builder availableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
             this.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
-
         public Builder cpuLoad(@Nullable String cpuLoad) {
             this.cpuLoad = cpuLoad;
             return this;
         }
-
         public Builder cpuLoadStatus(@Nullable String cpuLoadStatus) {
             this.cpuLoadStatus = cpuLoadStatus;
             return this;
         }
-
         public Builder csServiceStatus(@Nullable String csServiceStatus) {
             this.csServiceStatus = csServiceStatus;
             return this;
         }
-
         public Builder databaseServerLoad(@Nullable String databaseServerLoad) {
             this.databaseServerLoad = databaseServerLoad;
             return this;
         }
-
         public Builder databaseServerLoadStatus(@Nullable String databaseServerLoadStatus) {
             this.databaseServerLoadStatus = databaseServerLoadStatus;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
-
         public Builder masterTargetServers(@Nullable List<MasterTargetServerResponse> masterTargetServers) {
             this.masterTargetServers = masterTargetServers;
             return this;
         }
-
+        public Builder masterTargetServers(MasterTargetServerResponse... masterTargetServers) {
+            return masterTargetServers(List.of(masterTargetServers));
+        }
         public Builder memoryUsageStatus(@Nullable String memoryUsageStatus) {
             this.memoryUsageStatus = memoryUsageStatus;
             return this;
         }
-
         public Builder processServerCount(@Nullable String processServerCount) {
             this.processServerCount = processServerCount;
             return this;
         }
-
         public Builder processServers(@Nullable List<ProcessServerResponse> processServers) {
             this.processServers = processServers;
             return this;
         }
-
+        public Builder processServers(ProcessServerResponse... processServers) {
+            return processServers(List.of(processServers));
+        }
         public Builder protectedServers(@Nullable String protectedServers) {
             this.protectedServers = protectedServers;
             return this;
         }
-
         public Builder psTemplateVersion(@Nullable String psTemplateVersion) {
             this.psTemplateVersion = psTemplateVersion;
             return this;
         }
-
         public Builder replicationPairCount(@Nullable String replicationPairCount) {
             this.replicationPairCount = replicationPairCount;
             return this;
         }
-
         public Builder runAsAccounts(@Nullable List<RunAsAccountResponse> runAsAccounts) {
             this.runAsAccounts = runAsAccounts;
             return this;
         }
-
+        public Builder runAsAccounts(RunAsAccountResponse... runAsAccounts) {
+            return runAsAccounts(List.of(runAsAccounts));
+        }
         public Builder spaceUsageStatus(@Nullable String spaceUsageStatus) {
             this.spaceUsageStatus = spaceUsageStatus;
             return this;
         }
-
         public Builder sslCertExpiryDate(@Nullable String sslCertExpiryDate) {
             this.sslCertExpiryDate = sslCertExpiryDate;
             return this;
         }
-
         public Builder sslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
             this.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
             return this;
         }
-
         public Builder systemLoad(@Nullable String systemLoad) {
             this.systemLoad = systemLoad;
             return this;
         }
-
         public Builder systemLoadStatus(@Nullable String systemLoadStatus) {
             this.systemLoadStatus = systemLoadStatus;
             return this;
         }
-
         public Builder totalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
             this.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
-
         public Builder totalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
             this.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
-
         public Builder versionStatus(@Nullable String versionStatus) {
             this.versionStatus = versionStatus;
             return this;
         }
-
         public Builder webLoad(@Nullable String webLoad) {
             this.webLoad = webLoad;
             return this;
         }
-
         public Builder webLoadStatus(@Nullable String webLoadStatus) {
             this.webLoadStatus = webLoadStatus;
             return this;
-        }
-        public VMwareDetailsResponse build() {
+        }        public VMwareDetailsResponse build() {
             return new VMwareDetailsResponse(agentCount, agentExpiryDate, agentVersion, agentVersionDetails, availableMemoryInBytes, availableSpaceInBytes, cpuLoad, cpuLoadStatus, csServiceStatus, databaseServerLoad, databaseServerLoadStatus, hostName, instanceType, ipAddress, lastHeartbeat, masterTargetServers, memoryUsageStatus, processServerCount, processServers, protectedServers, psTemplateVersion, replicationPairCount, runAsAccounts, spaceUsageStatus, sslCertExpiryDate, sslCertExpiryRemainingDays, systemLoad, systemLoadStatus, totalMemoryInBytes, totalSpaceInBytes, versionStatus, webLoad, webLoadStatus);
         }
     }

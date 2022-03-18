@@ -208,102 +208,91 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.customDnsConfigs = customDnsConfigs;
             return this;
         }
-
         public Builder customDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatArgs> customDnsConfigs) {
             this.customDnsConfigs = Output.ofNullable(customDnsConfigs);
             return this;
         }
-
+        public Builder customDnsConfigs(CustomDnsConfigPropertiesFormatArgs... customDnsConfigs) {
+            return customDnsConfigs(List.of(customDnsConfigs));
+        }
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = Output.ofNullable(manualPrivateLinkServiceConnections);
             return this;
         }
-
+        public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
+            return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
+        }
         public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
             this.privateEndpointName = privateEndpointName;
             return this;
         }
-
         public Builder privateEndpointName(@Nullable String privateEndpointName) {
             this.privateEndpointName = Output.ofNullable(privateEndpointName);
             return this;
         }
-
         public Builder privateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
-
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = Output.ofNullable(privateLinkServiceConnections);
             return this;
         }
-
+        public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionArgs... privateLinkServiceConnections) {
+            return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PrivateEndpointArgs build() {
+        }        public PrivateEndpointArgs build() {
             return new PrivateEndpointArgs(customDnsConfigs, extendedLocation, id, location, manualPrivateLinkServiceConnections, privateEndpointName, privateLinkServiceConnections, resourceGroupName, subnet, tags);
         }
     }

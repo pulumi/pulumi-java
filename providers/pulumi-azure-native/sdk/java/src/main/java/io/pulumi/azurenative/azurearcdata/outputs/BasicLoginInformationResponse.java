@@ -53,8 +53,7 @@ public final class BasicLoginInformationResponse {
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public BasicLoginInformationResponse build() {
+        }        public BasicLoginInformationResponse build() {
             return new BasicLoginInformationResponse(username);
         }
     }

@@ -211,102 +211,91 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<Object> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(Object... actions) {
+            return actions(List.of(actions));
+        }
         public Builder automationName(@Nullable Output<String> automationName) {
             this.automationName = automationName;
             return this;
         }
-
         public Builder automationName(@Nullable String automationName) {
             this.automationName = Output.ofNullable(automationName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scopes(@Nullable Output<List<AutomationScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<AutomationScopeArgs> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-
+        public Builder scopes(AutomationScopeArgs... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder sources(@Nullable Output<List<AutomationSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<AutomationSourceArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-
+        public Builder sources(AutomationSourceArgs... sources) {
+            return sources(List.of(sources));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AutomationArgs build() {
+        }        public AutomationArgs build() {
             return new AutomationArgs(actions, automationName, description, isEnabled, kind, location, resourceGroupName, scopes, sources, tags);
         }
     }

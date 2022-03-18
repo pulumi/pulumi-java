@@ -53,8 +53,7 @@ public final class RolloutIdentityAuthenticationResponse {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RolloutIdentityAuthenticationResponse build() {
+        }        public RolloutIdentityAuthenticationResponse build() {
             return new RolloutIdentityAuthenticationResponse(type);
         }
     }

@@ -79,22 +79,18 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.mountPath = mountPath;
             return this;
         }
-
         public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Output.ofNullable(mountPath);
             return this;
         }
-
         public Builder sizeInGB(@Nullable Output<Integer> sizeInGB) {
             this.sizeInGB = sizeInGB;
             return this;
         }
-
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
             this.sizeInGB = Output.ofNullable(sizeInGB);
             return this;
-        }
-        public TemporaryDiskArgs build() {
+        }        public TemporaryDiskArgs build() {
             return new TemporaryDiskArgs(mountPath, sizeInGB);
         }
     }

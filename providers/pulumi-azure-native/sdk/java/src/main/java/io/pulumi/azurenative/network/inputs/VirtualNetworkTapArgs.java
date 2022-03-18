@@ -146,62 +146,50 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
             this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
-
         public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationArgs destinationLoadBalancerFrontEndIPConfiguration) {
             this.destinationLoadBalancerFrontEndIPConfiguration = Output.ofNullable(destinationLoadBalancerFrontEndIPConfiguration);
             return this;
         }
-
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration) {
             this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
-
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationArgs destinationNetworkInterfaceIPConfiguration) {
             this.destinationNetworkInterfaceIPConfiguration = Output.ofNullable(destinationNetworkInterfaceIPConfiguration);
             return this;
         }
-
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public VirtualNetworkTapArgs build() {
+        }        public VirtualNetworkTapArgs build() {
             return new VirtualNetworkTapArgs(destinationLoadBalancerFrontEndIPConfiguration, destinationNetworkInterfaceIPConfiguration, destinationPort, id, location, tags);
         }
     }

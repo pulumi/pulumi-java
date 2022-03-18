@@ -175,82 +175,66 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder poolName(@Nullable Output<String> poolName) {
             this.poolName = poolName;
             return this;
         }
-
         public Builder poolName(@Nullable String poolName) {
             this.poolName = Output.ofNullable(poolName);
             return this;
         }
-
         public Builder qosType(@Nullable Output<Either<String,QosType>> qosType) {
             this.qosType = qosType;
             return this;
         }
-
         public Builder qosType(@Nullable Either<String,QosType> qosType) {
             this.qosType = Output.ofNullable(qosType);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceLevel(Output<Either<String,ServiceLevel>> serviceLevel) {
             this.serviceLevel = Objects.requireNonNull(serviceLevel);
             return this;
         }
-
         public Builder serviceLevel(Either<String,ServiceLevel> serviceLevel) {
             this.serviceLevel = Output.of(Objects.requireNonNull(serviceLevel));
             return this;
         }
-
         public Builder size(Output<Double> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder size(Double size) {
             this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PoolArgs build() {
+        }        public PoolArgs build() {
             return new PoolArgs(accountName, location, poolName, qosType, resourceGroupName, serviceLevel, size, tags);
         }
     }

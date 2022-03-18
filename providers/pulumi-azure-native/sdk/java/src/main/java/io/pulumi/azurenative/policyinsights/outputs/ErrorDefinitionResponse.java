@@ -119,27 +119,28 @@ public final class ErrorDefinitionResponse {
             this.additionalInfo = Objects.requireNonNull(additionalInfo);
             return this;
         }
-
+        public Builder additionalInfo(TypedErrorInfoResponse... additionalInfo) {
+            return additionalInfo(List.of(additionalInfo));
+        }
         public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(List<ErrorDefinitionResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
+        public Builder details(ErrorDefinitionResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public ErrorDefinitionResponse build() {
+        }        public ErrorDefinitionResponse build() {
             return new ErrorDefinitionResponse(additionalInfo, code, details, message, target);
         }
     }

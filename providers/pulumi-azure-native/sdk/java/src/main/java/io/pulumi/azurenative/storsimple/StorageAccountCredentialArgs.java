@@ -157,72 +157,58 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder accessKey(@Nullable AsymmetricEncryptedSecretArgs accessKey) {
             this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
-
         public Builder endPoint(Output<String> endPoint) {
             this.endPoint = Objects.requireNonNull(endPoint);
             return this;
         }
-
         public Builder endPoint(String endPoint) {
             this.endPoint = Output.of(Objects.requireNonNull(endPoint));
             return this;
         }
-
         public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Kind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sslStatus(Output<SslStatus> sslStatus) {
             this.sslStatus = Objects.requireNonNull(sslStatus);
             return this;
         }
-
         public Builder sslStatus(SslStatus sslStatus) {
             this.sslStatus = Output.of(Objects.requireNonNull(sslStatus));
             return this;
         }
-
         public Builder storageAccountCredentialName(@Nullable Output<String> storageAccountCredentialName) {
             this.storageAccountCredentialName = storageAccountCredentialName;
             return this;
         }
-
         public Builder storageAccountCredentialName(@Nullable String storageAccountCredentialName) {
             this.storageAccountCredentialName = Output.ofNullable(storageAccountCredentialName);
             return this;
-        }
-        public StorageAccountCredentialArgs build() {
+        }        public StorageAccountCredentialArgs build() {
             return new StorageAccountCredentialArgs(accessKey, endPoint, kind, managerName, resourceGroupName, sslStatus, storageAccountCredentialName);
         }
     }

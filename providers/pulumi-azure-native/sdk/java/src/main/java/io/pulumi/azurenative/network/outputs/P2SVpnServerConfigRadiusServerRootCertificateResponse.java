@@ -119,27 +119,22 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateResponse {
             this.etag = etag;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicCertData(String publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
-        }
-        public P2SVpnServerConfigRadiusServerRootCertificateResponse build() {
+        }        public P2SVpnServerConfigRadiusServerRootCertificateResponse build() {
             return new P2SVpnServerConfigRadiusServerRootCertificateResponse(etag, id, name, provisioningState, publicCertData);
         }
     }

@@ -108,22 +108,18 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder highKey(String highKey) {
             this.highKey = Objects.requireNonNull(highKey);
             return this;
         }
-
         public Builder lowKey(String lowKey) {
             this.lowKey = Objects.requireNonNull(lowKey);
             return this;
         }
-
         public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
-        }
-        public UniformInt64RangePartitionSchemeDescriptionResponse build() {
+        }        public UniformInt64RangePartitionSchemeDescriptionResponse build() {
             return new UniformInt64RangePartitionSchemeDescriptionResponse(count, highKey, lowKey, partitionScheme);
         }
     }

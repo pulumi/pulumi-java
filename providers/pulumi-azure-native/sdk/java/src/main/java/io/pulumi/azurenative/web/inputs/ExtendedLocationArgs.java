@@ -61,12 +61,10 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ExtendedLocationArgs build() {
+        }        public ExtendedLocationArgs build() {
             return new ExtendedLocationArgs(name);
         }
     }

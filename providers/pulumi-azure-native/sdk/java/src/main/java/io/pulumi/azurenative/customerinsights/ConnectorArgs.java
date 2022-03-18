@@ -175,82 +175,66 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.connectorName = connectorName;
             return this;
         }
-
         public Builder connectorName(@Nullable String connectorName) {
             this.connectorName = Output.ofNullable(connectorName);
             return this;
         }
-
         public Builder connectorProperties(Output<Map<String,Object>> connectorProperties) {
             this.connectorProperties = Objects.requireNonNull(connectorProperties);
             return this;
         }
-
         public Builder connectorProperties(Map<String,Object> connectorProperties) {
             this.connectorProperties = Output.of(Objects.requireNonNull(connectorProperties));
             return this;
         }
-
         public Builder connectorType(Output<Either<String,ConnectorTypes>> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder connectorType(Either<String,ConnectorTypes> connectorType) {
             this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder isInternal(@Nullable Output<Boolean> isInternal) {
             this.isInternal = isInternal;
             return this;
         }
-
         public Builder isInternal(@Nullable Boolean isInternal) {
             this.isInternal = Output.ofNullable(isInternal);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ConnectorArgs build() {
+        }        public ConnectorArgs build() {
             return new ConnectorArgs(connectorName, connectorProperties, connectorType, description, displayName, hubName, isInternal, resourceGroupName);
         }
     }

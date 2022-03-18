@@ -115,42 +115,34 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(Either<TlsEndpointArgs,UnsecuredEndpointArgs> endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder transport(@Nullable Output<Either<String,RtspTransport>> transport) {
             this.transport = transport;
             return this;
         }
-
         public Builder transport(@Nullable Either<String,RtspTransport> transport) {
             this.transport = Output.ofNullable(transport);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RtspSourceArgs build() {
+        }        public RtspSourceArgs build() {
             return new RtspSourceArgs(endpoint, name, transport, type);
         }
     }

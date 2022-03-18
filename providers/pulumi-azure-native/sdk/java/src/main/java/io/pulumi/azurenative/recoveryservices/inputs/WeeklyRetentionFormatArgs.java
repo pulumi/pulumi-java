@@ -80,22 +80,24 @@ public final class WeeklyRetentionFormatArgs extends io.pulumi.resources.Resourc
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-
         public Builder daysOfTheWeek(@Nullable List<DayOfWeek> daysOfTheWeek) {
             this.daysOfTheWeek = Output.ofNullable(daysOfTheWeek);
             return this;
         }
-
+        public Builder daysOfTheWeek(DayOfWeek... daysOfTheWeek) {
+            return daysOfTheWeek(List.of(daysOfTheWeek));
+        }
         public Builder weeksOfTheMonth(@Nullable Output<List<WeekOfMonth>> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-
         public Builder weeksOfTheMonth(@Nullable List<WeekOfMonth> weeksOfTheMonth) {
             this.weeksOfTheMonth = Output.ofNullable(weeksOfTheMonth);
             return this;
         }
-        public WeeklyRetentionFormatArgs build() {
+        public Builder weeksOfTheMonth(WeekOfMonth... weeksOfTheMonth) {
+            return weeksOfTheMonth(List.of(weeksOfTheMonth));
+        }        public WeeklyRetentionFormatArgs build() {
             return new WeeklyRetentionFormatArgs(daysOfTheWeek, weeksOfTheMonth);
         }
     }

@@ -108,42 +108,37 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder dataPoolName(@Nullable Output<String> dataPoolName) {
             this.dataPoolName = dataPoolName;
             return this;
         }
-
         public Builder dataPoolName(@Nullable String dataPoolName) {
             this.dataPoolName = Output.ofNullable(dataPoolName);
             return this;
         }
-
         public Builder locations(Output<List<DataPoolLocationArgs>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
         public Builder locations(List<DataPoolLocationArgs> locations) {
             this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
-
+        public Builder locations(DataPoolLocationArgs... locations) {
+            return locations(List.of(locations));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DataPoolArgs build() {
+        }        public DataPoolArgs build() {
             return new DataPoolArgs(accountName, dataPoolName, locations, resourceGroupName);
         }
     }

@@ -97,32 +97,32 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
             this.exclusions = exclusions;
             return this;
         }
-
         public Builder exclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
             this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
-
+        public Builder exclusions(ManagedRuleExclusionArgs... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder ruleGroupName(Output<String> ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
-
         public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Output.of(Objects.requireNonNull(ruleGroupName));
             return this;
         }
-
         public Builder rules(@Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<FrontDoorManagedRuleOverrideArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public FrontDoorManagedRuleGroupOverrideArgs build() {
+        public Builder rules(FrontDoorManagedRuleOverrideArgs... rules) {
+            return rules(List.of(rules));
+        }        public FrontDoorManagedRuleGroupOverrideArgs build() {
             return new FrontDoorManagedRuleGroupOverrideArgs(exclusions, ruleGroupName, rules);
         }
     }

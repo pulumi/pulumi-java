@@ -400,112 +400,99 @@ public final class GetStaticSiteResult {
             this.allowConfigFileUpdates = allowConfigFileUpdates;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
-
         public Builder buildProperties(@Nullable StaticSiteBuildPropertiesResponse buildProperties) {
             this.buildProperties = buildProperties;
             return this;
         }
-
         public Builder contentDistributionEndpoint(String contentDistributionEndpoint) {
             this.contentDistributionEndpoint = Objects.requireNonNull(contentDistributionEndpoint);
             return this;
         }
-
         public Builder customDomains(List<String> customDomains) {
             this.customDomains = Objects.requireNonNull(customDomains);
             return this;
         }
-
+        public Builder customDomains(String... customDomains) {
+            return customDomains(List.of(customDomains));
+        }
         public Builder defaultHostname(String defaultHostname) {
             this.defaultHostname = Objects.requireNonNull(defaultHostname);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder keyVaultReferenceIdentity(String keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = Objects.requireNonNull(keyVaultReferenceIdentity);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnections(List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder repositoryToken(@Nullable String repositoryToken) {
             this.repositoryToken = repositoryToken;
             return this;
         }
-
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
-
         public Builder sku(@Nullable SkuDescriptionResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder stagingEnvironmentPolicy(@Nullable String stagingEnvironmentPolicy) {
             this.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder templateProperties(@Nullable StaticSiteTemplateOptionsResponse templateProperties) {
             this.templateProperties = templateProperties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProvidedFunctionApps(List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
             this.userProvidedFunctionApps = Objects.requireNonNull(userProvidedFunctionApps);
             return this;
         }
-        public GetStaticSiteResult build() {
+        public Builder userProvidedFunctionApps(StaticSiteUserProvidedFunctionAppResponse... userProvidedFunctionApps) {
+            return userProvidedFunctionApps(List.of(userProvidedFunctionApps));
+        }        public GetStaticSiteResult build() {
             return new GetStaticSiteResult(allowConfigFileUpdates, branch, buildProperties, contentDistributionEndpoint, customDomains, defaultHostname, id, identity, keyVaultReferenceIdentity, kind, location, name, privateEndpointConnections, provider, repositoryToken, repositoryUrl, sku, stagingEnvironmentPolicy, tags, templateProperties, type, userProvidedFunctionApps);
         }
     }

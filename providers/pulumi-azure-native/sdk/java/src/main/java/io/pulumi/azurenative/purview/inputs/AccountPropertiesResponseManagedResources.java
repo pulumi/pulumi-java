@@ -92,17 +92,14 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
             this.eventHubNamespace = Objects.requireNonNull(eventHubNamespace);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder storageAccount(String storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
-        }
-        public AccountPropertiesResponseManagedResources build() {
+        }        public AccountPropertiesResponseManagedResources build() {
             return new AccountPropertiesResponseManagedResources(eventHubNamespace, resourceGroup, storageAccount);
         }
     }

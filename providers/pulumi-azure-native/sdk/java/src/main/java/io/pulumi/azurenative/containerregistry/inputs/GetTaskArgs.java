@@ -88,17 +88,14 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder taskName(String taskName) {
             this.taskName = Objects.requireNonNull(taskName);
             return this;
-        }
-        public GetTaskArgs build() {
+        }        public GetTaskArgs build() {
             return new GetTaskArgs(registryName, resourceGroupName, taskName);
         }
     }

@@ -126,27 +126,22 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public Builder lastHeartBeatUtc(String lastHeartBeatUtc) {
             this.lastHeartBeatUtc = Objects.requireNonNull(lastHeartBeatUtc);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public SiteAgentPropertiesResponse build() {
+        }        public SiteAgentPropertiesResponse build() {
             return new SiteAgentPropertiesResponse(id, keyVaultId, keyVaultUri, lastHeartBeatUtc, version);
         }
     }

@@ -72,12 +72,10 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
             this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetRegistrationDefinitionArgs build() {
+        }        public GetRegistrationDefinitionArgs build() {
             return new GetRegistrationDefinitionArgs(registrationDefinitionId, scope);
         }
     }

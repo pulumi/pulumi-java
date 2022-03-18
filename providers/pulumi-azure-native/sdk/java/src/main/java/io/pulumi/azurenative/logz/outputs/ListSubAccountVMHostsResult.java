@@ -73,12 +73,13 @@ public final class ListSubAccountVMHostsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<VMResourcesResponse> value) {
             this.value = value;
             return this;
         }
-        public ListSubAccountVMHostsResult build() {
+        public Builder value(VMResourcesResponse... value) {
+            return value(List.of(value));
+        }        public ListSubAccountVMHostsResult build() {
             return new ListSubAccountVMHostsResult(nextLink, value);
         }
     }

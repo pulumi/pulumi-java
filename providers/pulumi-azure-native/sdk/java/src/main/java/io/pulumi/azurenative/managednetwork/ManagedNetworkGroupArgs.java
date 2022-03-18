@@ -190,92 +190,86 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,Kind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedNetworkGroupName(@Nullable Output<String> managedNetworkGroupName) {
             this.managedNetworkGroupName = managedNetworkGroupName;
             return this;
         }
-
         public Builder managedNetworkGroupName(@Nullable String managedNetworkGroupName) {
             this.managedNetworkGroupName = Output.ofNullable(managedNetworkGroupName);
             return this;
         }
-
         public Builder managedNetworkName(Output<String> managedNetworkName) {
             this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
             return this;
         }
-
         public Builder managedNetworkName(String managedNetworkName) {
             this.managedNetworkName = Output.of(Objects.requireNonNull(managedNetworkName));
             return this;
         }
-
         public Builder managementGroups(@Nullable Output<List<ResourceIdArgs>> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
-
         public Builder managementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
             this.managementGroups = Output.ofNullable(managementGroups);
             return this;
         }
-
+        public Builder managementGroups(ResourceIdArgs... managementGroups) {
+            return managementGroups(List.of(managementGroups));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subnets(@Nullable Output<List<ResourceIdArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
-
         public Builder subnets(@Nullable List<ResourceIdArgs> subnets) {
             this.subnets = Output.ofNullable(subnets);
             return this;
         }
-
+        public Builder subnets(ResourceIdArgs... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder subscriptions(@Nullable Output<List<ResourceIdArgs>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
-
         public Builder subscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
             this.subscriptions = Output.ofNullable(subscriptions);
             return this;
         }
-
+        public Builder subscriptions(ResourceIdArgs... subscriptions) {
+            return subscriptions(List.of(subscriptions));
+        }
         public Builder virtualNetworks(@Nullable Output<List<ResourceIdArgs>> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public Builder virtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
             this.virtualNetworks = Output.ofNullable(virtualNetworks);
             return this;
         }
-        public ManagedNetworkGroupArgs build() {
+        public Builder virtualNetworks(ResourceIdArgs... virtualNetworks) {
+            return virtualNetworks(List.of(virtualNetworks));
+        }        public ManagedNetworkGroupArgs build() {
             return new ManagedNetworkGroupArgs(kind, location, managedNetworkGroupName, managedNetworkName, managementGroups, resourceGroupName, subnets, subscriptions, virtualNetworks);
         }
     }

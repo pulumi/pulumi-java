@@ -57,12 +57,10 @@ public final class SeedNodeArgs extends io.pulumi.resources.ResourceArgs {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
-        }
-        public SeedNodeArgs build() {
+        }        public SeedNodeArgs build() {
             return new SeedNodeArgs(ipAddress);
         }
     }

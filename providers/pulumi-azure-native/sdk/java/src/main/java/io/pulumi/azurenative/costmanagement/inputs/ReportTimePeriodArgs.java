@@ -77,22 +77,18 @@ public final class ReportTimePeriodArgs extends io.pulumi.resources.ResourceArgs
             this.from = Objects.requireNonNull(from);
             return this;
         }
-
         public Builder from(String from) {
             this.from = Output.of(Objects.requireNonNull(from));
             return this;
         }
-
         public Builder to(Output<String> to) {
             this.to = Objects.requireNonNull(to);
             return this;
         }
-
         public Builder to(String to) {
             this.to = Output.of(Objects.requireNonNull(to));
             return this;
-        }
-        public ReportTimePeriodArgs build() {
+        }        public ReportTimePeriodArgs build() {
             return new ReportTimePeriodArgs(from, to);
         }
     }

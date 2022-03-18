@@ -174,82 +174,66 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.engineType = engineType;
             return this;
         }
-
         public Builder engineType(@Nullable Either<String,EngineType> engineType) {
             this.engineType = Output.ofNullable(engineType);
             return this;
         }
-
         public Builder kustoPoolName(@Nullable Output<String> kustoPoolName) {
             this.kustoPoolName = kustoPoolName;
             return this;
         }
-
         public Builder kustoPoolName(@Nullable String kustoPoolName) {
             this.kustoPoolName = Output.ofNullable(kustoPoolName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<AzureSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(AzureSkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public Builder workspaceUid(@Nullable Output<String> workspaceUid) {
             this.workspaceUid = workspaceUid;
             return this;
         }
-
         public Builder workspaceUid(@Nullable String workspaceUid) {
             this.workspaceUid = Output.ofNullable(workspaceUid);
             return this;
-        }
-        public KustoPoolArgs build() {
+        }        public KustoPoolArgs build() {
             return new KustoPoolArgs(engineType, kustoPoolName, location, resourceGroupName, sku, tags, workspaceName, workspaceUid);
         }
     }

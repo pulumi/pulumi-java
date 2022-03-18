@@ -160,72 +160,61 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
             this.adminGroupObjectIDs = adminGroupObjectIDs;
             return this;
         }
-
         public Builder adminGroupObjectIDs(@Nullable List<String> adminGroupObjectIDs) {
             this.adminGroupObjectIDs = Output.ofNullable(adminGroupObjectIDs);
             return this;
         }
-
+        public Builder adminGroupObjectIDs(String... adminGroupObjectIDs) {
+            return adminGroupObjectIDs(List.of(adminGroupObjectIDs));
+        }
         public Builder clientAppID(@Nullable Output<String> clientAppID) {
             this.clientAppID = clientAppID;
             return this;
         }
-
         public Builder clientAppID(@Nullable String clientAppID) {
             this.clientAppID = Output.ofNullable(clientAppID);
             return this;
         }
-
         public Builder enableAzureRBAC(@Nullable Output<Boolean> enableAzureRBAC) {
             this.enableAzureRBAC = enableAzureRBAC;
             return this;
         }
-
         public Builder enableAzureRBAC(@Nullable Boolean enableAzureRBAC) {
             this.enableAzureRBAC = Output.ofNullable(enableAzureRBAC);
             return this;
         }
-
         public Builder managed(@Nullable Output<Boolean> managed) {
             this.managed = managed;
             return this;
         }
-
         public Builder managed(@Nullable Boolean managed) {
             this.managed = Output.ofNullable(managed);
             return this;
         }
-
         public Builder serverAppID(@Nullable Output<String> serverAppID) {
             this.serverAppID = serverAppID;
             return this;
         }
-
         public Builder serverAppID(@Nullable String serverAppID) {
             this.serverAppID = Output.ofNullable(serverAppID);
             return this;
         }
-
         public Builder serverAppSecret(@Nullable Output<String> serverAppSecret) {
             this.serverAppSecret = serverAppSecret;
             return this;
         }
-
         public Builder serverAppSecret(@Nullable String serverAppSecret) {
             this.serverAppSecret = Output.ofNullable(serverAppSecret);
             return this;
         }
-
         public Builder tenantID(@Nullable Output<String> tenantID) {
             this.tenantID = tenantID;
             return this;
         }
-
         public Builder tenantID(@Nullable String tenantID) {
             this.tenantID = Output.ofNullable(tenantID);
             return this;
-        }
-        public ManagedClusterAADProfileArgs build() {
+        }        public ManagedClusterAADProfileArgs build() {
             return new ManagedClusterAADProfileArgs(adminGroupObjectIDs, clientAppID, enableAzureRBAC, managed, serverAppID, serverAppSecret, tenantID);
         }
     }

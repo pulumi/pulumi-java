@@ -139,32 +139,38 @@ public final class RemotePrivateEndpointResponse {
             this.connectionDetails = connectionDetails;
             return this;
         }
-
+        public Builder connectionDetails(ConnectionDetailsResponse... connectionDetails) {
+            return connectionDetails(List.of(connectionDetails));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-
+        public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
+            return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
+        }
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
-
+        public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionResponse... privateLinkServiceConnections) {
+            return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
+        }
         public Builder privateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies) {
             this.privateLinkServiceProxies = privateLinkServiceProxies;
             return this;
         }
-
+        public Builder privateLinkServiceProxies(PrivateLinkServiceProxyResponse... privateLinkServiceProxies) {
+            return privateLinkServiceProxies(List.of(privateLinkServiceProxies));
+        }
         public Builder vnetTrafficTag(String vnetTrafficTag) {
             this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag);
             return this;
-        }
-        public RemotePrivateEndpointResponse build() {
+        }        public RemotePrivateEndpointResponse build() {
             return new RemotePrivateEndpointResponse(connectionDetails, id, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies, vnetTrafficTag);
         }
     }

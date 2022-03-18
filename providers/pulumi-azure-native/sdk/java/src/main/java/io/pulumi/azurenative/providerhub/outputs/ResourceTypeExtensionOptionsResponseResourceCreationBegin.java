@@ -55,12 +55,16 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin {
             this.request = request;
             return this;
         }
-
+        public Builder request(String... request) {
+            return request(List.of(request));
+        }
         public Builder response(@Nullable List<String> response) {
             this.response = response;
             return this;
         }
-        public ResourceTypeExtensionOptionsResponseResourceCreationBegin build() {
+        public Builder response(String... response) {
+            return response(List.of(response));
+        }        public ResourceTypeExtensionOptionsResponseResourceCreationBegin build() {
             return new ResourceTypeExtensionOptionsResponseResourceCreationBegin(request, response);
         }
     }

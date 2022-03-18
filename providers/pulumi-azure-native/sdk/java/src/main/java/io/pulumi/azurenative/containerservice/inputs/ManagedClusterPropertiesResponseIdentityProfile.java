@@ -90,17 +90,14 @@ public final class ManagedClusterPropertiesResponseIdentityProfile extends io.pu
             this.clientId = clientId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public ManagedClusterPropertiesResponseIdentityProfile build() {
+        }        public ManagedClusterPropertiesResponseIdentityProfile build() {
             return new ManagedClusterPropertiesResponseIdentityProfile(clientId, objectId, resourceId);
         }
     }

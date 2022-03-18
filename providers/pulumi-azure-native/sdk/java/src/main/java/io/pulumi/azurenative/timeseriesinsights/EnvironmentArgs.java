@@ -142,62 +142,50 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.environmentName = environmentName;
             return this;
         }
-
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Output.ofNullable(environmentName);
             return this;
         }
-
         public Builder kind(Output<Either<String,EnvironmentKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,EnvironmentKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(environmentName, kind, location, resourceGroupName, sku, tags);
         }
     }

@@ -304,82 +304,69 @@ public final class GetVpnSiteResult {
             this.addressSpace = addressSpace;
             return this;
         }
-
         public Builder bgpProperties(@Nullable BgpSettingsResponse bgpProperties) {
             this.bgpProperties = bgpProperties;
             return this;
         }
-
         public Builder deviceProperties(@Nullable DevicePropertiesResponse deviceProperties) {
             this.deviceProperties = deviceProperties;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder isSecuritySite(@Nullable Boolean isSecuritySite) {
             this.isSecuritySite = isSecuritySite;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder o365Policy(@Nullable O365PolicyPropertiesResponse o365Policy) {
             this.o365Policy = o365Policy;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder siteKey(@Nullable String siteKey) {
             this.siteKey = siteKey;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualWan(@Nullable SubResourceResponse virtualWan) {
             this.virtualWan = virtualWan;
             return this;
         }
-
         public Builder vpnSiteLinks(@Nullable List<VpnSiteLinkResponse> vpnSiteLinks) {
             this.vpnSiteLinks = vpnSiteLinks;
             return this;
         }
-        public GetVpnSiteResult build() {
+        public Builder vpnSiteLinks(VpnSiteLinkResponse... vpnSiteLinks) {
+            return vpnSiteLinks(List.of(vpnSiteLinks));
+        }        public GetVpnSiteResult build() {
             return new GetVpnSiteResult(addressSpace, bgpProperties, deviceProperties, etag, id, ipAddress, isSecuritySite, location, name, o365Policy, provisioningState, siteKey, tags, type, virtualWan, vpnSiteLinks);
         }
     }

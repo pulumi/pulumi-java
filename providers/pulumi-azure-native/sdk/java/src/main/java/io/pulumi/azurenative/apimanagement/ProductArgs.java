@@ -205,102 +205,82 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             this.approvalRequired = approvalRequired;
             return this;
         }
-
         public Builder approvalRequired(@Nullable Boolean approvalRequired) {
             this.approvalRequired = Output.ofNullable(approvalRequired);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = Output.ofNullable(productId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder state(@Nullable Output<ProductState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable ProductState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder subscriptionRequired(@Nullable Output<Boolean> subscriptionRequired) {
             this.subscriptionRequired = subscriptionRequired;
             return this;
         }
-
         public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
             this.subscriptionRequired = Output.ofNullable(subscriptionRequired);
             return this;
         }
-
         public Builder subscriptionsLimit(@Nullable Output<Integer> subscriptionsLimit) {
             this.subscriptionsLimit = subscriptionsLimit;
             return this;
         }
-
         public Builder subscriptionsLimit(@Nullable Integer subscriptionsLimit) {
             this.subscriptionsLimit = Output.ofNullable(subscriptionsLimit);
             return this;
         }
-
         public Builder terms(@Nullable Output<String> terms) {
             this.terms = terms;
             return this;
         }
-
         public Builder terms(@Nullable String terms) {
             this.terms = Output.ofNullable(terms);
             return this;
-        }
-        public ProductArgs build() {
+        }        public ProductArgs build() {
             return new ProductArgs(approvalRequired, description, displayName, productId, resourceGroupName, serviceName, state, subscriptionRequired, subscriptionsLimit, terms);
         }
     }

@@ -88,17 +88,14 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-
         public Builder policyState(@Nullable String policyState) {
             this.policyState = policyState;
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
-        }
-        public AzureVmWorkloadProtectedItemExtendedInfoResponse build() {
+        }        public AzureVmWorkloadProtectedItemExtendedInfoResponse build() {
             return new AzureVmWorkloadProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount);
         }
     }

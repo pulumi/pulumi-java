@@ -127,52 +127,48 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
             this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
-
         public Builder ipRules(@Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
-
         public Builder ipRules(@Nullable List<NWRuleSetIpRulesArgs> ipRules) {
             this.ipRules = Output.ofNullable(ipRules);
             return this;
         }
-
+        public Builder ipRules(NWRuleSetIpRulesArgs... ipRules) {
+            return ipRules(List.of(ipRules));
+        }
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder virtualNetworkRules(@Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public Builder virtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
-        public NamespaceNetworkRuleSetArgs build() {
+        public Builder virtualNetworkRules(NWRuleSetVirtualNetworkRulesArgs... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }        public NamespaceNetworkRuleSetArgs build() {
             return new NamespaceNetworkRuleSetArgs(defaultAction, ipRules, namespaceName, resourceGroupName, virtualNetworkRules);
         }
     }

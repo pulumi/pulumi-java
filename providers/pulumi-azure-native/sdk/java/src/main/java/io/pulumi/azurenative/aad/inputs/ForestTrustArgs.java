@@ -126,52 +126,42 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder remoteDnsIps(@Nullable Output<String> remoteDnsIps) {
             this.remoteDnsIps = remoteDnsIps;
             return this;
         }
-
         public Builder remoteDnsIps(@Nullable String remoteDnsIps) {
             this.remoteDnsIps = Output.ofNullable(remoteDnsIps);
             return this;
         }
-
         public Builder trustDirection(@Nullable Output<String> trustDirection) {
             this.trustDirection = trustDirection;
             return this;
         }
-
         public Builder trustDirection(@Nullable String trustDirection) {
             this.trustDirection = Output.ofNullable(trustDirection);
             return this;
         }
-
         public Builder trustPassword(@Nullable Output<String> trustPassword) {
             this.trustPassword = trustPassword;
             return this;
         }
-
         public Builder trustPassword(@Nullable String trustPassword) {
             this.trustPassword = Output.ofNullable(trustPassword);
             return this;
         }
-
         public Builder trustedDomainFqdn(@Nullable Output<String> trustedDomainFqdn) {
             this.trustedDomainFqdn = trustedDomainFqdn;
             return this;
         }
-
         public Builder trustedDomainFqdn(@Nullable String trustedDomainFqdn) {
             this.trustedDomainFqdn = Output.ofNullable(trustedDomainFqdn);
             return this;
-        }
-        public ForestTrustArgs build() {
+        }        public ForestTrustArgs build() {
             return new ForestTrustArgs(friendlyName, remoteDnsIps, trustDirection, trustPassword, trustedDomainFqdn);
         }
     }

@@ -112,42 +112,37 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<List<KeyValuePairArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(List<KeyValuePairArgs> parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
+        public Builder parameters(KeyValuePairArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder selectorId(Output<String> selectorId) {
             this.selectorId = Objects.requireNonNull(selectorId);
             return this;
         }
-
         public Builder selectorId(String selectorId) {
             this.selectorId = Output.of(Objects.requireNonNull(selectorId));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DiscreteActionArgs build() {
+        }        public DiscreteActionArgs build() {
             return new DiscreteActionArgs(name, parameters, selectorId, type);
         }
     }

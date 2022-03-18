@@ -112,42 +112,34 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
             this.faultDomain = faultDomain;
             return this;
         }
-
         public Builder faultDomain(@Nullable Integer faultDomain) {
             this.faultDomain = Output.ofNullable(faultDomain);
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
-
         public Builder updateDomain(@Nullable Output<Integer> updateDomain) {
             this.updateDomain = updateDomain;
             return this;
         }
-
         public Builder updateDomain(@Nullable Integer updateDomain) {
             this.updateDomain = Output.ofNullable(updateDomain);
             return this;
-        }
-        public AvailabilitySetResourceSettingsArgs build() {
+        }        public AvailabilitySetResourceSettingsArgs build() {
             return new AvailabilitySetResourceSettingsArgs(faultDomain, resourceType, targetResourceName, updateDomain);
         }
     }

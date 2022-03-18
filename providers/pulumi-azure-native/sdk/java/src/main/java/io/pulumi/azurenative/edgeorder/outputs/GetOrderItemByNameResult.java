@@ -202,52 +202,42 @@ public final class GetOrderItemByNameResult {
             this.addressDetails = Objects.requireNonNull(addressDetails);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder orderId(String orderId) {
             this.orderId = Objects.requireNonNull(orderId);
             return this;
         }
-
         public Builder orderItemDetails(OrderItemDetailsResponse orderItemDetails) {
             this.orderItemDetails = Objects.requireNonNull(orderItemDetails);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOrderItemByNameResult build() {
+        }        public GetOrderItemByNameResult build() {
             return new GetOrderItemByNameResult(addressDetails, id, location, name, orderId, orderItemDetails, startTime, systemData, tags, type);
         }
     }

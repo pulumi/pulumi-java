@@ -88,17 +88,14 @@ public final class GetVpnConnectionArgs extends io.pulumi.resources.InvokeArgs {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetVpnConnectionArgs build() {
+        }        public GetVpnConnectionArgs build() {
             return new GetVpnConnectionArgs(connectionName, gatewayName, resourceGroupName);
         }
     }

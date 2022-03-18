@@ -143,32 +143,26 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
             this.count = count;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder status(@Nullable Integer status) {
             this.status = status;
             return this;
         }
-
         public Builder subStatus(@Nullable Integer subStatus) {
             this.subStatus = subStatus;
             return this;
         }
-
         public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
-
         public Builder win32Status(@Nullable Integer win32Status) {
             this.win32Status = win32Status;
             return this;
-        }
-        public StatusCodesBasedTriggerResponse build() {
+        }        public StatusCodesBasedTriggerResponse build() {
             return new StatusCodesBasedTriggerResponse(count, path, status, subStatus, timeInterval, win32Status);
         }
     }

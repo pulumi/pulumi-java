@@ -88,17 +88,14 @@ public final class GetShareSubscriptionArgs extends io.pulumi.resources.InvokeAr
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
-        }
-        public GetShareSubscriptionArgs build() {
+        }        public GetShareSubscriptionArgs build() {
             return new GetShareSubscriptionArgs(accountName, resourceGroupName, shareSubscriptionName);
         }
     }

@@ -349,97 +349,81 @@ public final class GetServerResult {
             this.administratorLogin = administratorLogin;
             return this;
         }
-
         public Builder earliestRestoreDate(@Nullable String earliestRestoreDate) {
             this.earliestRestoreDate = earliestRestoreDate;
             return this;
         }
-
         public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = fullyQualifiedDomainName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder masterServerId(@Nullable String masterServerId) {
             this.masterServerId = masterServerId;
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(ServerPrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder replicaCapacity(@Nullable Integer replicaCapacity) {
             this.replicaCapacity = replicaCapacity;
             return this;
         }
-
         public Builder replicationRole(@Nullable String replicationRole) {
             this.replicationRole = replicationRole;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sslEnforcement(@Nullable String sslEnforcement) {
             this.sslEnforcement = sslEnforcement;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userVisibleState(@Nullable String userVisibleState) {
             this.userVisibleState = userVisibleState;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetServerResult build() {
+        }        public GetServerResult build() {
             return new GetServerResult(administratorLogin, earliestRestoreDate, fullyQualifiedDomainName, id, location, masterServerId, minimalTlsVersion, name, privateEndpointConnections, publicNetworkAccess, replicaCapacity, replicationRole, sku, sslEnforcement, storageProfile, tags, type, userVisibleState, version);
         }
     }

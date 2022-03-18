@@ -82,22 +82,21 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<ConnectionMonitorEndpointFilterItemArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-
+        public Builder items(ConnectionMonitorEndpointFilterItemArgs... items) {
+            return items(List.of(items));
+        }
         public Builder type(@Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ConnectionMonitorEndpointFilterType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ConnectionMonitorEndpointFilterArgs build() {
+        }        public ConnectionMonitorEndpointFilterArgs build() {
             return new ConnectionMonitorEndpointFilterArgs(items, type);
         }
     }

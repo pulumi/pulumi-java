@@ -300,82 +300,69 @@ public final class GetNetworkFunctionResult {
             this.device = device;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managedApplication(SubResourceResponse managedApplication) {
             this.managedApplication = Objects.requireNonNull(managedApplication);
             return this;
         }
-
         public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
             this.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkFunctionUserConfigurations(@Nullable List<NetworkFunctionUserConfigurationResponse> networkFunctionUserConfigurations) {
             this.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
             return this;
         }
-
+        public Builder networkFunctionUserConfigurations(NetworkFunctionUserConfigurationResponse... networkFunctionUserConfigurations) {
+            return networkFunctionUserConfigurations(List.of(networkFunctionUserConfigurations));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serviceKey(String serviceKey) {
             this.serviceKey = Objects.requireNonNull(serviceKey);
             return this;
         }
-
         public Builder skuName(@Nullable String skuName) {
             this.skuName = skuName;
             return this;
         }
-
         public Builder skuType(String skuType) {
             this.skuType = Objects.requireNonNull(skuType);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vendorName(@Nullable String vendorName) {
             this.vendorName = vendorName;
             return this;
         }
-
         public Builder vendorProvisioningState(String vendorProvisioningState) {
             this.vendorProvisioningState = Objects.requireNonNull(vendorProvisioningState);
             return this;
-        }
-        public GetNetworkFunctionResult build() {
+        }        public GetNetworkFunctionResult build() {
             return new GetNetworkFunctionResult(device, etag, id, location, managedApplication, managedApplicationParameters, name, networkFunctionUserConfigurations, provisioningState, serviceKey, skuName, skuType, tags, type, vendorName, vendorProvisioningState);
         }
     }

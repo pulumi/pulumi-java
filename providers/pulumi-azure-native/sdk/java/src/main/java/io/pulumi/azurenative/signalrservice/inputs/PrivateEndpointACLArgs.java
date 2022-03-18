@@ -97,32 +97,32 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable List<Either<String,SignalRRequestType>> allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
+        public Builder allow(Either<String,SignalRRequestType>... allow) {
+            return allow(List.of(allow));
+        }
         public Builder deny(@Nullable Output<List<Either<String,SignalRRequestType>>> deny) {
             this.deny = deny;
             return this;
         }
-
         public Builder deny(@Nullable List<Either<String,SignalRRequestType>> deny) {
             this.deny = Output.ofNullable(deny);
             return this;
         }
-
+        public Builder deny(Either<String,SignalRRequestType>... deny) {
+            return deny(List.of(deny));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PrivateEndpointACLArgs build() {
+        }        public PrivateEndpointACLArgs build() {
             return new PrivateEndpointACLArgs(allow, deny, name);
         }
     }

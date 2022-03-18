@@ -342,182 +342,149 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
-
         public Builder connectivityEndpoints(@Nullable Map<String,String> connectivityEndpoints) {
             this.connectivityEndpoints = Output.ofNullable(connectivityEndpoints);
             return this;
         }
-
         public Builder defaultDataLakeStorage(@Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage) {
             this.defaultDataLakeStorage = defaultDataLakeStorage;
             return this;
         }
-
         public Builder defaultDataLakeStorage(@Nullable DataLakeStorageAccountDetailsArgs defaultDataLakeStorage) {
             this.defaultDataLakeStorage = Output.ofNullable(defaultDataLakeStorage);
             return this;
         }
-
         public Builder encryption(@Nullable Output<EncryptionDetailsArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionDetailsArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedResourceGroupName(@Nullable Output<String> managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
-
         public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
             this.managedResourceGroupName = Output.ofNullable(managedResourceGroupName);
             return this;
         }
-
         public Builder managedVirtualNetwork(@Nullable Output<String> managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
-
         public Builder managedVirtualNetwork(@Nullable String managedVirtualNetwork) {
             this.managedVirtualNetwork = Output.ofNullable(managedVirtualNetwork);
             return this;
         }
-
         public Builder managedVirtualNetworkSettings(@Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings) {
             this.managedVirtualNetworkSettings = managedVirtualNetworkSettings;
             return this;
         }
-
         public Builder managedVirtualNetworkSettings(@Nullable ManagedVirtualNetworkSettingsArgs managedVirtualNetworkSettings) {
             this.managedVirtualNetworkSettings = Output.ofNullable(managedVirtualNetworkSettings);
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,WorkspacePublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder purviewConfiguration(@Nullable Output<PurviewConfigurationArgs> purviewConfiguration) {
             this.purviewConfiguration = purviewConfiguration;
             return this;
         }
-
         public Builder purviewConfiguration(@Nullable PurviewConfigurationArgs purviewConfiguration) {
             this.purviewConfiguration = Output.ofNullable(purviewConfiguration);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlAdministratorLogin(@Nullable Output<String> sqlAdministratorLogin) {
             this.sqlAdministratorLogin = sqlAdministratorLogin;
             return this;
         }
-
         public Builder sqlAdministratorLogin(@Nullable String sqlAdministratorLogin) {
             this.sqlAdministratorLogin = Output.ofNullable(sqlAdministratorLogin);
             return this;
         }
-
         public Builder sqlAdministratorLoginPassword(@Nullable Output<String> sqlAdministratorLoginPassword) {
             this.sqlAdministratorLoginPassword = sqlAdministratorLoginPassword;
             return this;
         }
-
         public Builder sqlAdministratorLoginPassword(@Nullable String sqlAdministratorLoginPassword) {
             this.sqlAdministratorLoginPassword = Output.ofNullable(sqlAdministratorLoginPassword);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualNetworkProfile(@Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
-
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
             this.virtualNetworkProfile = Output.ofNullable(virtualNetworkProfile);
             return this;
         }
-
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
-
         public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Output.ofNullable(workspaceName);
             return this;
         }
-
         public Builder workspaceRepositoryConfiguration(@Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration) {
             this.workspaceRepositoryConfiguration = workspaceRepositoryConfiguration;
             return this;
         }
-
         public Builder workspaceRepositoryConfiguration(@Nullable WorkspaceRepositoryConfigurationArgs workspaceRepositoryConfiguration) {
             this.workspaceRepositoryConfiguration = Output.ofNullable(workspaceRepositoryConfiguration);
             return this;
-        }
-        public WorkspaceArgs build() {
+        }        public WorkspaceArgs build() {
             return new WorkspaceArgs(connectivityEndpoints, defaultDataLakeStorage, encryption, identity, location, managedResourceGroupName, managedVirtualNetwork, managedVirtualNetworkSettings, privateEndpointConnections, publicNetworkAccess, purviewConfiguration, resourceGroupName, sqlAdministratorLogin, sqlAdministratorLoginPassword, tags, virtualNetworkProfile, workspaceName, workspaceRepositoryConfiguration);
         }
     }

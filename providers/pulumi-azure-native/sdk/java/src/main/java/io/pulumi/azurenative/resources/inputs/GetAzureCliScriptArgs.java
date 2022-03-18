@@ -72,12 +72,10 @@ public final class GetAzureCliScriptArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder scriptName(String scriptName) {
             this.scriptName = Objects.requireNonNull(scriptName);
             return this;
-        }
-        public GetAzureCliScriptArgs build() {
+        }        public GetAzureCliScriptArgs build() {
             return new GetAzureCliScriptArgs(resourceGroupName, scriptName);
         }
     }

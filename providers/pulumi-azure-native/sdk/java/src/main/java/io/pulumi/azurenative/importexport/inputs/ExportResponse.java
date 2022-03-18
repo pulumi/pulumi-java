@@ -95,17 +95,20 @@ public final class ExportResponse extends io.pulumi.resources.InvokeArgs {
             this.blobListBlobPath = blobListBlobPath;
             return this;
         }
-
         public Builder blobPath(@Nullable List<String> blobPath) {
             this.blobPath = blobPath;
             return this;
         }
-
+        public Builder blobPath(String... blobPath) {
+            return blobPath(List.of(blobPath));
+        }
         public Builder blobPathPrefix(@Nullable List<String> blobPathPrefix) {
             this.blobPathPrefix = blobPathPrefix;
             return this;
         }
-        public ExportResponse build() {
+        public Builder blobPathPrefix(String... blobPathPrefix) {
+            return blobPathPrefix(List.of(blobPathPrefix));
+        }        public ExportResponse build() {
             return new ExportResponse(blobListBlobPath, blobPath, blobPathPrefix);
         }
     }

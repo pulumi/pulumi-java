@@ -94,32 +94,26 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
             this.filePath = filePath;
             return this;
         }
-
         public Builder filePath(@Nullable String filePath) {
             this.filePath = Output.ofNullable(filePath);
             return this;
         }
-
         public Builder storageId(@Nullable Output<String> storageId) {
             this.storageId = storageId;
             return this;
         }
-
         public Builder storageId(@Nullable String storageId) {
             this.storageId = Output.ofNullable(storageId);
             return this;
         }
-
         public Builder storagePath(@Nullable Output<String> storagePath) {
             this.storagePath = storagePath;
             return this;
         }
-
         public Builder storagePath(@Nullable String storagePath) {
             this.storagePath = Output.ofNullable(storagePath);
             return this;
-        }
-        public PacketCaptureStorageLocationArgs build() {
+        }        public PacketCaptureStorageLocationArgs build() {
             return new PacketCaptureStorageLocationArgs(filePath, storageId, storagePath);
         }
     }

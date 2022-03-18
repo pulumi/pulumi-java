@@ -171,82 +171,66 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder recurrencePattern(@Nullable Output<RecurrencePatternArgs> recurrencePattern) {
             this.recurrencePattern = recurrencePattern;
             return this;
         }
-
         public Builder recurrencePattern(@Nullable RecurrencePatternArgs recurrencePattern) {
             this.recurrencePattern = Output.ofNullable(recurrencePattern);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scheduleName(@Nullable Output<String> scheduleName) {
             this.scheduleName = scheduleName;
             return this;
         }
-
         public Builder scheduleName(@Nullable String scheduleName) {
             this.scheduleName = Output.ofNullable(scheduleName);
             return this;
         }
-
         public Builder startAt(@Nullable Output<String> startAt) {
             this.startAt = startAt;
             return this;
         }
-
         public Builder startAt(@Nullable String startAt) {
             this.startAt = Output.ofNullable(startAt);
             return this;
         }
-
         public Builder stopAt(Output<String> stopAt) {
             this.stopAt = Objects.requireNonNull(stopAt);
             return this;
         }
-
         public Builder stopAt(String stopAt) {
             this.stopAt = Output.of(Objects.requireNonNull(stopAt));
             return this;
         }
-
         public Builder timeZoneId(Output<String> timeZoneId) {
             this.timeZoneId = Objects.requireNonNull(timeZoneId);
             return this;
         }
-
         public Builder timeZoneId(String timeZoneId) {
             this.timeZoneId = Output.of(Objects.requireNonNull(timeZoneId));
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(labName, notes, recurrencePattern, resourceGroupName, scheduleName, startAt, stopAt, timeZoneId);
         }
     }

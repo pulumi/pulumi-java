@@ -141,62 +141,50 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
             this.addressName = addressName;
             return this;
         }
-
         public Builder addressName(@Nullable String addressName) {
             this.addressName = Output.ofNullable(addressName);
             return this;
         }
-
         public Builder contactDetails(Output<ContactDetailsArgs> contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
-
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
             this.contactDetails = Output.of(Objects.requireNonNull(contactDetails));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
             this.shippingAddress = Output.ofNullable(shippingAddress);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AddressByNameArgs build() {
+        }        public AddressByNameArgs build() {
             return new AddressByNameArgs(addressName, contactDetails, location, resourceGroupName, shippingAddress, tags);
         }
     }

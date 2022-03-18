@@ -479,137 +479,110 @@ public final class GetAppServicePlanResult {
             this.freeOfferExpirationTime = freeOfferExpirationTime;
             return this;
         }
-
         public Builder geoRegion(String geoRegion) {
             this.geoRegion = Objects.requireNonNull(geoRegion);
             return this;
         }
-
         public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
-
         public Builder hyperV(@Nullable Boolean hyperV) {
             this.hyperV = hyperV;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isSpot(@Nullable Boolean isSpot) {
             this.isSpot = isSpot;
             return this;
         }
-
         public Builder isXenon(@Nullable Boolean isXenon) {
             this.isXenon = isXenon;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kubeEnvironmentProfile(@Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile) {
             this.kubeEnvironmentProfile = kubeEnvironmentProfile;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
             this.maximumElasticWorkerCount = maximumElasticWorkerCount;
             return this;
         }
-
         public Builder maximumNumberOfWorkers(Integer maximumNumberOfWorkers) {
             this.maximumNumberOfWorkers = Objects.requireNonNull(maximumNumberOfWorkers);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numberOfSites(Integer numberOfSites) {
             this.numberOfSites = Objects.requireNonNull(numberOfSites);
             return this;
         }
-
         public Builder perSiteScaling(@Nullable Boolean perSiteScaling) {
             this.perSiteScaling = perSiteScaling;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = reserved;
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder sku(@Nullable SkuDescriptionResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder spotExpirationTime(@Nullable String spotExpirationTime) {
             this.spotExpirationTime = spotExpirationTime;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder subscription(String subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetWorkerCount(@Nullable Integer targetWorkerCount) {
             this.targetWorkerCount = targetWorkerCount;
             return this;
         }
-
         public Builder targetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
             this.targetWorkerSizeId = targetWorkerSizeId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workerTierName(@Nullable String workerTierName) {
             this.workerTierName = workerTierName;
             return this;
-        }
-        public GetAppServicePlanResult build() {
+        }        public GetAppServicePlanResult build() {
             return new GetAppServicePlanResult(freeOfferExpirationTime, geoRegion, hostingEnvironmentProfile, hyperV, id, isSpot, isXenon, kind, kubeEnvironmentProfile, location, maximumElasticWorkerCount, maximumNumberOfWorkers, name, numberOfSites, perSiteScaling, provisioningState, reserved, resourceGroup, sku, spotExpirationTime, status, subscription, tags, targetWorkerCount, targetWorkerSizeId, type, workerTierName);
         }
     }

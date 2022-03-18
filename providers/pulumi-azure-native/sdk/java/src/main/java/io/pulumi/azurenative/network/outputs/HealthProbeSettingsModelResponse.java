@@ -184,47 +184,38 @@ public final class HealthProbeSettingsModelResponse {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder healthProbeMethod(@Nullable String healthProbeMethod) {
             this.healthProbeMethod = healthProbeMethod;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public HealthProbeSettingsModelResponse build() {
+        }        public HealthProbeSettingsModelResponse build() {
             return new HealthProbeSettingsModelResponse(enabledState, healthProbeMethod, id, intervalInSeconds, name, path, protocol, resourceState, type);
         }
     }

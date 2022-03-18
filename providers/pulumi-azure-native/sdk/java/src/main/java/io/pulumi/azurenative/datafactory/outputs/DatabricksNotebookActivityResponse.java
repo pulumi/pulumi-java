@@ -208,52 +208,48 @@ public final class DatabricksNotebookActivityResponse {
             this.baseParameters = baseParameters;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
             this.libraries = libraries;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notebookPath(Object notebookPath) {
             this.notebookPath = Objects.requireNonNull(notebookPath);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public DatabricksNotebookActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public DatabricksNotebookActivityResponse build() {
             return new DatabricksNotebookActivityResponse(baseParameters, dependsOn, description, libraries, linkedServiceName, name, notebookPath, policy, type, userProperties);
         }
     }

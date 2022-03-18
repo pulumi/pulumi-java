@@ -72,12 +72,10 @@ public final class PortResponse {
             this.backendPort = backendPort;
             return this;
         }
-
         public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
-        }
-        public PortResponse build() {
+        }        public PortResponse build() {
             return new PortResponse(backendPort, transportProtocol);
         }
     }

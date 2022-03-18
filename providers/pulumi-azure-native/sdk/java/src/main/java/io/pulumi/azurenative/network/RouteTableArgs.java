@@ -158,72 +158,61 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             this.disableBgpRoutePropagation = disableBgpRoutePropagation;
             return this;
         }
-
         public Builder disableBgpRoutePropagation(@Nullable Boolean disableBgpRoutePropagation) {
             this.disableBgpRoutePropagation = Output.ofNullable(disableBgpRoutePropagation);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routeTableName(@Nullable Output<String> routeTableName) {
             this.routeTableName = routeTableName;
             return this;
         }
-
         public Builder routeTableName(@Nullable String routeTableName) {
             this.routeTableName = Output.ofNullable(routeTableName);
             return this;
         }
-
         public Builder routes(@Nullable Output<List<RouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable List<RouteArgs> routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-
+        public Builder routes(RouteArgs... routes) {
+            return routes(List.of(routes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RouteTableArgs build() {
+        }        public RouteTableArgs build() {
             return new RouteTableArgs(disableBgpRoutePropagation, id, location, resourceGroupName, routeTableName, routes, tags);
         }
     }

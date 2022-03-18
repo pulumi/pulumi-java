@@ -109,22 +109,18 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
             this.allowance = Objects.requireNonNull(allowance);
             return this;
         }
-
         public Builder amount(Double amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder includedQuantityMeter(String includedQuantityMeter) {
             this.includedQuantityMeter = Objects.requireNonNull(includedQuantityMeter);
             return this;
         }
-
         public Builder overageMeter(String overageMeter) {
             this.overageMeter = Objects.requireNonNull(overageMeter);
             return this;
-        }
-        public PlanQuantityResponse build() {
+        }        public PlanQuantityResponse build() {
             return new PlanQuantityResponse(allowance, amount, includedQuantityMeter, overageMeter);
         }
     }

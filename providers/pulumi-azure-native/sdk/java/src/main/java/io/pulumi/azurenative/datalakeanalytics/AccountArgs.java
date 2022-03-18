@@ -324,172 +324,150 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder computePolicies(@Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies) {
             this.computePolicies = computePolicies;
             return this;
         }
-
         public Builder computePolicies(@Nullable List<CreateComputePolicyWithAccountParametersArgs> computePolicies) {
             this.computePolicies = Output.ofNullable(computePolicies);
             return this;
         }
-
+        public Builder computePolicies(CreateComputePolicyWithAccountParametersArgs... computePolicies) {
+            return computePolicies(List.of(computePolicies));
+        }
         public Builder dataLakeStoreAccounts(Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts) {
             this.dataLakeStoreAccounts = Objects.requireNonNull(dataLakeStoreAccounts);
             return this;
         }
-
         public Builder dataLakeStoreAccounts(List<AddDataLakeStoreWithAccountParametersArgs> dataLakeStoreAccounts) {
             this.dataLakeStoreAccounts = Output.of(Objects.requireNonNull(dataLakeStoreAccounts));
             return this;
         }
-
+        public Builder dataLakeStoreAccounts(AddDataLakeStoreWithAccountParametersArgs... dataLakeStoreAccounts) {
+            return dataLakeStoreAccounts(List.of(dataLakeStoreAccounts));
+        }
         public Builder defaultDataLakeStoreAccount(Output<String> defaultDataLakeStoreAccount) {
             this.defaultDataLakeStoreAccount = Objects.requireNonNull(defaultDataLakeStoreAccount);
             return this;
         }
-
         public Builder defaultDataLakeStoreAccount(String defaultDataLakeStoreAccount) {
             this.defaultDataLakeStoreAccount = Output.of(Objects.requireNonNull(defaultDataLakeStoreAccount));
             return this;
         }
-
         public Builder firewallAllowAzureIps(@Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
             this.firewallAllowAzureIps = firewallAllowAzureIps;
             return this;
         }
-
         public Builder firewallAllowAzureIps(@Nullable FirewallAllowAzureIpsState firewallAllowAzureIps) {
             this.firewallAllowAzureIps = Output.ofNullable(firewallAllowAzureIps);
             return this;
         }
-
         public Builder firewallRules(@Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
-
         public Builder firewallRules(@Nullable List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
             this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
-
+        public Builder firewallRules(CreateFirewallRuleWithAccountParametersArgs... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder firewallState(@Nullable Output<FirewallState> firewallState) {
             this.firewallState = firewallState;
             return this;
         }
-
         public Builder firewallState(@Nullable FirewallState firewallState) {
             this.firewallState = Output.ofNullable(firewallState);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maxDegreeOfParallelism(@Nullable Output<Integer> maxDegreeOfParallelism) {
             this.maxDegreeOfParallelism = maxDegreeOfParallelism;
             return this;
         }
-
         public Builder maxDegreeOfParallelism(@Nullable Integer maxDegreeOfParallelism) {
             this.maxDegreeOfParallelism = Output.ofNullable(maxDegreeOfParallelism);
             return this;
         }
-
         public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
-
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
-
         public Builder maxJobCount(@Nullable Output<Integer> maxJobCount) {
             this.maxJobCount = maxJobCount;
             return this;
         }
-
         public Builder maxJobCount(@Nullable Integer maxJobCount) {
             this.maxJobCount = Output.ofNullable(maxJobCount);
             return this;
         }
-
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
             this.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
-
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
             this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
             return this;
         }
-
         public Builder newTier(@Nullable Output<TierType> newTier) {
             this.newTier = newTier;
             return this;
         }
-
         public Builder newTier(@Nullable TierType newTier) {
             this.newTier = Output.ofNullable(newTier);
             return this;
         }
-
         public Builder queryStoreRetention(@Nullable Output<Integer> queryStoreRetention) {
             this.queryStoreRetention = queryStoreRetention;
             return this;
         }
-
         public Builder queryStoreRetention(@Nullable Integer queryStoreRetention) {
             this.queryStoreRetention = Output.ofNullable(queryStoreRetention);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccounts(@Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
-
         public Builder storageAccounts(@Nullable List<AddStorageAccountWithAccountParametersArgs> storageAccounts) {
             this.storageAccounts = Output.ofNullable(storageAccounts);
             return this;
         }
-
+        public Builder storageAccounts(AddStorageAccountWithAccountParametersArgs... storageAccounts) {
+            return storageAccounts(List.of(storageAccounts));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AccountArgs build() {
+        }        public AccountArgs build() {
             return new AccountArgs(accountName, computePolicies, dataLakeStoreAccounts, defaultDataLakeStoreAccount, firewallAllowAzureIps, firewallRules, firewallState, location, maxDegreeOfParallelism, maxDegreeOfParallelismPerJob, maxJobCount, minPriorityPerJob, newTier, queryStoreRetention, resourceGroupName, storageAccounts, tags);
         }
     }

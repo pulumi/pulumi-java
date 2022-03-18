@@ -79,12 +79,10 @@ public final class MyWorkbookManagedIdentityResponse extends io.pulumi.resources
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public MyWorkbookManagedIdentityResponse build() {
+        }        public MyWorkbookManagedIdentityResponse build() {
             return new MyWorkbookManagedIdentityResponse(type, userAssignedIdentities);
         }
     }

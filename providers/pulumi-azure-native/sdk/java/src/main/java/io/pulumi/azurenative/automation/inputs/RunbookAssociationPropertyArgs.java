@@ -61,12 +61,10 @@ public final class RunbookAssociationPropertyArgs extends io.pulumi.resources.Re
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public RunbookAssociationPropertyArgs build() {
+        }        public RunbookAssociationPropertyArgs build() {
             return new RunbookAssociationPropertyArgs(name);
         }
     }

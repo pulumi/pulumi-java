@@ -68,22 +68,21 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
             this.enableDefaultValidation = enableDefaultValidation;
             return this;
         }
-
         public Builder enableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
             this.enableDefaultValidation = Output.ofNullable(enableDefaultValidation);
             return this;
         }
-
         public Builder resourceTypesWithCustomValidation(@Nullable Output<List<String>> resourceTypesWithCustomValidation) {
             this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
             return this;
         }
-
         public Builder resourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
             this.resourceTypesWithCustomValidation = Output.ofNullable(resourceTypesWithCustomValidation);
             return this;
         }
-        public ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs build() {
+        public Builder resourceTypesWithCustomValidation(String... resourceTypesWithCustomValidation) {
+            return resourceTypesWithCustomValidation(List.of(resourceTypesWithCustomValidation));
+        }        public ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs build() {
             return new ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs(enableDefaultValidation, resourceTypesWithCustomValidation);
         }
     }

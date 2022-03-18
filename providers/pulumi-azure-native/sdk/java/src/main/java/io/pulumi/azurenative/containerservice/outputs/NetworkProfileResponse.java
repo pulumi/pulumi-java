@@ -87,17 +87,14 @@ public final class NetworkProfileResponse {
             this.peerVnetId = peerVnetId;
             return this;
         }
-
         public Builder vnetCidr(@Nullable String vnetCidr) {
             this.vnetCidr = vnetCidr;
             return this;
         }
-
         public Builder vnetId(@Nullable String vnetId) {
             this.vnetId = vnetId;
             return this;
-        }
-        public NetworkProfileResponse build() {
+        }        public NetworkProfileResponse build() {
             return new NetworkProfileResponse(peerVnetId, vnetCidr, vnetId);
         }
     }

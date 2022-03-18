@@ -95,32 +95,26 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
             this.acknowledgmentOfReceiptSettings = Objects.requireNonNull(acknowledgmentOfReceiptSettings);
             return this;
         }
-
         public Builder acknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsArgs acknowledgmentOfReceiptSettings) {
             this.acknowledgmentOfReceiptSettings = Output.of(Objects.requireNonNull(acknowledgmentOfReceiptSettings));
             return this;
         }
-
         public Builder activityBehavior(Output<RosettaNetPipActivityBehaviorArgs> activityBehavior) {
             this.activityBehavior = Objects.requireNonNull(activityBehavior);
             return this;
         }
-
         public Builder activityBehavior(RosettaNetPipActivityBehaviorArgs activityBehavior) {
             this.activityBehavior = Output.of(Objects.requireNonNull(activityBehavior));
             return this;
         }
-
         public Builder activityType(Output<RosettaNetPipActivityType> activityType) {
             this.activityType = Objects.requireNonNull(activityType);
             return this;
         }
-
         public Builder activityType(RosettaNetPipActivityType activityType) {
             this.activityType = Output.of(Objects.requireNonNull(activityType));
             return this;
-        }
-        public RosettaNetPipActivitySettingsArgs build() {
+        }        public RosettaNetPipActivitySettingsArgs build() {
             return new RosettaNetPipActivitySettingsArgs(acknowledgmentOfReceiptSettings, activityBehavior, activityType);
         }
     }

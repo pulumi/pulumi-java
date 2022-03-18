@@ -129,32 +129,26 @@ public final class PostgresInstancePropertiesResponse {
             this.admin = admin;
             return this;
         }
-
         public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
-
         public Builder dataControllerId(@Nullable String dataControllerId) {
             this.dataControllerId = dataControllerId;
             return this;
         }
-
         public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public PostgresInstancePropertiesResponse build() {
+        }        public PostgresInstancePropertiesResponse build() {
             return new PostgresInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, k8sRaw, lastUploadedDate, provisioningState);
         }
     }

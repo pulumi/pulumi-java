@@ -128,52 +128,42 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.retry = retry;
             return this;
         }
-
         public Builder retry(@Nullable Object retry) {
             this.retry = Output.ofNullable(retry);
             return this;
         }
-
         public Builder retryIntervalInSeconds(@Nullable Output<Integer> retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
-
         public Builder retryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
             this.retryIntervalInSeconds = Output.ofNullable(retryIntervalInSeconds);
             return this;
         }
-
         public Builder secureInput(@Nullable Output<Boolean> secureInput) {
             this.secureInput = secureInput;
             return this;
         }
-
         public Builder secureInput(@Nullable Boolean secureInput) {
             this.secureInput = Output.ofNullable(secureInput);
             return this;
         }
-
         public Builder secureOutput(@Nullable Output<Boolean> secureOutput) {
             this.secureOutput = secureOutput;
             return this;
         }
-
         public Builder secureOutput(@Nullable Boolean secureOutput) {
             this.secureOutput = Output.ofNullable(secureOutput);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Object> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Object timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public ActivityPolicyArgs build() {
+        }        public ActivityPolicyArgs build() {
             return new ActivityPolicyArgs(retry, retryIntervalInSeconds, secureInput, secureOutput, timeout);
         }
     }

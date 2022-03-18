@@ -79,12 +79,10 @@ public final class SuppressionConfigResponse extends io.pulumi.resources.InvokeA
             this.recurrenceType = Objects.requireNonNull(recurrenceType);
             return this;
         }
-
         public Builder schedule(@Nullable SuppressionScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
-        }
-        public SuppressionConfigResponse build() {
+        }        public SuppressionConfigResponse build() {
             return new SuppressionConfigResponse(recurrenceType, schedule);
         }
     }

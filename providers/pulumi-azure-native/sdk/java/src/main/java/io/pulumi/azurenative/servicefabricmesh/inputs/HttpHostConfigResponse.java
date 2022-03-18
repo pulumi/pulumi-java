@@ -78,12 +78,13 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder routes(List<HttpRouteConfigResponse> routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
-        public HttpHostConfigResponse build() {
+        public Builder routes(HttpRouteConfigResponse... routes) {
+            return routes(List.of(routes));
+        }        public HttpHostConfigResponse build() {
             return new HttpHostConfigResponse(name, routes);
         }
     }

@@ -90,17 +90,14 @@ public final class AzureFileStorageLocationResponse {
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureFileStorageLocationResponse build() {
+        }        public AzureFileStorageLocationResponse build() {
             return new AzureFileStorageLocationResponse(fileName, folderPath, type);
         }
     }

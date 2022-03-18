@@ -87,17 +87,14 @@ public final class DiagnosticStoragePropertiesResponse {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public DiagnosticStoragePropertiesResponse build() {
+        }        public DiagnosticStoragePropertiesResponse build() {
             return new DiagnosticStoragePropertiesResponse(authenticationType, connectionString, resourceId);
         }
     }

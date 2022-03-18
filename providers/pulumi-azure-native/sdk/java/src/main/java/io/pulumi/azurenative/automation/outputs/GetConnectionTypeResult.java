@@ -170,42 +170,34 @@ public final class GetConnectionTypeResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder fieldDefinitions(Map<String,FieldDefinitionResponse> fieldDefinitions) {
             this.fieldDefinitions = Objects.requireNonNull(fieldDefinitions);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isGlobal(@Nullable Boolean isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetConnectionTypeResult build() {
+        }        public GetConnectionTypeResult build() {
             return new GetConnectionTypeResult(creationTime, description, fieldDefinitions, id, isGlobal, lastModifiedTime, name, type);
         }
     }

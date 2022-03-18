@@ -96,32 +96,26 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
             this.bgpSession = bgpSession;
             return this;
         }
-
         public Builder bgpSession(@Nullable BgpSessionArgs bgpSession) {
             this.bgpSession = Output.ofNullable(bgpSession);
             return this;
         }
-
         public Builder connectionIdentifier(@Nullable Output<String> connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
-
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = Output.ofNullable(connectionIdentifier);
             return this;
         }
-
         public Builder peeringDBFacilityId(@Nullable Output<Integer> peeringDBFacilityId) {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
-
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
             this.peeringDBFacilityId = Output.ofNullable(peeringDBFacilityId);
             return this;
-        }
-        public ExchangeConnectionArgs build() {
+        }        public ExchangeConnectionArgs build() {
             return new ExchangeConnectionArgs(bgpSession, connectionIdentifier, peeringDBFacilityId);
         }
     }

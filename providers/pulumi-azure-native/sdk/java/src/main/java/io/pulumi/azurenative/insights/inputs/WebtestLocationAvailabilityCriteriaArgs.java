@@ -111,42 +111,34 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
             this.componentId = Objects.requireNonNull(componentId);
             return this;
         }
-
         public Builder componentId(String componentId) {
             this.componentId = Output.of(Objects.requireNonNull(componentId));
             return this;
         }
-
         public Builder failedLocationCount(Output<Double> failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
-
         public Builder failedLocationCount(Double failedLocationCount) {
             this.failedLocationCount = Output.of(Objects.requireNonNull(failedLocationCount));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder webTestId(Output<String> webTestId) {
             this.webTestId = Objects.requireNonNull(webTestId);
             return this;
         }
-
         public Builder webTestId(String webTestId) {
             this.webTestId = Output.of(Objects.requireNonNull(webTestId));
             return this;
-        }
-        public WebtestLocationAvailabilityCriteriaArgs build() {
+        }        public WebtestLocationAvailabilityCriteriaArgs build() {
             return new WebtestLocationAvailabilityCriteriaArgs(componentId, failedLocationCount, odataType, webTestId);
         }
     }

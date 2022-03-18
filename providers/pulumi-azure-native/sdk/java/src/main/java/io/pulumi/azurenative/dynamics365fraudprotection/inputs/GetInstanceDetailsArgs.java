@@ -72,12 +72,10 @@ public final class GetInstanceDetailsArgs extends io.pulumi.resources.InvokeArgs
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetInstanceDetailsArgs build() {
+        }        public GetInstanceDetailsArgs build() {
             return new GetInstanceDetailsArgs(instanceName, resourceGroupName);
         }
     }

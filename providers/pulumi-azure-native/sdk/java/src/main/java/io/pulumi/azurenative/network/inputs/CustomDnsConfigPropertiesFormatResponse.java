@@ -79,12 +79,13 @@ public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.res
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-        public CustomDnsConfigPropertiesFormatResponse build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public CustomDnsConfigPropertiesFormatResponse build() {
             return new CustomDnsConfigPropertiesFormatResponse(fqdn, ipAddresses);
         }
     }

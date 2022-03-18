@@ -114,42 +114,34 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs> endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder transport(Output<Either<String,MediaGraphRtspTransport>> transport) {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
-
         public Builder transport(Either<String,MediaGraphRtspTransport> transport) {
             this.transport = Output.of(Objects.requireNonNull(transport));
             return this;
-        }
-        public MediaGraphRtspSourceArgs build() {
+        }        public MediaGraphRtspSourceArgs build() {
             return new MediaGraphRtspSourceArgs(endpoint, name, odataType, transport);
         }
     }

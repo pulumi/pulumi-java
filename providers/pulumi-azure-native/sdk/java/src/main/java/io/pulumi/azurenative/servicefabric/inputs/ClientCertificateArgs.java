@@ -111,42 +111,34 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
             this.commonName = commonName;
             return this;
         }
-
         public Builder commonName(@Nullable String commonName) {
             this.commonName = Output.ofNullable(commonName);
             return this;
         }
-
         public Builder isAdmin(Output<Boolean> isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
-
         public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Output.of(Objects.requireNonNull(isAdmin));
             return this;
         }
-
         public Builder issuerThumbprint(@Nullable Output<String> issuerThumbprint) {
             this.issuerThumbprint = issuerThumbprint;
             return this;
         }
-
         public Builder issuerThumbprint(@Nullable String issuerThumbprint) {
             this.issuerThumbprint = Output.ofNullable(issuerThumbprint);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
-        }
-        public ClientCertificateArgs build() {
+        }        public ClientCertificateArgs build() {
             return new ClientCertificateArgs(commonName, isAdmin, issuerThumbprint, thumbprint);
         }
     }

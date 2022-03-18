@@ -90,32 +90,26 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.peConnectionName = peConnectionName;
             return this;
         }
-
         public Builder peConnectionName(@Nullable String peConnectionName) {
             this.peConnectionName = Output.ofNullable(peConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder siteName(Output<String> siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
-
         public Builder siteName(String siteName) {
             this.siteName = Output.of(Objects.requireNonNull(siteName));
             return this;
-        }
-        public PrivateEndpointConnectionArgs build() {
+        }        public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(peConnectionName, resourceGroupName, siteName);
         }
     }

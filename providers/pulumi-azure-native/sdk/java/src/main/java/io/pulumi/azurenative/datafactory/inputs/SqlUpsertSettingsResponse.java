@@ -94,17 +94,14 @@ public final class SqlUpsertSettingsResponse extends io.pulumi.resources.InvokeA
             this.interimSchemaName = interimSchemaName;
             return this;
         }
-
         public Builder keys(@Nullable Object keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder useTempDB(@Nullable Object useTempDB) {
             this.useTempDB = useTempDB;
             return this;
-        }
-        public SqlUpsertSettingsResponse build() {
+        }        public SqlUpsertSettingsResponse build() {
             return new SqlUpsertSettingsResponse(interimSchemaName, keys, useTempDB);
         }
     }

@@ -53,8 +53,7 @@ public final class ContentKeyPolicyUnknownConfigurationResponse {
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public ContentKeyPolicyUnknownConfigurationResponse build() {
+        }        public ContentKeyPolicyUnknownConfigurationResponse build() {
             return new ContentKeyPolicyUnknownConfigurationResponse(odataType);
         }
     }

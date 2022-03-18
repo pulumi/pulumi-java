@@ -114,42 +114,34 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.branch = branch;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = Output.ofNullable(branch);
             return this;
         }
-
         public Builder repositoryUrl(Output<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
-
         public Builder sourceControlAuthProperties(@Nullable Output<AuthInfoArgs> sourceControlAuthProperties) {
             this.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
-
         public Builder sourceControlAuthProperties(@Nullable AuthInfoArgs sourceControlAuthProperties) {
             this.sourceControlAuthProperties = Output.ofNullable(sourceControlAuthProperties);
             return this;
         }
-
         public Builder sourceControlType(Output<Either<String,SourceControlType>> sourceControlType) {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
-
         public Builder sourceControlType(Either<String,SourceControlType> sourceControlType) {
             this.sourceControlType = Output.of(Objects.requireNonNull(sourceControlType));
             return this;
-        }
-        public SourcePropertiesArgs build() {
+        }        public SourcePropertiesArgs build() {
             return new SourcePropertiesArgs(branch, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }
     }

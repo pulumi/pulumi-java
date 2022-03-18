@@ -162,42 +162,34 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
             this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
             return this;
         }
-
         public Builder liftrResourcePreference(Integer liftrResourcePreference) {
             this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
             return this;
         }
-
         public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties) {
             this.logzOrganizationProperties = logzOrganizationProperties;
             return this;
         }
-
         public Builder marketplaceSubscriptionStatus(@Nullable String marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
-
         public Builder monitoringStatus(@Nullable String monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
-
         public Builder planData(@Nullable PlanDataResponse planData) {
             this.planData = planData;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder userInfo(@Nullable UserInfoResponse userInfo) {
             this.userInfo = userInfo;
             return this;
-        }
-        public MonitorPropertiesResponse build() {
+        }        public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(liftrResourceCategory, liftrResourcePreference, logzOrganizationProperties, marketplaceSubscriptionStatus, monitoringStatus, planData, provisioningState, userInfo);
         }
     }

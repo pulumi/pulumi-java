@@ -88,17 +88,14 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
             this.configurationProfileAssignmentName = Objects.requireNonNull(configurationProfileAssignmentName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vmName(String vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
-        }
-        public GetConfigurationProfileAssignmentArgs build() {
+        }        public GetConfigurationProfileAssignmentArgs build() {
             return new GetConfigurationProfileAssignmentArgs(configurationProfileAssignmentName, resourceGroupName, vmName);
         }
     }

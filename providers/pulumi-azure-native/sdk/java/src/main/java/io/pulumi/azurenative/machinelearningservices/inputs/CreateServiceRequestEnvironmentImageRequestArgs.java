@@ -147,62 +147,59 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
             this.assets = assets;
             return this;
         }
-
         public Builder assets(@Nullable List<ImageAssetArgs> assets) {
             this.assets = Output.ofNullable(assets);
             return this;
         }
-
+        public Builder assets(ImageAssetArgs... assets) {
+            return assets(List.of(assets));
+        }
         public Builder driverProgram(@Nullable Output<String> driverProgram) {
             this.driverProgram = driverProgram;
             return this;
         }
-
         public Builder driverProgram(@Nullable String driverProgram) {
             this.driverProgram = Output.ofNullable(driverProgram);
             return this;
         }
-
         public Builder environment(@Nullable Output<EnvironmentImageRequestEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable EnvironmentImageRequestEnvironmentArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder environmentReference(@Nullable Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference) {
             this.environmentReference = environmentReference;
             return this;
         }
-
         public Builder environmentReference(@Nullable EnvironmentImageRequestEnvironmentReferenceArgs environmentReference) {
             this.environmentReference = Output.ofNullable(environmentReference);
             return this;
         }
-
         public Builder modelIds(@Nullable Output<List<String>> modelIds) {
             this.modelIds = modelIds;
             return this;
         }
-
         public Builder modelIds(@Nullable List<String> modelIds) {
             this.modelIds = Output.ofNullable(modelIds);
             return this;
         }
-
+        public Builder modelIds(String... modelIds) {
+            return modelIds(List.of(modelIds));
+        }
         public Builder models(@Nullable Output<List<ModelArgs>> models) {
             this.models = models;
             return this;
         }
-
         public Builder models(@Nullable List<ModelArgs> models) {
             this.models = Output.ofNullable(models);
             return this;
         }
-        public CreateServiceRequestEnvironmentImageRequestArgs build() {
+        public Builder models(ModelArgs... models) {
+            return models(List.of(models));
+        }        public CreateServiceRequestEnvironmentImageRequestArgs build() {
             return new CreateServiceRequestEnvironmentImageRequestArgs(assets, driverProgram, environment, environmentReference, modelIds, models);
         }
     }

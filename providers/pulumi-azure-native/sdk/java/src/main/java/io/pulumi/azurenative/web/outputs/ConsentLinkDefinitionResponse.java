@@ -103,22 +103,18 @@ public final class ConsentLinkDefinitionResponse {
             this.displayName = displayName;
             return this;
         }
-
         public Builder firstPartyLoginUri(@Nullable String firstPartyLoginUri) {
             this.firstPartyLoginUri = firstPartyLoginUri;
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public ConsentLinkDefinitionResponse build() {
+        }        public ConsentLinkDefinitionResponse build() {
             return new ConsentLinkDefinitionResponse(displayName, firstPartyLoginUri, link, status);
         }
     }

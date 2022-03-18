@@ -71,12 +71,13 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<IdentifierResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListSiteIdentifiersAssignedToHostNameResult build() {
+        public Builder value(IdentifierResponse... value) {
+            return value(List.of(value));
+        }        public ListSiteIdentifiersAssignedToHostNameResult build() {
             return new ListSiteIdentifiersAssignedToHostNameResult(nextLink, value);
         }
     }

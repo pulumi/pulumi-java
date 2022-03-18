@@ -452,127 +452,108 @@ public final class GetApplicationResult {
             this.applicationDefinitionId = applicationDefinitionId;
             return this;
         }
-
         public Builder artifacts(List<ApplicationArtifactResponse> artifacts) {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
-
+        public Builder artifacts(ApplicationArtifactResponse... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder authorizations(List<ApplicationAuthorizationResponse> authorizations) {
             this.authorizations = Objects.requireNonNull(authorizations);
             return this;
         }
-
+        public Builder authorizations(ApplicationAuthorizationResponse... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder billingDetails(ApplicationBillingDetailsDefinitionResponse billingDetails) {
             this.billingDetails = Objects.requireNonNull(billingDetails);
             return this;
         }
-
         public Builder createdBy(ApplicationClientDetailsResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder customerSupport(ApplicationPackageContactResponse customerSupport) {
             this.customerSupport = Objects.requireNonNull(customerSupport);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder jitAccessPolicy(@Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy) {
             this.jitAccessPolicy = jitAccessPolicy;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managedResourceGroupId(@Nullable String managedResourceGroupId) {
             this.managedResourceGroupId = managedResourceGroupId;
             return this;
         }
-
         public Builder managementMode(String managementMode) {
             this.managementMode = Objects.requireNonNull(managementMode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputs(Object outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publisherTenantId(String publisherTenantId) {
             this.publisherTenantId = Objects.requireNonNull(publisherTenantId);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder supportUrls(ApplicationPackageSupportUrlsResponse supportUrls) {
             this.supportUrls = Objects.requireNonNull(supportUrls);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedBy(ApplicationClientDetailsResponse updatedBy) {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
-        }
-        public GetApplicationResult build() {
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(applicationDefinitionId, artifacts, authorizations, billingDetails, createdBy, customerSupport, id, identity, jitAccessPolicy, kind, location, managedBy, managedResourceGroupId, managementMode, name, outputs, parameters, plan, provisioningState, publisherTenantId, sku, supportUrls, tags, type, updatedBy);
         }
     }

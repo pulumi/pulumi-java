@@ -77,22 +77,18 @@ public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceA
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Output.of(Objects.requireNonNull(referenceName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public CredentialReferenceArgs build() {
+        }        public CredentialReferenceArgs build() {
             return new CredentialReferenceArgs(referenceName, type);
         }
     }

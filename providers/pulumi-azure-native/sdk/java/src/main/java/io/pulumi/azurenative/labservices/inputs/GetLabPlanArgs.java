@@ -72,12 +72,10 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
             this.labPlanName = Objects.requireNonNull(labPlanName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLabPlanArgs build() {
+        }        public GetLabPlanArgs build() {
             return new GetLabPlanArgs(labPlanName, resourceGroupName);
         }
     }

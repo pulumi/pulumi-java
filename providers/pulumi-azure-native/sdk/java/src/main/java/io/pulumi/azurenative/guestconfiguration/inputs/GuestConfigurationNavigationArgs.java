@@ -196,92 +196,80 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             this.assignmentType = assignmentType;
             return this;
         }
-
         public Builder assignmentType(@Nullable Either<String,AssignmentType> assignmentType) {
             this.assignmentType = Output.ofNullable(assignmentType);
             return this;
         }
-
         public Builder configurationParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationParameter) {
             this.configurationParameter = configurationParameter;
             return this;
         }
-
         public Builder configurationParameter(@Nullable List<ConfigurationParameterArgs> configurationParameter) {
             this.configurationParameter = Output.ofNullable(configurationParameter);
             return this;
         }
-
+        public Builder configurationParameter(ConfigurationParameterArgs... configurationParameter) {
+            return configurationParameter(List.of(configurationParameter));
+        }
         public Builder configurationProtectedParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter) {
             this.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
-
         public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterArgs> configurationProtectedParameter) {
             this.configurationProtectedParameter = Output.ofNullable(configurationProtectedParameter);
             return this;
         }
-
+        public Builder configurationProtectedParameter(ConfigurationParameterArgs... configurationProtectedParameter) {
+            return configurationProtectedParameter(List.of(configurationProtectedParameter));
+        }
         public Builder configurationSetting(@Nullable Output<ConfigurationSettingArgs> configurationSetting) {
             this.configurationSetting = configurationSetting;
             return this;
         }
-
         public Builder configurationSetting(@Nullable ConfigurationSettingArgs configurationSetting) {
             this.configurationSetting = Output.ofNullable(configurationSetting);
             return this;
         }
-
         public Builder contentHash(@Nullable Output<String> contentHash) {
             this.contentHash = contentHash;
             return this;
         }
-
         public Builder contentHash(@Nullable String contentHash) {
             this.contentHash = Output.ofNullable(contentHash);
             return this;
         }
-
         public Builder contentUri(@Nullable Output<String> contentUri) {
             this.contentUri = contentUri;
             return this;
         }
-
         public Builder contentUri(@Nullable String contentUri) {
             this.contentUri = Output.ofNullable(contentUri);
             return this;
         }
-
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,Kind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GuestConfigurationNavigationArgs build() {
+        }        public GuestConfigurationNavigationArgs build() {
             return new GuestConfigurationNavigationArgs(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentUri, kind, name, version);
         }
     }

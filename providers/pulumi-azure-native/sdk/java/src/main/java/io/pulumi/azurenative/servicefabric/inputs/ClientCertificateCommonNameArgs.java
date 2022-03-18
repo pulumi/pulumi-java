@@ -94,32 +94,26 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
             this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
             return this;
         }
-
         public Builder certificateCommonName(String certificateCommonName) {
             this.certificateCommonName = Output.of(Objects.requireNonNull(certificateCommonName));
             return this;
         }
-
         public Builder certificateIssuerThumbprint(Output<String> certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }
-
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Output.of(Objects.requireNonNull(certificateIssuerThumbprint));
             return this;
         }
-
         public Builder isAdmin(Output<Boolean> isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
-
         public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Output.of(Objects.requireNonNull(isAdmin));
             return this;
-        }
-        public ClientCertificateCommonNameArgs build() {
+        }        public ClientCertificateCommonNameArgs build() {
             return new ClientCertificateCommonNameArgs(certificateCommonName, certificateIssuerThumbprint, isAdmin);
         }
     }

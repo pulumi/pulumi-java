@@ -427,117 +427,127 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
+        public Builder addressPrefixes(String... addressPrefixes) {
+            return addressPrefixes(List.of(addressPrefixes));
+        }
         public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations) {
             this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
             return this;
         }
-
+        public Builder applicationGatewayIpConfigurations(ApplicationGatewayIPConfigurationResponse... applicationGatewayIpConfigurations) {
+            return applicationGatewayIpConfigurations(List.of(applicationGatewayIpConfigurations));
+        }
         public Builder delegations(@Nullable List<DelegationResponse> delegations) {
             this.delegations = delegations;
             return this;
         }
-
+        public Builder delegations(DelegationResponse... delegations) {
+            return delegations(List.of(delegations));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipAllocations(@Nullable List<SubResourceResponse> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
-
+        public Builder ipAllocations(SubResourceResponse... ipAllocations) {
+            return ipAllocations(List.of(ipAllocations));
+        }
         public Builder ipConfigurationProfiles(List<IPConfigurationProfileResponse> ipConfigurationProfiles) {
             this.ipConfigurationProfiles = Objects.requireNonNull(ipConfigurationProfiles);
             return this;
         }
-
+        public Builder ipConfigurationProfiles(IPConfigurationProfileResponse... ipConfigurationProfiles) {
+            return ipConfigurationProfiles(List.of(ipConfigurationProfiles));
+        }
         public Builder ipConfigurations(List<IPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(IPConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder natGateway(@Nullable SubResourceResponse natGateway) {
             this.natGateway = natGateway;
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-
         public Builder privateEndpointNetworkPolicies(@Nullable String privateEndpointNetworkPolicies) {
             this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
             return this;
         }
-
         public Builder privateEndpoints(List<PrivateEndpointResponse> privateEndpoints) {
             this.privateEndpoints = Objects.requireNonNull(privateEndpoints);
             return this;
         }
-
+        public Builder privateEndpoints(PrivateEndpointResponse... privateEndpoints) {
+            return privateEndpoints(List.of(privateEndpoints));
+        }
         public Builder privateLinkServiceNetworkPolicies(@Nullable String privateLinkServiceNetworkPolicies) {
             this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
             return this;
         }
-
         public Builder resourceNavigationLinks(List<ResourceNavigationLinkResponse> resourceNavigationLinks) {
             this.resourceNavigationLinks = Objects.requireNonNull(resourceNavigationLinks);
             return this;
         }
-
+        public Builder resourceNavigationLinks(ResourceNavigationLinkResponse... resourceNavigationLinks) {
+            return resourceNavigationLinks(List.of(resourceNavigationLinks));
+        }
         public Builder routeTable(@Nullable RouteTableResponse routeTable) {
             this.routeTable = routeTable;
             return this;
         }
-
         public Builder serviceAssociationLinks(List<ServiceAssociationLinkResponse> serviceAssociationLinks) {
             this.serviceAssociationLinks = Objects.requireNonNull(serviceAssociationLinks);
             return this;
         }
-
+        public Builder serviceAssociationLinks(ServiceAssociationLinkResponse... serviceAssociationLinks) {
+            return serviceAssociationLinks(List.of(serviceAssociationLinks));
+        }
         public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies) {
             this.serviceEndpointPolicies = serviceEndpointPolicies;
             return this;
         }
-
+        public Builder serviceEndpointPolicies(ServiceEndpointPolicyResponse... serviceEndpointPolicies) {
+            return serviceEndpointPolicies(List.of(serviceEndpointPolicies));
+        }
         public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
-
+        public Builder serviceEndpoints(ServiceEndpointPropertiesFormatResponse... serviceEndpoints) {
+            return serviceEndpoints(List.of(serviceEndpoints));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public SubnetResponse build() {
+        }        public SubnetResponse build() {
             return new SubnetResponse(addressPrefix, addressPrefixes, applicationGatewayIpConfigurations, delegations, etag, id, ipAllocations, ipConfigurationProfiles, ipConfigurations, name, natGateway, networkSecurityGroup, privateEndpointNetworkPolicies, privateEndpoints, privateLinkServiceNetworkPolicies, provisioningState, purpose, resourceNavigationLinks, routeTable, serviceAssociationLinks, serviceEndpointPolicies, serviceEndpoints, type);
         }
     }

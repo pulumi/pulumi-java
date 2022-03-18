@@ -78,22 +78,18 @@ public final class StackPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public StackPropertiesArgs build() {
+        }        public StackPropertiesArgs build() {
             return new StackPropertiesArgs(id, version);
         }
     }

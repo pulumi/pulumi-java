@@ -60,12 +60,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
             this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
             return this;
         }
-
         public Builder domainNameLabel(String domainNameLabel) {
             this.domainNameLabel = Output.of(Objects.requireNonNull(domainNameLabel));
             return this;
-        }
-        public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs build() {
+        }        public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs build() {
             return new VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs(domainNameLabel);
         }
     }

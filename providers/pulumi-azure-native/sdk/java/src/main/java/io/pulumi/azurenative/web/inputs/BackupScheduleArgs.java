@@ -129,52 +129,42 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
             return this;
         }
-
         public Builder frequencyInterval(Integer frequencyInterval) {
             this.frequencyInterval = Output.of(Objects.requireNonNull(frequencyInterval));
             return this;
         }
-
         public Builder frequencyUnit(Output<FrequencyUnit> frequencyUnit) {
             this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
             return this;
         }
-
         public Builder frequencyUnit(FrequencyUnit frequencyUnit) {
             this.frequencyUnit = Output.of(Objects.requireNonNull(frequencyUnit));
             return this;
         }
-
         public Builder keepAtLeastOneBackup(Output<Boolean> keepAtLeastOneBackup) {
             this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
             return this;
         }
-
         public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
             this.keepAtLeastOneBackup = Output.of(Objects.requireNonNull(keepAtLeastOneBackup));
             return this;
         }
-
         public Builder retentionPeriodInDays(Output<Integer> retentionPeriodInDays) {
             this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
             return this;
         }
-
         public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
             this.retentionPeriodInDays = Output.of(Objects.requireNonNull(retentionPeriodInDays));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public BackupScheduleArgs build() {
+        }        public BackupScheduleArgs build() {
             return new BackupScheduleArgs(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, retentionPeriodInDays, startTime);
         }
     }

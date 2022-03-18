@@ -72,12 +72,10 @@ public final class GetOpenShiftManagedClusterArgs extends io.pulumi.resources.In
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetOpenShiftManagedClusterArgs build() {
+        }        public GetOpenShiftManagedClusterArgs build() {
             return new GetOpenShiftManagedClusterArgs(resourceGroupName, resourceName);
         }
     }

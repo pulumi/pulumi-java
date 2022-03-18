@@ -58,8 +58,7 @@ public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.reso
         public Builder typeName(String typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
-        }
-        public KpiParticipantProfilesMetadataResponse build() {
+        }        public KpiParticipantProfilesMetadataResponse build() {
             return new KpiParticipantProfilesMetadataResponse(typeName);
         }
     }

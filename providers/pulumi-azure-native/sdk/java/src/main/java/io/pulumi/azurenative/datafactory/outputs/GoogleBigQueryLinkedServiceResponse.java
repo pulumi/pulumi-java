@@ -321,87 +321,73 @@ public final class GoogleBigQueryLinkedServiceResponse {
             this.additionalProjects = additionalProjects;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder clientId(@Nullable Object clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder email(@Nullable Object email) {
             this.email = email;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder keyFilePath(@Nullable Object keyFilePath) {
             this.keyFilePath = keyFilePath;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder project(Object project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder requestGoogleDriveScope(@Nullable Object requestGoogleDriveScope) {
             this.requestGoogleDriveScope = requestGoogleDriveScope;
             return this;
         }
-
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
-        }
-        public GoogleBigQueryLinkedServiceResponse build() {
+        }        public GoogleBigQueryLinkedServiceResponse build() {
             return new GoogleBigQueryLinkedServiceResponse(additionalProjects, annotations, authenticationType, clientId, clientSecret, connectVia, description, email, encryptedCredential, keyFilePath, parameters, project, refreshToken, requestGoogleDriveScope, trustedCertPath, type, useSystemTrustStore);
         }
     }

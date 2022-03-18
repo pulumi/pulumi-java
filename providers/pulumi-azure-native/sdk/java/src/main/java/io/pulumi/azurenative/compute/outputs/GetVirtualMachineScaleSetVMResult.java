@@ -488,137 +488,116 @@ public final class GetVirtualMachineScaleSetVMResult {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
-
         public Builder availabilitySet(@Nullable SubResourceResponse availabilitySet) {
             this.availabilitySet = availabilitySet;
             return this;
         }
-
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceView(VirtualMachineScaleSetVMInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder latestModelApplied(Boolean latestModelApplied) {
             this.latestModelApplied = Objects.requireNonNull(latestModelApplied);
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder modelDefinitionApplied(String modelDefinitionApplied) {
             this.modelDefinitionApplied = Objects.requireNonNull(modelDefinitionApplied);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfileConfiguration(@Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationResponse networkProfileConfiguration) {
             this.networkProfileConfiguration = networkProfileConfiguration;
             return this;
         }
-
         public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder protectionPolicy(@Nullable VirtualMachineScaleSetVMProtectionPolicyResponse protectionPolicy) {
             this.protectionPolicy = protectionPolicy;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resources(List<VirtualMachineExtensionResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(VirtualMachineExtensionResponse... resources) {
+            return resources(List.of(resources));
+        }
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-        public GetVirtualMachineScaleSetVMResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetVirtualMachineScaleSetVMResult build() {
             return new GetVirtualMachineScaleSetVMResult(additionalCapabilities, availabilitySet, diagnosticsProfile, hardwareProfile, id, instanceId, instanceView, latestModelApplied, licenseType, location, modelDefinitionApplied, name, networkProfile, networkProfileConfiguration, osProfile, plan, protectionPolicy, provisioningState, resources, securityProfile, sku, storageProfile, tags, type, userData, vmId, zones);
         }
     }

@@ -112,42 +112,34 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.clientSecretUrl = clientSecretUrl;
             return this;
         }
-
         public Builder clientSecretUrl(@Nullable String clientSecretUrl) {
             this.clientSecretUrl = Output.ofNullable(clientSecretUrl);
             return this;
         }
-
         public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ManagedIdentityType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ManagedIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public IdentityPropertiesArgs build() {
+        }        public IdentityPropertiesArgs build() {
             return new IdentityPropertiesArgs(clientSecretUrl, principalId, tenantId, type);
         }
     }

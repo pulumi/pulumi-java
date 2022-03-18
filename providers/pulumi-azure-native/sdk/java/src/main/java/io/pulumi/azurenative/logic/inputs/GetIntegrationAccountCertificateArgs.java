@@ -88,17 +88,14 @@ public final class GetIntegrationAccountCertificateArgs extends io.pulumi.resour
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIntegrationAccountCertificateArgs build() {
+        }        public GetIntegrationAccountCertificateArgs build() {
             return new GetIntegrationAccountCertificateArgs(certificateName, integrationAccountName, resourceGroupName);
         }
     }

@@ -129,27 +129,22 @@ public final class StreamInputPropertiesResponse {
             this.datasource = datasource;
             return this;
         }
-
         public Builder diagnostics(DiagnosticsResponse diagnostics) {
             this.diagnostics = Objects.requireNonNull(diagnostics);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder serialization(@Nullable Object serialization) {
             this.serialization = serialization;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public StreamInputPropertiesResponse build() {
+        }        public StreamInputPropertiesResponse build() {
             return new StreamInputPropertiesResponse(datasource, diagnostics, etag, serialization, type);
         }
     }

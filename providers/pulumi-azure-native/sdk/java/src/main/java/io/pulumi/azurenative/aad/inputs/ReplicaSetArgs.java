@@ -78,22 +78,18 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public ReplicaSetArgs build() {
+        }        public ReplicaSetArgs build() {
             return new ReplicaSetArgs(location, subnetId);
         }
     }

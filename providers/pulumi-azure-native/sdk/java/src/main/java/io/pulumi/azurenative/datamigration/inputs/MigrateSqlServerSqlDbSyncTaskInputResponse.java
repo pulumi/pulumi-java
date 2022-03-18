@@ -113,22 +113,21 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlDbSyncDatabaseInputResponse... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder validationOptions(@Nullable MigrationValidationOptionsResponse validationOptions) {
             this.validationOptions = validationOptions;
             return this;
-        }
-        public MigrateSqlServerSqlDbSyncTaskInputResponse build() {
+        }        public MigrateSqlServerSqlDbSyncTaskInputResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
         }
     }

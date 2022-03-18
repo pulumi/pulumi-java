@@ -78,12 +78,13 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
             this.branches = Objects.requireNonNull(branches);
             return this;
         }
-
+        public Builder branches(BranchResponse... branches) {
+            return branches(List.of(branches));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public StepResponse build() {
+        }        public StepResponse build() {
             return new StepResponse(branches, name);
         }
     }

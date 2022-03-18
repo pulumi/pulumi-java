@@ -151,37 +151,33 @@ public final class GetIscsiTargetResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder targetIqn(String targetIqn) {
             this.targetIqn = Objects.requireNonNull(targetIqn);
             return this;
         }
-
         public Builder tpgs(List<TargetPortalGroupResponse> tpgs) {
             this.tpgs = Objects.requireNonNull(tpgs);
             return this;
         }
-
+        public Builder tpgs(TargetPortalGroupResponse... tpgs) {
+            return tpgs(List.of(tpgs));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIscsiTargetResult build() {
+        }        public GetIscsiTargetResult build() {
             return new GetIscsiTargetResult(id, name, provisioningState, status, targetIqn, tpgs, type);
         }
     }

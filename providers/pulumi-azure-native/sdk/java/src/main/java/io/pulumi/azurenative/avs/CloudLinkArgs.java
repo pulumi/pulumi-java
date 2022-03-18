@@ -106,42 +106,34 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudLinkName = cloudLinkName;
             return this;
         }
-
         public Builder cloudLinkName(@Nullable String cloudLinkName) {
             this.cloudLinkName = Output.ofNullable(cloudLinkName);
             return this;
         }
-
         public Builder linkedCloud(@Nullable Output<String> linkedCloud) {
             this.linkedCloud = linkedCloud;
             return this;
         }
-
         public Builder linkedCloud(@Nullable String linkedCloud) {
             this.linkedCloud = Output.ofNullable(linkedCloud);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public CloudLinkArgs build() {
+        }        public CloudLinkArgs build() {
             return new CloudLinkArgs(cloudLinkName, linkedCloud, privateCloudName, resourceGroupName);
         }
     }

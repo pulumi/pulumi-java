@@ -90,17 +90,17 @@ public final class LiveEventTranscriptionResponse {
             this.inputTrackSelection = inputTrackSelection;
             return this;
         }
-
+        public Builder inputTrackSelection(LiveEventInputTrackSelectionResponse... inputTrackSelection) {
+            return inputTrackSelection(List.of(inputTrackSelection));
+        }
         public Builder language(@Nullable String language) {
             this.language = language;
             return this;
         }
-
         public Builder outputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
             this.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
-        }
-        public LiveEventTranscriptionResponse build() {
+        }        public LiveEventTranscriptionResponse build() {
             return new LiveEventTranscriptionResponse(inputTrackSelection, language, outputTranscriptionTrack);
         }
     }

@@ -80,22 +80,21 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
             this.appResourceId = appResourceId;
             return this;
         }
-
         public Builder appResourceId(@Nullable String appResourceId) {
             this.appResourceId = Output.ofNullable(appResourceId);
             return this;
         }
-
         public Builder routes(@Nullable Output<List<GatewayApiRouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable List<GatewayApiRouteArgs> routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-        public GatewayRouteConfigPropertiesArgs build() {
+        public Builder routes(GatewayApiRouteArgs... routes) {
+            return routes(List.of(routes));
+        }        public GatewayRouteConfigPropertiesArgs build() {
             return new GatewayRouteConfigPropertiesArgs(appResourceId, routes);
         }
     }

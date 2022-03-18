@@ -62,7 +62,9 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs extends 
             this.publicIPs = publicIPs;
             return this;
         }
-        public ManagedClusterLoadBalancerProfileResponseOutboundIPs build() {
+        public Builder publicIPs(ResourceReferenceResponse... publicIPs) {
+            return publicIPs(List.of(publicIPs));
+        }        public ManagedClusterLoadBalancerProfileResponseOutboundIPs build() {
             return new ManagedClusterLoadBalancerProfileResponseOutboundIPs(publicIPs);
         }
     }

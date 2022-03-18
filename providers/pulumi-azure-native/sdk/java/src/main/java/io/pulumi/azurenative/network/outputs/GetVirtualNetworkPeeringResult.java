@@ -283,77 +283,62 @@ public final class GetVirtualNetworkPeeringResult {
             this.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
-
         public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
             this.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
-
         public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
             this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
-
         public Builder doNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
             this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder peeringState(@Nullable String peeringState) {
             this.peeringState = peeringState;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder remoteAddressSpace(@Nullable AddressSpaceResponse remoteAddressSpace) {
             this.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
-
         public Builder remoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities) {
             this.remoteBgpCommunities = remoteBgpCommunities;
             return this;
         }
-
         public Builder remoteVirtualNetwork(@Nullable SubResourceResponse remoteVirtualNetwork) {
             this.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
             this.useRemoteGateways = useRemoteGateways;
             return this;
-        }
-        public GetVirtualNetworkPeeringResult build() {
+        }        public GetVirtualNetworkPeeringResult build() {
             return new GetVirtualNetworkPeeringResult(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, doNotVerifyRemoteGateways, etag, id, name, peeringState, provisioningState, remoteAddressSpace, remoteBgpCommunities, remoteVirtualNetwork, resourceGuid, type, useRemoteGateways);
         }
     }

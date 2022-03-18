@@ -256,67 +256,54 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
             this.backendAddressPool = backendAddressPool;
             return this;
         }
-
         public Builder backendHttpSettings(@Nullable SubResourceResponse backendHttpSettings) {
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder httpListener(@Nullable SubResourceResponse httpListener) {
             this.httpListener = httpListener;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder redirectConfiguration(@Nullable SubResourceResponse redirectConfiguration) {
             this.redirectConfiguration = redirectConfiguration;
             return this;
         }
-
         public Builder rewriteRuleSet(@Nullable SubResourceResponse rewriteRuleSet) {
             this.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
-
         public Builder ruleType(@Nullable String ruleType) {
             this.ruleType = ruleType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder urlPathMap(@Nullable SubResourceResponse urlPathMap) {
             this.urlPathMap = urlPathMap;
             return this;
-        }
-        public ApplicationGatewayRequestRoutingRuleResponse build() {
+        }        public ApplicationGatewayRequestRoutingRuleResponse build() {
             return new ApplicationGatewayRequestRoutingRuleResponse(backendAddressPool, backendHttpSettings, etag, httpListener, id, name, priority, provisioningState, redirectConfiguration, rewriteRuleSet, ruleType, type, urlPathMap);
         }
     }

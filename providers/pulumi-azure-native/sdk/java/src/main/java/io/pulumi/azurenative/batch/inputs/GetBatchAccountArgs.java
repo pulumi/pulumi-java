@@ -72,12 +72,10 @@ public final class GetBatchAccountArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBatchAccountArgs build() {
+        }        public GetBatchAccountArgs build() {
             return new GetBatchAccountArgs(accountName, resourceGroupName);
         }
     }

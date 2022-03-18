@@ -118,52 +118,45 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
-
         public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = Output.ofNullable(allowedSourceAddressPrefix);
             return this;
         }
-
         public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
-
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = Output.ofNullable(allowedSourceAddressPrefixes);
             return this;
         }
-
+        public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
+            return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
+        }
         public Builder maxRequestAccessDuration(Output<String> maxRequestAccessDuration) {
             this.maxRequestAccessDuration = Objects.requireNonNull(maxRequestAccessDuration);
             return this;
         }
-
         public Builder maxRequestAccessDuration(String maxRequestAccessDuration) {
             this.maxRequestAccessDuration = Output.of(Objects.requireNonNull(maxRequestAccessDuration));
             return this;
         }
-
         public Builder number(Output<Integer> number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder number(Integer number) {
             this.number = Output.of(Objects.requireNonNull(number));
             return this;
         }
-
         public Builder protocol(Output<Either<String,Protocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,Protocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public JitNetworkAccessPortRuleArgs build() {
+        }        public JitNetworkAccessPortRuleArgs build() {
             return new JitNetworkAccessPortRuleArgs(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, maxRequestAccessDuration, number, protocol);
         }
     }

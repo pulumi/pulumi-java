@@ -197,52 +197,60 @@ public final class ProviderResourceTypeResponse {
             this.aliases = aliases;
             return this;
         }
-
+        public Builder aliases(AliasResponse... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder apiProfiles(List<ApiProfileResponse> apiProfiles) {
             this.apiProfiles = Objects.requireNonNull(apiProfiles);
             return this;
         }
-
+        public Builder apiProfiles(ApiProfileResponse... apiProfiles) {
+            return apiProfiles(List.of(apiProfiles));
+        }
         public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
-
+        public Builder apiVersions(String... apiVersions) {
+            return apiVersions(List.of(apiVersions));
+        }
         public Builder capabilities(@Nullable String capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder defaultApiVersion(String defaultApiVersion) {
             this.defaultApiVersion = Objects.requireNonNull(defaultApiVersion);
             return this;
         }
-
         public Builder locationMappings(@Nullable List<ProviderExtendedLocationResponse> locationMappings) {
             this.locationMappings = locationMappings;
             return this;
         }
-
+        public Builder locationMappings(ProviderExtendedLocationResponse... locationMappings) {
+            return locationMappings(List.of(locationMappings));
+        }
         public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder zoneMappings(@Nullable List<ZoneMappingResponse> zoneMappings) {
             this.zoneMappings = zoneMappings;
             return this;
         }
-        public ProviderResourceTypeResponse build() {
+        public Builder zoneMappings(ZoneMappingResponse... zoneMappings) {
+            return zoneMappings(List.of(zoneMappings));
+        }        public ProviderResourceTypeResponse build() {
             return new ProviderResourceTypeResponse(aliases, apiProfiles, apiVersions, capabilities, defaultApiVersion, locationMappings, locations, properties, resourceType, zoneMappings);
         }
     }

@@ -77,22 +77,18 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
             this.annotationType = annotationType;
             return this;
         }
-
         public Builder annotationType(@Nullable Either<String,ImageAnnotationType> annotationType) {
             this.annotationType = Output.ofNullable(annotationType);
             return this;
         }
-
         public Builder mediaType(Output<Either<String,MediaType>> mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }
-
         public Builder mediaType(Either<String,MediaType> mediaType) {
             this.mediaType = Output.of(Objects.requireNonNull(mediaType));
             return this;
-        }
-        public LabelingJobImagePropertiesArgs build() {
+        }        public LabelingJobImagePropertiesArgs build() {
             return new LabelingJobImagePropertiesArgs(annotationType, mediaType);
         }
     }

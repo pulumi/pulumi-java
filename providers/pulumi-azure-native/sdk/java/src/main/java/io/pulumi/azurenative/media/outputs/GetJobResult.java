@@ -273,72 +273,61 @@ public final class GetJobResult {
             this.correlationData = correlationData;
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder input(Object input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputs(List<JobOutputAssetResponse> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
+        public Builder outputs(JobOutputAssetResponse... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(correlationData, created, description, endTime, id, input, lastModified, name, outputs, priority, startTime, state, systemData, type);
         }
     }

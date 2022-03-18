@@ -232,57 +232,49 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder database(Object database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder endpoint(Object endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-
         public Builder tenant(@Nullable Object tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureDataExplorerLinkedServiceResponse build() {
+        }        public AzureDataExplorerLinkedServiceResponse build() {
             return new AzureDataExplorerLinkedServiceResponse(annotations, connectVia, credential, database, description, endpoint, parameters, servicePrincipalId, servicePrincipalKey, tenant, type);
         }
     }

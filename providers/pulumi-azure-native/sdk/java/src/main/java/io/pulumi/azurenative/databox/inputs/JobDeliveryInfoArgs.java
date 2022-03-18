@@ -61,12 +61,10 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
             this.scheduledDateTime = scheduledDateTime;
             return this;
         }
-
         public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
             this.scheduledDateTime = Output.ofNullable(scheduledDateTime);
             return this;
-        }
-        public JobDeliveryInfoArgs build() {
+        }        public JobDeliveryInfoArgs build() {
             return new JobDeliveryInfoArgs(scheduledDateTime);
         }
     }

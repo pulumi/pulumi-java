@@ -340,182 +340,149 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             this.daysOfWeek = daysOfWeek;
             return this;
         }
-
         public Builder daysOfWeek(@Nullable List<String> daysOfWeek) {
             this.daysOfWeek = Output.ofNullable(daysOfWeek);
             return this;
         }
-
+        public Builder daysOfWeek(String... daysOfWeek) {
+            return daysOfWeek(List.of(daysOfWeek));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder offPeakLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm) {
             this.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
             return this;
         }
-
         public Builder offPeakLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> offPeakLoadBalancingAlgorithm) {
             this.offPeakLoadBalancingAlgorithm = Output.ofNullable(offPeakLoadBalancingAlgorithm);
             return this;
         }
-
         public Builder offPeakStartTime(@Nullable Output<String> offPeakStartTime) {
             this.offPeakStartTime = offPeakStartTime;
             return this;
         }
-
         public Builder offPeakStartTime(@Nullable String offPeakStartTime) {
             this.offPeakStartTime = Output.ofNullable(offPeakStartTime);
             return this;
         }
-
         public Builder peakLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm) {
             this.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
             return this;
         }
-
         public Builder peakLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> peakLoadBalancingAlgorithm) {
             this.peakLoadBalancingAlgorithm = Output.ofNullable(peakLoadBalancingAlgorithm);
             return this;
         }
-
         public Builder peakStartTime(@Nullable Output<String> peakStartTime) {
             this.peakStartTime = peakStartTime;
             return this;
         }
-
         public Builder peakStartTime(@Nullable String peakStartTime) {
             this.peakStartTime = Output.ofNullable(peakStartTime);
             return this;
         }
-
         public Builder rampDownCapacityThresholdPct(@Nullable Output<Integer> rampDownCapacityThresholdPct) {
             this.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
             return this;
         }
-
         public Builder rampDownCapacityThresholdPct(@Nullable Integer rampDownCapacityThresholdPct) {
             this.rampDownCapacityThresholdPct = Output.ofNullable(rampDownCapacityThresholdPct);
             return this;
         }
-
         public Builder rampDownForceLogoffUsers(@Nullable Output<Boolean> rampDownForceLogoffUsers) {
             this.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
             return this;
         }
-
         public Builder rampDownForceLogoffUsers(@Nullable Boolean rampDownForceLogoffUsers) {
             this.rampDownForceLogoffUsers = Output.ofNullable(rampDownForceLogoffUsers);
             return this;
         }
-
         public Builder rampDownLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm) {
             this.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
             return this;
         }
-
         public Builder rampDownLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> rampDownLoadBalancingAlgorithm) {
             this.rampDownLoadBalancingAlgorithm = Output.ofNullable(rampDownLoadBalancingAlgorithm);
             return this;
         }
-
         public Builder rampDownMinimumHostsPct(@Nullable Output<Integer> rampDownMinimumHostsPct) {
             this.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
             return this;
         }
-
         public Builder rampDownMinimumHostsPct(@Nullable Integer rampDownMinimumHostsPct) {
             this.rampDownMinimumHostsPct = Output.ofNullable(rampDownMinimumHostsPct);
             return this;
         }
-
         public Builder rampDownNotificationMessage(@Nullable Output<String> rampDownNotificationMessage) {
             this.rampDownNotificationMessage = rampDownNotificationMessage;
             return this;
         }
-
         public Builder rampDownNotificationMessage(@Nullable String rampDownNotificationMessage) {
             this.rampDownNotificationMessage = Output.ofNullable(rampDownNotificationMessage);
             return this;
         }
-
         public Builder rampDownStartTime(@Nullable Output<String> rampDownStartTime) {
             this.rampDownStartTime = rampDownStartTime;
             return this;
         }
-
         public Builder rampDownStartTime(@Nullable String rampDownStartTime) {
             this.rampDownStartTime = Output.ofNullable(rampDownStartTime);
             return this;
         }
-
         public Builder rampDownStopHostsWhen(@Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen) {
             this.rampDownStopHostsWhen = rampDownStopHostsWhen;
             return this;
         }
-
         public Builder rampDownStopHostsWhen(@Nullable Either<String,StopHostsWhen> rampDownStopHostsWhen) {
             this.rampDownStopHostsWhen = Output.ofNullable(rampDownStopHostsWhen);
             return this;
         }
-
         public Builder rampDownWaitTimeMinutes(@Nullable Output<Integer> rampDownWaitTimeMinutes) {
             this.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
             return this;
         }
-
         public Builder rampDownWaitTimeMinutes(@Nullable Integer rampDownWaitTimeMinutes) {
             this.rampDownWaitTimeMinutes = Output.ofNullable(rampDownWaitTimeMinutes);
             return this;
         }
-
         public Builder rampUpCapacityThresholdPct(@Nullable Output<Integer> rampUpCapacityThresholdPct) {
             this.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
             return this;
         }
-
         public Builder rampUpCapacityThresholdPct(@Nullable Integer rampUpCapacityThresholdPct) {
             this.rampUpCapacityThresholdPct = Output.ofNullable(rampUpCapacityThresholdPct);
             return this;
         }
-
         public Builder rampUpLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm) {
             this.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
             return this;
         }
-
         public Builder rampUpLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> rampUpLoadBalancingAlgorithm) {
             this.rampUpLoadBalancingAlgorithm = Output.ofNullable(rampUpLoadBalancingAlgorithm);
             return this;
         }
-
         public Builder rampUpMinimumHostsPct(@Nullable Output<Integer> rampUpMinimumHostsPct) {
             this.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
             return this;
         }
-
         public Builder rampUpMinimumHostsPct(@Nullable Integer rampUpMinimumHostsPct) {
             this.rampUpMinimumHostsPct = Output.ofNullable(rampUpMinimumHostsPct);
             return this;
         }
-
         public Builder rampUpStartTime(@Nullable Output<String> rampUpStartTime) {
             this.rampUpStartTime = rampUpStartTime;
             return this;
         }
-
         public Builder rampUpStartTime(@Nullable String rampUpStartTime) {
             this.rampUpStartTime = Output.ofNullable(rampUpStartTime);
             return this;
-        }
-        public ScalingScheduleArgs build() {
+        }        public ScalingScheduleArgs build() {
             return new ScalingScheduleArgs(daysOfWeek, name, offPeakLoadBalancingAlgorithm, offPeakStartTime, peakLoadBalancingAlgorithm, peakStartTime, rampDownCapacityThresholdPct, rampDownForceLogoffUsers, rampDownLoadBalancingAlgorithm, rampDownMinimumHostsPct, rampDownNotificationMessage, rampDownStartTime, rampDownStopHostsWhen, rampDownWaitTimeMinutes, rampUpCapacityThresholdPct, rampUpLoadBalancingAlgorithm, rampUpMinimumHostsPct, rampUpStartTime);
         }
     }

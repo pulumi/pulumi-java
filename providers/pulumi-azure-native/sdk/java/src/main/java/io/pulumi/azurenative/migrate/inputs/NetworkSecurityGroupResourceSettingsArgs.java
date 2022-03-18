@@ -97,32 +97,29 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder securityRules(@Nullable Output<List<NsgSecurityRuleArgs>> securityRules) {
             this.securityRules = securityRules;
             return this;
         }
-
         public Builder securityRules(@Nullable List<NsgSecurityRuleArgs> securityRules) {
             this.securityRules = Output.ofNullable(securityRules);
             return this;
         }
-
+        public Builder securityRules(NsgSecurityRuleArgs... securityRules) {
+            return securityRules(List.of(securityRules));
+        }
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
-        }
-        public NetworkSecurityGroupResourceSettingsArgs build() {
+        }        public NetworkSecurityGroupResourceSettingsArgs build() {
             return new NetworkSecurityGroupResourceSettingsArgs(resourceType, securityRules, targetResourceName);
         }
     }

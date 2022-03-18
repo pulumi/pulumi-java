@@ -76,12 +76,10 @@ public final class JobErrorDetailResponse extends io.pulumi.resources.InvokeArgs
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public JobErrorDetailResponse build() {
+        }        public JobErrorDetailResponse build() {
             return new JobErrorDetailResponse(code, message);
         }
     }

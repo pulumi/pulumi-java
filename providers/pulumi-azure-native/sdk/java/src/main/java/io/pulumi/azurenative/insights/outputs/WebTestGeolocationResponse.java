@@ -53,8 +53,7 @@ public final class WebTestGeolocationResponse {
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
-        }
-        public WebTestGeolocationResponse build() {
+        }        public WebTestGeolocationResponse build() {
             return new WebTestGeolocationResponse(location);
         }
     }

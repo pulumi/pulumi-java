@@ -87,17 +87,14 @@ public final class KeyVaultPropertiesResponse {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
-        }
-        public KeyVaultPropertiesResponse build() {
+        }        public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVaultUri, keyVersion);
         }
     }

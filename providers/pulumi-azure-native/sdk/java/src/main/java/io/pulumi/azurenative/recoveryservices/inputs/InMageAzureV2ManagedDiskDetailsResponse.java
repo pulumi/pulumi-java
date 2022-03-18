@@ -94,17 +94,14 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
             this.diskId = diskId;
             return this;
         }
-
         public Builder replicaDiskType(@Nullable String replicaDiskType) {
             this.replicaDiskType = replicaDiskType;
             return this;
         }
-
         public Builder seedManagedDiskId(@Nullable String seedManagedDiskId) {
             this.seedManagedDiskId = seedManagedDiskId;
             return this;
-        }
-        public InMageAzureV2ManagedDiskDetailsResponse build() {
+        }        public InMageAzureV2ManagedDiskDetailsResponse build() {
             return new InMageAzureV2ManagedDiskDetailsResponse(diskId, replicaDiskType, seedManagedDiskId);
         }
     }

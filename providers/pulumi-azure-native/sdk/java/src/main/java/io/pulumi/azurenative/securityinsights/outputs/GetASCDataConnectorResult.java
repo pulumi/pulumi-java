@@ -154,37 +154,30 @@ public final class GetASCDataConnectorResult {
             this.dataTypes = dataTypes;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetASCDataConnectorResult build() {
+        }        public GetASCDataConnectorResult build() {
             return new GetASCDataConnectorResult(dataTypes, etag, id, kind, name, subscriptionId, type);
         }
     }

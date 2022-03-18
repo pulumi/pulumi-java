@@ -116,42 +116,40 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
             this.bypass = bypass;
             return this;
         }
-
         public Builder bypass(@Nullable Either<String,NetworkRuleBypassOptions> bypass) {
             this.bypass = Output.ofNullable(bypass);
             return this;
         }
-
         public Builder defaultAction(@Nullable Output<Either<String,NetworkRuleAction>> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder defaultAction(@Nullable Either<String,NetworkRuleAction> defaultAction) {
             this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
-
         public Builder ipRules(@Nullable Output<List<MHSMIPRuleArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
-
         public Builder ipRules(@Nullable List<MHSMIPRuleArgs> ipRules) {
             this.ipRules = Output.ofNullable(ipRules);
             return this;
         }
-
+        public Builder ipRules(MHSMIPRuleArgs... ipRules) {
+            return ipRules(List.of(ipRules));
+        }
         public Builder virtualNetworkRules(@Nullable Output<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public Builder virtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
-        public MHSMNetworkRuleSetArgs build() {
+        public Builder virtualNetworkRules(MHSMVirtualNetworkRuleArgs... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }        public MHSMNetworkRuleSetArgs build() {
             return new MHSMNetworkRuleSetArgs(bypass, defaultAction, ipRules, virtualNetworkRules);
         }
     }

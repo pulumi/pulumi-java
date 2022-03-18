@@ -194,92 +194,80 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder managementGroupId(Output<String> managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
-
         public Builder managementGroupId(String managementGroupId) {
             this.managementGroupId = Output.of(Objects.requireNonNull(managementGroupId));
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder policyDefinitionGroups(@Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups) {
             this.policyDefinitionGroups = policyDefinitionGroups;
             return this;
         }
-
         public Builder policyDefinitionGroups(@Nullable List<PolicyDefinitionGroupArgs> policyDefinitionGroups) {
             this.policyDefinitionGroups = Output.ofNullable(policyDefinitionGroups);
             return this;
         }
-
+        public Builder policyDefinitionGroups(PolicyDefinitionGroupArgs... policyDefinitionGroups) {
+            return policyDefinitionGroups(List.of(policyDefinitionGroups));
+        }
         public Builder policyDefinitions(Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions) {
             this.policyDefinitions = Objects.requireNonNull(policyDefinitions);
             return this;
         }
-
         public Builder policyDefinitions(List<PolicyDefinitionReferenceArgs> policyDefinitions) {
             this.policyDefinitions = Output.of(Objects.requireNonNull(policyDefinitions));
             return this;
         }
-
+        public Builder policyDefinitions(PolicyDefinitionReferenceArgs... policyDefinitions) {
+            return policyDefinitions(List.of(policyDefinitions));
+        }
         public Builder policySetDefinitionName(@Nullable Output<String> policySetDefinitionName) {
             this.policySetDefinitionName = policySetDefinitionName;
             return this;
         }
-
         public Builder policySetDefinitionName(@Nullable String policySetDefinitionName) {
             this.policySetDefinitionName = Output.ofNullable(policySetDefinitionName);
             return this;
         }
-
         public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
             this.policyType = policyType;
             return this;
         }
-
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
             this.policyType = Output.ofNullable(policyType);
             return this;
-        }
-        public PolicySetDefinitionAtManagementGroupArgs build() {
+        }        public PolicySetDefinitionAtManagementGroupArgs build() {
             return new PolicySetDefinitionAtManagementGroupArgs(description, displayName, managementGroupId, metadata, parameters, policyDefinitionGroups, policyDefinitions, policySetDefinitionName, policyType);
         }
     }

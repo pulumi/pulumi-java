@@ -132,52 +132,42 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
             this.aznsAction = aznsAction;
             return this;
         }
-
         public Builder aznsAction(@Nullable AzNsActionGroupArgs aznsAction) {
             this.aznsAction = Output.ofNullable(aznsAction);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder severity(Output<Either<String,AlertSeverity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder severity(Either<String,AlertSeverity> severity) {
             this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
-
         public Builder throttlingInMin(@Nullable Output<Integer> throttlingInMin) {
             this.throttlingInMin = throttlingInMin;
             return this;
         }
-
         public Builder throttlingInMin(@Nullable Integer throttlingInMin) {
             this.throttlingInMin = Output.ofNullable(throttlingInMin);
             return this;
         }
-
         public Builder trigger(Output<TriggerConditionArgs> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public Builder trigger(TriggerConditionArgs trigger) {
             this.trigger = Output.of(Objects.requireNonNull(trigger));
             return this;
-        }
-        public AlertingActionArgs build() {
+        }        public AlertingActionArgs build() {
             return new AlertingActionArgs(aznsAction, odataType, severity, throttlingInMin, trigger);
         }
     }

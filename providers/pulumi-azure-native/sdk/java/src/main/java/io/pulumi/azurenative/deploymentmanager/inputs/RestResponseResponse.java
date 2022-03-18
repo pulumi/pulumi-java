@@ -80,12 +80,13 @@ public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
             this.regex = regex;
             return this;
         }
-
         public Builder successStatusCodes(@Nullable List<String> successStatusCodes) {
             this.successStatusCodes = successStatusCodes;
             return this;
         }
-        public RestResponseResponse build() {
+        public Builder successStatusCodes(String... successStatusCodes) {
+            return successStatusCodes(List.of(successStatusCodes));
+        }        public RestResponseResponse build() {
             return new RestResponseResponse(regex, successStatusCodes);
         }
     }

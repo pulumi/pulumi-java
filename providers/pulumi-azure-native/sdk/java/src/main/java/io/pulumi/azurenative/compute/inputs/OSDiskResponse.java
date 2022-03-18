@@ -244,62 +244,50 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.caching = caching;
             return this;
         }
-
         public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
-
         public Builder deleteOption(@Nullable String deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder diffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
             this.diffDiskSettings = diffDiskSettings;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder encryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
-
         public Builder image(@Nullable VirtualHardDiskResponse image) {
             this.image = image;
             return this;
         }
-
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder vhd(@Nullable VirtualHardDiskResponse vhd) {
             this.vhd = vhd;
             return this;
         }
-
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
-        }
-        public OSDiskResponse build() {
+        }        public OSDiskResponse build() {
             return new OSDiskResponse(caching, createOption, deleteOption, diffDiskSettings, diskSizeGB, encryptionSettings, image, managedDisk, name, osType, vhd, writeAcceleratorEnabled);
         }
     }

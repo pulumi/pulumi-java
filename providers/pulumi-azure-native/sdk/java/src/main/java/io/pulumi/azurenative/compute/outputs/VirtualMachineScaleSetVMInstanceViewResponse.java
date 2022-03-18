@@ -240,62 +240,59 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
             this.assignedHost = Objects.requireNonNull(assignedHost);
             return this;
         }
-
         public Builder bootDiagnostics(@Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics) {
             this.bootDiagnostics = bootDiagnostics;
             return this;
         }
-
         public Builder disks(@Nullable List<DiskInstanceViewResponse> disks) {
             this.disks = disks;
             return this;
         }
-
+        public Builder disks(DiskInstanceViewResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder extensions(@Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
-
+        public Builder extensions(VirtualMachineExtensionInstanceViewResponse... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder maintenanceRedeployStatus(@Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus) {
             this.maintenanceRedeployStatus = maintenanceRedeployStatus;
             return this;
         }
-
         public Builder placementGroupId(@Nullable String placementGroupId) {
             this.placementGroupId = placementGroupId;
             return this;
         }
-
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
-
         public Builder platformUpdateDomain(@Nullable Integer platformUpdateDomain) {
             this.platformUpdateDomain = platformUpdateDomain;
             return this;
         }
-
         public Builder rdpThumbPrint(@Nullable String rdpThumbPrint) {
             this.rdpThumbPrint = rdpThumbPrint;
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder vmAgent(@Nullable VirtualMachineAgentInstanceViewResponse vmAgent) {
             this.vmAgent = vmAgent;
             return this;
         }
-
         public Builder vmHealth(VirtualMachineHealthStatusResponse vmHealth) {
             this.vmHealth = Objects.requireNonNull(vmHealth);
             return this;
-        }
-        public VirtualMachineScaleSetVMInstanceViewResponse build() {
+        }        public VirtualMachineScaleSetVMInstanceViewResponse build() {
             return new VirtualMachineScaleSetVMInstanceViewResponse(assignedHost, bootDiagnostics, disks, extensions, maintenanceRedeployStatus, placementGroupId, platformFaultDomain, platformUpdateDomain, rdpThumbPrint, statuses, vmAgent, vmHealth);
         }
     }

@@ -88,17 +88,14 @@ public final class GetMigrationConfigArgs extends io.pulumi.resources.InvokeArgs
             this.configName = Objects.requireNonNull(configName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMigrationConfigArgs build() {
+        }        public GetMigrationConfigArgs build() {
             return new GetMigrationConfigArgs(configName, namespaceName, resourceGroupName);
         }
     }

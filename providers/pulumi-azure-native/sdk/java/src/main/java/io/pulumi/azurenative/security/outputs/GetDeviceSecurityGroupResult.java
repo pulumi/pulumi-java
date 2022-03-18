@@ -155,37 +155,42 @@ public final class GetDeviceSecurityGroupResult {
             this.allowlistRules = allowlistRules;
             return this;
         }
-
+        public Builder allowlistRules(AllowlistCustomAlertRuleResponse... allowlistRules) {
+            return allowlistRules(List.of(allowlistRules));
+        }
         public Builder denylistRules(@Nullable List<DenylistCustomAlertRuleResponse> denylistRules) {
             this.denylistRules = denylistRules;
             return this;
         }
-
+        public Builder denylistRules(DenylistCustomAlertRuleResponse... denylistRules) {
+            return denylistRules(List.of(denylistRules));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder thresholdRules(@Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
-
+        public Builder thresholdRules(ThresholdCustomAlertRuleResponse... thresholdRules) {
+            return thresholdRules(List.of(thresholdRules));
+        }
         public Builder timeWindowRules(@Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules) {
             this.timeWindowRules = timeWindowRules;
             return this;
         }
-
+        public Builder timeWindowRules(TimeWindowCustomAlertRuleResponse... timeWindowRules) {
+            return timeWindowRules(List.of(timeWindowRules));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDeviceSecurityGroupResult build() {
+        }        public GetDeviceSecurityGroupResult build() {
             return new GetDeviceSecurityGroupResult(allowlistRules, denylistRules, id, name, thresholdRules, timeWindowRules, type);
         }
     }

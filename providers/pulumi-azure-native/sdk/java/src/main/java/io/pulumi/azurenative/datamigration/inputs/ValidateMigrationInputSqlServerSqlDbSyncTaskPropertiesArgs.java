@@ -80,22 +80,18 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable ValidateSyncMigrationInputSqlServerTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs build() {
+        }        public ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs build() {
             return new ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs(input, taskType);
         }
     }

@@ -218,57 +218,46 @@ public final class Office365SourceResponse {
             this.allowedGroups = allowedGroups;
             return this;
         }
-
         public Builder dateFilterColumn(@Nullable Object dateFilterColumn) {
             this.dateFilterColumn = dateFilterColumn;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder endTime(@Nullable Object endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder outputColumns(@Nullable Object outputColumns) {
             this.outputColumns = outputColumns;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder startTime(@Nullable Object startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userScopeFilterUri(@Nullable Object userScopeFilterUri) {
             this.userScopeFilterUri = userScopeFilterUri;
             return this;
-        }
-        public Office365SourceResponse build() {
+        }        public Office365SourceResponse build() {
             return new Office365SourceResponse(allowedGroups, dateFilterColumn, disableMetricsCollection, endTime, maxConcurrentConnections, outputColumns, sourceRetryCount, sourceRetryWait, startTime, type, userScopeFilterUri);
         }
     }

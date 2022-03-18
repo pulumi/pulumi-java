@@ -57,12 +57,10 @@ public final class MachineIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public MachineIdentityArgs build() {
+        }        public MachineIdentityArgs build() {
             return new MachineIdentityArgs(type);
         }
     }

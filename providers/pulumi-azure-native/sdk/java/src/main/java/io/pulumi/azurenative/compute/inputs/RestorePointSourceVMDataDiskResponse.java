@@ -145,32 +145,26 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
             this.caching = caching;
             return this;
         }
-
         public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
             this.diskRestorePoint = diskRestorePoint;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder lun(@Nullable Integer lun) {
             this.lun = lun;
             return this;
         }
-
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public RestorePointSourceVMDataDiskResponse build() {
+        }        public RestorePointSourceVMDataDiskResponse build() {
             return new RestorePointSourceVMDataDiskResponse(caching, diskRestorePoint, diskSizeGB, lun, managedDisk, name);
         }
     }

@@ -205,102 +205,82 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
-
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
             this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
-
         public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
-
         public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
             this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-
         public Builder type(Output<Either<String,Type>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,Type> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(createdAt, createdBy, createdByType, endpointName, lastModifiedAt, lastModifiedBy, lastModifiedByType, resourceId, resourceUri, type);
         }
     }

@@ -55,8 +55,7 @@ public final class DestinationsSpecResponseAzureMonitorMetrics {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DestinationsSpecResponseAzureMonitorMetrics build() {
+        }        public DestinationsSpecResponseAzureMonitorMetrics build() {
             return new DestinationsSpecResponseAzureMonitorMetrics(name);
         }
     }

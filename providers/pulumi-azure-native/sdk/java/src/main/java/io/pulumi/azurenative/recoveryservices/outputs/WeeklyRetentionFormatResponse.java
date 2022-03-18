@@ -71,12 +71,16 @@ public final class WeeklyRetentionFormatResponse {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-
+        public Builder daysOfTheWeek(String... daysOfTheWeek) {
+            return daysOfTheWeek(List.of(daysOfTheWeek));
+        }
         public Builder weeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-        public WeeklyRetentionFormatResponse build() {
+        public Builder weeksOfTheMonth(String... weeksOfTheMonth) {
+            return weeksOfTheMonth(List.of(weeksOfTheMonth));
+        }        public WeeklyRetentionFormatResponse build() {
             return new WeeklyRetentionFormatResponse(daysOfTheWeek, weeksOfTheMonth);
         }
     }

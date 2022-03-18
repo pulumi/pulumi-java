@@ -91,32 +91,26 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
-
         public Builder properties(@Nullable Output<CostAllocationRulePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable CostAllocationRulePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
-        }
-        public CostAllocationRuleArgs build() {
+        }        public CostAllocationRuleArgs build() {
             return new CostAllocationRuleArgs(billingAccountId, properties, ruleName);
         }
     }

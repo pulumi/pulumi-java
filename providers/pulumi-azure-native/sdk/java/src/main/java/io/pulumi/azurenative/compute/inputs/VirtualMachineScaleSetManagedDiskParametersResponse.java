@@ -79,12 +79,10 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends i
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
-        }
-        public VirtualMachineScaleSetManagedDiskParametersResponse build() {
+        }        public VirtualMachineScaleSetManagedDiskParametersResponse build() {
             return new VirtualMachineScaleSetManagedDiskParametersResponse(diskEncryptionSet, storageAccountType);
         }
     }

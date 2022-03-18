@@ -103,22 +103,18 @@ public final class GetNamespaceVirtualNetworkRuleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
-        }
-        public GetNamespaceVirtualNetworkRuleResult build() {
+        }        public GetNamespaceVirtualNetworkRuleResult build() {
             return new GetNamespaceVirtualNetworkRuleResult(id, name, type, virtualNetworkSubnetId);
         }
     }

@@ -112,42 +112,34 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
             this.datasetParameters = datasetParameters;
             return this;
         }
-
         public Builder datasetParameters(@Nullable Object datasetParameters) {
             this.datasetParameters = Output.ofNullable(datasetParameters);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder referenceName(Output<String> referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Output.of(Objects.requireNonNull(referenceName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DataFlowReferenceArgs build() {
+        }        public DataFlowReferenceArgs build() {
             return new DataFlowReferenceArgs(datasetParameters, parameters, referenceName, type);
         }
     }

@@ -88,17 +88,14 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends io.pu
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedInstancePrivateEndpointConnectionArgs build() {
+        }        public GetManagedInstancePrivateEndpointConnectionArgs build() {
             return new GetManagedInstancePrivateEndpointConnectionArgs(managedInstanceName, privateEndpointConnectionName, resourceGroupName);
         }
     }

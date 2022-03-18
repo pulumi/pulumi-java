@@ -104,22 +104,18 @@ public final class GetBackupShortTermRetentionPolicyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBackupShortTermRetentionPolicyResult build() {
+        }        public GetBackupShortTermRetentionPolicyResult build() {
             return new GetBackupShortTermRetentionPolicyResult(id, name, retentionDays, type);
         }
     }

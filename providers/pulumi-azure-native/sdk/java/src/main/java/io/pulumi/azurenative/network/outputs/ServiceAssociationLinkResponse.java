@@ -185,47 +185,41 @@ public final class ServiceAssociationLinkResponse {
             this.allowDelete = allowDelete;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
-
         public Builder linkedResourceType(@Nullable String linkedResourceType) {
             this.linkedResourceType = linkedResourceType;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceAssociationLinkResponse build() {
+        }        public ServiceAssociationLinkResponse build() {
             return new ServiceAssociationLinkResponse(allowDelete, etag, id, link, linkedResourceType, locations, name, provisioningState, type);
         }
     }

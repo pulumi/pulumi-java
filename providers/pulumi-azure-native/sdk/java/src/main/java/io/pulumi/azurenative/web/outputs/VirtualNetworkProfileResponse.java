@@ -103,22 +103,18 @@ public final class VirtualNetworkProfileResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VirtualNetworkProfileResponse build() {
+        }        public VirtualNetworkProfileResponse build() {
             return new VirtualNetworkProfileResponse(id, name, subnet, type);
         }
     }

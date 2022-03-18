@@ -79,22 +79,18 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
-
         public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
             this.linkedService = linkedService;
             return this;
         }
-
         public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
             this.linkedService = Output.ofNullable(linkedService);
             return this;
-        }
-        public DataFlowStagingInfoArgs build() {
+        }        public DataFlowStagingInfoArgs build() {
             return new DataFlowStagingInfoArgs(folderPath, linkedService);
         }
     }

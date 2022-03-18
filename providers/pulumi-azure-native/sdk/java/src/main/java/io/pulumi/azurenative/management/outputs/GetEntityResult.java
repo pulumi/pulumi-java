@@ -89,17 +89,17 @@ public final class GetEntityResult {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(@Nullable List<EntityInfoResponse> value) {
             this.value = value;
             return this;
         }
-        public GetEntityResult build() {
+        public Builder value(EntityInfoResponse... value) {
+            return value(List.of(value));
+        }        public GetEntityResult build() {
             return new GetEntityResult(count, nextLink, value);
         }
     }

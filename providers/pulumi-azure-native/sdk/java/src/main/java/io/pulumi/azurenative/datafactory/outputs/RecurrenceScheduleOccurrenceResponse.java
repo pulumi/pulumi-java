@@ -72,12 +72,10 @@ public final class RecurrenceScheduleOccurrenceResponse {
             this.day = day;
             return this;
         }
-
         public Builder occurrence(@Nullable Integer occurrence) {
             this.occurrence = occurrence;
             return this;
-        }
-        public RecurrenceScheduleOccurrenceResponse build() {
+        }        public RecurrenceScheduleOccurrenceResponse build() {
             return new RecurrenceScheduleOccurrenceResponse(day, occurrence);
         }
     }

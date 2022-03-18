@@ -112,42 +112,34 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
             this.azureLocation = Objects.requireNonNull(azureLocation);
             return this;
         }
-
         public Builder azureLocation(String azureLocation) {
             this.azureLocation = Output.of(Objects.requireNonNull(azureLocation));
             return this;
         }
-
         public Builder azureSku(Output<String> azureSku) {
             this.azureSku = Objects.requireNonNull(azureSku);
             return this;
         }
-
         public Builder azureSku(String azureSku) {
             this.azureSku = Output.of(Objects.requireNonNull(azureSku));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,EnterpriseChannelNodeState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,EnterpriseChannelNodeState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public EnterpriseChannelNodeArgs build() {
+        }        public EnterpriseChannelNodeArgs build() {
             return new EnterpriseChannelNodeArgs(azureLocation, azureSku, name, state);
         }
     }

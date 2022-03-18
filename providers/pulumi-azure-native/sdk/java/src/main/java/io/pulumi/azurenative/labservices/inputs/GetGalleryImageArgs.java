@@ -106,22 +106,18 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder galleryImageName(String galleryImageName) {
             this.galleryImageName = Objects.requireNonNull(galleryImageName);
             return this;
         }
-
         public Builder labAccountName(String labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetGalleryImageArgs build() {
+        }        public GetGalleryImageArgs build() {
             return new GetGalleryImageArgs(expand, galleryImageName, labAccountName, resourceGroupName);
         }
     }

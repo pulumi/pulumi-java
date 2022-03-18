@@ -124,52 +124,42 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
-
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,PrivateEndpointServiceConnectionStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public SharedPrivateLinkResourceArgs build() {
+        }        public SharedPrivateLinkResourceArgs build() {
             return new SharedPrivateLinkResourceArgs(groupId, name, privateLinkResourceId, requestMessage, status);
         }
     }

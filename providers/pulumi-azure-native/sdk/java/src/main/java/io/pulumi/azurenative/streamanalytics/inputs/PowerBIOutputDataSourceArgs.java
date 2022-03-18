@@ -175,82 +175,66 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = Output.ofNullable(groupName);
             return this;
         }
-
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
-
         public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = Output.ofNullable(table);
             return this;
         }
-
         public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
-
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
             this.tokenUserDisplayName = Output.ofNullable(tokenUserDisplayName);
             return this;
         }
-
         public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
-
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
             this.tokenUserPrincipalName = Output.ofNullable(tokenUserPrincipalName);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public PowerBIOutputDataSourceArgs build() {
+        }        public PowerBIOutputDataSourceArgs build() {
             return new PowerBIOutputDataSourceArgs(dataset, groupId, groupName, refreshToken, table, tokenUserDisplayName, tokenUserPrincipalName, type);
         }
     }

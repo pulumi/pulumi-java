@@ -88,17 +88,14 @@ public final class GetExpressRouteConnectionArgs extends io.pulumi.resources.Inv
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
             this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExpressRouteConnectionArgs build() {
+        }        public GetExpressRouteConnectionArgs build() {
             return new GetExpressRouteConnectionArgs(connectionName, expressRouteGatewayName, resourceGroupName);
         }
     }

@@ -97,32 +97,35 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
             this.monthDays = monthDays;
             return this;
         }
-
         public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = Output.ofNullable(monthDays);
             return this;
         }
-
+        public Builder monthDays(Integer... monthDays) {
+            return monthDays(List.of(monthDays));
+        }
         public Builder monthlyOccurrences(@Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
-
         public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceArgs> monthlyOccurrences) {
             this.monthlyOccurrences = Output.ofNullable(monthlyOccurrences);
             return this;
         }
-
+        public Builder monthlyOccurrences(AdvancedScheduleMonthlyOccurrenceArgs... monthlyOccurrences) {
+            return monthlyOccurrences(List.of(monthlyOccurrences));
+        }
         public Builder weekDays(@Nullable Output<List<String>> weekDays) {
             this.weekDays = weekDays;
             return this;
         }
-
         public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = Output.ofNullable(weekDays);
             return this;
         }
-        public AdvancedScheduleArgs build() {
+        public Builder weekDays(String... weekDays) {
+            return weekDays(List.of(weekDays));
+        }        public AdvancedScheduleArgs build() {
             return new AdvancedScheduleArgs(monthDays, monthlyOccurrences, weekDays);
         }
     }

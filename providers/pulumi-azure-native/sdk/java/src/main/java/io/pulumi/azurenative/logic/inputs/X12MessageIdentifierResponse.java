@@ -58,8 +58,7 @@ public final class X12MessageIdentifierResponse extends io.pulumi.resources.Invo
         public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
-        }
-        public X12MessageIdentifierResponse build() {
+        }        public X12MessageIdentifierResponse build() {
             return new X12MessageIdentifierResponse(messageId);
         }
     }

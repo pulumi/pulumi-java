@@ -77,22 +77,18 @@ public final class JitAuthorizationPoliciesArgs extends io.pulumi.resources.Reso
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
             return this;
-        }
-        public JitAuthorizationPoliciesArgs build() {
+        }        public JitAuthorizationPoliciesArgs build() {
             return new JitAuthorizationPoliciesArgs(principalId, roleDefinitionId);
         }
     }

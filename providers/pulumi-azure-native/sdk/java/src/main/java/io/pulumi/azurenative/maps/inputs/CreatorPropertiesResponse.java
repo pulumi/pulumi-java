@@ -60,8 +60,7 @@ public final class CreatorPropertiesResponse extends io.pulumi.resources.InvokeA
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
-        }
-        public CreatorPropertiesResponse build() {
+        }        public CreatorPropertiesResponse build() {
             return new CreatorPropertiesResponse(provisioningState);
         }
     }

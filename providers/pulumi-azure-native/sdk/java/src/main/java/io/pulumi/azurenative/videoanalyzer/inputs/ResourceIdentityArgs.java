@@ -60,12 +60,10 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Output.of(Objects.requireNonNull(userAssignedIdentity));
             return this;
-        }
-        public ResourceIdentityArgs build() {
+        }        public ResourceIdentityArgs build() {
             return new ResourceIdentityArgs(userAssignedIdentity);
         }
     }

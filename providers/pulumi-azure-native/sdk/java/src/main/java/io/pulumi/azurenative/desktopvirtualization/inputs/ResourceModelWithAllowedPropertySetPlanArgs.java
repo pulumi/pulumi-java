@@ -122,52 +122,42 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder product(Output<String> product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
-
         public Builder product(String product) {
             this.product = Output.of(Objects.requireNonNull(product));
             return this;
         }
-
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
-
         public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = Output.ofNullable(promotionCode);
             return this;
         }
-
         public Builder publisher(Output<String> publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
-
         public Builder publisher(String publisher) {
             this.publisher = Output.of(Objects.requireNonNull(publisher));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ResourceModelWithAllowedPropertySetPlanArgs build() {
+        }        public ResourceModelWithAllowedPropertySetPlanArgs build() {
             return new ResourceModelWithAllowedPropertySetPlanArgs(name, product, promotionCode, publisher, version);
         }
     }

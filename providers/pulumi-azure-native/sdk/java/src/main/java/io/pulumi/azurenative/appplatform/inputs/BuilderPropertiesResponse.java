@@ -97,17 +97,17 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
             this.buildpackGroups = buildpackGroups;
             return this;
         }
-
+        public Builder buildpackGroups(BuildpacksGroupPropertiesResponse... buildpackGroups) {
+            return buildpackGroups(List.of(buildpackGroups));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder stack(@Nullable StackPropertiesResponse stack) {
             this.stack = stack;
             return this;
-        }
-        public BuilderPropertiesResponse build() {
+        }        public BuilderPropertiesResponse build() {
             return new BuilderPropertiesResponse(buildpackGroups, provisioningState, stack);
         }
     }

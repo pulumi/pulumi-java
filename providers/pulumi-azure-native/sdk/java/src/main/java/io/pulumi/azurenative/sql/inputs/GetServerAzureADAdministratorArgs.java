@@ -88,17 +88,14 @@ public final class GetServerAzureADAdministratorArgs extends io.pulumi.resources
             this.administratorName = Objects.requireNonNull(administratorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetServerAzureADAdministratorArgs build() {
+        }        public GetServerAzureADAdministratorArgs build() {
             return new GetServerAzureADAdministratorArgs(administratorName, resourceGroupName, serverName);
         }
     }

@@ -187,47 +187,38 @@ public final class VirtualMachineScaleSetDataDiskResponse {
             this.caching = caching;
             return this;
         }
-
         public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
-
         public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
             this.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
-
         public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
             this.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
-        }
-        public VirtualMachineScaleSetDataDiskResponse build() {
+        }        public VirtualMachineScaleSetDataDiskResponse build() {
             return new VirtualMachineScaleSetDataDiskResponse(caching, createOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, lun, managedDisk, name, writeAcceleratorEnabled);
         }
     }

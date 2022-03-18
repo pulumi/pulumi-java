@@ -79,12 +79,13 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
             this.roles = roles;
             return this;
         }
-
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public SecurityContactPropertiesResponseNotificationsByRole build() {
+        }        public SecurityContactPropertiesResponseNotificationsByRole build() {
             return new SecurityContactPropertiesResponseNotificationsByRole(roles, state);
         }
     }

@@ -60,8 +60,7 @@ public final class VirtualHardDiskResponse extends io.pulumi.resources.InvokeArg
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public VirtualHardDiskResponse build() {
+        }        public VirtualHardDiskResponse build() {
             return new VirtualHardDiskResponse(uri);
         }
     }

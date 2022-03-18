@@ -103,22 +103,18 @@ public final class ListCommunicationServiceKeysResult {
             this.primaryConnectionString = primaryConnectionString;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
             this.secondaryConnectionString = secondaryConnectionString;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListCommunicationServiceKeysResult build() {
+        }        public ListCommunicationServiceKeysResult build() {
             return new ListCommunicationServiceKeysResult(primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }
     }

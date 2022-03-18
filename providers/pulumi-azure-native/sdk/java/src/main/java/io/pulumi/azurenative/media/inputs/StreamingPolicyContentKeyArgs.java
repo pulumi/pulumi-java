@@ -96,32 +96,29 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
         }
-
         public Builder tracks(@Nullable Output<List<TrackSelectionArgs>> tracks) {
             this.tracks = tracks;
             return this;
         }
-
         public Builder tracks(@Nullable List<TrackSelectionArgs> tracks) {
             this.tracks = Output.ofNullable(tracks);
             return this;
         }
-        public StreamingPolicyContentKeyArgs build() {
+        public Builder tracks(TrackSelectionArgs... tracks) {
+            return tracks(List.of(tracks));
+        }        public StreamingPolicyContentKeyArgs build() {
             return new StreamingPolicyContentKeyArgs(label, policyName, tracks);
         }
     }

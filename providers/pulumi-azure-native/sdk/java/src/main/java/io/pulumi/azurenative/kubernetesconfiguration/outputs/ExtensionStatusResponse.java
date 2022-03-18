@@ -119,27 +119,22 @@ public final class ExtensionStatusResponse {
             this.code = code;
             return this;
         }
-
         public Builder displayStatus(@Nullable String displayStatus) {
             this.displayStatus = displayStatus;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = time;
             return this;
-        }
-        public ExtensionStatusResponse build() {
+        }        public ExtensionStatusResponse build() {
             return new ExtensionStatusResponse(code, displayStatus, level, message, time);
         }
     }

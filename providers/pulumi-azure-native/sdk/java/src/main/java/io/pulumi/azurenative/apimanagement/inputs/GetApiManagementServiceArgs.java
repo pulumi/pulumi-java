@@ -72,12 +72,10 @@ public final class GetApiManagementServiceArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetApiManagementServiceArgs build() {
+        }        public GetApiManagementServiceArgs build() {
             return new GetApiManagementServiceArgs(resourceGroupName, serviceName);
         }
     }

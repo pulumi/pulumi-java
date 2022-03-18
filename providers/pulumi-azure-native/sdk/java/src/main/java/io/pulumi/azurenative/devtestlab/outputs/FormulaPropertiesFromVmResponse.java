@@ -53,8 +53,7 @@ public final class FormulaPropertiesFromVmResponse {
         public Builder labVmId(@Nullable String labVmId) {
             this.labVmId = labVmId;
             return this;
-        }
-        public FormulaPropertiesFromVmResponse build() {
+        }        public FormulaPropertiesFromVmResponse build() {
             return new FormulaPropertiesFromVmResponse(labVmId);
         }
     }

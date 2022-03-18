@@ -121,27 +121,22 @@ public final class CommitmentPeriodResponse {
             this.count = count;
             return this;
         }
-
         public Builder endDate(String endDate) {
             this.endDate = Objects.requireNonNull(endDate);
             return this;
         }
-
         public Builder quota(CommitmentQuotaResponse quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
-
         public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public CommitmentPeriodResponse build() {
+        }        public CommitmentPeriodResponse build() {
             return new CommitmentPeriodResponse(count, endDate, quota, startDate, tier);
         }
     }

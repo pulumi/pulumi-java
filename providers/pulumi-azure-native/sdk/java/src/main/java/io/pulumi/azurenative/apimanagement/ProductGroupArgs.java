@@ -106,42 +106,34 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public ProductGroupArgs build() {
+        }        public ProductGroupArgs build() {
             return new ProductGroupArgs(groupId, productId, resourceGroupName, serviceName);
         }
     }

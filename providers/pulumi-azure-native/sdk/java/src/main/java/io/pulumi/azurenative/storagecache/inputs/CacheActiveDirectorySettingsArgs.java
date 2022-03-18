@@ -143,62 +143,50 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
             this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName);
             return this;
         }
-
         public Builder cacheNetBiosName(String cacheNetBiosName) {
             this.cacheNetBiosName = Output.of(Objects.requireNonNull(cacheNetBiosName));
             return this;
         }
-
         public Builder credentials(@Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable CacheActiveDirectorySettingsCredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder domainNetBiosName(Output<String> domainNetBiosName) {
             this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName);
             return this;
         }
-
         public Builder domainNetBiosName(String domainNetBiosName) {
             this.domainNetBiosName = Output.of(Objects.requireNonNull(domainNetBiosName));
             return this;
         }
-
         public Builder primaryDnsIpAddress(Output<String> primaryDnsIpAddress) {
             this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress);
             return this;
         }
-
         public Builder primaryDnsIpAddress(String primaryDnsIpAddress) {
             this.primaryDnsIpAddress = Output.of(Objects.requireNonNull(primaryDnsIpAddress));
             return this;
         }
-
         public Builder secondaryDnsIpAddress(@Nullable Output<String> secondaryDnsIpAddress) {
             this.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }
-
         public Builder secondaryDnsIpAddress(@Nullable String secondaryDnsIpAddress) {
             this.secondaryDnsIpAddress = Output.ofNullable(secondaryDnsIpAddress);
             return this;
-        }
-        public CacheActiveDirectorySettingsArgs build() {
+        }        public CacheActiveDirectorySettingsArgs build() {
             return new CacheActiveDirectorySettingsArgs(cacheNetBiosName, credentials, domainName, domainNetBiosName, primaryDnsIpAddress, secondaryDnsIpAddress);
         }
     }

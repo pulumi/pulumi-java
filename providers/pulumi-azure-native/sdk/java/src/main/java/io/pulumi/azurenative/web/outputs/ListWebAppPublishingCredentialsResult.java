@@ -183,47 +183,38 @@ public final class ListWebAppPublishingCredentialsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publishingPassword(@Nullable String publishingPassword) {
             this.publishingPassword = publishingPassword;
             return this;
         }
-
         public Builder publishingPasswordHash(@Nullable String publishingPasswordHash) {
             this.publishingPasswordHash = publishingPasswordHash;
             return this;
         }
-
         public Builder publishingPasswordHashSalt(@Nullable String publishingPasswordHashSalt) {
             this.publishingPasswordHashSalt = publishingPasswordHashSalt;
             return this;
         }
-
         public Builder publishingUserName(String publishingUserName) {
             this.publishingUserName = Objects.requireNonNull(publishingUserName);
             return this;
         }
-
         public Builder scmUri(@Nullable String scmUri) {
             this.scmUri = scmUri;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListWebAppPublishingCredentialsResult build() {
+        }        public ListWebAppPublishingCredentialsResult build() {
             return new ListWebAppPublishingCredentialsResult(id, kind, name, publishingPassword, publishingPasswordHash, publishingPasswordHashSalt, publishingUserName, scmUri, type);
         }
     }

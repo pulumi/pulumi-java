@@ -102,27 +102,22 @@ public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeA
             this.actionName = actionName;
             return this;
         }
-
         public Builder linkedAction(@Nullable String linkedAction) {
             this.linkedAction = linkedAction;
             return this;
         }
-
         public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
             this.linkedActionVerb = linkedActionVerb;
             return this;
         }
-
         public Builder linkedProperty(@Nullable String linkedProperty) {
             this.linkedProperty = linkedProperty;
             return this;
         }
-
         public Builder linkedType(@Nullable String linkedType) {
             this.linkedType = linkedType;
             return this;
-        }
-        public LinkedAccessCheckResponse build() {
+        }        public LinkedAccessCheckResponse build() {
             return new LinkedAccessCheckResponse(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);
         }
     }

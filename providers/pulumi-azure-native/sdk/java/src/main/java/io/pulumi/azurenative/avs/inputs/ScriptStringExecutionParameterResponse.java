@@ -95,17 +95,14 @@ public final class ScriptStringExecutionParameterResponse extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ScriptStringExecutionParameterResponse build() {
+        }        public ScriptStringExecutionParameterResponse build() {
             return new ScriptStringExecutionParameterResponse(name, type, value);
         }
     }

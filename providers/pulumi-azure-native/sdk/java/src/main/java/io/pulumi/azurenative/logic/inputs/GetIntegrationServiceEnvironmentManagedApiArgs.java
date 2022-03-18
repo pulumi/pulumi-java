@@ -88,17 +88,14 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
             this.apiName = Objects.requireNonNull(apiName);
             return this;
         }
-
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
-        }
-        public GetIntegrationServiceEnvironmentManagedApiArgs build() {
+        }        public GetIntegrationServiceEnvironmentManagedApiArgs build() {
             return new GetIntegrationServiceEnvironmentManagedApiArgs(apiName, integrationServiceEnvironmentName, resourceGroup);
         }
     }

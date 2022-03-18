@@ -78,22 +78,18 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable String method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder requestUri(@Nullable Output<String> requestUri) {
             this.requestUri = requestUri;
             return this;
         }
-
         public Builder requestUri(@Nullable String requestUri) {
             this.requestUri = Output.ofNullable(requestUri);
             return this;
-        }
-        public ApiConnectionTestLinkArgs build() {
+        }        public ApiConnectionTestLinkArgs build() {
             return new ApiConnectionTestLinkArgs(method, requestUri);
         }
     }

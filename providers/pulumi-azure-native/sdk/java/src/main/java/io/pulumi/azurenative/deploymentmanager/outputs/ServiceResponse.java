@@ -105,22 +105,21 @@ public final class ServiceResponse {
             this.name = name;
             return this;
         }
-
         public Builder serviceUnits(@Nullable List<ServiceUnitResponse> serviceUnits) {
             this.serviceUnits = serviceUnits;
             return this;
         }
-
+        public Builder serviceUnits(ServiceUnitResponse... serviceUnits) {
+            return serviceUnits(List.of(serviceUnits));
+        }
         public Builder targetLocation(String targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
-
         public Builder targetSubscriptionId(String targetSubscriptionId) {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
-        }
-        public ServiceResponse build() {
+        }        public ServiceResponse build() {
             return new ServiceResponse(name, serviceUnits, targetLocation, targetSubscriptionId);
         }
     }

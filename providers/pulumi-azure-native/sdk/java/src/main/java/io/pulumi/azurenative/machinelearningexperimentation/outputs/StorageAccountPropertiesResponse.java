@@ -69,12 +69,10 @@ public final class StorageAccountPropertiesResponse {
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
-
         public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
-        }
-        public StorageAccountPropertiesResponse build() {
+        }        public StorageAccountPropertiesResponse build() {
             return new StorageAccountPropertiesResponse(accessKey, storageAccountId);
         }
     }

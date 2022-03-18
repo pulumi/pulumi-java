@@ -163,72 +163,58 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,HealthProbeEnabled> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder healthProbeMethod(@Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
             this.healthProbeMethod = healthProbeMethod;
             return this;
         }
-
         public Builder healthProbeMethod(@Nullable Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
             this.healthProbeMethod = Output.ofNullable(healthProbeMethod);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,FrontDoorProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,FrontDoorProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public HealthProbeSettingsModelArgs build() {
+        }        public HealthProbeSettingsModelArgs build() {
             return new HealthProbeSettingsModelArgs(enabledState, healthProbeMethod, id, intervalInSeconds, name, path, protocol);
         }
     }

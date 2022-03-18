@@ -71,12 +71,10 @@ public final class DatabricksResponseProperties {
             this.databricksAccessToken = databricksAccessToken;
             return this;
         }
-
         public Builder workspaceUrl(@Nullable String workspaceUrl) {
             this.workspaceUrl = workspaceUrl;
             return this;
-        }
-        public DatabricksResponseProperties build() {
+        }        public DatabricksResponseProperties build() {
             return new DatabricksResponseProperties(databricksAccessToken, workspaceUrl);
         }
     }

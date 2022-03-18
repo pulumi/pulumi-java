@@ -71,12 +71,10 @@ public final class PublicIPAddressSkuResponse {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public PublicIPAddressSkuResponse build() {
+        }        public PublicIPAddressSkuResponse build() {
             return new PublicIPAddressSkuResponse(name, tier);
         }
     }

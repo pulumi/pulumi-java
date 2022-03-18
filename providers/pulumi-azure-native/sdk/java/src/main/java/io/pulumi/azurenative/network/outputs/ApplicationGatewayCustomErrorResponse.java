@@ -71,12 +71,10 @@ public final class ApplicationGatewayCustomErrorResponse {
             this.customErrorPageUrl = customErrorPageUrl;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
-        }
-        public ApplicationGatewayCustomErrorResponse build() {
+        }        public ApplicationGatewayCustomErrorResponse build() {
             return new ApplicationGatewayCustomErrorResponse(customErrorPageUrl, statusCode);
         }
     }

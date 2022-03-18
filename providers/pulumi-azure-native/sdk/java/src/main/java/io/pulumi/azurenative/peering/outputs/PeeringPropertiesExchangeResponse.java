@@ -73,12 +73,13 @@ public final class PeeringPropertiesExchangeResponse {
             this.connections = connections;
             return this;
         }
-
+        public Builder connections(ExchangeConnectionResponse... connections) {
+            return connections(List.of(connections));
+        }
         public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
             this.peerAsn = peerAsn;
             return this;
-        }
-        public PeeringPropertiesExchangeResponse build() {
+        }        public PeeringPropertiesExchangeResponse build() {
             return new PeeringPropertiesExchangeResponse(connections, peerAsn);
         }
     }

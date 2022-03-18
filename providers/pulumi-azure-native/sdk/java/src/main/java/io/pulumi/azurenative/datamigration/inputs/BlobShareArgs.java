@@ -60,12 +60,10 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
-
         public Builder sasUri(String sasUri) {
             this.sasUri = Output.of(Objects.requireNonNull(sasUri));
             return this;
-        }
-        public BlobShareArgs build() {
+        }        public BlobShareArgs build() {
             return new BlobShareArgs(sasUri);
         }
     }

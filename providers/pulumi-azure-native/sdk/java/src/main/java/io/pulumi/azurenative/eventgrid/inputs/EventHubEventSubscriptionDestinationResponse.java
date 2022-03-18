@@ -79,12 +79,10 @@ public final class EventHubEventSubscriptionDestinationResponse extends io.pulum
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public EventHubEventSubscriptionDestinationResponse build() {
+        }        public EventHubEventSubscriptionDestinationResponse build() {
             return new EventHubEventSubscriptionDestinationResponse(endpointType, resourceId);
         }
     }

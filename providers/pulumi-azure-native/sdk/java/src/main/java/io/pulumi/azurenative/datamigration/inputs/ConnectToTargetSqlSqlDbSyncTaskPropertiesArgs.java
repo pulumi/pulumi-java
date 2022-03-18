@@ -80,22 +80,18 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends io.pulu
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable ConnectToTargetSqlSqlDbSyncTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs build() {
+        }        public ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs build() {
             return new ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs(input, taskType);
         }
     }

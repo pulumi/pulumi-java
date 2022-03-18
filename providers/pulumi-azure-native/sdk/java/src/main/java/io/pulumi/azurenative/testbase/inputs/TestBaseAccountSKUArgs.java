@@ -113,42 +113,37 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder tier(Output<Either<String,Tier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder tier(Either<String,Tier> tier) {
             this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
-        }
-        public TestBaseAccountSKUArgs build() {
+        }        public TestBaseAccountSKUArgs build() {
             return new TestBaseAccountSKUArgs(locations, name, resourceType, tier);
         }
     }

@@ -63,8 +63,7 @@ public final class EventHandlerSettingsResponse extends io.pulumi.resources.Invo
         public Builder items(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
             this.items = items;
             return this;
-        }
-        public EventHandlerSettingsResponse build() {
+        }        public EventHandlerSettingsResponse build() {
             return new EventHandlerSettingsResponse(items);
         }
     }

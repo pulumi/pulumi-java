@@ -80,22 +80,18 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
             this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
             return this;
         }
-
         public Builder preserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
             this.preserveZipFileNameAsFolder = Output.ofNullable(preserveZipFileNameAsFolder);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ZipDeflateReadSettingsArgs build() {
+        }        public ZipDeflateReadSettingsArgs build() {
             return new ZipDeflateReadSettingsArgs(preserveZipFileNameAsFolder, type);
         }
     }

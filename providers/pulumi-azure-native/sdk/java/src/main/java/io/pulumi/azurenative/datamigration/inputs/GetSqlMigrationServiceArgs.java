@@ -72,12 +72,10 @@ public final class GetSqlMigrationServiceArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sqlMigrationServiceName(String sqlMigrationServiceName) {
             this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName);
             return this;
-        }
-        public GetSqlMigrationServiceArgs build() {
+        }        public GetSqlMigrationServiceArgs build() {
             return new GetSqlMigrationServiceArgs(resourceGroupName, sqlMigrationServiceName);
         }
     }

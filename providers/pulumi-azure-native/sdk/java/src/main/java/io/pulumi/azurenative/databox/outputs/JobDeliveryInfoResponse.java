@@ -53,8 +53,7 @@ public final class JobDeliveryInfoResponse {
         public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
             this.scheduledDateTime = scheduledDateTime;
             return this;
-        }
-        public JobDeliveryInfoResponse build() {
+        }        public JobDeliveryInfoResponse build() {
             return new JobDeliveryInfoResponse(scheduledDateTime);
         }
     }

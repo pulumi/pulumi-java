@@ -79,22 +79,18 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable String category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public SubscriptionLogSettingsArgs build() {
+        }        public SubscriptionLogSettingsArgs build() {
             return new SubscriptionLogSettingsArgs(category, enabled);
         }
     }

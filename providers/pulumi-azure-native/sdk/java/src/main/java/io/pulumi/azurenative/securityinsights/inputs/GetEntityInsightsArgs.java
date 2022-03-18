@@ -172,42 +172,37 @@ public final class GetEntityInsightsArgs extends io.pulumi.resources.InvokeArgs 
             this.addDefaultExtendedTimeRange = addDefaultExtendedTimeRange;
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public Builder insightQueryIds(@Nullable List<String> insightQueryIds) {
             this.insightQueryIds = insightQueryIds;
             return this;
         }
-
+        public Builder insightQueryIds(String... insightQueryIds) {
+            return insightQueryIds(List.of(insightQueryIds));
+        }
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetEntityInsightsArgs build() {
+        }        public GetEntityInsightsArgs build() {
             return new GetEntityInsightsArgs(addDefaultExtendedTimeRange, endTime, entityId, insightQueryIds, operationalInsightsResourceProvider, resourceGroupName, startTime, workspaceName);
         }
     }

@@ -57,12 +57,13 @@ public final class ResourceTypeRegistrationPropertiesResponseTemplateDeploymentO
             this.preflightOptions = preflightOptions;
             return this;
         }
-
+        public Builder preflightOptions(String... preflightOptions) {
+            return preflightOptions(List.of(preflightOptions));
+        }
         public Builder preflightSupported(@Nullable Boolean preflightSupported) {
             this.preflightSupported = preflightSupported;
             return this;
-        }
-        public ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions build() {
+        }        public ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions build() {
             return new ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions(preflightOptions, preflightSupported);
         }
     }

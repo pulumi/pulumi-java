@@ -72,12 +72,10 @@ public final class ListRedisKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListRedisKeysArgs build() {
+        }        public ListRedisKeysArgs build() {
             return new ListRedisKeysArgs(name, resourceGroupName);
         }
     }

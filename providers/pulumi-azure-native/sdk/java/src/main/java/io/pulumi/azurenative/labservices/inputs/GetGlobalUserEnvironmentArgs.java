@@ -90,17 +90,14 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetGlobalUserEnvironmentArgs build() {
+        }        public GetGlobalUserEnvironmentArgs build() {
             return new GetGlobalUserEnvironmentArgs(environmentId, expand, userName);
         }
     }

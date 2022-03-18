@@ -267,72 +267,67 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
             this.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayNamesExcludeFilter(@Nullable List<String> displayNamesExcludeFilter) {
             this.displayNamesExcludeFilter = displayNamesExcludeFilter;
             return this;
         }
-
+        public Builder displayNamesExcludeFilter(String... displayNamesExcludeFilter) {
+            return displayNamesExcludeFilter(List.of(displayNamesExcludeFilter));
+        }
         public Builder displayNamesFilter(@Nullable List<String> displayNamesFilter) {
             this.displayNamesFilter = displayNamesFilter;
             return this;
         }
-
+        public Builder displayNamesFilter(String... displayNamesFilter) {
+            return displayNamesFilter(List.of(displayNamesFilter));
+        }
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastModifiedUtc(String lastModifiedUtc) {
             this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder productFilter(String productFilter) {
             this.productFilter = Objects.requireNonNull(productFilter);
             return this;
         }
-
         public Builder severitiesFilter(@Nullable List<String> severitiesFilter) {
             this.severitiesFilter = severitiesFilter;
             return this;
         }
-
+        public Builder severitiesFilter(String... severitiesFilter) {
+            return severitiesFilter(List.of(severitiesFilter));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMicrosoftSecurityIncidentCreationAlertRuleResult build() {
+        }        public GetMicrosoftSecurityIncidentCreationAlertRuleResult build() {
             return new GetMicrosoftSecurityIncidentCreationAlertRuleResult(alertRuleTemplateName, description, displayName, displayNamesExcludeFilter, displayNamesFilter, enabled, etag, id, kind, lastModifiedUtc, name, productFilter, severitiesFilter, type);
         }
     }

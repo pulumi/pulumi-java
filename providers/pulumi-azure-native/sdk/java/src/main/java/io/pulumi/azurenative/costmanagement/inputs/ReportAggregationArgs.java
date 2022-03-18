@@ -79,22 +79,18 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder function(Either<String,FunctionType> function) {
             this.function = Output.of(Objects.requireNonNull(function));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ReportAggregationArgs build() {
+        }        public ReportAggregationArgs build() {
             return new ReportAggregationArgs(function, name);
         }
     }

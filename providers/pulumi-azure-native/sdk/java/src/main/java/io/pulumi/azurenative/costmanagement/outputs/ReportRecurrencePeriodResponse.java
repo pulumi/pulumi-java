@@ -71,12 +71,10 @@ public final class ReportRecurrencePeriodResponse {
             this.from = Objects.requireNonNull(from);
             return this;
         }
-
         public Builder to(@Nullable String to) {
             this.to = to;
             return this;
-        }
-        public ReportRecurrencePeriodResponse build() {
+        }        public ReportRecurrencePeriodResponse build() {
             return new ReportRecurrencePeriodResponse(from, to);
         }
     }

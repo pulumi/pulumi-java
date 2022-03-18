@@ -97,32 +97,26 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
             this.actionType = actionType;
             return this;
         }
-
         public Builder actionType(@Nullable AutoHealActionType actionType) {
             this.actionType = Output.ofNullable(actionType);
             return this;
         }
-
         public Builder customAction(@Nullable Output<AutoHealCustomActionArgs> customAction) {
             this.customAction = customAction;
             return this;
         }
-
         public Builder customAction(@Nullable AutoHealCustomActionArgs customAction) {
             this.customAction = Output.ofNullable(customAction);
             return this;
         }
-
         public Builder minProcessExecutionTime(@Nullable Output<String> minProcessExecutionTime) {
             this.minProcessExecutionTime = minProcessExecutionTime;
             return this;
         }
-
         public Builder minProcessExecutionTime(@Nullable String minProcessExecutionTime) {
             this.minProcessExecutionTime = Output.ofNullable(minProcessExecutionTime);
             return this;
-        }
-        public AutoHealActionsArgs build() {
+        }        public AutoHealActionsArgs build() {
             return new AutoHealActionsArgs(actionType, customAction, minProcessExecutionTime);
         }
     }

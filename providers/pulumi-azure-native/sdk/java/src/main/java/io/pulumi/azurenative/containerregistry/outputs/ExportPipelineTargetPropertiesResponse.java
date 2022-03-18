@@ -91,17 +91,14 @@ public final class ExportPipelineTargetPropertiesResponse {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public ExportPipelineTargetPropertiesResponse build() {
+        }        public ExportPipelineTargetPropertiesResponse build() {
             return new ExportPipelineTargetPropertiesResponse(keyVaultUri, type, uri);
         }
     }

@@ -76,12 +76,10 @@ public final class KeyVaultReferenceResponse extends io.pulumi.resources.InvokeA
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public KeyVaultReferenceResponse build() {
+        }        public KeyVaultReferenceResponse build() {
             return new KeyVaultReferenceResponse(id, url);
         }
     }

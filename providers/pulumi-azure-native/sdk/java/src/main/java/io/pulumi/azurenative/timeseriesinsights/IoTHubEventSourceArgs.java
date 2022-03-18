@@ -287,152 +287,122 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
             this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
             return this;
         }
-
         public Builder consumerGroupName(String consumerGroupName) {
             this.consumerGroupName = Output.of(Objects.requireNonNull(consumerGroupName));
             return this;
         }
-
         public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
-
         public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
             this.eventSourceName = eventSourceName;
             return this;
         }
-
         public Builder eventSourceName(@Nullable String eventSourceName) {
             this.eventSourceName = Output.ofNullable(eventSourceName);
             return this;
         }
-
         public Builder eventSourceResourceId(Output<String> eventSourceResourceId) {
             this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId);
             return this;
         }
-
         public Builder eventSourceResourceId(String eventSourceResourceId) {
             this.eventSourceResourceId = Output.of(Objects.requireNonNull(eventSourceResourceId));
             return this;
         }
-
         public Builder iotHubName(Output<String> iotHubName) {
             this.iotHubName = Objects.requireNonNull(iotHubName);
             return this;
         }
-
         public Builder iotHubName(String iotHubName) {
             this.iotHubName = Output.of(Objects.requireNonNull(iotHubName));
             return this;
         }
-
         public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
             this.localTimestamp = localTimestamp;
             return this;
         }
-
         public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
             this.localTimestamp = Output.ofNullable(localTimestamp);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sharedAccessKey(Output<String> sharedAccessKey) {
             this.sharedAccessKey = Objects.requireNonNull(sharedAccessKey);
             return this;
         }
-
         public Builder sharedAccessKey(String sharedAccessKey) {
             this.sharedAccessKey = Output.of(Objects.requireNonNull(sharedAccessKey));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
         }
-
         public Builder timestampPropertyName(@Nullable Output<String> timestampPropertyName) {
             this.timestampPropertyName = timestampPropertyName;
             return this;
         }
-
         public Builder timestampPropertyName(@Nullable String timestampPropertyName) {
             this.timestampPropertyName = Output.ofNullable(timestampPropertyName);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,IngressStartAtType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,IngressStartAtType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public IoTHubEventSourceArgs build() {
+        }        public IoTHubEventSourceArgs build() {
             return new IoTHubEventSourceArgs(consumerGroupName, environmentName, eventSourceName, eventSourceResourceId, iotHubName, keyName, kind, localTimestamp, location, resourceGroupName, sharedAccessKey, tags, time, timestampPropertyName, type);
         }
     }

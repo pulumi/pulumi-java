@@ -105,22 +105,18 @@ public final class VirtualMachineResponseProperties {
             this.address = address;
             return this;
         }
-
         public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
-
         public Builder sshPort(@Nullable Integer sshPort) {
             this.sshPort = sshPort;
             return this;
         }
-
         public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
             this.virtualMachineSize = virtualMachineSize;
             return this;
-        }
-        public VirtualMachineResponseProperties build() {
+        }        public VirtualMachineResponseProperties build() {
             return new VirtualMachineResponseProperties(address, administratorAccount, sshPort, virtualMachineSize);
         }
     }

@@ -83,22 +83,18 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
             this.customRegistries = customRegistries;
             return this;
         }
-
         public Builder customRegistries(@Nullable Map<String,CustomRegistryCredentialsArgs> customRegistries) {
             this.customRegistries = Output.ofNullable(customRegistries);
             return this;
         }
-
         public Builder sourceRegistry(@Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry) {
             this.sourceRegistry = sourceRegistry;
             return this;
         }
-
         public Builder sourceRegistry(@Nullable SourceRegistryCredentialsArgs sourceRegistry) {
             this.sourceRegistry = Output.ofNullable(sourceRegistry);
             return this;
-        }
-        public CredentialsArgs build() {
+        }        public CredentialsArgs build() {
             return new CredentialsArgs(customRegistries, sourceRegistry);
         }
     }

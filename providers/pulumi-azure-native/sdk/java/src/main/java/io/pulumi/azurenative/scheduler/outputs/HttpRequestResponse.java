@@ -124,27 +124,22 @@ public final class HttpRequestResponse {
             this.authentication = authentication;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public HttpRequestResponse build() {
+        }        public HttpRequestResponse build() {
             return new HttpRequestResponse(authentication, body, headers, method, uri);
         }
     }

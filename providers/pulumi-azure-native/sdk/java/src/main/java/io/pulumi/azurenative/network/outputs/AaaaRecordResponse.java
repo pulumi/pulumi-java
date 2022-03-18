@@ -53,8 +53,7 @@ public final class AaaaRecordResponse {
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
-        }
-        public AaaaRecordResponse build() {
+        }        public AaaaRecordResponse build() {
             return new AaaaRecordResponse(ipv6Address);
         }
     }

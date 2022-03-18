@@ -53,8 +53,7 @@ public final class ListSecretValueResult {
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ListSecretValueResult build() {
+        }        public ListSecretValueResult build() {
             return new ListSecretValueResult(value);
         }
     }

@@ -252,67 +252,54 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
             this.isPrimaryNic = Objects.requireNonNull(isPrimaryNic);
             return this;
         }
-
         public Builder isSelectedForFailover(String isSelectedForFailover) {
             this.isSelectedForFailover = Objects.requireNonNull(isSelectedForFailover);
             return this;
         }
-
         public Builder nicId(String nicId) {
             this.nicId = Objects.requireNonNull(nicId);
             return this;
         }
-
         public Builder sourceIPAddress(String sourceIPAddress) {
             this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress);
             return this;
         }
-
         public Builder sourceIPAddressType(String sourceIPAddressType) {
             this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType);
             return this;
         }
-
         public Builder sourceNetworkId(String sourceNetworkId) {
             this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId);
             return this;
         }
-
         public Builder sourceSubnetName(String sourceSubnetName) {
             this.sourceSubnetName = Objects.requireNonNull(sourceSubnetName);
             return this;
         }
-
         public Builder targetIPAddress(String targetIPAddress) {
             this.targetIPAddress = Objects.requireNonNull(targetIPAddress);
             return this;
         }
-
         public Builder targetIPAddressType(String targetIPAddressType) {
             this.targetIPAddressType = Objects.requireNonNull(targetIPAddressType);
             return this;
         }
-
         public Builder targetSubnetName(String targetSubnetName) {
             this.targetSubnetName = Objects.requireNonNull(targetSubnetName);
             return this;
         }
-
         public Builder testIPAddress(String testIPAddress) {
             this.testIPAddress = Objects.requireNonNull(testIPAddress);
             return this;
         }
-
         public Builder testIPAddressType(String testIPAddressType) {
             this.testIPAddressType = Objects.requireNonNull(testIPAddressType);
             return this;
         }
-
         public Builder testSubnetName(String testSubnetName) {
             this.testSubnetName = Objects.requireNonNull(testSubnetName);
             return this;
-        }
-        public InMageRcmNicDetailsResponse build() {
+        }        public InMageRcmNicDetailsResponse build() {
             return new InMageRcmNicDetailsResponse(isPrimaryNic, isSelectedForFailover, nicId, sourceIPAddress, sourceIPAddressType, sourceNetworkId, sourceSubnetName, targetIPAddress, targetIPAddressType, targetSubnetName, testIPAddress, testIPAddressType, testSubnetName);
         }
     }

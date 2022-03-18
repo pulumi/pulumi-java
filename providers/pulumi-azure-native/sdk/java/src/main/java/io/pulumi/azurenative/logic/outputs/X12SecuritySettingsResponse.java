@@ -103,22 +103,18 @@ public final class X12SecuritySettingsResponse {
             this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
             return this;
         }
-
         public Builder authorizationValue(@Nullable String authorizationValue) {
             this.authorizationValue = authorizationValue;
             return this;
         }
-
         public Builder passwordValue(@Nullable String passwordValue) {
             this.passwordValue = passwordValue;
             return this;
         }
-
         public Builder securityQualifier(String securityQualifier) {
             this.securityQualifier = Objects.requireNonNull(securityQualifier);
             return this;
-        }
-        public X12SecuritySettingsResponse build() {
+        }        public X12SecuritySettingsResponse build() {
             return new X12SecuritySettingsResponse(authorizationQualifier, authorizationValue, passwordValue, securityQualifier);
         }
     }

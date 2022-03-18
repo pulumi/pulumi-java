@@ -63,12 +63,10 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             this.eventName = eventName;
             return this;
         }
-
         public Builder eventName(@Nullable Either<String,NotificationChannelEventType> eventName) {
             this.eventName = Output.ofNullable(eventName);
             return this;
-        }
-        public EventArgs build() {
+        }        public EventArgs build() {
             return new EventArgs(eventName);
         }
     }

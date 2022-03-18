@@ -208,52 +208,42 @@ public final class GetAssessmentResult {
             this.additionalData = additionalData;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder links(AssessmentLinksResponse links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
-
         public Builder metadata(@Nullable SecurityAssessmentMetadataPropertiesResponse metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnersData(@Nullable SecurityAssessmentPartnerDataResponse partnersData) {
             this.partnersData = partnersData;
             return this;
         }
-
         public Builder resourceDetails(Object resourceDetails) {
             this.resourceDetails = Objects.requireNonNull(resourceDetails);
             return this;
         }
-
         public Builder status(AssessmentStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAssessmentResult build() {
+        }        public GetAssessmentResult build() {
             return new GetAssessmentResult(additionalData, displayName, id, links, metadata, name, partnersData, resourceDetails, status, type);
         }
     }

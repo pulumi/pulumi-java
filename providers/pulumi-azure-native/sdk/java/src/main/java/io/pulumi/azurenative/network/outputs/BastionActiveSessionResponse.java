@@ -215,57 +215,46 @@ public final class BastionActiveSessionResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder sessionDurationInMins(Double sessionDurationInMins) {
             this.sessionDurationInMins = Objects.requireNonNull(sessionDurationInMins);
             return this;
         }
-
         public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
-
         public Builder startTime(Object startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder targetHostName(String targetHostName) {
             this.targetHostName = Objects.requireNonNull(targetHostName);
             return this;
         }
-
         public Builder targetIpAddress(String targetIpAddress) {
             this.targetIpAddress = Objects.requireNonNull(targetIpAddress);
             return this;
         }
-
         public Builder targetResourceGroup(String targetResourceGroup) {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }
-
         public Builder targetResourceId(String targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
-
         public Builder targetSubscriptionId(String targetSubscriptionId) {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public BastionActiveSessionResponse build() {
+        }        public BastionActiveSessionResponse build() {
             return new BastionActiveSessionResponse(protocol, resourceType, sessionDurationInMins, sessionId, startTime, targetHostName, targetIpAddress, targetResourceGroup, targetResourceId, targetSubscriptionId, userName);
         }
     }

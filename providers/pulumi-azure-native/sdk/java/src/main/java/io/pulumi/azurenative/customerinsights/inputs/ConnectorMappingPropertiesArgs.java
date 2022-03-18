@@ -181,82 +181,69 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
-
         public Builder availability(ConnectorMappingAvailabilityArgs availability) {
             this.availability = Output.of(Objects.requireNonNull(availability));
             return this;
         }
-
         public Builder completeOperation(Output<ConnectorMappingCompleteOperationArgs> completeOperation) {
             this.completeOperation = Objects.requireNonNull(completeOperation);
             return this;
         }
-
         public Builder completeOperation(ConnectorMappingCompleteOperationArgs completeOperation) {
             this.completeOperation = Output.of(Objects.requireNonNull(completeOperation));
             return this;
         }
-
         public Builder errorManagement(Output<ConnectorMappingErrorManagementArgs> errorManagement) {
             this.errorManagement = Objects.requireNonNull(errorManagement);
             return this;
         }
-
         public Builder errorManagement(ConnectorMappingErrorManagementArgs errorManagement) {
             this.errorManagement = Output.of(Objects.requireNonNull(errorManagement));
             return this;
         }
-
         public Builder fileFilter(@Nullable Output<String> fileFilter) {
             this.fileFilter = fileFilter;
             return this;
         }
-
         public Builder fileFilter(@Nullable String fileFilter) {
             this.fileFilter = Output.ofNullable(fileFilter);
             return this;
         }
-
         public Builder folderPath(@Nullable Output<String> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
-
         public Builder format(Output<ConnectorMappingFormatArgs> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(ConnectorMappingFormatArgs format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder hasHeader(@Nullable Output<Boolean> hasHeader) {
             this.hasHeader = hasHeader;
             return this;
         }
-
         public Builder hasHeader(@Nullable Boolean hasHeader) {
             this.hasHeader = Output.ofNullable(hasHeader);
             return this;
         }
-
         public Builder structure(Output<List<ConnectorMappingStructureArgs>> structure) {
             this.structure = Objects.requireNonNull(structure);
             return this;
         }
-
         public Builder structure(List<ConnectorMappingStructureArgs> structure) {
             this.structure = Output.of(Objects.requireNonNull(structure));
             return this;
         }
-        public ConnectorMappingPropertiesArgs build() {
+        public Builder structure(ConnectorMappingStructureArgs... structure) {
+            return structure(List.of(structure));
+        }        public ConnectorMappingPropertiesArgs build() {
             return new ConnectorMappingPropertiesArgs(availability, completeOperation, errorManagement, fileFilter, folderPath, format, hasHeader, structure);
         }
     }

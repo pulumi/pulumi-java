@@ -123,52 +123,42 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
             this.artifactSourceId = artifactSourceId;
             return this;
         }
-
         public Builder artifactSourceId(@Nullable String artifactSourceId) {
             this.artifactSourceId = Output.ofNullable(artifactSourceId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceTopologyName(@Nullable Output<String> serviceTopologyName) {
             this.serviceTopologyName = serviceTopologyName;
             return this;
         }
-
         public Builder serviceTopologyName(@Nullable String serviceTopologyName) {
             this.serviceTopologyName = Output.ofNullable(serviceTopologyName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServiceTopologyArgs build() {
+        }        public ServiceTopologyArgs build() {
             return new ServiceTopologyArgs(artifactSourceId, location, resourceGroupName, serviceTopologyName, tags);
         }
     }

@@ -75,12 +75,10 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AccountEncryptionResponse build() {
+        }        public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keyVaultProperties, type);
         }
     }

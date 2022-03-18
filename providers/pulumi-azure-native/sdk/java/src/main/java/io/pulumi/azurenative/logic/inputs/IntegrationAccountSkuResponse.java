@@ -58,8 +58,7 @@ public final class IntegrationAccountSkuResponse extends io.pulumi.resources.Inv
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public IntegrationAccountSkuResponse build() {
+        }        public IntegrationAccountSkuResponse build() {
             return new IntegrationAccountSkuResponse(name);
         }
     }

@@ -236,62 +236,53 @@ public final class GetDiskEncryptionSetResult {
             this.activeKey = activeKey;
             return this;
         }
-
         public Builder encryptionType(@Nullable String encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable EncryptionSetIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder previousKeys(List<KeyForDiskEncryptionSetResponse> previousKeys) {
             this.previousKeys = Objects.requireNonNull(previousKeys);
             return this;
         }
-
+        public Builder previousKeys(KeyForDiskEncryptionSetResponse... previousKeys) {
+            return previousKeys(List.of(previousKeys));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder rotationToLatestKeyVersionEnabled(@Nullable Boolean rotationToLatestKeyVersionEnabled) {
             this.rotationToLatestKeyVersionEnabled = rotationToLatestKeyVersionEnabled;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDiskEncryptionSetResult build() {
+        }        public GetDiskEncryptionSetResult build() {
             return new GetDiskEncryptionSetResult(activeKey, encryptionType, id, identity, lastKeyRotationTimestamp, location, name, previousKeys, provisioningState, rotationToLatestKeyVersionEnabled, tags, type);
         }
     }

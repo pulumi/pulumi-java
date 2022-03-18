@@ -62,12 +62,13 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
             this.inboundNatRules = inboundNatRules;
             return this;
         }
-
         public Builder inboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
             this.inboundNatRules = Output.ofNullable(inboundNatRules);
             return this;
         }
-        public SharedPublicIpAddressConfigurationArgs build() {
+        public Builder inboundNatRules(InboundNatRuleArgs... inboundNatRules) {
+            return inboundNatRules(List.of(inboundNatRules));
+        }        public SharedPublicIpAddressConfigurationArgs build() {
             return new SharedPublicIpAddressConfigurationArgs(inboundNatRules);
         }
     }

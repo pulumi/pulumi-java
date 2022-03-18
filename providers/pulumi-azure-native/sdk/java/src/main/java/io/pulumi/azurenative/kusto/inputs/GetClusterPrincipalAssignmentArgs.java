@@ -88,17 +88,14 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder principalAssignmentName(String principalAssignmentName) {
             this.principalAssignmentName = Objects.requireNonNull(principalAssignmentName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetClusterPrincipalAssignmentArgs build() {
+        }        public GetClusterPrincipalAssignmentArgs build() {
             return new GetClusterPrincipalAssignmentArgs(clusterName, principalAssignmentName, resourceGroupName);
         }
     }

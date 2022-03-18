@@ -120,27 +120,22 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
             this.incidentCommentId = Objects.requireNonNull(incidentCommentId);
             return this;
         }
-
         public Builder incidentId(String incidentId) {
             this.incidentId = Objects.requireNonNull(incidentId);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIncidentCommentArgs build() {
+        }        public GetIncidentCommentArgs build() {
             return new GetIncidentCommentArgs(incidentCommentId, incidentId, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }
     }

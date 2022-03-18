@@ -72,12 +72,10 @@ public final class GetAppServiceCertificateOrderArgs extends io.pulumi.resources
             this.certificateOrderName = Objects.requireNonNull(certificateOrderName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAppServiceCertificateOrderArgs build() {
+        }        public GetAppServiceCertificateOrderArgs build() {
             return new GetAppServiceCertificateOrderArgs(certificateOrderName, resourceGroupName);
         }
     }

@@ -69,12 +69,10 @@ public final class GetProjectKeysResult {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceKey(String workspaceKey) {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
-        }
-        public GetProjectKeysResult build() {
+        }        public GetProjectKeysResult build() {
             return new GetProjectKeysResult(workspaceId, workspaceKey);
         }
     }

@@ -88,17 +88,14 @@ public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder poolName(String poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPoolArgs build() {
+        }        public GetPoolArgs build() {
             return new GetPoolArgs(accountName, poolName, resourceGroupName);
         }
     }

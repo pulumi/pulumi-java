@@ -143,37 +143,30 @@ public final class UrlRedirectActionParametersResponse {
             this.customFragment = customFragment;
             return this;
         }
-
         public Builder customHostname(@Nullable String customHostname) {
             this.customHostname = customHostname;
             return this;
         }
-
         public Builder customPath(@Nullable String customPath) {
             this.customPath = customPath;
             return this;
         }
-
         public Builder customQueryString(@Nullable String customQueryString) {
             this.customQueryString = customQueryString;
             return this;
         }
-
         public Builder destinationProtocol(@Nullable String destinationProtocol) {
             this.destinationProtocol = destinationProtocol;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder redirectType(String redirectType) {
             this.redirectType = Objects.requireNonNull(redirectType);
             return this;
-        }
-        public UrlRedirectActionParametersResponse build() {
+        }        public UrlRedirectActionParametersResponse build() {
             return new UrlRedirectActionParametersResponse(customFragment, customHostname, customPath, customQueryString, destinationProtocol, odataType, redirectType);
         }
     }

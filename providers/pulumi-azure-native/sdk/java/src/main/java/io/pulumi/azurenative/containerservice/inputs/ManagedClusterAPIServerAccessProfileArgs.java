@@ -96,32 +96,29 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
             this.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
-
         public Builder authorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
             this.authorizedIPRanges = Output.ofNullable(authorizedIPRanges);
             return this;
         }
-
+        public Builder authorizedIPRanges(String... authorizedIPRanges) {
+            return authorizedIPRanges(List.of(authorizedIPRanges));
+        }
         public Builder enablePrivateCluster(@Nullable Output<Boolean> enablePrivateCluster) {
             this.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
-
         public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
             this.enablePrivateCluster = Output.ofNullable(enablePrivateCluster);
             return this;
         }
-
         public Builder privateDNSZone(@Nullable Output<String> privateDNSZone) {
             this.privateDNSZone = privateDNSZone;
             return this;
         }
-
         public Builder privateDNSZone(@Nullable String privateDNSZone) {
             this.privateDNSZone = Output.ofNullable(privateDNSZone);
             return this;
-        }
-        public ManagedClusterAPIServerAccessProfileArgs build() {
+        }        public ManagedClusterAPIServerAccessProfileArgs build() {
             return new ManagedClusterAPIServerAccessProfileArgs(authorizedIPRanges, enablePrivateCluster, privateDNSZone);
         }
     }

@@ -88,17 +88,14 @@ public final class GetIoTRoleArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIoTRoleArgs build() {
+        }        public GetIoTRoleArgs build() {
             return new GetIoTRoleArgs(deviceName, name, resourceGroupName);
         }
     }

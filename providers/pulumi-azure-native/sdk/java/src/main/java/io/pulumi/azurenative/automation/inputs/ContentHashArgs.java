@@ -77,22 +77,18 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder algorithm(String algorithm) {
             this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ContentHashArgs build() {
+        }        public ContentHashArgs build() {
             return new ContentHashArgs(algorithm, value);
         }
     }

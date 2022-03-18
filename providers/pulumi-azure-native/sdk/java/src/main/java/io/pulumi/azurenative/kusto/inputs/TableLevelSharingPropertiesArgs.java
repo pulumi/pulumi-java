@@ -143,62 +143,68 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
             this.externalTablesToExclude = externalTablesToExclude;
             return this;
         }
-
         public Builder externalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
             this.externalTablesToExclude = Output.ofNullable(externalTablesToExclude);
             return this;
         }
-
+        public Builder externalTablesToExclude(String... externalTablesToExclude) {
+            return externalTablesToExclude(List.of(externalTablesToExclude));
+        }
         public Builder externalTablesToInclude(@Nullable Output<List<String>> externalTablesToInclude) {
             this.externalTablesToInclude = externalTablesToInclude;
             return this;
         }
-
         public Builder externalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
             this.externalTablesToInclude = Output.ofNullable(externalTablesToInclude);
             return this;
         }
-
+        public Builder externalTablesToInclude(String... externalTablesToInclude) {
+            return externalTablesToInclude(List.of(externalTablesToInclude));
+        }
         public Builder materializedViewsToExclude(@Nullable Output<List<String>> materializedViewsToExclude) {
             this.materializedViewsToExclude = materializedViewsToExclude;
             return this;
         }
-
         public Builder materializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
             this.materializedViewsToExclude = Output.ofNullable(materializedViewsToExclude);
             return this;
         }
-
+        public Builder materializedViewsToExclude(String... materializedViewsToExclude) {
+            return materializedViewsToExclude(List.of(materializedViewsToExclude));
+        }
         public Builder materializedViewsToInclude(@Nullable Output<List<String>> materializedViewsToInclude) {
             this.materializedViewsToInclude = materializedViewsToInclude;
             return this;
         }
-
         public Builder materializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
             this.materializedViewsToInclude = Output.ofNullable(materializedViewsToInclude);
             return this;
         }
-
+        public Builder materializedViewsToInclude(String... materializedViewsToInclude) {
+            return materializedViewsToInclude(List.of(materializedViewsToInclude));
+        }
         public Builder tablesToExclude(@Nullable Output<List<String>> tablesToExclude) {
             this.tablesToExclude = tablesToExclude;
             return this;
         }
-
         public Builder tablesToExclude(@Nullable List<String> tablesToExclude) {
             this.tablesToExclude = Output.ofNullable(tablesToExclude);
             return this;
         }
-
+        public Builder tablesToExclude(String... tablesToExclude) {
+            return tablesToExclude(List.of(tablesToExclude));
+        }
         public Builder tablesToInclude(@Nullable Output<List<String>> tablesToInclude) {
             this.tablesToInclude = tablesToInclude;
             return this;
         }
-
         public Builder tablesToInclude(@Nullable List<String> tablesToInclude) {
             this.tablesToInclude = Output.ofNullable(tablesToInclude);
             return this;
         }
-        public TableLevelSharingPropertiesArgs build() {
+        public Builder tablesToInclude(String... tablesToInclude) {
+            return tablesToInclude(List.of(tablesToInclude));
+        }        public TableLevelSharingPropertiesArgs build() {
             return new TableLevelSharingPropertiesArgs(externalTablesToExclude, externalTablesToInclude, materializedViewsToExclude, materializedViewsToInclude, tablesToExclude, tablesToInclude);
         }
     }

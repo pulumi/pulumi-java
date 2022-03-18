@@ -96,32 +96,26 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
             this.associatedRouteTable = associatedRouteTable;
             return this;
         }
-
         public Builder associatedRouteTable(@Nullable SubResourceArgs associatedRouteTable) {
             this.associatedRouteTable = Output.ofNullable(associatedRouteTable);
             return this;
         }
-
         public Builder propagatedRouteTables(@Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables) {
             this.propagatedRouteTables = propagatedRouteTables;
             return this;
         }
-
         public Builder propagatedRouteTables(@Nullable PropagatedRouteTableArgs propagatedRouteTables) {
             this.propagatedRouteTables = Output.ofNullable(propagatedRouteTables);
             return this;
         }
-
         public Builder vnetRoutes(@Nullable Output<VnetRouteArgs> vnetRoutes) {
             this.vnetRoutes = vnetRoutes;
             return this;
         }
-
         public Builder vnetRoutes(@Nullable VnetRouteArgs vnetRoutes) {
             this.vnetRoutes = Output.ofNullable(vnetRoutes);
             return this;
-        }
-        public RoutingConfigurationArgs build() {
+        }        public RoutingConfigurationArgs build() {
             return new RoutingConfigurationArgs(associatedRouteTable, propagatedRouteTables, vnetRoutes);
         }
     }

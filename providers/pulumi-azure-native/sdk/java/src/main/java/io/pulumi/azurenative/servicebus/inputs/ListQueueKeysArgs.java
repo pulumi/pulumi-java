@@ -104,22 +104,18 @@ public final class ListQueueKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder queueName(String queueName) {
             this.queueName = Objects.requireNonNull(queueName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListQueueKeysArgs build() {
+        }        public ListQueueKeysArgs build() {
             return new ListQueueKeysArgs(authorizationRuleName, namespaceName, queueName, resourceGroupName);
         }
     }

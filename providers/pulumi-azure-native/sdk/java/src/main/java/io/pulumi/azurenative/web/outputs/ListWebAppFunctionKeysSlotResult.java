@@ -120,27 +120,22 @@ public final class ListWebAppFunctionKeysSlotResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListWebAppFunctionKeysSlotResult build() {
+        }        public ListWebAppFunctionKeysSlotResult build() {
             return new ListWebAppFunctionKeysSlotResult(id, kind, name, properties, type);
         }
     }

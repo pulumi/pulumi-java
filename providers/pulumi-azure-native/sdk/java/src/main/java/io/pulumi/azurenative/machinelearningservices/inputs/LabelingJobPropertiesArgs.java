@@ -164,72 +164,58 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
             this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration);
             return this;
         }
-
         public Builder datasetConfiguration(LabelingDatasetConfigurationArgs datasetConfiguration) {
             this.datasetConfiguration = Output.of(Objects.requireNonNull(datasetConfiguration));
             return this;
         }
-
         public Builder jobInstructions(Output<LabelingJobInstructionsArgs> jobInstructions) {
             this.jobInstructions = Objects.requireNonNull(jobInstructions);
             return this;
         }
-
         public Builder jobInstructions(LabelingJobInstructionsArgs jobInstructions) {
             this.jobInstructions = Output.of(Objects.requireNonNull(jobInstructions));
             return this;
         }
-
         public Builder labelCategories(Output<Map<String,LabelCategoryArgs>> labelCategories) {
             this.labelCategories = Objects.requireNonNull(labelCategories);
             return this;
         }
-
         public Builder labelCategories(Map<String,LabelCategoryArgs> labelCategories) {
             this.labelCategories = Output.of(Objects.requireNonNull(labelCategories));
             return this;
         }
-
         public Builder labelingJobMediaProperties(Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties) {
             this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties);
             return this;
         }
-
         public Builder labelingJobMediaProperties(LabelingJobImagePropertiesArgs labelingJobMediaProperties) {
             this.labelingJobMediaProperties = Output.of(Objects.requireNonNull(labelingJobMediaProperties));
             return this;
         }
-
         public Builder mlAssistConfiguration(@Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration) {
             this.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
-
         public Builder mlAssistConfiguration(@Nullable MLAssistConfigurationArgs mlAssistConfiguration) {
             this.mlAssistConfiguration = Output.ofNullable(mlAssistConfiguration);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LabelingJobPropertiesArgs build() {
+        }        public LabelingJobPropertiesArgs build() {
             return new LabelingJobPropertiesArgs(datasetConfiguration, jobInstructions, labelCategories, labelingJobMediaProperties, mlAssistConfiguration, properties, tags);
         }
     }

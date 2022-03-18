@@ -72,12 +72,13 @@ public final class WsdlServiceResponse {
             this.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
-
+        public Builder endpointQualifiedNames(String... endpointQualifiedNames) {
+            return endpointQualifiedNames(List.of(endpointQualifiedNames));
+        }
         public Builder qualifiedName(@Nullable String qualifiedName) {
             this.qualifiedName = qualifiedName;
             return this;
-        }
-        public WsdlServiceResponse build() {
+        }        public WsdlServiceResponse build() {
             return new WsdlServiceResponse(endpointQualifiedNames, qualifiedName);
         }
     }

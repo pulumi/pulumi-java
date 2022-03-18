@@ -60,8 +60,7 @@ public final class PrivateAtlasPropertiesResponse extends io.pulumi.resources.In
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
-        }
-        public PrivateAtlasPropertiesResponse build() {
+        }        public PrivateAtlasPropertiesResponse build() {
             return new PrivateAtlasPropertiesResponse(provisioningState);
         }
     }

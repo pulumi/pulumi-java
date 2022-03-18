@@ -130,27 +130,22 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
             this.azureFile = azureFile;
             return this;
         }
-
         public Builder emptyDir(@Nullable Object emptyDir) {
             this.emptyDir = emptyDir;
             return this;
         }
-
         public Builder gitRepo(@Nullable GitRepoVolumeResponse gitRepo) {
             this.gitRepo = gitRepo;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secret(@Nullable Map<String,String> secret) {
             this.secret = secret;
             return this;
-        }
-        public VolumeResponse build() {
+        }        public VolumeResponse build() {
             return new VolumeResponse(azureFile, emptyDir, gitRepo, name, secret);
         }
     }

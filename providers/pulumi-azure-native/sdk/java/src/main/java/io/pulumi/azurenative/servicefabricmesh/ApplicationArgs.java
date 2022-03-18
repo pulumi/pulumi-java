@@ -174,82 +174,69 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationResourceName = applicationResourceName;
             return this;
         }
-
         public Builder applicationResourceName(@Nullable String applicationResourceName) {
             this.applicationResourceName = Output.ofNullable(applicationResourceName);
             return this;
         }
-
         public Builder debugParams(@Nullable Output<String> debugParams) {
             this.debugParams = debugParams;
             return this;
         }
-
         public Builder debugParams(@Nullable String debugParams) {
             this.debugParams = Output.ofNullable(debugParams);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diagnostics(@Nullable Output<DiagnosticsDescriptionArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder diagnostics(@Nullable DiagnosticsDescriptionArgs diagnostics) {
             this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder services(@Nullable Output<List<ServiceResourceDescriptionArgs>> services) {
             this.services = services;
             return this;
         }
-
         public Builder services(@Nullable List<ServiceResourceDescriptionArgs> services) {
             this.services = Output.ofNullable(services);
             return this;
         }
-
+        public Builder services(ServiceResourceDescriptionArgs... services) {
+            return services(List.of(services));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationResourceName, debugParams, description, diagnostics, location, resourceGroupName, services, tags);
         }
     }

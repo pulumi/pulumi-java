@@ -156,72 +156,61 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder propId(@Nullable Output<String> propId) {
             this.propId = propId;
             return this;
         }
-
         public Builder propId(@Nullable String propId) {
             this.propId = Output.ofNullable(propId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder secret(@Nullable Output<Boolean> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable Boolean secret) {
             this.secret = Output.ofNullable(secret);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public PropertyArgs build() {
+        }        public PropertyArgs build() {
             return new PropertyArgs(displayName, propId, resourceGroupName, secret, serviceName, tags, value);
         }
     }

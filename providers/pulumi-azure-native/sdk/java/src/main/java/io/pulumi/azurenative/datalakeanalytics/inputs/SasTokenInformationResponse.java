@@ -58,8 +58,7 @@ public final class SasTokenInformationResponse extends io.pulumi.resources.Invok
         public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
-        }
-        public SasTokenInformationResponse build() {
+        }        public SasTokenInformationResponse build() {
             return new SasTokenInformationResponse(accessToken);
         }
     }

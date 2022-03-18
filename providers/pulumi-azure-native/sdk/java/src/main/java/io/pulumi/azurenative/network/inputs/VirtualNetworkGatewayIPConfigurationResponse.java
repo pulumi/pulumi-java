@@ -175,42 +175,34 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder privateIPAddress(String privateIPAddress) {
             this.privateIPAddress = Objects.requireNonNull(privateIPAddress);
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public VirtualNetworkGatewayIPConfigurationResponse build() {
+        }        public VirtualNetworkGatewayIPConfigurationResponse build() {
             return new VirtualNetworkGatewayIPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet);
         }
     }

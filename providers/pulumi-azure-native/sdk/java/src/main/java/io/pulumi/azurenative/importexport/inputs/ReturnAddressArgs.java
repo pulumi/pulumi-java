@@ -190,92 +190,74 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
             this.city = Objects.requireNonNull(city);
             return this;
         }
-
         public Builder city(String city) {
             this.city = Output.of(Objects.requireNonNull(city));
             return this;
         }
-
         public Builder countryOrRegion(Output<String> countryOrRegion) {
             this.countryOrRegion = Objects.requireNonNull(countryOrRegion);
             return this;
         }
-
         public Builder countryOrRegion(String countryOrRegion) {
             this.countryOrRegion = Output.of(Objects.requireNonNull(countryOrRegion));
             return this;
         }
-
         public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
         }
-
         public Builder postalCode(Output<String> postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
-
         public Builder postalCode(String postalCode) {
             this.postalCode = Output.of(Objects.requireNonNull(postalCode));
             return this;
         }
-
         public Builder recipientName(Output<String> recipientName) {
             this.recipientName = Objects.requireNonNull(recipientName);
             return this;
         }
-
         public Builder recipientName(String recipientName) {
             this.recipientName = Output.of(Objects.requireNonNull(recipientName));
             return this;
         }
-
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
-
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = Output.ofNullable(stateOrProvince);
             return this;
         }
-
         public Builder streetAddress1(Output<String> streetAddress1) {
             this.streetAddress1 = Objects.requireNonNull(streetAddress1);
             return this;
         }
-
         public Builder streetAddress1(String streetAddress1) {
             this.streetAddress1 = Output.of(Objects.requireNonNull(streetAddress1));
             return this;
         }
-
         public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }
-
         public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = Output.ofNullable(streetAddress2);
             return this;
-        }
-        public ReturnAddressArgs build() {
+        }        public ReturnAddressArgs build() {
             return new ReturnAddressArgs(city, countryOrRegion, email, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }
     }

@@ -72,12 +72,10 @@ public final class DashboardPartsResponse {
             this.metadata = metadata;
             return this;
         }
-
         public Builder position(DashboardPartsResponsePosition position) {
             this.position = Objects.requireNonNull(position);
             return this;
-        }
-        public DashboardPartsResponse build() {
+        }        public DashboardPartsResponse build() {
             return new DashboardPartsResponse(metadata, position);
         }
     }

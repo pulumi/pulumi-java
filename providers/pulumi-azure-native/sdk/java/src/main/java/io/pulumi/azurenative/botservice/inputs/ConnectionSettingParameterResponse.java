@@ -78,12 +78,10 @@ public final class ConnectionSettingParameterResponse extends io.pulumi.resource
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ConnectionSettingParameterResponse build() {
+        }        public ConnectionSettingParameterResponse build() {
             return new ConnectionSettingParameterResponse(key, value);
         }
     }

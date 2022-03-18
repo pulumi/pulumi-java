@@ -87,17 +87,14 @@ public final class ContainerAccountResponse {
             this.accountName = accountName;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder spn(@Nullable String spn) {
             this.spn = spn;
             return this;
-        }
-        public ContainerAccountResponse build() {
+        }        public ContainerAccountResponse build() {
             return new ContainerAccountResponse(accountName, password, spn);
         }
     }

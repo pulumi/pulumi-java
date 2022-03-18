@@ -101,42 +101,37 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder storeLocation(@Nullable Output<CertificateStoreLocation> storeLocation) {
             this.storeLocation = storeLocation;
             return this;
         }
-
         public Builder storeLocation(@Nullable CertificateStoreLocation storeLocation) {
             this.storeLocation = Output.ofNullable(storeLocation);
             return this;
         }
-
         public Builder storeName(@Nullable Output<String> storeName) {
             this.storeName = storeName;
             return this;
         }
-
         public Builder storeName(@Nullable String storeName) {
             this.storeName = Output.ofNullable(storeName);
             return this;
         }
-
         public Builder visibility(@Nullable Output<List<CertificateVisibility>> visibility) {
             this.visibility = visibility;
             return this;
         }
-
         public Builder visibility(@Nullable List<CertificateVisibility> visibility) {
             this.visibility = Output.ofNullable(visibility);
             return this;
         }
-        public CertificateReferenceArgs build() {
+        public Builder visibility(CertificateVisibility... visibility) {
+            return visibility(List.of(visibility));
+        }        public CertificateReferenceArgs build() {
             return new CertificateReferenceArgs(id, storeLocation, storeName, visibility);
         }
     }

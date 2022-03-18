@@ -71,12 +71,10 @@ public final class PipelineTemplateResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
-        }
-        public PipelineTemplateResponse build() {
+        }        public PipelineTemplateResponse build() {
             return new PipelineTemplateResponse(id, parameters);
         }
     }

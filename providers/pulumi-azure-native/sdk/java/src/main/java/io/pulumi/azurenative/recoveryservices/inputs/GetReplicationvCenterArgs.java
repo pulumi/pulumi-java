@@ -104,22 +104,18 @@ public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeA
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder vCenterName(String vCenterName) {
             this.vCenterName = Objects.requireNonNull(vCenterName);
             return this;
-        }
-        public GetReplicationvCenterArgs build() {
+        }        public GetReplicationvCenterArgs build() {
             return new GetReplicationvCenterArgs(fabricName, resourceGroupName, resourceName, vCenterName);
         }
     }

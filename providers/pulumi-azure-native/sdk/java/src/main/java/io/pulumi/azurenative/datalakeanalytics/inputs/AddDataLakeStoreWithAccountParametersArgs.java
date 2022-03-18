@@ -78,22 +78,18 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder suffix(@Nullable Output<String> suffix) {
             this.suffix = suffix;
             return this;
         }
-
         public Builder suffix(@Nullable String suffix) {
             this.suffix = Output.ofNullable(suffix);
             return this;
-        }
-        public AddDataLakeStoreWithAccountParametersArgs build() {
+        }        public AddDataLakeStoreWithAccountParametersArgs build() {
             return new AddDataLakeStoreWithAccountParametersArgs(name, suffix);
         }
     }

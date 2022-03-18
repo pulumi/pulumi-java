@@ -249,122 +249,104 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder delay(@Nullable Output<Object> delay) {
             this.delay = delay;
             return this;
         }
-
         public Builder delay(@Nullable Object delay) {
             this.delay = Output.ofNullable(delay);
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<Object>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<Object> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(Object... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder frequency(Output<Either<String,TumblingWindowFrequency>> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder frequency(Either<String,TumblingWindowFrequency> frequency) {
             this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
-
         public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
-
         public Builder maxConcurrency(Output<Integer> maxConcurrency) {
             this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
             return this;
         }
-
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.maxConcurrency = Output.of(Objects.requireNonNull(maxConcurrency));
             return this;
         }
-
         public Builder pipeline(Output<TriggerPipelineReferenceArgs> pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
-
         public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
             this.pipeline = Output.of(Objects.requireNonNull(pipeline));
             return this;
         }
-
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
             this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TumblingWindowTriggerArgs build() {
+        }        public TumblingWindowTriggerArgs build() {
             return new TumblingWindowTriggerArgs(annotations, delay, dependsOn, description, endTime, frequency, interval, maxConcurrency, pipeline, retryPolicy, startTime, type);
         }
     }

@@ -96,32 +96,26 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
             this.cause = cause;
             return this;
         }
-
         public Builder cause(@Nullable String cause) {
             this.cause = Output.ofNullable(cause);
             return this;
         }
-
         public Builder code(Output<Either<String,AssessmentStatusCode>> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder code(Either<String,AssessmentStatusCode> code) {
             this.code = Output.of(Objects.requireNonNull(code));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
-        }
-        public AssessmentStatusArgs build() {
+        }        public AssessmentStatusArgs build() {
             return new AssessmentStatusArgs(cause, code, description);
         }
     }

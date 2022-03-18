@@ -88,17 +88,14 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
             this.certificateOrderName = Objects.requireNonNull(certificateOrderName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAppServiceCertificateOrderCertificateArgs build() {
+        }        public GetAppServiceCertificateOrderCertificateArgs build() {
             return new GetAppServiceCertificateOrderCertificateArgs(certificateOrderName, name, resourceGroupName);
         }
     }

@@ -160,37 +160,33 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
             this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel);
             return this;
         }
-
         public Builder databaseFiles(List<DatabaseFileInfoResponse> databaseFiles) {
             this.databaseFiles = Objects.requireNonNull(databaseFiles);
             return this;
         }
-
+        public Builder databaseFiles(DatabaseFileInfoResponse... databaseFiles) {
+            return databaseFiles(List.of(databaseFiles));
+        }
         public Builder databaseState(String databaseState) {
             this.databaseState = Objects.requireNonNull(databaseState);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder sizeMB(Double sizeMB) {
             this.sizeMB = Objects.requireNonNull(sizeMB);
             return this;
-        }
-        public ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse build() {
+        }        public ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(compatibilityLevel, databaseFiles, databaseState, id, name, resultType, sizeMB);
         }
     }

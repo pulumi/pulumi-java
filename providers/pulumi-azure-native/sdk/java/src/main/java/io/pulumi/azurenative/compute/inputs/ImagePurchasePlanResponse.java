@@ -94,17 +94,14 @@ public final class ImagePurchasePlanResponse extends io.pulumi.resources.InvokeA
             this.name = name;
             return this;
         }
-
         public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
-        }
-        public ImagePurchasePlanResponse build() {
+        }        public ImagePurchasePlanResponse build() {
             return new ImagePurchasePlanResponse(name, product, publisher);
         }
     }

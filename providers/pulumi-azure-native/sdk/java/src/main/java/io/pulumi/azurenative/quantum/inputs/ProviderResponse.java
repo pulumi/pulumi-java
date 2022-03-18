@@ -142,32 +142,26 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder instanceUri(@Nullable String instanceUri) {
             this.instanceUri = instanceUri;
             return this;
         }
-
         public Builder providerId(@Nullable String providerId) {
             this.providerId = providerId;
             return this;
         }
-
         public Builder providerSku(@Nullable String providerSku) {
             this.providerSku = providerSku;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder resourceUsageId(@Nullable String resourceUsageId) {
             this.resourceUsageId = resourceUsageId;
             return this;
-        }
-        public ProviderResponse build() {
+        }        public ProviderResponse build() {
             return new ProviderResponse(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);
         }
     }

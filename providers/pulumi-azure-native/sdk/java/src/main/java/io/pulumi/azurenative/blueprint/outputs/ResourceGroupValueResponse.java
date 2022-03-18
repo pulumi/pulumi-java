@@ -71,12 +71,10 @@ public final class ResourceGroupValueResponse {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ResourceGroupValueResponse build() {
+        }        public ResourceGroupValueResponse build() {
             return new ResourceGroupValueResponse(location, name);
         }
     }

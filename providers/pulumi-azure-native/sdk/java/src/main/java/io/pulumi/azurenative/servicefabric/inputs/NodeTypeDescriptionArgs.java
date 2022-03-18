@@ -230,112 +230,90 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
             this.applicationPorts = applicationPorts;
             return this;
         }
-
         public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
             this.applicationPorts = Output.ofNullable(applicationPorts);
             return this;
         }
-
         public Builder capacities(@Nullable Output<Map<String,String>> capacities) {
             this.capacities = capacities;
             return this;
         }
-
         public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = Output.ofNullable(capacities);
             return this;
         }
-
         public Builder clientConnectionEndpointPort(Output<Integer> clientConnectionEndpointPort) {
             this.clientConnectionEndpointPort = Objects.requireNonNull(clientConnectionEndpointPort);
             return this;
         }
-
         public Builder clientConnectionEndpointPort(Integer clientConnectionEndpointPort) {
             this.clientConnectionEndpointPort = Output.of(Objects.requireNonNull(clientConnectionEndpointPort));
             return this;
         }
-
         public Builder durabilityLevel(@Nullable Output<String> durabilityLevel) {
             this.durabilityLevel = durabilityLevel;
             return this;
         }
-
         public Builder durabilityLevel(@Nullable String durabilityLevel) {
             this.durabilityLevel = Output.ofNullable(durabilityLevel);
             return this;
         }
-
         public Builder ephemeralPorts(@Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
-
         public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
             this.ephemeralPorts = Output.ofNullable(ephemeralPorts);
             return this;
         }
-
         public Builder httpGatewayEndpointPort(Output<Integer> httpGatewayEndpointPort) {
             this.httpGatewayEndpointPort = Objects.requireNonNull(httpGatewayEndpointPort);
             return this;
         }
-
         public Builder httpGatewayEndpointPort(Integer httpGatewayEndpointPort) {
             this.httpGatewayEndpointPort = Output.of(Objects.requireNonNull(httpGatewayEndpointPort));
             return this;
         }
-
         public Builder isPrimary(Output<Boolean> isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
-
         public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Output.of(Objects.requireNonNull(isPrimary));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder placementProperties(@Nullable Output<Map<String,String>> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
-
         public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = Output.ofNullable(placementProperties);
             return this;
         }
-
         public Builder reverseProxyEndpointPort(@Nullable Output<Integer> reverseProxyEndpointPort) {
             this.reverseProxyEndpointPort = reverseProxyEndpointPort;
             return this;
         }
-
         public Builder reverseProxyEndpointPort(@Nullable Integer reverseProxyEndpointPort) {
             this.reverseProxyEndpointPort = Output.ofNullable(reverseProxyEndpointPort);
             return this;
         }
-
         public Builder vmInstanceCount(Output<Integer> vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
-
         public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Output.of(Objects.requireNonNull(vmInstanceCount));
             return this;
-        }
-        public NodeTypeDescriptionArgs build() {
+        }        public NodeTypeDescriptionArgs build() {
             return new NodeTypeDescriptionArgs(applicationPorts, capacities, clientConnectionEndpointPort, durabilityLevel, ephemeralPorts, httpGatewayEndpointPort, isPrimary, name, placementProperties, reverseProxyEndpointPort, vmInstanceCount);
         }
     }

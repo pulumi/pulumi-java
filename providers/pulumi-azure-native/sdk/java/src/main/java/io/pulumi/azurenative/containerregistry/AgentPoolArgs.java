@@ -190,92 +190,74 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
-
         public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder os(@Nullable Output<Either<String,OS>> os) {
             this.os = os;
             return this;
         }
-
         public Builder os(@Nullable Either<String,OS> os) {
             this.os = Output.ofNullable(os);
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
         }
-
         public Builder virtualNetworkSubnetResourceId(@Nullable Output<String> virtualNetworkSubnetResourceId) {
             this.virtualNetworkSubnetResourceId = virtualNetworkSubnetResourceId;
             return this;
         }
-
         public Builder virtualNetworkSubnetResourceId(@Nullable String virtualNetworkSubnetResourceId) {
             this.virtualNetworkSubnetResourceId = Output.ofNullable(virtualNetworkSubnetResourceId);
             return this;
-        }
-        public AgentPoolArgs build() {
+        }        public AgentPoolArgs build() {
             return new AgentPoolArgs(agentPoolName, count, location, os, registryName, resourceGroupName, tags, tier, virtualNetworkSubnetResourceId);
         }
     }

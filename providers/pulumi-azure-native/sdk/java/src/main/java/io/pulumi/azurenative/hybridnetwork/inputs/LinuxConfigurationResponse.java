@@ -60,8 +60,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
         public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             this.ssh = ssh;
             return this;
-        }
-        public LinuxConfigurationResponse build() {
+        }        public LinuxConfigurationResponse build() {
             return new LinuxConfigurationResponse(ssh);
         }
     }

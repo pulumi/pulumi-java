@@ -95,17 +95,14 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends io.p
             this.baseDockerfile = baseDockerfile;
             return this;
         }
-
         public Builder baseImage(@Nullable String baseImage) {
             this.baseImage = baseImage;
             return this;
         }
-
         public Builder baseImageRegistry(@Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
             this.baseImageRegistry = baseImageRegistry;
             return this;
-        }
-        public ModelEnvironmentDefinitionResponseResponseDocker build() {
+        }        public ModelEnvironmentDefinitionResponseResponseDocker build() {
             return new ModelEnvironmentDefinitionResponseResponseDocker(baseDockerfile, baseImage, baseImageRegistry);
         }
     }

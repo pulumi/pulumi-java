@@ -78,22 +78,18 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = Output.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
         }
-
         public Builder playReadyCustomAttributes(@Nullable Output<String> playReadyCustomAttributes) {
             this.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
         }
-
         public Builder playReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
             this.playReadyCustomAttributes = Output.ofNullable(playReadyCustomAttributes);
             return this;
-        }
-        public StreamingPolicyPlayReadyConfigurationArgs build() {
+        }        public StreamingPolicyPlayReadyConfigurationArgs build() {
             return new StreamingPolicyPlayReadyConfigurationArgs(customLicenseAcquisitionUrlTemplate, playReadyCustomAttributes);
         }
     }

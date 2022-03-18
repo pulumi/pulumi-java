@@ -270,142 +270,114 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.diskBlobName = diskBlobName;
             return this;
         }
-
         public Builder diskBlobName(@Nullable String diskBlobName) {
             this.diskBlobName = Output.ofNullable(diskBlobName);
             return this;
         }
-
         public Builder diskSizeGiB(@Nullable Output<Integer> diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
-
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = Output.ofNullable(diskSizeGiB);
             return this;
         }
-
         public Builder diskType(@Nullable Output<Either<String,StorageType>> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable Either<String,StorageType> diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder diskUri(@Nullable Output<String> diskUri) {
             this.diskUri = diskUri;
             return this;
         }
-
         public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = Output.ofNullable(diskUri);
             return this;
         }
-
         public Builder hostCaching(@Nullable Output<String> hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
-
         public Builder hostCaching(@Nullable String hostCaching) {
             this.hostCaching = Output.ofNullable(hostCaching);
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder leasedByLabVmId(@Nullable Output<String> leasedByLabVmId) {
             this.leasedByLabVmId = leasedByLabVmId;
             return this;
         }
-
         public Builder leasedByLabVmId(@Nullable String leasedByLabVmId) {
             this.leasedByLabVmId = Output.ofNullable(leasedByLabVmId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedDiskId(@Nullable Output<String> managedDiskId) {
             this.managedDiskId = managedDiskId;
             return this;
         }
-
         public Builder managedDiskId(@Nullable String managedDiskId) {
             this.managedDiskId = Output.ofNullable(managedDiskId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public DiskArgs build() {
+        }        public DiskArgs build() {
             return new DiskArgs(diskBlobName, diskSizeGiB, diskType, diskUri, hostCaching, labName, leasedByLabVmId, location, managedDiskId, name, resourceGroupName, storageAccountId, tags, userName);
         }
     }

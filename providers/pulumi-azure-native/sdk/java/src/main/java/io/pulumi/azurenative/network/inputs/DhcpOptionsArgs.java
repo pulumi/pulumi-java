@@ -62,12 +62,13 @@ public final class DhcpOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-        public DhcpOptionsArgs build() {
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }        public DhcpOptionsArgs build() {
             return new DhcpOptionsArgs(dnsServers);
         }
     }

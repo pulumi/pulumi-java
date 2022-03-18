@@ -98,32 +98,29 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
             this.associations = associations;
             return this;
         }
-
         public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationArgs> associations) {
             this.associations = Output.ofNullable(associations);
             return this;
         }
-
+        public Builder associations(SecurityPolicyWebApplicationFirewallAssociationArgs... associations) {
+            return associations(List.of(associations));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder wafPolicy(@Nullable Output<ResourceReferenceArgs> wafPolicy) {
             this.wafPolicy = wafPolicy;
             return this;
         }
-
         public Builder wafPolicy(@Nullable ResourceReferenceArgs wafPolicy) {
             this.wafPolicy = Output.ofNullable(wafPolicy);
             return this;
-        }
-        public SecurityPolicyWebApplicationFirewallParametersArgs build() {
+        }        public SecurityPolicyWebApplicationFirewallParametersArgs build() {
             return new SecurityPolicyWebApplicationFirewallParametersArgs(associations, type, wafPolicy);
         }
     }

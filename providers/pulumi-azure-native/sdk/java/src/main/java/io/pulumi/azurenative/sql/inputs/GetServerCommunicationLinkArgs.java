@@ -88,17 +88,14 @@ public final class GetServerCommunicationLinkArgs extends io.pulumi.resources.In
             this.communicationLinkName = Objects.requireNonNull(communicationLinkName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetServerCommunicationLinkArgs build() {
+        }        public GetServerCommunicationLinkArgs build() {
             return new GetServerCommunicationLinkArgs(communicationLinkName, resourceGroupName, serverName);
         }
     }

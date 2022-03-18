@@ -97,32 +97,29 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
             this.recurrenceType = Objects.requireNonNull(recurrenceType);
             return this;
         }
-
         public Builder recurrenceType(RecurrenceType recurrenceType) {
             this.recurrenceType = Output.of(Objects.requireNonNull(recurrenceType));
             return this;
         }
-
         public Builder recurrenceValue(Output<Integer> recurrenceValue) {
             this.recurrenceValue = Objects.requireNonNull(recurrenceValue);
             return this;
         }
-
         public Builder recurrenceValue(Integer recurrenceValue) {
             this.recurrenceValue = Output.of(Objects.requireNonNull(recurrenceValue));
             return this;
         }
-
         public Builder weeklyDaysList(@Nullable Output<List<DayOfWeek>> weeklyDaysList) {
             this.weeklyDaysList = weeklyDaysList;
             return this;
         }
-
         public Builder weeklyDaysList(@Nullable List<DayOfWeek> weeklyDaysList) {
             this.weeklyDaysList = Output.ofNullable(weeklyDaysList);
             return this;
         }
-        public ScheduleRecurrenceArgs build() {
+        public Builder weeklyDaysList(DayOfWeek... weeklyDaysList) {
+            return weeklyDaysList(List.of(weeklyDaysList));
+        }        public ScheduleRecurrenceArgs build() {
             return new ScheduleRecurrenceArgs(recurrenceType, recurrenceValue, weeklyDaysList);
         }
     }

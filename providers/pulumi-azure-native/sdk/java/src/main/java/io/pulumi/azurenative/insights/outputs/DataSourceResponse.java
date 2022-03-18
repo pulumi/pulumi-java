@@ -72,17 +72,17 @@ public final class DataSourceResponse {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder sinks(List<SinkConfigurationResponse> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
-        public DataSourceResponse build() {
+        public Builder sinks(SinkConfigurationResponse... sinks) {
+            return sinks(List.of(sinks));
+        }        public DataSourceResponse build() {
             return new DataSourceResponse(configuration, kind, sinks);
         }
     }

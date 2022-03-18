@@ -72,12 +72,10 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
             this.associationName = Objects.requireNonNull(associationName);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetAssociationArgs build() {
+        }        public GetAssociationArgs build() {
             return new GetAssociationArgs(associationName, scope);
         }
     }

@@ -124,52 +124,42 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
             this.apiPortalName = apiPortalName;
             return this;
         }
-
         public Builder apiPortalName(@Nullable String apiPortalName) {
             this.apiPortalName = Output.ofNullable(apiPortalName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ApiPortalPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ApiPortalPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
-        }
-        public ApiPortalArgs build() {
+        }        public ApiPortalArgs build() {
             return new ApiPortalArgs(apiPortalName, properties, resourceGroupName, serviceName, sku);
         }
     }

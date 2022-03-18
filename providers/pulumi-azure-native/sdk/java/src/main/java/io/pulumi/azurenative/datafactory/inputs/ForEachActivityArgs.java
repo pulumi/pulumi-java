@@ -235,92 +235,83 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
-
         public Builder activities(List<Object> activities) {
             this.activities = Output.of(Objects.requireNonNull(activities));
             return this;
         }
-
+        public Builder activities(Object... activities) {
+            return activities(List.of(activities));
+        }
         public Builder batchCount(@Nullable Output<Integer> batchCount) {
             this.batchCount = batchCount;
             return this;
         }
-
         public Builder batchCount(@Nullable Integer batchCount) {
             this.batchCount = Output.ofNullable(batchCount);
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isSequential(@Nullable Output<Boolean> isSequential) {
             this.isSequential = isSequential;
             return this;
         }
-
         public Builder isSequential(@Nullable Boolean isSequential) {
             this.isSequential = Output.ofNullable(isSequential);
             return this;
         }
-
         public Builder items(Output<ExpressionArgs> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(ExpressionArgs items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public ForEachActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public ForEachActivityArgs build() {
             return new ForEachActivityArgs(activities, batchCount, dependsOn, description, isSequential, items, name, type, userProperties);
         }
     }

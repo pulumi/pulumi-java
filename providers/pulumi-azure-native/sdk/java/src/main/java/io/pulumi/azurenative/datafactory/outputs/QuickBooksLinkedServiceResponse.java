@@ -273,72 +273,61 @@ public final class QuickBooksLinkedServiceResponse {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret) {
             this.accessTokenSecret = accessTokenSecret;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder companyId(@Nullable Object companyId) {
             this.companyId = companyId;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectionProperties(@Nullable Object connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
-
         public Builder consumerKey(@Nullable Object consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
-
         public Builder consumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret) {
             this.consumerSecret = consumerSecret;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder endpoint(@Nullable Object endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
-        }
-        public QuickBooksLinkedServiceResponse build() {
+        }        public QuickBooksLinkedServiceResponse build() {
             return new QuickBooksLinkedServiceResponse(accessToken, accessTokenSecret, annotations, companyId, connectVia, connectionProperties, consumerKey, consumerSecret, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints);
         }
     }

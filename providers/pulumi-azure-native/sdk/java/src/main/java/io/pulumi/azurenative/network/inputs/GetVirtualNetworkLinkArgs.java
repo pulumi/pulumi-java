@@ -88,17 +88,14 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
             this.privateZoneName = Objects.requireNonNull(privateZoneName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkLinkName(String virtualNetworkLinkName) {
             this.virtualNetworkLinkName = Objects.requireNonNull(virtualNetworkLinkName);
             return this;
-        }
-        public GetVirtualNetworkLinkArgs build() {
+        }        public GetVirtualNetworkLinkArgs build() {
             return new GetVirtualNetworkLinkArgs(privateZoneName, resourceGroupName, virtualNetworkLinkName);
         }
     }

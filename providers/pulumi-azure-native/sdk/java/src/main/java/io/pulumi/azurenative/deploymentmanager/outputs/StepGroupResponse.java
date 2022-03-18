@@ -120,27 +120,31 @@ public final class StepGroupResponse {
             this.dependsOnStepGroups = dependsOnStepGroups;
             return this;
         }
-
+        public Builder dependsOnStepGroups(String... dependsOnStepGroups) {
+            return dependsOnStepGroups(List.of(dependsOnStepGroups));
+        }
         public Builder deploymentTargetId(String deploymentTargetId) {
             this.deploymentTargetId = Objects.requireNonNull(deploymentTargetId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder postDeploymentSteps(@Nullable List<PrePostStepResponse> postDeploymentSteps) {
             this.postDeploymentSteps = postDeploymentSteps;
             return this;
         }
-
+        public Builder postDeploymentSteps(PrePostStepResponse... postDeploymentSteps) {
+            return postDeploymentSteps(List.of(postDeploymentSteps));
+        }
         public Builder preDeploymentSteps(@Nullable List<PrePostStepResponse> preDeploymentSteps) {
             this.preDeploymentSteps = preDeploymentSteps;
             return this;
         }
-        public StepGroupResponse build() {
+        public Builder preDeploymentSteps(PrePostStepResponse... preDeploymentSteps) {
+            return preDeploymentSteps(List.of(preDeploymentSteps));
+        }        public StepGroupResponse build() {
             return new StepGroupResponse(dependsOnStepGroups, deploymentTargetId, name, postDeploymentSteps, preDeploymentSteps);
         }
     }

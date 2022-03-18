@@ -60,12 +60,10 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(ReportDeliveryDestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
-        }
-        public ReportDeliveryInfoArgs build() {
+        }        public ReportDeliveryInfoArgs build() {
             return new ReportDeliveryInfoArgs(destination);
         }
     }

@@ -95,17 +95,14 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(capacity, name, tier);
         }
     }

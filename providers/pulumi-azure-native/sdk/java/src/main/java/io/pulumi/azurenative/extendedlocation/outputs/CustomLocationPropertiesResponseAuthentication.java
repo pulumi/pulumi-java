@@ -53,8 +53,7 @@ public final class CustomLocationPropertiesResponseAuthentication {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public CustomLocationPropertiesResponseAuthentication build() {
+        }        public CustomLocationPropertiesResponseAuthentication build() {
             return new CustomLocationPropertiesResponseAuthentication(type);
         }
     }

@@ -120,27 +120,22 @@ public final class ApiDeploymentParameterMetadataResponse {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder visibility(@Nullable String visibility) {
             this.visibility = visibility;
             return this;
-        }
-        public ApiDeploymentParameterMetadataResponse build() {
+        }        public ApiDeploymentParameterMetadataResponse build() {
             return new ApiDeploymentParameterMetadataResponse(description, displayName, isRequired, type, visibility);
         }
     }

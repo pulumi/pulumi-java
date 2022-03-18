@@ -88,17 +88,14 @@ public final class ApplicationGatewayUrlConfigurationResponse {
             this.modifiedPath = modifiedPath;
             return this;
         }
-
         public Builder modifiedQueryString(@Nullable String modifiedQueryString) {
             this.modifiedQueryString = modifiedQueryString;
             return this;
         }
-
         public Builder reroute(@Nullable Boolean reroute) {
             this.reroute = reroute;
             return this;
-        }
-        public ApplicationGatewayUrlConfigurationResponse build() {
+        }        public ApplicationGatewayUrlConfigurationResponse build() {
             return new ApplicationGatewayUrlConfigurationResponse(modifiedPath, modifiedQueryString, reroute);
         }
     }

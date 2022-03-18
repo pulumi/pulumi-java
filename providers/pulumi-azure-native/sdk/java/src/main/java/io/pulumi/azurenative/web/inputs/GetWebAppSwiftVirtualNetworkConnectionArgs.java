@@ -72,12 +72,10 @@ public final class GetWebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppSwiftVirtualNetworkConnectionArgs build() {
+        }        public GetWebAppSwiftVirtualNetworkConnectionArgs build() {
             return new GetWebAppSwiftVirtualNetworkConnectionArgs(name, resourceGroupName);
         }
     }

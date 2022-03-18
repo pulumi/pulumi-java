@@ -113,42 +113,37 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder serviceEndpointPolicyDefinitions(@Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions) {
             this.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
             return this;
         }
-
         public Builder serviceEndpointPolicyDefinitions(@Nullable List<ServiceEndpointPolicyDefinitionArgs> serviceEndpointPolicyDefinitions) {
             this.serviceEndpointPolicyDefinitions = Output.ofNullable(serviceEndpointPolicyDefinitions);
             return this;
         }
-
+        public Builder serviceEndpointPolicyDefinitions(ServiceEndpointPolicyDefinitionArgs... serviceEndpointPolicyDefinitions) {
+            return serviceEndpointPolicyDefinitions(List.of(serviceEndpointPolicyDefinitions));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServiceEndpointPolicyArgs build() {
+        }        public ServiceEndpointPolicyArgs build() {
             return new ServiceEndpointPolicyArgs(id, location, serviceEndpointPolicyDefinitions, tags);
         }
     }

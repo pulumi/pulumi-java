@@ -61,12 +61,10 @@ public final class PrivateEndpointConnectionPropertiesPrivateEndpointArgs extend
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public PrivateEndpointConnectionPropertiesPrivateEndpointArgs build() {
+        }        public PrivateEndpointConnectionPropertiesPrivateEndpointArgs build() {
             return new PrivateEndpointConnectionPropertiesPrivateEndpointArgs(id);
         }
     }

@@ -90,17 +90,14 @@ public final class LabelCategoryResponse {
             this.allowMultiSelect = allowMultiSelect;
             return this;
         }
-
         public Builder classes(Map<String,LabelClassResponse> classes) {
             this.classes = Objects.requireNonNull(classes);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
-        }
-        public LabelCategoryResponse build() {
+        }        public LabelCategoryResponse build() {
             return new LabelCategoryResponse(allowMultiSelect, classes, displayName);
         }
     }

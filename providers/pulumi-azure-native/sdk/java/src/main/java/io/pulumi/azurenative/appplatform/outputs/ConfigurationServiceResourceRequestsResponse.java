@@ -86,17 +86,14 @@ public final class ConfigurationServiceResourceRequestsResponse {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
-
         public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
-        }
-        public ConfigurationServiceResourceRequestsResponse build() {
+        }        public ConfigurationServiceResourceRequestsResponse build() {
             return new ConfigurationServiceResourceRequestsResponse(cpu, instanceCount, memory);
         }
     }

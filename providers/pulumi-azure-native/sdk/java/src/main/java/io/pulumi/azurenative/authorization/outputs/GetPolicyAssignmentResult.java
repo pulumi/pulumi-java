@@ -269,72 +269,64 @@ public final class GetPolicyAssignmentResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder enforcementMode(@Nullable String enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nonComplianceMessages(@Nullable List<NonComplianceMessageResponse> nonComplianceMessages) {
             this.nonComplianceMessages = nonComplianceMessages;
             return this;
         }
-
+        public Builder nonComplianceMessages(NonComplianceMessageResponse... nonComplianceMessages) {
+            return nonComplianceMessages(List.of(nonComplianceMessages));
+        }
         public Builder notScopes(@Nullable List<String> notScopes) {
             this.notScopes = notScopes;
             return this;
         }
-
+        public Builder notScopes(String... notScopes) {
+            return notScopes(List.of(notScopes));
+        }
         public Builder parameters(@Nullable Map<String,ParameterValuesValueResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPolicyAssignmentResult build() {
+        }        public GetPolicyAssignmentResult build() {
             return new GetPolicyAssignmentResult(description, displayName, enforcementMode, id, identity, location, metadata, name, nonComplianceMessages, notScopes, parameters, policyDefinitionId, scope, type);
         }
     }

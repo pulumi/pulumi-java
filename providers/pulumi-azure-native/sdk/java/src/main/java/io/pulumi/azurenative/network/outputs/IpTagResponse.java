@@ -71,12 +71,10 @@ public final class IpTagResponse {
             this.ipTagType = ipTagType;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
-        }
-        public IpTagResponse build() {
+        }        public IpTagResponse build() {
             return new IpTagResponse(ipTagType, tag);
         }
     }

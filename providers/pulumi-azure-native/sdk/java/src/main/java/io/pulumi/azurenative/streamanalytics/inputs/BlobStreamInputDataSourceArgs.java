@@ -162,72 +162,61 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable String container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder dateFormat(@Nullable Output<String> dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
-
         public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = Output.ofNullable(dateFormat);
             return this;
         }
-
         public Builder pathPattern(@Nullable Output<String> pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
-
         public Builder pathPattern(@Nullable String pathPattern) {
             this.pathPattern = Output.ofNullable(pathPattern);
             return this;
         }
-
         public Builder sourcePartitionCount(@Nullable Output<Integer> sourcePartitionCount) {
             this.sourcePartitionCount = sourcePartitionCount;
             return this;
         }
-
         public Builder sourcePartitionCount(@Nullable Integer sourcePartitionCount) {
             this.sourcePartitionCount = Output.ofNullable(sourcePartitionCount);
             return this;
         }
-
         public Builder storageAccounts(@Nullable Output<List<StorageAccountArgs>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
-
         public Builder storageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
             this.storageAccounts = Output.ofNullable(storageAccounts);
             return this;
         }
-
+        public Builder storageAccounts(StorageAccountArgs... storageAccounts) {
+            return storageAccounts(List.of(storageAccounts));
+        }
         public Builder timeFormat(@Nullable Output<String> timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
-
         public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = Output.ofNullable(timeFormat);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public BlobStreamInputDataSourceArgs build() {
+        }        public BlobStreamInputDataSourceArgs build() {
             return new BlobStreamInputDataSourceArgs(container, dateFormat, pathPattern, sourcePartitionCount, storageAccounts, timeFormat, type);
         }
     }

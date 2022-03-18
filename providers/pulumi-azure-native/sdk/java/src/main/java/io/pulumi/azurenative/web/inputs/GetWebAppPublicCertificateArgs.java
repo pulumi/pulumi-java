@@ -88,17 +88,14 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicCertificateName(String publicCertificateName) {
             this.publicCertificateName = Objects.requireNonNull(publicCertificateName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppPublicCertificateArgs build() {
+        }        public GetWebAppPublicCertificateArgs build() {
             return new GetWebAppPublicCertificateArgs(name, publicCertificateName, resourceGroupName);
         }
     }

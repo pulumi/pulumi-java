@@ -58,8 +58,7 @@ public final class WorkspaceResponseProperties extends io.pulumi.resources.Invok
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public WorkspaceResponseProperties build() {
+        }        public WorkspaceResponseProperties build() {
             return new WorkspaceResponseProperties(provisioningState);
         }
     }

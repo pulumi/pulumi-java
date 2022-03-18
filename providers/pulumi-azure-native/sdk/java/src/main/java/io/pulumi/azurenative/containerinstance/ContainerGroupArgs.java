@@ -333,172 +333,150 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.containerGroupName = containerGroupName;
             return this;
         }
-
         public Builder containerGroupName(@Nullable String containerGroupName) {
             this.containerGroupName = Output.ofNullable(containerGroupName);
             return this;
         }
-
         public Builder containers(Output<List<ContainerArgs>> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
-
         public Builder containers(List<ContainerArgs> containers) {
             this.containers = Output.of(Objects.requireNonNull(containers));
             return this;
         }
-
+        public Builder containers(ContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder diagnostics(@Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder diagnostics(@Nullable ContainerGroupDiagnosticsArgs diagnostics) {
             this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
-
         public Builder dnsConfig(@Nullable Output<DnsConfigurationArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder dnsConfig(@Nullable DnsConfigurationArgs dnsConfig) {
             this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
-
         public Builder encryptionProperties(@Nullable Output<EncryptionPropertiesArgs> encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
-
         public Builder encryptionProperties(@Nullable EncryptionPropertiesArgs encryptionProperties) {
             this.encryptionProperties = Output.ofNullable(encryptionProperties);
             return this;
         }
-
         public Builder identity(@Nullable Output<ContainerGroupIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ContainerGroupIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder imageRegistryCredentials(@Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials) {
             this.imageRegistryCredentials = imageRegistryCredentials;
             return this;
         }
-
         public Builder imageRegistryCredentials(@Nullable List<ImageRegistryCredentialArgs> imageRegistryCredentials) {
             this.imageRegistryCredentials = Output.ofNullable(imageRegistryCredentials);
             return this;
         }
-
+        public Builder imageRegistryCredentials(ImageRegistryCredentialArgs... imageRegistryCredentials) {
+            return imageRegistryCredentials(List.of(imageRegistryCredentials));
+        }
         public Builder initContainers(@Nullable Output<List<InitContainerDefinitionArgs>> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
-
         public Builder initContainers(@Nullable List<InitContainerDefinitionArgs> initContainers) {
             this.initContainers = Output.ofNullable(initContainers);
             return this;
         }
-
+        public Builder initContainers(InitContainerDefinitionArgs... initContainers) {
+            return initContainers(List.of(initContainers));
+        }
         public Builder ipAddress(@Nullable Output<IpAddressArgs> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable IpAddressArgs ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkProfile(@Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable ContainerGroupNetworkProfileArgs networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
-
         public Builder osType(Output<Either<String,OperatingSystemTypes>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder osType(Either<String,OperatingSystemTypes> osType) {
             this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restartPolicy(@Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
-
         public Builder restartPolicy(@Nullable Either<String,ContainerGroupRestartPolicy> restartPolicy) {
             this.restartPolicy = Output.ofNullable(restartPolicy);
             return this;
         }
-
         public Builder sku(@Nullable Output<Either<String,ContainerGroupSku>> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable Either<String,ContainerGroupSku> sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public ContainerGroupArgs build() {
+        public Builder volumes(VolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public ContainerGroupArgs build() {
             return new ContainerGroupArgs(containerGroupName, containers, diagnostics, dnsConfig, encryptionProperties, identity, imageRegistryCredentials, initContainers, ipAddress, location, networkProfile, osType, resourceGroupName, restartPolicy, sku, tags, volumes);
         }
     }

@@ -88,17 +88,17 @@ public final class ChannelTypeDescriptionResponse {
             this.channelDescription = channelDescription;
             return this;
         }
-
         public Builder channelFunctions(@Nullable List<String> channelFunctions) {
             this.channelFunctions = channelFunctions;
             return this;
         }
-
+        public Builder channelFunctions(String... channelFunctions) {
+            return channelFunctions(List.of(channelFunctions));
+        }
         public Builder channelType(@Nullable String channelType) {
             this.channelType = channelType;
             return this;
-        }
-        public ChannelTypeDescriptionResponse build() {
+        }        public ChannelTypeDescriptionResponse build() {
             return new ChannelTypeDescriptionResponse(channelDescription, channelFunctions, channelType);
         }
     }

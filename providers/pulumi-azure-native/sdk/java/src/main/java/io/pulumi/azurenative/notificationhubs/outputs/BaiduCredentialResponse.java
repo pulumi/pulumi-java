@@ -87,17 +87,14 @@ public final class BaiduCredentialResponse {
             this.baiduApiKey = baiduApiKey;
             return this;
         }
-
         public Builder baiduEndPoint(@Nullable String baiduEndPoint) {
             this.baiduEndPoint = baiduEndPoint;
             return this;
         }
-
         public Builder baiduSecretKey(@Nullable String baiduSecretKey) {
             this.baiduSecretKey = baiduSecretKey;
             return this;
-        }
-        public BaiduCredentialResponse build() {
+        }        public BaiduCredentialResponse build() {
             return new BaiduCredentialResponse(baiduApiKey, baiduEndPoint, baiduSecretKey);
         }
     }

@@ -72,12 +72,10 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
             this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListPartnerNamespaceSharedAccessKeysArgs build() {
+        }        public ListPartnerNamespaceSharedAccessKeysArgs build() {
             return new ListPartnerNamespaceSharedAccessKeysArgs(partnerNamespaceName, resourceGroupName);
         }
     }

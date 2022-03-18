@@ -154,37 +154,33 @@ public final class NetworkProfileResponse {
             this.appNetworkResourceGroup = appNetworkResourceGroup;
             return this;
         }
-
         public Builder appSubnetId(@Nullable String appSubnetId) {
             this.appSubnetId = appSubnetId;
             return this;
         }
-
         public Builder outboundIPs(NetworkProfileResponseOutboundIPs outboundIPs) {
             this.outboundIPs = Objects.requireNonNull(outboundIPs);
             return this;
         }
-
         public Builder requiredTraffics(List<RequiredTrafficResponse> requiredTraffics) {
             this.requiredTraffics = Objects.requireNonNull(requiredTraffics);
             return this;
         }
-
+        public Builder requiredTraffics(RequiredTrafficResponse... requiredTraffics) {
+            return requiredTraffics(List.of(requiredTraffics));
+        }
         public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public Builder serviceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
             this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
             return this;
         }
-
         public Builder serviceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
             this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;
-        }
-        public NetworkProfileResponse build() {
+        }        public NetworkProfileResponse build() {
             return new NetworkProfileResponse(appNetworkResourceGroup, appSubnetId, outboundIPs, requiredTraffics, serviceCidr, serviceRuntimeNetworkResourceGroup, serviceRuntimeSubnetId);
         }
     }

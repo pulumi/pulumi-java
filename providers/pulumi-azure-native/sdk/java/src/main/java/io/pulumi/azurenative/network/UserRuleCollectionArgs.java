@@ -156,72 +156,61 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
             this.appliesToGroups = appliesToGroups;
             return this;
         }
-
         public Builder appliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemArgs> appliesToGroups) {
             this.appliesToGroups = Output.ofNullable(appliesToGroups);
             return this;
         }
-
+        public Builder appliesToGroups(NetworkManagerSecurityGroupItemArgs... appliesToGroups) {
+            return appliesToGroups(List.of(appliesToGroups));
+        }
         public Builder configurationName(Output<String> configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
-
         public Builder configurationName(String configurationName) {
             this.configurationName = Output.of(Objects.requireNonNull(configurationName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleCollectionName(@Nullable Output<String> ruleCollectionName) {
             this.ruleCollectionName = ruleCollectionName;
             return this;
         }
-
         public Builder ruleCollectionName(@Nullable String ruleCollectionName) {
             this.ruleCollectionName = Output.ofNullable(ruleCollectionName);
             return this;
-        }
-        public UserRuleCollectionArgs build() {
+        }        public UserRuleCollectionArgs build() {
             return new UserRuleCollectionArgs(appliesToGroups, configurationName, description, displayName, networkManagerName, resourceGroupName, ruleCollectionName);
         }
     }

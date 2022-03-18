@@ -79,17 +79,14 @@ public final class CacheKeyQueryStringActionParametersResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder queryParameters(@Nullable String queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
-
         public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
-        }
-        public CacheKeyQueryStringActionParametersResponse build() {
+        }        public CacheKeyQueryStringActionParametersResponse build() {
             return new CacheKeyQueryStringActionParametersResponse(odataType, queryParameters, queryStringBehavior);
         }
     }

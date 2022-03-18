@@ -60,8 +60,7 @@ public final class ServiceExportConfigurationInfoResponse extends io.pulumi.reso
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
-        }
-        public ServiceExportConfigurationInfoResponse build() {
+        }        public ServiceExportConfigurationInfoResponse build() {
             return new ServiceExportConfigurationInfoResponse(storageAccountName);
         }
     }

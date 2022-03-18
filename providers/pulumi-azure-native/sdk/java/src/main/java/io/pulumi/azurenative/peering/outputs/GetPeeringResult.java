@@ -219,57 +219,46 @@ public final class GetPeeringResult {
             this.direct = direct;
             return this;
         }
-
         public Builder exchange(@Nullable PeeringPropertiesExchangeResponse exchange) {
             this.exchange = exchange;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(PeeringSkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPeeringResult build() {
+        }        public GetPeeringResult build() {
             return new GetPeeringResult(direct, exchange, id, kind, location, name, peeringLocation, provisioningState, sku, tags, type);
         }
     }

@@ -104,22 +104,18 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
             this.assessmentName = Objects.requireNonNull(assessmentName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAssessmentArgs build() {
+        }        public GetAssessmentArgs build() {
             return new GetAssessmentArgs(assessmentName, groupName, projectName, resourceGroupName);
         }
     }

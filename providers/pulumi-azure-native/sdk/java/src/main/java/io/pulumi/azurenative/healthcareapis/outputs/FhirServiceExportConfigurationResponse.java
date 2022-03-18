@@ -53,8 +53,7 @@ public final class FhirServiceExportConfigurationResponse {
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
-        }
-        public FhirServiceExportConfigurationResponse build() {
+        }        public FhirServiceExportConfigurationResponse build() {
             return new FhirServiceExportConfigurationResponse(storageAccountName);
         }
     }

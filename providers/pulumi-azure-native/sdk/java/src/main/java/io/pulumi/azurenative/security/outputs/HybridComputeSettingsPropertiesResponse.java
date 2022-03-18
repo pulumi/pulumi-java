@@ -137,32 +137,26 @@ public final class HybridComputeSettingsPropertiesResponse {
             this.autoProvision = Objects.requireNonNull(autoProvision);
             return this;
         }
-
         public Builder hybridComputeProvisioningState(String hybridComputeProvisioningState) {
             this.hybridComputeProvisioningState = Objects.requireNonNull(hybridComputeProvisioningState);
             return this;
         }
-
         public Builder proxyServer(@Nullable ProxyServerPropertiesResponse proxyServer) {
             this.proxyServer = proxyServer;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
-
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
-        }
-        public HybridComputeSettingsPropertiesResponse build() {
+        }        public HybridComputeSettingsPropertiesResponse build() {
             return new HybridComputeSettingsPropertiesResponse(autoProvision, hybridComputeProvisioningState, proxyServer, region, resourceGroupName, servicePrincipal);
         }
     }

@@ -94,17 +94,14 @@ public final class EnvironmentVarResponse extends io.pulumi.resources.InvokeArgs
             this.name = name;
             return this;
         }
-
         public Builder secretRef(@Nullable String secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public EnvironmentVarResponse build() {
+        }        public EnvironmentVarResponse build() {
             return new EnvironmentVarResponse(name, secretRef, value);
         }
     }

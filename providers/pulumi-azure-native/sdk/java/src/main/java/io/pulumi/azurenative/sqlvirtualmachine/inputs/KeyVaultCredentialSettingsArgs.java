@@ -127,52 +127,42 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
             this.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
-
         public Builder azureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
             this.azureKeyVaultUrl = Output.ofNullable(azureKeyVaultUrl);
             return this;
         }
-
         public Builder credentialName(@Nullable Output<String> credentialName) {
             this.credentialName = credentialName;
             return this;
         }
-
         public Builder credentialName(@Nullable String credentialName) {
             this.credentialName = Output.ofNullable(credentialName);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder servicePrincipalName(@Nullable Output<String> servicePrincipalName) {
             this.servicePrincipalName = servicePrincipalName;
             return this;
         }
-
         public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
             this.servicePrincipalName = Output.ofNullable(servicePrincipalName);
             return this;
         }
-
         public Builder servicePrincipalSecret(@Nullable Output<String> servicePrincipalSecret) {
             this.servicePrincipalSecret = servicePrincipalSecret;
             return this;
         }
-
         public Builder servicePrincipalSecret(@Nullable String servicePrincipalSecret) {
             this.servicePrincipalSecret = Output.ofNullable(servicePrincipalSecret);
             return this;
-        }
-        public KeyVaultCredentialSettingsArgs build() {
+        }        public KeyVaultCredentialSettingsArgs build() {
             return new KeyVaultCredentialSettingsArgs(azureKeyVaultUrl, credentialName, enable, servicePrincipalName, servicePrincipalSecret);
         }
     }

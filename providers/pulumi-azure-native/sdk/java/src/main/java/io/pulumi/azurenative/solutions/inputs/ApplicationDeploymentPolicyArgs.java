@@ -62,12 +62,10 @@ public final class ApplicationDeploymentPolicyArgs extends io.pulumi.resources.R
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
-
         public Builder deploymentMode(Either<String,DeploymentMode> deploymentMode) {
             this.deploymentMode = Output.of(Objects.requireNonNull(deploymentMode));
             return this;
-        }
-        public ApplicationDeploymentPolicyArgs build() {
+        }        public ApplicationDeploymentPolicyArgs build() {
             return new ApplicationDeploymentPolicyArgs(deploymentMode);
         }
     }

@@ -112,42 +112,34 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder codeConfiguration(@Nullable GitHubActionCodeConfigurationArgs codeConfiguration) {
             this.codeConfiguration = Output.ofNullable(codeConfiguration);
             return this;
         }
-
         public Builder containerConfiguration(@Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
-
         public Builder containerConfiguration(@Nullable GitHubActionContainerConfigurationArgs containerConfiguration) {
             this.containerConfiguration = Output.ofNullable(containerConfiguration);
             return this;
         }
-
         public Builder generateWorkflowFile(@Nullable Output<Boolean> generateWorkflowFile) {
             this.generateWorkflowFile = generateWorkflowFile;
             return this;
         }
-
         public Builder generateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
             this.generateWorkflowFile = Output.ofNullable(generateWorkflowFile);
             return this;
         }
-
         public Builder isLinux(@Nullable Output<Boolean> isLinux) {
             this.isLinux = isLinux;
             return this;
         }
-
         public Builder isLinux(@Nullable Boolean isLinux) {
             this.isLinux = Output.ofNullable(isLinux);
             return this;
-        }
-        public GitHubActionConfigurationArgs build() {
+        }        public GitHubActionConfigurationArgs build() {
             return new GitHubActionConfigurationArgs(codeConfiguration, containerConfiguration, generateWorkflowFile, isLinux);
         }
     }

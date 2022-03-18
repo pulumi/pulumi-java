@@ -61,12 +61,10 @@ public final class HostingEnvironmentProfileArgs extends io.pulumi.resources.Res
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public HostingEnvironmentProfileArgs build() {
+        }        public HostingEnvironmentProfileArgs build() {
             return new HostingEnvironmentProfileArgs(id);
         }
     }

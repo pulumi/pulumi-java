@@ -92,17 +92,14 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
             this.identity = identity;
             return this;
         }
-
         public Builder keyVaultProperties(KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public EncryptionPropertyResponse build() {
+        }        public EncryptionPropertyResponse build() {
             return new EncryptionPropertyResponse(identity, keyVaultProperties, status);
         }
     }

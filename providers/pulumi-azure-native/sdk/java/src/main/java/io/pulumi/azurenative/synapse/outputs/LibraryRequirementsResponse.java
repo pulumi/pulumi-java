@@ -87,17 +87,14 @@ public final class LibraryRequirementsResponse {
             this.content = content;
             return this;
         }
-
         public Builder filename(@Nullable String filename) {
             this.filename = filename;
             return this;
         }
-
         public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
-        }
-        public LibraryRequirementsResponse build() {
+        }        public LibraryRequirementsResponse build() {
             return new LibraryRequirementsResponse(content, filename, time);
         }
     }

@@ -79,12 +79,10 @@ public final class SamplingSettingsResponse extends io.pulumi.resources.InvokeAr
             this.percentage = percentage;
             return this;
         }
-
         public Builder samplingType(@Nullable String samplingType) {
             this.samplingType = samplingType;
             return this;
-        }
-        public SamplingSettingsResponse build() {
+        }        public SamplingSettingsResponse build() {
             return new SamplingSettingsResponse(percentage, samplingType);
         }
     }

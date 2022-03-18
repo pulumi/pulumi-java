@@ -80,17 +80,20 @@ public final class ContainerConfigurationResponse {
             this.containerImageNames = containerImageNames;
             return this;
         }
-
+        public Builder containerImageNames(String... containerImageNames) {
+            return containerImageNames(List.of(containerImageNames));
+        }
         public Builder containerRegistries(@Nullable List<ContainerRegistryResponse> containerRegistries) {
             this.containerRegistries = containerRegistries;
             return this;
         }
-
+        public Builder containerRegistries(ContainerRegistryResponse... containerRegistries) {
+            return containerRegistries(List.of(containerRegistries));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ContainerConfigurationResponse build() {
+        }        public ContainerConfigurationResponse build() {
             return new ContainerConfigurationResponse(containerImageNames, containerRegistries, type);
         }
     }

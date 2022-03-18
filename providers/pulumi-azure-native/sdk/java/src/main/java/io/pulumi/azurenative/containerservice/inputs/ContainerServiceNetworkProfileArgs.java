@@ -213,102 +213,82 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
-
         public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
             this.dnsServiceIP = Output.ofNullable(dnsServiceIP);
             return this;
         }
-
         public Builder dockerBridgeCidr(@Nullable Output<String> dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
-
         public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = Output.ofNullable(dockerBridgeCidr);
             return this;
         }
-
         public Builder loadBalancerProfile(@Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile) {
             this.loadBalancerProfile = loadBalancerProfile;
             return this;
         }
-
         public Builder loadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileArgs loadBalancerProfile) {
             this.loadBalancerProfile = Output.ofNullable(loadBalancerProfile);
             return this;
         }
-
         public Builder loadBalancerSku(@Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku) {
             this.loadBalancerSku = loadBalancerSku;
             return this;
         }
-
         public Builder loadBalancerSku(@Nullable Either<String,LoadBalancerSku> loadBalancerSku) {
             this.loadBalancerSku = Output.ofNullable(loadBalancerSku);
             return this;
         }
-
         public Builder networkMode(@Nullable Output<Either<String,NetworkMode>> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
-
         public Builder networkMode(@Nullable Either<String,NetworkMode> networkMode) {
             this.networkMode = Output.ofNullable(networkMode);
             return this;
         }
-
         public Builder networkPlugin(@Nullable Output<Either<String,NetworkPlugin>> networkPlugin) {
             this.networkPlugin = networkPlugin;
             return this;
         }
-
         public Builder networkPlugin(@Nullable Either<String,NetworkPlugin> networkPlugin) {
             this.networkPlugin = Output.ofNullable(networkPlugin);
             return this;
         }
-
         public Builder networkPolicy(@Nullable Output<Either<String,NetworkPolicy>> networkPolicy) {
             this.networkPolicy = networkPolicy;
             return this;
         }
-
         public Builder networkPolicy(@Nullable Either<String,NetworkPolicy> networkPolicy) {
             this.networkPolicy = Output.ofNullable(networkPolicy);
             return this;
         }
-
         public Builder outboundType(@Nullable Output<Either<String,OutboundType>> outboundType) {
             this.outboundType = outboundType;
             return this;
         }
-
         public Builder outboundType(@Nullable Either<String,OutboundType> outboundType) {
             this.outboundType = Output.ofNullable(outboundType);
             return this;
         }
-
         public Builder podCidr(@Nullable Output<String> podCidr) {
             this.podCidr = podCidr;
             return this;
         }
-
         public Builder podCidr(@Nullable String podCidr) {
             this.podCidr = Output.ofNullable(podCidr);
             return this;
         }
-
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = Output.ofNullable(serviceCidr);
             return this;
-        }
-        public ContainerServiceNetworkProfileArgs build() {
+        }        public ContainerServiceNetworkProfileArgs build() {
             return new ContainerServiceNetworkProfileArgs(dnsServiceIP, dockerBridgeCidr, loadBalancerProfile, loadBalancerSku, networkMode, networkPlugin, networkPolicy, outboundType, podCidr, serviceCidr);
         }
     }

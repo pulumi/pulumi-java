@@ -80,22 +80,21 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
             this.commonNames = commonNames;
             return this;
         }
-
         public Builder commonNames(@Nullable List<ServerCertificateCommonNameArgs> commonNames) {
             this.commonNames = Output.ofNullable(commonNames);
             return this;
         }
-
+        public Builder commonNames(ServerCertificateCommonNameArgs... commonNames) {
+            return commonNames(List.of(commonNames));
+        }
         public Builder x509StoreName(@Nullable Output<String> x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
         }
-
         public Builder x509StoreName(@Nullable String x509StoreName) {
             this.x509StoreName = Output.ofNullable(x509StoreName);
             return this;
-        }
-        public ServerCertificateCommonNamesArgs build() {
+        }        public ServerCertificateCommonNamesArgs build() {
             return new ServerCertificateCommonNamesArgs(commonNames, x509StoreName);
         }
     }

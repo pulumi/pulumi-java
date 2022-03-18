@@ -69,12 +69,10 @@ public final class ManagedClusterIdentityResponseUserAssignedIdentities {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public ManagedClusterIdentityResponseUserAssignedIdentities build() {
+        }        public ManagedClusterIdentityResponseUserAssignedIdentities build() {
             return new ManagedClusterIdentityResponseUserAssignedIdentities(clientId, principalId);
         }
     }

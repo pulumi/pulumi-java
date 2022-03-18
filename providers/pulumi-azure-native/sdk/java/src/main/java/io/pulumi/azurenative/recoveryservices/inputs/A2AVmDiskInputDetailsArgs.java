@@ -94,32 +94,26 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
             this.diskUri = diskUri;
             return this;
         }
-
         public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = Output.ofNullable(diskUri);
             return this;
         }
-
         public Builder primaryStagingAzureStorageAccountId(@Nullable Output<String> primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
-
         public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = Output.ofNullable(primaryStagingAzureStorageAccountId);
             return this;
         }
-
         public Builder recoveryAzureStorageAccountId(@Nullable Output<String> recoveryAzureStorageAccountId) {
             this.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
             return this;
         }
-
         public Builder recoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
             this.recoveryAzureStorageAccountId = Output.ofNullable(recoveryAzureStorageAccountId);
             return this;
-        }
-        public A2AVmDiskInputDetailsArgs build() {
+        }        public A2AVmDiskInputDetailsArgs build() {
             return new A2AVmDiskInputDetailsArgs(diskUri, primaryStagingAzureStorageAccountId, recoveryAzureStorageAccountId);
         }
     }

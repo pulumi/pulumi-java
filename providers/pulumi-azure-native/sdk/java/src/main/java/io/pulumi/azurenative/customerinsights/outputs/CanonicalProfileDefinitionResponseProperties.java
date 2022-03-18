@@ -120,27 +120,22 @@ public final class CanonicalProfileDefinitionResponseProperties {
             this.profileName = profileName;
             return this;
         }
-
         public Builder profilePropertyName(@Nullable String profilePropertyName) {
             this.profilePropertyName = profilePropertyName;
             return this;
         }
-
         public Builder rank(@Nullable Integer rank) {
             this.rank = rank;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CanonicalProfileDefinitionResponseProperties build() {
+        }        public CanonicalProfileDefinitionResponseProperties build() {
             return new CanonicalProfileDefinitionResponseProperties(profileName, profilePropertyName, rank, type, value);
         }
     }

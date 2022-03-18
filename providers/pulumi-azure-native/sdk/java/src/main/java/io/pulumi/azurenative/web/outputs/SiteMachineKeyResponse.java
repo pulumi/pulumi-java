@@ -103,22 +103,18 @@ public final class SiteMachineKeyResponse {
             this.decryption = decryption;
             return this;
         }
-
         public Builder decryptionKey(@Nullable String decryptionKey) {
             this.decryptionKey = decryptionKey;
             return this;
         }
-
         public Builder validation(@Nullable String validation) {
             this.validation = validation;
             return this;
         }
-
         public Builder validationKey(@Nullable String validationKey) {
             this.validationKey = validationKey;
             return this;
-        }
-        public SiteMachineKeyResponse build() {
+        }        public SiteMachineKeyResponse build() {
             return new SiteMachineKeyResponse(decryption, decryptionKey, validation, validationKey);
         }
     }

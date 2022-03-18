@@ -69,12 +69,10 @@ public final class ListObjectAnchorsAccountKeysResult {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public ListObjectAnchorsAccountKeysResult build() {
+        }        public ListObjectAnchorsAccountKeysResult build() {
             return new ListObjectAnchorsAccountKeysResult(primaryKey, secondaryKey);
         }
     }

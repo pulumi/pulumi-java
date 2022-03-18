@@ -61,12 +61,10 @@ public final class ApiPortalCustomDomainPropertiesArgs extends io.pulumi.resourc
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
-        }
-        public ApiPortalCustomDomainPropertiesArgs build() {
+        }        public ApiPortalCustomDomainPropertiesArgs build() {
             return new ApiPortalCustomDomainPropertiesArgs(thumbprint);
         }
     }

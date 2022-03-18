@@ -111,42 +111,34 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
             this.height = height;
             return this;
         }
-
         public Builder height(@Nullable String height) {
             this.height = Output.ofNullable(height);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = Output.ofNullable(width);
             return this;
-        }
-        public PngLayerArgs build() {
+        }        public PngLayerArgs build() {
             return new PngLayerArgs(height, label, odataType, width);
         }
     }

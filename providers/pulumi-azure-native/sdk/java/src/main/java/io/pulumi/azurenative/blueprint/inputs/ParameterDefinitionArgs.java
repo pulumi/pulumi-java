@@ -146,62 +146,53 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
             this.allowedValues = allowedValues;
             return this;
         }
-
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
             this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
-
+        public Builder allowedValues(Object... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder strongType(@Nullable Output<String> strongType) {
             this.strongType = strongType;
             return this;
         }
-
         public Builder strongType(@Nullable String strongType) {
             this.strongType = Output.ofNullable(strongType);
             return this;
         }
-
         public Builder type(Output<Either<String,TemplateParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,TemplateParameterType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ParameterDefinitionArgs build() {
+        }        public ParameterDefinitionArgs build() {
             return new ParameterDefinitionArgs(allowedValues, defaultValue, description, displayName, strongType, type);
         }
     }

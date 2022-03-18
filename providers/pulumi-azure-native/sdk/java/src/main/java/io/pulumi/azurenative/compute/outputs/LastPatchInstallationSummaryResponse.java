@@ -216,57 +216,46 @@ public final class LastPatchInstallationSummaryResponse {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder excludedPatchCount(Integer excludedPatchCount) {
             this.excludedPatchCount = Objects.requireNonNull(excludedPatchCount);
             return this;
         }
-
         public Builder failedPatchCount(Integer failedPatchCount) {
             this.failedPatchCount = Objects.requireNonNull(failedPatchCount);
             return this;
         }
-
         public Builder installationActivityId(String installationActivityId) {
             this.installationActivityId = Objects.requireNonNull(installationActivityId);
             return this;
         }
-
         public Builder installedPatchCount(Integer installedPatchCount) {
             this.installedPatchCount = Objects.requireNonNull(installedPatchCount);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder maintenanceWindowExceeded(Boolean maintenanceWindowExceeded) {
             this.maintenanceWindowExceeded = Objects.requireNonNull(maintenanceWindowExceeded);
             return this;
         }
-
         public Builder notSelectedPatchCount(Integer notSelectedPatchCount) {
             this.notSelectedPatchCount = Objects.requireNonNull(notSelectedPatchCount);
             return this;
         }
-
         public Builder pendingPatchCount(Integer pendingPatchCount) {
             this.pendingPatchCount = Objects.requireNonNull(pendingPatchCount);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public LastPatchInstallationSummaryResponse build() {
+        }        public LastPatchInstallationSummaryResponse build() {
             return new LastPatchInstallationSummaryResponse(error, excludedPatchCount, failedPatchCount, installationActivityId, installedPatchCount, lastModifiedTime, maintenanceWindowExceeded, notSelectedPatchCount, pendingPatchCount, startTime, status);
         }
     }

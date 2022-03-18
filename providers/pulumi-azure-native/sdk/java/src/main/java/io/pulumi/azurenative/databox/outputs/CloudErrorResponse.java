@@ -121,27 +121,28 @@ public final class CloudErrorResponse {
             this.additionalInfo = Objects.requireNonNull(additionalInfo);
             return this;
         }
-
+        public Builder additionalInfo(AdditionalErrorInfoResponse... additionalInfo) {
+            return additionalInfo(List.of(additionalInfo));
+        }
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
-
         public Builder details(List<CloudErrorResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
+        public Builder details(CloudErrorResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public CloudErrorResponse build() {
+        }        public CloudErrorResponse build() {
             return new CloudErrorResponse(additionalInfo, code, details, message, target);
         }
     }

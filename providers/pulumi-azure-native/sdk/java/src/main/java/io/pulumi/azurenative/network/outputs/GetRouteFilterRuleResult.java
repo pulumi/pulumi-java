@@ -168,42 +168,37 @@ public final class GetRouteFilterRuleResult {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder communities(List<String> communities) {
             this.communities = Objects.requireNonNull(communities);
             return this;
         }
-
+        public Builder communities(String... communities) {
+            return communities(List.of(communities));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routeFilterRuleType(String routeFilterRuleType) {
             this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
             return this;
-        }
-        public GetRouteFilterRuleResult build() {
+        }        public GetRouteFilterRuleResult build() {
             return new GetRouteFilterRuleResult(access, communities, etag, id, location, name, provisioningState, routeFilterRuleType);
         }
     }

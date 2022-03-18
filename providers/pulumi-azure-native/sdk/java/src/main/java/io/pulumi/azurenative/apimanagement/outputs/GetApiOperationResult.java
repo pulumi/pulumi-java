@@ -219,57 +219,52 @@ public final class GetApiOperationResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policies(@Nullable String policies) {
             this.policies = policies;
             return this;
         }
-
         public Builder request(@Nullable RequestContractResponse request) {
             this.request = request;
             return this;
         }
-
         public Builder responses(@Nullable List<ResponseContractResponse> responses) {
             this.responses = responses;
             return this;
         }
-
+        public Builder responses(ResponseContractResponse... responses) {
+            return responses(List.of(responses));
+        }
         public Builder templateParameters(@Nullable List<ParameterContractResponse> templateParameters) {
             this.templateParameters = templateParameters;
             return this;
         }
-
+        public Builder templateParameters(ParameterContractResponse... templateParameters) {
+            return templateParameters(List.of(templateParameters));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
-        }
-        public GetApiOperationResult build() {
+        }        public GetApiOperationResult build() {
             return new GetApiOperationResult(description, displayName, id, method, name, policies, request, responses, templateParameters, type, urlTemplate);
         }
     }

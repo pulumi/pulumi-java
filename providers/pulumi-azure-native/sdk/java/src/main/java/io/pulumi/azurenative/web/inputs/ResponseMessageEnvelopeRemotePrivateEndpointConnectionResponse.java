@@ -247,62 +247,53 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
             this.error = error;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder plan(@Nullable ArmPlanResponse plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder properties(@Nullable RemotePrivateEndpointConnectionResponse properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder sku(@Nullable SkuDescriptionResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse build() {
             return new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(error, id, identity, location, name, plan, properties, sku, status, tags, type, zones);
         }
     }

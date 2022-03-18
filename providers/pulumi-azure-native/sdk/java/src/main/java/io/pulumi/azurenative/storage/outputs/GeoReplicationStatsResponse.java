@@ -86,17 +86,14 @@ public final class GeoReplicationStatsResponse {
             this.canFailover = Objects.requireNonNull(canFailover);
             return this;
         }
-
         public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GeoReplicationStatsResponse build() {
+        }        public GeoReplicationStatsResponse build() {
             return new GeoReplicationStatsResponse(canFailover, lastSyncTime, status);
         }
     }

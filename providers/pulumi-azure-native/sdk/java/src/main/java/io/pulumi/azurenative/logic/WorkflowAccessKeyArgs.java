@@ -138,62 +138,50 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
             this.accessKeyName = accessKeyName;
             return this;
         }
-
         public Builder accessKeyName(@Nullable String accessKeyName) {
             this.accessKeyName = Output.ofNullable(accessKeyName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder notAfter(@Nullable Output<String> notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = Output.ofNullable(notAfter);
             return this;
         }
-
         public Builder notBefore(@Nullable Output<String> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
-
         public Builder notBefore(@Nullable String notBefore) {
             this.notBefore = Output.ofNullable(notBefore);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workflowName(Output<String> workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Output.of(Objects.requireNonNull(workflowName));
             return this;
-        }
-        public WorkflowAccessKeyArgs build() {
+        }        public WorkflowAccessKeyArgs build() {
             return new WorkflowAccessKeyArgs(accessKeyName, id, notAfter, notBefore, resourceGroupName, workflowName);
         }
     }

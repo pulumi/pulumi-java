@@ -141,62 +141,50 @@ public final class CassandraClusterArgs extends io.pulumi.resources.ResourceArgs
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<ClusterResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ClusterResourcePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CassandraClusterArgs build() {
+        }        public CassandraClusterArgs build() {
             return new CassandraClusterArgs(clusterName, identity, location, properties, resourceGroupName, tags);
         }
     }

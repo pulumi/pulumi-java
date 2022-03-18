@@ -78,12 +78,10 @@ public final class LiveEventEndpointResponse extends io.pulumi.resources.InvokeA
             this.protocol = protocol;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public LiveEventEndpointResponse build() {
+        }        public LiveEventEndpointResponse build() {
             return new LiveEventEndpointResponse(protocol, url);
         }
     }

@@ -126,27 +126,28 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
-
+        public Builder databases(String... databases) {
+            return databases(List.of(databases));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder serverVersion(String serverVersion) {
             this.serverVersion = Objects.requireNonNull(serverVersion);
             return this;
         }
-
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
-
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-        public ConnectToTargetAzureDbForMySqlTaskOutputResponse build() {
+        public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }        public ConnectToTargetAzureDbForMySqlTaskOutputResponse build() {
             return new ConnectToTargetAzureDbForMySqlTaskOutputResponse(databases, id, serverVersion, targetServerBrandVersion, validationErrors);
         }
     }

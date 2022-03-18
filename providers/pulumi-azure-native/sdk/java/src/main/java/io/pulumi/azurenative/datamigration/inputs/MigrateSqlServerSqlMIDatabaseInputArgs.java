@@ -112,42 +112,37 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
             this.backupFilePaths = backupFilePaths;
             return this;
         }
-
         public Builder backupFilePaths(@Nullable List<String> backupFilePaths) {
             this.backupFilePaths = Output.ofNullable(backupFilePaths);
             return this;
         }
-
+        public Builder backupFilePaths(String... backupFilePaths) {
+            return backupFilePaths(List.of(backupFilePaths));
+        }
         public Builder backupFileShare(@Nullable Output<FileShareArgs> backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
-
         public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
             this.backupFileShare = Output.ofNullable(backupFileShare);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder restoreDatabaseName(Output<String> restoreDatabaseName) {
             this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
             return this;
         }
-
         public Builder restoreDatabaseName(String restoreDatabaseName) {
             this.restoreDatabaseName = Output.of(Objects.requireNonNull(restoreDatabaseName));
             return this;
-        }
-        public MigrateSqlServerSqlMIDatabaseInputArgs build() {
+        }        public MigrateSqlServerSqlMIDatabaseInputArgs build() {
             return new MigrateSqlServerSqlMIDatabaseInputArgs(backupFilePaths, backupFileShare, name, restoreDatabaseName);
         }
     }

@@ -53,8 +53,7 @@ public final class WindowsOsInfoResponse {
         public Builder windowsOsState(@Nullable String windowsOsState) {
             this.windowsOsState = windowsOsState;
             return this;
-        }
-        public WindowsOsInfoResponse build() {
+        }        public WindowsOsInfoResponse build() {
             return new WindowsOsInfoResponse(windowsOsState);
         }
     }

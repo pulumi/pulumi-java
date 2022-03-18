@@ -78,12 +78,10 @@ public final class QosPortRangeResponse extends io.pulumi.resources.InvokeArgs {
             this.end = end;
             return this;
         }
-
         public Builder start(@Nullable Integer start) {
             this.start = start;
             return this;
-        }
-        public QosPortRangeResponse build() {
+        }        public QosPortRangeResponse build() {
             return new QosPortRangeResponse(end, start);
         }
     }

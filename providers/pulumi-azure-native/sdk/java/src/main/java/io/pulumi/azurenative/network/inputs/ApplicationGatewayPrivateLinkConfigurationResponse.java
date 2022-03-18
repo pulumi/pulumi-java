@@ -144,32 +144,29 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
+        public Builder ipConfigurations(ApplicationGatewayPrivateLinkIpConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ApplicationGatewayPrivateLinkConfigurationResponse build() {
+        }        public ApplicationGatewayPrivateLinkConfigurationResponse build() {
             return new ApplicationGatewayPrivateLinkConfigurationResponse(etag, id, ipConfigurations, name, provisioningState, type);
         }
     }

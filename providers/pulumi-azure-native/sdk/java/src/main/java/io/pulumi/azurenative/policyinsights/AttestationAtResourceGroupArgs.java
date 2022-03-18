@@ -190,92 +190,77 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
             this.attestationName = attestationName;
             return this;
         }
-
         public Builder attestationName(@Nullable String attestationName) {
             this.attestationName = Output.ofNullable(attestationName);
             return this;
         }
-
         public Builder comments(@Nullable Output<String> comments) {
             this.comments = comments;
             return this;
         }
-
         public Builder comments(@Nullable String comments) {
             this.comments = Output.ofNullable(comments);
             return this;
         }
-
         public Builder complianceState(@Nullable Output<Either<String,ComplianceState>> complianceState) {
             this.complianceState = complianceState;
             return this;
         }
-
         public Builder complianceState(@Nullable Either<String,ComplianceState> complianceState) {
             this.complianceState = Output.ofNullable(complianceState);
             return this;
         }
-
         public Builder evidence(@Nullable Output<List<AttestationEvidenceArgs>> evidence) {
             this.evidence = evidence;
             return this;
         }
-
         public Builder evidence(@Nullable List<AttestationEvidenceArgs> evidence) {
             this.evidence = Output.ofNullable(evidence);
             return this;
         }
-
+        public Builder evidence(AttestationEvidenceArgs... evidence) {
+            return evidence(List.of(evidence));
+        }
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
-
         public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = Output.ofNullable(expiresOn);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder policyAssignmentId(Output<String> policyAssignmentId) {
             this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
             return this;
         }
-
         public Builder policyAssignmentId(String policyAssignmentId) {
             this.policyAssignmentId = Output.of(Objects.requireNonNull(policyAssignmentId));
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public AttestationAtResourceGroupArgs build() {
+        }        public AttestationAtResourceGroupArgs build() {
             return new AttestationAtResourceGroupArgs(attestationName, comments, complianceState, evidence, expiresOn, owner, policyAssignmentId, policyDefinitionReferenceId, resourceGroupName);
         }
     }

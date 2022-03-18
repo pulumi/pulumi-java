@@ -225,112 +225,105 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
             this.destinationIpRanges = destinationIpRanges;
             return this;
         }
-
         public Builder destinationIpRanges(@Nullable List<QosIpRangeArgs> destinationIpRanges) {
             this.destinationIpRanges = Output.ofNullable(destinationIpRanges);
             return this;
         }
-
+        public Builder destinationIpRanges(QosIpRangeArgs... destinationIpRanges) {
+            return destinationIpRanges(List.of(destinationIpRanges));
+        }
         public Builder destinationPortRanges(@Nullable Output<List<QosPortRangeArgs>> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
-
         public Builder destinationPortRanges(@Nullable List<QosPortRangeArgs> destinationPortRanges) {
             this.destinationPortRanges = Output.ofNullable(destinationPortRanges);
             return this;
         }
-
+        public Builder destinationPortRanges(QosPortRangeArgs... destinationPortRanges) {
+            return destinationPortRanges(List.of(destinationPortRanges));
+        }
         public Builder dscpConfigurationName(@Nullable Output<String> dscpConfigurationName) {
             this.dscpConfigurationName = dscpConfigurationName;
             return this;
         }
-
         public Builder dscpConfigurationName(@Nullable String dscpConfigurationName) {
             this.dscpConfigurationName = Output.ofNullable(dscpConfigurationName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder markings(@Nullable Output<List<Integer>> markings) {
             this.markings = markings;
             return this;
         }
-
         public Builder markings(@Nullable List<Integer> markings) {
             this.markings = Output.ofNullable(markings);
             return this;
         }
-
+        public Builder markings(Integer... markings) {
+            return markings(List.of(markings));
+        }
         public Builder protocol(@Nullable Output<Either<String,ProtocolType>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,ProtocolType> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sourceIpRanges(@Nullable Output<List<QosIpRangeArgs>> sourceIpRanges) {
             this.sourceIpRanges = sourceIpRanges;
             return this;
         }
-
         public Builder sourceIpRanges(@Nullable List<QosIpRangeArgs> sourceIpRanges) {
             this.sourceIpRanges = Output.ofNullable(sourceIpRanges);
             return this;
         }
-
+        public Builder sourceIpRanges(QosIpRangeArgs... sourceIpRanges) {
+            return sourceIpRanges(List.of(sourceIpRanges));
+        }
         public Builder sourcePortRanges(@Nullable Output<List<QosPortRangeArgs>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
         public Builder sourcePortRanges(@Nullable List<QosPortRangeArgs> sourcePortRanges) {
             this.sourcePortRanges = Output.ofNullable(sourcePortRanges);
             return this;
         }
-
+        public Builder sourcePortRanges(QosPortRangeArgs... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DscpConfigurationArgs build() {
+        }        public DscpConfigurationArgs build() {
             return new DscpConfigurationArgs(destinationIpRanges, destinationPortRanges, dscpConfigurationName, id, location, markings, protocol, resourceGroupName, sourceIpRanges, sourcePortRanges, tags);
         }
     }

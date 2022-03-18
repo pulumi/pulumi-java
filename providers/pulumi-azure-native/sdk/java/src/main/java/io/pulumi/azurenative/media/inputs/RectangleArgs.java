@@ -110,42 +110,34 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
             this.height = height;
             return this;
         }
-
         public Builder height(@Nullable String height) {
             this.height = Output.ofNullable(height);
             return this;
         }
-
         public Builder left(@Nullable Output<String> left) {
             this.left = left;
             return this;
         }
-
         public Builder left(@Nullable String left) {
             this.left = Output.ofNullable(left);
             return this;
         }
-
         public Builder top(@Nullable Output<String> top) {
             this.top = top;
             return this;
         }
-
         public Builder top(@Nullable String top) {
             this.top = Output.ofNullable(top);
             return this;
         }
-
         public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = Output.ofNullable(width);
             return this;
-        }
-        public RectangleArgs build() {
+        }        public RectangleArgs build() {
             return new RectangleArgs(height, left, top, width);
         }
     }

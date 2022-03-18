@@ -159,42 +159,34 @@ public final class KeyVaultCertificateSourceParametersResponse {
             this.deleteRule = Objects.requireNonNull(deleteRule);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder updateRule(String updateRule) {
             this.updateRule = Objects.requireNonNull(updateRule);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
-        }
-        public KeyVaultCertificateSourceParametersResponse build() {
+        }        public KeyVaultCertificateSourceParametersResponse build() {
             return new KeyVaultCertificateSourceParametersResponse(deleteRule, odataType, resourceGroupName, secretName, secretVersion, subscriptionId, updateRule, vaultName);
         }
     }

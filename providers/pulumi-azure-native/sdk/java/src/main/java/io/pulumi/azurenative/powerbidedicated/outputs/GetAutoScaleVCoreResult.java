@@ -203,52 +203,42 @@ public final class GetAutoScaleVCoreResult {
             this.capacityLimit = capacityLimit;
             return this;
         }
-
         public Builder capacityObjectId(@Nullable String capacityObjectId) {
             this.capacityObjectId = capacityObjectId;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(AutoScaleVCoreSkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder systemData(@Nullable SystemDataResponse systemData) {
             this.systemData = systemData;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAutoScaleVCoreResult build() {
+        }        public GetAutoScaleVCoreResult build() {
             return new GetAutoScaleVCoreResult(capacityLimit, capacityObjectId, id, location, name, provisioningState, sku, systemData, tags, type);
         }
     }

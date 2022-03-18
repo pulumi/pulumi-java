@@ -114,42 +114,34 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
             this.cleanup = cleanup;
             return this;
         }
-
         public Builder cleanup(@Nullable Boolean cleanup) {
             this.cleanup = Output.ofNullable(cleanup);
             return this;
         }
-
         public Builder computeType(@Nullable Output<Either<String,DataFlowComputeType>> computeType) {
             this.computeType = computeType;
             return this;
         }
-
         public Builder computeType(@Nullable Either<String,DataFlowComputeType> computeType) {
             this.computeType = Output.ofNullable(computeType);
             return this;
         }
-
         public Builder coreCount(@Nullable Output<Integer> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder coreCount(@Nullable Integer coreCount) {
             this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
-
         public Builder timeToLive(@Nullable Output<Integer> timeToLive) {
             this.timeToLive = timeToLive;
             return this;
         }
-
         public Builder timeToLive(@Nullable Integer timeToLive) {
             this.timeToLive = Output.ofNullable(timeToLive);
             return this;
-        }
-        public IntegrationRuntimeDataFlowPropertiesArgs build() {
+        }        public IntegrationRuntimeDataFlowPropertiesArgs build() {
             return new IntegrationRuntimeDataFlowPropertiesArgs(cleanup, computeType, coreCount, timeToLive);
         }
     }

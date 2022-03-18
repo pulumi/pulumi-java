@@ -293,77 +293,68 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
             this.accessPolicies = accessPolicies;
             return this;
         }
-
+        public Builder accessPolicies(AccessPolicyEntryResponse... accessPolicies) {
+            return accessPolicies(List.of(accessPolicies));
+        }
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
             this.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
-
         public Builder enableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
             this.enableRbacAuthorization = enableRbacAuthorization;
             return this;
         }
-
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
             this.enableSoftDelete = enableSoftDelete;
             return this;
         }
-
         public Builder enabledForDeployment(@Nullable Boolean enabledForDeployment) {
             this.enabledForDeployment = enabledForDeployment;
             return this;
         }
-
         public Builder enabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
             this.enabledForDiskEncryption = enabledForDiskEncryption;
             return this;
         }
-
         public Builder enabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
             this.enabledForTemplateDeployment = enabledForTemplateDeployment;
             return this;
         }
-
         public Builder hsmPoolResourceId(String hsmPoolResourceId) {
             this.hsmPoolResourceId = Objects.requireNonNull(hsmPoolResourceId);
             return this;
         }
-
         public Builder networkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionItemResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionItemResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder vaultUri(@Nullable String vaultUri) {
             this.vaultUri = vaultUri;
             return this;
-        }
-        public VaultPropertiesResponse build() {
+        }        public VaultPropertiesResponse build() {
             return new VaultPropertiesResponse(accessPolicies, enablePurgeProtection, enableRbacAuthorization, enableSoftDelete, enabledForDeployment, enabledForDiskEncryption, enabledForTemplateDeployment, hsmPoolResourceId, networkAcls, privateEndpointConnections, provisioningState, sku, softDeleteRetentionInDays, tenantId, vaultUri);
         }
     }

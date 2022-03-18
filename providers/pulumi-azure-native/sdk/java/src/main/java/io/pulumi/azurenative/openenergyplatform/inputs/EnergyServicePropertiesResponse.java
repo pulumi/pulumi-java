@@ -92,22 +92,21 @@ public final class EnergyServicePropertiesResponse extends io.pulumi.resources.I
             this.authAppId = authAppId;
             return this;
         }
-
         public Builder dataPartitionNames(@Nullable List<DataPartitionNamesResponse> dataPartitionNames) {
             this.dataPartitionNames = dataPartitionNames;
             return this;
         }
-
+        public Builder dataPartitionNames(DataPartitionNamesResponse... dataPartitionNames) {
+            return dataPartitionNames(List.of(dataPartitionNames));
+        }
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public EnergyServicePropertiesResponse build() {
+        }        public EnergyServicePropertiesResponse build() {
             return new EnergyServicePropertiesResponse(authAppId, dataPartitionNames, dnsName, provisioningState);
         }
     }

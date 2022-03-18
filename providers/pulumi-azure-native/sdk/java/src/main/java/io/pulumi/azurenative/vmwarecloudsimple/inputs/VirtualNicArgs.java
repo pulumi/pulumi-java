@@ -163,72 +163,61 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
             this.customization = customization;
             return this;
         }
-
         public Builder customization(@Nullable GuestOSNICCustomizationArgs customization) {
             this.customization = Output.ofNullable(customization);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder macAddress(@Nullable Output<String> macAddress) {
             this.macAddress = macAddress;
             return this;
         }
-
         public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = Output.ofNullable(macAddress);
             return this;
         }
-
         public Builder network(Output<VirtualNetworkArgs> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(VirtualNetworkArgs network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
-
         public Builder nicType(Output<NICType> nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
-
         public Builder nicType(NICType nicType) {
             this.nicType = Output.of(Objects.requireNonNull(nicType));
             return this;
         }
-
         public Builder powerOnBoot(@Nullable Output<Boolean> powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
-
         public Builder powerOnBoot(@Nullable Boolean powerOnBoot) {
             this.powerOnBoot = Output.ofNullable(powerOnBoot);
             return this;
         }
-
         public Builder virtualNicId(@Nullable Output<String> virtualNicId) {
             this.virtualNicId = virtualNicId;
             return this;
         }
-
         public Builder virtualNicId(@Nullable String virtualNicId) {
             this.virtualNicId = Output.ofNullable(virtualNicId);
             return this;
-        }
-        public VirtualNicArgs build() {
+        }        public VirtualNicArgs build() {
             return new VirtualNicArgs(customization, ipAddresses, macAddress, network, nicType, powerOnBoot, virtualNicId);
         }
     }

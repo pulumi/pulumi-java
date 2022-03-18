@@ -104,22 +104,18 @@ public final class GetEntityQueryArgs extends io.pulumi.resources.InvokeArgs {
             this.entityQueryId = Objects.requireNonNull(entityQueryId);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetEntityQueryArgs build() {
+        }        public GetEntityQueryArgs build() {
             return new GetEntityQueryArgs(entityQueryId, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }
     }

@@ -81,22 +81,18 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder type(Output<Either<String,VariableType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,VariableType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public VariableSpecificationArgs build() {
+        }        public VariableSpecificationArgs build() {
             return new VariableSpecificationArgs(defaultValue, type);
         }
     }

@@ -309,162 +309,136 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder enableDiskEncryption(@Nullable Output<Boolean> enableDiskEncryption) {
             this.enableDiskEncryption = enableDiskEncryption;
             return this;
         }
-
         public Builder enableDiskEncryption(@Nullable Boolean enableDiskEncryption) {
             this.enableDiskEncryption = Output.ofNullable(enableDiskEncryption);
             return this;
         }
-
         public Builder enableDoubleEncryption(@Nullable Output<Boolean> enableDoubleEncryption) {
             this.enableDoubleEncryption = enableDoubleEncryption;
             return this;
         }
-
         public Builder enableDoubleEncryption(@Nullable Boolean enableDoubleEncryption) {
             this.enableDoubleEncryption = Output.ofNullable(enableDoubleEncryption);
             return this;
         }
-
         public Builder enablePurge(@Nullable Output<Boolean> enablePurge) {
             this.enablePurge = enablePurge;
             return this;
         }
-
         public Builder enablePurge(@Nullable Boolean enablePurge) {
             this.enablePurge = Output.ofNullable(enablePurge);
             return this;
         }
-
         public Builder enableStreamingIngest(@Nullable Output<Boolean> enableStreamingIngest) {
             this.enableStreamingIngest = enableStreamingIngest;
             return this;
         }
-
         public Builder enableStreamingIngest(@Nullable Boolean enableStreamingIngest) {
             this.enableStreamingIngest = Output.ofNullable(enableStreamingIngest);
             return this;
         }
-
         public Builder engineType(@Nullable Output<Either<String,EngineType>> engineType) {
             this.engineType = engineType;
             return this;
         }
-
         public Builder engineType(@Nullable Either<String,EngineType> engineType) {
             this.engineType = Output.ofNullable(engineType);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder optimizedAutoscale(@Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale) {
             this.optimizedAutoscale = optimizedAutoscale;
             return this;
         }
-
         public Builder optimizedAutoscale(@Nullable OptimizedAutoscaleArgs optimizedAutoscale) {
             this.optimizedAutoscale = Output.ofNullable(optimizedAutoscale);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<AzureSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(AzureSkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder trustedExternalTenants(@Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants) {
             this.trustedExternalTenants = trustedExternalTenants;
             return this;
         }
-
         public Builder trustedExternalTenants(@Nullable List<TrustedExternalTenantArgs> trustedExternalTenants) {
             this.trustedExternalTenants = Output.ofNullable(trustedExternalTenants);
             return this;
         }
-
+        public Builder trustedExternalTenants(TrustedExternalTenantArgs... trustedExternalTenants) {
+            return trustedExternalTenants(List.of(trustedExternalTenants));
+        }
         public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = Output.ofNullable(virtualNetworkConfiguration);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public ClusterArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public ClusterArgs build() {
             return new ClusterArgs(clusterName, enableDiskEncryption, enableDoubleEncryption, enablePurge, enableStreamingIngest, engineType, identity, keyVaultProperties, location, optimizedAutoscale, resourceGroupName, sku, tags, trustedExternalTenants, virtualNetworkConfiguration, zones);
         }
     }

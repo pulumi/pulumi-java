@@ -90,17 +90,14 @@ public final class BoolEqualsAdvancedFilterResponse {
             this.key = key;
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder value(@Nullable Boolean value) {
             this.value = value;
             return this;
-        }
-        public BoolEqualsAdvancedFilterResponse build() {
+        }        public BoolEqualsAdvancedFilterResponse build() {
             return new BoolEqualsAdvancedFilterResponse(key, operatorType, value);
         }
     }

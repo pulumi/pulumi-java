@@ -88,17 +88,14 @@ public final class GetReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetReadOnlyFollowingDatabaseArgs build() {
+        }        public GetReadOnlyFollowingDatabaseArgs build() {
             return new GetReadOnlyFollowingDatabaseArgs(clusterName, databaseName, resourceGroupName);
         }
     }

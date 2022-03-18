@@ -96,17 +96,17 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(@Nullable List<ErrorDetailResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(ErrorDetailResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public ErrorResponseResponse build() {
+        }        public ErrorResponseResponse build() {
             return new ErrorResponseResponse(code, details, message);
         }
     }

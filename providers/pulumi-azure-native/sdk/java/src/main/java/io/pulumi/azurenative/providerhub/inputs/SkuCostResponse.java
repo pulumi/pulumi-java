@@ -79,17 +79,14 @@ public final class SkuCostResponse extends io.pulumi.resources.InvokeArgs {
             this.extendedUnit = extendedUnit;
             return this;
         }
-
         public Builder meterId(String meterId) {
             this.meterId = Objects.requireNonNull(meterId);
             return this;
         }
-
         public Builder quantity(@Nullable Integer quantity) {
             this.quantity = quantity;
             return this;
-        }
-        public SkuCostResponse build() {
+        }        public SkuCostResponse build() {
             return new SkuCostResponse(extendedUnit, meterId, quantity);
         }
     }

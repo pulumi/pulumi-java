@@ -96,17 +96,14 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
             this.eventRequestMessage = eventRequestMessage;
             return this;
         }
-
         public Builder eventResponseMessage(@Nullable EventResponseMessageResponse eventResponseMessage) {
             this.eventResponseMessage = eventResponseMessage;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public EventResponse build() {
+        }        public EventResponse build() {
             return new EventResponse(eventRequestMessage, eventResponseMessage, id);
         }
     }

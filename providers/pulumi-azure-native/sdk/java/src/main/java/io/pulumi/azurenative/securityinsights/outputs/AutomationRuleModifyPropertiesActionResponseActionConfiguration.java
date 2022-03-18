@@ -154,37 +154,33 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
             this.classification = classification;
             return this;
         }
-
         public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
-
         public Builder classificationReason(@Nullable String classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
-
         public Builder labels(@Nullable List<IncidentLabelResponse> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(IncidentLabelResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder owner(@Nullable IncidentOwnerInfoResponse owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder severity(@Nullable String severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public AutomationRuleModifyPropertiesActionResponseActionConfiguration build() {
+        }        public AutomationRuleModifyPropertiesActionResponseActionConfiguration build() {
             return new AutomationRuleModifyPropertiesActionResponseActionConfiguration(classification, classificationComment, classificationReason, labels, owner, severity, status);
         }
     }

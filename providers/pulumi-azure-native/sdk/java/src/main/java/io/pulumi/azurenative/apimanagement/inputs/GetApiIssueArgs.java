@@ -123,27 +123,22 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder expandCommentsAttachments(@Nullable Boolean expandCommentsAttachments) {
             this.expandCommentsAttachments = expandCommentsAttachments;
             return this;
         }
-
         public Builder issueId(String issueId) {
             this.issueId = Objects.requireNonNull(issueId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetApiIssueArgs build() {
+        }        public GetApiIssueArgs build() {
             return new GetApiIssueArgs(apiId, expandCommentsAttachments, issueId, resourceGroupName, serviceName);
         }
     }

@@ -95,32 +95,26 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
             this.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
             return this;
         }
-
         public Builder maxConcurrentRequestsPerInstance(@Nullable Integer maxConcurrentRequestsPerInstance) {
             this.maxConcurrentRequestsPerInstance = Output.ofNullable(maxConcurrentRequestsPerInstance);
             return this;
         }
-
         public Builder maxQueueWait(@Nullable Output<String> maxQueueWait) {
             this.maxQueueWait = maxQueueWait;
             return this;
         }
-
         public Builder maxQueueWait(@Nullable String maxQueueWait) {
             this.maxQueueWait = Output.ofNullable(maxQueueWait);
             return this;
         }
-
         public Builder requestTimeout(@Nullable Output<String> requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
-
         public Builder requestTimeout(@Nullable String requestTimeout) {
             this.requestTimeout = Output.ofNullable(requestTimeout);
             return this;
-        }
-        public OnlineRequestSettingsArgs build() {
+        }        public OnlineRequestSettingsArgs build() {
             return new OnlineRequestSettingsArgs(maxConcurrentRequestsPerInstance, maxQueueWait, requestTimeout);
         }
     }

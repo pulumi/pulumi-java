@@ -107,22 +107,21 @@ public final class PrivateLinkServiceProxyResponse {
             this.groupConnectivityInformation = groupConnectivityInformation;
             return this;
         }
-
+        public Builder groupConnectivityInformation(GroupConnectivityInformationResponse... groupConnectivityInformation) {
+            return groupConnectivityInformation(List.of(groupConnectivityInformation));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder remotePrivateEndpointConnection(@Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection) {
             this.remotePrivateEndpointConnection = remotePrivateEndpointConnection;
             return this;
         }
-
         public Builder remotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
             this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
-        }
-        public PrivateLinkServiceProxyResponse build() {
+        }        public PrivateLinkServiceProxyResponse build() {
             return new PrivateLinkServiceProxyResponse(groupConnectivityInformation, id, remotePrivateEndpointConnection, remotePrivateLinkServiceConnectionState);
         }
     }

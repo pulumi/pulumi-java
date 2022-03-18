@@ -142,62 +142,50 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.dataSourceName = dataSourceName;
             return this;
         }
-
         public Builder dataSourceName(@Nullable String dataSourceName) {
             this.dataSourceName = Output.ofNullable(dataSourceName);
             return this;
         }
-
         public Builder kind(Output<Either<String,DataSourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,DataSourceKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public DataSourceArgs build() {
+        }        public DataSourceArgs build() {
             return new DataSourceArgs(dataSourceName, kind, properties, resourceGroupName, tags, workspaceName);
         }
     }

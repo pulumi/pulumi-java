@@ -296,82 +296,66 @@ public final class GetArtifactSourceResult {
             this.armTemplateFolderPath = armTemplateFolderPath;
             return this;
         }
-
         public Builder branchRef(@Nullable String branchRef) {
             this.branchRef = branchRef;
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder securityToken(@Nullable String securityToken) {
             this.securityToken = securityToken;
             return this;
         }
-
         public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public GetArtifactSourceResult build() {
+        }        public GetArtifactSourceResult build() {
             return new GetArtifactSourceResult(armTemplateFolderPath, branchRef, createdDate, displayName, folderPath, id, location, name, provisioningState, securityToken, sourceType, status, tags, type, uniqueIdentifier, uri);
         }
     }

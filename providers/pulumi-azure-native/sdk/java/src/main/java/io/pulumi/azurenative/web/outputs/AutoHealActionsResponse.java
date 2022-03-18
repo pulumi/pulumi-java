@@ -90,17 +90,14 @@ public final class AutoHealActionsResponse {
             this.actionType = actionType;
             return this;
         }
-
         public Builder customAction(@Nullable AutoHealCustomActionResponse customAction) {
             this.customAction = customAction;
             return this;
         }
-
         public Builder minProcessExecutionTime(@Nullable String minProcessExecutionTime) {
             this.minProcessExecutionTime = minProcessExecutionTime;
             return this;
-        }
-        public AutoHealActionsResponse build() {
+        }        public AutoHealActionsResponse build() {
             return new AutoHealActionsResponse(actionType, customAction, minProcessExecutionTime);
         }
     }

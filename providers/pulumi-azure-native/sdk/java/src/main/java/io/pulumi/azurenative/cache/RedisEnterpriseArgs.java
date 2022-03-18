@@ -159,72 +159,61 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable Output<Either<String,TlsVersion>> minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable Either<String,TlsVersion> minimumTlsVersion) {
             this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<EnterpriseSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(EnterpriseSkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public RedisEnterpriseArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public RedisEnterpriseArgs build() {
             return new RedisEnterpriseArgs(clusterName, location, minimumTlsVersion, resourceGroupName, sku, tags, zones);
         }
     }

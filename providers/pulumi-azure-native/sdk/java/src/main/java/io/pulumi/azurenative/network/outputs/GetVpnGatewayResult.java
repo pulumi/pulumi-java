@@ -272,72 +272,67 @@ public final class GetVpnGatewayResult {
             this.bgpSettings = bgpSettings;
             return this;
         }
-
         public Builder connections(@Nullable List<VpnConnectionResponse> connections) {
             this.connections = connections;
             return this;
         }
-
+        public Builder connections(VpnConnectionResponse... connections) {
+            return connections(List.of(connections));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(List<VpnGatewayIpConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(VpnGatewayIpConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder natRules(@Nullable List<VpnGatewayNatRuleResponse> natRules) {
             this.natRules = natRules;
             return this;
         }
-
+        public Builder natRules(VpnGatewayNatRuleResponse... natRules) {
+            return natRules(List.of(natRules));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
-        }
-        public GetVpnGatewayResult build() {
+        }        public GetVpnGatewayResult build() {
             return new GetVpnGatewayResult(bgpSettings, connections, etag, id, ipConfigurations, isRoutingPreferenceInternet, location, name, natRules, provisioningState, tags, type, virtualHub, vpnGatewayScaleUnit);
         }
     }

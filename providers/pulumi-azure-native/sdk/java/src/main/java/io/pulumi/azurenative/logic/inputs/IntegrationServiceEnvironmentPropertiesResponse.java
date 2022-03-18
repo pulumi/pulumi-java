@@ -145,32 +145,26 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
-
         public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
             this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public IntegrationServiceEnvironmentPropertiesResponse build() {
+        }        public IntegrationServiceEnvironmentPropertiesResponse build() {
             return new IntegrationServiceEnvironmentPropertiesResponse(encryptionConfiguration, endpointsConfiguration, integrationServiceEnvironmentId, networkConfiguration, provisioningState, state);
         }
     }

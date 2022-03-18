@@ -53,8 +53,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
         public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = sasUrl;
             return this;
-        }
-        public GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult build() {
+        }        public GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult build() {
             return new GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult(sasUrl);
         }
     }

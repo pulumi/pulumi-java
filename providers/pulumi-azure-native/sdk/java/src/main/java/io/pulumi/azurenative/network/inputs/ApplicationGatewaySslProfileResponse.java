@@ -178,42 +178,37 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
             this.clientAuthConfiguration = clientAuthConfiguration;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyResponse sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public Builder trustedClientCertificates(@Nullable List<SubResourceResponse> trustedClientCertificates) {
             this.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
-
+        public Builder trustedClientCertificates(SubResourceResponse... trustedClientCertificates) {
+            return trustedClientCertificates(List.of(trustedClientCertificates));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ApplicationGatewaySslProfileResponse build() {
+        }        public ApplicationGatewaySslProfileResponse build() {
             return new ApplicationGatewaySslProfileResponse(clientAuthConfiguration, etag, id, name, provisioningState, sslPolicy, trustedClientCertificates, type);
         }
     }

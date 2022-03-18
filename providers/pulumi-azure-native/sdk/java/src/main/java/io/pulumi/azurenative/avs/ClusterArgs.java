@@ -124,52 +124,42 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder clusterSize(Output<Integer> clusterSize) {
             this.clusterSize = Objects.requireNonNull(clusterSize);
             return this;
         }
-
         public Builder clusterSize(Integer clusterSize) {
             this.clusterSize = Output.of(Objects.requireNonNull(clusterSize));
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(clusterName, clusterSize, privateCloudName, resourceGroupName, sku);
         }
     }

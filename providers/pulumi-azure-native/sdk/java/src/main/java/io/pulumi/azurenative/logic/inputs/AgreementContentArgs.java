@@ -96,32 +96,26 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
             this.aS2 = aS2;
             return this;
         }
-
         public Builder aS2(@Nullable AS2AgreementContentArgs aS2) {
             this.aS2 = Output.ofNullable(aS2);
             return this;
         }
-
         public Builder edifact(@Nullable Output<EdifactAgreementContentArgs> edifact) {
             this.edifact = edifact;
             return this;
         }
-
         public Builder edifact(@Nullable EdifactAgreementContentArgs edifact) {
             this.edifact = Output.ofNullable(edifact);
             return this;
         }
-
         public Builder x12(@Nullable Output<X12AgreementContentArgs> x12) {
             this.x12 = x12;
             return this;
         }
-
         public Builder x12(@Nullable X12AgreementContentArgs x12) {
             this.x12 = Output.ofNullable(x12);
             return this;
-        }
-        public AgreementContentArgs build() {
+        }        public AgreementContentArgs build() {
             return new AgreementContentArgs(aS2, edifact, x12);
         }
     }

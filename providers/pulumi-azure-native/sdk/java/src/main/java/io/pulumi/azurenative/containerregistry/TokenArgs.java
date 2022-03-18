@@ -141,62 +141,50 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable TokenCredentialsPropertiesArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scopeMapId(@Nullable Output<String> scopeMapId) {
             this.scopeMapId = scopeMapId;
             return this;
         }
-
         public Builder scopeMapId(@Nullable String scopeMapId) {
             this.scopeMapId = Output.ofNullable(scopeMapId);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,TokenStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,TokenStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tokenName(@Nullable Output<String> tokenName) {
             this.tokenName = tokenName;
             return this;
         }
-
         public Builder tokenName(@Nullable String tokenName) {
             this.tokenName = Output.ofNullable(tokenName);
             return this;
-        }
-        public TokenArgs build() {
+        }        public TokenArgs build() {
             return new TokenArgs(credentials, registryName, resourceGroupName, scopeMapId, status, tokenName);
         }
     }

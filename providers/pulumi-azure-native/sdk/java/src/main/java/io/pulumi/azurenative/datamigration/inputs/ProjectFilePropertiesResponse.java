@@ -127,27 +127,22 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
             this.extension = extension;
             return this;
         }
-
         public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = mediaType;
             return this;
         }
-
         public Builder size(Double size) {
             this.size = Objects.requireNonNull(size);
             return this;
-        }
-        public ProjectFilePropertiesResponse build() {
+        }        public ProjectFilePropertiesResponse build() {
             return new ProjectFilePropertiesResponse(extension, filePath, lastModified, mediaType, size);
         }
     }

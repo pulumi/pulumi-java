@@ -207,102 +207,85 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<Either<String,WebhookAction>> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(Either<String,WebhookAction>... actions) {
+            return actions(List.of(actions));
+        }
         public Builder customHeaders(@Nullable Output<Map<String,String>> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
-
         public Builder customHeaders(@Nullable Map<String,String> customHeaders) {
             this.customHeaders = Output.ofNullable(customHeaders);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder serviceUri(Output<String> serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
-
         public Builder serviceUri(String serviceUri) {
             this.serviceUri = Output.of(Objects.requireNonNull(serviceUri));
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,WebhookStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,WebhookStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder webhookName(@Nullable Output<String> webhookName) {
             this.webhookName = webhookName;
             return this;
         }
-
         public Builder webhookName(@Nullable String webhookName) {
             this.webhookName = Output.ofNullable(webhookName);
             return this;
-        }
-        public WebhookArgs build() {
+        }        public WebhookArgs build() {
             return new WebhookArgs(actions, customHeaders, location, registryName, resourceGroupName, scope, serviceUri, status, tags, webhookName);
         }
     }

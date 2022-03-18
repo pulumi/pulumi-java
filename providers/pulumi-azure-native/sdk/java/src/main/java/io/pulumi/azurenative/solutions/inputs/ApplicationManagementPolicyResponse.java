@@ -60,8 +60,7 @@ public final class ApplicationManagementPolicyResponse extends io.pulumi.resourc
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
-        }
-        public ApplicationManagementPolicyResponse build() {
+        }        public ApplicationManagementPolicyResponse build() {
             return new ApplicationManagementPolicyResponse(mode);
         }
     }

@@ -155,72 +155,58 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
             this.functionAppName = functionAppName;
             return this;
         }
-
         public Builder functionAppName(@Nullable String functionAppName) {
             this.functionAppName = Output.ofNullable(functionAppName);
             return this;
         }
-
         public Builder functionAppRegion(@Nullable Output<String> functionAppRegion) {
             this.functionAppRegion = functionAppRegion;
             return this;
         }
-
         public Builder functionAppRegion(@Nullable String functionAppRegion) {
             this.functionAppRegion = Output.ofNullable(functionAppRegion);
             return this;
         }
-
         public Builder functionAppResourceId(@Nullable Output<String> functionAppResourceId) {
             this.functionAppResourceId = functionAppResourceId;
             return this;
         }
-
         public Builder functionAppResourceId(@Nullable String functionAppResourceId) {
             this.functionAppResourceId = Output.ofNullable(functionAppResourceId);
             return this;
         }
-
         public Builder isForced(@Nullable Output<Boolean> isForced) {
             this.isForced = isForced;
             return this;
         }
-
         public Builder isForced(@Nullable Boolean isForced) {
             this.isForced = Output.ofNullable(isForced);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public StaticSiteUserProvidedFunctionAppForStaticSiteArgs build() {
+        }        public StaticSiteUserProvidedFunctionAppForStaticSiteArgs build() {
             return new StaticSiteUserProvidedFunctionAppForStaticSiteArgs(functionAppName, functionAppRegion, functionAppResourceId, isForced, kind, name, resourceGroupName);
         }
     }

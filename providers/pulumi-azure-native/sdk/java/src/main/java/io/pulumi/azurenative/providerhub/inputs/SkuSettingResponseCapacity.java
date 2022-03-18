@@ -91,22 +91,18 @@ public final class SkuSettingResponseCapacity extends io.pulumi.resources.Invoke
             this.$default = $default;
             return this;
         }
-
         public Builder maximum(@Nullable Integer maximum) {
             this.maximum = maximum;
             return this;
         }
-
         public Builder minimum(Integer minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public Builder scaleType(@Nullable String scaleType) {
             this.scaleType = scaleType;
             return this;
-        }
-        public SkuSettingResponseCapacity build() {
+        }        public SkuSettingResponseCapacity build() {
             return new SkuSettingResponseCapacity($default, maximum, minimum, scaleType);
         }
     }

@@ -124,27 +124,22 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.endIpAddress = Objects.requireNonNull(endIpAddress);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startIpAddress(String startIpAddress) {
             this.startIpAddress = Objects.requireNonNull(startIpAddress);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FirewallRuleResponse build() {
+        }        public FirewallRuleResponse build() {
             return new FirewallRuleResponse(endIpAddress, id, name, startIpAddress, type);
         }
     }

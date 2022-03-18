@@ -140,62 +140,53 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ParameterDefinitionArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ParameterDefinitionArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(ParameterDefinitionArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder pipelineJobName(@Nullable Output<String> pipelineJobName) {
             this.pipelineJobName = pipelineJobName;
             return this;
         }
-
         public Builder pipelineJobName(@Nullable String pipelineJobName) {
             this.pipelineJobName = Output.ofNullable(pipelineJobName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder topologyName(Output<String> topologyName) {
             this.topologyName = Objects.requireNonNull(topologyName);
             return this;
         }
-
         public Builder topologyName(String topologyName) {
             this.topologyName = Output.of(Objects.requireNonNull(topologyName));
             return this;
-        }
-        public PipelineJobArgs build() {
+        }        public PipelineJobArgs build() {
             return new PipelineJobArgs(accountName, description, parameters, pipelineJobName, resourceGroupName, topologyName);
         }
     }

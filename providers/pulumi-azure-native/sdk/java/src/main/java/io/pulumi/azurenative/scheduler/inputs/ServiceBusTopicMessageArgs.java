@@ -158,72 +158,58 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable ServiceBusAuthenticationArgs authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder brokeredMessageProperties(@Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties) {
             this.brokeredMessageProperties = brokeredMessageProperties;
             return this;
         }
-
         public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesArgs brokeredMessageProperties) {
             this.brokeredMessageProperties = Output.ofNullable(brokeredMessageProperties);
             return this;
         }
-
         public Builder customMessageProperties(@Nullable Output<Map<String,String>> customMessageProperties) {
             this.customMessageProperties = customMessageProperties;
             return this;
         }
-
         public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
             this.customMessageProperties = Output.ofNullable(customMessageProperties);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder topicPath(@Nullable Output<String> topicPath) {
             this.topicPath = topicPath;
             return this;
         }
-
         public Builder topicPath(@Nullable String topicPath) {
             this.topicPath = Output.ofNullable(topicPath);
             return this;
         }
-
         public Builder transportType(@Nullable Output<ServiceBusTransportType> transportType) {
             this.transportType = transportType;
             return this;
         }
-
         public Builder transportType(@Nullable ServiceBusTransportType transportType) {
             this.transportType = Output.ofNullable(transportType);
             return this;
-        }
-        public ServiceBusTopicMessageArgs build() {
+        }        public ServiceBusTopicMessageArgs build() {
             return new ServiceBusTopicMessageArgs(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, topicPath, transportType);
         }
     }

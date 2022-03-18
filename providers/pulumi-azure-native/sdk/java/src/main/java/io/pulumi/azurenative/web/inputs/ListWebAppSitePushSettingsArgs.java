@@ -72,12 +72,10 @@ public final class ListWebAppSitePushSettingsArgs extends io.pulumi.resources.In
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppSitePushSettingsArgs build() {
+        }        public ListWebAppSitePushSettingsArgs build() {
             return new ListWebAppSitePushSettingsArgs(name, resourceGroupName);
         }
     }

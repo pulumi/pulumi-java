@@ -72,12 +72,10 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
             this.applicationResourceName = Objects.requireNonNull(applicationResourceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetApplicationArgs build() {
+        }        public GetApplicationArgs build() {
             return new GetApplicationArgs(applicationResourceName, resourceGroupName);
         }
     }

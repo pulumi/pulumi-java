@@ -136,32 +136,26 @@ public final class GetCustomEntityStoreAssignmentResult {
             this.entityStoreDatabaseLink = entityStoreDatabaseLink;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder principal(@Nullable String principal) {
             this.principal = principal;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCustomEntityStoreAssignmentResult build() {
+        }        public GetCustomEntityStoreAssignmentResult build() {
             return new GetCustomEntityStoreAssignmentResult(entityStoreDatabaseLink, id, name, principal, systemData, type);
         }
     }

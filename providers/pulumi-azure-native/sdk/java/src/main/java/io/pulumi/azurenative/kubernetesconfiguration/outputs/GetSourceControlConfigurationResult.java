@@ -316,87 +316,70 @@ public final class GetSourceControlConfigurationResult {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
-
         public Builder enableHelmOperator(@Nullable Boolean enableHelmOperator) {
             this.enableHelmOperator = enableHelmOperator;
             return this;
         }
-
         public Builder helmOperatorProperties(@Nullable HelmOperatorPropertiesResponse helmOperatorProperties) {
             this.helmOperatorProperties = helmOperatorProperties;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operatorInstanceName(@Nullable String operatorInstanceName) {
             this.operatorInstanceName = operatorInstanceName;
             return this;
         }
-
         public Builder operatorNamespace(@Nullable String operatorNamespace) {
             this.operatorNamespace = operatorNamespace;
             return this;
         }
-
         public Builder operatorParams(@Nullable String operatorParams) {
             this.operatorParams = operatorParams;
             return this;
         }
-
         public Builder operatorScope(@Nullable String operatorScope) {
             this.operatorScope = operatorScope;
             return this;
         }
-
         public Builder operatorType(@Nullable String operatorType) {
             this.operatorType = operatorType;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder repositoryPublicKey(String repositoryPublicKey) {
             this.repositoryPublicKey = Objects.requireNonNull(repositoryPublicKey);
             return this;
         }
-
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
-
         public Builder sshKnownHostsContents(@Nullable String sshKnownHostsContents) {
             this.sshKnownHostsContents = sshKnownHostsContents;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSourceControlConfigurationResult build() {
+        }        public GetSourceControlConfigurationResult build() {
             return new GetSourceControlConfigurationResult(complianceStatus, configurationProtectedSettings, enableHelmOperator, helmOperatorProperties, id, name, operatorInstanceName, operatorNamespace, operatorParams, operatorScope, operatorType, provisioningState, repositoryPublicKey, repositoryUrl, sshKnownHostsContents, systemData, type);
         }
     }

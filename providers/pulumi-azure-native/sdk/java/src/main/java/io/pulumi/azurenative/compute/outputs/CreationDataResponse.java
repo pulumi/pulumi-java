@@ -186,47 +186,38 @@ public final class CreationDataResponse {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
-
         public Builder galleryImageReference(@Nullable ImageDiskReferenceResponse galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
-
         public Builder imageReference(@Nullable ImageDiskReferenceResponse imageReference) {
             this.imageReference = imageReference;
             return this;
         }
-
         public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
             this.logicalSectorSize = logicalSectorSize;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder sourceUniqueId(String sourceUniqueId) {
             this.sourceUniqueId = Objects.requireNonNull(sourceUniqueId);
             return this;
         }
-
         public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
             this.uploadSizeBytes = uploadSizeBytes;
             return this;
-        }
-        public CreationDataResponse build() {
+        }        public CreationDataResponse build() {
             return new CreationDataResponse(createOption, galleryImageReference, imageReference, logicalSectorSize, sourceResourceId, sourceUniqueId, sourceUri, storageAccountId, uploadSizeBytes);
         }
     }

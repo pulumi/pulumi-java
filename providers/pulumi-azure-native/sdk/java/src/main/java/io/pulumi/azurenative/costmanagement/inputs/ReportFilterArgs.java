@@ -127,52 +127,48 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.and = and;
             return this;
         }
-
         public Builder and(@Nullable List<ReportFilterArgs> and) {
             this.and = Output.ofNullable(and);
             return this;
         }
-
+        public Builder and(ReportFilterArgs... and) {
+            return and(List.of(and));
+        }
         public Builder dimension(@Nullable Output<ReportComparisonExpressionArgs> dimension) {
             this.dimension = dimension;
             return this;
         }
-
         public Builder dimension(@Nullable ReportComparisonExpressionArgs dimension) {
             this.dimension = Output.ofNullable(dimension);
             return this;
         }
-
         public Builder not(@Nullable Output<ReportFilterArgs> not) {
             this.not = not;
             return this;
         }
-
         public Builder not(@Nullable ReportFilterArgs not) {
             this.not = Output.ofNullable(not);
             return this;
         }
-
         public Builder or(@Nullable Output<List<ReportFilterArgs>> or) {
             this.or = or;
             return this;
         }
-
         public Builder or(@Nullable List<ReportFilterArgs> or) {
             this.or = Output.ofNullable(or);
             return this;
         }
-
+        public Builder or(ReportFilterArgs... or) {
+            return or(List.of(or));
+        }
         public Builder tag(@Nullable Output<ReportComparisonExpressionArgs> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable ReportComparisonExpressionArgs tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public ReportFilterArgs build() {
+        }        public ReportFilterArgs build() {
             return new ReportFilterArgs(and, dimension, not, or, tag);
         }
     }

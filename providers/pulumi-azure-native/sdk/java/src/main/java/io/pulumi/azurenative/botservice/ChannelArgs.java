@@ -188,82 +188,66 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.channelName = channelName;
             return this;
         }
-
         public Builder channelName(@Nullable String channelName) {
             this.channelName = Output.ofNullable(channelName);
             return this;
         }
-
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,Kind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Object properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ChannelArgs build() {
+        }        public ChannelArgs build() {
             return new ChannelArgs(channelName, kind, location, properties, resourceGroupName, resourceName, sku, tags);
         }
     }

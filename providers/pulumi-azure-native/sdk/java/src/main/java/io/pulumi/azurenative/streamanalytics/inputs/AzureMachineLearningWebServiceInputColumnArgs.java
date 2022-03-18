@@ -95,32 +95,26 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder mapTo(@Nullable Output<Integer> mapTo) {
             this.mapTo = mapTo;
             return this;
         }
-
         public Builder mapTo(@Nullable Integer mapTo) {
             this.mapTo = Output.ofNullable(mapTo);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public AzureMachineLearningWebServiceInputColumnArgs build() {
+        }        public AzureMachineLearningWebServiceInputColumnArgs build() {
             return new AzureMachineLearningWebServiceInputColumnArgs(dataType, mapTo, name);
         }
     }

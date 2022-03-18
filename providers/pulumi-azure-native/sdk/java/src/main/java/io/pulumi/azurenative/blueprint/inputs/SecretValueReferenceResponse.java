@@ -95,17 +95,14 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
-        }
-        public SecretValueReferenceResponse build() {
+        }        public SecretValueReferenceResponse build() {
             return new SecretValueReferenceResponse(keyVault, secretName, secretVersion);
         }
     }

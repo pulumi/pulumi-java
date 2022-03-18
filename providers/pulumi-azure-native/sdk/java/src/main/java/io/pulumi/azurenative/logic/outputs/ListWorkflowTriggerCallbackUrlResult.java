@@ -137,32 +137,29 @@ public final class ListWorkflowTriggerCallbackUrlResult {
             this.basePath = Objects.requireNonNull(basePath);
             return this;
         }
-
         public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder queries(@Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries) {
             this.queries = queries;
             return this;
         }
-
         public Builder relativePath(String relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
-
         public Builder relativePathParameters(@Nullable List<String> relativePathParameters) {
             this.relativePathParameters = relativePathParameters;
             return this;
         }
-
+        public Builder relativePathParameters(String... relativePathParameters) {
+            return relativePathParameters(List.of(relativePathParameters));
+        }
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ListWorkflowTriggerCallbackUrlResult build() {
+        }        public ListWorkflowTriggerCallbackUrlResult build() {
             return new ListWorkflowTriggerCallbackUrlResult(basePath, method, queries, relativePath, relativePathParameters, value);
         }
     }

@@ -72,12 +72,10 @@ public final class GetAttestationAtResourceGroupArgs extends io.pulumi.resources
             this.attestationName = Objects.requireNonNull(attestationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAttestationAtResourceGroupArgs build() {
+        }        public GetAttestationAtResourceGroupArgs build() {
             return new GetAttestationAtResourceGroupArgs(attestationName, resourceGroupName);
         }
     }

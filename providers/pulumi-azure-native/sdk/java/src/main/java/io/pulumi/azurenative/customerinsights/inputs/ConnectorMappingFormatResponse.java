@@ -142,32 +142,26 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder arraySeparator(@Nullable String arraySeparator) {
             this.arraySeparator = arraySeparator;
             return this;
         }
-
         public Builder columnDelimiter(@Nullable String columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
-
         public Builder formatType(String formatType) {
             this.formatType = Objects.requireNonNull(formatType);
             return this;
         }
-
         public Builder quoteCharacter(@Nullable String quoteCharacter) {
             this.quoteCharacter = quoteCharacter;
             return this;
         }
-
         public Builder quoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
             this.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
-        }
-        public ConnectorMappingFormatResponse build() {
+        }        public ConnectorMappingFormatResponse build() {
             return new ConnectorMappingFormatResponse(acceptLanguage, arraySeparator, columnDelimiter, formatType, quoteCharacter, quoteEscapeCharacter);
         }
     }

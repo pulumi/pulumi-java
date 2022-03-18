@@ -63,12 +63,10 @@ public final class AzureFirewallRCActionArgs extends io.pulumi.resources.Resourc
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,AzureFirewallRCActionType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AzureFirewallRCActionArgs build() {
+        }        public AzureFirewallRCActionArgs build() {
             return new AzureFirewallRCActionArgs(type);
         }
     }

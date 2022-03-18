@@ -128,27 +128,22 @@ public final class SlackChannelResponse extends io.pulumi.resources.InvokeArgs {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder properties(@Nullable SlackChannelPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public SlackChannelResponse build() {
+        }        public SlackChannelResponse build() {
             return new SlackChannelResponse(channelName, etag, location, properties, provisioningState);
         }
     }

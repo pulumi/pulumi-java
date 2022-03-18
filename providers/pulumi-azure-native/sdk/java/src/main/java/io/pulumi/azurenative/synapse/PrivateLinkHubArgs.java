@@ -123,52 +123,42 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privateLinkHubName(@Nullable Output<String> privateLinkHubName) {
             this.privateLinkHubName = privateLinkHubName;
             return this;
         }
-
         public Builder privateLinkHubName(@Nullable String privateLinkHubName) {
             this.privateLinkHubName = Output.ofNullable(privateLinkHubName);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PrivateLinkHubArgs build() {
+        }        public PrivateLinkHubArgs build() {
             return new PrivateLinkHubArgs(location, privateLinkHubName, provisioningState, resourceGroupName, tags);
         }
     }

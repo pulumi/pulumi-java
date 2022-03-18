@@ -345,92 +345,89 @@ public final class DataBoxDiskJobDetailsResponse {
             this.chainOfCustodySasKey = Objects.requireNonNull(chainOfCustodySasKey);
             return this;
         }
-
         public Builder contactDetails(ContactDetailsResponse contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
-
         public Builder copyLogDetails(List<Object> copyLogDetails) {
             this.copyLogDetails = Objects.requireNonNull(copyLogDetails);
             return this;
         }
-
+        public Builder copyLogDetails(Object... copyLogDetails) {
+            return copyLogDetails(List.of(copyLogDetails));
+        }
         public Builder copyProgress(List<DataBoxDiskCopyProgressResponse> copyProgress) {
             this.copyProgress = Objects.requireNonNull(copyProgress);
             return this;
         }
-
+        public Builder copyProgress(DataBoxDiskCopyProgressResponse... copyProgress) {
+            return copyProgress(List.of(copyProgress));
+        }
         public Builder dataExportDetails(@Nullable List<DataExportDetailsResponse> dataExportDetails) {
             this.dataExportDetails = dataExportDetails;
             return this;
         }
-
+        public Builder dataExportDetails(DataExportDetailsResponse... dataExportDetails) {
+            return dataExportDetails(List.of(dataExportDetails));
+        }
         public Builder dataImportDetails(@Nullable List<DataImportDetailsResponse> dataImportDetails) {
             this.dataImportDetails = dataImportDetails;
             return this;
         }
-
+        public Builder dataImportDetails(DataImportDetailsResponse... dataImportDetails) {
+            return dataImportDetails(List.of(dataImportDetails));
+        }
         public Builder deliveryPackage(PackageShippingDetailsResponse deliveryPackage) {
             this.deliveryPackage = Objects.requireNonNull(deliveryPackage);
             return this;
         }
-
         public Builder disksAndSizeDetails(Map<String,Integer> disksAndSizeDetails) {
             this.disksAndSizeDetails = Objects.requireNonNull(disksAndSizeDetails);
             return this;
         }
-
         public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
             this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
-
         public Builder jobDetailsType(String jobDetailsType) {
             this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
             return this;
         }
-
         public Builder jobStages(List<JobStagesResponse> jobStages) {
             this.jobStages = Objects.requireNonNull(jobStages);
             return this;
         }
-
+        public Builder jobStages(JobStagesResponse... jobStages) {
+            return jobStages(List.of(jobStages));
+        }
         public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyResponse keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public Builder passkey(@Nullable String passkey) {
             this.passkey = passkey;
             return this;
         }
-
         public Builder preferences(@Nullable PreferencesResponse preferences) {
             this.preferences = preferences;
             return this;
         }
-
         public Builder preferredDisks(@Nullable Map<String,Integer> preferredDisks) {
             this.preferredDisks = preferredDisks;
             return this;
         }
-
         public Builder returnPackage(PackageShippingDetailsResponse returnPackage) {
             this.returnPackage = Objects.requireNonNull(returnPackage);
             return this;
         }
-
         public Builder reverseShipmentLabelSasKey(String reverseShipmentLabelSasKey) {
             this.reverseShipmentLabelSasKey = Objects.requireNonNull(reverseShipmentLabelSasKey);
             return this;
         }
-
         public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
-        }
-        public DataBoxDiskJobDetailsResponse build() {
+        }        public DataBoxDiskJobDetailsResponse build() {
             return new DataBoxDiskJobDetailsResponse(chainOfCustodySasKey, contactDetails, copyLogDetails, copyProgress, dataExportDetails, dataImportDetails, deliveryPackage, disksAndSizeDetails, expectedDataSizeInTeraBytes, jobDetailsType, jobStages, keyEncryptionKey, passkey, preferences, preferredDisks, returnPackage, reverseShipmentLabelSasKey, shippingAddress);
         }
     }

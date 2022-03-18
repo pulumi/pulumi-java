@@ -76,12 +76,10 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends io.pu
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public CacheActiveDirectorySettingsResponseCredentials build() {
+        }        public CacheActiveDirectorySettingsResponseCredentials build() {
             return new CacheActiveDirectorySettingsResponseCredentials(password, username);
         }
     }

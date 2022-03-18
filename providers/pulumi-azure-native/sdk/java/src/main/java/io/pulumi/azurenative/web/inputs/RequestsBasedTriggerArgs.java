@@ -79,22 +79,18 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
-
         public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = Output.ofNullable(timeInterval);
             return this;
-        }
-        public RequestsBasedTriggerArgs build() {
+        }        public RequestsBasedTriggerArgs build() {
             return new RequestsBasedTriggerArgs(count, timeInterval);
         }
     }

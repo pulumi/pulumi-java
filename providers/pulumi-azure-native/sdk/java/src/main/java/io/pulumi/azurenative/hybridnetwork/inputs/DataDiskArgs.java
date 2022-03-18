@@ -97,32 +97,26 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.createOption = createOption;
             return this;
         }
-
         public Builder createOption(@Nullable Either<String,DiskCreateOptionTypes> createOption) {
             this.createOption = Output.ofNullable(createOption);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DataDiskArgs build() {
+        }        public DataDiskArgs build() {
             return new DataDiskArgs(createOption, diskSizeGB, name);
         }
     }

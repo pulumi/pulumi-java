@@ -130,52 +130,42 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
             this.autoProvision = Objects.requireNonNull(autoProvision);
             return this;
         }
-
         public Builder autoProvision(Either<String,AutoProvision> autoProvision) {
             this.autoProvision = Output.of(Objects.requireNonNull(autoProvision));
             return this;
         }
-
         public Builder proxyServer(@Nullable Output<ProxyServerPropertiesArgs> proxyServer) {
             this.proxyServer = proxyServer;
             return this;
         }
-
         public Builder proxyServer(@Nullable ProxyServerPropertiesArgs proxyServer) {
             this.proxyServer = Output.ofNullable(proxyServer);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
-
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
-
         public Builder servicePrincipal(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
-
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
             this.servicePrincipal = Output.ofNullable(servicePrincipal);
             return this;
-        }
-        public HybridComputeSettingsPropertiesArgs build() {
+        }        public HybridComputeSettingsPropertiesArgs build() {
             return new HybridComputeSettingsPropertiesArgs(autoProvision, proxyServer, region, resourceGroupName, servicePrincipal);
         }
     }

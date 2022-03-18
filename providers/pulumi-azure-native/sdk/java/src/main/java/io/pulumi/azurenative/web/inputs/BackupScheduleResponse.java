@@ -144,32 +144,26 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
             this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
             return this;
         }
-
         public Builder frequencyUnit(String frequencyUnit) {
             this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
             return this;
         }
-
         public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
             this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
             return this;
         }
-
         public Builder lastExecutionTime(String lastExecutionTime) {
             this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime);
             return this;
         }
-
         public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
             this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public BackupScheduleResponse build() {
+        }        public BackupScheduleResponse build() {
             return new BackupScheduleResponse(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, lastExecutionTime, retentionPeriodInDays, startTime);
         }
     }

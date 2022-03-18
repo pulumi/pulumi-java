@@ -61,12 +61,10 @@ public final class BillingProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.maxPrice = maxPrice;
             return this;
         }
-
         public Builder maxPrice(@Nullable Double maxPrice) {
             this.maxPrice = Output.ofNullable(maxPrice);
             return this;
-        }
-        public BillingProfileArgs build() {
+        }        public BillingProfileArgs build() {
             return new BillingProfileArgs(maxPrice);
         }
     }

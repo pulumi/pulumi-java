@@ -104,22 +104,18 @@ public final class GetAdminRuleCollectionArgs extends io.pulumi.resources.Invoke
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleCollectionName(String ruleCollectionName) {
             this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
             return this;
-        }
-        public GetAdminRuleCollectionArgs build() {
+        }        public GetAdminRuleCollectionArgs build() {
             return new GetAdminRuleCollectionArgs(configurationName, networkManagerName, resourceGroupName, ruleCollectionName);
         }
     }

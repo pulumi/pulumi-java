@@ -96,32 +96,29 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
             this.language = language;
             return this;
         }
-
         public Builder language(@Nullable String language) {
             this.language = Output.ofNullable(language);
             return this;
         }
-
         public Builder markingRef(@Nullable Output<Integer> markingRef) {
             this.markingRef = markingRef;
             return this;
         }
-
         public Builder markingRef(@Nullable Integer markingRef) {
             this.markingRef = Output.ofNullable(markingRef);
             return this;
         }
-
         public Builder selectors(@Nullable Output<List<String>> selectors) {
             this.selectors = selectors;
             return this;
         }
-
         public Builder selectors(@Nullable List<String> selectors) {
             this.selectors = Output.ofNullable(selectors);
             return this;
         }
-        public ThreatIntelligenceGranularMarkingModelArgs build() {
+        public Builder selectors(String... selectors) {
+            return selectors(List.of(selectors));
+        }        public ThreatIntelligenceGranularMarkingModelArgs build() {
             return new ThreatIntelligenceGranularMarkingModelArgs(language, markingRef, selectors);
         }
     }

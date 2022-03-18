@@ -264,132 +264,109 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
-
         public Builder canReRegister(@Nullable Output<Boolean> canReRegister) {
             this.canReRegister = canReRegister;
             return this;
         }
-
         public Builder canReRegister(@Nullable Boolean canReRegister) {
             this.canReRegister = Output.ofNullable(canReRegister);
             return this;
         }
-
         public Builder containerId(@Nullable Output<String> containerId) {
             this.containerId = containerId;
             return this;
         }
-
         public Builder containerId(@Nullable String containerId) {
             this.containerId = Output.ofNullable(containerId);
             return this;
         }
-
         public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
-
         public Builder dpmAgentVersion(@Nullable Output<String> dpmAgentVersion) {
             this.dpmAgentVersion = dpmAgentVersion;
             return this;
         }
-
         public Builder dpmAgentVersion(@Nullable String dpmAgentVersion) {
             this.dpmAgentVersion = Output.ofNullable(dpmAgentVersion);
             return this;
         }
-
         public Builder dpmServers(@Nullable Output<List<String>> dpmServers) {
             this.dpmServers = dpmServers;
             return this;
         }
-
         public Builder dpmServers(@Nullable List<String> dpmServers) {
             this.dpmServers = Output.ofNullable(dpmServers);
             return this;
         }
-
+        public Builder dpmServers(String... dpmServers) {
+            return dpmServers(List.of(dpmServers));
+        }
         public Builder extendedInfo(@Nullable Output<DPMContainerExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder extendedInfo(@Nullable DPMContainerExtendedInfoArgs extendedInfo) {
             this.extendedInfo = Output.ofNullable(extendedInfo);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
-
         public Builder protectedItemCount(@Nullable Output<Double> protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
-
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = Output.ofNullable(protectedItemCount);
             return this;
         }
-
         public Builder protectionStatus(@Nullable Output<String> protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
-
         public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = Output.ofNullable(protectionStatus);
             return this;
         }
-
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
         }
-
         public Builder upgradeAvailable(@Nullable Output<Boolean> upgradeAvailable) {
             this.upgradeAvailable = upgradeAvailable;
             return this;
         }
-
         public Builder upgradeAvailable(@Nullable Boolean upgradeAvailable) {
             this.upgradeAvailable = Output.ofNullable(upgradeAvailable);
             return this;
-        }
-        public DpmContainerArgs build() {
+        }        public DpmContainerArgs build() {
             return new DpmContainerArgs(backupManagementType, canReRegister, containerId, containerType, dpmAgentVersion, dpmServers, extendedInfo, friendlyName, healthStatus, protectedItemCount, protectionStatus, registrationStatus, upgradeAvailable);
         }
     }

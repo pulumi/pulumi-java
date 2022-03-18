@@ -124,52 +124,45 @@ public final class WCFRelayAuthorizationRuleArgs extends io.pulumi.resources.Res
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
-
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
             this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder relayName(Output<String> relayName) {
             this.relayName = Objects.requireNonNull(relayName);
             return this;
         }
-
         public Builder relayName(String relayName) {
             this.relayName = Output.of(Objects.requireNonNull(relayName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rights(Output<List<AccessRights>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
-
         public Builder rights(List<AccessRights> rights) {
             this.rights = Output.of(Objects.requireNonNull(rights));
             return this;
         }
-        public WCFRelayAuthorizationRuleArgs build() {
+        public Builder rights(AccessRights... rights) {
+            return rights(List.of(rights));
+        }        public WCFRelayAuthorizationRuleArgs build() {
             return new WCFRelayAuthorizationRuleArgs(authorizationRuleName, namespaceName, relayName, resourceGroupName, rights);
         }
     }

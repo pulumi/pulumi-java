@@ -164,72 +164,58 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
-
         public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
             this.basicLoginInformation = Output.ofNullable(basicLoginInformation);
             return this;
         }
-
         public Builder k8sRaw(@Nullable Output<Object> k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
-
         public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = Output.ofNullable(k8sRaw);
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable Output<String> lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = Output.ofNullable(lastUploadedDate);
             return this;
         }
-
         public Builder logAnalyticsWorkspaceConfig(@Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig) {
             this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
             return this;
         }
-
         public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigArgs logAnalyticsWorkspaceConfig) {
             this.logAnalyticsWorkspaceConfig = Output.ofNullable(logAnalyticsWorkspaceConfig);
             return this;
         }
-
         public Builder onPremiseProperty(@Nullable Output<OnPremisePropertyArgs> onPremiseProperty) {
             this.onPremiseProperty = onPremiseProperty;
             return this;
         }
-
         public Builder onPremiseProperty(@Nullable OnPremisePropertyArgs onPremiseProperty) {
             this.onPremiseProperty = Output.ofNullable(onPremiseProperty);
             return this;
         }
-
         public Builder uploadServicePrincipal(@Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal) {
             this.uploadServicePrincipal = uploadServicePrincipal;
             return this;
         }
-
         public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalArgs uploadServicePrincipal) {
             this.uploadServicePrincipal = Output.ofNullable(uploadServicePrincipal);
             return this;
         }
-
         public Builder uploadWatermark(@Nullable Output<UploadWatermarkArgs> uploadWatermark) {
             this.uploadWatermark = uploadWatermark;
             return this;
         }
-
         public Builder uploadWatermark(@Nullable UploadWatermarkArgs uploadWatermark) {
             this.uploadWatermark = Output.ofNullable(uploadWatermark);
             return this;
-        }
-        public DataControllerPropertiesArgs build() {
+        }        public DataControllerPropertiesArgs build() {
             return new DataControllerPropertiesArgs(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, uploadServicePrincipal, uploadWatermark);
         }
     }

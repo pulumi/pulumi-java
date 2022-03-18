@@ -138,37 +138,30 @@ public final class GetCassandraResourceCassandraTableResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder options(@Nullable CassandraTableGetPropertiesResponseOptions options) {
             this.options = options;
             return this;
         }
-
         public Builder resource(@Nullable CassandraTableGetPropertiesResponseResource resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCassandraResourceCassandraTableResult build() {
+        }        public GetCassandraResourceCassandraTableResult build() {
             return new GetCassandraResourceCassandraTableResult(id, location, name, options, resource, tags, type);
         }
     }

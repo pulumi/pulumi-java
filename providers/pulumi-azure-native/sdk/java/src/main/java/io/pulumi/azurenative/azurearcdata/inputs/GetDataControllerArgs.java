@@ -68,12 +68,10 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
             this.dataControllerName = Objects.requireNonNull(dataControllerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDataControllerArgs build() {
+        }        public GetDataControllerArgs build() {
             return new GetDataControllerArgs(dataControllerName, resourceGroupName);
         }
     }

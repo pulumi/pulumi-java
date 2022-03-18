@@ -184,47 +184,38 @@ public final class GetCertificateResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder expiryTime(String expiryTime) {
             this.expiryTime = Objects.requireNonNull(expiryTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isExportable(Boolean isExportable) {
             this.isExportable = Objects.requireNonNull(isExportable);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(creationTime, description, expiryTime, id, isExportable, lastModifiedTime, name, thumbprint, type);
         }
     }

@@ -615,177 +615,172 @@ public final class GetDatabaseAccountResult {
             this.apiProperties = apiProperties;
             return this;
         }
-
         public Builder backupPolicy(@Nullable Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse> backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
-
         public Builder capabilities(@Nullable List<CapabilityResponse> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
+        public Builder capabilities(CapabilityResponse... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder connectorOffer(@Nullable String connectorOffer) {
             this.connectorOffer = connectorOffer;
             return this;
         }
-
         public Builder consistencyPolicy(@Nullable ConsistencyPolicyResponse consistencyPolicy) {
             this.consistencyPolicy = consistencyPolicy;
             return this;
         }
-
         public Builder cors(@Nullable List<CorsPolicyResponse> cors) {
             this.cors = cors;
             return this;
         }
-
+        public Builder cors(CorsPolicyResponse... cors) {
+            return cors(List.of(cors));
+        }
         public Builder databaseAccountOfferType(String databaseAccountOfferType) {
             this.databaseAccountOfferType = Objects.requireNonNull(databaseAccountOfferType);
             return this;
         }
-
         public Builder defaultIdentity(@Nullable String defaultIdentity) {
             this.defaultIdentity = defaultIdentity;
             return this;
         }
-
         public Builder disableKeyBasedMetadataWriteAccess(@Nullable Boolean disableKeyBasedMetadataWriteAccess) {
             this.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
             return this;
         }
-
         public Builder documentEndpoint(String documentEndpoint) {
             this.documentEndpoint = Objects.requireNonNull(documentEndpoint);
             return this;
         }
-
         public Builder enableAnalyticalStorage(@Nullable Boolean enableAnalyticalStorage) {
             this.enableAnalyticalStorage = enableAnalyticalStorage;
             return this;
         }
-
         public Builder enableAutomaticFailover(@Nullable Boolean enableAutomaticFailover) {
             this.enableAutomaticFailover = enableAutomaticFailover;
             return this;
         }
-
         public Builder enableCassandraConnector(@Nullable Boolean enableCassandraConnector) {
             this.enableCassandraConnector = enableCassandraConnector;
             return this;
         }
-
         public Builder enableFreeTier(@Nullable Boolean enableFreeTier) {
             this.enableFreeTier = enableFreeTier;
             return this;
         }
-
         public Builder enableMultipleWriteLocations(@Nullable Boolean enableMultipleWriteLocations) {
             this.enableMultipleWriteLocations = enableMultipleWriteLocations;
             return this;
         }
-
         public Builder failoverPolicies(List<FailoverPolicyResponse> failoverPolicies) {
             this.failoverPolicies = Objects.requireNonNull(failoverPolicies);
             return this;
         }
-
+        public Builder failoverPolicies(FailoverPolicyResponse... failoverPolicies) {
+            return failoverPolicies(List.of(failoverPolicies));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder ipRules(@Nullable List<IpAddressOrRangeResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
-
+        public Builder ipRules(IpAddressOrRangeResponse... ipRules) {
+            return ipRules(List.of(ipRules));
+        }
         public Builder isVirtualNetworkFilterEnabled(@Nullable Boolean isVirtualNetworkFilterEnabled) {
             this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
             return this;
         }
-
         public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder locations(List<LocationResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(LocationResponse... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkAclBypass(@Nullable String networkAclBypass) {
             this.networkAclBypass = networkAclBypass;
             return this;
         }
-
         public Builder networkAclBypassResourceIds(@Nullable List<String> networkAclBypassResourceIds) {
             this.networkAclBypassResourceIds = networkAclBypassResourceIds;
             return this;
         }
-
+        public Builder networkAclBypassResourceIds(String... networkAclBypassResourceIds) {
+            return networkAclBypassResourceIds(List.of(networkAclBypassResourceIds));
+        }
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder readLocations(List<LocationResponse> readLocations) {
             this.readLocations = Objects.requireNonNull(readLocations);
             return this;
         }
-
+        public Builder readLocations(LocationResponse... readLocations) {
+            return readLocations(List.of(readLocations));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
+        public Builder virtualNetworkRules(VirtualNetworkRuleResponse... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }
         public Builder writeLocations(List<LocationResponse> writeLocations) {
             this.writeLocations = Objects.requireNonNull(writeLocations);
             return this;
         }
-        public GetDatabaseAccountResult build() {
+        public Builder writeLocations(LocationResponse... writeLocations) {
+            return writeLocations(List.of(writeLocations));
+        }        public GetDatabaseAccountResult build() {
             return new GetDatabaseAccountResult(apiProperties, backupPolicy, capabilities, connectorOffer, consistencyPolicy, cors, databaseAccountOfferType, defaultIdentity, disableKeyBasedMetadataWriteAccess, documentEndpoint, enableAnalyticalStorage, enableAutomaticFailover, enableCassandraConnector, enableFreeTier, enableMultipleWriteLocations, failoverPolicies, id, identity, ipRules, isVirtualNetworkFilterEnabled, keyVaultKeyUri, kind, location, locations, name, networkAclBypass, networkAclBypassResourceIds, privateEndpointConnections, provisioningState, publicNetworkAccess, readLocations, tags, type, virtualNetworkRules, writeLocations);
         }
     }

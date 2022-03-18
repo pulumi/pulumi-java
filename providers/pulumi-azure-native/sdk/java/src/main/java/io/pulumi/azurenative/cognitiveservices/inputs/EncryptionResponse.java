@@ -79,12 +79,10 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
             this.keySource = keySource;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
-        }
-        public EncryptionResponse build() {
+        }        public EncryptionResponse build() {
             return new EncryptionResponse(keySource, keyVaultProperties);
         }
     }

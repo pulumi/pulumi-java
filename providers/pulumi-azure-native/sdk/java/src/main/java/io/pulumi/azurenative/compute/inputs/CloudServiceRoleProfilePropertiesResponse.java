@@ -79,12 +79,10 @@ public final class CloudServiceRoleProfilePropertiesResponse extends io.pulumi.r
             this.name = name;
             return this;
         }
-
         public Builder sku(@Nullable CloudServiceRoleSkuResponse sku) {
             this.sku = sku;
             return this;
-        }
-        public CloudServiceRoleProfilePropertiesResponse build() {
+        }        public CloudServiceRoleProfilePropertiesResponse build() {
             return new CloudServiceRoleProfilePropertiesResponse(name, sku);
         }
     }

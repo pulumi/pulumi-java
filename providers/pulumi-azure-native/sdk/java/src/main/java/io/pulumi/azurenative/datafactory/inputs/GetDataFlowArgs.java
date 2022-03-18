@@ -88,17 +88,14 @@ public final class GetDataFlowArgs extends io.pulumi.resources.InvokeArgs {
             this.dataFlowName = Objects.requireNonNull(dataFlowName);
             return this;
         }
-
         public Builder factoryName(String factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDataFlowArgs build() {
+        }        public GetDataFlowArgs build() {
             return new GetDataFlowArgs(dataFlowName, factoryName, resourceGroupName);
         }
     }

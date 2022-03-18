@@ -112,22 +112,18 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder recoveryPointHistoryInMinutes(@Nullable Integer recoveryPointHistoryInMinutes) {
             this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
-        }
-        public VmwareCbtPolicyDetailsResponse build() {
+        }        public VmwareCbtPolicyDetailsResponse build() {
             return new VmwareCbtPolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, recoveryPointHistoryInMinutes);
         }
     }

@@ -101,22 +101,18 @@ public final class GetJobCredentialResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public GetJobCredentialResult build() {
+        }        public GetJobCredentialResult build() {
             return new GetJobCredentialResult(id, name, type, username);
         }
     }

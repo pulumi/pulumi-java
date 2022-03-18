@@ -104,22 +104,18 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
-
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetGatewayCertificateAuthorityArgs build() {
+        }        public GetGatewayCertificateAuthorityArgs build() {
             return new GetGatewayCertificateAuthorityArgs(certificateId, gatewayId, resourceGroupName, serviceName);
         }
     }

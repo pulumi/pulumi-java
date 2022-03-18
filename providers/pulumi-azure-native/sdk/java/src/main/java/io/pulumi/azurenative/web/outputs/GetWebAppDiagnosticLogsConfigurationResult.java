@@ -170,42 +170,34 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
             this.applicationLogs = applicationLogs;
             return this;
         }
-
         public Builder detailedErrorMessages(@Nullable EnabledConfigResponse detailedErrorMessages) {
             this.detailedErrorMessages = detailedErrorMessages;
             return this;
         }
-
         public Builder failedRequestsTracing(@Nullable EnabledConfigResponse failedRequestsTracing) {
             this.failedRequestsTracing = failedRequestsTracing;
             return this;
         }
-
         public Builder httpLogs(@Nullable HttpLogsConfigResponse httpLogs) {
             this.httpLogs = httpLogs;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppDiagnosticLogsConfigurationResult build() {
+        }        public GetWebAppDiagnosticLogsConfigurationResult build() {
             return new GetWebAppDiagnosticLogsConfigurationResult(applicationLogs, detailedErrorMessages, failedRequestsTracing, httpLogs, id, kind, name, type);
         }
     }

@@ -103,22 +103,18 @@ public final class ListIotDpsResourceKeysForKeyNameResult {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder rights(String rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListIotDpsResourceKeysForKeyNameResult build() {
+        }        public ListIotDpsResourceKeysForKeyNameResult build() {
             return new ListIotDpsResourceKeysForKeyNameResult(keyName, primaryKey, rights, secondaryKey);
         }
     }

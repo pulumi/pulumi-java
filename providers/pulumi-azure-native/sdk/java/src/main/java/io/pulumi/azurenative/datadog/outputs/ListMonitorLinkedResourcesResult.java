@@ -73,12 +73,13 @@ public final class ListMonitorLinkedResourcesResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<LinkedResourceResponse> value) {
             this.value = value;
             return this;
         }
-        public ListMonitorLinkedResourcesResult build() {
+        public Builder value(LinkedResourceResponse... value) {
+            return value(List.of(value));
+        }        public ListMonitorLinkedResourcesResult build() {
             return new ListMonitorLinkedResourcesResult(nextLink, value);
         }
     }

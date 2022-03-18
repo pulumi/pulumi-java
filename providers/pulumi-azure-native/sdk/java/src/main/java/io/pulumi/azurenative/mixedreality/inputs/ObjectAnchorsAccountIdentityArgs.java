@@ -57,12 +57,10 @@ public final class ObjectAnchorsAccountIdentityArgs extends io.pulumi.resources.
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ObjectAnchorsAccountIdentityArgs build() {
+        }        public ObjectAnchorsAccountIdentityArgs build() {
             return new ObjectAnchorsAccountIdentityArgs(type);
         }
     }

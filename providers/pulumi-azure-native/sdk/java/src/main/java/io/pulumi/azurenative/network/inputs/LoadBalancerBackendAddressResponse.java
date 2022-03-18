@@ -143,32 +143,26 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder loadBalancerFrontendIPConfiguration(@Nullable SubResourceResponse loadBalancerFrontendIPConfiguration) {
             this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder networkInterfaceIPConfiguration(SubResourceResponse networkInterfaceIPConfiguration) {
             this.networkInterfaceIPConfiguration = Objects.requireNonNull(networkInterfaceIPConfiguration);
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder virtualNetwork(@Nullable SubResourceResponse virtualNetwork) {
             this.virtualNetwork = virtualNetwork;
             return this;
-        }
-        public LoadBalancerBackendAddressResponse build() {
+        }        public LoadBalancerBackendAddressResponse build() {
             return new LoadBalancerBackendAddressResponse(ipAddress, loadBalancerFrontendIPConfiguration, name, networkInterfaceIPConfiguration, subnet, virtualNetwork);
         }
     }

@@ -80,22 +80,21 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.buildpackGroups = buildpackGroups;
             return this;
         }
-
         public Builder buildpackGroups(@Nullable List<BuildpacksGroupPropertiesArgs> buildpackGroups) {
             this.buildpackGroups = Output.ofNullable(buildpackGroups);
             return this;
         }
-
+        public Builder buildpackGroups(BuildpacksGroupPropertiesArgs... buildpackGroups) {
+            return buildpackGroups(List.of(buildpackGroups));
+        }
         public Builder stack(@Nullable Output<StackPropertiesArgs> stack) {
             this.stack = stack;
             return this;
         }
-
         public Builder stack(@Nullable StackPropertiesArgs stack) {
             this.stack = Output.ofNullable(stack);
             return this;
-        }
-        public BuilderPropertiesArgs build() {
+        }        public BuilderPropertiesArgs build() {
             return new BuilderPropertiesArgs(buildpackGroups, stack);
         }
     }

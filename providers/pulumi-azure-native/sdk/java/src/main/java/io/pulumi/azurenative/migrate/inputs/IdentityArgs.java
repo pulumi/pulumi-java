@@ -96,32 +96,26 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ResourceIdentityType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ResourceIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public IdentityArgs build() {
+        }        public IdentityArgs build() {
             return new IdentityArgs(principalId, tenantId, type);
         }
     }

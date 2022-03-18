@@ -129,27 +129,28 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
             this.authorization = authorization;
             return this;
         }
-
         public Builder certificate(@Nullable List<String> certificate) {
             this.certificate = certificate;
             return this;
         }
-
+        public Builder certificate(String... certificate) {
+            return certificate(List.of(certificate));
+        }
         public Builder certificateIds(@Nullable List<String> certificateIds) {
             this.certificateIds = certificateIds;
             return this;
         }
-
+        public Builder certificateIds(String... certificateIds) {
+            return certificateIds(List.of(certificateIds));
+        }
         public Builder header(@Nullable Map<String,List<String>> header) {
             this.header = header;
             return this;
         }
-
         public Builder query(@Nullable Map<String,List<String>> query) {
             this.query = query;
             return this;
-        }
-        public BackendCredentialsContractResponse build() {
+        }        public BackendCredentialsContractResponse build() {
             return new BackendCredentialsContractResponse(authorization, certificate, certificateIds, header, query);
         }
     }

@@ -79,22 +79,18 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
             this.date = date;
             return this;
         }
-
         public Builder date(@Nullable Integer date) {
             this.date = Output.ofNullable(date);
             return this;
         }
-
         public Builder isLast(@Nullable Output<Boolean> isLast) {
             this.isLast = isLast;
             return this;
         }
-
         public Builder isLast(@Nullable Boolean isLast) {
             this.isLast = Output.ofNullable(isLast);
             return this;
-        }
-        public DayArgs build() {
+        }        public DayArgs build() {
             return new DayArgs(date, isLast);
         }
     }

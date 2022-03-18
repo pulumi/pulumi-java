@@ -72,12 +72,13 @@ public final class OpenIdAuthenticationSettingsContractResponse {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
-
+        public Builder bearerTokenSendingMethods(String... bearerTokenSendingMethods) {
+            return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
+        }
         public Builder openidProviderId(@Nullable String openidProviderId) {
             this.openidProviderId = openidProviderId;
             return this;
-        }
-        public OpenIdAuthenticationSettingsContractResponse build() {
+        }        public OpenIdAuthenticationSettingsContractResponse build() {
             return new OpenIdAuthenticationSettingsContractResponse(bearerTokenSendingMethods, openidProviderId);
         }
     }

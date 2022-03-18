@@ -86,17 +86,14 @@ public final class ClusterJobResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder jobState(String jobState) {
             this.jobState = Objects.requireNonNull(jobState);
             return this;
         }
-
         public Builder streamingUnits(Integer streamingUnits) {
             this.streamingUnits = Objects.requireNonNull(streamingUnits);
             return this;
-        }
-        public ClusterJobResponse build() {
+        }        public ClusterJobResponse build() {
             return new ClusterJobResponse(id, jobState, streamingUnits);
         }
     }

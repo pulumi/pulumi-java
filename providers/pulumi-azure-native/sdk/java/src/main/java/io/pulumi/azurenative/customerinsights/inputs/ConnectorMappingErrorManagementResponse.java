@@ -79,12 +79,10 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
             this.errorLimit = errorLimit;
             return this;
         }
-
         public Builder errorManagementType(String errorManagementType) {
             this.errorManagementType = Objects.requireNonNull(errorManagementType);
             return this;
-        }
-        public ConnectorMappingErrorManagementResponse build() {
+        }        public ConnectorMappingErrorManagementResponse build() {
             return new ConnectorMappingErrorManagementResponse(errorLimit, errorManagementType);
         }
     }

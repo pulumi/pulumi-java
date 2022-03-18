@@ -227,62 +227,53 @@ public final class GetDigitalTwinResult {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable DigitalTwinsIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDigitalTwinResult build() {
+        }        public GetDigitalTwinResult build() {
             return new GetDigitalTwinResult(createdTime, hostName, id, identity, lastUpdatedTime, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, tags, type);
         }
     }

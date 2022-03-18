@@ -72,12 +72,10 @@ public final class ListClusterLanguageExtensionsArgs extends io.pulumi.resources
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListClusterLanguageExtensionsArgs build() {
+        }        public ListClusterLanguageExtensionsArgs build() {
             return new ListClusterLanguageExtensionsArgs(clusterName, resourceGroupName);
         }
     }

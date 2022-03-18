@@ -72,12 +72,10 @@ public final class GetFluidRelayServerKeysArgs extends io.pulumi.resources.Invok
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
-        }
-        public GetFluidRelayServerKeysArgs build() {
+        }        public GetFluidRelayServerKeysArgs build() {
             return new GetFluidRelayServerKeysArgs(name, resourceGroup);
         }
     }

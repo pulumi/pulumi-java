@@ -124,27 +124,22 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder ticketConfiguration(String ticketConfiguration) {
             this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
-        }
-        public ItsmReceiverResponse build() {
+        }        public ItsmReceiverResponse build() {
             return new ItsmReceiverResponse(connectionId, name, region, ticketConfiguration, workspaceId);
         }
     }

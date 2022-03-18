@@ -127,27 +127,22 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
             this.builtIn = Objects.requireNonNull(builtIn);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GroupContractPropertiesResponse build() {
+        }        public GroupContractPropertiesResponse build() {
             return new GroupContractPropertiesResponse(builtIn, description, displayName, externalId, type);
         }
     }

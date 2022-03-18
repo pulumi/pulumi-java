@@ -54,7 +54,9 @@ public final class NetworkProfileResponse {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-        public NetworkProfileResponse build() {
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }        public NetworkProfileResponse build() {
             return new NetworkProfileResponse(networkInterfaces);
         }
     }

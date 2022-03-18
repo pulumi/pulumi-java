@@ -143,62 +143,50 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.cleanupState = cleanupState;
             return this;
         }
-
         public Builder cleanupState(@Nullable String cleanupState) {
             this.cleanupState = Output.ofNullable(cleanupState);
             return this;
         }
-
         public Builder details(@Nullable Output<SolutionDetailsArgs> details) {
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable SolutionDetailsArgs details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
         public Builder goal(@Nullable Output<String> goal) {
             this.goal = goal;
             return this;
         }
-
         public Builder goal(@Nullable String goal) {
             this.goal = Output.ofNullable(goal);
             return this;
         }
-
         public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
-
         public Builder purpose(@Nullable String purpose) {
             this.purpose = Output.ofNullable(purpose);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tool(@Nullable Output<String> tool) {
             this.tool = tool;
             return this;
         }
-
         public Builder tool(@Nullable String tool) {
             this.tool = Output.ofNullable(tool);
             return this;
-        }
-        public SolutionPropertiesArgs build() {
+        }        public SolutionPropertiesArgs build() {
             return new SolutionPropertiesArgs(cleanupState, details, goal, purpose, status, tool);
         }
     }

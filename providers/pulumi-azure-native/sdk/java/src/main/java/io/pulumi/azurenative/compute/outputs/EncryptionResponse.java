@@ -71,12 +71,10 @@ public final class EncryptionResponse {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public EncryptionResponse build() {
+        }        public EncryptionResponse build() {
             return new EncryptionResponse(diskEncryptionSetId, type);
         }
     }

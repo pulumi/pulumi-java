@@ -103,22 +103,18 @@ public final class ConnectionProfileResponse {
             this.clientRdpAccess = clientRdpAccess;
             return this;
         }
-
         public Builder clientSshAccess(@Nullable String clientSshAccess) {
             this.clientSshAccess = clientSshAccess;
             return this;
         }
-
         public Builder webRdpAccess(@Nullable String webRdpAccess) {
             this.webRdpAccess = webRdpAccess;
             return this;
         }
-
         public Builder webSshAccess(@Nullable String webSshAccess) {
             this.webSshAccess = webSshAccess;
             return this;
-        }
-        public ConnectionProfileResponse build() {
+        }        public ConnectionProfileResponse build() {
             return new ConnectionProfileResponse(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);
         }
     }

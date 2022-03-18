@@ -322,87 +322,91 @@ public final class GetLoadBalancerResult {
             this.backendAddressPools = backendAddressPools;
             return this;
         }
-
+        public Builder backendAddressPools(BackendAddressPoolResponse... backendAddressPools) {
+            return backendAddressPools(List.of(backendAddressPools));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder frontendIPConfigurations(@Nullable List<FrontendIPConfigurationResponse> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
-
+        public Builder frontendIPConfigurations(FrontendIPConfigurationResponse... frontendIPConfigurations) {
+            return frontendIPConfigurations(List.of(frontendIPConfigurations));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder inboundNatPools(@Nullable List<InboundNatPoolResponse> inboundNatPools) {
             this.inboundNatPools = inboundNatPools;
             return this;
         }
-
+        public Builder inboundNatPools(InboundNatPoolResponse... inboundNatPools) {
+            return inboundNatPools(List.of(inboundNatPools));
+        }
         public Builder inboundNatRules(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
             this.inboundNatRules = inboundNatRules;
             return this;
         }
-
+        public Builder inboundNatRules(InboundNatRuleResponse... inboundNatRules) {
+            return inboundNatRules(List.of(inboundNatRules));
+        }
         public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleResponse> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
-
+        public Builder loadBalancingRules(LoadBalancingRuleResponse... loadBalancingRules) {
+            return loadBalancingRules(List.of(loadBalancingRules));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outboundRules(@Nullable List<OutboundRuleResponse> outboundRules) {
             this.outboundRules = outboundRules;
             return this;
         }
-
+        public Builder outboundRules(OutboundRuleResponse... outboundRules) {
+            return outboundRules(List.of(outboundRules));
+        }
         public Builder probes(@Nullable List<ProbeResponse> probes) {
             this.probes = probes;
             return this;
         }
-
+        public Builder probes(ProbeResponse... probes) {
+            return probes(List.of(probes));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder sku(@Nullable LoadBalancerSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLoadBalancerResult build() {
+        }        public GetLoadBalancerResult build() {
             return new GetLoadBalancerResult(backendAddressPools, etag, extendedLocation, frontendIPConfigurations, id, inboundNatPools, inboundNatRules, loadBalancingRules, location, name, outboundRules, probes, provisioningState, resourceGuid, sku, tags, type);
         }
     }

@@ -238,62 +238,56 @@ public final class CustomApiPropertiesDefinitionResponse {
             this.apiDefinitions = apiDefinitions;
             return this;
         }
-
         public Builder apiType(@Nullable String apiType) {
             this.apiType = apiType;
             return this;
         }
-
         public Builder backendService(@Nullable ApiResourceBackendServiceResponse backendService) {
             this.backendService = backendService;
             return this;
         }
-
         public Builder brandColor(@Nullable String brandColor) {
             this.brandColor = brandColor;
             return this;
         }
-
         public Builder capabilities(@Nullable List<String> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder connectionParameters(@Nullable Map<String,ConnectionParameterResponse> connectionParameters) {
             this.connectionParameters = connectionParameters;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder iconUri(@Nullable String iconUri) {
             this.iconUri = iconUri;
             return this;
         }
-
         public Builder runtimeUrls(@Nullable List<String> runtimeUrls) {
             this.runtimeUrls = runtimeUrls;
             return this;
         }
-
+        public Builder runtimeUrls(String... runtimeUrls) {
+            return runtimeUrls(List.of(runtimeUrls));
+        }
         public Builder swagger(@Nullable Object swagger) {
             this.swagger = swagger;
             return this;
         }
-
         public Builder wsdlDefinition(@Nullable WsdlDefinitionResponse wsdlDefinition) {
             this.wsdlDefinition = wsdlDefinition;
             return this;
-        }
-        public CustomApiPropertiesDefinitionResponse build() {
+        }        public CustomApiPropertiesDefinitionResponse build() {
             return new CustomApiPropertiesDefinitionResponse(apiDefinitions, apiType, backendService, brandColor, capabilities, connectionParameters, description, displayName, iconUri, runtimeUrls, swagger, wsdlDefinition);
         }
     }

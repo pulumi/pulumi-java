@@ -61,12 +61,10 @@ public final class DppIdentityDetailsArgs extends io.pulumi.resources.ResourceAr
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DppIdentityDetailsArgs build() {
+        }        public DppIdentityDetailsArgs build() {
             return new DppIdentityDetailsArgs(type);
         }
     }

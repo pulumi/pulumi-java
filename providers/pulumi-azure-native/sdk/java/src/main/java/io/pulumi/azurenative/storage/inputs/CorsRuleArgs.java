@@ -127,52 +127,54 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedHeaders = Objects.requireNonNull(allowedHeaders);
             return this;
         }
-
         public Builder allowedHeaders(List<String> allowedHeaders) {
             this.allowedHeaders = Output.of(Objects.requireNonNull(allowedHeaders));
             return this;
         }
-
+        public Builder allowedHeaders(String... allowedHeaders) {
+            return allowedHeaders(List.of(allowedHeaders));
+        }
         public Builder allowedMethods(Output<List<String>> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
-
         public Builder allowedMethods(List<String> allowedMethods) {
             this.allowedMethods = Output.of(Objects.requireNonNull(allowedMethods));
             return this;
         }
-
+        public Builder allowedMethods(String... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder allowedOrigins(Output<List<String>> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
-
         public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Output.of(Objects.requireNonNull(allowedOrigins));
             return this;
         }
-
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }
         public Builder exposedHeaders(Output<List<String>> exposedHeaders) {
             this.exposedHeaders = Objects.requireNonNull(exposedHeaders);
             return this;
         }
-
         public Builder exposedHeaders(List<String> exposedHeaders) {
             this.exposedHeaders = Output.of(Objects.requireNonNull(exposedHeaders));
             return this;
         }
-
+        public Builder exposedHeaders(String... exposedHeaders) {
+            return exposedHeaders(List.of(exposedHeaders));
+        }
         public Builder maxAgeInSeconds(Output<Integer> maxAgeInSeconds) {
             this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
             return this;
         }
-
         public Builder maxAgeInSeconds(Integer maxAgeInSeconds) {
             this.maxAgeInSeconds = Output.of(Objects.requireNonNull(maxAgeInSeconds));
             return this;
-        }
-        public CorsRuleArgs build() {
+        }        public CorsRuleArgs build() {
             return new CorsRuleArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }
     }

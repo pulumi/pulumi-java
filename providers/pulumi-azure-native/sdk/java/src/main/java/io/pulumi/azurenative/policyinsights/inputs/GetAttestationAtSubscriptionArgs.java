@@ -54,8 +54,7 @@ public final class GetAttestationAtSubscriptionArgs extends io.pulumi.resources.
         public Builder attestationName(String attestationName) {
             this.attestationName = Objects.requireNonNull(attestationName);
             return this;
-        }
-        public GetAttestationAtSubscriptionArgs build() {
+        }        public GetAttestationAtSubscriptionArgs build() {
             return new GetAttestationAtSubscriptionArgs(attestationName);
         }
     }

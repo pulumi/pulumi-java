@@ -138,32 +138,29 @@ public final class GetBandwidthSettingResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schedules(List<BandwidthScheduleResponse> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
+        public Builder schedules(BandwidthScheduleResponse... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumeCount(Integer volumeCount) {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
-        }
-        public GetBandwidthSettingResult build() {
+        }        public GetBandwidthSettingResult build() {
             return new GetBandwidthSettingResult(id, kind, name, schedules, type, volumeCount);
         }
     }

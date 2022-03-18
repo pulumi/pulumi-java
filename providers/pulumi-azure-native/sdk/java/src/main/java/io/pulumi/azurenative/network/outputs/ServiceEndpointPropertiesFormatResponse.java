@@ -88,17 +88,17 @@ public final class ServiceEndpointPropertiesFormatResponse {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
-        }
-        public ServiceEndpointPropertiesFormatResponse build() {
+        }        public ServiceEndpointPropertiesFormatResponse build() {
             return new ServiceEndpointPropertiesFormatResponse(locations, provisioningState, service);
         }
     }

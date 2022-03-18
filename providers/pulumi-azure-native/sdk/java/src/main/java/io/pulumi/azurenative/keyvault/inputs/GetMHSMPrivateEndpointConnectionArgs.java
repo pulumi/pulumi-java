@@ -88,17 +88,14 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends io.pulumi.resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMHSMPrivateEndpointConnectionArgs build() {
+        }        public GetMHSMPrivateEndpointConnectionArgs build() {
             return new GetMHSMPrivateEndpointConnectionArgs(name, privateEndpointConnectionName, resourceGroupName);
         }
     }

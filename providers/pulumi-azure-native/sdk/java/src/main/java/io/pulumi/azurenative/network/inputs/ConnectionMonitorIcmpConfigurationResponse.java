@@ -60,8 +60,7 @@ public final class ConnectionMonitorIcmpConfigurationResponse extends io.pulumi.
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
-        }
-        public ConnectionMonitorIcmpConfigurationResponse build() {
+        }        public ConnectionMonitorIcmpConfigurationResponse build() {
             return new ConnectionMonitorIcmpConfigurationResponse(disableTraceRoute);
         }
     }

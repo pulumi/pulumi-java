@@ -79,22 +79,18 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<Either<String,ExtendedLocationTypes>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ExtendedLocationTypes> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ExtendedLocationArgs build() {
+        }        public ExtendedLocationArgs build() {
             return new ExtendedLocationArgs(name, type);
         }
     }

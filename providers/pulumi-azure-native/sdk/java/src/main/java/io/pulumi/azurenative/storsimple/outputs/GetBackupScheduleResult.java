@@ -201,52 +201,42 @@ public final class GetBackupScheduleResult {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder lastSuccessfulRun(String lastSuccessfulRun) {
             this.lastSuccessfulRun = Objects.requireNonNull(lastSuccessfulRun);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder retentionCount(Double retentionCount) {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
         }
-
         public Builder scheduleRecurrence(ScheduleRecurrenceResponse scheduleRecurrence) {
             this.scheduleRecurrence = Objects.requireNonNull(scheduleRecurrence);
             return this;
         }
-
         public Builder scheduleStatus(String scheduleStatus) {
             this.scheduleStatus = Objects.requireNonNull(scheduleStatus);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBackupScheduleResult build() {
+        }        public GetBackupScheduleResult build() {
             return new GetBackupScheduleResult(backupType, id, kind, lastSuccessfulRun, name, retentionCount, scheduleRecurrence, scheduleStatus, startTime, type);
         }
     }

@@ -53,8 +53,7 @@ public final class ListDelegationSettingSecretsResult {
         public Builder validationKey(@Nullable String validationKey) {
             this.validationKey = validationKey;
             return this;
-        }
-        public ListDelegationSettingSecretsResult build() {
+        }        public ListDelegationSettingSecretsResult build() {
             return new ListDelegationSettingSecretsResult(validationKey);
         }
     }

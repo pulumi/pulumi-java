@@ -59,12 +59,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
             this.accessibility = accessibility;
             return this;
         }
-
         public Builder accessibility(@Nullable Either<String,Accessibility> accessibility) {
             this.accessibility = Output.ofNullable(accessibility);
             return this;
-        }
-        public PlanArgs build() {
+        }        public PlanArgs build() {
             return new PlanArgs(accessibility);
         }
     }

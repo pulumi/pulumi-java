@@ -114,42 +114,40 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<ParameterContractArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(ParameterContractArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder representations(@Nullable Output<List<RepresentationContractArgs>> representations) {
             this.representations = representations;
             return this;
         }
-
         public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
             this.representations = Output.ofNullable(representations);
             return this;
         }
-
+        public Builder representations(RepresentationContractArgs... representations) {
+            return representations(List.of(representations));
+        }
         public Builder statusCode(Output<Integer> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public Builder statusCode(Integer statusCode) {
             this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
-        }
-        public ResponseContractArgs build() {
+        }        public ResponseContractArgs build() {
             return new ResponseContractArgs(description, headers, representations, statusCode);
         }
     }

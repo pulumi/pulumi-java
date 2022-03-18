@@ -203,102 +203,82 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder gatewayId(Output<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
             return this;
         }
-
         public Builder hcId(@Nullable Output<String> hcId) {
             this.hcId = hcId;
             return this;
         }
-
         public Builder hcId(@Nullable String hcId) {
             this.hcId = Output.ofNullable(hcId);
             return this;
         }
-
         public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder http2Enabled(@Nullable Output<Boolean> http2Enabled) {
             this.http2Enabled = http2Enabled;
             return this;
         }
-
         public Builder http2Enabled(@Nullable Boolean http2Enabled) {
             this.http2Enabled = Output.ofNullable(http2Enabled);
             return this;
         }
-
         public Builder negotiateClientCertificate(@Nullable Output<Boolean> negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
-
         public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
             this.negotiateClientCertificate = Output.ofNullable(negotiateClientCertificate);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder tls10Enabled(@Nullable Output<Boolean> tls10Enabled) {
             this.tls10Enabled = tls10Enabled;
             return this;
         }
-
         public Builder tls10Enabled(@Nullable Boolean tls10Enabled) {
             this.tls10Enabled = Output.ofNullable(tls10Enabled);
             return this;
         }
-
         public Builder tls11Enabled(@Nullable Output<Boolean> tls11Enabled) {
             this.tls11Enabled = tls11Enabled;
             return this;
         }
-
         public Builder tls11Enabled(@Nullable Boolean tls11Enabled) {
             this.tls11Enabled = Output.ofNullable(tls11Enabled);
             return this;
-        }
-        public GatewayHostnameConfigurationArgs build() {
+        }        public GatewayHostnameConfigurationArgs build() {
             return new GatewayHostnameConfigurationArgs(certificateId, gatewayId, hcId, hostname, http2Enabled, negotiateClientCertificate, resourceGroupName, serviceName, tls10Enabled, tls11Enabled);
         }
     }

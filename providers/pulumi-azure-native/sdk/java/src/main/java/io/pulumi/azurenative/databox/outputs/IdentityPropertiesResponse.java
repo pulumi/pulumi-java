@@ -72,12 +72,10 @@ public final class IdentityPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public Builder userAssigned(@Nullable UserAssignedPropertiesResponse userAssigned) {
             this.userAssigned = userAssigned;
             return this;
-        }
-        public IdentityPropertiesResponse build() {
+        }        public IdentityPropertiesResponse build() {
             return new IdentityPropertiesResponse(type, userAssigned);
         }
     }

@@ -69,12 +69,10 @@ public final class AssignedUserResponse {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public AssignedUserResponse build() {
+        }        public AssignedUserResponse build() {
             return new AssignedUserResponse(objectId, tenantId);
         }
     }

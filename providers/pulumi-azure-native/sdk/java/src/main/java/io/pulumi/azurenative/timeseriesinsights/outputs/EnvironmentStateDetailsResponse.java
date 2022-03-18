@@ -71,12 +71,10 @@ public final class EnvironmentStateDetailsResponse {
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
-        }
-        public EnvironmentStateDetailsResponse build() {
+        }        public EnvironmentStateDetailsResponse build() {
             return new EnvironmentStateDetailsResponse(code, message);
         }
     }

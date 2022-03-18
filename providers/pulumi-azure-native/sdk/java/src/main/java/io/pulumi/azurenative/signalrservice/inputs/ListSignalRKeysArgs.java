@@ -72,12 +72,10 @@ public final class ListSignalRKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListSignalRKeysArgs build() {
+        }        public ListSignalRKeysArgs build() {
             return new ListSignalRKeysArgs(resourceGroupName, resourceName);
         }
     }

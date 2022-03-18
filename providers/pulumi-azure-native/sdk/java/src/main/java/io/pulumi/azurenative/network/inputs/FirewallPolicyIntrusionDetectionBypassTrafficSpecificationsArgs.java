@@ -177,82 +177,81 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = Output.ofNullable(destinationAddresses);
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder destinationIpGroups(@Nullable Output<List<String>> destinationIpGroups) {
             this.destinationIpGroups = destinationIpGroups;
             return this;
         }
-
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
             this.destinationIpGroups = Output.ofNullable(destinationIpGroups);
             return this;
         }
-
+        public Builder destinationIpGroups(String... destinationIpGroups) {
+            return destinationIpGroups(List.of(destinationIpGroups));
+        }
         public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
-
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = Output.ofNullable(destinationPorts);
             return this;
         }
-
+        public Builder destinationPorts(String... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,FirewallPolicyIntrusionDetectionProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = Output.ofNullable(sourceAddresses);
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
             return this;
         }
-        public FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs build() {
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }        public FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs build() {
             return new FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs(description, destinationAddresses, destinationIpGroups, destinationPorts, name, protocol, sourceAddresses, sourceIpGroups);
         }
     }

@@ -199,47 +199,50 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
             this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
             return this;
         }
-
         public Builder costInformation(CostInformationResponse costInformation) {
             this.costInformation = Objects.requireNonNull(costInformation);
             return this;
         }
-
         public Builder description(DescriptionResponse description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
         }
-
+        public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
+            return filterableProperties(List.of(filterableProperties));
+        }
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
-
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
-
+        public Builder imageInformation(ImageInformationResponse... imageInformation) {
+            return imageInformation(List.of(imageInformation));
+        }
         public Builder productLines(List<ProductLineResponse> productLines) {
             this.productLines = Objects.requireNonNull(productLines);
             return this;
         }
-
+        public Builder productLines(ProductLineResponse... productLines) {
+            return productLines(List.of(productLines));
+        }
         public Builder resourceProviderDetails(@Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
             this.resourceProviderDetails = resourceProviderDetails;
             return this;
         }
-        public ProductFamilyResponse build() {
+        public Builder resourceProviderDetails(ResourceProviderDetailsResponse... resourceProviderDetails) {
+            return resourceProviderDetails(List.of(resourceProviderDetails));
+        }        public ProductFamilyResponse build() {
             return new ProductFamilyResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, productLines, resourceProviderDetails);
         }
     }

@@ -107,42 +107,34 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable CreateManagementGroupDetailsArgs details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ManagementGroupArgs build() {
+        }        public ManagementGroupArgs build() {
             return new ManagementGroupArgs(details, displayName, groupId, name);
         }
     }

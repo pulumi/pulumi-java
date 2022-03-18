@@ -140,62 +140,50 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
             this.azureDnsZone = azureDnsZone;
             return this;
         }
-
         public Builder azureDnsZone(@Nullable ResourceReferenceArgs azureDnsZone) {
             this.azureDnsZone = Output.ofNullable(azureDnsZone);
             return this;
         }
-
         public Builder customDomainName(@Nullable Output<String> customDomainName) {
             this.customDomainName = customDomainName;
             return this;
         }
-
         public Builder customDomainName(@Nullable String customDomainName) {
             this.customDomainName = Output.ofNullable(customDomainName);
             return this;
         }
-
         public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tlsSettings(@Nullable Output<AFDDomainHttpsParametersArgs> tlsSettings) {
             this.tlsSettings = tlsSettings;
             return this;
         }
-
         public Builder tlsSettings(@Nullable AFDDomainHttpsParametersArgs tlsSettings) {
             this.tlsSettings = Output.ofNullable(tlsSettings);
             return this;
-        }
-        public AFDCustomDomainArgs build() {
+        }        public AFDCustomDomainArgs build() {
             return new AFDCustomDomainArgs(azureDnsZone, customDomainName, hostName, profileName, resourceGroupName, tlsSettings);
         }
     }

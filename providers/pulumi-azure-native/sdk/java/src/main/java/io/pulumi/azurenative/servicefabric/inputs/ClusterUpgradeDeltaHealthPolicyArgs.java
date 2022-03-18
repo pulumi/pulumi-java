@@ -119,42 +119,34 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
             this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
             return this;
         }
-
         public Builder applicationDeltaHealthPolicies(@Nullable Map<String,ApplicationDeltaHealthPolicyArgs> applicationDeltaHealthPolicies) {
             this.applicationDeltaHealthPolicies = Output.ofNullable(applicationDeltaHealthPolicies);
             return this;
         }
-
         public Builder maxPercentDeltaUnhealthyApplications(Output<Integer> maxPercentDeltaUnhealthyApplications) {
             this.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull(maxPercentDeltaUnhealthyApplications);
             return this;
         }
-
         public Builder maxPercentDeltaUnhealthyApplications(Integer maxPercentDeltaUnhealthyApplications) {
             this.maxPercentDeltaUnhealthyApplications = Output.of(Objects.requireNonNull(maxPercentDeltaUnhealthyApplications));
             return this;
         }
-
         public Builder maxPercentDeltaUnhealthyNodes(Output<Integer> maxPercentDeltaUnhealthyNodes) {
             this.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentDeltaUnhealthyNodes);
             return this;
         }
-
         public Builder maxPercentDeltaUnhealthyNodes(Integer maxPercentDeltaUnhealthyNodes) {
             this.maxPercentDeltaUnhealthyNodes = Output.of(Objects.requireNonNull(maxPercentDeltaUnhealthyNodes));
             return this;
         }
-
         public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Output<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes) {
             this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes);
             return this;
         }
-
         public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
             this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Output.of(Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes));
             return this;
-        }
-        public ClusterUpgradeDeltaHealthPolicyArgs build() {
+        }        public ClusterUpgradeDeltaHealthPolicyArgs build() {
             return new ClusterUpgradeDeltaHealthPolicyArgs(applicationDeltaHealthPolicies, maxPercentDeltaUnhealthyApplications, maxPercentDeltaUnhealthyNodes, maxPercentUpgradeDomainDeltaUnhealthyNodes);
         }
     }

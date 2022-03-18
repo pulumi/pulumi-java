@@ -239,62 +239,50 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
             this.address = address;
             return this;
         }
-
         public Builder backendHostHeader(@Nullable String backendHostHeader) {
             this.backendHostHeader = backendHostHeader;
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
-
         public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder privateEndpointStatus(String privateEndpointStatus) {
             this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus);
             return this;
         }
-
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
-
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public BackendResponse build() {
+        }        public BackendResponse build() {
             return new BackendResponse(address, backendHostHeader, enabledState, httpPort, httpsPort, priority, privateEndpointStatus, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
         }
     }

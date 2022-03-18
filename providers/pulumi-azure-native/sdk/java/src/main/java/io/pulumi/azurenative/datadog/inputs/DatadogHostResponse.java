@@ -104,22 +104,24 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
             this.aliases = aliases;
             return this;
         }
-
+        public Builder aliases(String... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder apps(@Nullable List<String> apps) {
             this.apps = apps;
             return this;
         }
-
+        public Builder apps(String... apps) {
+            return apps(List.of(apps));
+        }
         public Builder meta(@Nullable DatadogHostMetadataResponse meta) {
             this.meta = meta;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DatadogHostResponse build() {
+        }        public DatadogHostResponse build() {
             return new DatadogHostResponse(aliases, apps, meta, name);
         }
     }

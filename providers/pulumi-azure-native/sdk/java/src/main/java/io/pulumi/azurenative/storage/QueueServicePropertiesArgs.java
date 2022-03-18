@@ -107,42 +107,34 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
-
         public Builder cors(@Nullable CorsRulesArgs cors) {
             this.cors = Output.ofNullable(cors);
             return this;
         }
-
         public Builder queueServiceName(@Nullable Output<String> queueServiceName) {
             this.queueServiceName = queueServiceName;
             return this;
         }
-
         public Builder queueServiceName(@Nullable String queueServiceName) {
             this.queueServiceName = Output.ofNullable(queueServiceName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public QueueServicePropertiesArgs build() {
+        }        public QueueServicePropertiesArgs build() {
             return new QueueServicePropertiesArgs(accountName, cors, queueServiceName, resourceGroupName);
         }
     }

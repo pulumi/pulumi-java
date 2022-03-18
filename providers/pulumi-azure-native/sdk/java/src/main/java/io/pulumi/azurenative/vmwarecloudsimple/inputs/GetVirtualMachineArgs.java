@@ -72,12 +72,10 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualMachineName(String virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
-        }
-        public GetVirtualMachineArgs build() {
+        }        public GetVirtualMachineArgs build() {
             return new GetVirtualMachineArgs(resourceGroupName, virtualMachineName);
         }
     }

@@ -77,22 +77,18 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
-
         public Builder sourcePropertyName(String sourcePropertyName) {
             this.sourcePropertyName = Output.of(Objects.requireNonNull(sourcePropertyName));
             return this;
         }
-
         public Builder targetPropertyName(Output<String> targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
-
         public Builder targetPropertyName(String targetPropertyName) {
             this.targetPropertyName = Output.of(Objects.requireNonNull(targetPropertyName));
             return this;
-        }
-        public ParticipantPropertyReferenceArgs build() {
+        }        public ParticipantPropertyReferenceArgs build() {
             return new ParticipantPropertyReferenceArgs(sourcePropertyName, targetPropertyName);
         }
     }

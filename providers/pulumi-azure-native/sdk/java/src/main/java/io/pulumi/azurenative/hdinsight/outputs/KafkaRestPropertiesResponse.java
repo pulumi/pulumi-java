@@ -73,12 +73,10 @@ public final class KafkaRestPropertiesResponse {
             this.clientGroupInfo = clientGroupInfo;
             return this;
         }
-
         public Builder configurationOverride(@Nullable Map<String,String> configurationOverride) {
             this.configurationOverride = configurationOverride;
             return this;
-        }
-        public KafkaRestPropertiesResponse build() {
+        }        public KafkaRestPropertiesResponse build() {
             return new KafkaRestPropertiesResponse(clientGroupInfo, configurationOverride);
         }
     }

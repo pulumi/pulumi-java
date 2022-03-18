@@ -127,27 +127,22 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
             this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
             return this;
         }
-
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
             this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
             return this;
         }
-
         public Builder defaultRedirectUrl(@Nullable String defaultRedirectUrl) {
             this.defaultRedirectUrl = defaultRedirectUrl;
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
-        }
-        public PolicySettingsResponse build() {
+        }        public PolicySettingsResponse build() {
             return new PolicySettingsResponse(defaultCustomBlockResponseBody, defaultCustomBlockResponseStatusCode, defaultRedirectUrl, enabledState, mode);
         }
     }

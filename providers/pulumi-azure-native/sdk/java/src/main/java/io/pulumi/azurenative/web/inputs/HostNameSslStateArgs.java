@@ -145,62 +145,50 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
             this.hostType = hostType;
             return this;
         }
-
         public Builder hostType(@Nullable HostType hostType) {
             this.hostType = Output.ofNullable(hostType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sslState(@Nullable Output<SslState> sslState) {
             this.sslState = sslState;
             return this;
         }
-
         public Builder sslState(@Nullable SslState sslState) {
             this.sslState = Output.ofNullable(sslState);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
-
         public Builder toUpdate(@Nullable Output<Boolean> toUpdate) {
             this.toUpdate = toUpdate;
             return this;
         }
-
         public Builder toUpdate(@Nullable Boolean toUpdate) {
             this.toUpdate = Output.ofNullable(toUpdate);
             return this;
         }
-
         public Builder virtualIP(@Nullable Output<String> virtualIP) {
             this.virtualIP = virtualIP;
             return this;
         }
-
         public Builder virtualIP(@Nullable String virtualIP) {
             this.virtualIP = Output.ofNullable(virtualIP);
             return this;
-        }
-        public HostNameSslStateArgs build() {
+        }        public HostNameSslStateArgs build() {
             return new HostNameSslStateArgs(hostType, name, sslState, thumbprint, toUpdate, virtualIP);
         }
     }

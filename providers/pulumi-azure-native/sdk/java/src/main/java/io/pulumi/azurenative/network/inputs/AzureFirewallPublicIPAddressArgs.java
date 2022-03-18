@@ -61,12 +61,10 @@ public final class AzureFirewallPublicIPAddressArgs extends io.pulumi.resources.
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
-        }
-        public AzureFirewallPublicIPAddressArgs build() {
+        }        public AzureFirewallPublicIPAddressArgs build() {
             return new AzureFirewallPublicIPAddressArgs(address);
         }
     }

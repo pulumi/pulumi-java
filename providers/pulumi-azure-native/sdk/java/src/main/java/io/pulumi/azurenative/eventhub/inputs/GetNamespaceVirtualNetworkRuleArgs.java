@@ -88,17 +88,14 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
             this.virtualNetworkRuleName = Objects.requireNonNull(virtualNetworkRuleName);
             return this;
-        }
-        public GetNamespaceVirtualNetworkRuleArgs build() {
+        }        public GetNamespaceVirtualNetworkRuleArgs build() {
             return new GetNamespaceVirtualNetworkRuleArgs(namespaceName, resourceGroupName, virtualNetworkRuleName);
         }
     }

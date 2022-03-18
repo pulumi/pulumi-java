@@ -112,22 +112,21 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder keyPropertyNames(List<String> keyPropertyNames) {
             this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames);
             return this;
         }
-
+        public Builder keyPropertyNames(String... keyPropertyNames) {
+            return keyPropertyNames(List.of(keyPropertyNames));
+        }
         public Builder strongIdName(String strongIdName) {
             this.strongIdName = Objects.requireNonNull(strongIdName);
             return this;
-        }
-        public StrongIdResponse build() {
+        }        public StrongIdResponse build() {
             return new StrongIdResponse(description, displayName, keyPropertyNames, strongIdName);
         }
     }

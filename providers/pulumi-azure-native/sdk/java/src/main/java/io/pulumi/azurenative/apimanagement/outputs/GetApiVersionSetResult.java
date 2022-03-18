@@ -167,42 +167,34 @@ public final class GetApiVersionSetResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder versionHeaderName(@Nullable String versionHeaderName) {
             this.versionHeaderName = versionHeaderName;
             return this;
         }
-
         public Builder versionQueryName(@Nullable String versionQueryName) {
             this.versionQueryName = versionQueryName;
             return this;
         }
-
         public Builder versioningScheme(String versioningScheme) {
             this.versioningScheme = Objects.requireNonNull(versioningScheme);
             return this;
-        }
-        public GetApiVersionSetResult build() {
+        }        public GetApiVersionSetResult build() {
             return new GetApiVersionSetResult(description, displayName, id, name, type, versionHeaderName, versionQueryName, versioningScheme);
         }
     }

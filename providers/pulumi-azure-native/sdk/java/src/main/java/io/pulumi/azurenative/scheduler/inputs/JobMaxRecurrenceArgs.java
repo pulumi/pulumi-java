@@ -75,22 +75,18 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
             this.frequency = frequency;
             return this;
         }
-
         public Builder frequency(@Nullable RecurrenceFrequency frequency) {
             this.frequency = Output.ofNullable(frequency);
             return this;
         }
-
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
-        }
-        public JobMaxRecurrenceArgs build() {
+        }        public JobMaxRecurrenceArgs build() {
             return new JobMaxRecurrenceArgs(frequency, interval);
         }
     }

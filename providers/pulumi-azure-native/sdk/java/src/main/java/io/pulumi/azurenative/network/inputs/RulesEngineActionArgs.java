@@ -98,32 +98,32 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
             this.requestHeaderActions = requestHeaderActions;
             return this;
         }
-
         public Builder requestHeaderActions(@Nullable List<HeaderActionArgs> requestHeaderActions) {
             this.requestHeaderActions = Output.ofNullable(requestHeaderActions);
             return this;
         }
-
+        public Builder requestHeaderActions(HeaderActionArgs... requestHeaderActions) {
+            return requestHeaderActions(List.of(requestHeaderActions));
+        }
         public Builder responseHeaderActions(@Nullable Output<List<HeaderActionArgs>> responseHeaderActions) {
             this.responseHeaderActions = responseHeaderActions;
             return this;
         }
-
         public Builder responseHeaderActions(@Nullable List<HeaderActionArgs> responseHeaderActions) {
             this.responseHeaderActions = Output.ofNullable(responseHeaderActions);
             return this;
         }
-
+        public Builder responseHeaderActions(HeaderActionArgs... responseHeaderActions) {
+            return responseHeaderActions(List.of(responseHeaderActions));
+        }
         public Builder routeConfigurationOverride(@Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
-
         public Builder routeConfigurationOverride(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfigurationOverride) {
             this.routeConfigurationOverride = Output.ofNullable(routeConfigurationOverride);
             return this;
-        }
-        public RulesEngineActionArgs build() {
+        }        public RulesEngineActionArgs build() {
             return new RulesEngineActionArgs(requestHeaderActions, responseHeaderActions, routeConfigurationOverride);
         }
     }

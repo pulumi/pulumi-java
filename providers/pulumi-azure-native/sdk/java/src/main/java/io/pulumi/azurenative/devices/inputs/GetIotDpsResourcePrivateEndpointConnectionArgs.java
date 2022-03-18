@@ -88,17 +88,14 @@ public final class GetIotDpsResourcePrivateEndpointConnectionArgs extends io.pul
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetIotDpsResourcePrivateEndpointConnectionArgs build() {
+        }        public GetIotDpsResourcePrivateEndpointConnectionArgs build() {
             return new GetIotDpsResourcePrivateEndpointConnectionArgs(privateEndpointConnectionName, resourceGroupName, resourceName);
         }
     }

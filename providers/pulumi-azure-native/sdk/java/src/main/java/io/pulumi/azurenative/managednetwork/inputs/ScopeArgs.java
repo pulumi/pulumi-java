@@ -111,42 +111,46 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.managementGroups = managementGroups;
             return this;
         }
-
         public Builder managementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
             this.managementGroups = Output.ofNullable(managementGroups);
             return this;
         }
-
+        public Builder managementGroups(ResourceIdArgs... managementGroups) {
+            return managementGroups(List.of(managementGroups));
+        }
         public Builder subnets(@Nullable Output<List<ResourceIdArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
-
         public Builder subnets(@Nullable List<ResourceIdArgs> subnets) {
             this.subnets = Output.ofNullable(subnets);
             return this;
         }
-
+        public Builder subnets(ResourceIdArgs... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder subscriptions(@Nullable Output<List<ResourceIdArgs>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
-
         public Builder subscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
             this.subscriptions = Output.ofNullable(subscriptions);
             return this;
         }
-
+        public Builder subscriptions(ResourceIdArgs... subscriptions) {
+            return subscriptions(List.of(subscriptions));
+        }
         public Builder virtualNetworks(@Nullable Output<List<ResourceIdArgs>> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public Builder virtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
             this.virtualNetworks = Output.ofNullable(virtualNetworks);
             return this;
         }
-        public ScopeArgs build() {
+        public Builder virtualNetworks(ResourceIdArgs... virtualNetworks) {
+            return virtualNetworks(List.of(virtualNetworks));
+        }        public ScopeArgs build() {
             return new ScopeArgs(managementGroups, subnets, subscriptions, virtualNetworks);
         }
     }

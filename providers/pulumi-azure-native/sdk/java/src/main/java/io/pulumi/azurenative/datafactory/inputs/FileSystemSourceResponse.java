@@ -160,37 +160,30 @@ public final class FileSystemSourceResponse extends io.pulumi.resources.InvokeAr
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder recursive(@Nullable Object recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FileSystemSourceResponse build() {
+        }        public FileSystemSourceResponse build() {
             return new FileSystemSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, recursive, sourceRetryCount, sourceRetryWait, type);
         }
     }

@@ -71,12 +71,10 @@ public final class DiskSkuResponse {
             this.name = name;
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public DiskSkuResponse build() {
+        }        public DiskSkuResponse build() {
             return new DiskSkuResponse(name, tier);
         }
     }

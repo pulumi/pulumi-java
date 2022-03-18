@@ -144,62 +144,50 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.assessmentSolutionId = assessmentSolutionId;
             return this;
         }
-
         public Builder assessmentSolutionId(@Nullable String assessmentSolutionId) {
             this.assessmentSolutionId = Output.ofNullable(assessmentSolutionId);
             return this;
         }
-
         public Builder customerStorageAccountArmId(@Nullable Output<String> customerStorageAccountArmId) {
             this.customerStorageAccountArmId = customerStorageAccountArmId;
             return this;
         }
-
         public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
             this.customerStorageAccountArmId = Output.ofNullable(customerStorageAccountArmId);
             return this;
         }
-
         public Builder customerWorkspaceId(@Nullable Output<String> customerWorkspaceId) {
             this.customerWorkspaceId = customerWorkspaceId;
             return this;
         }
-
         public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
             this.customerWorkspaceId = Output.ofNullable(customerWorkspaceId);
             return this;
         }
-
         public Builder customerWorkspaceLocation(@Nullable Output<String> customerWorkspaceLocation) {
             this.customerWorkspaceLocation = customerWorkspaceLocation;
             return this;
         }
-
         public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
             this.customerWorkspaceLocation = Output.ofNullable(customerWorkspaceLocation);
             return this;
         }
-
         public Builder projectStatus(@Nullable Output<Either<String,ProjectStatus>> projectStatus) {
             this.projectStatus = projectStatus;
             return this;
         }
-
         public Builder projectStatus(@Nullable Either<String,ProjectStatus> projectStatus) {
             this.projectStatus = Output.ofNullable(projectStatus);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
-        }
-        public ProjectPropertiesArgs build() {
+        }        public ProjectPropertiesArgs build() {
             return new ProjectPropertiesArgs(assessmentSolutionId, customerStorageAccountArmId, customerWorkspaceId, customerWorkspaceLocation, projectStatus, publicNetworkAccess);
         }
     }

@@ -91,32 +91,26 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
             this.defaultManagementGroup = defaultManagementGroup;
             return this;
         }
-
         public Builder defaultManagementGroup(@Nullable String defaultManagementGroup) {
             this.defaultManagementGroup = Output.ofNullable(defaultManagementGroup);
             return this;
         }
-
         public Builder groupId(Output<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
-
         public Builder requireAuthorizationForGroupCreation(@Nullable Output<Boolean> requireAuthorizationForGroupCreation) {
             this.requireAuthorizationForGroupCreation = requireAuthorizationForGroupCreation;
             return this;
         }
-
         public Builder requireAuthorizationForGroupCreation(@Nullable Boolean requireAuthorizationForGroupCreation) {
             this.requireAuthorizationForGroupCreation = Output.ofNullable(requireAuthorizationForGroupCreation);
             return this;
-        }
-        public HierarchySettingArgs build() {
+        }        public HierarchySettingArgs build() {
             return new HierarchySettingArgs(defaultManagementGroup, groupId, requireAuthorizationForGroupCreation);
         }
     }

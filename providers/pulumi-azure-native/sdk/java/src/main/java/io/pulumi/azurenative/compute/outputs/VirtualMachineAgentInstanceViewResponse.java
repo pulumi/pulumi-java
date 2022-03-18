@@ -90,17 +90,20 @@ public final class VirtualMachineAgentInstanceViewResponse {
             this.extensionHandlers = extensionHandlers;
             return this;
         }
-
+        public Builder extensionHandlers(VirtualMachineExtensionHandlerInstanceViewResponse... extensionHandlers) {
+            return extensionHandlers(List.of(extensionHandlers));
+        }
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder vmAgentVersion(@Nullable String vmAgentVersion) {
             this.vmAgentVersion = vmAgentVersion;
             return this;
-        }
-        public VirtualMachineAgentInstanceViewResponse build() {
+        }        public VirtualMachineAgentInstanceViewResponse build() {
             return new VirtualMachineAgentInstanceViewResponse(extensionHandlers, statuses, vmAgentVersion);
         }
     }

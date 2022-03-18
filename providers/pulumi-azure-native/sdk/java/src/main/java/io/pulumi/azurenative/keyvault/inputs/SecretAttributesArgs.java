@@ -95,32 +95,26 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder expires(@Nullable Output<Integer> expires) {
             this.expires = expires;
             return this;
         }
-
         public Builder expires(@Nullable Integer expires) {
             this.expires = Output.ofNullable(expires);
             return this;
         }
-
         public Builder notBefore(@Nullable Output<Integer> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
-
         public Builder notBefore(@Nullable Integer notBefore) {
             this.notBefore = Output.ofNullable(notBefore);
             return this;
-        }
-        public SecretAttributesArgs build() {
+        }        public SecretAttributesArgs build() {
             return new SecretAttributesArgs(enabled, expires, notBefore);
         }
     }

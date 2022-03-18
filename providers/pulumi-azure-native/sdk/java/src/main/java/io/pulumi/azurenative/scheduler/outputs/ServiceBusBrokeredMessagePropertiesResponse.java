@@ -248,67 +248,54 @@ public final class ServiceBusBrokeredMessagePropertiesResponse {
             this.contentType = contentType;
             return this;
         }
-
         public Builder correlationId(@Nullable String correlationId) {
             this.correlationId = correlationId;
             return this;
         }
-
         public Builder forcePersistence(@Nullable Boolean forcePersistence) {
             this.forcePersistence = forcePersistence;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder replyTo(@Nullable String replyTo) {
             this.replyTo = replyTo;
             return this;
         }
-
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
             this.replyToSessionId = replyToSessionId;
             return this;
         }
-
         public Builder scheduledEnqueueTimeUtc(@Nullable String scheduledEnqueueTimeUtc) {
             this.scheduledEnqueueTimeUtc = scheduledEnqueueTimeUtc;
             return this;
         }
-
         public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = sessionId;
             return this;
         }
-
         public Builder timeToLive(@Nullable String timeToLive) {
             this.timeToLive = timeToLive;
             return this;
         }
-
         public Builder to(@Nullable String to) {
             this.to = to;
             return this;
         }
-
         public Builder viaPartitionKey(@Nullable String viaPartitionKey) {
             this.viaPartitionKey = viaPartitionKey;
             return this;
-        }
-        public ServiceBusBrokeredMessagePropertiesResponse build() {
+        }        public ServiceBusBrokeredMessagePropertiesResponse build() {
             return new ServiceBusBrokeredMessagePropertiesResponse(contentType, correlationId, forcePersistence, label, messageId, partitionKey, replyTo, replyToSessionId, scheduledEnqueueTimeUtc, sessionId, timeToLive, to, viaPartitionKey);
         }
     }

@@ -110,42 +110,34 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
             this.maxPartitionsNumber = maxPartitionsNumber;
             return this;
         }
-
         public Builder maxPartitionsNumber(@Nullable Object maxPartitionsNumber) {
             this.maxPartitionsNumber = Output.ofNullable(maxPartitionsNumber);
             return this;
         }
-
         public Builder partitionColumnName(@Nullable Output<Object> partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = Output.ofNullable(partitionColumnName);
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Output<Object> partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = Output.ofNullable(partitionLowerBound);
             return this;
         }
-
         public Builder partitionUpperBound(@Nullable Output<Object> partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = Output.ofNullable(partitionUpperBound);
             return this;
-        }
-        public SapTablePartitionSettingsArgs build() {
+        }        public SapTablePartitionSettingsArgs build() {
             return new SapTablePartitionSettingsArgs(maxPartitionsNumber, partitionColumnName, partitionLowerBound, partitionUpperBound);
         }
     }

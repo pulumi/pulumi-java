@@ -95,32 +95,35 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
             this.categories = categories;
             return this;
         }
-
         public Builder categories(@Nullable List<String> categories) {
             this.categories = Output.ofNullable(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
-
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }
         public Builder solutions(@Nullable Output<List<String>> solutions) {
             this.solutions = solutions;
             return this;
         }
-
         public Builder solutions(@Nullable List<String> solutions) {
             this.solutions = Output.ofNullable(solutions);
             return this;
         }
-        public LogAnalyticsQueryPackQueryPropertiesRelatedArgs build() {
+        public Builder solutions(String... solutions) {
+            return solutions(List.of(solutions));
+        }        public LogAnalyticsQueryPackQueryPropertiesRelatedArgs build() {
             return new LogAnalyticsQueryPackQueryPropertiesRelatedArgs(categories, resourceTypes, solutions);
         }
     }

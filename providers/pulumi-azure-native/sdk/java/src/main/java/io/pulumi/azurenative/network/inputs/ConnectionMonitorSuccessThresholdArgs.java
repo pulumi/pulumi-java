@@ -79,22 +79,18 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
             this.checksFailedPercent = checksFailedPercent;
             return this;
         }
-
         public Builder checksFailedPercent(@Nullable Integer checksFailedPercent) {
             this.checksFailedPercent = Output.ofNullable(checksFailedPercent);
             return this;
         }
-
         public Builder roundTripTimeMs(@Nullable Output<Double> roundTripTimeMs) {
             this.roundTripTimeMs = roundTripTimeMs;
             return this;
         }
-
         public Builder roundTripTimeMs(@Nullable Double roundTripTimeMs) {
             this.roundTripTimeMs = Output.ofNullable(roundTripTimeMs);
             return this;
-        }
-        public ConnectionMonitorSuccessThresholdArgs build() {
+        }        public ConnectionMonitorSuccessThresholdArgs build() {
             return new ConnectionMonitorSuccessThresholdArgs(checksFailedPercent, roundTripTimeMs);
         }
     }

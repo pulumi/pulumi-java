@@ -115,52 +115,42 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder importCollectorName(@Nullable Output<String> importCollectorName) {
             this.importCollectorName = importCollectorName;
             return this;
         }
-
         public Builder importCollectorName(@Nullable String importCollectorName) {
             this.importCollectorName = Output.ofNullable(importCollectorName);
             return this;
         }
-
         public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
-
         public Builder properties(@Nullable Output<ImportCollectorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ImportCollectorPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ImportCollectorArgs build() {
+        }        public ImportCollectorArgs build() {
             return new ImportCollectorArgs(eTag, importCollectorName, projectName, properties, resourceGroupName);
         }
     }

@@ -79,12 +79,10 @@ public final class FlowLogFormatParametersResponse extends io.pulumi.resources.I
             this.type = type;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
-        }
-        public FlowLogFormatParametersResponse build() {
+        }        public FlowLogFormatParametersResponse build() {
             return new FlowLogFormatParametersResponse(type, version);
         }
     }

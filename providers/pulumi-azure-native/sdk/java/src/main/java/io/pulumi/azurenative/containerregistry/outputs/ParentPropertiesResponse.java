@@ -72,12 +72,10 @@ public final class ParentPropertiesResponse {
             this.id = id;
             return this;
         }
-
         public Builder syncProperties(SyncPropertiesResponse syncProperties) {
             this.syncProperties = Objects.requireNonNull(syncProperties);
             return this;
-        }
-        public ParentPropertiesResponse build() {
+        }        public ParentPropertiesResponse build() {
             return new ParentPropertiesResponse(id, syncProperties);
         }
     }

@@ -88,17 +88,14 @@ public final class AutoscaleTimeAndCapacityResponse {
             this.maxInstanceCount = maxInstanceCount;
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = time;
             return this;
-        }
-        public AutoscaleTimeAndCapacityResponse build() {
+        }        public AutoscaleTimeAndCapacityResponse build() {
             return new AutoscaleTimeAndCapacityResponse(maxInstanceCount, minInstanceCount, time);
         }
     }

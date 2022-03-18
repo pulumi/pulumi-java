@@ -73,12 +73,13 @@ public final class GetProductsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<ProductResponse> value) {
             this.value = value;
             return this;
         }
-        public GetProductsResult build() {
+        public Builder value(ProductResponse... value) {
+            return value(List.of(value));
+        }        public GetProductsResult build() {
             return new GetProductsResult(nextLink, value);
         }
     }

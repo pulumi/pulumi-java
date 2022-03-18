@@ -209,102 +209,85 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
-
         public Builder enableAutomaticUpgrade(@Nullable Output<Boolean> enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
-
         public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = Output.ofNullable(enableAutomaticUpgrade);
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
-
         public Builder provisionAfterExtensions(@Nullable Output<List<String>> provisionAfterExtensions) {
             this.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
-
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
             this.provisionAfterExtensions = Output.ofNullable(provisionAfterExtensions);
             return this;
         }
-
+        public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
+            return provisionAfterExtensions(List.of(provisionAfterExtensions));
+        }
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
         }
-
         public Builder settings(@Nullable Output<Object> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable Object settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
-        }
-        public VirtualMachineScaleSetExtensionArgs build() {
+        }        public VirtualMachineScaleSetExtensionArgs build() {
             return new VirtualMachineScaleSetExtensionArgs(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
         }
     }

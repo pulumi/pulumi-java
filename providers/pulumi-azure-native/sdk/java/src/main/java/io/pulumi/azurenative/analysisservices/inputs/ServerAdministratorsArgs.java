@@ -62,12 +62,13 @@ public final class ServerAdministratorsArgs extends io.pulumi.resources.Resource
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-        public ServerAdministratorsArgs build() {
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }        public ServerAdministratorsArgs build() {
             return new ServerAdministratorsArgs(members);
         }
     }

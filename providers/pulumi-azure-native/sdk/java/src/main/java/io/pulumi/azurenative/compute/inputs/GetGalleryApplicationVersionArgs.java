@@ -122,27 +122,22 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
             this.expand = expand;
             return this;
         }
-
         public Builder galleryApplicationName(String galleryApplicationName) {
             this.galleryApplicationName = Objects.requireNonNull(galleryApplicationName);
             return this;
         }
-
         public Builder galleryApplicationVersionName(String galleryApplicationVersionName) {
             this.galleryApplicationVersionName = Objects.requireNonNull(galleryApplicationVersionName);
             return this;
         }
-
         public Builder galleryName(String galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetGalleryApplicationVersionArgs build() {
+        }        public GetGalleryApplicationVersionArgs build() {
             return new GetGalleryApplicationVersionArgs(expand, galleryApplicationName, galleryApplicationVersionName, galleryName, resourceGroupName);
         }
     }

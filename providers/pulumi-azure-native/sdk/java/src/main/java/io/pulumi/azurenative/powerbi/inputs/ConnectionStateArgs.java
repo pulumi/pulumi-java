@@ -96,32 +96,26 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder actionsRequired(@Nullable String actionsRequired) {
             this.actionsRequired = Output.ofNullable(actionsRequired);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,PersistedConnectionStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,PersistedConnectionStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ConnectionStateArgs build() {
+        }        public ConnectionStateArgs build() {
             return new ConnectionStateArgs(actionsRequired, description, status);
         }
     }

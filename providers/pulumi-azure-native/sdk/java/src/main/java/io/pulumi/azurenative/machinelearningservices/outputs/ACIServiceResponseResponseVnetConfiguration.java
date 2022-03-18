@@ -71,12 +71,10 @@ public final class ACIServiceResponseResponseVnetConfiguration {
             this.subnetName = subnetName;
             return this;
         }
-
         public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = vnetName;
             return this;
-        }
-        public ACIServiceResponseResponseVnetConfiguration build() {
+        }        public ACIServiceResponseResponseVnetConfiguration build() {
             return new ACIServiceResponseResponseVnetConfiguration(subnetName, vnetName);
         }
     }

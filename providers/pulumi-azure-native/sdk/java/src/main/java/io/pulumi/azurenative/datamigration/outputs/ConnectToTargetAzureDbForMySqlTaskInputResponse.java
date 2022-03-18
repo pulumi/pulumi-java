@@ -69,12 +69,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public ConnectToTargetAzureDbForMySqlTaskInputResponse build() {
+        }        public ConnectToTargetAzureDbForMySqlTaskInputResponse build() {
             return new ConnectToTargetAzureDbForMySqlTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
         }
     }

@@ -78,12 +78,10 @@ public final class DiagnosticsConfigurationResponse extends io.pulumi.resources.
             this.expiry = expiry;
             return this;
         }
-
         public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
-        }
-        public DiagnosticsConfigurationResponse build() {
+        }        public DiagnosticsConfigurationResponse build() {
             return new DiagnosticsConfigurationResponse(expiry, level);
         }
     }

@@ -235,62 +235,50 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder scheduleInfo(SUCSchedulePropertiesResponse scheduleInfo) {
             this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
             return this;
         }
-
         public Builder tasks(@Nullable SoftwareUpdateConfigurationTasksResponse tasks) {
             this.tasks = tasks;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateConfiguration(UpdateConfigurationResponse updateConfiguration) {
             this.updateConfiguration = Objects.requireNonNull(updateConfiguration);
             return this;
-        }
-        public GetSoftwareUpdateConfigurationByNameResult build() {
+        }        public GetSoftwareUpdateConfigurationByNameResult build() {
             return new GetSoftwareUpdateConfigurationByNameResult(createdBy, creationTime, error, id, lastModifiedBy, lastModifiedTime, name, provisioningState, scheduleInfo, tasks, type, updateConfiguration);
         }
     }

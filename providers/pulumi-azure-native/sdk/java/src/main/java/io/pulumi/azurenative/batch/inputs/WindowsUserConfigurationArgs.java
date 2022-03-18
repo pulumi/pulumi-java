@@ -57,12 +57,10 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
             this.loginMode = loginMode;
             return this;
         }
-
         public Builder loginMode(@Nullable LoginMode loginMode) {
             this.loginMode = Output.ofNullable(loginMode);
             return this;
-        }
-        public WindowsUserConfigurationArgs build() {
+        }        public WindowsUserConfigurationArgs build() {
             return new WindowsUserConfigurationArgs(loginMode);
         }
     }

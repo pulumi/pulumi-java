@@ -176,82 +176,66 @@ public final class MicrosoftAccessSinkArgs extends io.pulumi.resources.ResourceA
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder preCopyScript(@Nullable Output<Object> preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
-
         public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = Output.ofNullable(preCopyScript);
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Output.ofNullable(writeBatchSize);
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
             return this;
-        }
-        public MicrosoftAccessSinkArgs build() {
+        }        public MicrosoftAccessSinkArgs build() {
             return new MicrosoftAccessSinkArgs(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }
     }

@@ -121,27 +121,37 @@ public final class JobRecurrenceScheduleResponse {
             this.hours = hours;
             return this;
         }
-
+        public Builder hours(Integer... hours) {
+            return hours(List.of(hours));
+        }
         public Builder minutes(@Nullable List<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
-
+        public Builder minutes(Integer... minutes) {
+            return minutes(List.of(minutes));
+        }
         public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = monthDays;
             return this;
         }
-
+        public Builder monthDays(Integer... monthDays) {
+            return monthDays(List.of(monthDays));
+        }
         public Builder monthlyOccurrences(@Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
-
+        public Builder monthlyOccurrences(JobRecurrenceScheduleMonthlyOccurrenceResponse... monthlyOccurrences) {
+            return monthlyOccurrences(List.of(monthlyOccurrences));
+        }
         public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = weekDays;
             return this;
         }
-        public JobRecurrenceScheduleResponse build() {
+        public Builder weekDays(String... weekDays) {
+            return weekDays(List.of(weekDays));
+        }        public JobRecurrenceScheduleResponse build() {
             return new JobRecurrenceScheduleResponse(hours, minutes, monthDays, monthlyOccurrences, weekDays);
         }
     }

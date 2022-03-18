@@ -88,17 +88,14 @@ public final class GetMDATPDataConnectorArgs extends io.pulumi.resources.InvokeA
             this.dataConnectorId = Objects.requireNonNull(dataConnectorId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetMDATPDataConnectorArgs build() {
+        }        public GetMDATPDataConnectorArgs build() {
             return new GetMDATPDataConnectorArgs(dataConnectorId, resourceGroupName, workspaceName);
         }
     }

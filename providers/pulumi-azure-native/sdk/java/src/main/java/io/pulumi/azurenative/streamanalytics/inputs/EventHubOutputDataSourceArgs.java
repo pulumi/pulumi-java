@@ -143,62 +143,50 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
-
         public Builder partitionKey(@Nullable Output<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
-
         public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
-
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public EventHubOutputDataSourceArgs build() {
+        }        public EventHubOutputDataSourceArgs build() {
             return new EventHubOutputDataSourceArgs(eventHubName, partitionKey, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }
     }

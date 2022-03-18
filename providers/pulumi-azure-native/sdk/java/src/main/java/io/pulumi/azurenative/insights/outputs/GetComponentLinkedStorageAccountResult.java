@@ -103,22 +103,18 @@ public final class GetComponentLinkedStorageAccountResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkedStorageAccount(@Nullable String linkedStorageAccount) {
             this.linkedStorageAccount = linkedStorageAccount;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetComponentLinkedStorageAccountResult build() {
+        }        public GetComponentLinkedStorageAccountResult build() {
             return new GetComponentLinkedStorageAccountResult(id, linkedStorageAccount, name, type);
         }
     }

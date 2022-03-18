@@ -104,22 +104,18 @@ public final class GetScheduledTriggerArgs extends io.pulumi.resources.InvokeArg
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
-        }
-        public GetScheduledTriggerArgs build() {
+        }        public GetScheduledTriggerArgs build() {
             return new GetScheduledTriggerArgs(accountName, resourceGroupName, shareSubscriptionName, triggerName);
         }
     }

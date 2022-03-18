@@ -78,12 +78,10 @@ public final class SubscriptionKeyParameterNamesContractResponse extends io.pulu
             this.header = header;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = query;
             return this;
-        }
-        public SubscriptionKeyParameterNamesContractResponse build() {
+        }        public SubscriptionKeyParameterNamesContractResponse build() {
             return new SubscriptionKeyParameterNamesContractResponse(header, query);
         }
     }

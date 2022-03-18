@@ -53,8 +53,7 @@ public final class DynamicExecutorAllocationResponse {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public DynamicExecutorAllocationResponse build() {
+        }        public DynamicExecutorAllocationResponse build() {
             return new DynamicExecutorAllocationResponse(enabled);
         }
     }

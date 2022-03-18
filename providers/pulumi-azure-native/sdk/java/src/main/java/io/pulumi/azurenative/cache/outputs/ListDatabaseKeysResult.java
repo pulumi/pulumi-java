@@ -69,12 +69,10 @@ public final class ListDatabaseKeysResult {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public ListDatabaseKeysResult build() {
+        }        public ListDatabaseKeysResult build() {
             return new ListDatabaseKeysResult(primaryKey, secondaryKey);
         }
     }

@@ -87,17 +87,17 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-        public ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse build() {
+        public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }        public ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse(id, name, validationErrors);
         }
     }

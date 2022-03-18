@@ -135,32 +135,26 @@ public final class DiagnosticsStorageAccountConfigResponse {
             this.blobEndpoint = Objects.requireNonNull(blobEndpoint);
             return this;
         }
-
         public Builder protectedAccountKeyName(String protectedAccountKeyName) {
             this.protectedAccountKeyName = Objects.requireNonNull(protectedAccountKeyName);
             return this;
         }
-
         public Builder protectedAccountKeyName2(@Nullable String protectedAccountKeyName2) {
             this.protectedAccountKeyName2 = protectedAccountKeyName2;
             return this;
         }
-
         public Builder queueEndpoint(String queueEndpoint) {
             this.queueEndpoint = Objects.requireNonNull(queueEndpoint);
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public Builder tableEndpoint(String tableEndpoint) {
             this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
             return this;
-        }
-        public DiagnosticsStorageAccountConfigResponse build() {
+        }        public DiagnosticsStorageAccountConfigResponse build() {
             return new DiagnosticsStorageAccountConfigResponse(blobEndpoint, protectedAccountKeyName, protectedAccountKeyName2, queueEndpoint, storageAccountName, tableEndpoint);
         }
     }

@@ -53,8 +53,7 @@ public final class AutoscaleSettingsResponse {
         public Builder maxThroughput(@Nullable Integer maxThroughput) {
             this.maxThroughput = maxThroughput;
             return this;
-        }
-        public AutoscaleSettingsResponse build() {
+        }        public AutoscaleSettingsResponse build() {
             return new AutoscaleSettingsResponse(maxThroughput);
         }
     }

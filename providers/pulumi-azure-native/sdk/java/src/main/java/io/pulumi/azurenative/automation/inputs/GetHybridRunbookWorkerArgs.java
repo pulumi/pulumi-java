@@ -104,22 +104,18 @@ public final class GetHybridRunbookWorkerArgs extends io.pulumi.resources.Invoke
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = Objects.requireNonNull(hybridRunbookWorkerGroupName);
             return this;
         }
-
         public Builder hybridRunbookWorkerId(String hybridRunbookWorkerId) {
             this.hybridRunbookWorkerId = Objects.requireNonNull(hybridRunbookWorkerId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetHybridRunbookWorkerArgs build() {
+        }        public GetHybridRunbookWorkerArgs build() {
             return new GetHybridRunbookWorkerArgs(automationAccountName, hybridRunbookWorkerGroupName, hybridRunbookWorkerId, resourceGroupName);
         }
     }

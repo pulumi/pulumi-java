@@ -63,17 +63,14 @@ public final class ResourceProviderAuthorizationResponse {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder managedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
             this.managedByRoleDefinitionId = managedByRoleDefinitionId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
-        }
-        public ResourceProviderAuthorizationResponse build() {
+        }        public ResourceProviderAuthorizationResponse build() {
             return new ResourceProviderAuthorizationResponse(applicationId, managedByRoleDefinitionId, roleDefinitionId);
         }
     }

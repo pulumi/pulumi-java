@@ -60,8 +60,7 @@ public final class FirewallPolicyFilterRuleActionResponse extends io.pulumi.reso
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public FirewallPolicyFilterRuleActionResponse build() {
+        }        public FirewallPolicyFilterRuleActionResponse build() {
             return new FirewallPolicyFilterRuleActionResponse(type);
         }
     }

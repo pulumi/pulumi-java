@@ -191,92 +191,77 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.autoTrackingConfiguration = autoTrackingConfiguration;
             return this;
         }
-
         public Builder autoTrackingConfiguration(@Nullable AutoTrackingConfiguration autoTrackingConfiguration) {
             this.autoTrackingConfiguration = Output.ofNullable(autoTrackingConfiguration);
             return this;
         }
-
         public Builder contactProfileName(@Nullable Output<String> contactProfileName) {
             this.contactProfileName = contactProfileName;
             return this;
         }
-
         public Builder contactProfileName(@Nullable String contactProfileName) {
             this.contactProfileName = Output.ofNullable(contactProfileName);
             return this;
         }
-
         public Builder eventHubUri(@Nullable Output<String> eventHubUri) {
             this.eventHubUri = eventHubUri;
             return this;
         }
-
         public Builder eventHubUri(@Nullable String eventHubUri) {
             this.eventHubUri = Output.ofNullable(eventHubUri);
             return this;
         }
-
         public Builder links(Output<List<ContactProfileLinkArgs>> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
-
         public Builder links(List<ContactProfileLinkArgs> links) {
             this.links = Output.of(Objects.requireNonNull(links));
             return this;
         }
-
+        public Builder links(ContactProfileLinkArgs... links) {
+            return links(List.of(links));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder minimumElevationDegrees(@Nullable Output<Double> minimumElevationDegrees) {
             this.minimumElevationDegrees = minimumElevationDegrees;
             return this;
         }
-
         public Builder minimumElevationDegrees(@Nullable Double minimumElevationDegrees) {
             this.minimumElevationDegrees = Output.ofNullable(minimumElevationDegrees);
             return this;
         }
-
         public Builder minimumViableContactDuration(@Nullable Output<String> minimumViableContactDuration) {
             this.minimumViableContactDuration = minimumViableContactDuration;
             return this;
         }
-
         public Builder minimumViableContactDuration(@Nullable String minimumViableContactDuration) {
             this.minimumViableContactDuration = Output.ofNullable(minimumViableContactDuration);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ContactProfileArgs build() {
+        }        public ContactProfileArgs build() {
             return new ContactProfileArgs(autoTrackingConfiguration, contactProfileName, eventHubUri, links, location, minimumElevationDegrees, minimumViableContactDuration, resourceGroupName, tags);
         }
     }

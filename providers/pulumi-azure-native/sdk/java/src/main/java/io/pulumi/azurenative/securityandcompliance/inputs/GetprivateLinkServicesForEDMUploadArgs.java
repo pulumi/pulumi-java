@@ -72,12 +72,10 @@ public final class GetprivateLinkServicesForEDMUploadArgs extends io.pulumi.reso
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetprivateLinkServicesForEDMUploadArgs build() {
+        }        public GetprivateLinkServicesForEDMUploadArgs build() {
             return new GetprivateLinkServicesForEDMUploadArgs(resourceGroupName, resourceName);
         }
     }

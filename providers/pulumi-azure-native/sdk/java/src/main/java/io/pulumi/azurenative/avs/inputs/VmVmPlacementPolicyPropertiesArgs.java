@@ -131,52 +131,45 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
             this.affinityType = Objects.requireNonNull(affinityType);
             return this;
         }
-
         public Builder affinityType(Either<String,AffinityType> affinityType) {
             this.affinityType = Output.of(Objects.requireNonNull(affinityType));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,PlacementPolicyState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,PlacementPolicyState> state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder vmMembers(Output<List<String>> vmMembers) {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
-
         public Builder vmMembers(List<String> vmMembers) {
             this.vmMembers = Output.of(Objects.requireNonNull(vmMembers));
             return this;
         }
-        public VmVmPlacementPolicyPropertiesArgs build() {
+        public Builder vmMembers(String... vmMembers) {
+            return vmMembers(List.of(vmMembers));
+        }        public VmVmPlacementPolicyPropertiesArgs build() {
             return new VmVmPlacementPolicyPropertiesArgs(affinityType, displayName, state, type, vmMembers);
         }
     }

@@ -119,27 +119,28 @@ public final class GetServerTrustGroupResult {
             this.groupMembers = Objects.requireNonNull(groupMembers);
             return this;
         }
-
+        public Builder groupMembers(ServerInfoResponse... groupMembers) {
+            return groupMembers(List.of(groupMembers));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder trustScopes(List<String> trustScopes) {
             this.trustScopes = Objects.requireNonNull(trustScopes);
             return this;
         }
-
+        public Builder trustScopes(String... trustScopes) {
+            return trustScopes(List.of(trustScopes));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerTrustGroupResult build() {
+        }        public GetServerTrustGroupResult build() {
             return new GetServerTrustGroupResult(groupMembers, id, name, trustScopes, type);
         }
     }

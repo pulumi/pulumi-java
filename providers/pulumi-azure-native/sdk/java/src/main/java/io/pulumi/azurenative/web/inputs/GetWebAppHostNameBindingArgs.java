@@ -88,17 +88,14 @@ public final class GetWebAppHostNameBindingArgs extends io.pulumi.resources.Invo
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppHostNameBindingArgs build() {
+        }        public GetWebAppHostNameBindingArgs build() {
             return new GetWebAppHostNameBindingArgs(hostName, name, resourceGroupName);
         }
     }

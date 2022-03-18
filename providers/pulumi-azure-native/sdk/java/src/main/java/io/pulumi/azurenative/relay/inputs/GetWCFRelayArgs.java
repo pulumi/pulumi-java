@@ -88,17 +88,14 @@ public final class GetWCFRelayArgs extends io.pulumi.resources.InvokeArgs {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder relayName(String relayName) {
             this.relayName = Objects.requireNonNull(relayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWCFRelayArgs build() {
+        }        public GetWCFRelayArgs build() {
             return new GetWCFRelayArgs(namespaceName, relayName, resourceGroupName);
         }
     }

@@ -80,22 +80,21 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
             this.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
-
         public Builder allowedCallerIpAddresses(@Nullable List<IpAddressRangeArgs> allowedCallerIpAddresses) {
             this.allowedCallerIpAddresses = Output.ofNullable(allowedCallerIpAddresses);
             return this;
         }
-
+        public Builder allowedCallerIpAddresses(IpAddressRangeArgs... allowedCallerIpAddresses) {
+            return allowedCallerIpAddresses(List.of(allowedCallerIpAddresses));
+        }
         public Builder openAuthenticationPolicies(@Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies) {
             this.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }
-
         public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesArgs openAuthenticationPolicies) {
             this.openAuthenticationPolicies = Output.ofNullable(openAuthenticationPolicies);
             return this;
-        }
-        public FlowAccessControlConfigurationPolicyArgs build() {
+        }        public FlowAccessControlConfigurationPolicyArgs build() {
             return new FlowAccessControlConfigurationPolicyArgs(allowedCallerIpAddresses, openAuthenticationPolicies);
         }
     }

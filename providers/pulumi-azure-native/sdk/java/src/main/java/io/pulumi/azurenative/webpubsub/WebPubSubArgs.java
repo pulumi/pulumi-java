@@ -233,112 +233,93 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             this.eventHandler = eventHandler;
             return this;
         }
-
         public Builder eventHandler(@Nullable EventHandlerSettingsArgs eventHandler) {
             this.eventHandler = Output.ofNullable(eventHandler);
             return this;
         }
-
         public Builder features(@Nullable Output<List<WebPubSubFeatureArgs>> features) {
             this.features = features;
             return this;
         }
-
         public Builder features(@Nullable List<WebPubSubFeatureArgs> features) {
             this.features = Output.ofNullable(features);
             return this;
         }
-
+        public Builder features(WebPubSubFeatureArgs... features) {
+            return features(List.of(features));
+        }
         public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkACLs(@Nullable Output<WebPubSubNetworkACLsArgs> networkACLs) {
             this.networkACLs = networkACLs;
             return this;
         }
-
         public Builder networkACLs(@Nullable WebPubSubNetworkACLsArgs networkACLs) {
             this.networkACLs = Output.ofNullable(networkACLs);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ResourceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tls(@Nullable Output<WebPubSubTlsSettingsArgs> tls) {
             this.tls = tls;
             return this;
         }
-
         public Builder tls(@Nullable WebPubSubTlsSettingsArgs tls) {
             this.tls = Output.ofNullable(tls);
             return this;
-        }
-        public WebPubSubArgs build() {
+        }        public WebPubSubArgs build() {
             return new WebPubSubArgs(eventHandler, features, identity, location, networkACLs, publicNetworkAccess, resourceGroupName, resourceName, sku, tags, tls);
         }
     }

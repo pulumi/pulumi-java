@@ -88,17 +88,14 @@ public final class StorageProfileResponse {
             this.diskSizeInGB = diskSizeInGB;
             return this;
         }
-
         public Builder fileShareName(@Nullable String fileShareName) {
             this.fileShareName = fileShareName;
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
-        }
-        public StorageProfileResponse build() {
+        }        public StorageProfileResponse build() {
             return new StorageProfileResponse(diskSizeInGB, fileShareName, storageAccountResourceId);
         }
     }

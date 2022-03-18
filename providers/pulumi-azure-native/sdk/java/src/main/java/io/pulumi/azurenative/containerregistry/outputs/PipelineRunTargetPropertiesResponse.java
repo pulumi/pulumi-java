@@ -71,12 +71,10 @@ public final class PipelineRunTargetPropertiesResponse {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PipelineRunTargetPropertiesResponse build() {
+        }        public PipelineRunTargetPropertiesResponse build() {
             return new PipelineRunTargetPropertiesResponse(name, type);
         }
     }

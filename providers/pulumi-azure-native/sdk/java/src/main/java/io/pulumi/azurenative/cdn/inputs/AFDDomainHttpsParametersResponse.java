@@ -95,17 +95,14 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-
         public Builder secret(@Nullable ResourceReferenceResponse secret) {
             this.secret = secret;
             return this;
-        }
-        public AFDDomainHttpsParametersResponse build() {
+        }        public AFDDomainHttpsParametersResponse build() {
             return new AFDDomainHttpsParametersResponse(certificateType, minimumTlsVersion, secret);
         }
     }

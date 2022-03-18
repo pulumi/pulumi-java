@@ -88,17 +88,14 @@ public final class ListTaskRunDetailsArgs extends io.pulumi.resources.InvokeArgs
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder taskRunName(String taskRunName) {
             this.taskRunName = Objects.requireNonNull(taskRunName);
             return this;
-        }
-        public ListTaskRunDetailsArgs build() {
+        }        public ListTaskRunDetailsArgs build() {
             return new ListTaskRunDetailsArgs(registryName, resourceGroupName, taskRunName);
         }
     }

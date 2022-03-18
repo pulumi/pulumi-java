@@ -172,42 +172,37 @@ public final class RerunTumblingWindowTriggerResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder parentTrigger(Object parentTrigger) {
             this.parentTrigger = Objects.requireNonNull(parentTrigger);
             return this;
         }
-
         public Builder requestedEndTime(String requestedEndTime) {
             this.requestedEndTime = Objects.requireNonNull(requestedEndTime);
             return this;
         }
-
         public Builder requestedStartTime(String requestedStartTime) {
             this.requestedStartTime = Objects.requireNonNull(requestedStartTime);
             return this;
         }
-
         public Builder rerunConcurrency(Integer rerunConcurrency) {
             this.rerunConcurrency = Objects.requireNonNull(rerunConcurrency);
             return this;
         }
-
         public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RerunTumblingWindowTriggerResponse build() {
+        }        public RerunTumblingWindowTriggerResponse build() {
             return new RerunTumblingWindowTriggerResponse(annotations, description, parentTrigger, requestedEndTime, requestedStartTime, rerunConcurrency, runtimeState, type);
         }
     }

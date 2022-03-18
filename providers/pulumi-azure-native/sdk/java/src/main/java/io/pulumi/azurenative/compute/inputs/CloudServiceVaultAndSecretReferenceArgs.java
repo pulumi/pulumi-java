@@ -67,22 +67,18 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
             this.secretUrl = secretUrl;
             return this;
         }
-
         public Builder secretUrl(@Nullable String secretUrl) {
             this.secretUrl = Output.ofNullable(secretUrl);
             return this;
         }
-
         public Builder sourceVault(@Nullable Output<SubResourceArgs> sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }
-
         public Builder sourceVault(@Nullable SubResourceArgs sourceVault) {
             this.sourceVault = Output.ofNullable(sourceVault);
             return this;
-        }
-        public CloudServiceVaultAndSecretReferenceArgs build() {
+        }        public CloudServiceVaultAndSecretReferenceArgs build() {
             return new CloudServiceVaultAndSecretReferenceArgs(secretUrl, sourceVault);
         }
     }

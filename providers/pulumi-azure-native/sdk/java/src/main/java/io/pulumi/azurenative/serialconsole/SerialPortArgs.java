@@ -139,62 +139,50 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
             this.parentResource = Objects.requireNonNull(parentResource);
             return this;
         }
-
         public Builder parentResource(String parentResource) {
             this.parentResource = Output.of(Objects.requireNonNull(parentResource));
             return this;
         }
-
         public Builder parentResourceType(Output<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
-
         public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
-
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Output.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
-
         public Builder serialPort(@Nullable Output<String> serialPort) {
             this.serialPort = serialPort;
             return this;
         }
-
         public Builder serialPort(@Nullable String serialPort) {
             this.serialPort = Output.ofNullable(serialPort);
             return this;
         }
-
         public Builder state(@Nullable Output<SerialPortState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable SerialPortState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public SerialPortArgs build() {
+        }        public SerialPortArgs build() {
             return new SerialPortArgs(parentResource, parentResourceType, resourceGroupName, resourceProviderNamespace, serialPort, state);
         }
     }

@@ -103,22 +103,18 @@ public final class KeyVaultPropertiesResponse {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder userIdentity(@Nullable String userIdentity) {
             this.userIdentity = userIdentity;
             return this;
-        }
-        public KeyVaultPropertiesResponse build() {
+        }        public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVaultUri, keyVersion, userIdentity);
         }
     }

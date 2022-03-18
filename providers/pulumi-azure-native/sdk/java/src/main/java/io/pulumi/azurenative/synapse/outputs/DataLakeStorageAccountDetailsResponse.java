@@ -71,12 +71,10 @@ public final class DataLakeStorageAccountDetailsResponse {
             this.accountUrl = accountUrl;
             return this;
         }
-
         public Builder filesystem(@Nullable String filesystem) {
             this.filesystem = filesystem;
             return this;
-        }
-        public DataLakeStorageAccountDetailsResponse build() {
+        }        public DataLakeStorageAccountDetailsResponse build() {
             return new DataLakeStorageAccountDetailsResponse(accountUrl, filesystem);
         }
     }

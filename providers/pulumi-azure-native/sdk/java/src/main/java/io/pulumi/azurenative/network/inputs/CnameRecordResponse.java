@@ -60,8 +60,7 @@ public final class CnameRecordResponse extends io.pulumi.resources.InvokeArgs {
         public Builder cname(@Nullable String cname) {
             this.cname = cname;
             return this;
-        }
-        public CnameRecordResponse build() {
+        }        public CnameRecordResponse build() {
             return new CnameRecordResponse(cname);
         }
     }

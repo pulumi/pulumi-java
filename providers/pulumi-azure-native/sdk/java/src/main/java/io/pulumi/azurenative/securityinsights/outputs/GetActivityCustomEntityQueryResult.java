@@ -318,87 +318,70 @@ public final class GetActivityCustomEntityQueryResult {
             this.content = content;
             return this;
         }
-
         public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder entitiesFilter(@Nullable Map<String,List<String>> entitiesFilter) {
             this.entitiesFilter = entitiesFilter;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inputEntityType(@Nullable String inputEntityType) {
             this.inputEntityType = inputEntityType;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder queryDefinitions(@Nullable ActivityEntityQueriesPropertiesResponseQueryDefinitions queryDefinitions) {
             this.queryDefinitions = queryDefinitions;
             return this;
         }
-
         public Builder requiredInputFieldsSets(@Nullable List<List<String>> requiredInputFieldsSets) {
             this.requiredInputFieldsSets = requiredInputFieldsSets;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder templateName(@Nullable String templateName) {
             this.templateName = templateName;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetActivityCustomEntityQueryResult build() {
+        }        public GetActivityCustomEntityQueryResult build() {
             return new GetActivityCustomEntityQueryResult(content, createdTimeUtc, description, enabled, entitiesFilter, etag, id, inputEntityType, kind, lastModifiedTimeUtc, name, queryDefinitions, requiredInputFieldsSets, systemData, templateName, title, type);
         }
     }

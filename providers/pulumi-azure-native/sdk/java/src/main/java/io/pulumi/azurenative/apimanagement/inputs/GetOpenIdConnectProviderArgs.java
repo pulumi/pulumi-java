@@ -88,17 +88,14 @@ public final class GetOpenIdConnectProviderArgs extends io.pulumi.resources.Invo
             this.opid = Objects.requireNonNull(opid);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetOpenIdConnectProviderArgs build() {
+        }        public GetOpenIdConnectProviderArgs build() {
             return new GetOpenIdConnectProviderArgs(opid, resourceGroupName, serviceName);
         }
     }

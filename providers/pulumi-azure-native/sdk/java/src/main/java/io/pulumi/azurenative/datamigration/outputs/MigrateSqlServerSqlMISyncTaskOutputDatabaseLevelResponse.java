@@ -251,67 +251,60 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
             this.activeBackupSets = Objects.requireNonNull(activeBackupSets);
             return this;
         }
-
+        public Builder activeBackupSets(BackupSetInfoResponse... activeBackupSets) {
+            return activeBackupSets(List.of(activeBackupSets));
+        }
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder errorPrefix(String errorPrefix) {
             this.errorPrefix = Objects.requireNonNull(errorPrefix);
             return this;
         }
-
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
-
+        public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
+            return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
+        }
         public Builder fullBackupSetInfo(BackupSetInfoResponse fullBackupSetInfo) {
             this.fullBackupSetInfo = Objects.requireNonNull(fullBackupSetInfo);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isFullBackupRestored(Boolean isFullBackupRestored) {
             this.isFullBackupRestored = Objects.requireNonNull(isFullBackupRestored);
             return this;
         }
-
         public Builder lastRestoredBackupSetInfo(BackupSetInfoResponse lastRestoredBackupSetInfo) {
             this.lastRestoredBackupSetInfo = Objects.requireNonNull(lastRestoredBackupSetInfo);
             return this;
         }
-
         public Builder migrationState(String migrationState) {
             this.migrationState = Objects.requireNonNull(migrationState);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
-        }
-        public MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse build() {
+        }        public MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(activeBackupSets, containerName, endedOn, errorPrefix, exceptionsAndWarnings, fullBackupSetInfo, id, isFullBackupRestored, lastRestoredBackupSetInfo, migrationState, resultType, sourceDatabaseName, startedOn);
         }
     }

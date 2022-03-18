@@ -206,52 +206,54 @@ public final class ContainerResponse {
             this.command = command;
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder instanceView(ContainerPropertiesResponseInstanceView instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder livenessProbe(@Nullable ContainerProbeResponse livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ports(@Nullable List<ContainerPortResponse> ports) {
             this.ports = ports;
             return this;
         }
-
+        public Builder ports(ContainerPortResponse... ports) {
+            return ports(List.of(ports));
+        }
         public Builder readinessProbe(@Nullable ContainerProbeResponse readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
-
         public Builder resources(ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-        public ContainerResponse build() {
+        public Builder volumeMounts(VolumeMountResponse... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }        public ContainerResponse build() {
             return new ContainerResponse(command, environmentVariables, image, instanceView, livenessProbe, name, ports, readinessProbe, resources, volumeMounts);
         }
     }

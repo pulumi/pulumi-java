@@ -471,262 +471,210 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.aadAuthEnabled = aadAuthEnabled;
             return this;
         }
-
         public Builder aadAuthEnabled(@Nullable Boolean aadAuthEnabled) {
             this.aadAuthEnabled = Output.ofNullable(aadAuthEnabled);
             return this;
         }
-
         public Builder appInsightsEnabled(@Nullable Output<Boolean> appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
-
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = Output.ofNullable(appInsightsEnabled);
             return this;
         }
-
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
-
         public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = Output.ofNullable(authEnabled);
             return this;
         }
-
         public Builder autoScaler(@Nullable Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler) {
             this.autoScaler = autoScaler;
             return this;
         }
-
         public Builder autoScaler(@Nullable AKSServiceCreateRequestAutoScalerArgs autoScaler) {
             this.autoScaler = Output.ofNullable(autoScaler);
             return this;
         }
-
         public Builder computeName(@Nullable Output<String> computeName) {
             this.computeName = computeName;
             return this;
         }
-
         public Builder computeName(@Nullable String computeName) {
             this.computeName = Output.ofNullable(computeName);
             return this;
         }
-
         public Builder computeType(Output<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
-
         public Builder containerResourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
-
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
             this.containerResourceRequirements = Output.ofNullable(containerResourceRequirements);
             return this;
         }
-
         public Builder dataCollection(@Nullable Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection) {
             this.dataCollection = dataCollection;
             return this;
         }
-
         public Builder dataCollection(@Nullable AKSServiceCreateRequestDataCollectionArgs dataCollection) {
             this.dataCollection = Output.ofNullable(dataCollection);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
-
         public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             this.environmentImageRequest = Output.ofNullable(environmentImageRequest);
             return this;
         }
-
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
-
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
-
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = Output.ofNullable(kvTags);
             return this;
         }
-
         public Builder livenessProbeRequirements(@Nullable Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements) {
             this.livenessProbeRequirements = livenessProbeRequirements;
             return this;
         }
-
         public Builder livenessProbeRequirements(@Nullable AKSServiceCreateRequestLivenessProbeRequirementsArgs livenessProbeRequirements) {
             this.livenessProbeRequirements = Output.ofNullable(livenessProbeRequirements);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maxConcurrentRequestsPerContainer(@Nullable Output<Integer> maxConcurrentRequestsPerContainer) {
             this.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
             return this;
         }
-
         public Builder maxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
             this.maxConcurrentRequestsPerContainer = Output.ofNullable(maxConcurrentRequestsPerContainer);
             return this;
         }
-
         public Builder maxQueueWaitMs(@Nullable Output<Integer> maxQueueWaitMs) {
             this.maxQueueWaitMs = maxQueueWaitMs;
             return this;
         }
-
         public Builder maxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
             this.maxQueueWaitMs = Output.ofNullable(maxQueueWaitMs);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder numReplicas(@Nullable Output<Integer> numReplicas) {
             this.numReplicas = numReplicas;
             return this;
         }
-
         public Builder numReplicas(@Nullable Integer numReplicas) {
             this.numReplicas = Output.ofNullable(numReplicas);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scoringTimeoutMs(@Nullable Output<Integer> scoringTimeoutMs) {
             this.scoringTimeoutMs = scoringTimeoutMs;
             return this;
         }
-
         public Builder scoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
             this.scoringTimeoutMs = Output.ofNullable(scoringTimeoutMs);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder trafficPercentile(@Nullable Output<Double> trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
-
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             this.trafficPercentile = Output.ofNullable(trafficPercentile);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,VariantType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,VariantType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public AKSServiceArgs build() {
+        }        public AKSServiceArgs build() {
             return new AKSServiceArgs(aadAuthEnabled, appInsightsEnabled, authEnabled, autoScaler, computeName, computeType, containerResourceRequirements, dataCollection, description, environmentImageRequest, isDefault, keys, kvTags, livenessProbeRequirements, location, maxConcurrentRequestsPerContainer, maxQueueWaitMs, namespace, numReplicas, properties, resourceGroupName, scoringTimeoutMs, serviceName, trafficPercentile, type, workspaceName);
         }
     }

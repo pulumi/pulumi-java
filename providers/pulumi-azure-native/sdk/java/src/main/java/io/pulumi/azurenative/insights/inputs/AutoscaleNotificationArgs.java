@@ -97,32 +97,29 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable EmailNotificationArgs email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder operation(Output<OperationType> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder operation(OperationType operation) {
             this.operation = Output.of(Objects.requireNonNull(operation));
             return this;
         }
-
         public Builder webhooks(@Nullable Output<List<WebhookNotificationArgs>> webhooks) {
             this.webhooks = webhooks;
             return this;
         }
-
         public Builder webhooks(@Nullable List<WebhookNotificationArgs> webhooks) {
             this.webhooks = Output.ofNullable(webhooks);
             return this;
         }
-        public AutoscaleNotificationArgs build() {
+        public Builder webhooks(WebhookNotificationArgs... webhooks) {
+            return webhooks(List.of(webhooks));
+        }        public AutoscaleNotificationArgs build() {
             return new AutoscaleNotificationArgs(email, operation, webhooks);
         }
     }

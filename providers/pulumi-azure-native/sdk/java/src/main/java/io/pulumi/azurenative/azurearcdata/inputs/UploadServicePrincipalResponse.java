@@ -94,17 +94,14 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
             this.authority = authority;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public UploadServicePrincipalResponse build() {
+        }        public UploadServicePrincipalResponse build() {
             return new UploadServicePrincipalResponse(authority, clientId, tenantId);
         }
     }

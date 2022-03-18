@@ -139,62 +139,50 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder keyVault(@Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault) {
             this.keyVault = keyVault;
             return this;
         }
-
         public Builder keyVault(@Nullable KeyVaultContractCreatePropertiesArgs keyVault) {
             this.keyVault = Output.ofNullable(keyVault);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(certificateId, data, keyVault, password, resourceGroupName, serviceName);
         }
     }

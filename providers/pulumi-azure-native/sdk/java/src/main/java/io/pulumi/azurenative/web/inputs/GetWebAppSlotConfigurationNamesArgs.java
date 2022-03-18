@@ -72,12 +72,10 @@ public final class GetWebAppSlotConfigurationNamesArgs extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppSlotConfigurationNamesArgs build() {
+        }        public GetWebAppSlotConfigurationNamesArgs build() {
             return new GetWebAppSlotConfigurationNamesArgs(name, resourceGroupName);
         }
     }

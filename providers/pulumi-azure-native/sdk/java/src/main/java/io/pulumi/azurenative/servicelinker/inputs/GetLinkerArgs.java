@@ -72,12 +72,10 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
             this.linkerName = Objects.requireNonNull(linkerName);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public GetLinkerArgs build() {
+        }        public GetLinkerArgs build() {
             return new GetLinkerArgs(linkerName, resourceUri);
         }
     }

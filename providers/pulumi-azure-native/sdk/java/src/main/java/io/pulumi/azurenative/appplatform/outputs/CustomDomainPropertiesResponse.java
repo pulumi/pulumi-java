@@ -87,17 +87,14 @@ public final class CustomDomainPropertiesResponse {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
-
         public Builder certName(@Nullable String certName) {
             this.certName = certName;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public CustomDomainPropertiesResponse build() {
+        }        public CustomDomainPropertiesResponse build() {
             return new CustomDomainPropertiesResponse(appName, certName, thumbprint);
         }
     }

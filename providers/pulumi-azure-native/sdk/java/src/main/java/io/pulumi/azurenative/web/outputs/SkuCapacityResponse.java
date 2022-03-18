@@ -120,27 +120,22 @@ public final class SkuCapacityResponse {
             this.$default = $default;
             return this;
         }
-
         public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
             this.elasticMaximum = elasticMaximum;
             return this;
         }
-
         public Builder maximum(@Nullable Integer maximum) {
             this.maximum = maximum;
             return this;
         }
-
         public Builder minimum(@Nullable Integer minimum) {
             this.minimum = minimum;
             return this;
         }
-
         public Builder scaleType(@Nullable String scaleType) {
             this.scaleType = scaleType;
             return this;
-        }
-        public SkuCapacityResponse build() {
+        }        public SkuCapacityResponse build() {
             return new SkuCapacityResponse($default, elasticMaximum, maximum, minimum, scaleType);
         }
     }

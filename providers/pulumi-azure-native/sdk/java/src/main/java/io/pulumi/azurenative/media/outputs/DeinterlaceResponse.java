@@ -71,12 +71,10 @@ public final class DeinterlaceResponse {
             this.mode = mode;
             return this;
         }
-
         public Builder parity(@Nullable String parity) {
             this.parity = parity;
             return this;
-        }
-        public DeinterlaceResponse build() {
+        }        public DeinterlaceResponse build() {
             return new DeinterlaceResponse(mode, parity);
         }
     }

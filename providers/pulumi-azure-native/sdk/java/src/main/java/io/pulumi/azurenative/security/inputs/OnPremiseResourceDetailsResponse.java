@@ -125,27 +125,22 @@ public final class OnPremiseResourceDetailsResponse extends io.pulumi.resources.
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder sourceComputerId(String sourceComputerId) {
             this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
             return this;
         }
-
         public Builder vmuuid(String vmuuid) {
             this.vmuuid = Objects.requireNonNull(vmuuid);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
-        }
-        public OnPremiseResourceDetailsResponse build() {
+        }        public OnPremiseResourceDetailsResponse build() {
             return new OnPremiseResourceDetailsResponse(machineName, source, sourceComputerId, vmuuid, workspaceId);
         }
     }

@@ -111,42 +111,34 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable AuthenticationArgs authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder deviceId(Output<String> deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
-
         public Builder deviceId(String deviceId) {
             this.deviceId = Output.of(Objects.requireNonNull(deviceId));
             return this;
         }
-
         public Builder ioTHostHub(Output<String> ioTHostHub) {
             this.ioTHostHub = Objects.requireNonNull(ioTHostHub);
             return this;
         }
-
         public Builder ioTHostHub(String ioTHostHub) {
             this.ioTHostHub = Output.of(Objects.requireNonNull(ioTHostHub));
             return this;
         }
-
         public Builder ioTHostHubId(@Nullable Output<String> ioTHostHubId) {
             this.ioTHostHubId = ioTHostHubId;
             return this;
         }
-
         public Builder ioTHostHubId(@Nullable String ioTHostHubId) {
             this.ioTHostHubId = Output.ofNullable(ioTHostHubId);
             return this;
-        }
-        public IoTDeviceInfoArgs build() {
+        }        public IoTDeviceInfoArgs build() {
             return new IoTDeviceInfoArgs(authentication, deviceId, ioTHostHub, ioTHostHubId);
         }
     }

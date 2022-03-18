@@ -158,72 +158,58 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder postgresInstanceName(@Nullable Output<String> postgresInstanceName) {
             this.postgresInstanceName = postgresInstanceName;
             return this;
         }
-
         public Builder postgresInstanceName(@Nullable String postgresInstanceName) {
             this.postgresInstanceName = Output.ofNullable(postgresInstanceName);
             return this;
         }
-
         public Builder properties(Output<PostgresInstancePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(PostgresInstancePropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<PostgresInstanceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable PostgresInstanceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PostgresInstanceArgs build() {
+        }        public PostgresInstanceArgs build() {
             return new PostgresInstanceArgs(extendedLocation, location, postgresInstanceName, properties, resourceGroupName, sku, tags);
         }
     }

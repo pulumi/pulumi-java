@@ -153,37 +153,30 @@ public final class GetSecurityContactResult {
             this.alertNotifications = alertNotifications;
             return this;
         }
-
         public Builder emails(@Nullable String emails) {
             this.emails = emails;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationsByRole(@Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole) {
             this.notificationsByRole = notificationsByRole;
             return this;
         }
-
         public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSecurityContactResult build() {
+        }        public GetSecurityContactResult build() {
             return new GetSecurityContactResult(alertNotifications, emails, id, name, notificationsByRole, phone, type);
         }
     }

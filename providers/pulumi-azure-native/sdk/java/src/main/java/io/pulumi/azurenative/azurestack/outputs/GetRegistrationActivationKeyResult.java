@@ -53,8 +53,7 @@ public final class GetRegistrationActivationKeyResult {
         public Builder activationKey(@Nullable String activationKey) {
             this.activationKey = activationKey;
             return this;
-        }
-        public GetRegistrationActivationKeyResult build() {
+        }        public GetRegistrationActivationKeyResult build() {
             return new GetRegistrationActivationKeyResult(activationKey);
         }
     }

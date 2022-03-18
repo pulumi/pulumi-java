@@ -134,52 +134,45 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable FirewallPolicyFilterRuleActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder ruleConditions(@Nullable Output<List<Object>> ruleConditions) {
             this.ruleConditions = ruleConditions;
             return this;
         }
-
         public Builder ruleConditions(@Nullable List<Object> ruleConditions) {
             this.ruleConditions = Output.ofNullable(ruleConditions);
             return this;
         }
-
+        public Builder ruleConditions(Object... ruleConditions) {
+            return ruleConditions(List.of(ruleConditions));
+        }
         public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
-        }
-        public FirewallPolicyFilterRuleArgs build() {
+        }        public FirewallPolicyFilterRuleArgs build() {
             return new FirewallPolicyFilterRuleArgs(action, name, priority, ruleConditions, ruleType);
         }
     }

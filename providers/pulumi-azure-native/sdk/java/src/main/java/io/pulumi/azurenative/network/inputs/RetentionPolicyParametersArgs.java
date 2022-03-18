@@ -79,22 +79,18 @@ public final class RetentionPolicyParametersArgs extends io.pulumi.resources.Res
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public RetentionPolicyParametersArgs build() {
+        }        public RetentionPolicyParametersArgs build() {
             return new RetentionPolicyParametersArgs(days, enabled);
         }
     }

@@ -128,52 +128,42 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder privateIpAllocationMethod(@Nullable Output<String> privateIpAllocationMethod) {
             this.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
-
         public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             this.privateIpAllocationMethod = Output.ofNullable(privateIpAllocationMethod);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubnetReferenceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetReferenceArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder zones(@Nullable Output<String> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable String zones) {
             this.zones = Output.ofNullable(zones);
             return this;
-        }
-        public LBFrontendIPConfigurationResourceSettingsArgs build() {
+        }        public LBFrontendIPConfigurationResourceSettingsArgs build() {
             return new LBFrontendIPConfigurationResourceSettingsArgs(name, privateIpAddress, privateIpAllocationMethod, subnet, zones);
         }
     }

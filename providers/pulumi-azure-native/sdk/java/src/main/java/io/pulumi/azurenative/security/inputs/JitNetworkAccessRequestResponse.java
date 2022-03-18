@@ -104,22 +104,21 @@ public final class JitNetworkAccessRequestResponse extends io.pulumi.resources.I
             this.justification = justification;
             return this;
         }
-
         public Builder requestor(String requestor) {
             this.requestor = Objects.requireNonNull(requestor);
             return this;
         }
-
         public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
-
         public Builder virtualMachines(List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-        public JitNetworkAccessRequestResponse build() {
+        public Builder virtualMachines(JitNetworkAccessRequestVirtualMachineResponse... virtualMachines) {
+            return virtualMachines(List.of(virtualMachines));
+        }        public JitNetworkAccessRequestResponse build() {
             return new JitNetworkAccessRequestResponse(justification, requestor, startTimeUtc, virtualMachines);
         }
     }

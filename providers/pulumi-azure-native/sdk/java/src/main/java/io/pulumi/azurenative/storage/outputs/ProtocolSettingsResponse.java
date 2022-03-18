@@ -53,8 +53,7 @@ public final class ProtocolSettingsResponse {
         public Builder smb(@Nullable SmbSettingResponse smb) {
             this.smb = smb;
             return this;
-        }
-        public ProtocolSettingsResponse build() {
+        }        public ProtocolSettingsResponse build() {
             return new ProtocolSettingsResponse(smb);
         }
     }

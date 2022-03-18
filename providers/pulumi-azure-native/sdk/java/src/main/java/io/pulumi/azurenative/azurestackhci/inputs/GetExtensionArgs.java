@@ -104,22 +104,18 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
             this.arcSettingName = Objects.requireNonNull(arcSettingName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder extensionName(String extensionName) {
             this.extensionName = Objects.requireNonNull(extensionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExtensionArgs build() {
+        }        public GetExtensionArgs build() {
             return new GetExtensionArgs(arcSettingName, clusterName, extensionName, resourceGroupName);
         }
     }

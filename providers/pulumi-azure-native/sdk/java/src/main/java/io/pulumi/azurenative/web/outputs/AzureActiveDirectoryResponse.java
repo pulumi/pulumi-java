@@ -126,27 +126,22 @@ public final class AzureActiveDirectoryResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder isAutoProvisioned(@Nullable Boolean isAutoProvisioned) {
             this.isAutoProvisioned = isAutoProvisioned;
             return this;
         }
-
         public Builder login(@Nullable AzureActiveDirectoryLoginResponse login) {
             this.login = login;
             return this;
         }
-
         public Builder registration(@Nullable AzureActiveDirectoryRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }
-
         public Builder validation(@Nullable AzureActiveDirectoryValidationResponse validation) {
             this.validation = validation;
             return this;
-        }
-        public AzureActiveDirectoryResponse build() {
+        }        public AzureActiveDirectoryResponse build() {
             return new AzureActiveDirectoryResponse(enabled, isAutoProvisioned, login, registration, validation);
         }
     }

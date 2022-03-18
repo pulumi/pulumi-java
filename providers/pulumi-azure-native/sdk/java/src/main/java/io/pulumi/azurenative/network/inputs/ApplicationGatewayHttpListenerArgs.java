@@ -244,122 +244,104 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
             this.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
-
         public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorArgs> customErrorConfigurations) {
             this.customErrorConfigurations = Output.ofNullable(customErrorConfigurations);
             return this;
         }
-
+        public Builder customErrorConfigurations(ApplicationGatewayCustomErrorArgs... customErrorConfigurations) {
+            return customErrorConfigurations(List.of(customErrorConfigurations));
+        }
         public Builder firewallPolicy(@Nullable Output<SubResourceArgs> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
-
         public Builder firewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
             this.firewallPolicy = Output.ofNullable(firewallPolicy);
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
             this.frontendIPConfiguration = Output.ofNullable(frontendIPConfiguration);
             return this;
         }
-
         public Builder frontendPort(@Nullable Output<SubResourceArgs> frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
-
         public Builder frontendPort(@Nullable SubResourceArgs frontendPort) {
             this.frontendPort = Output.ofNullable(frontendPort);
             return this;
         }
-
         public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = Output.ofNullable(hostName);
             return this;
         }
-
         public Builder hostNames(@Nullable Output<List<String>> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
-
         public Builder hostNames(@Nullable List<String> hostNames) {
             this.hostNames = Output.ofNullable(hostNames);
             return this;
         }
-
+        public Builder hostNames(String... hostNames) {
+            return hostNames(List.of(hostNames));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder requireServerNameIndication(@Nullable Output<Boolean> requireServerNameIndication) {
             this.requireServerNameIndication = requireServerNameIndication;
             return this;
         }
-
         public Builder requireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
             this.requireServerNameIndication = Output.ofNullable(requireServerNameIndication);
             return this;
         }
-
         public Builder sslCertificate(@Nullable Output<SubResourceArgs> sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
-
         public Builder sslCertificate(@Nullable SubResourceArgs sslCertificate) {
             this.sslCertificate = Output.ofNullable(sslCertificate);
             return this;
         }
-
         public Builder sslProfile(@Nullable Output<SubResourceArgs> sslProfile) {
             this.sslProfile = sslProfile;
             return this;
         }
-
         public Builder sslProfile(@Nullable SubResourceArgs sslProfile) {
             this.sslProfile = Output.ofNullable(sslProfile);
             return this;
-        }
-        public ApplicationGatewayHttpListenerArgs build() {
+        }        public ApplicationGatewayHttpListenerArgs build() {
             return new ApplicationGatewayHttpListenerArgs(customErrorConfigurations, firewallPolicy, frontendIPConfiguration, frontendPort, hostName, hostNames, id, name, protocol, requireServerNameIndication, sslCertificate, sslProfile);
         }
     }

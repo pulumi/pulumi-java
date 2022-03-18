@@ -69,12 +69,10 @@ public final class EtcdInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public EtcdInfoResponse build() {
+        }        public EtcdInfoResponse build() {
             return new EtcdInfoResponse(type, version);
         }
     }

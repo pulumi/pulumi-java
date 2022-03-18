@@ -245,112 +245,90 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headers(@Nullable Output<Map<String,List<String>>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,List<String>> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder subnetMask(@Nullable Output<String> subnetMask) {
             this.subnetMask = subnetMask;
             return this;
         }
-
         public Builder subnetMask(@Nullable String subnetMask) {
             this.subnetMask = Output.ofNullable(subnetMask);
             return this;
         }
-
         public Builder subnetTrafficTag(@Nullable Output<Integer> subnetTrafficTag) {
             this.subnetTrafficTag = subnetTrafficTag;
             return this;
         }
-
         public Builder subnetTrafficTag(@Nullable Integer subnetTrafficTag) {
             this.subnetTrafficTag = Output.ofNullable(subnetTrafficTag);
             return this;
         }
-
         public Builder tag(@Nullable Output<Either<String,IpFilterTag>> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable Either<String,IpFilterTag> tag) {
             this.tag = Output.ofNullable(tag);
             return this;
         }
-
         public Builder vnetSubnetResourceId(@Nullable Output<String> vnetSubnetResourceId) {
             this.vnetSubnetResourceId = vnetSubnetResourceId;
             return this;
         }
-
         public Builder vnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
             this.vnetSubnetResourceId = Output.ofNullable(vnetSubnetResourceId);
             return this;
         }
-
         public Builder vnetTrafficTag(@Nullable Output<Integer> vnetTrafficTag) {
             this.vnetTrafficTag = vnetTrafficTag;
             return this;
         }
-
         public Builder vnetTrafficTag(@Nullable Integer vnetTrafficTag) {
             this.vnetTrafficTag = Output.ofNullable(vnetTrafficTag);
             return this;
-        }
-        public IpSecurityRestrictionArgs build() {
+        }        public IpSecurityRestrictionArgs build() {
             return new IpSecurityRestrictionArgs(action, description, headers, ipAddress, name, priority, subnetMask, subnetTrafficTag, tag, vnetSubnetResourceId, vnetTrafficTag);
         }
     }

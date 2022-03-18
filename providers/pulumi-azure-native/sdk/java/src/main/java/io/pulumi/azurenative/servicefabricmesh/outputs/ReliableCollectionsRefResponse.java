@@ -72,12 +72,10 @@ public final class ReliableCollectionsRefResponse {
             this.doNotPersistState = doNotPersistState;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ReliableCollectionsRefResponse build() {
+        }        public ReliableCollectionsRefResponse build() {
             return new ReliableCollectionsRefResponse(doNotPersistState, name);
         }
     }

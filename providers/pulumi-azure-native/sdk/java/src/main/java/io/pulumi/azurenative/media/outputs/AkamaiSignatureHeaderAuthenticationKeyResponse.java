@@ -87,17 +87,14 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
             this.base64Key = base64Key;
             return this;
         }
-
         public Builder expiration(@Nullable String expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = identifier;
             return this;
-        }
-        public AkamaiSignatureHeaderAuthenticationKeyResponse build() {
+        }        public AkamaiSignatureHeaderAuthenticationKeyResponse build() {
             return new AkamaiSignatureHeaderAuthenticationKeyResponse(base64Key, expiration, identifier);
         }
     }

@@ -122,27 +122,22 @@ public final class DirectLineSpeechChannelResponse {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder properties(@Nullable DirectLineSpeechChannelPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public DirectLineSpeechChannelResponse build() {
+        }        public DirectLineSpeechChannelResponse build() {
             return new DirectLineSpeechChannelResponse(channelName, etag, location, properties, provisioningState);
         }
     }

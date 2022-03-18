@@ -89,17 +89,14 @@ public final class GitHubResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder login(@Nullable LoginScopesResponse login) {
             this.login = login;
             return this;
         }
-
         public Builder registration(@Nullable ClientRegistrationResponse registration) {
             this.registration = registration;
             return this;
-        }
-        public GitHubResponse build() {
+        }        public GitHubResponse build() {
             return new GitHubResponse(enabled, login, registration);
         }
     }

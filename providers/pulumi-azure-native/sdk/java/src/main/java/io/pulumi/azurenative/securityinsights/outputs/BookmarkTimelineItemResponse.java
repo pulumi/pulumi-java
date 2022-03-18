@@ -187,47 +187,41 @@ public final class BookmarkTimelineItemResponse {
             this.azureResourceId = Objects.requireNonNull(azureResourceId);
             return this;
         }
-
         public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder endTimeUtc(@Nullable String endTimeUtc) {
             this.endTimeUtc = endTimeUtc;
             return this;
         }
-
         public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = eventTime;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder startTimeUtc(@Nullable String startTimeUtc) {
             this.startTimeUtc = startTimeUtc;
             return this;
-        }
-        public BookmarkTimelineItemResponse build() {
+        }        public BookmarkTimelineItemResponse build() {
             return new BookmarkTimelineItemResponse(azureResourceId, createdBy, displayName, endTimeUtc, eventTime, kind, labels, notes, startTimeUtc);
         }
     }

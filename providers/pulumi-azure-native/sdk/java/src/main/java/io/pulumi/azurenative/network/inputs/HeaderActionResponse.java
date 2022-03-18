@@ -94,17 +94,14 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
             this.headerActionType = Objects.requireNonNull(headerActionType);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public HeaderActionResponse build() {
+        }        public HeaderActionResponse build() {
             return new HeaderActionResponse(headerActionType, headerName, value);
         }
     }

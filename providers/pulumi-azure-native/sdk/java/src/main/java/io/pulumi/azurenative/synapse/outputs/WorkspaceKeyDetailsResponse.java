@@ -71,12 +71,10 @@ public final class WorkspaceKeyDetailsResponse {
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public WorkspaceKeyDetailsResponse build() {
+        }        public WorkspaceKeyDetailsResponse build() {
             return new WorkspaceKeyDetailsResponse(keyVaultUrl, name);
         }
     }

@@ -89,17 +89,20 @@ public final class BackupPolicyResponse {
             this.datasourceTypes = Objects.requireNonNull(datasourceTypes);
             return this;
         }
-
+        public Builder datasourceTypes(String... datasourceTypes) {
+            return datasourceTypes(List.of(datasourceTypes));
+        }
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder policyRules(List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
             this.policyRules = Objects.requireNonNull(policyRules);
             return this;
         }
-        public BackupPolicyResponse build() {
+        public Builder policyRules(Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>... policyRules) {
+            return policyRules(List.of(policyRules));
+        }        public BackupPolicyResponse build() {
             return new BackupPolicyResponse(datasourceTypes, objectType, policyRules);
         }
     }

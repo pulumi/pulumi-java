@@ -129,52 +129,45 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
-
         public Builder healthChecks(List<RestHealthCheckArgs> healthChecks) {
             this.healthChecks = Output.of(Objects.requireNonNull(healthChecks));
             return this;
         }
-
+        public Builder healthChecks(RestHealthCheckArgs... healthChecks) {
+            return healthChecks(List.of(healthChecks));
+        }
         public Builder healthyStateDuration(Output<String> healthyStateDuration) {
             this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration);
             return this;
         }
-
         public Builder healthyStateDuration(String healthyStateDuration) {
             this.healthyStateDuration = Output.of(Objects.requireNonNull(healthyStateDuration));
             return this;
         }
-
         public Builder maxElasticDuration(@Nullable Output<String> maxElasticDuration) {
             this.maxElasticDuration = maxElasticDuration;
             return this;
         }
-
         public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
             this.maxElasticDuration = Output.ofNullable(maxElasticDuration);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder waitDuration(@Nullable Output<String> waitDuration) {
             this.waitDuration = waitDuration;
             return this;
         }
-
         public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = Output.ofNullable(waitDuration);
             return this;
-        }
-        public RestHealthCheckStepAttributesArgs build() {
+        }        public RestHealthCheckStepAttributesArgs build() {
             return new RestHealthCheckStepAttributesArgs(healthChecks, healthyStateDuration, maxElasticDuration, type, waitDuration);
         }
     }

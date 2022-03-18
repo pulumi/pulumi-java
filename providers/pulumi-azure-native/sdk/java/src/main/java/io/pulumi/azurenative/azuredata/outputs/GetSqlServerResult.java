@@ -168,42 +168,34 @@ public final class GetSqlServerResult {
             this.cores = cores;
             return this;
         }
-
         public Builder edition(@Nullable String edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder propertyBag(@Nullable String propertyBag) {
             this.propertyBag = propertyBag;
             return this;
         }
-
         public Builder registrationID(@Nullable String registrationID) {
             this.registrationID = registrationID;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetSqlServerResult build() {
+        }        public GetSqlServerResult build() {
             return new GetSqlServerResult(cores, edition, id, name, propertyBag, registrationID, type, version);
         }
     }

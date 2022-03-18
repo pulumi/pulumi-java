@@ -76,12 +76,10 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.configurationDisplayName = Objects.requireNonNull(configurationDisplayName);
             return this;
         }
-
         public Builder productFamilyDisplayName(String productFamilyDisplayName) {
             this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
             return this;
-        }
-        public DisplayInfoResponse build() {
+        }        public DisplayInfoResponse build() {
             return new DisplayInfoResponse(configurationDisplayName, productFamilyDisplayName);
         }
     }

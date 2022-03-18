@@ -72,12 +72,10 @@ public final class GetAddressByNameArgs extends io.pulumi.resources.InvokeArgs {
             this.addressName = Objects.requireNonNull(addressName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAddressByNameArgs build() {
+        }        public GetAddressByNameArgs build() {
             return new GetAddressByNameArgs(addressName, resourceGroupName);
         }
     }

@@ -129,52 +129,42 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
-
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
-
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
             this.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
-
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
             this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public Builder objectType(Output<Either<String,AADObjectType>> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(Either<String,AADObjectType> objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
-        }
-        public CreateComputePolicyWithAccountParametersArgs build() {
+        }        public CreateComputePolicyWithAccountParametersArgs build() {
             return new CreateComputePolicyWithAccountParametersArgs(maxDegreeOfParallelismPerJob, minPriorityPerJob, name, objectId, objectType);
         }
     }

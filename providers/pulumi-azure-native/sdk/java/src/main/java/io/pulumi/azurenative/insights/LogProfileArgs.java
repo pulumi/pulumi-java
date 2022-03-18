@@ -173,82 +173,72 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
         public Builder categories(List<String> categories) {
             this.categories = Output.of(Objects.requireNonNull(categories));
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder locations(Output<List<String>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
         public Builder locations(List<String> locations) {
             this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder logProfileName(@Nullable Output<String> logProfileName) {
             this.logProfileName = logProfileName;
             return this;
         }
-
         public Builder logProfileName(@Nullable String logProfileName) {
             this.logProfileName = Output.ofNullable(logProfileName);
             return this;
         }
-
         public Builder retentionPolicy(Output<RetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
             return this;
         }
-
         public Builder retentionPolicy(RetentionPolicyArgs retentionPolicy) {
             this.retentionPolicy = Output.of(Objects.requireNonNull(retentionPolicy));
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable Output<String> serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = Output.ofNullable(serviceBusRuleId);
             return this;
         }
-
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LogProfileArgs build() {
+        }        public LogProfileArgs build() {
             return new LogProfileArgs(categories, location, locations, logProfileName, retentionPolicy, serviceBusRuleId, storageAccountId, tags);
         }
     }

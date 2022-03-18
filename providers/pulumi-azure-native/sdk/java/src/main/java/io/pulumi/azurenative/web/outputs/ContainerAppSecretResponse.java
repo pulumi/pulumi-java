@@ -69,12 +69,10 @@ public final class ContainerAppSecretResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ContainerAppSecretResponse build() {
+        }        public ContainerAppSecretResponse build() {
             return new ContainerAppSecretResponse(name, value);
         }
     }

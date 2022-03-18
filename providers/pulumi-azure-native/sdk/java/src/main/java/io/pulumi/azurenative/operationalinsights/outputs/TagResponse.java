@@ -69,12 +69,10 @@ public final class TagResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TagResponse build() {
+        }        public TagResponse build() {
             return new TagResponse(name, value);
         }
     }

@@ -140,62 +140,50 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder dataConnectionName(@Nullable Output<String> dataConnectionName) {
             this.dataConnectionName = dataConnectionName;
             return this;
         }
-
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
             this.dataConnectionName = Output.ofNullable(dataConnectionName);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder kind(Output<Either<String,DataConnectionKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,DataConnectionKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DataConnectionArgs build() {
+        }        public DataConnectionArgs build() {
             return new DataConnectionArgs(clusterName, dataConnectionName, databaseName, kind, location, resourceGroupName);
         }
     }

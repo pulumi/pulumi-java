@@ -88,17 +88,14 @@ public final class GetBlobInventoryPolicyArgs extends io.pulumi.resources.Invoke
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder blobInventoryPolicyName(String blobInventoryPolicyName) {
             this.blobInventoryPolicyName = Objects.requireNonNull(blobInventoryPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBlobInventoryPolicyArgs build() {
+        }        public GetBlobInventoryPolicyArgs build() {
             return new GetBlobInventoryPolicyArgs(accountName, blobInventoryPolicyName, resourceGroupName);
         }
     }

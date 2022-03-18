@@ -106,42 +106,34 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder syncAgentName(@Nullable Output<String> syncAgentName) {
             this.syncAgentName = syncAgentName;
             return this;
         }
-
         public Builder syncAgentName(@Nullable String syncAgentName) {
             this.syncAgentName = Output.ofNullable(syncAgentName);
             return this;
         }
-
         public Builder syncDatabaseId(@Nullable Output<String> syncDatabaseId) {
             this.syncDatabaseId = syncDatabaseId;
             return this;
         }
-
         public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
             this.syncDatabaseId = Output.ofNullable(syncDatabaseId);
             return this;
-        }
-        public SyncAgentArgs build() {
+        }        public SyncAgentArgs build() {
             return new SyncAgentArgs(resourceGroupName, serverName, syncAgentName, syncDatabaseId);
         }
     }

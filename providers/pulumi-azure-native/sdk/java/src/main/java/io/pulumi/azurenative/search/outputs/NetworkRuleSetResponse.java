@@ -54,7 +54,9 @@ public final class NetworkRuleSetResponse {
             this.ipRules = ipRules;
             return this;
         }
-        public NetworkRuleSetResponse build() {
+        public Builder ipRules(IpRuleResponse... ipRules) {
+            return ipRules(List.of(ipRules));
+        }        public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(ipRules);
         }
     }

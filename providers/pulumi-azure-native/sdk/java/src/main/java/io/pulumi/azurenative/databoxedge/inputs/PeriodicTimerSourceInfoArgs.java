@@ -94,32 +94,26 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public PeriodicTimerSourceInfoArgs build() {
+        }        public PeriodicTimerSourceInfoArgs build() {
             return new PeriodicTimerSourceInfoArgs(schedule, startTime, topic);
         }
     }

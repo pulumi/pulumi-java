@@ -178,42 +178,40 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
             this.capabilities = capabilities;
             return this;
         }
-
+        public Builder capabilities(CapabilityResponse... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
-
         public Builder skuCapacity(@Nullable SkuCapacityResponse skuCapacity) {
             this.skuCapacity = skuCapacity;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public SkuDescriptionResponse build() {
+        }        public SkuDescriptionResponse build() {
             return new SkuDescriptionResponse(capabilities, capacity, family, locations, name, size, skuCapacity, tier);
         }
     }

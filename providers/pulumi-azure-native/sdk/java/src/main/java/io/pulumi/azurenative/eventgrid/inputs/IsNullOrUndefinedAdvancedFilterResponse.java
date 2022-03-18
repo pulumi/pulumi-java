@@ -79,12 +79,10 @@ public final class IsNullOrUndefinedAdvancedFilterResponse extends io.pulumi.res
             this.key = key;
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
-        }
-        public IsNullOrUndefinedAdvancedFilterResponse build() {
+        }        public IsNullOrUndefinedAdvancedFilterResponse build() {
             return new IsNullOrUndefinedAdvancedFilterResponse(key, operatorType);
         }
     }

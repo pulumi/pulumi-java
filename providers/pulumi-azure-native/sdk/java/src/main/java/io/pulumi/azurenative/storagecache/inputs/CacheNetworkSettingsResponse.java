@@ -128,27 +128,28 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
             this.dnsSearchDomain = dnsSearchDomain;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder mtu(@Nullable Integer mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder ntpServer(@Nullable String ntpServer) {
             this.ntpServer = ntpServer;
             return this;
         }
-
         public Builder utilityAddresses(List<String> utilityAddresses) {
             this.utilityAddresses = Objects.requireNonNull(utilityAddresses);
             return this;
         }
-        public CacheNetworkSettingsResponse build() {
+        public Builder utilityAddresses(String... utilityAddresses) {
+            return utilityAddresses(List.of(utilityAddresses));
+        }        public CacheNetworkSettingsResponse build() {
             return new CacheNetworkSettingsResponse(dnsSearchDomain, dnsServers, mtu, ntpServer, utilityAddresses);
         }
     }

@@ -61,12 +61,13 @@ public final class MetricCounterSetArgs extends io.pulumi.resources.ResourceArgs
             this.counters = Objects.requireNonNull(counters);
             return this;
         }
-
         public Builder counters(List<MetricCounterArgs> counters) {
             this.counters = Output.of(Objects.requireNonNull(counters));
             return this;
         }
-        public MetricCounterSetArgs build() {
+        public Builder counters(MetricCounterArgs... counters) {
+            return counters(List.of(counters));
+        }        public MetricCounterSetArgs build() {
             return new MetricCounterSetArgs(counters);
         }
     }

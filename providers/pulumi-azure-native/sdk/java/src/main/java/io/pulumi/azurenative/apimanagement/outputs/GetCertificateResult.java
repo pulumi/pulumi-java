@@ -152,37 +152,30 @@ public final class GetCertificateResult {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyVault(@Nullable KeyVaultContractPropertiesResponse keyVault) {
             this.keyVault = keyVault;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(expirationDate, id, keyVault, name, subject, thumbprint, type);
         }
     }

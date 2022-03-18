@@ -139,62 +139,50 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder hotCachePeriod(@Nullable Output<String> hotCachePeriod) {
             this.hotCachePeriod = hotCachePeriod;
             return this;
         }
-
         public Builder hotCachePeriod(@Nullable String hotCachePeriod) {
             this.hotCachePeriod = Output.ofNullable(hotCachePeriod);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ReadOnlyFollowingDatabaseArgs build() {
+        }        public ReadOnlyFollowingDatabaseArgs build() {
             return new ReadOnlyFollowingDatabaseArgs(clusterName, databaseName, hotCachePeriod, kind, location, resourceGroupName);
         }
     }

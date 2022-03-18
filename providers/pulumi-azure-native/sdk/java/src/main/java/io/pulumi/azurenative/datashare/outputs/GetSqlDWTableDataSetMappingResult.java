@@ -232,62 +232,50 @@ public final class GetSqlDWTableDataSetMappingResult {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
-
         public Builder dataSetMappingStatus(String dataSetMappingStatus) {
             this.dataSetMappingStatus = Objects.requireNonNull(dataSetMappingStatus);
             return this;
         }
-
         public Builder dataWarehouseName(String dataWarehouseName) {
             this.dataWarehouseName = Objects.requireNonNull(dataWarehouseName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder sqlServerResourceId(String sqlServerResourceId) {
             this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSqlDWTableDataSetMappingResult build() {
+        }        public GetSqlDWTableDataSetMappingResult build() {
             return new GetSqlDWTableDataSetMappingResult(dataSetId, dataSetMappingStatus, dataWarehouseName, id, kind, name, provisioningState, schemaName, sqlServerResourceId, systemData, tableName, type);
         }
     }

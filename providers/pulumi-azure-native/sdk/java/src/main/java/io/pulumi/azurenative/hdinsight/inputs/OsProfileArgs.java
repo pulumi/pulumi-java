@@ -61,12 +61,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
         }
-
         public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileArgs linuxOperatingSystemProfile) {
             this.linuxOperatingSystemProfile = Output.ofNullable(linuxOperatingSystemProfile);
             return this;
-        }
-        public OsProfileArgs build() {
+        }        public OsProfileArgs build() {
             return new OsProfileArgs(linuxOperatingSystemProfile);
         }
     }

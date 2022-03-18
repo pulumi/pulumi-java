@@ -170,42 +170,37 @@ public final class GetDataStoreResult {
             this.customerSecrets = customerSecrets;
             return this;
         }
-
+        public Builder customerSecrets(CustomerSecretResponse... customerSecrets) {
+            return customerSecrets(List.of(customerSecrets));
+        }
         public Builder dataStoreTypeId(String dataStoreTypeId) {
             this.dataStoreTypeId = Objects.requireNonNull(dataStoreTypeId);
             return this;
         }
-
         public Builder extendedProperties(@Nullable Object extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder repositoryId(@Nullable String repositoryId) {
             this.repositoryId = repositoryId;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDataStoreResult build() {
+        }        public GetDataStoreResult build() {
             return new GetDataStoreResult(customerSecrets, dataStoreTypeId, extendedProperties, id, name, repositoryId, state, type);
         }
     }

@@ -60,8 +60,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
         public Builder eventName(@Nullable String eventName) {
             this.eventName = eventName;
             return this;
-        }
-        public EventResponse build() {
+        }        public EventResponse build() {
             return new EventResponse(eventName);
         }
     }

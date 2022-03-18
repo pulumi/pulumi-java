@@ -120,27 +120,22 @@ public final class SourceControlAuthInfoResponse {
             this.expiresIn = expiresIn;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public Builder tokenType(@Nullable String tokenType) {
             this.tokenType = tokenType;
             return this;
-        }
-        public SourceControlAuthInfoResponse build() {
+        }        public SourceControlAuthInfoResponse build() {
             return new SourceControlAuthInfoResponse(expiresIn, refreshToken, scope, token, tokenType);
         }
     }

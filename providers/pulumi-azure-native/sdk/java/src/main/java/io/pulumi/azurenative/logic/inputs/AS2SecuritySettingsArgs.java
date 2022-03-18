@@ -207,102 +207,82 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
             this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages);
             return this;
         }
-
         public Builder enableNRRForInboundDecodedMessages(Boolean enableNRRForInboundDecodedMessages) {
             this.enableNRRForInboundDecodedMessages = Output.of(Objects.requireNonNull(enableNRRForInboundDecodedMessages));
             return this;
         }
-
         public Builder enableNRRForInboundEncodedMessages(Output<Boolean> enableNRRForInboundEncodedMessages) {
             this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages);
             return this;
         }
-
         public Builder enableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
             this.enableNRRForInboundEncodedMessages = Output.of(Objects.requireNonNull(enableNRRForInboundEncodedMessages));
             return this;
         }
-
         public Builder enableNRRForInboundMDN(Output<Boolean> enableNRRForInboundMDN) {
             this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN);
             return this;
         }
-
         public Builder enableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
             this.enableNRRForInboundMDN = Output.of(Objects.requireNonNull(enableNRRForInboundMDN));
             return this;
         }
-
         public Builder enableNRRForOutboundDecodedMessages(Output<Boolean> enableNRRForOutboundDecodedMessages) {
             this.enableNRRForOutboundDecodedMessages = Objects.requireNonNull(enableNRRForOutboundDecodedMessages);
             return this;
         }
-
         public Builder enableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
             this.enableNRRForOutboundDecodedMessages = Output.of(Objects.requireNonNull(enableNRRForOutboundDecodedMessages));
             return this;
         }
-
         public Builder enableNRRForOutboundEncodedMessages(Output<Boolean> enableNRRForOutboundEncodedMessages) {
             this.enableNRRForOutboundEncodedMessages = Objects.requireNonNull(enableNRRForOutboundEncodedMessages);
             return this;
         }
-
         public Builder enableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
             this.enableNRRForOutboundEncodedMessages = Output.of(Objects.requireNonNull(enableNRRForOutboundEncodedMessages));
             return this;
         }
-
         public Builder enableNRRForOutboundMDN(Output<Boolean> enableNRRForOutboundMDN) {
             this.enableNRRForOutboundMDN = Objects.requireNonNull(enableNRRForOutboundMDN);
             return this;
         }
-
         public Builder enableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
             this.enableNRRForOutboundMDN = Output.of(Objects.requireNonNull(enableNRRForOutboundMDN));
             return this;
         }
-
         public Builder encryptionCertificateName(@Nullable Output<String> encryptionCertificateName) {
             this.encryptionCertificateName = encryptionCertificateName;
             return this;
         }
-
         public Builder encryptionCertificateName(@Nullable String encryptionCertificateName) {
             this.encryptionCertificateName = Output.ofNullable(encryptionCertificateName);
             return this;
         }
-
         public Builder overrideGroupSigningCertificate(Output<Boolean> overrideGroupSigningCertificate) {
             this.overrideGroupSigningCertificate = Objects.requireNonNull(overrideGroupSigningCertificate);
             return this;
         }
-
         public Builder overrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
             this.overrideGroupSigningCertificate = Output.of(Objects.requireNonNull(overrideGroupSigningCertificate));
             return this;
         }
-
         public Builder sha2AlgorithmFormat(@Nullable Output<String> sha2AlgorithmFormat) {
             this.sha2AlgorithmFormat = sha2AlgorithmFormat;
             return this;
         }
-
         public Builder sha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
             this.sha2AlgorithmFormat = Output.ofNullable(sha2AlgorithmFormat);
             return this;
         }
-
         public Builder signingCertificateName(@Nullable Output<String> signingCertificateName) {
             this.signingCertificateName = signingCertificateName;
             return this;
         }
-
         public Builder signingCertificateName(@Nullable String signingCertificateName) {
             this.signingCertificateName = Output.ofNullable(signingCertificateName);
             return this;
-        }
-        public AS2SecuritySettingsArgs build() {
+        }        public AS2SecuritySettingsArgs build() {
             return new AS2SecuritySettingsArgs(enableNRRForInboundDecodedMessages, enableNRRForInboundEncodedMessages, enableNRRForInboundMDN, enableNRRForOutboundDecodedMessages, enableNRRForOutboundEncodedMessages, enableNRRForOutboundMDN, encryptionCertificateName, overrideGroupSigningCertificate, sha2AlgorithmFormat, signingCertificateName);
         }
     }

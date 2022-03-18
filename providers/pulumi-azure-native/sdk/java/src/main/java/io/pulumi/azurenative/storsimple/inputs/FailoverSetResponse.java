@@ -80,12 +80,13 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
             this.eligibilityResult = eligibilityResult;
             return this;
         }
-
         public Builder volumeContainers(@Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers) {
             this.volumeContainers = volumeContainers;
             return this;
         }
-        public FailoverSetResponse build() {
+        public Builder volumeContainers(VolumeContainerFailoverMetadataResponse... volumeContainers) {
+            return volumeContainers(List.of(volumeContainers));
+        }        public FailoverSetResponse build() {
             return new FailoverSetResponse(eligibilityResult, volumeContainers);
         }
     }

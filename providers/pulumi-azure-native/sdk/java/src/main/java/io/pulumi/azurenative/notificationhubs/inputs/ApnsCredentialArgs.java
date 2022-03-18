@@ -174,82 +174,66 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.apnsCertificate = apnsCertificate;
             return this;
         }
-
         public Builder apnsCertificate(@Nullable String apnsCertificate) {
             this.apnsCertificate = Output.ofNullable(apnsCertificate);
             return this;
         }
-
         public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder appName(@Nullable Output<String> appName) {
             this.appName = appName;
             return this;
         }
-
         public Builder appName(@Nullable String appName) {
             this.appName = Output.ofNullable(appName);
             return this;
         }
-
         public Builder certificateKey(@Nullable Output<String> certificateKey) {
             this.certificateKey = certificateKey;
             return this;
         }
-
         public Builder certificateKey(@Nullable String certificateKey) {
             this.certificateKey = Output.ofNullable(certificateKey);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
-
         public Builder token(@Nullable Output<String> token) {
             this.token = token;
             return this;
         }
-
         public Builder token(@Nullable String token) {
             this.token = Output.ofNullable(token);
             return this;
-        }
-        public ApnsCredentialArgs build() {
+        }        public ApnsCredentialArgs build() {
             return new ApnsCredentialArgs(apnsCertificate, appId, appName, certificateKey, endpoint, keyId, thumbprint, token);
         }
     }

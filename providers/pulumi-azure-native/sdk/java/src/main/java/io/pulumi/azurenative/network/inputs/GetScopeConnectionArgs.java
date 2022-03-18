@@ -88,17 +88,14 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder scopeConnectionName(String scopeConnectionName) {
             this.scopeConnectionName = Objects.requireNonNull(scopeConnectionName);
             return this;
-        }
-        public GetScopeConnectionArgs build() {
+        }        public GetScopeConnectionArgs build() {
             return new GetScopeConnectionArgs(networkManagerName, resourceGroupName, scopeConnectionName);
         }
     }

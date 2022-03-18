@@ -168,42 +168,34 @@ public final class GetApplicationSecurityGroupResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApplicationSecurityGroupResult build() {
+        }        public GetApplicationSecurityGroupResult build() {
             return new GetApplicationSecurityGroupResult(etag, id, location, name, provisioningState, resourceGuid, tags, type);
         }
     }

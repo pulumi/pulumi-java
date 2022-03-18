@@ -53,8 +53,7 @@ public final class ConnectionTypeAssociationPropertyResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ConnectionTypeAssociationPropertyResponse build() {
+        }        public ConnectionTypeAssociationPropertyResponse build() {
             return new ConnectionTypeAssociationPropertyResponse(name);
         }
     }

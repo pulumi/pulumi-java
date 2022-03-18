@@ -129,32 +129,26 @@ public final class ManagedClusterPodIdentityResponse {
             this.bindingSelector = bindingSelector;
             return this;
         }
-
         public Builder identity(UserAssignedIdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder provisioningInfo(ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo) {
             this.provisioningInfo = Objects.requireNonNull(provisioningInfo);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public ManagedClusterPodIdentityResponse build() {
+        }        public ManagedClusterPodIdentityResponse build() {
             return new ManagedClusterPodIdentityResponse(bindingSelector, identity, name, namespace, provisioningInfo, provisioningState);
         }
     }

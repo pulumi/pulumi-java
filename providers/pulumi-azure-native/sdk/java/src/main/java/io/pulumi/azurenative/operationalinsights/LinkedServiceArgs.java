@@ -157,72 +157,58 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable String linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,LinkedServiceEntityStatus>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,LinkedServiceEntityStatus> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public Builder writeAccessResourceId(@Nullable Output<String> writeAccessResourceId) {
             this.writeAccessResourceId = writeAccessResourceId;
             return this;
         }
-
         public Builder writeAccessResourceId(@Nullable String writeAccessResourceId) {
             this.writeAccessResourceId = Output.ofNullable(writeAccessResourceId);
             return this;
-        }
-        public LinkedServiceArgs build() {
+        }        public LinkedServiceArgs build() {
             return new LinkedServiceArgs(linkedServiceName, provisioningState, resourceGroupName, resourceId, tags, workspaceName, writeAccessResourceId);
         }
     }

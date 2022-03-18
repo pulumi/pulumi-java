@@ -218,57 +218,49 @@ public final class ProbeResponse {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
             this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
             return this;
         }
-
+        public Builder loadBalancingRules(SubResourceResponse... loadBalancingRules) {
+            return loadBalancingRules(List.of(loadBalancingRules));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
             this.numberOfProbes = numberOfProbes;
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = requestPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ProbeResponse build() {
+        }        public ProbeResponse build() {
             return new ProbeResponse(etag, id, intervalInSeconds, loadBalancingRules, name, numberOfProbes, port, protocol, provisioningState, requestPath, type);
         }
     }

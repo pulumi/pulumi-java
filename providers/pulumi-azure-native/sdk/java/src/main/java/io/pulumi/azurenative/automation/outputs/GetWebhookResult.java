@@ -266,72 +266,58 @@ public final class GetWebhookResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder lastInvokedTime(@Nullable String lastInvokedTime) {
             this.lastInvokedTime = lastInvokedTime;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder runOn(@Nullable String runOn) {
             this.runOn = runOn;
             return this;
         }
-
         public Builder runbook(@Nullable RunbookAssociationPropertyResponse runbook) {
             this.runbook = runbook;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public GetWebhookResult build() {
+        }        public GetWebhookResult build() {
             return new GetWebhookResult(creationTime, description, expiryTime, id, isEnabled, lastInvokedTime, lastModifiedBy, lastModifiedTime, name, parameters, runOn, runbook, type, uri);
         }
     }

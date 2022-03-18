@@ -93,17 +93,14 @@ public final class ManagementEventRuleConditionResponse {
             this.aggregation = aggregation;
             return this;
         }
-
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public ManagementEventRuleConditionResponse build() {
+        }        public ManagementEventRuleConditionResponse build() {
             return new ManagementEventRuleConditionResponse(aggregation, dataSource, odataType);
         }
     }

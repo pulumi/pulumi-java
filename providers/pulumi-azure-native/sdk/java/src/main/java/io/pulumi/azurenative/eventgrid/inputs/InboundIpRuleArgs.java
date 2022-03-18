@@ -76,22 +76,18 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable Either<String,IpActionType> action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder ipMask(@Nullable Output<String> ipMask) {
             this.ipMask = ipMask;
             return this;
         }
-
         public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = Output.ofNullable(ipMask);
             return this;
-        }
-        public InboundIpRuleArgs build() {
+        }        public InboundIpRuleArgs build() {
             return new InboundIpRuleArgs(action, ipMask);
         }
     }

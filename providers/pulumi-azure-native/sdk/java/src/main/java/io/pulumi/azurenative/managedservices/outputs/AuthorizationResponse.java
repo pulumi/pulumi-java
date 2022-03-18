@@ -104,22 +104,21 @@ public final class AuthorizationResponse {
             this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
             return this;
         }
-
+        public Builder delegatedRoleDefinitionIds(String... delegatedRoleDefinitionIds) {
+            return delegatedRoleDefinitionIds(List.of(delegatedRoleDefinitionIds));
+        }
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalIdDisplayName(@Nullable String principalIdDisplayName) {
             this.principalIdDisplayName = principalIdDisplayName;
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
-        }
-        public AuthorizationResponse build() {
+        }        public AuthorizationResponse build() {
             return new AuthorizationResponse(delegatedRoleDefinitionIds, principalId, principalIdDisplayName, roleDefinitionId);
         }
     }

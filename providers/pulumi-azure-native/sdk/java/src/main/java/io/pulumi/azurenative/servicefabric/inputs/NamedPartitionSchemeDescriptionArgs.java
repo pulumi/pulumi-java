@@ -96,32 +96,29 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder names(Output<List<String>> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Output.of(Objects.requireNonNull(names));
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder partitionScheme(Output<String> partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
-
         public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Output.of(Objects.requireNonNull(partitionScheme));
             return this;
-        }
-        public NamedPartitionSchemeDescriptionArgs build() {
+        }        public NamedPartitionSchemeDescriptionArgs build() {
             return new NamedPartitionSchemeDescriptionArgs(count, names, partitionScheme);
         }
     }

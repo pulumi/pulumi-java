@@ -72,12 +72,10 @@ public final class GetManagerExtendedInfoArgs extends io.pulumi.resources.Invoke
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagerExtendedInfoArgs build() {
+        }        public GetManagerExtendedInfoArgs build() {
             return new GetManagerExtendedInfoArgs(managerName, resourceGroupName);
         }
     }

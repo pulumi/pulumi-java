@@ -95,32 +95,26 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public ApplicationGatewayIPConfigurationArgs build() {
+        }        public ApplicationGatewayIPConfigurationArgs build() {
             return new ApplicationGatewayIPConfigurationArgs(id, name, subnet);
         }
     }

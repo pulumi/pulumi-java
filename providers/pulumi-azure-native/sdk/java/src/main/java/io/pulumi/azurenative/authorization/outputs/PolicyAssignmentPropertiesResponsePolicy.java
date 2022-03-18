@@ -88,17 +88,14 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
             this.id = id;
             return this;
         }
-
         public Builder lastModifiedBy(PrincipalResponse lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedDateTime(@Nullable String lastModifiedDateTime) {
             this.lastModifiedDateTime = lastModifiedDateTime;
             return this;
-        }
-        public PolicyAssignmentPropertiesResponsePolicy build() {
+        }        public PolicyAssignmentPropertiesResponsePolicy build() {
             return new PolicyAssignmentPropertiesResponsePolicy(id, lastModifiedBy, lastModifiedDateTime);
         }
     }

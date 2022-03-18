@@ -162,42 +162,37 @@ public final class GetguestDiagnosticsSettingResult {
             this.dataSources = dataSources;
             return this;
         }
-
+        public Builder dataSources(DataSourceResponse... dataSources) {
+            return dataSources(List.of(dataSources));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder proxySetting(@Nullable String proxySetting) {
             this.proxySetting = proxySetting;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetguestDiagnosticsSettingResult build() {
+        }        public GetguestDiagnosticsSettingResult build() {
             return new GetguestDiagnosticsSettingResult(dataSources, id, location, name, osType, proxySetting, tags, type);
         }
     }

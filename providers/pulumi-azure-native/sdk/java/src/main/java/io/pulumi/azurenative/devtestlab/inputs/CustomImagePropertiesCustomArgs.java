@@ -97,32 +97,26 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
             this.imageName = imageName;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = Output.ofNullable(imageName);
             return this;
         }
-
         public Builder osType(Output<Either<String,CustomImageOsType>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder osType(Either<String,CustomImageOsType> osType) {
             this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
-
         public Builder sysPrep(@Nullable Output<Boolean> sysPrep) {
             this.sysPrep = sysPrep;
             return this;
         }
-
         public Builder sysPrep(@Nullable Boolean sysPrep) {
             this.sysPrep = Output.ofNullable(sysPrep);
             return this;
-        }
-        public CustomImagePropertiesCustomArgs build() {
+        }        public CustomImagePropertiesCustomArgs build() {
             return new CustomImagePropertiesCustomArgs(imageName, osType, sysPrep);
         }
     }

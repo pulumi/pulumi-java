@@ -62,12 +62,13 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = Output.ofNullable(networkInterfaceConfigurations);
             return this;
         }
-        public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs build() {
+        public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationArgs... networkInterfaceConfigurations) {
+            return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
+        }        public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs build() {
             return new VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(networkInterfaceConfigurations);
         }
     }

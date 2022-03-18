@@ -73,12 +73,10 @@ public final class CopyVideoResponse {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public CopyVideoResponse build() {
+        }        public CopyVideoResponse build() {
             return new CopyVideoResponse(label, odataType);
         }
     }

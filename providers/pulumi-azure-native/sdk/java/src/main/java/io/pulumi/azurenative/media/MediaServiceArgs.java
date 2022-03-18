@@ -173,82 +173,69 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder encryption(@Nullable Output<AccountEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable AccountEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder identity(@Nullable Output<MediaServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable MediaServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccounts(@Nullable Output<List<StorageAccountArgs>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
-
         public Builder storageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
             this.storageAccounts = Output.ofNullable(storageAccounts);
             return this;
         }
-
+        public Builder storageAccounts(StorageAccountArgs... storageAccounts) {
+            return storageAccounts(List.of(storageAccounts));
+        }
         public Builder storageAuthentication(@Nullable Output<Either<String,StorageAuthentication>> storageAuthentication) {
             this.storageAuthentication = storageAuthentication;
             return this;
         }
-
         public Builder storageAuthentication(@Nullable Either<String,StorageAuthentication> storageAuthentication) {
             this.storageAuthentication = Output.ofNullable(storageAuthentication);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public MediaServiceArgs build() {
+        }        public MediaServiceArgs build() {
             return new MediaServiceArgs(accountName, encryption, identity, location, resourceGroupName, storageAccounts, storageAuthentication, tags);
         }
     }

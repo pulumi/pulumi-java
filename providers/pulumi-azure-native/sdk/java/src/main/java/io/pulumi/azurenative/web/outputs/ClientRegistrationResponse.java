@@ -71,12 +71,10 @@ public final class ClientRegistrationResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
-        }
-        public ClientRegistrationResponse build() {
+        }        public ClientRegistrationResponse build() {
             return new ClientRegistrationResponse(clientId, clientSecretSettingName);
         }
     }

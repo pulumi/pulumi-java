@@ -88,17 +88,14 @@ public final class GetIntegrationAccountAssemblyArgs extends io.pulumi.resources
             this.assemblyArtifactName = Objects.requireNonNull(assemblyArtifactName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIntegrationAccountAssemblyArgs build() {
+        }        public GetIntegrationAccountAssemblyArgs build() {
             return new GetIntegrationAccountAssemblyArgs(assemblyArtifactName, integrationAccountName, resourceGroupName);
         }
     }

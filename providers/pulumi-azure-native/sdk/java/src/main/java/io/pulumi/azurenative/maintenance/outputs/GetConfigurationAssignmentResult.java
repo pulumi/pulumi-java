@@ -152,37 +152,30 @@ public final class GetConfigurationAssignmentResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetConfigurationAssignmentResult build() {
+        }        public GetConfigurationAssignmentResult build() {
             return new GetConfigurationAssignmentResult(id, location, maintenanceConfigurationId, name, resourceId, systemData, type);
         }
     }

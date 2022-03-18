@@ -74,22 +74,18 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public RouteArgs build() {
+        }        public RouteArgs build() {
             return new RouteArgs(path, port);
         }
     }

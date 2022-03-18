@@ -53,8 +53,7 @@ public final class EncryptionPreferencesResponse {
         public Builder doubleEncryptionStatus(@Nullable String doubleEncryptionStatus) {
             this.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;
-        }
-        public EncryptionPreferencesResponse build() {
+        }        public EncryptionPreferencesResponse build() {
             return new EncryptionPreferencesResponse(doubleEncryptionStatus);
         }
     }

@@ -98,32 +98,26 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
             this.metricTrigger = metricTrigger;
             return this;
         }
-
         public Builder metricTrigger(@Nullable LogMetricTriggerArgs metricTrigger) {
             this.metricTrigger = Output.ofNullable(metricTrigger);
             return this;
         }
-
         public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public Builder thresholdOperator(Output<Either<String,ConditionalOperator>> thresholdOperator) {
             this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
             return this;
         }
-
         public Builder thresholdOperator(Either<String,ConditionalOperator> thresholdOperator) {
             this.thresholdOperator = Output.of(Objects.requireNonNull(thresholdOperator));
             return this;
-        }
-        public TriggerConditionArgs build() {
+        }        public TriggerConditionArgs build() {
             return new TriggerConditionArgs(metricTrigger, threshold, thresholdOperator);
         }
     }

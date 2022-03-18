@@ -191,92 +191,77 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
             this.cidr = cidr;
             return this;
         }
-
         public Builder cidr(@Nullable String cidr) {
             this.cidr = Output.ofNullable(cidr);
             return this;
         }
-
         public Builder commissionedState(@Nullable Output<Either<String,CommissionedState>> commissionedState) {
             this.commissionedState = commissionedState;
             return this;
         }
-
         public Builder commissionedState(@Nullable Either<String,CommissionedState> commissionedState) {
             this.commissionedState = Output.ofNullable(commissionedState);
             return this;
         }
-
         public Builder customIpPrefixName(@Nullable Output<String> customIpPrefixName) {
             this.customIpPrefixName = customIpPrefixName;
             return this;
         }
-
         public Builder customIpPrefixName(@Nullable String customIpPrefixName) {
             this.customIpPrefixName = Output.ofNullable(customIpPrefixName);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public CustomIPPrefixArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public CustomIPPrefixArgs build() {
             return new CustomIPPrefixArgs(cidr, commissionedState, customIpPrefixName, extendedLocation, id, location, resourceGroupName, tags, zones);
         }
     }

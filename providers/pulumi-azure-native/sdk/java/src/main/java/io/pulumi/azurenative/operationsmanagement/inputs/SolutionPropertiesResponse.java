@@ -111,22 +111,24 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
             this.containedResources = containedResources;
             return this;
         }
-
+        public Builder containedResources(String... containedResources) {
+            return containedResources(List.of(containedResources));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder referencedResources(@Nullable List<String> referencedResources) {
             this.referencedResources = referencedResources;
             return this;
         }
-
+        public Builder referencedResources(String... referencedResources) {
+            return referencedResources(List.of(referencedResources));
+        }
         public Builder workspaceResourceId(String workspaceResourceId) {
             this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
             return this;
-        }
-        public SolutionPropertiesResponse build() {
+        }        public SolutionPropertiesResponse build() {
             return new SolutionPropertiesResponse(containedResources, provisioningState, referencedResources, workspaceResourceId);
         }
     }

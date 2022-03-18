@@ -112,22 +112,18 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManagementPolicyRuleResponse build() {
+        }        public ManagementPolicyRuleResponse build() {
             return new ManagementPolicyRuleResponse(definition, enabled, name, type);
         }
     }

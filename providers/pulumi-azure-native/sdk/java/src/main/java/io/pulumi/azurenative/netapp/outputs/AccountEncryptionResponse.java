@@ -53,8 +53,7 @@ public final class AccountEncryptionResponse {
         public Builder keySource(@Nullable String keySource) {
             this.keySource = keySource;
             return this;
-        }
-        public AccountEncryptionResponse build() {
+        }        public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keySource);
         }
     }

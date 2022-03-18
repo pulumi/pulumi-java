@@ -153,62 +153,53 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             this.catalogInfo = catalogInfo;
             return this;
         }
-
         public Builder catalogInfo(@Nullable IntegrationRuntimeSsisCatalogInfoArgs catalogInfo) {
             this.catalogInfo = Output.ofNullable(catalogInfo);
             return this;
         }
-
         public Builder customSetupScriptProperties(@Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties) {
             this.customSetupScriptProperties = customSetupScriptProperties;
             return this;
         }
-
         public Builder customSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesArgs customSetupScriptProperties) {
             this.customSetupScriptProperties = Output.ofNullable(customSetupScriptProperties);
             return this;
         }
-
         public Builder dataProxyProperties(@Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties) {
             this.dataProxyProperties = dataProxyProperties;
             return this;
         }
-
         public Builder dataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesArgs dataProxyProperties) {
             this.dataProxyProperties = Output.ofNullable(dataProxyProperties);
             return this;
         }
-
         public Builder edition(@Nullable Output<Either<String,IntegrationRuntimeEdition>> edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder edition(@Nullable Either<String,IntegrationRuntimeEdition> edition) {
             this.edition = Output.ofNullable(edition);
             return this;
         }
-
         public Builder expressCustomSetupProperties(@Nullable Output<List<Object>> expressCustomSetupProperties) {
             this.expressCustomSetupProperties = expressCustomSetupProperties;
             return this;
         }
-
         public Builder expressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
             this.expressCustomSetupProperties = Output.ofNullable(expressCustomSetupProperties);
             return this;
         }
-
+        public Builder expressCustomSetupProperties(Object... expressCustomSetupProperties) {
+            return expressCustomSetupProperties(List.of(expressCustomSetupProperties));
+        }
         public Builder licenseType(@Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable Either<String,IntegrationRuntimeLicenseType> licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
-        }
-        public IntegrationRuntimeSsisPropertiesArgs build() {
+        }        public IntegrationRuntimeSsisPropertiesArgs build() {
             return new IntegrationRuntimeSsisPropertiesArgs(catalogInfo, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType);
         }
     }

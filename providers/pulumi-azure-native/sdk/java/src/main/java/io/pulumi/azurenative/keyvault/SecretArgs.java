@@ -124,52 +124,42 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(SecretPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder secretName(@Nullable Output<String> secretName) {
             this.secretName = secretName;
             return this;
         }
-
         public Builder secretName(@Nullable String secretName) {
             this.secretName = Output.ofNullable(secretName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(properties, resourceGroupName, secretName, tags, vaultName);
         }
     }

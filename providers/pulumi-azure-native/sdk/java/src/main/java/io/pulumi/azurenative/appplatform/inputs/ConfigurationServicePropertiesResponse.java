@@ -114,22 +114,21 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(ConfigurationServiceInstanceResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceRequests(ConfigurationServiceResourceRequestsResponse resourceRequests) {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }
-
         public Builder settings(@Nullable ConfigurationServiceSettingsResponse settings) {
             this.settings = settings;
             return this;
-        }
-        public ConfigurationServicePropertiesResponse build() {
+        }        public ConfigurationServicePropertiesResponse build() {
             return new ConfigurationServicePropertiesResponse(instances, provisioningState, resourceRequests, settings);
         }
     }

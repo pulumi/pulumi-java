@@ -104,22 +104,18 @@ public final class GetKustoClusterDataSetArgs extends io.pulumi.resources.Invoke
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder dataSetName(String dataSetName) {
             this.dataSetName = Objects.requireNonNull(dataSetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
-        }
-        public GetKustoClusterDataSetArgs build() {
+        }        public GetKustoClusterDataSetArgs build() {
             return new GetKustoClusterDataSetArgs(accountName, dataSetName, resourceGroupName, shareName);
         }
     }

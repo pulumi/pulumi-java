@@ -170,82 +170,66 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder attachmentId(@Nullable Output<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
-
         public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = Output.ofNullable(attachmentId);
             return this;
         }
-
         public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder contentFormat(Output<String> contentFormat) {
             this.contentFormat = Objects.requireNonNull(contentFormat);
             return this;
         }
-
         public Builder contentFormat(String contentFormat) {
             this.contentFormat = Output.of(Objects.requireNonNull(contentFormat));
             return this;
         }
-
         public Builder issueId(Output<String> issueId) {
             this.issueId = Objects.requireNonNull(issueId);
             return this;
         }
-
         public Builder issueId(String issueId) {
             this.issueId = Output.of(Objects.requireNonNull(issueId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public ApiIssueAttachmentArgs build() {
+        }        public ApiIssueAttachmentArgs build() {
             return new ApiIssueAttachmentArgs(apiId, attachmentId, content, contentFormat, issueId, resourceGroupName, serviceName, title);
         }
     }

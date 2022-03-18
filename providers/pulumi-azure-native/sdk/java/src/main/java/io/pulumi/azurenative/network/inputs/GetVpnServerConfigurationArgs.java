@@ -72,12 +72,10 @@ public final class GetVpnServerConfigurationArgs extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vpnServerConfigurationName(String vpnServerConfigurationName) {
             this.vpnServerConfigurationName = Objects.requireNonNull(vpnServerConfigurationName);
             return this;
-        }
-        public GetVpnServerConfigurationArgs build() {
+        }        public GetVpnServerConfigurationArgs build() {
             return new GetVpnServerConfigurationArgs(resourceGroupName, vpnServerConfigurationName);
         }
     }

@@ -53,8 +53,7 @@ public final class FailoverGroupReadOnlyEndpointResponse {
         public Builder failoverPolicy(@Nullable String failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
-        }
-        public FailoverGroupReadOnlyEndpointResponse build() {
+        }        public FailoverGroupReadOnlyEndpointResponse build() {
             return new FailoverGroupReadOnlyEndpointResponse(failoverPolicy);
         }
     }

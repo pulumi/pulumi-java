@@ -175,82 +175,72 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.databases = databases;
             return this;
         }
-
         public Builder databases(@Nullable List<String> databases) {
             this.databases = Output.ofNullable(databases);
             return this;
         }
-
+        public Builder databases(String... databases) {
+            return databases(List.of(databases));
+        }
         public Builder failoverGroupName(@Nullable Output<String> failoverGroupName) {
             this.failoverGroupName = failoverGroupName;
             return this;
         }
-
         public Builder failoverGroupName(@Nullable String failoverGroupName) {
             this.failoverGroupName = Output.ofNullable(failoverGroupName);
             return this;
         }
-
         public Builder partnerServers(Output<List<PartnerInfoArgs>> partnerServers) {
             this.partnerServers = Objects.requireNonNull(partnerServers);
             return this;
         }
-
         public Builder partnerServers(List<PartnerInfoArgs> partnerServers) {
             this.partnerServers = Output.of(Objects.requireNonNull(partnerServers));
             return this;
         }
-
+        public Builder partnerServers(PartnerInfoArgs... partnerServers) {
+            return partnerServers(List.of(partnerServers));
+        }
         public Builder readOnlyEndpoint(@Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
-
         public Builder readOnlyEndpoint(@Nullable FailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
             this.readOnlyEndpoint = Output.ofNullable(readOnlyEndpoint);
             return this;
         }
-
         public Builder readWriteEndpoint(Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
-
         public Builder readWriteEndpoint(FailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
             this.readWriteEndpoint = Output.of(Objects.requireNonNull(readWriteEndpoint));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FailoverGroupArgs build() {
+        }        public FailoverGroupArgs build() {
             return new FailoverGroupArgs(databases, failoverGroupName, partnerServers, readOnlyEndpoint, readWriteEndpoint, resourceGroupName, serverName, tags);
         }
     }

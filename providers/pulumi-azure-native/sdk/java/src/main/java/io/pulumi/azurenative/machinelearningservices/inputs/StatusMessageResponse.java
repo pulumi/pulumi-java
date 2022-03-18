@@ -108,22 +108,18 @@ public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs 
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
-
         public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public StatusMessageResponse build() {
+        }        public StatusMessageResponse build() {
             return new StatusMessageResponse(code, createdTimeUtc, level, message);
         }
     }

@@ -154,72 +154,58 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder backupName(@Nullable Output<String> backupName) {
             this.backupName = backupName;
             return this;
         }
-
         public Builder backupName(@Nullable String backupName) {
             this.backupName = Output.ofNullable(backupName);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder poolName(Output<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
-
         public Builder poolName(String poolName) {
             this.poolName = Output.of(Objects.requireNonNull(poolName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder volumeName(Output<String> volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
-
         public Builder volumeName(String volumeName) {
             this.volumeName = Output.of(Objects.requireNonNull(volumeName));
             return this;
-        }
-        public BackupArgs build() {
+        }        public BackupArgs build() {
             return new BackupArgs(accountName, backupName, label, location, poolName, resourceGroupName, volumeName);
         }
     }

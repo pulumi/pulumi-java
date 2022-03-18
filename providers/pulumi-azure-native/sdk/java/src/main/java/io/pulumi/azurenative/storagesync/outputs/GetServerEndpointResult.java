@@ -379,107 +379,86 @@ public final class GetServerEndpointResult {
             this.cloudTiering = cloudTiering;
             return this;
         }
-
         public Builder cloudTieringStatus(ServerEndpointCloudTieringStatusResponse cloudTieringStatus) {
             this.cloudTieringStatus = Objects.requireNonNull(cloudTieringStatus);
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder initialDownloadPolicy(@Nullable String initialDownloadPolicy) {
             this.initialDownloadPolicy = initialDownloadPolicy;
             return this;
         }
-
         public Builder lastOperationName(String lastOperationName) {
             this.lastOperationName = Objects.requireNonNull(lastOperationName);
             return this;
         }
-
         public Builder lastWorkflowId(String lastWorkflowId) {
             this.lastWorkflowId = Objects.requireNonNull(lastWorkflowId);
             return this;
         }
-
         public Builder localCacheMode(@Nullable String localCacheMode) {
             this.localCacheMode = localCacheMode;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder offlineDataTransfer(@Nullable String offlineDataTransfer) {
             this.offlineDataTransfer = offlineDataTransfer;
             return this;
         }
-
         public Builder offlineDataTransferShareName(@Nullable String offlineDataTransferShareName) {
             this.offlineDataTransferShareName = offlineDataTransferShareName;
             return this;
         }
-
         public Builder offlineDataTransferStorageAccountResourceId(String offlineDataTransferStorageAccountResourceId) {
             this.offlineDataTransferStorageAccountResourceId = Objects.requireNonNull(offlineDataTransferStorageAccountResourceId);
             return this;
         }
-
         public Builder offlineDataTransferStorageAccountTenantId(String offlineDataTransferStorageAccountTenantId) {
             this.offlineDataTransferStorageAccountTenantId = Objects.requireNonNull(offlineDataTransferStorageAccountTenantId);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder recallStatus(ServerEndpointRecallStatusResponse recallStatus) {
             this.recallStatus = Objects.requireNonNull(recallStatus);
             return this;
         }
-
         public Builder serverLocalPath(@Nullable String serverLocalPath) {
             this.serverLocalPath = serverLocalPath;
             return this;
         }
-
         public Builder serverResourceId(@Nullable String serverResourceId) {
             this.serverResourceId = serverResourceId;
             return this;
         }
-
         public Builder syncStatus(ServerEndpointSyncStatusResponse syncStatus) {
             this.syncStatus = Objects.requireNonNull(syncStatus);
             return this;
         }
-
         public Builder tierFilesOlderThanDays(@Nullable Integer tierFilesOlderThanDays) {
             this.tierFilesOlderThanDays = tierFilesOlderThanDays;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumeFreeSpacePercent(@Nullable Integer volumeFreeSpacePercent) {
             this.volumeFreeSpacePercent = volumeFreeSpacePercent;
             return this;
-        }
-        public GetServerEndpointResult build() {
+        }        public GetServerEndpointResult build() {
             return new GetServerEndpointResult(cloudTiering, cloudTieringStatus, friendlyName, id, initialDownloadPolicy, lastOperationName, lastWorkflowId, localCacheMode, name, offlineDataTransfer, offlineDataTransferShareName, offlineDataTransferStorageAccountResourceId, offlineDataTransferStorageAccountTenantId, provisioningState, recallStatus, serverLocalPath, serverResourceId, syncStatus, tierFilesOlderThanDays, type, volumeFreeSpacePercent);
         }
     }

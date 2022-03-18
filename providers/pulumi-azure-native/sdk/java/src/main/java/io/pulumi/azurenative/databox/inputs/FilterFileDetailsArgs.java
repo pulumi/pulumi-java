@@ -79,22 +79,18 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
             this.filterFilePath = Objects.requireNonNull(filterFilePath);
             return this;
         }
-
         public Builder filterFilePath(String filterFilePath) {
             this.filterFilePath = Output.of(Objects.requireNonNull(filterFilePath));
             return this;
         }
-
         public Builder filterFileType(Output<Either<String,FilterFileType>> filterFileType) {
             this.filterFileType = Objects.requireNonNull(filterFileType);
             return this;
         }
-
         public Builder filterFileType(Either<String,FilterFileType> filterFileType) {
             this.filterFileType = Output.of(Objects.requireNonNull(filterFileType));
             return this;
-        }
-        public FilterFileDetailsArgs build() {
+        }        public FilterFileDetailsArgs build() {
             return new FilterFileDetailsArgs(filterFilePath, filterFileType);
         }
     }

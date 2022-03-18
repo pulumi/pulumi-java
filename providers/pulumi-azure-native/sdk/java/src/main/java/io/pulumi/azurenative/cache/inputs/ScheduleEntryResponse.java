@@ -95,17 +95,14 @@ public final class ScheduleEntryResponse extends io.pulumi.resources.InvokeArgs 
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder startHourUtc(Integer startHourUtc) {
             this.startHourUtc = Objects.requireNonNull(startHourUtc);
             return this;
-        }
-        public ScheduleEntryResponse build() {
+        }        public ScheduleEntryResponse build() {
             return new ScheduleEntryResponse(dayOfWeek, maintenanceWindow, startHourUtc);
         }
     }

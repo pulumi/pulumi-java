@@ -330,92 +330,74 @@ public final class GetOriginResult {
             this.enabled = enabled;
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
-
         public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder privateEndpointStatus(String privateEndpointStatus) {
             this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus);
             return this;
         }
-
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
-
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public GetOriginResult build() {
+        }        public GetOriginResult build() {
             return new GetOriginResult(enabled, hostName, httpPort, httpsPort, id, name, originHostHeader, priority, privateEndpointStatus, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, provisioningState, resourceState, systemData, type, weight);
         }
     }

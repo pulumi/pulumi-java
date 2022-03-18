@@ -282,77 +282,62 @@ public final class GetEnvironmentSettingResult {
             this.configurationState = configurationState;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastChanged(String lastChanged) {
             this.lastChanged = Objects.requireNonNull(lastChanged);
             return this;
         }
-
         public Builder lastPublished(String lastPublished) {
             this.lastPublished = Objects.requireNonNull(lastPublished);
             return this;
         }
-
         public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder publishingState(String publishingState) {
             this.publishingState = Objects.requireNonNull(publishingState);
             return this;
         }
-
         public Builder resourceSettings(ResourceSettingsResponse resourceSettings) {
             this.resourceSettings = Objects.requireNonNull(resourceSettings);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
-        }
-        public GetEnvironmentSettingResult build() {
+        }        public GetEnvironmentSettingResult build() {
             return new GetEnvironmentSettingResult(configurationState, description, id, lastChanged, lastPublished, latestOperationResult, location, name, provisioningState, publishingState, resourceSettings, tags, title, type, uniqueIdentifier);
         }
     }

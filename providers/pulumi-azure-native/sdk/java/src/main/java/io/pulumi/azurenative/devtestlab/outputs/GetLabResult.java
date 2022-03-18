@@ -447,127 +447,108 @@ public final class GetLabResult {
             this.announcement = announcement;
             return this;
         }
-
         public Builder artifactsStorageAccount(String artifactsStorageAccount) {
             this.artifactsStorageAccount = Objects.requireNonNull(artifactsStorageAccount);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder defaultPremiumStorageAccount(String defaultPremiumStorageAccount) {
             this.defaultPremiumStorageAccount = Objects.requireNonNull(defaultPremiumStorageAccount);
             return this;
         }
-
         public Builder defaultStorageAccount(String defaultStorageAccount) {
             this.defaultStorageAccount = Objects.requireNonNull(defaultStorageAccount);
             return this;
         }
-
         public Builder environmentPermission(@Nullable String environmentPermission) {
             this.environmentPermission = environmentPermission;
             return this;
         }
-
         public Builder extendedProperties(@Nullable Map<String,String> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labStorageType(@Nullable String labStorageType) {
             this.labStorageType = labStorageType;
             return this;
         }
-
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = Objects.requireNonNull(loadBalancerId);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder mandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
             this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
             return this;
         }
-
+        public Builder mandatoryArtifactsResourceIdsLinux(String... mandatoryArtifactsResourceIdsLinux) {
+            return mandatoryArtifactsResourceIdsLinux(List.of(mandatoryArtifactsResourceIdsLinux));
+        }
         public Builder mandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
             this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
             return this;
         }
-
+        public Builder mandatoryArtifactsResourceIdsWindows(String... mandatoryArtifactsResourceIdsWindows) {
+            return mandatoryArtifactsResourceIdsWindows(List.of(mandatoryArtifactsResourceIdsWindows));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkSecurityGroupId(String networkSecurityGroupId) {
             this.networkSecurityGroupId = Objects.requireNonNull(networkSecurityGroupId);
             return this;
         }
-
         public Builder premiumDataDiskStorageAccount(String premiumDataDiskStorageAccount) {
             this.premiumDataDiskStorageAccount = Objects.requireNonNull(premiumDataDiskStorageAccount);
             return this;
         }
-
         public Builder premiumDataDisks(@Nullable String premiumDataDisks) {
             this.premiumDataDisks = premiumDataDisks;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIpId(String publicIpId) {
             this.publicIpId = Objects.requireNonNull(publicIpId);
             return this;
         }
-
         public Builder support(@Nullable LabSupportPropertiesResponse support) {
             this.support = support;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public Builder vmCreationResourceGroup(String vmCreationResourceGroup) {
             this.vmCreationResourceGroup = Objects.requireNonNull(vmCreationResourceGroup);
             return this;
-        }
-        public GetLabResult build() {
+        }        public GetLabResult build() {
             return new GetLabResult(announcement, artifactsStorageAccount, createdDate, defaultPremiumStorageAccount, defaultStorageAccount, environmentPermission, extendedProperties, id, labStorageType, loadBalancerId, location, mandatoryArtifactsResourceIdsLinux, mandatoryArtifactsResourceIdsWindows, name, networkSecurityGroupId, premiumDataDiskStorageAccount, premiumDataDisks, provisioningState, publicIpId, support, tags, type, uniqueIdentifier, vaultName, vmCreationResourceGroup);
         }
     }

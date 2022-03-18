@@ -95,32 +95,26 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public JobOutputAssetArgs build() {
+        }        public JobOutputAssetArgs build() {
             return new JobOutputAssetArgs(assetName, label, odataType);
         }
     }

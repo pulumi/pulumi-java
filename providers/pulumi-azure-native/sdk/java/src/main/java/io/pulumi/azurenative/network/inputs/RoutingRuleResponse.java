@@ -228,57 +228,55 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.acceptedProtocols = acceptedProtocols;
             return this;
         }
-
+        public Builder acceptedProtocols(String... acceptedProtocols) {
+            return acceptedProtocols(List.of(acceptedProtocols));
+        }
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder frontendEndpoints(@Nullable List<SubResourceResponse> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
-
+        public Builder frontendEndpoints(SubResourceResponse... frontendEndpoints) {
+            return frontendEndpoints(List.of(frontendEndpoints));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-
+        public Builder patternsToMatch(String... patternsToMatch) {
+            return patternsToMatch(List.of(patternsToMatch));
+        }
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder routeConfiguration(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration) {
             this.routeConfiguration = routeConfiguration;
             return this;
         }
-
         public Builder rulesEngine(@Nullable SubResourceResponse rulesEngine) {
             this.rulesEngine = rulesEngine;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder webApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
-        }
-        public RoutingRuleResponse build() {
+        }        public RoutingRuleResponse build() {
             return new RoutingRuleResponse(acceptedProtocols, enabledState, frontendEndpoints, id, name, patternsToMatch, resourceState, routeConfiguration, rulesEngine, type, webApplicationFirewallPolicyLink);
         }
     }

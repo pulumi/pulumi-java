@@ -110,42 +110,34 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Output<String> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable String retentionPeriod) {
             this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
-
         public Builder segmentLength(@Nullable Output<String> segmentLength) {
             this.segmentLength = segmentLength;
             return this;
         }
-
         public Builder segmentLength(@Nullable String segmentLength) {
             this.segmentLength = Output.ofNullable(segmentLength);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public VideoCreationPropertiesArgs build() {
+        }        public VideoCreationPropertiesArgs build() {
             return new VideoCreationPropertiesArgs(description, retentionPeriod, segmentLength, title);
         }
     }

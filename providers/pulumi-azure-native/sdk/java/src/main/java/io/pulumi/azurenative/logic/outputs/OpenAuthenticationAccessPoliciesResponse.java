@@ -54,8 +54,7 @@ public final class OpenAuthenticationAccessPoliciesResponse {
         public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
             this.policies = policies;
             return this;
-        }
-        public OpenAuthenticationAccessPoliciesResponse build() {
+        }        public OpenAuthenticationAccessPoliciesResponse build() {
             return new OpenAuthenticationAccessPoliciesResponse(policies);
         }
     }

@@ -141,32 +141,26 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
             this.immutabilityPeriodSinceCreationInDays = Objects.requireNonNull(immutabilityPeriodSinceCreationInDays);
             return this;
         }
-
         public Builder objectIdentifier(String objectIdentifier) {
             this.objectIdentifier = Objects.requireNonNull(objectIdentifier);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public Builder update(String update) {
             this.update = Objects.requireNonNull(update);
             return this;
         }
-
         public Builder upn(String upn) {
             this.upn = Objects.requireNonNull(upn);
             return this;
-        }
-        public UpdateHistoryPropertyResponse build() {
+        }        public UpdateHistoryPropertyResponse build() {
             return new UpdateHistoryPropertyResponse(immutabilityPeriodSinceCreationInDays, objectIdentifier, tenantId, timestamp, update, upn);
         }
     }

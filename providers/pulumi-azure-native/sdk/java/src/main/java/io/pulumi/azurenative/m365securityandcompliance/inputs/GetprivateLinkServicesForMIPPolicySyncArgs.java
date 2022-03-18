@@ -72,12 +72,10 @@ public final class GetprivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetprivateLinkServicesForMIPPolicySyncArgs build() {
+        }        public GetprivateLinkServicesForMIPPolicySyncArgs build() {
             return new GetprivateLinkServicesForMIPPolicySyncArgs(resourceGroupName, resourceName);
         }
     }

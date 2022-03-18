@@ -155,72 +155,58 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.keyVaultIdentifierId = keyVaultIdentifierId;
             return this;
         }
-
         public Builder keyVaultIdentifierId(@Nullable String keyVaultIdentifierId) {
             this.keyVaultIdentifierId = Output.ofNullable(keyVaultIdentifierId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder ownerEmail(Output<String> ownerEmail) {
             this.ownerEmail = Objects.requireNonNull(ownerEmail);
             return this;
         }
-
         public Builder ownerEmail(String ownerEmail) {
             this.ownerEmail = Output.of(Objects.requireNonNull(ownerEmail));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userStorageAccountId(Output<String> userStorageAccountId) {
             this.userStorageAccountId = Objects.requireNonNull(userStorageAccountId);
             return this;
         }
-
         public Builder userStorageAccountId(String userStorageAccountId) {
             this.userStorageAccountId = Output.of(Objects.requireNonNull(userStorageAccountId));
             return this;
         }
-
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
-
         public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Output.ofNullable(workspaceName);
             return this;
-        }
-        public WorkspaceArgs build() {
+        }        public WorkspaceArgs build() {
             return new WorkspaceArgs(keyVaultIdentifierId, location, ownerEmail, resourceGroupName, tags, userStorageAccountId, workspaceName);
         }
     }

@@ -137,32 +137,29 @@ public final class StreamingLocatorContentKeyResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
             this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder tracks(List<TrackSelectionResponse> tracks) {
             this.tracks = Objects.requireNonNull(tracks);
             return this;
         }
-
+        public Builder tracks(TrackSelectionResponse... tracks) {
+            return tracks(List.of(tracks));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public StreamingLocatorContentKeyResponse build() {
+        }        public StreamingLocatorContentKeyResponse build() {
             return new StreamingLocatorContentKeyResponse(id, labelReferenceInStreamingPolicy, policyName, tracks, type, value);
         }
     }

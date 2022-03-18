@@ -129,27 +129,22 @@ public final class BackupSchedule extends io.pulumi.resources.InvokeArgs {
             this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
             return this;
         }
-
         public Builder frequencyUnit(FrequencyUnit frequencyUnit) {
             this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
             return this;
         }
-
         public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
             this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
             return this;
         }
-
         public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
             this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public BackupSchedule build() {
+        }        public BackupSchedule build() {
             return new BackupSchedule(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, retentionPeriodInDays, startTime);
         }
     }

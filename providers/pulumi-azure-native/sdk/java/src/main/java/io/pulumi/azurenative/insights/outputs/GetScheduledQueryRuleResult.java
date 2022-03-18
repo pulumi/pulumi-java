@@ -334,92 +334,74 @@ public final class GetScheduledQueryRuleResult {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder autoMitigate(@Nullable Boolean autoMitigate) {
             this.autoMitigate = autoMitigate;
             return this;
         }
-
         public Builder createdWithApiVersion(String createdWithApiVersion) {
             this.createdWithApiVersion = Objects.requireNonNull(createdWithApiVersion);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder enabled(@Nullable String enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isLegacyLogAnalyticsRule(Boolean isLegacyLogAnalyticsRule) {
             this.isLegacyLogAnalyticsRule = Objects.requireNonNull(isLegacyLogAnalyticsRule);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder schedule(@Nullable ScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetScheduledQueryRuleResult build() {
+        }        public GetScheduledQueryRuleResult build() {
             return new GetScheduledQueryRuleResult(action, autoMitigate, createdWithApiVersion, description, displayName, enabled, etag, id, isLegacyLogAnalyticsRule, kind, lastUpdatedTime, location, name, provisioningState, schedule, source, tags, type);
         }
     }

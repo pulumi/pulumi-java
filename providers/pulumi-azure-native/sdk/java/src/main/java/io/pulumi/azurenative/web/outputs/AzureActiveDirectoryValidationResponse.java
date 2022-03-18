@@ -73,12 +73,13 @@ public final class AzureActiveDirectoryValidationResponse {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
-
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }
         public Builder jwtClaimChecks(@Nullable JwtClaimChecksResponse jwtClaimChecks) {
             this.jwtClaimChecks = jwtClaimChecks;
             return this;
-        }
-        public AzureActiveDirectoryValidationResponse build() {
+        }        public AzureActiveDirectoryValidationResponse build() {
             return new AzureActiveDirectoryValidationResponse(allowedAudiences, jwtClaimChecks);
         }
     }

@@ -175,82 +175,69 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder diagnosticStorageProperties(@Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties) {
             this.diagnosticStorageProperties = diagnosticStorageProperties;
             return this;
         }
-
         public Builder diagnosticStorageProperties(@Nullable DiagnosticStoragePropertiesArgs diagnosticStorageProperties) {
             this.diagnosticStorageProperties = Output.ofNullable(diagnosticStorageProperties);
             return this;
         }
-
         public Builder enableDiagnostics(@Nullable Output<Boolean> enableDiagnostics) {
             this.enableDiagnostics = enableDiagnostics;
             return this;
         }
-
         public Builder enableDiagnostics(@Nullable Boolean enableDiagnostics) {
             this.enableDiagnostics = Output.ofNullable(enableDiagnostics);
             return this;
         }
-
         public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
-
         public Builder iotHubs(@Nullable Output<List<IotHubSettingsArgs>> iotHubs) {
             this.iotHubs = iotHubs;
             return this;
         }
-
         public Builder iotHubs(@Nullable List<IotHubSettingsArgs> iotHubs) {
             this.iotHubs = Output.ofNullable(iotHubs);
             return this;
         }
-
+        public Builder iotHubs(IotHubSettingsArgs... iotHubs) {
+            return iotHubs(List.of(iotHubs));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(accountName, diagnosticStorageProperties, enableDiagnostics, instanceName, iotHubs, location, resourceGroupName, tags);
         }
     }

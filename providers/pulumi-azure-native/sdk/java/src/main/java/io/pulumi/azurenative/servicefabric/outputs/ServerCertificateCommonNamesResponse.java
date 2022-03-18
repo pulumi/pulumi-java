@@ -73,12 +73,13 @@ public final class ServerCertificateCommonNamesResponse {
             this.commonNames = commonNames;
             return this;
         }
-
+        public Builder commonNames(ServerCertificateCommonNameResponse... commonNames) {
+            return commonNames(List.of(commonNames));
+        }
         public Builder x509StoreName(@Nullable String x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
-        }
-        public ServerCertificateCommonNamesResponse build() {
+        }        public ServerCertificateCommonNamesResponse build() {
             return new ServerCertificateCommonNamesResponse(commonNames, x509StoreName);
         }
     }

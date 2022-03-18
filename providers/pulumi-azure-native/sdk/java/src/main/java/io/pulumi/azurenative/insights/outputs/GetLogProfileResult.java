@@ -202,52 +202,48 @@ public final class GetLogProfileResult {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder retentionPolicy(RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLogProfileResult build() {
+        }        public GetLogProfileResult build() {
             return new GetLogProfileResult(categories, id, location, locations, name, retentionPolicy, serviceBusRuleId, storageAccountId, tags, type);
         }
     }

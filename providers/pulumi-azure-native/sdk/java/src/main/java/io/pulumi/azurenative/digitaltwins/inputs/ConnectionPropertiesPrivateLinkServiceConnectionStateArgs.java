@@ -92,32 +92,26 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder actionsRequired(@Nullable String actionsRequired) {
             this.actionsRequired = Output.ofNullable(actionsRequired);
             return this;
         }
-
         public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder status(Output<Either<String,PrivateLinkServiceConnectionStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(Either<String,PrivateLinkServiceConnectionStatus> status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public ConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
+        }        public ConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
             return new ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(actionsRequired, description, status);
         }
     }

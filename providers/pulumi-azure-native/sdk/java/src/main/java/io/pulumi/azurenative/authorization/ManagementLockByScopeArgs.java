@@ -126,52 +126,45 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public Builder level(Either<String,LockLevel> level) {
             this.level = Output.of(Objects.requireNonNull(level));
             return this;
         }
-
         public Builder lockName(@Nullable Output<String> lockName) {
             this.lockName = lockName;
             return this;
         }
-
         public Builder lockName(@Nullable String lockName) {
             this.lockName = Output.ofNullable(lockName);
             return this;
         }
-
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
             this.owners = owners;
             return this;
         }
-
         public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
             this.owners = Output.ofNullable(owners);
             return this;
         }
-
+        public Builder owners(ManagementLockOwnerArgs... owners) {
+            return owners(List.of(owners));
+        }
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public ManagementLockByScopeArgs build() {
+        }        public ManagementLockByScopeArgs build() {
             return new ManagementLockByScopeArgs(level, lockName, notes, owners, scope);
         }
     }

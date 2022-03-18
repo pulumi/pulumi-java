@@ -219,57 +219,49 @@ public final class GetDedicatedHsmResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder stampId(@Nullable String stampId) {
             this.stampId = stampId;
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetDedicatedHsmResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetDedicatedHsmResult build() {
             return new GetDedicatedHsmResult(id, location, name, networkProfile, provisioningState, sku, stampId, statusMessage, tags, type, zones);
         }
     }

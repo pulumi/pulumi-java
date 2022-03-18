@@ -249,67 +249,54 @@ public final class GetSapMonitorResult {
             this.enableCustomerAnalytics = enableCustomerAnalytics;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder logAnalyticsWorkspaceArmId(@Nullable String logAnalyticsWorkspaceArmId) {
             this.logAnalyticsWorkspaceArmId = logAnalyticsWorkspaceArmId;
             return this;
         }
-
         public Builder logAnalyticsWorkspaceId(@Nullable String logAnalyticsWorkspaceId) {
             this.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
             return this;
         }
-
         public Builder logAnalyticsWorkspaceSharedKey(@Nullable String logAnalyticsWorkspaceSharedKey) {
             this.logAnalyticsWorkspaceSharedKey = logAnalyticsWorkspaceSharedKey;
             return this;
         }
-
         public Builder managedResourceGroupName(String managedResourceGroupName) {
             this.managedResourceGroupName = Objects.requireNonNull(managedResourceGroupName);
             return this;
         }
-
         public Builder monitorSubnet(@Nullable String monitorSubnet) {
             this.monitorSubnet = monitorSubnet;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sapMonitorCollectorVersion(String sapMonitorCollectorVersion) {
             this.sapMonitorCollectorVersion = Objects.requireNonNull(sapMonitorCollectorVersion);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSapMonitorResult build() {
+        }        public GetSapMonitorResult build() {
             return new GetSapMonitorResult(enableCustomerAnalytics, id, location, logAnalyticsWorkspaceArmId, logAnalyticsWorkspaceId, logAnalyticsWorkspaceSharedKey, managedResourceGroupName, monitorSubnet, name, provisioningState, sapMonitorCollectorVersion, tags, type);
         }
     }

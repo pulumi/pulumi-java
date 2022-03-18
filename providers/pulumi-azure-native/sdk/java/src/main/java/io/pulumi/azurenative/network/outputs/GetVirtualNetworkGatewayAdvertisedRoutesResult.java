@@ -54,7 +54,9 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
             this.value = value;
             return this;
         }
-        public GetVirtualNetworkGatewayAdvertisedRoutesResult build() {
+        public Builder value(GatewayRouteResponse... value) {
+            return value(List.of(value));
+        }        public GetVirtualNetworkGatewayAdvertisedRoutesResult build() {
             return new GetVirtualNetworkGatewayAdvertisedRoutesResult(value);
         }
     }

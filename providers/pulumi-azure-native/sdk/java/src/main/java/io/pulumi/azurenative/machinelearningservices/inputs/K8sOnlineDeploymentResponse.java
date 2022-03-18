@@ -264,67 +264,54 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
-
         public Builder codeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder endpointComputeType(String endpointComputeType) {
             this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder livenessProbe(@Nullable ProbeSettingsResponse livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
-
         public Builder model(@Nullable Object model) {
             this.model = model;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder requestSettings(@Nullable OnlineRequestSettingsResponse requestSettings) {
             this.requestSettings = requestSettings;
             return this;
         }
-
         public Builder scaleSettings(@Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
-        }
-        public K8sOnlineDeploymentResponse build() {
+        }        public K8sOnlineDeploymentResponse build() {
             return new K8sOnlineDeploymentResponse(appInsightsEnabled, codeConfiguration, containerResourceRequirements, description, endpointComputeType, environmentId, environmentVariables, livenessProbe, model, properties, provisioningState, requestSettings, scaleSettings);
         }
     }

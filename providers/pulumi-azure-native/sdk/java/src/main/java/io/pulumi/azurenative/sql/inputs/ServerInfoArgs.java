@@ -60,12 +60,10 @@ public final class ServerInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
-
         public Builder serverId(String serverId) {
             this.serverId = Output.of(Objects.requireNonNull(serverId));
             return this;
-        }
-        public ServerInfoArgs build() {
+        }        public ServerInfoArgs build() {
             return new ServerInfoArgs(serverId);
         }
     }

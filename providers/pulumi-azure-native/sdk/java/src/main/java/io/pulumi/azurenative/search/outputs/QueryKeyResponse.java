@@ -69,12 +69,10 @@ public final class QueryKeyResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public QueryKeyResponse build() {
+        }        public QueryKeyResponse build() {
             return new QueryKeyResponse(key, name);
         }
     }

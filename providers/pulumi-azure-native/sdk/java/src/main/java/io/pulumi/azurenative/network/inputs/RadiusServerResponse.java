@@ -95,17 +95,14 @@ public final class RadiusServerResponse extends io.pulumi.resources.InvokeArgs {
             this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress);
             return this;
         }
-
         public Builder radiusServerScore(@Nullable Double radiusServerScore) {
             this.radiusServerScore = radiusServerScore;
             return this;
         }
-
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             this.radiusServerSecret = radiusServerSecret;
             return this;
-        }
-        public RadiusServerResponse build() {
+        }        public RadiusServerResponse build() {
             return new RadiusServerResponse(radiusServerAddress, radiusServerScore, radiusServerSecret);
         }
     }

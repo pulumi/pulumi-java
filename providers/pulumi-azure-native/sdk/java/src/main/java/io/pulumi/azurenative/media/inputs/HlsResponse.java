@@ -60,8 +60,7 @@ public final class HlsResponse extends io.pulumi.resources.InvokeArgs {
         public Builder fragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
             this.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
-        }
-        public HlsResponse build() {
+        }        public HlsResponse build() {
             return new HlsResponse(fragmentsPerTsSegment);
         }
     }

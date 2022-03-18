@@ -87,17 +87,14 @@ public final class CustomRPResourceTypeRouteDefinitionResponse {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder routingType(@Nullable String routingType) {
             this.routingType = routingType;
             return this;
-        }
-        public CustomRPResourceTypeRouteDefinitionResponse build() {
+        }        public CustomRPResourceTypeRouteDefinitionResponse build() {
             return new CustomRPResourceTypeRouteDefinitionResponse(endpoint, name, routingType);
         }
     }

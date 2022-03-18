@@ -176,82 +176,66 @@ public final class AzureBlobFSSourceArgs extends io.pulumi.resources.ResourceArg
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder recursive(@Nullable Output<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder recursive(@Nullable Object recursive) {
             this.recursive = Output.ofNullable(recursive);
             return this;
         }
-
         public Builder skipHeaderLineCount(@Nullable Output<Object> skipHeaderLineCount) {
             this.skipHeaderLineCount = skipHeaderLineCount;
             return this;
         }
-
         public Builder skipHeaderLineCount(@Nullable Object skipHeaderLineCount) {
             this.skipHeaderLineCount = Output.ofNullable(skipHeaderLineCount);
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
-
         public Builder treatEmptyAsNull(@Nullable Output<Object> treatEmptyAsNull) {
             this.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
-
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
             this.treatEmptyAsNull = Output.ofNullable(treatEmptyAsNull);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AzureBlobFSSourceArgs build() {
+        }        public AzureBlobFSSourceArgs build() {
             return new AzureBlobFSSourceArgs(disableMetricsCollection, maxConcurrentConnections, recursive, skipHeaderLineCount, sourceRetryCount, sourceRetryWait, treatEmptyAsNull, type);
         }
     }

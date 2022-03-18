@@ -287,77 +287,62 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder bytesProcessed(Double bytesProcessed) {
             this.bytesProcessed = Objects.requireNonNull(bytesProcessed);
             return this;
         }
-
         public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
-
         public Builder directoriesErroredOut(Double directoriesErroredOut) {
             this.directoriesErroredOut = Objects.requireNonNull(directoriesErroredOut);
             return this;
         }
-
         public Builder filesErroredOut(Double filesErroredOut) {
             this.filesErroredOut = Objects.requireNonNull(filesErroredOut);
             return this;
         }
-
         public Builder filesProcessed(Double filesProcessed) {
             this.filesProcessed = Objects.requireNonNull(filesProcessed);
             return this;
         }
-
         public Builder invalidDirectoriesProcessed(Double invalidDirectoriesProcessed) {
             this.invalidDirectoriesProcessed = Objects.requireNonNull(invalidDirectoriesProcessed);
             return this;
         }
-
         public Builder invalidFileBytesUploaded(Double invalidFileBytesUploaded) {
             this.invalidFileBytesUploaded = Objects.requireNonNull(invalidFileBytesUploaded);
             return this;
         }
-
         public Builder invalidFilesProcessed(Double invalidFilesProcessed) {
             this.invalidFilesProcessed = Objects.requireNonNull(invalidFilesProcessed);
             return this;
         }
-
         public Builder isEnumerationInProgress(Boolean isEnumerationInProgress) {
             this.isEnumerationInProgress = Objects.requireNonNull(isEnumerationInProgress);
             return this;
         }
-
         public Builder renamedContainerCount(Double renamedContainerCount) {
             this.renamedContainerCount = Objects.requireNonNull(renamedContainerCount);
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public Builder totalBytesToProcess(Double totalBytesToProcess) {
             this.totalBytesToProcess = Objects.requireNonNull(totalBytesToProcess);
             return this;
         }
-
         public Builder totalFilesToProcess(Double totalFilesToProcess) {
             this.totalFilesToProcess = Objects.requireNonNull(totalFilesToProcess);
             return this;
         }
-
         public Builder transferType(String transferType) {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
-        }
-        public CopyProgressResponse build() {
+        }        public CopyProgressResponse build() {
             return new CopyProgressResponse(accountId, bytesProcessed, dataAccountType, directoriesErroredOut, filesErroredOut, filesProcessed, invalidDirectoriesProcessed, invalidFileBytesUploaded, invalidFilesProcessed, isEnumerationInProgress, renamedContainerCount, storageAccountName, totalBytesToProcess, totalFilesToProcess, transferType);
         }
     }

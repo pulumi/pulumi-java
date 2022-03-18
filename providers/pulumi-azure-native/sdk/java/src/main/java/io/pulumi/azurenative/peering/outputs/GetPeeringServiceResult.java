@@ -217,57 +217,46 @@ public final class GetPeeringServiceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeringServiceLocation(@Nullable String peeringServiceLocation) {
             this.peeringServiceLocation = peeringServiceLocation;
             return this;
         }
-
         public Builder peeringServiceProvider(@Nullable String peeringServiceProvider) {
             this.peeringServiceProvider = peeringServiceProvider;
             return this;
         }
-
         public Builder providerBackupPeeringLocation(@Nullable String providerBackupPeeringLocation) {
             this.providerBackupPeeringLocation = providerBackupPeeringLocation;
             return this;
         }
-
         public Builder providerPrimaryPeeringLocation(@Nullable String providerPrimaryPeeringLocation) {
             this.providerPrimaryPeeringLocation = providerPrimaryPeeringLocation;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(@Nullable PeeringServiceSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPeeringServiceResult build() {
+        }        public GetPeeringServiceResult build() {
             return new GetPeeringServiceResult(id, location, name, peeringServiceLocation, peeringServiceProvider, providerBackupPeeringLocation, providerPrimaryPeeringLocation, provisioningState, sku, tags, type);
         }
     }

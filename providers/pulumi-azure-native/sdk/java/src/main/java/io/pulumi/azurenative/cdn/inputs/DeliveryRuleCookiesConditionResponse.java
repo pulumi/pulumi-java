@@ -78,12 +78,10 @@ public final class DeliveryRuleCookiesConditionResponse extends io.pulumi.resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(CookiesMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleCookiesConditionResponse build() {
+        }        public DeliveryRuleCookiesConditionResponse build() {
             return new DeliveryRuleCookiesConditionResponse(name, parameters);
         }
     }

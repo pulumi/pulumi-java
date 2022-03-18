@@ -252,132 +252,106 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable Boolean active) {
             this.active = Output.ofNullable(active);
             return this;
         }
-
         public Builder author(@Nullable Output<String> author) {
             this.author = author;
             return this;
         }
-
         public Builder author(@Nullable String author) {
             this.author = Output.ofNullable(author);
             return this;
         }
-
         public Builder authorEmail(@Nullable Output<String> authorEmail) {
             this.authorEmail = authorEmail;
             return this;
         }
-
         public Builder authorEmail(@Nullable String authorEmail) {
             this.authorEmail = Output.ofNullable(authorEmail);
             return this;
         }
-
         public Builder deployer(@Nullable Output<String> deployer) {
             this.deployer = deployer;
             return this;
         }
-
         public Builder deployer(@Nullable String deployer) {
             this.deployer = Output.ofNullable(deployer);
             return this;
         }
-
         public Builder details(@Nullable Output<String> details) {
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable String details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder status(@Nullable Output<Integer> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Integer status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public WebAppDeploymentArgs build() {
+        }        public WebAppDeploymentArgs build() {
             return new WebAppDeploymentArgs(active, author, authorEmail, deployer, details, endTime, id, kind, message, name, resourceGroupName, startTime, status);
         }
     }

@@ -70,12 +70,10 @@ public final class EnvironmentStatusResponse {
             this.ingress = Objects.requireNonNull(ingress);
             return this;
         }
-
         public Builder warmStorage(WarmStorageEnvironmentStatusResponse warmStorage) {
             this.warmStorage = Objects.requireNonNull(warmStorage);
             return this;
-        }
-        public EnvironmentStatusResponse build() {
+        }        public EnvironmentStatusResponse build() {
             return new EnvironmentStatusResponse(ingress, warmStorage);
         }
     }

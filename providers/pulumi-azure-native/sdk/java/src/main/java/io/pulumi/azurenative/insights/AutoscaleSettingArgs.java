@@ -207,102 +207,88 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
             this.autoscaleSettingName = autoscaleSettingName;
             return this;
         }
-
         public Builder autoscaleSettingName(@Nullable String autoscaleSettingName) {
             this.autoscaleSettingName = Output.ofNullable(autoscaleSettingName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notifications(@Nullable Output<List<AutoscaleNotificationArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
-
         public Builder notifications(@Nullable List<AutoscaleNotificationArgs> notifications) {
             this.notifications = Output.ofNullable(notifications);
             return this;
         }
-
+        public Builder notifications(AutoscaleNotificationArgs... notifications) {
+            return notifications(List.of(notifications));
+        }
         public Builder profiles(Output<List<AutoscaleProfileArgs>> profiles) {
             this.profiles = Objects.requireNonNull(profiles);
             return this;
         }
-
         public Builder profiles(List<AutoscaleProfileArgs> profiles) {
             this.profiles = Output.of(Objects.requireNonNull(profiles));
             return this;
         }
-
+        public Builder profiles(AutoscaleProfileArgs... profiles) {
+            return profiles(List.of(profiles));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetResourceLocation(@Nullable Output<String> targetResourceLocation) {
             this.targetResourceLocation = targetResourceLocation;
             return this;
         }
-
         public Builder targetResourceLocation(@Nullable String targetResourceLocation) {
             this.targetResourceLocation = Output.ofNullable(targetResourceLocation);
             return this;
         }
-
         public Builder targetResourceUri(@Nullable Output<String> targetResourceUri) {
             this.targetResourceUri = targetResourceUri;
             return this;
         }
-
         public Builder targetResourceUri(@Nullable String targetResourceUri) {
             this.targetResourceUri = Output.ofNullable(targetResourceUri);
             return this;
-        }
-        public AutoscaleSettingArgs build() {
+        }        public AutoscaleSettingArgs build() {
             return new AutoscaleSettingArgs(autoscaleSettingName, enabled, location, name, notifications, profiles, resourceGroupName, tags, targetResourceLocation, targetResourceUri);
         }
     }

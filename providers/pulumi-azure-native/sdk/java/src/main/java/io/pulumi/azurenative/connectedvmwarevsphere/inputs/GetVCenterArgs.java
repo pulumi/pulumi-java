@@ -72,12 +72,10 @@ public final class GetVCenterArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vcenterName(String vcenterName) {
             this.vcenterName = Objects.requireNonNull(vcenterName);
             return this;
-        }
-        public GetVCenterArgs build() {
+        }        public GetVCenterArgs build() {
             return new GetVCenterArgs(resourceGroupName, vcenterName);
         }
     }

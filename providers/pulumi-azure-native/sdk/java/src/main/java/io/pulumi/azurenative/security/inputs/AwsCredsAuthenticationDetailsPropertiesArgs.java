@@ -94,32 +94,26 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder awsAccessKeyId(Output<String> awsAccessKeyId) {
             this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId);
             return this;
         }
-
         public Builder awsAccessKeyId(String awsAccessKeyId) {
             this.awsAccessKeyId = Output.of(Objects.requireNonNull(awsAccessKeyId));
             return this;
         }
-
         public Builder awsSecretAccessKey(Output<String> awsSecretAccessKey) {
             this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey);
             return this;
         }
-
         public Builder awsSecretAccessKey(String awsSecretAccessKey) {
             this.awsSecretAccessKey = Output.of(Objects.requireNonNull(awsSecretAccessKey));
             return this;
-        }
-        public AwsCredsAuthenticationDetailsPropertiesArgs build() {
+        }        public AwsCredsAuthenticationDetailsPropertiesArgs build() {
             return new AwsCredsAuthenticationDetailsPropertiesArgs(authenticationType, awsAccessKeyId, awsSecretAccessKey);
         }
     }

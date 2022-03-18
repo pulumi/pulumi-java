@@ -98,32 +98,29 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
             this.operator = operator;
             return this;
         }
-
         public Builder operator(@Nullable Either<String,AutomationRulePropertyConditionSupportedOperator> operator) {
             this.operator = Output.ofNullable(operator);
             return this;
         }
-
         public Builder propertyName(@Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName) {
             this.propertyName = propertyName;
             return this;
         }
-
         public Builder propertyName(@Nullable Either<String,AutomationRulePropertyConditionSupportedProperty> propertyName) {
             this.propertyName = Output.ofNullable(propertyName);
             return this;
         }
-
         public Builder propertyValues(@Nullable Output<List<String>> propertyValues) {
             this.propertyValues = propertyValues;
             return this;
         }
-
         public Builder propertyValues(@Nullable List<String> propertyValues) {
             this.propertyValues = Output.ofNullable(propertyValues);
             return this;
         }
-        public AutomationRulePropertyValuesConditionConditionPropertiesArgs build() {
+        public Builder propertyValues(String... propertyValues) {
+            return propertyValues(List.of(propertyValues));
+        }        public AutomationRulePropertyValuesConditionConditionPropertiesArgs build() {
             return new AutomationRulePropertyValuesConditionConditionPropertiesArgs(operator, propertyName, propertyValues);
         }
     }

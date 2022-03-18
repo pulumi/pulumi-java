@@ -219,57 +219,58 @@ public final class GetLoadBalancerBackendAddressPoolResult {
             this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations);
             return this;
         }
-
+        public Builder backendIPConfigurations(NetworkInterfaceIPConfigurationResponse... backendIPConfigurations) {
+            return backendIPConfigurations(List.of(backendIPConfigurations));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder loadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses) {
             this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
             return this;
         }
-
+        public Builder loadBalancerBackendAddresses(LoadBalancerBackendAddressResponse... loadBalancerBackendAddresses) {
+            return loadBalancerBackendAddresses(List.of(loadBalancerBackendAddresses));
+        }
         public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
             this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
             return this;
         }
-
+        public Builder loadBalancingRules(SubResourceResponse... loadBalancingRules) {
+            return loadBalancingRules(List.of(loadBalancingRules));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder outboundRule(SubResourceResponse outboundRule) {
             this.outboundRule = Objects.requireNonNull(outboundRule);
             return this;
         }
-
         public Builder outboundRules(List<SubResourceResponse> outboundRules) {
             this.outboundRules = Objects.requireNonNull(outboundRules);
             return this;
         }
-
+        public Builder outboundRules(SubResourceResponse... outboundRules) {
+            return outboundRules(List.of(outboundRules));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLoadBalancerBackendAddressPoolResult build() {
+        }        public GetLoadBalancerBackendAddressPoolResult build() {
             return new GetLoadBalancerBackendAddressPoolResult(backendIPConfigurations, etag, id, loadBalancerBackendAddresses, loadBalancingRules, location, name, outboundRule, outboundRules, provisioningState, type);
         }
     }

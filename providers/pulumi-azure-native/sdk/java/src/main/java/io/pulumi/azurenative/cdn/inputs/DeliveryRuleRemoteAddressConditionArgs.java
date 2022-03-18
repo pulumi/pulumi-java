@@ -79,22 +79,18 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<RemoteAddressMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(RemoteAddressMatchConditionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public DeliveryRuleRemoteAddressConditionArgs build() {
+        }        public DeliveryRuleRemoteAddressConditionArgs build() {
             return new DeliveryRuleRemoteAddressConditionArgs(name, parameters);
         }
     }

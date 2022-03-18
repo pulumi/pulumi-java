@@ -96,17 +96,14 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
             this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
             return this;
         }
-
         public Builder subscriptionReceiverValue(@Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue) {
             this.subscriptionReceiverValue = subscriptionReceiverValue;
             return this;
         }
-
         public Builder userObjectReceiverValue(@Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
             this.userObjectReceiverValue = userObjectReceiverValue;
             return this;
-        }
-        public NotificationReceiverValueResponse build() {
+        }        public NotificationReceiverValueResponse build() {
             return new NotificationReceiverValueResponse(distributionGroupListReceiverValue, subscriptionReceiverValue, userObjectReceiverValue);
         }
     }

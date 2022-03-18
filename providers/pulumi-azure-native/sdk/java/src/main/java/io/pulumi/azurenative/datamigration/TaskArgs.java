@@ -144,52 +144,42 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
-
         public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
-
         public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Object properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder taskName(@Nullable Output<String> taskName) {
             this.taskName = taskName;
             return this;
         }
-
         public Builder taskName(@Nullable String taskName) {
             this.taskName = Output.ofNullable(taskName);
             return this;
-        }
-        public TaskArgs build() {
+        }        public TaskArgs build() {
             return new TaskArgs(groupName, projectName, properties, serviceName, taskName);
         }
     }

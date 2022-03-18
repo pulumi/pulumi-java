@@ -158,37 +158,30 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
             this.elasticPoolName = elasticPoolName;
             return this;
         }
-
         public Builder membershipType(@Nullable String membershipType) {
             this.membershipType = membershipType;
             return this;
         }
-
         public Builder refreshCredential(@Nullable String refreshCredential) {
             this.refreshCredential = refreshCredential;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder shardMapName(@Nullable String shardMapName) {
             this.shardMapName = shardMapName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JobTargetResponse build() {
+        }        public JobTargetResponse build() {
             return new JobTargetResponse(databaseName, elasticPoolName, membershipType, refreshCredential, serverName, shardMapName, type);
         }
     }

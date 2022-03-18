@@ -157,72 +157,58 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder jobScheduleId(@Nullable Output<String> jobScheduleId) {
             this.jobScheduleId = jobScheduleId;
             return this;
         }
-
         public Builder jobScheduleId(@Nullable String jobScheduleId) {
             this.jobScheduleId = Output.ofNullable(jobScheduleId);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder runOn(@Nullable Output<String> runOn) {
             this.runOn = runOn;
             return this;
         }
-
         public Builder runOn(@Nullable String runOn) {
             this.runOn = Output.ofNullable(runOn);
             return this;
         }
-
         public Builder runbook(Output<RunbookAssociationPropertyArgs> runbook) {
             this.runbook = Objects.requireNonNull(runbook);
             return this;
         }
-
         public Builder runbook(RunbookAssociationPropertyArgs runbook) {
             this.runbook = Output.of(Objects.requireNonNull(runbook));
             return this;
         }
-
         public Builder schedule(Output<ScheduleAssociationPropertyArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(ScheduleAssociationPropertyArgs schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
-        }
-        public JobScheduleArgs build() {
+        }        public JobScheduleArgs build() {
             return new JobScheduleArgs(automationAccountName, jobScheduleId, parameters, resourceGroupName, runOn, runbook, schedule);
         }
     }

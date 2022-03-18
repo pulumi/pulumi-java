@@ -56,12 +56,13 @@ public final class SubscriptionStateRuleResponse {
             this.allowedActions = allowedActions;
             return this;
         }
-
+        public Builder allowedActions(String... allowedActions) {
+            return allowedActions(List.of(allowedActions));
+        }
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public SubscriptionStateRuleResponse build() {
+        }        public SubscriptionStateRuleResponse build() {
             return new SubscriptionStateRuleResponse(allowedActions, state);
         }
     }

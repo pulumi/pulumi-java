@@ -131,52 +131,42 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
             this.audioLanguage = audioLanguage;
             return this;
         }
-
         public Builder audioLanguage(@Nullable String audioLanguage) {
             this.audioLanguage = Output.ofNullable(audioLanguage);
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = Output.ofNullable(experimentalOptions);
             return this;
         }
-
         public Builder insightsToExtract(@Nullable Output<Either<String,InsightsType>> insightsToExtract) {
             this.insightsToExtract = insightsToExtract;
             return this;
         }
-
         public Builder insightsToExtract(@Nullable Either<String,InsightsType> insightsToExtract) {
             this.insightsToExtract = Output.ofNullable(insightsToExtract);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,AudioAnalysisMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,AudioAnalysisMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public VideoAnalyzerPresetArgs build() {
+        }        public VideoAnalyzerPresetArgs build() {
             return new VideoAnalyzerPresetArgs(audioLanguage, experimentalOptions, insightsToExtract, mode, odataType);
         }
     }

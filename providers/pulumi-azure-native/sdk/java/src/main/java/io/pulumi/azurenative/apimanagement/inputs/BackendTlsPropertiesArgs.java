@@ -78,22 +78,18 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
             this.validateCertificateChain = validateCertificateChain;
             return this;
         }
-
         public Builder validateCertificateChain(@Nullable Boolean validateCertificateChain) {
             this.validateCertificateChain = Output.ofNullable(validateCertificateChain);
             return this;
         }
-
         public Builder validateCertificateName(@Nullable Output<Boolean> validateCertificateName) {
             this.validateCertificateName = validateCertificateName;
             return this;
         }
-
         public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
             this.validateCertificateName = Output.ofNullable(validateCertificateName);
             return this;
-        }
-        public BackendTlsPropertiesArgs build() {
+        }        public BackendTlsPropertiesArgs build() {
             return new BackendTlsPropertiesArgs(validateCertificateChain, validateCertificateName);
         }
     }

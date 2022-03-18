@@ -233,77 +233,71 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
             this.capabilities = capabilities;
             return this;
         }
-
+        public Builder capabilities(ResourceProviderCapabilitiesResponse... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder featuresRule(@Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
-
         public Builder management(@Nullable ResourceProviderManifestPropertiesResponseManagement management) {
             this.management = management;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder providerAuthentication(@Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication) {
             this.providerAuthentication = providerAuthentication;
             return this;
         }
-
         public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
-
+        public Builder providerAuthorizations(ResourceProviderAuthorizationResponse... providerAuthorizations) {
+            return providerAuthorizations(List.of(providerAuthorizations));
+        }
         public Builder providerHubMetadata(@Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata) {
             this.providerHubMetadata = providerHubMetadata;
             return this;
         }
-
         public Builder providerType(@Nullable String providerType) {
             this.providerType = providerType;
             return this;
         }
-
         public Builder providerVersion(@Nullable String providerVersion) {
             this.providerVersion = providerVersion;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder requestHeaderOptions(@Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions) {
             this.requestHeaderOptions = requestHeaderOptions;
             return this;
         }
-
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }
         public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = subscriptionLifecycleNotificationSpecifications;
             return this;
         }
-
         public Builder templateDeploymentOptions(@Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
-        }
-        public ProviderRegistrationResponseProperties build() {
+        }        public ProviderRegistrationResponseProperties build() {
             return new ProviderRegistrationResponseProperties(capabilities, featuresRule, management, metadata, namespace, providerAuthentication, providerAuthorizations, providerHubMetadata, providerType, providerVersion, provisioningState, requestHeaderOptions, requiredFeatures, subscriptionLifecycleNotificationSpecifications, templateDeploymentOptions);
         }
     }

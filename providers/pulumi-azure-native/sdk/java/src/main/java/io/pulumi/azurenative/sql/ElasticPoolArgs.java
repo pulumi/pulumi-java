@@ -227,112 +227,90 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.elasticPoolName = elasticPoolName;
             return this;
         }
-
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
             this.elasticPoolName = Output.ofNullable(elasticPoolName);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable Either<String,ElasticPoolLicenseType> licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = Output.ofNullable(maxSizeBytes);
             return this;
         }
-
         public Builder perDatabaseSettings(@Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings) {
             this.perDatabaseSettings = perDatabaseSettings;
             return this;
         }
-
         public Builder perDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsArgs perDatabaseSettings) {
             this.perDatabaseSettings = Output.ofNullable(perDatabaseSettings);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = Output.ofNullable(zoneRedundant);
             return this;
-        }
-        public ElasticPoolArgs build() {
+        }        public ElasticPoolArgs build() {
             return new ElasticPoolArgs(elasticPoolName, licenseType, location, maintenanceConfigurationId, maxSizeBytes, perDatabaseSettings, resourceGroupName, serverName, sku, tags, zoneRedundant);
         }
     }

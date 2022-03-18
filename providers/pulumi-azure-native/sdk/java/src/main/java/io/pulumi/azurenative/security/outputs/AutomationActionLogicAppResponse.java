@@ -89,17 +89,14 @@ public final class AutomationActionLogicAppResponse {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public AutomationActionLogicAppResponse build() {
+        }        public AutomationActionLogicAppResponse build() {
             return new AutomationActionLogicAppResponse(actionType, logicAppResourceId, uri);
         }
     }

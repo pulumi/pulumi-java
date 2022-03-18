@@ -88,17 +88,14 @@ public final class GetElasticPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.elasticPoolName = Objects.requireNonNull(elasticPoolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetElasticPoolArgs build() {
+        }        public GetElasticPoolArgs build() {
             return new GetElasticPoolArgs(elasticPoolName, resourceGroupName, serverName);
         }
     }

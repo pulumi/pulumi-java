@@ -142,62 +142,53 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             this.dashboardName = dashboardName;
             return this;
         }
-
         public Builder dashboardName(@Nullable String dashboardName) {
             this.dashboardName = Output.ofNullable(dashboardName);
             return this;
         }
-
         public Builder lenses(@Nullable Output<List<DashboardLensArgs>> lenses) {
             this.lenses = lenses;
             return this;
         }
-
         public Builder lenses(@Nullable List<DashboardLensArgs> lenses) {
             this.lenses = Output.ofNullable(lenses);
             return this;
         }
-
+        public Builder lenses(DashboardLensArgs... lenses) {
+            return lenses(List.of(lenses));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DashboardArgs build() {
+        }        public DashboardArgs build() {
             return new DashboardArgs(dashboardName, lenses, location, metadata, resourceGroupName, tags);
         }
     }

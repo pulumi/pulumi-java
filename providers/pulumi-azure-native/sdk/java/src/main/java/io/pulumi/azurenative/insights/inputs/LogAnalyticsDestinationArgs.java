@@ -79,22 +79,18 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
-        }
-        public LogAnalyticsDestinationArgs build() {
+        }        public LogAnalyticsDestinationArgs build() {
             return new LogAnalyticsDestinationArgs(name, workspaceResourceId);
         }
     }

@@ -70,12 +70,10 @@ public final class ApiManagementServiceSkuPropertiesResponse {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ApiManagementServiceSkuPropertiesResponse build() {
+        }        public ApiManagementServiceSkuPropertiesResponse build() {
             return new ApiManagementServiceSkuPropertiesResponse(capacity, name);
         }
     }

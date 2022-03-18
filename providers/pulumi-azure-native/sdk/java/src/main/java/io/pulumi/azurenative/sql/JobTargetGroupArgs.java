@@ -124,52 +124,45 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
-
         public Builder jobAgentName(String jobAgentName) {
             this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
-
         public Builder members(Output<List<JobTargetArgs>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<JobTargetArgs> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(JobTargetArgs... members) {
+            return members(List.of(members));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder targetGroupName(@Nullable Output<String> targetGroupName) {
             this.targetGroupName = targetGroupName;
             return this;
         }
-
         public Builder targetGroupName(@Nullable String targetGroupName) {
             this.targetGroupName = Output.ofNullable(targetGroupName);
             return this;
-        }
-        public JobTargetGroupArgs build() {
+        }        public JobTargetGroupArgs build() {
             return new JobTargetGroupArgs(jobAgentName, members, resourceGroupName, serverName, targetGroupName);
         }
     }

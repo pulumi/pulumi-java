@@ -125,52 +125,42 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder placementPolicyName(@Nullable Output<String> placementPolicyName) {
             this.placementPolicyName = placementPolicyName;
             return this;
         }
-
         public Builder placementPolicyName(@Nullable String placementPolicyName) {
             this.placementPolicyName = Output.ofNullable(placementPolicyName);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder properties(@Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PlacementPolicyArgs build() {
+        }        public PlacementPolicyArgs build() {
             return new PlacementPolicyArgs(clusterName, placementPolicyName, privateCloudName, properties, resourceGroupName);
         }
     }

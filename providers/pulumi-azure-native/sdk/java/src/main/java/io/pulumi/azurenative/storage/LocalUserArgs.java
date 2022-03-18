@@ -190,92 +190,80 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder hasSharedKey(@Nullable Output<Boolean> hasSharedKey) {
             this.hasSharedKey = hasSharedKey;
             return this;
         }
-
         public Builder hasSharedKey(@Nullable Boolean hasSharedKey) {
             this.hasSharedKey = Output.ofNullable(hasSharedKey);
             return this;
         }
-
         public Builder hasSshKey(@Nullable Output<Boolean> hasSshKey) {
             this.hasSshKey = hasSshKey;
             return this;
         }
-
         public Builder hasSshKey(@Nullable Boolean hasSshKey) {
             this.hasSshKey = Output.ofNullable(hasSshKey);
             return this;
         }
-
         public Builder hasSshPassword(@Nullable Output<Boolean> hasSshPassword) {
             this.hasSshPassword = hasSshPassword;
             return this;
         }
-
         public Builder hasSshPassword(@Nullable Boolean hasSshPassword) {
             this.hasSshPassword = Output.ofNullable(hasSshPassword);
             return this;
         }
-
         public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
-
         public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = Output.ofNullable(homeDirectory);
             return this;
         }
-
         public Builder permissionScopes(@Nullable Output<List<PermissionScopeArgs>> permissionScopes) {
             this.permissionScopes = permissionScopes;
             return this;
         }
-
         public Builder permissionScopes(@Nullable List<PermissionScopeArgs> permissionScopes) {
             this.permissionScopes = Output.ofNullable(permissionScopes);
             return this;
         }
-
+        public Builder permissionScopes(PermissionScopeArgs... permissionScopes) {
+            return permissionScopes(List.of(permissionScopes));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sshAuthorizedKeys(@Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
-
         public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyArgs> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = Output.ofNullable(sshAuthorizedKeys);
             return this;
         }
-
+        public Builder sshAuthorizedKeys(SshPublicKeyArgs... sshAuthorizedKeys) {
+            return sshAuthorizedKeys(List.of(sshAuthorizedKeys));
+        }
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public LocalUserArgs build() {
+        }        public LocalUserArgs build() {
             return new LocalUserArgs(accountName, hasSharedKey, hasSshKey, hasSshPassword, homeDirectory, permissionScopes, resourceGroupName, sshAuthorizedKeys, username);
         }
     }

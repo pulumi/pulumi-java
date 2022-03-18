@@ -148,62 +148,59 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
             this.addressSpace = addressSpace;
             return this;
         }
-
         public Builder addressSpace(@Nullable List<String> addressSpace) {
             this.addressSpace = Output.ofNullable(addressSpace);
             return this;
         }
-
+        public Builder addressSpace(String... addressSpace) {
+            return addressSpace(List.of(addressSpace));
+        }
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder enableDdosProtection(@Nullable Output<Boolean> enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
-
         public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
             this.enableDdosProtection = Output.ofNullable(enableDdosProtection);
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder subnets(@Nullable Output<List<SubnetResourceSettingsArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
-
         public Builder subnets(@Nullable List<SubnetResourceSettingsArgs> subnets) {
             this.subnets = Output.ofNullable(subnets);
             return this;
         }
-
+        public Builder subnets(SubnetResourceSettingsArgs... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
-        }
-        public VirtualNetworkResourceSettingsArgs build() {
+        }        public VirtualNetworkResourceSettingsArgs build() {
             return new VirtualNetworkResourceSettingsArgs(addressSpace, dnsServers, enableDdosProtection, resourceType, subnets, targetResourceName);
         }
     }

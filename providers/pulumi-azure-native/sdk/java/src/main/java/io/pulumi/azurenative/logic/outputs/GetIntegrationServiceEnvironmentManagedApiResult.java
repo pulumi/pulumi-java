@@ -337,92 +337,80 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
             this.apiDefinitionUrl = Objects.requireNonNull(apiDefinitionUrl);
             return this;
         }
-
         public Builder apiDefinitions(ApiResourceDefinitionsResponse apiDefinitions) {
             this.apiDefinitions = Objects.requireNonNull(apiDefinitions);
             return this;
         }
-
         public Builder backendService(ApiResourceBackendServiceResponse backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public Builder capabilities(List<String> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
-
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder connectionParameters(Map<String,Object> connectionParameters) {
             this.connectionParameters = Objects.requireNonNull(connectionParameters);
             return this;
         }
-
         public Builder deploymentParameters(@Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters) {
             this.deploymentParameters = deploymentParameters;
             return this;
         }
-
         public Builder generalInformation(ApiResourceGeneralInformationResponse generalInformation) {
             this.generalInformation = Objects.requireNonNull(generalInformation);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceResponse integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder metadata(ApiResourceMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policies(ApiResourcePoliciesResponse policies) {
             this.policies = Objects.requireNonNull(policies);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder runtimeUrls(List<String> runtimeUrls) {
             this.runtimeUrls = Objects.requireNonNull(runtimeUrls);
             return this;
         }
-
+        public Builder runtimeUrls(String... runtimeUrls) {
+            return runtimeUrls(List.of(runtimeUrls));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIntegrationServiceEnvironmentManagedApiResult build() {
+        }        public GetIntegrationServiceEnvironmentManagedApiResult build() {
             return new GetIntegrationServiceEnvironmentManagedApiResult(apiDefinitionUrl, apiDefinitions, backendService, capabilities, category, connectionParameters, deploymentParameters, generalInformation, id, integrationServiceEnvironment, location, metadata, name, policies, provisioningState, runtimeUrls, tags, type);
         }
     }

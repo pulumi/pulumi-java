@@ -189,47 +189,41 @@ public final class NetworkFunctionRoleConfigurationResponse {
             this.customProfile = customProfile;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder osProfile(@Nullable OsProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleType(@Nullable String roleType) {
             this.roleType = roleType;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder userDataParameters(@Nullable Object userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }
-
         public Builder userDataTemplate(@Nullable Object userDataTemplate) {
             this.userDataTemplate = userDataTemplate;
             return this;
         }
-
         public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
             this.virtualMachineSize = virtualMachineSize;
             return this;
-        }
-        public NetworkFunctionRoleConfigurationResponse build() {
+        }        public NetworkFunctionRoleConfigurationResponse build() {
             return new NetworkFunctionRoleConfigurationResponse(customProfile, networkInterfaces, osProfile, roleName, roleType, storageProfile, userDataParameters, userDataTemplate, virtualMachineSize);
         }
     }

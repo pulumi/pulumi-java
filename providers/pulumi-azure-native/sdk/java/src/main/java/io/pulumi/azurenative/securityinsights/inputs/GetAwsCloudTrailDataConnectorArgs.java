@@ -88,17 +88,14 @@ public final class GetAwsCloudTrailDataConnectorArgs extends io.pulumi.resources
             this.dataConnectorId = Objects.requireNonNull(dataConnectorId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetAwsCloudTrailDataConnectorArgs build() {
+        }        public GetAwsCloudTrailDataConnectorArgs build() {
             return new GetAwsCloudTrailDataConnectorArgs(dataConnectorId, resourceGroupName, workspaceName);
         }
     }

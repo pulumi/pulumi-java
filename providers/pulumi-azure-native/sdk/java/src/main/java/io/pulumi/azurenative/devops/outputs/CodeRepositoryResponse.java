@@ -121,27 +121,22 @@ public final class CodeRepositoryResponse {
             this.authorization = authorization;
             return this;
         }
-
         public Builder defaultBranch(String defaultBranch) {
             this.defaultBranch = Objects.requireNonNull(defaultBranch);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder repositoryType(String repositoryType) {
             this.repositoryType = Objects.requireNonNull(repositoryType);
             return this;
-        }
-        public CodeRepositoryResponse build() {
+        }        public CodeRepositoryResponse build() {
             return new CodeRepositoryResponse(authorization, defaultBranch, id, properties, repositoryType);
         }
     }

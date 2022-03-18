@@ -163,72 +163,58 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder coverageLevel(@Nullable Output<Either<String,CoverageLevel>> coverageLevel) {
             this.coverageLevel = coverageLevel;
             return this;
         }
-
         public Builder coverageLevel(@Nullable Either<String,CoverageLevel> coverageLevel) {
             this.coverageLevel = Output.ofNullable(coverageLevel);
             return this;
         }
-
         public Builder filter(@Nullable Output<ConnectionMonitorEndpointFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable ConnectionMonitorEndpointFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder scope(@Nullable Output<ConnectionMonitorEndpointScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable ConnectionMonitorEndpointScopeArgs scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,EndpointType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,EndpointType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ConnectionMonitorEndpointArgs build() {
+        }        public ConnectionMonitorEndpointArgs build() {
             return new ConnectionMonitorEndpointArgs(address, coverageLevel, filter, name, resourceId, scope, type);
         }
     }

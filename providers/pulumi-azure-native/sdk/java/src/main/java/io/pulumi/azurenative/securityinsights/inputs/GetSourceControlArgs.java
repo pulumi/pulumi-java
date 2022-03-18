@@ -104,22 +104,18 @@ public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sourceControlId(String sourceControlId) {
             this.sourceControlId = Objects.requireNonNull(sourceControlId);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetSourceControlArgs build() {
+        }        public GetSourceControlArgs build() {
             return new GetSourceControlArgs(operationalInsightsResourceProvider, resourceGroupName, sourceControlId, workspaceName);
         }
     }

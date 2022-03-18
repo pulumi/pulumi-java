@@ -143,62 +143,62 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
             this.allowlistRules = allowlistRules;
             return this;
         }
-
         public Builder allowlistRules(@Nullable List<AllowlistCustomAlertRuleArgs> allowlistRules) {
             this.allowlistRules = Output.ofNullable(allowlistRules);
             return this;
         }
-
+        public Builder allowlistRules(AllowlistCustomAlertRuleArgs... allowlistRules) {
+            return allowlistRules(List.of(allowlistRules));
+        }
         public Builder denylistRules(@Nullable Output<List<DenylistCustomAlertRuleArgs>> denylistRules) {
             this.denylistRules = denylistRules;
             return this;
         }
-
         public Builder denylistRules(@Nullable List<DenylistCustomAlertRuleArgs> denylistRules) {
             this.denylistRules = Output.ofNullable(denylistRules);
             return this;
         }
-
+        public Builder denylistRules(DenylistCustomAlertRuleArgs... denylistRules) {
+            return denylistRules(List.of(denylistRules));
+        }
         public Builder deviceSecurityGroupName(@Nullable Output<String> deviceSecurityGroupName) {
             this.deviceSecurityGroupName = deviceSecurityGroupName;
             return this;
         }
-
         public Builder deviceSecurityGroupName(@Nullable String deviceSecurityGroupName) {
             this.deviceSecurityGroupName = Output.ofNullable(deviceSecurityGroupName);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder thresholdRules(@Nullable Output<List<ThresholdCustomAlertRuleArgs>> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
-
         public Builder thresholdRules(@Nullable List<ThresholdCustomAlertRuleArgs> thresholdRules) {
             this.thresholdRules = Output.ofNullable(thresholdRules);
             return this;
         }
-
+        public Builder thresholdRules(ThresholdCustomAlertRuleArgs... thresholdRules) {
+            return thresholdRules(List.of(thresholdRules));
+        }
         public Builder timeWindowRules(@Nullable Output<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules) {
             this.timeWindowRules = timeWindowRules;
             return this;
         }
-
         public Builder timeWindowRules(@Nullable List<TimeWindowCustomAlertRuleArgs> timeWindowRules) {
             this.timeWindowRules = Output.ofNullable(timeWindowRules);
             return this;
         }
-        public DeviceSecurityGroupArgs build() {
+        public Builder timeWindowRules(TimeWindowCustomAlertRuleArgs... timeWindowRules) {
+            return timeWindowRules(List.of(timeWindowRules));
+        }        public DeviceSecurityGroupArgs build() {
             return new DeviceSecurityGroupArgs(allowlistRules, denylistRules, deviceSecurityGroupName, resourceId, thresholdRules, timeWindowRules);
         }
     }

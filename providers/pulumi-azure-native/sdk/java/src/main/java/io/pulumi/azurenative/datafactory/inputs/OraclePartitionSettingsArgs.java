@@ -111,42 +111,37 @@ public final class OraclePartitionSettingsArgs extends io.pulumi.resources.Resou
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = Output.ofNullable(partitionColumnName);
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Output<Object> partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = Output.ofNullable(partitionLowerBound);
             return this;
         }
-
         public Builder partitionNames(@Nullable Output<List<Object>> partitionNames) {
             this.partitionNames = partitionNames;
             return this;
         }
-
         public Builder partitionNames(@Nullable List<Object> partitionNames) {
             this.partitionNames = Output.ofNullable(partitionNames);
             return this;
         }
-
+        public Builder partitionNames(Object... partitionNames) {
+            return partitionNames(List.of(partitionNames));
+        }
         public Builder partitionUpperBound(@Nullable Output<Object> partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = Output.ofNullable(partitionUpperBound);
             return this;
-        }
-        public OraclePartitionSettingsArgs build() {
+        }        public OraclePartitionSettingsArgs build() {
             return new OraclePartitionSettingsArgs(partitionColumnName, partitionLowerBound, partitionNames, partitionUpperBound);
         }
     }

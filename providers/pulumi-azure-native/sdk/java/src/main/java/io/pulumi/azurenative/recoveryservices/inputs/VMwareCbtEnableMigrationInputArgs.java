@@ -259,132 +259,109 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
             this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId);
             return this;
         }
-
         public Builder dataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
             this.dataMoverRunAsAccountId = Output.of(Objects.requireNonNull(dataMoverRunAsAccountId));
             return this;
         }
-
         public Builder disksToInclude(Output<List<VMwareCbtDiskInputArgs>> disksToInclude) {
             this.disksToInclude = Objects.requireNonNull(disksToInclude);
             return this;
         }
-
         public Builder disksToInclude(List<VMwareCbtDiskInputArgs> disksToInclude) {
             this.disksToInclude = Output.of(Objects.requireNonNull(disksToInclude));
             return this;
         }
-
+        public Builder disksToInclude(VMwareCbtDiskInputArgs... disksToInclude) {
+            return disksToInclude(List.of(disksToInclude));
+        }
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder snapshotRunAsAccountId(Output<String> snapshotRunAsAccountId) {
             this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId);
             return this;
         }
-
         public Builder snapshotRunAsAccountId(String snapshotRunAsAccountId) {
             this.snapshotRunAsAccountId = Output.of(Objects.requireNonNull(snapshotRunAsAccountId));
             return this;
         }
-
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
-
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Output.ofNullable(targetAvailabilitySetId);
             return this;
         }
-
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable Output<String> targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
-
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = Output.ofNullable(targetBootDiagnosticsStorageAccountId);
             return this;
         }
-
         public Builder targetNetworkId(Output<String> targetNetworkId) {
             this.targetNetworkId = Objects.requireNonNull(targetNetworkId);
             return this;
         }
-
         public Builder targetNetworkId(String targetNetworkId) {
             this.targetNetworkId = Output.of(Objects.requireNonNull(targetNetworkId));
             return this;
         }
-
         public Builder targetResourceGroupId(Output<String> targetResourceGroupId) {
             this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId);
             return this;
         }
-
         public Builder targetResourceGroupId(String targetResourceGroupId) {
             this.targetResourceGroupId = Output.of(Objects.requireNonNull(targetResourceGroupId));
             return this;
         }
-
         public Builder targetSubnetName(@Nullable Output<String> targetSubnetName) {
             this.targetSubnetName = targetSubnetName;
             return this;
         }
-
         public Builder targetSubnetName(@Nullable String targetSubnetName) {
             this.targetSubnetName = Output.ofNullable(targetSubnetName);
             return this;
         }
-
         public Builder targetVmName(@Nullable Output<String> targetVmName) {
             this.targetVmName = targetVmName;
             return this;
         }
-
         public Builder targetVmName(@Nullable String targetVmName) {
             this.targetVmName = Output.ofNullable(targetVmName);
             return this;
         }
-
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
-
         public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = Output.ofNullable(targetVmSize);
             return this;
         }
-
         public Builder vmwareMachineId(Output<String> vmwareMachineId) {
             this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
             return this;
         }
-
         public Builder vmwareMachineId(String vmwareMachineId) {
             this.vmwareMachineId = Output.of(Objects.requireNonNull(vmwareMachineId));
             return this;
-        }
-        public VMwareCbtEnableMigrationInputArgs build() {
+        }        public VMwareCbtEnableMigrationInputArgs build() {
             return new VMwareCbtEnableMigrationInputArgs(dataMoverRunAsAccountId, disksToInclude, instanceType, licenseType, snapshotRunAsAccountId, targetAvailabilitySetId, targetBootDiagnosticsStorageAccountId, targetNetworkId, targetResourceGroupId, targetSubnetName, targetVmName, targetVmSize, vmwareMachineId);
         }
     }

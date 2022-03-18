@@ -142,62 +142,56 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
+        public Builder arguments(ArgumentArgs... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder contextPath(@Nullable Output<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
-
         public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = Output.ofNullable(contextPath);
             return this;
         }
-
         public Builder file(@Nullable Output<String> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable String file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder updateTriggerToken(@Nullable Output<String> updateTriggerToken) {
             this.updateTriggerToken = updateTriggerToken;
             return this;
         }
-
         public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
             this.updateTriggerToken = Output.ofNullable(updateTriggerToken);
             return this;
         }
-
         public Builder values(@Nullable Output<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<SetValueArgs> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public OverrideTaskStepPropertiesArgs build() {
+        public Builder values(SetValueArgs... values) {
+            return values(List.of(values));
+        }        public OverrideTaskStepPropertiesArgs build() {
             return new OverrideTaskStepPropertiesArgs(arguments, contextPath, file, target, updateTriggerToken, values);
         }
     }

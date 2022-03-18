@@ -104,22 +104,18 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
-
         public Builder workloadGroupName(String workloadGroupName) {
             this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetSqlPoolWorkloadGroupArgs build() {
+        }        public GetSqlPoolWorkloadGroupArgs build() {
             return new GetSqlPoolWorkloadGroupArgs(resourceGroupName, sqlPoolName, workloadGroupName, workspaceName);
         }
     }

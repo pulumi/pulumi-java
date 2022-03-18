@@ -155,72 +155,58 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkVirtualApplianceName(Output<String> networkVirtualApplianceName) {
             this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName);
             return this;
         }
-
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
             this.networkVirtualApplianceName = Output.of(Objects.requireNonNull(networkVirtualApplianceName));
             return this;
         }
-
         public Builder o365Policy(@Nullable Output<Office365PolicyPropertiesArgs> o365Policy) {
             this.o365Policy = o365Policy;
             return this;
         }
-
         public Builder o365Policy(@Nullable Office365PolicyPropertiesArgs o365Policy) {
             this.o365Policy = Output.ofNullable(o365Policy);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder siteName(@Nullable Output<String> siteName) {
             this.siteName = siteName;
             return this;
         }
-
         public Builder siteName(@Nullable String siteName) {
             this.siteName = Output.ofNullable(siteName);
             return this;
-        }
-        public VirtualApplianceSiteArgs build() {
+        }        public VirtualApplianceSiteArgs build() {
             return new VirtualApplianceSiteArgs(addressPrefix, id, name, networkVirtualApplianceName, o365Policy, resourceGroupName, siteName);
         }
     }

@@ -53,8 +53,7 @@ public final class ExtendedPropertiesResponse {
         public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
             this.diskExclusionProperties = diskExclusionProperties;
             return this;
-        }
-        public ExtendedPropertiesResponse build() {
+        }        public ExtendedPropertiesResponse build() {
             return new ExtendedPropertiesResponse(diskExclusionProperties);
         }
     }

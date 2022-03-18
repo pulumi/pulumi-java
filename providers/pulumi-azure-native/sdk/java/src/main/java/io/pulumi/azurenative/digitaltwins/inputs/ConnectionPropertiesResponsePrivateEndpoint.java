@@ -54,8 +54,7 @@ public final class ConnectionPropertiesResponsePrivateEndpoint extends io.pulumi
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public ConnectionPropertiesResponsePrivateEndpoint build() {
+        }        public ConnectionPropertiesResponsePrivateEndpoint build() {
             return new ConnectionPropertiesResponsePrivateEndpoint(id);
         }
     }

@@ -189,92 +189,74 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder formulaContent(@Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent) {
             this.formulaContent = formulaContent;
             return this;
         }
-
         public Builder formulaContent(@Nullable LabVirtualMachineCreationParameterArgs formulaContent) {
             this.formulaContent = Output.ofNullable(formulaContent);
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder osType(@Nullable Output<String> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vm(@Nullable Output<FormulaPropertiesFromVmArgs> vm) {
             this.vm = vm;
             return this;
         }
-
         public Builder vm(@Nullable FormulaPropertiesFromVmArgs vm) {
             this.vm = Output.ofNullable(vm);
             return this;
-        }
-        public FormulaArgs build() {
+        }        public FormulaArgs build() {
             return new FormulaArgs(description, formulaContent, labName, location, name, osType, resourceGroupName, tags, vm);
         }
     }

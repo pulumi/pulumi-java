@@ -86,17 +86,14 @@ public final class NFSMountConfigurationResponse extends io.pulumi.resources.Inv
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public NFSMountConfigurationResponse build() {
+        }        public NFSMountConfigurationResponse build() {
             return new NFSMountConfigurationResponse(mountOptions, relativeMountPath, source);
         }
     }

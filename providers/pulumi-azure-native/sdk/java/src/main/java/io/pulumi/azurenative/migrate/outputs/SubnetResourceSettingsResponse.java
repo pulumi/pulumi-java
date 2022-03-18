@@ -88,17 +88,14 @@ public final class SubnetResourceSettingsResponse {
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable NsgReferenceResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
-        }
-        public SubnetResourceSettingsResponse build() {
+        }        public SubnetResourceSettingsResponse build() {
             return new SubnetResourceSettingsResponse(addressPrefix, name, networkSecurityGroup);
         }
     }

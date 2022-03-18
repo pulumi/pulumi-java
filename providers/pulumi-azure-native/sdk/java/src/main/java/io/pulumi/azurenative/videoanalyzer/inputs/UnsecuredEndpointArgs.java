@@ -113,42 +113,34 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
-
         public Builder credentials(UsernamePasswordCredentialsArgs credentials) {
             this.credentials = Output.of(Objects.requireNonNull(credentials));
             return this;
         }
-
         public Builder tunnel(@Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel) {
             this.tunnel = tunnel;
             return this;
         }
-
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
             this.tunnel = Output.ofNullable(tunnel);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public UnsecuredEndpointArgs build() {
+        }        public UnsecuredEndpointArgs build() {
             return new UnsecuredEndpointArgs(credentials, tunnel, type, url);
         }
     }

@@ -106,22 +106,18 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vmExtensionName(String vmExtensionName) {
             this.vmExtensionName = Objects.requireNonNull(vmExtensionName);
             return this;
         }
-
         public Builder vmName(String vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
-        }
-        public GetVirtualMachineExtensionArgs build() {
+        }        public GetVirtualMachineExtensionArgs build() {
             return new GetVirtualMachineExtensionArgs(expand, resourceGroupName, vmExtensionName, vmName);
         }
     }

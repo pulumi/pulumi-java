@@ -88,17 +88,14 @@ public final class GetLinkedWorkspaceArgs extends io.pulumi.resources.InvokeArgs
             this.linkName = Objects.requireNonNull(linkName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetLinkedWorkspaceArgs build() {
+        }        public GetLinkedWorkspaceArgs build() {
             return new GetLinkedWorkspaceArgs(linkName, resourceGroupName, workspaceName);
         }
     }

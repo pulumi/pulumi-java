@@ -76,12 +76,10 @@ public final class ReportConfigAggregationResponse extends io.pulumi.resources.I
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ReportConfigAggregationResponse build() {
+        }        public ReportConfigAggregationResponse build() {
             return new ReportConfigAggregationResponse(function, name);
         }
     }

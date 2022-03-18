@@ -191,92 +191,77 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(ActionListArgs actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
         public Builder activityLogAlertName(@Nullable Output<String> activityLogAlertName) {
             this.activityLogAlertName = activityLogAlertName;
             return this;
         }
-
         public Builder activityLogAlertName(@Nullable String activityLogAlertName) {
             this.activityLogAlertName = Output.ofNullable(activityLogAlertName);
             return this;
         }
-
         public Builder condition(Output<AlertRuleAllOfConditionArgs> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder condition(AlertRuleAllOfConditionArgs condition) {
             this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scopes(Output<List<String>> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Output.of(Objects.requireNonNull(scopes));
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ActivityLogAlertArgs build() {
+        }        public ActivityLogAlertArgs build() {
             return new ActivityLogAlertArgs(actions, activityLogAlertName, condition, description, enabled, location, resourceGroupName, scopes, tags);
         }
     }

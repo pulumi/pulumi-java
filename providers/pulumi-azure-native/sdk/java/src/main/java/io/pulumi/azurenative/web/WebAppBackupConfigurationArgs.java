@@ -174,82 +174,69 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
             this.backupName = backupName;
             return this;
         }
-
         public Builder backupName(@Nullable String backupName) {
             this.backupName = Output.ofNullable(backupName);
             return this;
         }
-
         public Builder backupSchedule(@Nullable Output<BackupScheduleArgs> backupSchedule) {
             this.backupSchedule = backupSchedule;
             return this;
         }
-
         public Builder backupSchedule(@Nullable BackupScheduleArgs backupSchedule) {
             this.backupSchedule = Output.ofNullable(backupSchedule);
             return this;
         }
-
         public Builder databases(@Nullable Output<List<DatabaseBackupSettingArgs>> databases) {
             this.databases = databases;
             return this;
         }
-
         public Builder databases(@Nullable List<DatabaseBackupSettingArgs> databases) {
             this.databases = Output.ofNullable(databases);
             return this;
         }
-
+        public Builder databases(DatabaseBackupSettingArgs... databases) {
+            return databases(List.of(databases));
+        }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccountUrl(Output<String> storageAccountUrl) {
             this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
             return this;
         }
-
         public Builder storageAccountUrl(String storageAccountUrl) {
             this.storageAccountUrl = Output.of(Objects.requireNonNull(storageAccountUrl));
             return this;
-        }
-        public WebAppBackupConfigurationArgs build() {
+        }        public WebAppBackupConfigurationArgs build() {
             return new WebAppBackupConfigurationArgs(backupName, backupSchedule, databases, enabled, kind, name, resourceGroupName, storageAccountUrl);
         }
     }

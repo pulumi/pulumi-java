@@ -103,22 +103,21 @@ public final class GetJobTargetGroupResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder members(List<JobTargetResponse> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
+        public Builder members(JobTargetResponse... members) {
+            return members(List.of(members));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetJobTargetGroupResult build() {
+        }        public GetJobTargetGroupResult build() {
             return new GetJobTargetGroupResult(id, members, name, type);
         }
     }

@@ -154,37 +154,33 @@ public final class ApplicationGetHttpsEndpointResponse {
             this.accessModes = accessModes;
             return this;
         }
-
+        public Builder accessModes(String... accessModes) {
+            return accessModes(List.of(accessModes));
+        }
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
             this.disableGatewayAuth = disableGatewayAuth;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder publicPort(Integer publicPort) {
             this.publicPort = Objects.requireNonNull(publicPort);
             return this;
         }
-
         public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
             this.subDomainSuffix = subDomainSuffix;
             return this;
-        }
-        public ApplicationGetHttpsEndpointResponse build() {
+        }        public ApplicationGetHttpsEndpointResponse build() {
             return new ApplicationGetHttpsEndpointResponse(accessModes, destinationPort, disableGatewayAuth, location, privateIPAddress, publicPort, subDomainSuffix);
         }
     }

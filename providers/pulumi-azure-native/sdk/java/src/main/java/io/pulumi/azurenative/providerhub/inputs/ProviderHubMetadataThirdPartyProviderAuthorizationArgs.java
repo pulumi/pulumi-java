@@ -68,22 +68,21 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
             this.authorizations = authorizations;
             return this;
         }
-
         public Builder authorizations(@Nullable List<LightHouseAuthorizationArgs> authorizations) {
             this.authorizations = Output.ofNullable(authorizations);
             return this;
         }
-
+        public Builder authorizations(LightHouseAuthorizationArgs... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder managedByTenantId(@Nullable Output<String> managedByTenantId) {
             this.managedByTenantId = managedByTenantId;
             return this;
         }
-
         public Builder managedByTenantId(@Nullable String managedByTenantId) {
             this.managedByTenantId = Output.ofNullable(managedByTenantId);
             return this;
-        }
-        public ProviderHubMetadataThirdPartyProviderAuthorizationArgs build() {
+        }        public ProviderHubMetadataThirdPartyProviderAuthorizationArgs build() {
             return new ProviderHubMetadataThirdPartyProviderAuthorizationArgs(authorizations, managedByTenantId);
         }
     }

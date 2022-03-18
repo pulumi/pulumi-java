@@ -72,12 +72,10 @@ public final class AutoscaleResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder recurrence(@Nullable AutoscaleRecurrenceResponse recurrence) {
             this.recurrence = recurrence;
             return this;
-        }
-        public AutoscaleResponse build() {
+        }        public AutoscaleResponse build() {
             return new AutoscaleResponse(capacity, recurrence);
         }
     }

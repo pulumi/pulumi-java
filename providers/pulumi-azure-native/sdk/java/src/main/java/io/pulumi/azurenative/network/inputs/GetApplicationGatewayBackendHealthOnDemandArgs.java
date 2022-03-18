@@ -224,57 +224,46 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
             this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
             return this;
         }
-
         public Builder backendAddressPool(@Nullable SubResource backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
-
         public Builder backendHttpSettings(@Nullable SubResource backendHttpSettings) {
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatch match) {
             this.match = match;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public GetApplicationGatewayBackendHealthOnDemandArgs build() {
+        }        public GetApplicationGatewayBackendHealthOnDemandArgs build() {
             return new GetApplicationGatewayBackendHealthOnDemandArgs(applicationGatewayName, backendAddressPool, backendHttpSettings, expand, host, match, path, pickHostNameFromBackendHttpSettings, protocol, resourceGroupName, timeout);
         }
     }

@@ -156,72 +156,58 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder relayName(@Nullable Output<String> relayName) {
             this.relayName = relayName;
             return this;
         }
-
         public Builder relayName(@Nullable String relayName) {
             this.relayName = Output.ofNullable(relayName);
             return this;
         }
-
         public Builder relayType(@Nullable Output<Relaytype> relayType) {
             this.relayType = relayType;
             return this;
         }
-
         public Builder relayType(@Nullable Relaytype relayType) {
             this.relayType = Output.ofNullable(relayType);
             return this;
         }
-
         public Builder requiresClientAuthorization(@Nullable Output<Boolean> requiresClientAuthorization) {
             this.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
-
         public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
             this.requiresClientAuthorization = Output.ofNullable(requiresClientAuthorization);
             return this;
         }
-
         public Builder requiresTransportSecurity(@Nullable Output<Boolean> requiresTransportSecurity) {
             this.requiresTransportSecurity = requiresTransportSecurity;
             return this;
         }
-
         public Builder requiresTransportSecurity(@Nullable Boolean requiresTransportSecurity) {
             this.requiresTransportSecurity = Output.ofNullable(requiresTransportSecurity);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder userMetadata(@Nullable Output<String> userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }
-
         public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = Output.ofNullable(userMetadata);
             return this;
-        }
-        public WCFRelayArgs build() {
+        }        public WCFRelayArgs build() {
             return new WCFRelayArgs(namespaceName, relayName, relayType, requiresClientAuthorization, requiresTransportSecurity, resourceGroupName, userMetadata);
         }
     }

@@ -194,47 +194,47 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder events(List<Object> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(Object... events) {
+            return events(List.of(events));
+        }
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
-
+        public Builder pipelines(TriggerPipelineReferenceResponse... pipelines) {
+            return pipelines(List.of(pipelines));
+        }
         public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
             this.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
-
         public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CustomEventsTriggerResponse build() {
+        }        public CustomEventsTriggerResponse build() {
             return new CustomEventsTriggerResponse(annotations, description, events, pipelines, runtimeState, scope, subjectBeginsWith, subjectEndsWith, type);
         }
     }

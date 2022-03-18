@@ -97,17 +97,20 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
             this.networkApiVersion = networkApiVersion;
             return this;
         }
-
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-
+        public Builder networkInterfaceConfigurations(VirtualMachineNetworkInterfaceConfigurationResponse... networkInterfaceConfigurations) {
+            return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
+        }
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-        public NetworkProfileResponse build() {
+        public Builder networkInterfaces(NetworkInterfaceReferenceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }        public NetworkProfileResponse build() {
             return new NetworkProfileResponse(networkApiVersion, networkInterfaceConfigurations, networkInterfaces);
         }
     }

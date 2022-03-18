@@ -283,77 +283,68 @@ public final class GetRelationshipResult {
             this.cardinality = cardinality;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder expiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
             this.expiryDateTimeUtc = expiryDateTimeUtc;
             return this;
         }
-
         public Builder fields(@Nullable List<PropertyDefinitionResponse> fields) {
             this.fields = fields;
             return this;
         }
-
+        public Builder fields(PropertyDefinitionResponse... fields) {
+            return fields(List.of(fields));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lookupMappings(@Nullable List<RelationshipTypeMappingResponse> lookupMappings) {
             this.lookupMappings = lookupMappings;
             return this;
         }
-
+        public Builder lookupMappings(RelationshipTypeMappingResponse... lookupMappings) {
+            return lookupMappings(List.of(lookupMappings));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder profileType(String profileType) {
             this.profileType = Objects.requireNonNull(profileType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder relatedProfileType(String relatedProfileType) {
             this.relatedProfileType = Objects.requireNonNull(relatedProfileType);
             return this;
         }
-
         public Builder relationshipGuidId(String relationshipGuidId) {
             this.relationshipGuidId = Objects.requireNonNull(relationshipGuidId);
             return this;
         }
-
         public Builder relationshipName(String relationshipName) {
             this.relationshipName = Objects.requireNonNull(relationshipName);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRelationshipResult build() {
+        }        public GetRelationshipResult build() {
             return new GetRelationshipResult(cardinality, description, displayName, expiryDateTimeUtc, fields, id, lookupMappings, name, profileType, provisioningState, relatedProfileType, relationshipGuidId, relationshipName, tenantId, type);
         }
     }

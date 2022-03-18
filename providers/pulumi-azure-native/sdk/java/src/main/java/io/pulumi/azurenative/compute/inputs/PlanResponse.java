@@ -110,22 +110,18 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
-
         public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
-        }
-        public PlanResponse build() {
+        }        public PlanResponse build() {
             return new PlanResponse(name, product, promotionCode, publisher);
         }
     }

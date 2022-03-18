@@ -180,42 +180,37 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder dnsSettings(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder ipTags(@Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
-
+        public Builder ipTags(VirtualMachineScaleSetIpTagResponse... ipTags) {
+            return ipTags(List.of(ipTags));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
-
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
-
         public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
             this.sku = sku;
             return this;
-        }
-        public VirtualMachineScaleSetPublicIPAddressConfigurationResponse build() {
+        }        public VirtualMachineScaleSetPublicIPAddressConfigurationResponse build() {
             return new VirtualMachineScaleSetPublicIPAddressConfigurationResponse(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPPrefix, sku);
         }
     }

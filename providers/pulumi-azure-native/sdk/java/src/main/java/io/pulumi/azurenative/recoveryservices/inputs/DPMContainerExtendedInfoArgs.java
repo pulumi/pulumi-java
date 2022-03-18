@@ -61,12 +61,10 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
             return this;
-        }
-        public DPMContainerExtendedInfoArgs build() {
+        }        public DPMContainerExtendedInfoArgs build() {
             return new DPMContainerExtendedInfoArgs(lastRefreshedAt);
         }
     }

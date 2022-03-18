@@ -123,52 +123,42 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder gatewayId(Output<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
             return this;
         }
-
         public Builder isTrusted(@Nullable Output<Boolean> isTrusted) {
             this.isTrusted = isTrusted;
             return this;
         }
-
         public Builder isTrusted(@Nullable Boolean isTrusted) {
             this.isTrusted = Output.ofNullable(isTrusted);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public GatewayCertificateAuthorityArgs build() {
+        }        public GatewayCertificateAuthorityArgs build() {
             return new GatewayCertificateAuthorityArgs(certificateId, gatewayId, isTrusted, resourceGroupName, serviceName);
         }
     }

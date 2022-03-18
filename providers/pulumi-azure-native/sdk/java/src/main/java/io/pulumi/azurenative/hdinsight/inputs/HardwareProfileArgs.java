@@ -61,12 +61,10 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
-        }
-        public HardwareProfileArgs build() {
+        }        public HardwareProfileArgs build() {
             return new HardwareProfileArgs(vmSize);
         }
     }

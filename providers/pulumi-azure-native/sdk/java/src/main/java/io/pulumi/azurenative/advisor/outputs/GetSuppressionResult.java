@@ -135,32 +135,26 @@ public final class GetSuppressionResult {
             this.expirationTimeStamp = Objects.requireNonNull(expirationTimeStamp);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder suppressionId(@Nullable String suppressionId) {
             this.suppressionId = suppressionId;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSuppressionResult build() {
+        }        public GetSuppressionResult build() {
             return new GetSuppressionResult(expirationTimeStamp, id, name, suppressionId, ttl, type);
         }
     }

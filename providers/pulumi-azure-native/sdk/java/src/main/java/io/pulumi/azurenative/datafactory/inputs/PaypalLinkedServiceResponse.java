@@ -247,62 +247,53 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder clientId(Object clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder host(Object host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-
         public Builder useHostVerification(@Nullable Object useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
-        }
-        public PaypalLinkedServiceResponse build() {
+        }        public PaypalLinkedServiceResponse build() {
             return new PaypalLinkedServiceResponse(annotations, clientId, clientSecret, connectVia, description, encryptedCredential, host, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }
     }

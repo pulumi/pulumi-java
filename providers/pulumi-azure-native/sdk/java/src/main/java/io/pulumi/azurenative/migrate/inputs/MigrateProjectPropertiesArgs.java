@@ -81,22 +81,21 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder registeredTools(@Nullable Output<List<String>> registeredTools) {
             this.registeredTools = registeredTools;
             return this;
         }
-
         public Builder registeredTools(@Nullable List<String> registeredTools) {
             this.registeredTools = Output.ofNullable(registeredTools);
             return this;
         }
-        public MigrateProjectPropertiesArgs build() {
+        public Builder registeredTools(String... registeredTools) {
+            return registeredTools(List.of(registeredTools));
+        }        public MigrateProjectPropertiesArgs build() {
             return new MigrateProjectPropertiesArgs(provisioningState, registeredTools);
         }
     }

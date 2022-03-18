@@ -79,22 +79,18 @@ public final class DeliveryRuleUrlFileExtensionConditionArgs extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<UrlFileExtensionMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(UrlFileExtensionMatchConditionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public DeliveryRuleUrlFileExtensionConditionArgs build() {
+        }        public DeliveryRuleUrlFileExtensionConditionArgs build() {
             return new DeliveryRuleUrlFileExtensionConditionArgs(name, parameters);
         }
     }

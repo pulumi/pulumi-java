@@ -139,62 +139,50 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder dataSetName(@Nullable Output<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
-
         public Builder dataSetName(@Nullable String dataSetName) {
             this.dataSetName = Output.ofNullable(dataSetName);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
-
         public Builder synapseWorkspaceSqlPoolTableResourceId(Output<String> synapseWorkspaceSqlPoolTableResourceId) {
             this.synapseWorkspaceSqlPoolTableResourceId = Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId);
             return this;
         }
-
         public Builder synapseWorkspaceSqlPoolTableResourceId(String synapseWorkspaceSqlPoolTableResourceId) {
             this.synapseWorkspaceSqlPoolTableResourceId = Output.of(Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId));
             return this;
-        }
-        public SynapseWorkspaceSqlPoolTableDataSetArgs build() {
+        }        public SynapseWorkspaceSqlPoolTableDataSetArgs build() {
             return new SynapseWorkspaceSqlPoolTableDataSetArgs(accountName, dataSetName, kind, resourceGroupName, shareName, synapseWorkspaceSqlPoolTableResourceId);
         }
     }

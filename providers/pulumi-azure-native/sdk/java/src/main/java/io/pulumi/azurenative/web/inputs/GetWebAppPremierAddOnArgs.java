@@ -88,17 +88,14 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder premierAddOnName(String premierAddOnName) {
             this.premierAddOnName = Objects.requireNonNull(premierAddOnName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppPremierAddOnArgs build() {
+        }        public GetWebAppPremierAddOnArgs build() {
             return new GetWebAppPremierAddOnArgs(name, premierAddOnName, resourceGroupName);
         }
     }

@@ -264,132 +264,109 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder clusterUri(Output<Object> clusterUri) {
             this.clusterUri = Objects.requireNonNull(clusterUri);
             return this;
         }
-
         public Builder clusterUri(Object clusterUri) {
             this.clusterUri = Output.of(Objects.requireNonNull(clusterUri));
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder fileSystem(@Nullable Output<Object> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public Builder fileSystem(@Nullable Object fileSystem) {
             this.fileSystem = Output.ofNullable(fileSystem);
             return this;
         }
-
         public Builder hcatalogLinkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName) {
             this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
-
         public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceArgs hcatalogLinkedServiceName) {
             this.hcatalogLinkedServiceName = Output.ofNullable(hcatalogLinkedServiceName);
             return this;
         }
-
         public Builder isEspEnabled(@Nullable Output<Object> isEspEnabled) {
             this.isEspEnabled = isEspEnabled;
             return this;
         }
-
         public Builder isEspEnabled(@Nullable Object isEspEnabled) {
             this.isEspEnabled = Output.ofNullable(isEspEnabled);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userName(@Nullable Output<Object> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public HDInsightLinkedServiceArgs build() {
+        }        public HDInsightLinkedServiceArgs build() {
             return new HDInsightLinkedServiceArgs(annotations, clusterUri, connectVia, description, encryptedCredential, fileSystem, hcatalogLinkedServiceName, isEspEnabled, linkedServiceName, parameters, password, type, userName);
         }
     }

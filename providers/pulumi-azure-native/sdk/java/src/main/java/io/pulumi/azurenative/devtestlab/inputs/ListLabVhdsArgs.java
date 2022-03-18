@@ -72,12 +72,10 @@ public final class ListLabVhdsArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListLabVhdsArgs build() {
+        }        public ListLabVhdsArgs build() {
             return new ListLabVhdsArgs(name, resourceGroupName);
         }
     }

@@ -104,22 +104,18 @@ public final class ListHybridConnectionKeysArgs extends io.pulumi.resources.Invo
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListHybridConnectionKeysArgs build() {
+        }        public ListHybridConnectionKeysArgs build() {
             return new ListHybridConnectionKeysArgs(authorizationRuleName, hybridConnectionName, namespaceName, resourceGroupName);
         }
     }

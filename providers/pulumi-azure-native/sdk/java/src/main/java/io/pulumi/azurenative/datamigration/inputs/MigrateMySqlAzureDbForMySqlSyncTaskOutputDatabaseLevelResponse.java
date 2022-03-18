@@ -315,87 +315,70 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
             this.appliedChanges = Objects.requireNonNull(appliedChanges);
             return this;
         }
-
         public Builder cdcDeleteCounter(Double cdcDeleteCounter) {
             this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
             return this;
         }
-
         public Builder cdcInsertCounter(Double cdcInsertCounter) {
             this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
             return this;
         }
-
         public Builder cdcUpdateCounter(Double cdcUpdateCounter) {
             this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder fullLoadCompletedTables(Double fullLoadCompletedTables) {
             this.fullLoadCompletedTables = Objects.requireNonNull(fullLoadCompletedTables);
             return this;
         }
-
         public Builder fullLoadErroredTables(Double fullLoadErroredTables) {
             this.fullLoadErroredTables = Objects.requireNonNull(fullLoadErroredTables);
             return this;
         }
-
         public Builder fullLoadLoadingTables(Double fullLoadLoadingTables) {
             this.fullLoadLoadingTables = Objects.requireNonNull(fullLoadLoadingTables);
             return this;
         }
-
         public Builder fullLoadQueuedTables(Double fullLoadQueuedTables) {
             this.fullLoadQueuedTables = Objects.requireNonNull(fullLoadQueuedTables);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder incomingChanges(Double incomingChanges) {
             this.incomingChanges = Objects.requireNonNull(incomingChanges);
             return this;
         }
-
         public Builder initializationCompleted(Boolean initializationCompleted) {
             this.initializationCompleted = Objects.requireNonNull(initializationCompleted);
             return this;
         }
-
         public Builder latency(Double latency) {
             this.latency = Objects.requireNonNull(latency);
             return this;
         }
-
         public Builder migrationState(String migrationState) {
             this.migrationState = Objects.requireNonNull(migrationState);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
-        }
-        public MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse build() {
+        }        public MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse(appliedChanges, cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, databaseName, endedOn, fullLoadCompletedTables, fullLoadErroredTables, fullLoadLoadingTables, fullLoadQueuedTables, id, incomingChanges, initializationCompleted, latency, migrationState, resultType, startedOn);
         }
     }

@@ -129,52 +129,51 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
-        public InitContainerDefinitionArgs build() {
+        public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }        public InitContainerDefinitionArgs build() {
             return new InitContainerDefinitionArgs(command, environmentVariables, image, name, volumeMounts);
         }
     }

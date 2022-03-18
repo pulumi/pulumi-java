@@ -53,8 +53,7 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
         public Builder bounds(@Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
             this.bounds = bounds;
             return this;
-        }
-        public ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration build() {
+        }        public ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration build() {
             return new ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(bounds);
         }
     }

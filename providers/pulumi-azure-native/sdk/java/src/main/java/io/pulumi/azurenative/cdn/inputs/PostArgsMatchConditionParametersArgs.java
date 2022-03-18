@@ -143,62 +143,56 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
             this.matchValues = matchValues;
             return this;
         }
-
         public Builder matchValues(@Nullable List<String> matchValues) {
             this.matchValues = Output.ofNullable(matchValues);
             return this;
         }
-
+        public Builder matchValues(String... matchValues) {
+            return matchValues(List.of(matchValues));
+        }
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
-
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = Output.ofNullable(negateCondition);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder operator(Output<Either<String,PostArgsOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,PostArgsOperator> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder transforms(@Nullable Output<List<Either<String,Transform>>> transforms) {
             this.transforms = transforms;
             return this;
         }
-
         public Builder transforms(@Nullable List<Either<String,Transform>> transforms) {
             this.transforms = Output.ofNullable(transforms);
             return this;
         }
-        public PostArgsMatchConditionParametersArgs build() {
+        public Builder transforms(Either<String,Transform>... transforms) {
+            return transforms(List.of(transforms));
+        }        public PostArgsMatchConditionParametersArgs build() {
             return new PostArgsMatchConditionParametersArgs(matchValues, negateCondition, odataType, operator, selector, transforms);
         }
     }

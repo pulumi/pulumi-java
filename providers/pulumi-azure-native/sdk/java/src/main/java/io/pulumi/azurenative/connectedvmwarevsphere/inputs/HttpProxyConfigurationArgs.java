@@ -61,12 +61,10 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
             this.httpsProxy = httpsProxy;
             return this;
         }
-
         public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = Output.ofNullable(httpsProxy);
             return this;
-        }
-        public HttpProxyConfigurationArgs build() {
+        }        public HttpProxyConfigurationArgs build() {
             return new HttpProxyConfigurationArgs(httpsProxy);
         }
     }

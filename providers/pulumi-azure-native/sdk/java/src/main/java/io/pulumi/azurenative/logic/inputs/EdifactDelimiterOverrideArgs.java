@@ -241,122 +241,98 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
-
         public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
-
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
-
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
-
         public Builder decimalPointIndicator(Output<EdifactDecimalIndicator> decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
-
         public Builder decimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
             this.decimalPointIndicator = Output.of(Objects.requireNonNull(decimalPointIndicator));
             return this;
         }
-
         public Builder messageAssociationAssignedCode(@Nullable Output<String> messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
-
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = Output.ofNullable(messageAssociationAssignedCode);
             return this;
         }
-
         public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = Output.ofNullable(messageId);
             return this;
         }
-
         public Builder messageRelease(@Nullable Output<String> messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
-
         public Builder messageRelease(@Nullable String messageRelease) {
             this.messageRelease = Output.ofNullable(messageRelease);
             return this;
         }
-
         public Builder messageVersion(@Nullable Output<String> messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
-
         public Builder messageVersion(@Nullable String messageVersion) {
             this.messageVersion = Output.ofNullable(messageVersion);
             return this;
         }
-
         public Builder releaseIndicator(Output<Integer> releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
-
         public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Output.of(Objects.requireNonNull(releaseIndicator));
             return this;
         }
-
         public Builder repetitionSeparator(Output<Integer> repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
-
         public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Output.of(Objects.requireNonNull(repetitionSeparator));
             return this;
         }
-
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
-
         public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
-
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
-
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
-        }
-        public EdifactDelimiterOverrideArgs build() {
+        }        public EdifactDelimiterOverrideArgs build() {
             return new EdifactDelimiterOverrideArgs(componentSeparator, dataElementSeparator, decimalPointIndicator, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }
     }

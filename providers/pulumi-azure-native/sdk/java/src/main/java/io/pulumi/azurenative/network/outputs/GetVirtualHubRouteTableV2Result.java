@@ -137,32 +137,32 @@ public final class GetVirtualHubRouteTableV2Result {
             this.attachedConnections = attachedConnections;
             return this;
         }
-
+        public Builder attachedConnections(String... attachedConnections) {
+            return attachedConnections(List.of(attachedConnections));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routes(@Nullable List<VirtualHubRouteV2Response> routes) {
             this.routes = routes;
             return this;
         }
-        public GetVirtualHubRouteTableV2Result build() {
+        public Builder routes(VirtualHubRouteV2Response... routes) {
+            return routes(List.of(routes));
+        }        public GetVirtualHubRouteTableV2Result build() {
             return new GetVirtualHubRouteTableV2Result(attachedConnections, etag, id, name, provisioningState, routes);
         }
     }

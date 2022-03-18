@@ -104,22 +104,18 @@ public final class GetADLSGen1FileDataSetArgs extends io.pulumi.resources.Invoke
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder dataSetName(String dataSetName) {
             this.dataSetName = Objects.requireNonNull(dataSetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
-        }
-        public GetADLSGen1FileDataSetArgs build() {
+        }        public GetADLSGen1FileDataSetArgs build() {
             return new GetADLSGen1FileDataSetArgs(accountName, dataSetName, resourceGroupName, shareName);
         }
     }

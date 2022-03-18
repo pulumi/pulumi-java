@@ -163,37 +163,30 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
             this.credential = credential;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder pfx(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
             this.pfx = pfx;
             return this;
         }
-
         public Builder resource(@Nullable Object resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userTenant(@Nullable Object userTenant) {
             this.userTenant = userTenant;
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
-        }
-        public WebActivityAuthenticationResponse build() {
+        }        public WebActivityAuthenticationResponse build() {
             return new WebActivityAuthenticationResponse(credential, password, pfx, resource, type, userTenant, username);
         }
     }

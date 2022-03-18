@@ -94,17 +94,14 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder queryId(@Nullable String queryId) {
             this.queryId = queryId;
             return this;
-        }
-        public GetInsightsErrorResponse build() {
+        }        public GetInsightsErrorResponse build() {
             return new GetInsightsErrorResponse(errorMessage, kind, queryId);
         }
     }

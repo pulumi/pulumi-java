@@ -72,12 +72,10 @@ public final class ListStaticSiteConfiguredRolesArgs extends io.pulumi.resources
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListStaticSiteConfiguredRolesArgs build() {
+        }        public ListStaticSiteConfiguredRolesArgs build() {
             return new ListStaticSiteConfiguredRolesArgs(name, resourceGroupName);
         }
     }

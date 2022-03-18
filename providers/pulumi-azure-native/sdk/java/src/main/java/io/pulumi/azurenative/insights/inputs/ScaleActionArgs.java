@@ -112,42 +112,34 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
             this.cooldown = Objects.requireNonNull(cooldown);
             return this;
         }
-
         public Builder cooldown(String cooldown) {
             this.cooldown = Output.of(Objects.requireNonNull(cooldown));
             return this;
         }
-
         public Builder direction(Output<ScaleDirection> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder direction(ScaleDirection direction) {
             this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
-
         public Builder type(Output<ScaleType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ScaleType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ScaleActionArgs build() {
+        }        public ScaleActionArgs build() {
             return new ScaleActionArgs(cooldown, direction, type, value);
         }
     }

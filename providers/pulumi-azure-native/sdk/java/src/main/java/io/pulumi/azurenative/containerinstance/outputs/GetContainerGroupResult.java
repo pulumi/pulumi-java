@@ -378,102 +378,94 @@ public final class GetContainerGroupResult {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
-
+        public Builder containers(ContainerResponse... containers) {
+            return containers(List.of(containers));
+        }
         public Builder diagnostics(@Nullable ContainerGroupDiagnosticsResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder dnsConfig(@Nullable DnsConfigurationResponse dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder encryptionProperties(@Nullable EncryptionPropertiesResponse encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ContainerGroupIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder imageRegistryCredentials(@Nullable List<ImageRegistryCredentialResponse> imageRegistryCredentials) {
             this.imageRegistryCredentials = imageRegistryCredentials;
             return this;
         }
-
+        public Builder imageRegistryCredentials(ImageRegistryCredentialResponse... imageRegistryCredentials) {
+            return imageRegistryCredentials(List.of(imageRegistryCredentials));
+        }
         public Builder initContainers(@Nullable List<InitContainerDefinitionResponse> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
-
+        public Builder initContainers(InitContainerDefinitionResponse... initContainers) {
+            return initContainers(List.of(initContainers));
+        }
         public Builder instanceView(ContainerGroupResponseInstanceView instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder ipAddress(@Nullable IpAddressResponse ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable ContainerGroupNetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeResponse> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public GetContainerGroupResult build() {
+        public Builder volumes(VolumeResponse... volumes) {
+            return volumes(List.of(volumes));
+        }        public GetContainerGroupResult build() {
             return new GetContainerGroupResult(containers, diagnostics, dnsConfig, encryptionProperties, id, identity, imageRegistryCredentials, initContainers, instanceView, ipAddress, location, name, networkProfile, osType, provisioningState, restartPolicy, sku, tags, type, volumes);
         }
     }

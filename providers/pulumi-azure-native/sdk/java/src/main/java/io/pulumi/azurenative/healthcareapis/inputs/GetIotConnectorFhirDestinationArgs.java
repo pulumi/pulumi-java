@@ -104,22 +104,18 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
             this.fhirDestinationName = Objects.requireNonNull(fhirDestinationName);
             return this;
         }
-
         public Builder iotConnectorName(String iotConnectorName) {
             this.iotConnectorName = Objects.requireNonNull(iotConnectorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIotConnectorFhirDestinationArgs build() {
+        }        public GetIotConnectorFhirDestinationArgs build() {
             return new GetIotConnectorFhirDestinationArgs(fhirDestinationName, iotConnectorName, resourceGroupName, workspaceName);
         }
     }

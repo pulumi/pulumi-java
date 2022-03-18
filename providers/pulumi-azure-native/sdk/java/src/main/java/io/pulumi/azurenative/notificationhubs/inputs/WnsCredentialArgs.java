@@ -94,32 +94,26 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.packageSid = packageSid;
             return this;
         }
-
         public Builder packageSid(@Nullable String packageSid) {
             this.packageSid = Output.ofNullable(packageSid);
             return this;
         }
-
         public Builder secretKey(@Nullable Output<String> secretKey) {
             this.secretKey = secretKey;
             return this;
         }
-
         public Builder secretKey(@Nullable String secretKey) {
             this.secretKey = Output.ofNullable(secretKey);
             return this;
         }
-
         public Builder windowsLiveEndpoint(@Nullable Output<String> windowsLiveEndpoint) {
             this.windowsLiveEndpoint = windowsLiveEndpoint;
             return this;
         }
-
         public Builder windowsLiveEndpoint(@Nullable String windowsLiveEndpoint) {
             this.windowsLiveEndpoint = Output.ofNullable(windowsLiveEndpoint);
             return this;
-        }
-        public WnsCredentialArgs build() {
+        }        public WnsCredentialArgs build() {
             return new WnsCredentialArgs(packageSid, secretKey, windowsLiveEndpoint);
         }
     }

@@ -102,22 +102,18 @@ public final class GetCostAllocationRuleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(CostAllocationRulePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCostAllocationRuleResult build() {
+        }        public GetCostAllocationRuleResult build() {
             return new GetCostAllocationRuleResult(id, name, properties, type);
         }
     }

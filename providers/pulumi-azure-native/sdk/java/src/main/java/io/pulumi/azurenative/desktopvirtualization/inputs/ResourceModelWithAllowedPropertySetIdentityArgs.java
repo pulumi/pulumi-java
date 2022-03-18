@@ -57,12 +57,10 @@ public final class ResourceModelWithAllowedPropertySetIdentityArgs extends io.pu
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ResourceModelWithAllowedPropertySetIdentityArgs build() {
+        }        public ResourceModelWithAllowedPropertySetIdentityArgs build() {
             return new ResourceModelWithAllowedPropertySetIdentityArgs(type);
         }
     }

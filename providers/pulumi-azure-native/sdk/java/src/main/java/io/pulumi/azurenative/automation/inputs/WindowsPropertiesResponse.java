@@ -111,22 +111,24 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
             this.excludedKbNumbers = excludedKbNumbers;
             return this;
         }
-
+        public Builder excludedKbNumbers(String... excludedKbNumbers) {
+            return excludedKbNumbers(List.of(excludedKbNumbers));
+        }
         public Builder includedKbNumbers(@Nullable List<String> includedKbNumbers) {
             this.includedKbNumbers = includedKbNumbers;
             return this;
         }
-
+        public Builder includedKbNumbers(String... includedKbNumbers) {
+            return includedKbNumbers(List.of(includedKbNumbers));
+        }
         public Builder includedUpdateClassifications(@Nullable String includedUpdateClassifications) {
             this.includedUpdateClassifications = includedUpdateClassifications;
             return this;
         }
-
         public Builder rebootSetting(@Nullable String rebootSetting) {
             this.rebootSetting = rebootSetting;
             return this;
-        }
-        public WindowsPropertiesResponse build() {
+        }        public WindowsPropertiesResponse build() {
             return new WindowsPropertiesResponse(excludedKbNumbers, includedKbNumbers, includedUpdateClassifications, rebootSetting);
         }
     }

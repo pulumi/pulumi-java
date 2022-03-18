@@ -204,52 +204,48 @@ public final class GetAutoscaleSettingResult {
             this.enabled = enabled;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notifications(@Nullable List<AutoscaleNotificationResponse> notifications) {
             this.notifications = notifications;
             return this;
         }
-
+        public Builder notifications(AutoscaleNotificationResponse... notifications) {
+            return notifications(List.of(notifications));
+        }
         public Builder profiles(List<AutoscaleProfileResponse> profiles) {
             this.profiles = Objects.requireNonNull(profiles);
             return this;
         }
-
+        public Builder profiles(AutoscaleProfileResponse... profiles) {
+            return profiles(List.of(profiles));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetResourceLocation(@Nullable String targetResourceLocation) {
             this.targetResourceLocation = targetResourceLocation;
             return this;
         }
-
         public Builder targetResourceUri(@Nullable String targetResourceUri) {
             this.targetResourceUri = targetResourceUri;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAutoscaleSettingResult build() {
+        }        public GetAutoscaleSettingResult build() {
             return new GetAutoscaleSettingResult(enabled, id, location, name, notifications, profiles, tags, targetResourceLocation, targetResourceUri, type);
         }
     }

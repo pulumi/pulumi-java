@@ -72,12 +72,10 @@ public final class ListWebAppApplicationSettingsArgs extends io.pulumi.resources
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppApplicationSettingsArgs build() {
+        }        public ListWebAppApplicationSettingsArgs build() {
             return new ListWebAppApplicationSettingsArgs(name, resourceGroupName);
         }
     }

@@ -109,22 +109,18 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends io.pulumi
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public ServicePrincipalCertificateAuthInfoResponse build() {
+        }        public ServicePrincipalCertificateAuthInfoResponse build() {
             return new ServicePrincipalCertificateAuthInfoResponse(authType, certificate, clientId, principalId);
         }
     }

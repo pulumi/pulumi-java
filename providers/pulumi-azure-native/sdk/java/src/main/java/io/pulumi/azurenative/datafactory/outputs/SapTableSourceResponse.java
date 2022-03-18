@@ -299,82 +299,66 @@ public final class SapTableSourceResponse {
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder batchSize(@Nullable Object batchSize) {
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
             this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder partitionOption(@Nullable Object partitionOption) {
             this.partitionOption = partitionOption;
             return this;
         }
-
         public Builder partitionSettings(@Nullable SapTablePartitionSettingsResponse partitionSettings) {
             this.partitionSettings = partitionSettings;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder rfcTableFields(@Nullable Object rfcTableFields) {
             this.rfcTableFields = rfcTableFields;
             return this;
         }
-
         public Builder rfcTableOptions(@Nullable Object rfcTableOptions) {
             this.rfcTableOptions = rfcTableOptions;
             return this;
         }
-
         public Builder rowCount(@Nullable Object rowCount) {
             this.rowCount = rowCount;
             return this;
         }
-
         public Builder rowSkips(@Nullable Object rowSkips) {
             this.rowSkips = rowSkips;
             return this;
         }
-
         public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
             this.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SapTableSourceResponse build() {
+        }        public SapTableSourceResponse build() {
             return new SapTableSourceResponse(additionalColumns, batchSize, customRfcReadTableFunctionModule, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, queryTimeout, rfcTableFields, rfcTableOptions, rowCount, rowSkips, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
         }
     }

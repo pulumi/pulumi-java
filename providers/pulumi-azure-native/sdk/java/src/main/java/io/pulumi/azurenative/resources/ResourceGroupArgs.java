@@ -107,42 +107,34 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
-
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
-
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResourceGroupArgs build() {
+        }        public ResourceGroupArgs build() {
             return new ResourceGroupArgs(location, managedBy, resourceGroupName, tags);
         }
     }

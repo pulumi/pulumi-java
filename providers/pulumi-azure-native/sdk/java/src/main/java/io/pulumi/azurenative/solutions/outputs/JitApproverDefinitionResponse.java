@@ -87,17 +87,14 @@ public final class JitApproverDefinitionResponse {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public JitApproverDefinitionResponse build() {
+        }        public JitApproverDefinitionResponse build() {
             return new JitApproverDefinitionResponse(displayName, id, type);
         }
     }

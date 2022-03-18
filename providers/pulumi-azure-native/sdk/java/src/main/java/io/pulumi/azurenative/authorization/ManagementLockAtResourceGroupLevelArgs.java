@@ -126,52 +126,45 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public Builder level(Either<String,LockLevel> level) {
             this.level = Output.of(Objects.requireNonNull(level));
             return this;
         }
-
         public Builder lockName(@Nullable Output<String> lockName) {
             this.lockName = lockName;
             return this;
         }
-
         public Builder lockName(@Nullable String lockName) {
             this.lockName = Output.ofNullable(lockName);
             return this;
         }
-
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
             this.owners = owners;
             return this;
         }
-
         public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
             this.owners = Output.ofNullable(owners);
             return this;
         }
-
+        public Builder owners(ManagementLockOwnerArgs... owners) {
+            return owners(List.of(owners));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ManagementLockAtResourceGroupLevelArgs build() {
+        }        public ManagementLockAtResourceGroupLevelArgs build() {
             return new ManagementLockAtResourceGroupLevelArgs(level, lockName, notes, owners, resourceGroupName);
         }
     }

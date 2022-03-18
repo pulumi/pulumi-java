@@ -97,32 +97,26 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
             this.diskEncryptionSet = Output.ofNullable(diskEncryptionSet);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
-        }
-        public ManagedDiskParametersArgs build() {
+        }        public ManagedDiskParametersArgs build() {
             return new ManagedDiskParametersArgs(diskEncryptionSet, id, storageAccountType);
         }
     }

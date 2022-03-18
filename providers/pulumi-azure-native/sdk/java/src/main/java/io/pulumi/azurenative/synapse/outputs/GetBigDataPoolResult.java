@@ -416,117 +416,97 @@ public final class GetBigDataPoolResult {
             this.autoPause = autoPause;
             return this;
         }
-
         public Builder autoScale(@Nullable AutoScalePropertiesResponse autoScale) {
             this.autoScale = autoScale;
             return this;
         }
-
         public Builder cacheSize(@Nullable Integer cacheSize) {
             this.cacheSize = cacheSize;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder customLibraries(@Nullable List<LibraryInfoResponse> customLibraries) {
             this.customLibraries = customLibraries;
             return this;
         }
-
+        public Builder customLibraries(LibraryInfoResponse... customLibraries) {
+            return customLibraries(List.of(customLibraries));
+        }
         public Builder defaultSparkLogFolder(@Nullable String defaultSparkLogFolder) {
             this.defaultSparkLogFolder = defaultSparkLogFolder;
             return this;
         }
-
         public Builder dynamicExecutorAllocation(@Nullable DynamicExecutorAllocationResponse dynamicExecutorAllocation) {
             this.dynamicExecutorAllocation = dynamicExecutorAllocation;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isComputeIsolationEnabled(@Nullable Boolean isComputeIsolationEnabled) {
             this.isComputeIsolationEnabled = isComputeIsolationEnabled;
             return this;
         }
-
         public Builder lastSucceededTimestamp(String lastSucceededTimestamp) {
             this.lastSucceededTimestamp = Objects.requireNonNull(lastSucceededTimestamp);
             return this;
         }
-
         public Builder libraryRequirements(@Nullable LibraryRequirementsResponse libraryRequirements) {
             this.libraryRequirements = libraryRequirements;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder nodeSize(@Nullable String nodeSize) {
             this.nodeSize = nodeSize;
             return this;
         }
-
         public Builder nodeSizeFamily(@Nullable String nodeSizeFamily) {
             this.nodeSizeFamily = nodeSizeFamily;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder sessionLevelPackagesEnabled(@Nullable Boolean sessionLevelPackagesEnabled) {
             this.sessionLevelPackagesEnabled = sessionLevelPackagesEnabled;
             return this;
         }
-
         public Builder sparkConfigProperties(@Nullable LibraryRequirementsResponse sparkConfigProperties) {
             this.sparkConfigProperties = sparkConfigProperties;
             return this;
         }
-
         public Builder sparkEventsFolder(@Nullable String sparkEventsFolder) {
             this.sparkEventsFolder = sparkEventsFolder;
             return this;
         }
-
         public Builder sparkVersion(@Nullable String sparkVersion) {
             this.sparkVersion = sparkVersion;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBigDataPoolResult build() {
+        }        public GetBigDataPoolResult build() {
             return new GetBigDataPoolResult(autoPause, autoScale, cacheSize, creationDate, customLibraries, defaultSparkLogFolder, dynamicExecutorAllocation, id, isComputeIsolationEnabled, lastSucceededTimestamp, libraryRequirements, location, name, nodeCount, nodeSize, nodeSizeFamily, provisioningState, sessionLevelPackagesEnabled, sparkConfigProperties, sparkEventsFolder, sparkVersion, tags, type);
         }
     }

@@ -103,22 +103,21 @@ public final class ResourceHealthDetailsResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder recommendations(List<String> recommendations) {
             this.recommendations = Objects.requireNonNull(recommendations);
             return this;
         }
-
+        public Builder recommendations(String... recommendations) {
+            return recommendations(List.of(recommendations));
+        }
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public ResourceHealthDetailsResponse build() {
+        }        public ResourceHealthDetailsResponse build() {
             return new ResourceHealthDetailsResponse(code, message, recommendations, title);
         }
     }

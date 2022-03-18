@@ -60,8 +60,7 @@ public final class ContainerConfigurationResponse extends io.pulumi.resources.In
         public Builder containerGroupName(@Nullable String containerGroupName) {
             this.containerGroupName = containerGroupName;
             return this;
-        }
-        public ContainerConfigurationResponse build() {
+        }        public ContainerConfigurationResponse build() {
             return new ContainerConfigurationResponse(containerGroupName);
         }
     }

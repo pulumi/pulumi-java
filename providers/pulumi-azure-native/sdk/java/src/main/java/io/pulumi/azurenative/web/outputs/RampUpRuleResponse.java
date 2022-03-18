@@ -175,42 +175,34 @@ public final class RampUpRuleResponse {
             this.actionHostName = actionHostName;
             return this;
         }
-
         public Builder changeDecisionCallbackUrl(@Nullable String changeDecisionCallbackUrl) {
             this.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
             return this;
         }
-
         public Builder changeIntervalInMinutes(@Nullable Integer changeIntervalInMinutes) {
             this.changeIntervalInMinutes = changeIntervalInMinutes;
             return this;
         }
-
         public Builder changeStep(@Nullable Double changeStep) {
             this.changeStep = changeStep;
             return this;
         }
-
         public Builder maxReroutePercentage(@Nullable Double maxReroutePercentage) {
             this.maxReroutePercentage = maxReroutePercentage;
             return this;
         }
-
         public Builder minReroutePercentage(@Nullable Double minReroutePercentage) {
             this.minReroutePercentage = minReroutePercentage;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder reroutePercentage(@Nullable Double reroutePercentage) {
             this.reroutePercentage = reroutePercentage;
             return this;
-        }
-        public RampUpRuleResponse build() {
+        }        public RampUpRuleResponse build() {
             return new RampUpRuleResponse(actionHostName, changeDecisionCallbackUrl, changeIntervalInMinutes, changeStep, maxReroutePercentage, minReroutePercentage, name, reroutePercentage);
         }
     }

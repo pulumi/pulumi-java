@@ -74,12 +74,10 @@ public final class CloudServiceConfigurationResponse extends io.pulumi.resources
             this.osFamily = Objects.requireNonNull(osFamily);
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
-        }
-        public CloudServiceConfigurationResponse build() {
+        }        public CloudServiceConfigurationResponse build() {
             return new CloudServiceConfigurationResponse(osFamily, osVersion);
         }
     }

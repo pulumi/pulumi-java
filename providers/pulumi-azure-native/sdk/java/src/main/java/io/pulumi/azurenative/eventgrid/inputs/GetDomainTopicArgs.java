@@ -88,17 +88,14 @@ public final class GetDomainTopicArgs extends io.pulumi.resources.InvokeArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainTopicName(String domainTopicName) {
             this.domainTopicName = Objects.requireNonNull(domainTopicName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDomainTopicArgs build() {
+        }        public GetDomainTopicArgs build() {
             return new GetDomainTopicArgs(domainName, domainTopicName, resourceGroupName);
         }
     }

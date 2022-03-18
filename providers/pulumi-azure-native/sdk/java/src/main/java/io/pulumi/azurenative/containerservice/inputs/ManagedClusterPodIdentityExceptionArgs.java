@@ -90,32 +90,26 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public Builder podLabels(Output<Map<String,String>> podLabels) {
             this.podLabels = Objects.requireNonNull(podLabels);
             return this;
         }
-
         public Builder podLabels(Map<String,String> podLabels) {
             this.podLabels = Output.of(Objects.requireNonNull(podLabels));
             return this;
-        }
-        public ManagedClusterPodIdentityExceptionArgs build() {
+        }        public ManagedClusterPodIdentityExceptionArgs build() {
             return new ManagedClusterPodIdentityExceptionArgs(name, namespace, podLabels);
         }
     }

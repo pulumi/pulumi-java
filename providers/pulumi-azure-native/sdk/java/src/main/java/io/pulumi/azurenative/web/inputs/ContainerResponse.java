@@ -145,32 +145,35 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(@Nullable List<EnvironmentVarResponse> env) {
             this.env = env;
             return this;
         }
-
+        public Builder env(EnvironmentVarResponse... env) {
+            return env(List.of(env));
+        }
         public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder resources(@Nullable ContainerResourcesResponse resources) {
             this.resources = resources;
             return this;
-        }
-        public ContainerResponse build() {
+        }        public ContainerResponse build() {
             return new ContainerResponse(args, command, env, image, name, resources);
         }
     }

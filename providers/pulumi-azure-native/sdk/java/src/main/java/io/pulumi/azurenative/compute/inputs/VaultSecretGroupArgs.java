@@ -80,22 +80,21 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
             this.sourceVault = sourceVault;
             return this;
         }
-
         public Builder sourceVault(@Nullable SubResourceArgs sourceVault) {
             this.sourceVault = Output.ofNullable(sourceVault);
             return this;
         }
-
         public Builder vaultCertificates(@Nullable Output<List<VaultCertificateArgs>> vaultCertificates) {
             this.vaultCertificates = vaultCertificates;
             return this;
         }
-
         public Builder vaultCertificates(@Nullable List<VaultCertificateArgs> vaultCertificates) {
             this.vaultCertificates = Output.ofNullable(vaultCertificates);
             return this;
         }
-        public VaultSecretGroupArgs build() {
+        public Builder vaultCertificates(VaultCertificateArgs... vaultCertificates) {
+            return vaultCertificates(List.of(vaultCertificates));
+        }        public VaultSecretGroupArgs build() {
             return new VaultSecretGroupArgs(sourceVault, vaultCertificates);
         }
     }

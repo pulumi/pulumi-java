@@ -88,17 +88,14 @@ public final class ScaleSettingsResponse {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
             this.minNodeCount = minNodeCount;
             return this;
         }
-
         public Builder nodeIdleTimeBeforeScaleDown(@Nullable String nodeIdleTimeBeforeScaleDown) {
             this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
-        }
-        public ScaleSettingsResponse build() {
+        }        public ScaleSettingsResponse build() {
             return new ScaleSettingsResponse(maxNodeCount, minNodeCount, nodeIdleTimeBeforeScaleDown);
         }
     }

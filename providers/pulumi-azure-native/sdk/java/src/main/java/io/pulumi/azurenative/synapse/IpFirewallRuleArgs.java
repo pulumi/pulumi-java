@@ -122,52 +122,42 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.endIpAddress = endIpAddress;
             return this;
         }
-
         public Builder endIpAddress(@Nullable String endIpAddress) {
             this.endIpAddress = Output.ofNullable(endIpAddress);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder startIpAddress(@Nullable Output<String> startIpAddress) {
             this.startIpAddress = startIpAddress;
             return this;
         }
-
         public Builder startIpAddress(@Nullable String startIpAddress) {
             this.startIpAddress = Output.ofNullable(startIpAddress);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public IpFirewallRuleArgs build() {
+        }        public IpFirewallRuleArgs build() {
             return new IpFirewallRuleArgs(endIpAddress, resourceGroupName, ruleName, startIpAddress, workspaceName);
         }
     }

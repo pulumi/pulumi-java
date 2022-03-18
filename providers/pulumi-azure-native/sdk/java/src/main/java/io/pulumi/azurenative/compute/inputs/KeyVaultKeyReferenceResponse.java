@@ -77,12 +77,10 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
-
         public Builder sourceVault(SubResourceResponse sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
-        }
-        public KeyVaultKeyReferenceResponse build() {
+        }        public KeyVaultKeyReferenceResponse build() {
             return new KeyVaultKeyReferenceResponse(keyUrl, sourceVault);
         }
     }

@@ -76,12 +76,10 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
             this.sourceName = Objects.requireNonNull(sourceName);
             return this;
         }
-
         public Builder sourceType(String sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
-        }
-        public MetricDimensionResponse build() {
+        }        public MetricDimensionResponse build() {
             return new MetricDimensionResponse(sourceName, sourceType);
         }
     }

@@ -110,42 +110,34 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
             this.city = city;
             return this;
         }
-
         public Builder city(@Nullable String city) {
             this.city = Output.ofNullable(city);
             return this;
         }
-
         public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
-
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
             this.countryOrRegion = Output.ofNullable(countryOrRegion);
             return this;
         }
-
         public Builder district(@Nullable Output<String> district) {
             this.district = district;
             return this;
         }
-
         public Builder district(@Nullable String district) {
             this.district = Output.ofNullable(district);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public LocationDataArgs build() {
+        }        public LocationDataArgs build() {
             return new LocationDataArgs(city, countryOrRegion, district, name);
         }
     }

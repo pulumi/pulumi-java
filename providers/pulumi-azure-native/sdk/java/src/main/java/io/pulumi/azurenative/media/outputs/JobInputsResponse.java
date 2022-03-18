@@ -78,12 +78,13 @@ public final class JobInputsResponse {
             this.inputs = inputs;
             return this;
         }
-
+        public Builder inputs(Object... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public JobInputsResponse build() {
+        }        public JobInputsResponse build() {
             return new JobInputsResponse(inputs, odataType);
         }
     }

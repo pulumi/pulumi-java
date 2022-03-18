@@ -282,77 +282,62 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
             this.apiServerEndpoint = apiServerEndpoint;
             return this;
         }
-
         public Builder clusterRootCA(@Nullable String clusterRootCA) {
             this.clusterRootCA = clusterRootCA;
             return this;
         }
-
         public Builder controllerDetails(ControllerDetailsResponse controllerDetails) {
             this.controllerDetails = Objects.requireNonNull(controllerDetails);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable OrchestratorIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder orchestratorAppId(@Nullable String orchestratorAppId) {
             this.orchestratorAppId = orchestratorAppId;
             return this;
         }
-
         public Builder orchestratorTenantId(@Nullable String orchestratorTenantId) {
             this.orchestratorTenantId = orchestratorTenantId;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOrchestratorInstanceServiceDetailsResult build() {
+        }        public GetOrchestratorInstanceServiceDetailsResult build() {
             return new GetOrchestratorInstanceServiceDetailsResult(apiServerEndpoint, clusterRootCA, controllerDetails, id, identity, kind, location, name, orchestratorAppId, orchestratorTenantId, privateLinkResourceId, provisioningState, resourceGuid, tags, type);
         }
     }

@@ -186,47 +186,38 @@ public final class AzureTableSourceResponse {
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder azureTableSourceIgnoreTableNotFound(@Nullable Object azureTableSourceIgnoreTableNotFound) {
             this.azureTableSourceIgnoreTableNotFound = azureTableSourceIgnoreTableNotFound;
             return this;
         }
-
         public Builder azureTableSourceQuery(@Nullable Object azureTableSourceQuery) {
             this.azureTableSourceQuery = azureTableSourceQuery;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureTableSourceResponse build() {
+        }        public AzureTableSourceResponse build() {
             return new AzureTableSourceResponse(additionalColumns, azureTableSourceIgnoreTableNotFound, azureTableSourceQuery, disableMetricsCollection, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }
     }

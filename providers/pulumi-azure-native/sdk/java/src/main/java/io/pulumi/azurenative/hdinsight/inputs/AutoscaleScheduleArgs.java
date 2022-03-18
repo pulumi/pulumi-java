@@ -80,22 +80,21 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable List<DaysOfWeek> days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
+        public Builder days(DaysOfWeek... days) {
+            return days(List.of(days));
+        }
         public Builder timeAndCapacity(@Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
             this.timeAndCapacity = timeAndCapacity;
             return this;
         }
-
         public Builder timeAndCapacity(@Nullable AutoscaleTimeAndCapacityArgs timeAndCapacity) {
             this.timeAndCapacity = Output.ofNullable(timeAndCapacity);
             return this;
-        }
-        public AutoscaleScheduleArgs build() {
+        }        public AutoscaleScheduleArgs build() {
             return new AutoscaleScheduleArgs(days, timeAndCapacity);
         }
     }

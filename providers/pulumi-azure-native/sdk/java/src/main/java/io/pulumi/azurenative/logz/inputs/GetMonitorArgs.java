@@ -72,12 +72,10 @@ public final class GetMonitorArgs extends io.pulumi.resources.InvokeArgs {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMonitorArgs build() {
+        }        public GetMonitorArgs build() {
             return new GetMonitorArgs(monitorName, resourceGroupName);
         }
     }

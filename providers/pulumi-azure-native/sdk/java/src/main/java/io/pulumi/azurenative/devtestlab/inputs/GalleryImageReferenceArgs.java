@@ -126,52 +126,42 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
             this.offer = offer;
             return this;
         }
-
         public Builder offer(@Nullable String offer) {
             this.offer = Output.ofNullable(offer);
             return this;
         }
-
         public Builder osType(@Nullable Output<String> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
         }
-
         public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GalleryImageReferenceArgs build() {
+        }        public GalleryImageReferenceArgs build() {
             return new GalleryImageReferenceArgs(offer, osType, publisher, sku, version);
         }
     }

@@ -107,42 +107,34 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
             this.diskAccessName = Objects.requireNonNull(diskAccessName);
             return this;
         }
-
         public Builder diskAccessName(String diskAccessName) {
             this.diskAccessName = Output.of(Objects.requireNonNull(diskAccessName));
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DiskAccessAPrivateEndpointConnectionArgs build() {
+        }        public DiskAccessAPrivateEndpointConnectionArgs build() {
             return new DiskAccessAPrivateEndpointConnectionArgs(diskAccessName, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
         }
     }

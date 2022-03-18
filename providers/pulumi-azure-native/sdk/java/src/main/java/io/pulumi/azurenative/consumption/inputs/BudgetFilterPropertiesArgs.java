@@ -78,22 +78,18 @@ public final class BudgetFilterPropertiesArgs extends io.pulumi.resources.Resour
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable BudgetComparisonExpressionArgs dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
         public Builder tags(@Nullable Output<BudgetComparisonExpressionArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable BudgetComparisonExpressionArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public BudgetFilterPropertiesArgs build() {
+        }        public BudgetFilterPropertiesArgs build() {
             return new BudgetFilterPropertiesArgs(dimensions, tags);
         }
     }

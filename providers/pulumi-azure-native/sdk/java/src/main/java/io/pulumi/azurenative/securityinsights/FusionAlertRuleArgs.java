@@ -140,62 +140,50 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.alertRuleTemplateName = Objects.requireNonNull(alertRuleTemplateName);
             return this;
         }
-
         public Builder alertRuleTemplateName(String alertRuleTemplateName) {
             this.alertRuleTemplateName = Output.of(Objects.requireNonNull(alertRuleTemplateName));
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
-
         public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public FusionAlertRuleArgs build() {
+        }        public FusionAlertRuleArgs build() {
             return new FusionAlertRuleArgs(alertRuleTemplateName, enabled, kind, resourceGroupName, ruleId, workspaceName);
         }
     }

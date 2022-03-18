@@ -95,32 +95,26 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder sshProfile(@Nullable Output<SshProfileArgs> sshProfile) {
             this.sshProfile = sshProfile;
             return this;
         }
-
         public Builder sshProfile(@Nullable SshProfileArgs sshProfile) {
             this.sshProfile = Output.ofNullable(sshProfile);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public LinuxOperatingSystemProfileArgs build() {
+        }        public LinuxOperatingSystemProfileArgs build() {
             return new LinuxOperatingSystemProfileArgs(password, sshProfile, username);
         }
     }

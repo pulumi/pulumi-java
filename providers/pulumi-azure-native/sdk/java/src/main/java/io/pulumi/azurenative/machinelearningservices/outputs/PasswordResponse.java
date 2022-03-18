@@ -53,12 +53,10 @@ public final class PasswordResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PasswordResponse build() {
+        }        public PasswordResponse build() {
             return new PasswordResponse(name, value);
         }
     }

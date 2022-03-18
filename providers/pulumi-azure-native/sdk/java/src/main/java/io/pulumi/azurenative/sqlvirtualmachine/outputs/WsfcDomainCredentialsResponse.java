@@ -87,17 +87,14 @@ public final class WsfcDomainCredentialsResponse {
             this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
-
         public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
             this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
-
         public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
             this.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
-        }
-        public WsfcDomainCredentialsResponse build() {
+        }        public WsfcDomainCredentialsResponse build() {
             return new WsfcDomainCredentialsResponse(clusterBootstrapAccountPassword, clusterOperatorAccountPassword, sqlServiceAccountPassword);
         }
     }

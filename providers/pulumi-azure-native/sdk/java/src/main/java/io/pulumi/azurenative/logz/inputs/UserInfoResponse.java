@@ -106,22 +106,18 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.emailAddress = emailAddress;
             return this;
         }
-
         public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
-
         public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
-
         public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
-        }
-        public UserInfoResponse build() {
+        }        public UserInfoResponse build() {
             return new UserInfoResponse(emailAddress, firstName, lastName, phoneNumber);
         }
     }

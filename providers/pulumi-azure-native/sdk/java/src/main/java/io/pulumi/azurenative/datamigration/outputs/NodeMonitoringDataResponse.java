@@ -185,47 +185,38 @@ public final class NodeMonitoringDataResponse {
             this.additionalProperties = Objects.requireNonNull(additionalProperties);
             return this;
         }
-
         public Builder availableMemoryInMB(Integer availableMemoryInMB) {
             this.availableMemoryInMB = Objects.requireNonNull(availableMemoryInMB);
             return this;
         }
-
         public Builder concurrentJobsLimit(Integer concurrentJobsLimit) {
             this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit);
             return this;
         }
-
         public Builder concurrentJobsRunning(Integer concurrentJobsRunning) {
             this.concurrentJobsRunning = Objects.requireNonNull(concurrentJobsRunning);
             return this;
         }
-
         public Builder cpuUtilization(Integer cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
-
         public Builder maxConcurrentJobs(Integer maxConcurrentJobs) {
             this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs);
             return this;
         }
-
         public Builder nodeName(String nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
-
         public Builder receivedBytes(Double receivedBytes) {
             this.receivedBytes = Objects.requireNonNull(receivedBytes);
             return this;
         }
-
         public Builder sentBytes(Double sentBytes) {
             this.sentBytes = Objects.requireNonNull(sentBytes);
             return this;
-        }
-        public NodeMonitoringDataResponse build() {
+        }        public NodeMonitoringDataResponse build() {
             return new NodeMonitoringDataResponse(additionalProperties, availableMemoryInMB, concurrentJobsLimit, concurrentJobsRunning, cpuUtilization, maxConcurrentJobs, nodeName, receivedBytes, sentBytes);
         }
     }

@@ -110,22 +110,18 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
             this.agreementKey = Objects.requireNonNull(agreementKey);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public TldLegalAgreementResponse build() {
+        }        public TldLegalAgreementResponse build() {
             return new TldLegalAgreementResponse(agreementKey, content, title, url);
         }
     }

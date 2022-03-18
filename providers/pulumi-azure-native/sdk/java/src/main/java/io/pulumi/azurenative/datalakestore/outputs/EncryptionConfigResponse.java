@@ -72,12 +72,10 @@ public final class EncryptionConfigResponse {
             this.keyVaultMetaInfo = keyVaultMetaInfo;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EncryptionConfigResponse build() {
+        }        public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(keyVaultMetaInfo, type);
         }
     }

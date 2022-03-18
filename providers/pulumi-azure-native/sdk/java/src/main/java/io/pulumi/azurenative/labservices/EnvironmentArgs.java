@@ -204,102 +204,82 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.environmentName = environmentName;
             return this;
         }
-
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Output.ofNullable(environmentName);
             return this;
         }
-
         public Builder environmentSettingName(Output<String> environmentSettingName) {
             this.environmentSettingName = Objects.requireNonNull(environmentSettingName);
             return this;
         }
-
         public Builder environmentSettingName(String environmentSettingName) {
             this.environmentSettingName = Output.of(Objects.requireNonNull(environmentSettingName));
             return this;
         }
-
         public Builder labAccountName(Output<String> labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
-
         public Builder labAccountName(String labAccountName) {
             this.labAccountName = Output.of(Objects.requireNonNull(labAccountName));
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceSets(@Nullable Output<ResourceSetArgs> resourceSets) {
             this.resourceSets = resourceSets;
             return this;
         }
-
         public Builder resourceSets(@Nullable ResourceSetArgs resourceSets) {
             this.resourceSets = Output.ofNullable(resourceSets);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(environmentName, environmentSettingName, labAccountName, labName, location, provisioningState, resourceGroupName, resourceSets, tags, uniqueIdentifier);
         }
     }

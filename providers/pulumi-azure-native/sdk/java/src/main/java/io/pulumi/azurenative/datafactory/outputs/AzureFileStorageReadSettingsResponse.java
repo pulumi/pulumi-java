@@ -251,67 +251,54 @@ public final class AzureFileStorageReadSettingsResponse {
             this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-
         public Builder fileListPath(@Nullable Object fileListPath) {
             this.fileListPath = fileListPath;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
-
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             this.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
-
         public Builder prefix(@Nullable Object prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder recursive(@Nullable Object recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder wildcardFileName(@Nullable Object wildcardFileName) {
             this.wildcardFileName = wildcardFileName;
             return this;
         }
-
         public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
-        }
-        public AzureFileStorageReadSettingsResponse build() {
+        }        public AzureFileStorageReadSettingsResponse build() {
             return new AzureFileStorageReadSettingsResponse(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, prefix, recursive, type, wildcardFileName, wildcardFolderPath);
         }
     }

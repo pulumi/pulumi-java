@@ -207,52 +207,42 @@ public final class EventHubResponse extends io.pulumi.resources.InvokeArgs {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder connectionStringPrimaryKey(@Nullable String connectionStringPrimaryKey) {
             this.connectionStringPrimaryKey = connectionStringPrimaryKey;
             return this;
         }
-
         public Builder connectionStringSecondaryKey(@Nullable String connectionStringSecondaryKey) {
             this.connectionStringSecondaryKey = connectionStringSecondaryKey;
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
-
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = entityPath;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public EventHubResponse build() {
+        }        public EventHubResponse build() {
             return new EventHubResponse(authenticationType, connectionStringPrimaryKey, connectionStringSecondaryKey, createdTime, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath, provisioningState);
         }
     }

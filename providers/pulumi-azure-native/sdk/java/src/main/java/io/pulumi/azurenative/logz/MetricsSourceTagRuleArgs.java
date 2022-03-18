@@ -119,52 +119,42 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
             this.metricsSourceName = Objects.requireNonNull(metricsSourceName);
             return this;
         }
-
         public Builder metricsSourceName(String metricsSourceName) {
             this.metricsSourceName = Output.of(Objects.requireNonNull(metricsSourceName));
             return this;
         }
-
         public Builder monitorName(Output<String> monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder monitorName(String monitorName) {
             this.monitorName = Output.of(Objects.requireNonNull(monitorName));
             return this;
         }
-
         public Builder properties(@Nullable Output<MetricsTagRulesPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable MetricsTagRulesPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
-
         public Builder ruleSetName(@Nullable String ruleSetName) {
             this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
-        }
-        public MetricsSourceTagRuleArgs build() {
+        }        public MetricsSourceTagRuleArgs build() {
             return new MetricsSourceTagRuleArgs(metricsSourceName, monitorName, properties, resourceGroupName, ruleSetName);
         }
     }

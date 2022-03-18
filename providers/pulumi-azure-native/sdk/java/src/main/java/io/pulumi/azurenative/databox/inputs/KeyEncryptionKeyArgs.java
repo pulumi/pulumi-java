@@ -113,42 +113,34 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
             this.identityProperties = identityProperties;
             return this;
         }
-
         public Builder identityProperties(@Nullable IdentityPropertiesArgs identityProperties) {
             this.identityProperties = Output.ofNullable(identityProperties);
             return this;
         }
-
         public Builder kekType(Output<Either<String,KekType>> kekType) {
             this.kekType = Objects.requireNonNull(kekType);
             return this;
         }
-
         public Builder kekType(Either<String,KekType> kekType) {
             this.kekType = Output.of(Objects.requireNonNull(kekType));
             return this;
         }
-
         public Builder kekUrl(@Nullable Output<String> kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
-
         public Builder kekUrl(@Nullable String kekUrl) {
             this.kekUrl = Output.ofNullable(kekUrl);
             return this;
         }
-
         public Builder kekVaultResourceID(@Nullable Output<String> kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
-
         public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             this.kekVaultResourceID = Output.ofNullable(kekVaultResourceID);
             return this;
-        }
-        public KeyEncryptionKeyArgs build() {
+        }        public KeyEncryptionKeyArgs build() {
             return new KeyEncryptionKeyArgs(identityProperties, kekType, kekUrl, kekVaultResourceID);
         }
     }

@@ -62,12 +62,10 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = Output.ofNullable(resource);
             return this;
-        }
-        public ManagedIdentitySettingsArgs build() {
+        }        public ManagedIdentitySettingsArgs build() {
             return new ManagedIdentitySettingsArgs(resource);
         }
     }

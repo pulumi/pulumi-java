@@ -96,32 +96,26 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
             this.inquiryValidation = inquiryValidation;
             return this;
         }
-
         public Builder inquiryValidation(@Nullable InquiryValidationArgs inquiryValidation) {
             this.inquiryValidation = Output.ofNullable(inquiryValidation);
             return this;
         }
-
         public Builder itemCount(@Nullable Output<Double> itemCount) {
             this.itemCount = itemCount;
             return this;
         }
-
         public Builder itemCount(@Nullable Double itemCount) {
             this.itemCount = Output.ofNullable(itemCount);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public WorkloadInquiryDetailsArgs build() {
+        }        public WorkloadInquiryDetailsArgs build() {
             return new WorkloadInquiryDetailsArgs(inquiryValidation, itemCount, type);
         }
     }

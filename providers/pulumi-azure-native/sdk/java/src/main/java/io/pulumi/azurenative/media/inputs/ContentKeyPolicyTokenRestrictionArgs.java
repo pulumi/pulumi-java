@@ -183,82 +183,72 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
             this.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
-
         public Builder alternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
             this.alternateVerificationKeys = Output.ofNullable(alternateVerificationKeys);
             return this;
         }
-
+        public Builder alternateVerificationKeys(Object... alternateVerificationKeys) {
+            return alternateVerificationKeys(List.of(alternateVerificationKeys));
+        }
         public Builder audience(Output<String> audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
-
         public Builder audience(String audience) {
             this.audience = Output.of(Objects.requireNonNull(audience));
             return this;
         }
-
         public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder openIdConnectDiscoveryDocument(@Nullable Output<String> openIdConnectDiscoveryDocument) {
             this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
-
         public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
             this.openIdConnectDiscoveryDocument = Output.ofNullable(openIdConnectDiscoveryDocument);
             return this;
         }
-
         public Builder primaryVerificationKey(Output<Object> primaryVerificationKey) {
             this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
             return this;
         }
-
         public Builder primaryVerificationKey(Object primaryVerificationKey) {
             this.primaryVerificationKey = Output.of(Objects.requireNonNull(primaryVerificationKey));
             return this;
         }
-
         public Builder requiredClaims(@Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
-
         public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimArgs> requiredClaims) {
             this.requiredClaims = Output.ofNullable(requiredClaims);
             return this;
         }
-
+        public Builder requiredClaims(ContentKeyPolicyTokenClaimArgs... requiredClaims) {
+            return requiredClaims(List.of(requiredClaims));
+        }
         public Builder restrictionTokenType(Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
         }
-
         public Builder restrictionTokenType(Either<String,ContentKeyPolicyRestrictionTokenType> restrictionTokenType) {
             this.restrictionTokenType = Output.of(Objects.requireNonNull(restrictionTokenType));
             return this;
-        }
-        public ContentKeyPolicyTokenRestrictionArgs build() {
+        }        public ContentKeyPolicyTokenRestrictionArgs build() {
             return new ContentKeyPolicyTokenRestrictionArgs(alternateVerificationKeys, audience, issuer, odataType, openIdConnectDiscoveryDocument, primaryVerificationKey, requiredClaims, restrictionTokenType);
         }
     }

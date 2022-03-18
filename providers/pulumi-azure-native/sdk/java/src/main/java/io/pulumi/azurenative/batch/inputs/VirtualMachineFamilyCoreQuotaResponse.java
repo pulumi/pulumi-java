@@ -77,12 +77,10 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends io.pulumi.resou
             this.coreQuota = Objects.requireNonNull(coreQuota);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public VirtualMachineFamilyCoreQuotaResponse build() {
+        }        public VirtualMachineFamilyCoreQuotaResponse build() {
             return new VirtualMachineFamilyCoreQuotaResponse(coreQuota, name);
         }
     }

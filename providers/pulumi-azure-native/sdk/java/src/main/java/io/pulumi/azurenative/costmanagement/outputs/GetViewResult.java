@@ -349,97 +349,84 @@ public final class GetViewResult {
             this.accumulated = accumulated;
             return this;
         }
-
         public Builder chart(@Nullable String chart) {
             this.chart = chart;
             return this;
         }
-
         public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
-
         public Builder currency(String currency) {
             this.currency = Objects.requireNonNull(currency);
             return this;
         }
-
         public Builder dataSet(@Nullable ReportConfigDatasetResponse dataSet) {
             this.dataSet = dataSet;
             return this;
         }
-
         public Builder dateRange(String dateRange) {
             this.dateRange = Objects.requireNonNull(dateRange);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder includeMonetaryCommitment(Boolean includeMonetaryCommitment) {
             this.includeMonetaryCommitment = Objects.requireNonNull(includeMonetaryCommitment);
             return this;
         }
-
         public Builder kpis(@Nullable List<KpiPropertiesResponse> kpis) {
             this.kpis = kpis;
             return this;
         }
-
+        public Builder kpis(KpiPropertiesResponse... kpis) {
+            return kpis(List.of(kpis));
+        }
         public Builder metric(@Nullable String metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder modifiedOn(String modifiedOn) {
             this.modifiedOn = Objects.requireNonNull(modifiedOn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pivots(@Nullable List<PivotPropertiesResponse> pivots) {
             this.pivots = pivots;
             return this;
         }
-
+        public Builder pivots(PivotPropertiesResponse... pivots) {
+            return pivots(List.of(pivots));
+        }
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder timePeriod(@Nullable ReportConfigTimePeriodResponse timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
-
         public Builder timeframe(String timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetViewResult build() {
+        }        public GetViewResult build() {
             return new GetViewResult(accumulated, chart, createdOn, currency, dataSet, dateRange, displayName, eTag, id, includeMonetaryCommitment, kpis, metric, modifiedOn, name, pivots, scope, timePeriod, timeframe, type);
         }
     }

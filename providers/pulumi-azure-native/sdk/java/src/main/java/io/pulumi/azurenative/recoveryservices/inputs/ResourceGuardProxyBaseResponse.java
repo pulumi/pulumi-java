@@ -80,17 +80,17 @@ public final class ResourceGuardProxyBaseResponse extends io.pulumi.resources.In
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder resourceGuardOperationDetails(@Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails) {
             this.resourceGuardOperationDetails = resourceGuardOperationDetails;
             return this;
         }
-
+        public Builder resourceGuardOperationDetails(ResourceGuardOperationDetailResponse... resourceGuardOperationDetails) {
+            return resourceGuardOperationDetails(List.of(resourceGuardOperationDetails));
+        }
         public Builder resourceGuardResourceId(@Nullable String resourceGuardResourceId) {
             this.resourceGuardResourceId = resourceGuardResourceId;
             return this;
-        }
-        public ResourceGuardProxyBaseResponse build() {
+        }        public ResourceGuardProxyBaseResponse build() {
             return new ResourceGuardProxyBaseResponse(lastUpdatedTime, resourceGuardOperationDetails, resourceGuardResourceId);
         }
     }

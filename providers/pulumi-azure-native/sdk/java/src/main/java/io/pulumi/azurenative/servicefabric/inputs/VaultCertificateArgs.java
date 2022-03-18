@@ -77,22 +77,18 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
             this.certificateStore = Objects.requireNonNull(certificateStore);
             return this;
         }
-
         public Builder certificateStore(String certificateStore) {
             this.certificateStore = Output.of(Objects.requireNonNull(certificateStore));
             return this;
         }
-
         public Builder certificateUrl(Output<String> certificateUrl) {
             this.certificateUrl = Objects.requireNonNull(certificateUrl);
             return this;
         }
-
         public Builder certificateUrl(String certificateUrl) {
             this.certificateUrl = Output.of(Objects.requireNonNull(certificateUrl));
             return this;
-        }
-        public VaultCertificateArgs build() {
+        }        public VaultCertificateArgs build() {
             return new VaultCertificateArgs(certificateStore, certificateUrl);
         }
     }

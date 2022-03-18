@@ -124,52 +124,42 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.jobName = jobName;
             return this;
         }
-
         public Builder jobName(@Nullable String jobName) {
             this.jobName = Output.ofNullable(jobName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<JobDetailsArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable JobDetailsArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(jobName, location, properties, resourceGroupName, tags);
         }
     }

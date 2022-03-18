@@ -61,12 +61,10 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
             this.customData = customData;
             return this;
         }
-
         public Builder customData(@Nullable String customData) {
             this.customData = Output.ofNullable(customData);
             return this;
-        }
-        public NetworkFunctionUserConfigurationOsProfileArgs build() {
+        }        public NetworkFunctionUserConfigurationOsProfileArgs build() {
             return new NetworkFunctionUserConfigurationOsProfileArgs(customData);
         }
     }

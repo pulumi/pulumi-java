@@ -174,42 +174,37 @@ public final class ConnectorMappingPropertiesResponse {
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
-
         public Builder completeOperation(ConnectorMappingCompleteOperationResponse completeOperation) {
             this.completeOperation = Objects.requireNonNull(completeOperation);
             return this;
         }
-
         public Builder errorManagement(ConnectorMappingErrorManagementResponse errorManagement) {
             this.errorManagement = Objects.requireNonNull(errorManagement);
             return this;
         }
-
         public Builder fileFilter(@Nullable String fileFilter) {
             this.fileFilter = fileFilter;
             return this;
         }
-
         public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder format(ConnectorMappingFormatResponse format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder hasHeader(@Nullable Boolean hasHeader) {
             this.hasHeader = hasHeader;
             return this;
         }
-
         public Builder structure(List<ConnectorMappingStructureResponse> structure) {
             this.structure = Objects.requireNonNull(structure);
             return this;
         }
-        public ConnectorMappingPropertiesResponse build() {
+        public Builder structure(ConnectorMappingStructureResponse... structure) {
+            return structure(List.of(structure));
+        }        public ConnectorMappingPropertiesResponse build() {
             return new ConnectorMappingPropertiesResponse(availability, completeOperation, errorManagement, fileFilter, folderPath, format, hasHeader, structure);
         }
     }

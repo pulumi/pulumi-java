@@ -126,52 +126,42 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
             this.contactInformation = Objects.requireNonNull(contactInformation);
             return this;
         }
-
         public Builder contactInformation(ContactDetailsArgs contactInformation) {
             this.contactInformation = Output.of(Objects.requireNonNull(contactInformation));
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shipmentType(@Nullable Output<Either<String,ShipmentType>> shipmentType) {
             this.shipmentType = shipmentType;
             return this;
         }
-
         public Builder shipmentType(@Nullable Either<String,ShipmentType> shipmentType) {
             this.shipmentType = Output.ofNullable(shipmentType);
             return this;
         }
-
         public Builder shippingAddress(@Nullable Output<AddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public Builder shippingAddress(@Nullable AddressArgs shippingAddress) {
             this.shippingAddress = Output.ofNullable(shippingAddress);
             return this;
-        }
-        public OrderArgs build() {
+        }        public OrderArgs build() {
             return new OrderArgs(contactInformation, deviceName, resourceGroupName, shipmentType, shippingAddress);
         }
     }

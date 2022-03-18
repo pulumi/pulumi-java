@@ -72,12 +72,10 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
-        }
-        public GetWorkflowArgs build() {
+        }        public GetWorkflowArgs build() {
             return new GetWorkflowArgs(resourceGroupName, workflowName);
         }
     }

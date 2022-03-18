@@ -193,92 +193,74 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable PropertiesEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder enterprisePolicyName(@Nullable Output<String> enterprisePolicyName) {
             this.enterprisePolicyName = enterprisePolicyName;
             return this;
         }
-
         public Builder enterprisePolicyName(@Nullable String enterprisePolicyName) {
             this.enterprisePolicyName = Output.ofNullable(enterprisePolicyName);
             return this;
         }
-
         public Builder identity(@Nullable Output<EnterprisePolicyIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable EnterprisePolicyIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(Output<Either<String,EnterprisePolicyKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,EnterprisePolicyKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder lockbox(@Nullable Output<PropertiesLockboxArgs> lockbox) {
             this.lockbox = lockbox;
             return this;
         }
-
         public Builder lockbox(@Nullable PropertiesLockboxArgs lockbox) {
             this.lockbox = Output.ofNullable(lockbox);
             return this;
         }
-
         public Builder networkInjection(@Nullable Output<PropertiesNetworkInjectionArgs> networkInjection) {
             this.networkInjection = networkInjection;
             return this;
         }
-
         public Builder networkInjection(@Nullable PropertiesNetworkInjectionArgs networkInjection) {
             this.networkInjection = Output.ofNullable(networkInjection);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EnterprisePolicyArgs build() {
+        }        public EnterprisePolicyArgs build() {
             return new EnterprisePolicyArgs(encryption, enterprisePolicyName, identity, kind, location, lockbox, networkInjection, resourceGroupName, tags);
         }
     }

@@ -88,17 +88,14 @@ public final class GetVirtualHubBgpConnectionArgs extends io.pulumi.resources.In
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
-        }
-        public GetVirtualHubBgpConnectionArgs build() {
+        }        public GetVirtualHubBgpConnectionArgs build() {
             return new GetVirtualHubBgpConnectionArgs(connectionName, resourceGroupName, virtualHubName);
         }
     }

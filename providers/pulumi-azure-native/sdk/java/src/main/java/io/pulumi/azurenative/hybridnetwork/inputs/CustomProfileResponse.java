@@ -60,8 +60,7 @@ public final class CustomProfileResponse extends io.pulumi.resources.InvokeArgs 
         public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
             this.metadataConfigurationPath = metadataConfigurationPath;
             return this;
-        }
-        public CustomProfileResponse build() {
+        }        public CustomProfileResponse build() {
             return new CustomProfileResponse(metadataConfigurationPath);
         }
     }

@@ -70,12 +70,10 @@ public final class RouteResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public RouteResponse build() {
+        }        public RouteResponse build() {
             return new RouteResponse(path, port);
         }
     }

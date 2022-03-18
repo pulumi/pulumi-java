@@ -110,42 +110,34 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder messageId(String messageId) {
             this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
-
         public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
-
         public Builder schemaVersion(Output<String> schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
-
         public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = Output.of(Objects.requireNonNull(schemaVersion));
             return this;
         }
-
         public Builder senderApplicationId(@Nullable Output<String> senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
-
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = Output.ofNullable(senderApplicationId);
             return this;
-        }
-        public X12SchemaReferenceArgs build() {
+        }        public X12SchemaReferenceArgs build() {
             return new X12SchemaReferenceArgs(messageId, schemaName, schemaVersion, senderApplicationId);
         }
     }

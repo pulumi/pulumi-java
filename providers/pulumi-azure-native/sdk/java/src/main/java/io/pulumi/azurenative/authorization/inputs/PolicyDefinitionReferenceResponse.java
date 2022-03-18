@@ -113,22 +113,21 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
             this.groupNames = groupNames;
             return this;
         }
-
+        public Builder groupNames(String... groupNames) {
+            return groupNames(List.of(groupNames));
+        }
         public Builder parameters(@Nullable Map<String,ParameterValuesValueResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder policyDefinitionId(String policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
-        }
-        public PolicyDefinitionReferenceResponse build() {
+        }        public PolicyDefinitionReferenceResponse build() {
             return new PolicyDefinitionReferenceResponse(groupNames, parameters, policyDefinitionId, policyDefinitionReferenceId);
         }
     }

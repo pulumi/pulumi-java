@@ -103,22 +103,21 @@ public final class GetMonitoringConfigResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder metricConfigurations(List<MetricConfigurationResponse> metricConfigurations) {
             this.metricConfigurations = Objects.requireNonNull(metricConfigurations);
             return this;
         }
-
+        public Builder metricConfigurations(MetricConfigurationResponse... metricConfigurations) {
+            return metricConfigurations(List.of(metricConfigurations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMonitoringConfigResult build() {
+        }        public GetMonitoringConfigResult build() {
             return new GetMonitoringConfigResult(id, metricConfigurations, name, type);
         }
     }

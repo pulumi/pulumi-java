@@ -103,22 +103,18 @@ public final class RepositoryRefDefinitionResponse {
             this.branch = branch;
             return this;
         }
-
         public Builder commit(@Nullable String commit) {
             this.commit = commit;
             return this;
         }
-
         public Builder semver(@Nullable String semver) {
             this.semver = semver;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
-        }
-        public RepositoryRefDefinitionResponse build() {
+        }        public RepositoryRefDefinitionResponse build() {
             return new RepositoryRefDefinitionResponse(branch, commit, semver, tag);
         }
     }

@@ -80,22 +80,18 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder type(Output<Either<String,StorageAccountType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,StorageAccountType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public StorageAccountArgs build() {
+        }        public StorageAccountArgs build() {
             return new StorageAccountArgs(id, type);
         }
     }

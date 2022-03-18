@@ -159,37 +159,30 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
             this.certificateSource = Objects.requireNonNull(certificateSource);
             return this;
         }
-
         public Builder certificateType(@Nullable String certificateType) {
             this.certificateType = certificateType;
             return this;
         }
-
         public Builder minimumTlsVersion(String minimumTlsVersion) {
             this.minimumTlsVersion = Objects.requireNonNull(minimumTlsVersion);
             return this;
         }
-
         public Builder protocolType(String protocolType) {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
-
         public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
         }
-
         public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
-
         public Builder vault(@Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
             this.vault = vault;
             return this;
-        }
-        public CustomHttpsConfigurationResponse build() {
+        }        public CustomHttpsConfigurationResponse build() {
             return new CustomHttpsConfigurationResponse(certificateSource, certificateType, minimumTlsVersion, protocolType, secretName, secretVersion, vault);
         }
     }

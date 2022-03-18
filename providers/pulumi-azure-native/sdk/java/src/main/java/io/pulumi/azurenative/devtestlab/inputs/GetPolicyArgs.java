@@ -122,27 +122,22 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policySetName(String policySetName) {
             this.policySetName = Objects.requireNonNull(policySetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPolicyArgs build() {
+        }        public GetPolicyArgs build() {
             return new GetPolicyArgs(expand, labName, name, policySetName, resourceGroupName);
         }
     }

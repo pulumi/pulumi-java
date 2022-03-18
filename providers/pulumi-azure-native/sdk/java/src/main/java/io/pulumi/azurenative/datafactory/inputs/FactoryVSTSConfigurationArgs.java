@@ -175,82 +175,66 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder collaborationBranch(Output<String> collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
-
         public Builder collaborationBranch(String collaborationBranch) {
             this.collaborationBranch = Output.of(Objects.requireNonNull(collaborationBranch));
             return this;
         }
-
         public Builder lastCommitId(@Nullable Output<String> lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
-
         public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = Output.ofNullable(lastCommitId);
             return this;
         }
-
         public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
-
         public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
-
         public Builder rootFolder(Output<String> rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
-
         public Builder rootFolder(String rootFolder) {
             this.rootFolder = Output.of(Objects.requireNonNull(rootFolder));
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FactoryVSTSConfigurationArgs build() {
+        }        public FactoryVSTSConfigurationArgs build() {
             return new FactoryVSTSConfigurationArgs(accountName, collaborationBranch, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }
     }

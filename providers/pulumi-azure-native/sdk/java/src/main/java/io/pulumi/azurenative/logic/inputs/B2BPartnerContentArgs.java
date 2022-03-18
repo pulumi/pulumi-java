@@ -62,12 +62,13 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
             this.businessIdentities = businessIdentities;
             return this;
         }
-
         public Builder businessIdentities(@Nullable List<BusinessIdentityArgs> businessIdentities) {
             this.businessIdentities = Output.ofNullable(businessIdentities);
             return this;
         }
-        public B2BPartnerContentArgs build() {
+        public Builder businessIdentities(BusinessIdentityArgs... businessIdentities) {
+            return businessIdentities(List.of(businessIdentities));
+        }        public B2BPartnerContentArgs build() {
             return new B2BPartnerContentArgs(businessIdentities);
         }
     }

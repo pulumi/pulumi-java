@@ -73,12 +73,13 @@ public final class GetAssetEncryptionKeyResult {
             this.assetFileEncryptionMetadata = assetFileEncryptionMetadata;
             return this;
         }
-
+        public Builder assetFileEncryptionMetadata(AssetFileEncryptionMetadataResponse... assetFileEncryptionMetadata) {
+            return assetFileEncryptionMetadata(List.of(assetFileEncryptionMetadata));
+        }
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public GetAssetEncryptionKeyResult build() {
+        }        public GetAssetEncryptionKeyResult build() {
             return new GetAssetEncryptionKeyResult(assetFileEncryptionMetadata, key);
         }
     }

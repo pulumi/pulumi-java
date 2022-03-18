@@ -160,37 +160,45 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
             this.description = description;
             return this;
         }
-
         public Builder fqdnTags(@Nullable List<String> fqdnTags) {
             this.fqdnTags = fqdnTags;
             return this;
         }
-
+        public Builder fqdnTags(String... fqdnTags) {
+            return fqdnTags(List.of(fqdnTags));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocols(@Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(AzureFirewallApplicationRuleProtocolResponse... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }
         public Builder targetFqdns(@Nullable List<String> targetFqdns) {
             this.targetFqdns = targetFqdns;
             return this;
         }
-        public AzureFirewallApplicationRuleResponse build() {
+        public Builder targetFqdns(String... targetFqdns) {
+            return targetFqdns(List.of(targetFqdns));
+        }        public AzureFirewallApplicationRuleResponse build() {
             return new AzureFirewallApplicationRuleResponse(description, fqdnTags, name, protocols, sourceAddresses, sourceIpGroups, targetFqdns);
         }
     }

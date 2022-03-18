@@ -61,12 +61,10 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
             this.sasUrlSettingName = sasUrlSettingName;
             return this;
         }
-
         public Builder sasUrlSettingName(@Nullable String sasUrlSettingName) {
             this.sasUrlSettingName = Output.ofNullable(sasUrlSettingName);
             return this;
-        }
-        public BlobStorageTokenStoreArgs build() {
+        }        public BlobStorageTokenStoreArgs build() {
             return new BlobStorageTokenStoreArgs(sasUrlSettingName);
         }
     }
