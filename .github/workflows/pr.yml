@@ -66,6 +66,7 @@ jobs:
   providers:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         providers:
         - random
