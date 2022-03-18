@@ -68,7 +68,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        providers:
+        provider:
         - random
         - azure-native
         - google-native
@@ -115,7 +115,7 @@ jobs:
       - name: Publish Pulumi Java SDK to a local Maven repo
         run: make install_sdk
       - name: Build JVM SDK provider
-        run: make provider.${PROVIDER}.build provider.${PROVIDER}.install
+        run: make provider.${PROVIDER}.install
         env:
           PROVIDER: ${{ matrix.provider }}
   example1:
