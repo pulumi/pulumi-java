@@ -50,8 +50,7 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
         public Builder healthCheckId(String healthCheckId) {
             this.healthCheckId = Objects.requireNonNull(healthCheckId);
             return this;
-        }
-        public GetHealthCheckArgs build() {
+        }        public GetHealthCheckArgs build() {
             return new GetHealthCheckArgs(healthCheckId);
         }
     }

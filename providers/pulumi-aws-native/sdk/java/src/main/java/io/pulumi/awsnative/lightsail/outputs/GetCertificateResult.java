@@ -81,17 +81,17 @@ public final class GetCertificateResult {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<CertificateTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetCertificateResult build() {
+        public Builder tags(CertificateTag... tags) {
+            return tags(List.of(tags));
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(certificateArn, status, tags);
         }
     }

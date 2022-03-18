@@ -94,32 +94,26 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder condition(String condition) {
             this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
         }
-
         public Builder targetColumn(Output<String> targetColumn) {
             this.targetColumn = Objects.requireNonNull(targetColumn);
             return this;
         }
-
         public Builder targetColumn(String targetColumn) {
             this.targetColumn = Output.of(Objects.requireNonNull(targetColumn));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public RecipeConditionExpressionArgs build() {
+        }        public RecipeConditionExpressionArgs build() {
             return new RecipeConditionExpressionArgs(condition, targetColumn, value);
         }
     }

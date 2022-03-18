@@ -93,17 +93,14 @@ public final class DataSourceSqlServerParameters extends io.pulumi.resources.Inv
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceSqlServerParameters build() {
+        }        public DataSourceSqlServerParameters build() {
             return new DataSourceSqlServerParameters(database, host, port);
         }
     }

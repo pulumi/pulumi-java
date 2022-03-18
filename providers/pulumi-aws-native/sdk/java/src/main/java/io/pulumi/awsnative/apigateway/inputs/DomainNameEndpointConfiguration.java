@@ -54,7 +54,9 @@ public final class DomainNameEndpointConfiguration extends io.pulumi.resources.I
             this.types = types;
             return this;
         }
-        public DomainNameEndpointConfiguration build() {
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }        public DomainNameEndpointConfiguration build() {
             return new DomainNameEndpointConfiguration(types);
         }
     }

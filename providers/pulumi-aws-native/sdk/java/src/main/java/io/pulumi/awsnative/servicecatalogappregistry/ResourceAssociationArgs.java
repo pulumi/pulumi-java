@@ -90,32 +90,26 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
             this.application = Objects.requireNonNull(application);
             return this;
         }
-
         public Builder application(String application) {
             this.application = Output.of(Objects.requireNonNull(application));
             return this;
         }
-
         public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public Builder resourceType(Output<ResourceAssociationResourceType> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(ResourceAssociationResourceType resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
-        }
-        public ResourceAssociationArgs build() {
+        }        public ResourceAssociationArgs build() {
             return new ResourceAssociationArgs(application, resource, resourceType);
         }
     }

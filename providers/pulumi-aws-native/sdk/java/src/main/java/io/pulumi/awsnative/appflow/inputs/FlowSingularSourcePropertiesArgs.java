@@ -52,12 +52,10 @@ public final class FlowSingularSourcePropertiesArgs extends io.pulumi.resources.
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowSingularSourcePropertiesArgs build() {
+        }        public FlowSingularSourcePropertiesArgs build() {
             return new FlowSingularSourcePropertiesArgs(object);
         }
     }

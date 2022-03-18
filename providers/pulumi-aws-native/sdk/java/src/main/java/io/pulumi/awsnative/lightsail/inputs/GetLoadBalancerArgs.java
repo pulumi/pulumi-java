@@ -54,8 +54,7 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
-        }
-        public GetLoadBalancerArgs build() {
+        }        public GetLoadBalancerArgs build() {
             return new GetLoadBalancerArgs(loadBalancerName);
         }
     }

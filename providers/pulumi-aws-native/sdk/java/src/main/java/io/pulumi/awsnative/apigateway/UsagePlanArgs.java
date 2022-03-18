@@ -143,62 +143,56 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             this.apiStages = apiStages;
             return this;
         }
-
         public Builder apiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
             this.apiStages = Output.ofNullable(apiStages);
             return this;
         }
-
+        public Builder apiStages(UsagePlanApiStageArgs... apiStages) {
+            return apiStages(List.of(apiStages));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder quota(@Nullable Output<UsagePlanQuotaSettingsArgs> quota) {
             this.quota = quota;
             return this;
         }
-
         public Builder quota(@Nullable UsagePlanQuotaSettingsArgs quota) {
             this.quota = Output.ofNullable(quota);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<UsagePlanTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<UsagePlanTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(UsagePlanTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder throttle(@Nullable Output<UsagePlanThrottleSettingsArgs> throttle) {
             this.throttle = throttle;
             return this;
         }
-
         public Builder throttle(@Nullable UsagePlanThrottleSettingsArgs throttle) {
             this.throttle = Output.ofNullable(throttle);
             return this;
         }
-
         public Builder usagePlanName(@Nullable Output<String> usagePlanName) {
             this.usagePlanName = usagePlanName;
             return this;
         }
-
         public Builder usagePlanName(@Nullable String usagePlanName) {
             this.usagePlanName = Output.ofNullable(usagePlanName);
             return this;
-        }
-        public UsagePlanArgs build() {
+        }        public UsagePlanArgs build() {
             return new UsagePlanArgs(apiStages, description, quota, tags, throttle, usagePlanName);
         }
     }

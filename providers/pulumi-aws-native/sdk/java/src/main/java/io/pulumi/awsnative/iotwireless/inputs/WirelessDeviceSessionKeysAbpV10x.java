@@ -64,12 +64,10 @@ public final class WirelessDeviceSessionKeysAbpV10x extends io.pulumi.resources.
             this.appSKey = Objects.requireNonNull(appSKey);
             return this;
         }
-
         public Builder nwkSKey(String nwkSKey) {
             this.nwkSKey = Objects.requireNonNull(nwkSKey);
             return this;
-        }
-        public WirelessDeviceSessionKeysAbpV10x build() {
+        }        public WirelessDeviceSessionKeysAbpV10x build() {
             return new WirelessDeviceSessionKeysAbpV10x(appSKey, nwkSKey);
         }
     }

@@ -80,32 +80,29 @@ public final class BotVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.botId = Objects.requireNonNull(botId);
             return this;
         }
-
         public Builder botId(String botId) {
             this.botId = Output.of(Objects.requireNonNull(botId));
             return this;
         }
-
         public Builder botVersionLocaleSpecification(Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification) {
             this.botVersionLocaleSpecification = Objects.requireNonNull(botVersionLocaleSpecification);
             return this;
         }
-
         public Builder botVersionLocaleSpecification(List<BotVersionLocaleSpecificationArgs> botVersionLocaleSpecification) {
             this.botVersionLocaleSpecification = Output.of(Objects.requireNonNull(botVersionLocaleSpecification));
             return this;
         }
-
+        public Builder botVersionLocaleSpecification(BotVersionLocaleSpecificationArgs... botVersionLocaleSpecification) {
+            return botVersionLocaleSpecification(List.of(botVersionLocaleSpecification));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
-        }
-        public BotVersionArgs build() {
+        }        public BotVersionArgs build() {
             return new BotVersionArgs(botId, botVersionLocaleSpecification, description);
         }
     }

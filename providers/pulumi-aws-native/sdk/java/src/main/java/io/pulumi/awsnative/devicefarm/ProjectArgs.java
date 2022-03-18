@@ -81,32 +81,29 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
             return this;
         }
-
         public Builder defaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
             this.defaultJobTimeoutMinutes = Output.ofNullable(defaultJobTimeoutMinutes);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ProjectArgs build() {
+        public Builder tags(ProjectTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ProjectArgs build() {
             return new ProjectArgs(defaultJobTimeoutMinutes, name, tags);
         }
     }

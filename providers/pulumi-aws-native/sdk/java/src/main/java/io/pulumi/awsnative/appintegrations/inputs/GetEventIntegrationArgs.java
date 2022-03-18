@@ -54,8 +54,7 @@ public final class GetEventIntegrationArgs extends io.pulumi.resources.InvokeArg
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetEventIntegrationArgs build() {
+        }        public GetEventIntegrationArgs build() {
             return new GetEventIntegrationArgs(name);
         }
     }

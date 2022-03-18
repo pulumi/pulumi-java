@@ -173,82 +173,69 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
             this.alarms = alarms;
             return this;
         }
-
         public Builder alarms(@Nullable AlarmsPropertiesArgs alarms) {
             this.alarms = Output.ofNullable(alarms);
             return this;
         }
-
         public Builder notificationSenderEmail(@Nullable Output<String> notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
-
         public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
             this.notificationSenderEmail = Output.ofNullable(notificationSenderEmail);
             return this;
         }
-
         public Builder portalAuthMode(@Nullable Output<String> portalAuthMode) {
             this.portalAuthMode = portalAuthMode;
             return this;
         }
-
         public Builder portalAuthMode(@Nullable String portalAuthMode) {
             this.portalAuthMode = Output.ofNullable(portalAuthMode);
             return this;
         }
-
         public Builder portalContactEmail(Output<String> portalContactEmail) {
             this.portalContactEmail = Objects.requireNonNull(portalContactEmail);
             return this;
         }
-
         public Builder portalContactEmail(String portalContactEmail) {
             this.portalContactEmail = Output.of(Objects.requireNonNull(portalContactEmail));
             return this;
         }
-
         public Builder portalDescription(@Nullable Output<String> portalDescription) {
             this.portalDescription = portalDescription;
             return this;
         }
-
         public Builder portalDescription(@Nullable String portalDescription) {
             this.portalDescription = Output.ofNullable(portalDescription);
             return this;
         }
-
         public Builder portalName(@Nullable Output<String> portalName) {
             this.portalName = portalName;
             return this;
         }
-
         public Builder portalName(@Nullable String portalName) {
             this.portalName = Output.ofNullable(portalName);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<PortalTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<PortalTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PortalArgs build() {
+        public Builder tags(PortalTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public PortalArgs build() {
             return new PortalArgs(alarms, notificationSenderEmail, portalAuthMode, portalContactEmail, portalDescription, portalName, roleArn, tags);
         }
     }

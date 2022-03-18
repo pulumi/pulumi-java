@@ -114,62 +114,50 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder roleARN(@Nullable Output<String> roleARN) {
             this.roleARN = roleARN;
             return this;
         }
-
         public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = Output.ofNullable(roleARN);
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
         }
-
         public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
-        }
-        public DeliveryStreamSchemaConfigurationArgs build() {
+        }        public DeliveryStreamSchemaConfigurationArgs build() {
             return new DeliveryStreamSchemaConfigurationArgs(catalogId, databaseName, region, roleARN, tableName, versionId);
         }
     }

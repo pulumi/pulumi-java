@@ -76,12 +76,10 @@ public final class StreamTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public StreamTag build() {
+        }        public StreamTag build() {
             return new StreamTag(key, value);
         }
     }

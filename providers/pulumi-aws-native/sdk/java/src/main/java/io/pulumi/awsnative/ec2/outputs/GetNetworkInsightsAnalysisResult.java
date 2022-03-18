@@ -134,57 +134,61 @@ public final class GetNetworkInsightsAnalysisResult {
             this.alternatePathHints = alternatePathHints;
             return this;
         }
-
+        public Builder alternatePathHints(NetworkInsightsAnalysisAlternatePathHint... alternatePathHints) {
+            return alternatePathHints(List.of(alternatePathHints));
+        }
         public Builder explanations(@Nullable List<NetworkInsightsAnalysisExplanation> explanations) {
             this.explanations = explanations;
             return this;
         }
-
+        public Builder explanations(NetworkInsightsAnalysisExplanation... explanations) {
+            return explanations(List.of(explanations));
+        }
         public Builder forwardPathComponents(@Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents) {
             this.forwardPathComponents = forwardPathComponents;
             return this;
         }
-
+        public Builder forwardPathComponents(NetworkInsightsAnalysisPathComponent... forwardPathComponents) {
+            return forwardPathComponents(List.of(forwardPathComponents));
+        }
         public Builder networkInsightsAnalysisArn(@Nullable String networkInsightsAnalysisArn) {
             this.networkInsightsAnalysisArn = networkInsightsAnalysisArn;
             return this;
         }
-
         public Builder networkInsightsAnalysisId(@Nullable String networkInsightsAnalysisId) {
             this.networkInsightsAnalysisId = networkInsightsAnalysisId;
             return this;
         }
-
         public Builder networkPathFound(@Nullable Boolean networkPathFound) {
             this.networkPathFound = networkPathFound;
             return this;
         }
-
         public Builder returnPathComponents(@Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents) {
             this.returnPathComponents = returnPathComponents;
             return this;
         }
-
+        public Builder returnPathComponents(NetworkInsightsAnalysisPathComponent... returnPathComponents) {
+            return returnPathComponents(List.of(returnPathComponents));
+        }
         public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder status(@Nullable NetworkInsightsAnalysisStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInsightsAnalysisTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetNetworkInsightsAnalysisResult build() {
+        public Builder tags(NetworkInsightsAnalysisTag... tags) {
+            return tags(List.of(tags));
+        }        public GetNetworkInsightsAnalysisResult build() {
             return new GetNetworkInsightsAnalysisResult(alternatePathHints, explanations, forwardPathComponents, networkInsightsAnalysisArn, networkInsightsAnalysisId, networkPathFound, returnPathComponents, startDate, status, statusMessage, tags);
         }
     }

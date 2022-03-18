@@ -74,22 +74,18 @@ public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.R
             this.bootstrapServers = Objects.requireNonNull(bootstrapServers);
             return this;
         }
-
         public Builder bootstrapServers(String bootstrapServers) {
             this.bootstrapServers = Output.of(Objects.requireNonNull(bootstrapServers));
             return this;
         }
-
         public Builder vpc(Output<ConnectorVpcArgs> vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
-
         public Builder vpc(ConnectorVpcArgs vpc) {
             this.vpc = Output.of(Objects.requireNonNull(vpc));
             return this;
-        }
-        public ConnectorApacheKafkaClusterArgs build() {
+        }        public ConnectorApacheKafkaClusterArgs build() {
             return new ConnectorApacheKafkaClusterArgs(bootstrapServers, vpc);
         }
     }

@@ -71,12 +71,13 @@ public final class DashboardSourceTemplate {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder dataSetReferences(List<DashboardDataSetReference> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
-        public DashboardSourceTemplate build() {
+        public Builder dataSetReferences(DashboardDataSetReference... dataSetReferences) {
+            return dataSetReferences(List.of(dataSetReferences));
+        }        public DashboardSourceTemplate build() {
             return new DashboardSourceTemplate(arn, dataSetReferences);
         }
     }

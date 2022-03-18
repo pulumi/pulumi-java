@@ -45,8 +45,7 @@ public final class DataSourceSqlConfiguration {
         public Builder queryIdentifiersEnclosingOption(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
             this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
             return this;
-        }
-        public DataSourceSqlConfiguration build() {
+        }        public DataSourceSqlConfiguration build() {
             return new DataSourceSqlConfiguration(queryIdentifiersEnclosingOption);
         }
     }

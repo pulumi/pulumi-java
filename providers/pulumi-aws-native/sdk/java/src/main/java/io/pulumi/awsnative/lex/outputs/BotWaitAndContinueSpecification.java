@@ -105,22 +105,18 @@ public final class BotWaitAndContinueSpecification {
             this.continueResponse = Objects.requireNonNull(continueResponse);
             return this;
         }
-
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
-
         public Builder stillWaitingResponse(@Nullable BotStillWaitingResponseSpecification stillWaitingResponse) {
             this.stillWaitingResponse = stillWaitingResponse;
             return this;
         }
-
         public Builder waitingResponse(BotResponseSpecification waitingResponse) {
             this.waitingResponse = Objects.requireNonNull(waitingResponse);
             return this;
-        }
-        public BotWaitAndContinueSpecification build() {
+        }        public BotWaitAndContinueSpecification build() {
             return new BotWaitAndContinueSpecification(continueResponse, isActive, stillWaitingResponse, waitingResponse);
         }
     }

@@ -54,8 +54,7 @@ public final class GetKeyspaceArgs extends io.pulumi.resources.InvokeArgs {
         public Builder keyspaceName(String keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
-        }
-        public GetKeyspaceArgs build() {
+        }        public GetKeyspaceArgs build() {
             return new GetKeyspaceArgs(keyspaceName);
         }
     }

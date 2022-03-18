@@ -54,12 +54,13 @@ public final class ListenerRuleHttpRequestMethodConfigArgs extends io.pulumi.res
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ListenerRuleHttpRequestMethodConfigArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleHttpRequestMethodConfigArgs build() {
             return new ListenerRuleHttpRequestMethodConfigArgs(values);
         }
     }

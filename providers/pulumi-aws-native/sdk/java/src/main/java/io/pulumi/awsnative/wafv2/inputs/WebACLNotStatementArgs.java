@@ -52,12 +52,10 @@ public final class WebACLNotStatementArgs extends io.pulumi.resources.ResourceAr
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public Builder statement(WebACLStatementArgs statement) {
             this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
-        }
-        public WebACLNotStatementArgs build() {
+        }        public WebACLNotStatementArgs build() {
             return new WebACLNotStatementArgs(statement);
         }
     }

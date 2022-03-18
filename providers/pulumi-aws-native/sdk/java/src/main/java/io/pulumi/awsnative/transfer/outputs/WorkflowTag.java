@@ -69,12 +69,10 @@ public final class WorkflowTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WorkflowTag build() {
+        }        public WorkflowTag build() {
             return new WorkflowTag(key, value);
         }
     }

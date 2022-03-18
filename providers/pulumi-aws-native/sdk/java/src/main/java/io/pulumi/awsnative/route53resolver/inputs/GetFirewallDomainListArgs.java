@@ -54,8 +54,7 @@ public final class GetFirewallDomainListArgs extends io.pulumi.resources.InvokeA
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetFirewallDomainListArgs build() {
+        }        public GetFirewallDomainListArgs build() {
             return new GetFirewallDomainListArgs(id);
         }
     }

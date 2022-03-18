@@ -90,22 +90,18 @@ public final class BotFulfillmentUpdatesSpecification {
             this.active = Objects.requireNonNull(active);
             return this;
         }
-
         public Builder startResponse(@Nullable BotFulfillmentStartResponseSpecification startResponse) {
             this.startResponse = startResponse;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder updateResponse(@Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
             this.updateResponse = updateResponse;
             return this;
-        }
-        public BotFulfillmentUpdatesSpecification build() {
+        }        public BotFulfillmentUpdatesSpecification build() {
             return new BotFulfillmentUpdatesSpecification(active, startResponse, timeoutInSeconds, updateResponse);
         }
     }

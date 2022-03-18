@@ -64,17 +64,14 @@ public final class TaskDefinitionMountPoint {
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder sourceVolume(@Nullable String sourceVolume) {
             this.sourceVolume = sourceVolume;
             return this;
-        }
-        public TaskDefinitionMountPoint build() {
+        }        public TaskDefinitionMountPoint build() {
             return new TaskDefinitionMountPoint(containerPath, readOnly, sourceVolume);
         }
     }

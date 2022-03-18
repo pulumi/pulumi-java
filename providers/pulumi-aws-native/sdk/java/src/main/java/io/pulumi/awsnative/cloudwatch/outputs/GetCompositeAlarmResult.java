@@ -153,37 +153,39 @@ public final class GetCompositeAlarmResult {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
-
         public Builder alarmActions(@Nullable List<String> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
-
+        public Builder alarmActions(String... alarmActions) {
+            return alarmActions(List.of(alarmActions));
+        }
         public Builder alarmDescription(@Nullable String alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
-
         public Builder alarmRule(@Nullable String alarmRule) {
             this.alarmRule = alarmRule;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
-
+        public Builder insufficientDataActions(String... insufficientDataActions) {
+            return insufficientDataActions(List.of(insufficientDataActions));
+        }
         public Builder oKActions(@Nullable List<String> oKActions) {
             this.oKActions = oKActions;
             return this;
         }
-        public GetCompositeAlarmResult build() {
+        public Builder oKActions(String... oKActions) {
+            return oKActions(List.of(oKActions));
+        }        public GetCompositeAlarmResult build() {
             return new GetCompositeAlarmResult(actionsEnabled, alarmActions, alarmDescription, alarmRule, arn, insufficientDataActions, oKActions);
         }
     }

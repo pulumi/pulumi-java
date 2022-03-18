@@ -112,22 +112,21 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
             this.eventLevels = Objects.requireNonNull(eventLevels);
             return this;
         }
-
+        public Builder eventLevels(ApplicationEventLevel... eventLevels) {
+            return eventLevels(List.of(eventLevels));
+        }
         public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
-
         public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public Builder patternSet(@Nullable String patternSet) {
             this.patternSet = patternSet;
             return this;
-        }
-        public ApplicationWindowsEvent build() {
+        }        public ApplicationWindowsEvent build() {
             return new ApplicationWindowsEvent(eventLevels, eventName, logGroupName, patternSet);
         }
     }

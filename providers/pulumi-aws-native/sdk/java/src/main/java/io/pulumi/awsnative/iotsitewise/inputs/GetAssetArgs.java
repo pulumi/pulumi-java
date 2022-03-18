@@ -54,8 +54,7 @@ public final class GetAssetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder assetId(String assetId) {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
-        }
-        public GetAssetArgs build() {
+        }        public GetAssetArgs build() {
             return new GetAssetArgs(assetId);
         }
     }

@@ -247,162 +247,139 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
-
         public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = Output.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder expirationInDays(@Nullable Output<Integer> expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
-
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = Output.ofNullable(expirationInDays);
             return this;
         }
-
         public Builder expiredObjectDeleteMarker(@Nullable Output<Boolean> expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
-
         public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = Output.ofNullable(expiredObjectDeleteMarker);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder noncurrentVersionExpiration(@Nullable Output<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
-
         public Builder noncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpirationArgs noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = Output.ofNullable(noncurrentVersionExpiration);
             return this;
         }
-
         public Builder noncurrentVersionExpirationInDays(@Nullable Output<Integer> noncurrentVersionExpirationInDays) {
             this.noncurrentVersionExpirationInDays = noncurrentVersionExpirationInDays;
             return this;
         }
-
         public Builder noncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
             this.noncurrentVersionExpirationInDays = Output.ofNullable(noncurrentVersionExpirationInDays);
             return this;
         }
-
         public Builder noncurrentVersionTransition(@Nullable Output<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition) {
             this.noncurrentVersionTransition = noncurrentVersionTransition;
             return this;
         }
-
         public Builder noncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransitionArgs noncurrentVersionTransition) {
             this.noncurrentVersionTransition = Output.ofNullable(noncurrentVersionTransition);
             return this;
         }
-
         public Builder noncurrentVersionTransitions(@Nullable Output<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
-
         public Builder noncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = Output.ofNullable(noncurrentVersionTransitions);
             return this;
         }
-
+        public Builder noncurrentVersionTransitions(BucketNoncurrentVersionTransitionArgs... noncurrentVersionTransitions) {
+            return noncurrentVersionTransitions(List.of(noncurrentVersionTransitions));
+        }
         public Builder objectSizeGreaterThan(@Nullable Output<String> objectSizeGreaterThan) {
             this.objectSizeGreaterThan = objectSizeGreaterThan;
             return this;
         }
-
         public Builder objectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
             this.objectSizeGreaterThan = Output.ofNullable(objectSizeGreaterThan);
             return this;
         }
-
         public Builder objectSizeLessThan(@Nullable Output<String> objectSizeLessThan) {
             this.objectSizeLessThan = objectSizeLessThan;
             return this;
         }
-
         public Builder objectSizeLessThan(@Nullable String objectSizeLessThan) {
             this.objectSizeLessThan = Output.ofNullable(objectSizeLessThan);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder status(Output<BucketRuleStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(BucketRuleStatus status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder tagFilters(@Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
             this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
-
+        public Builder tagFilters(BucketTagFilterArgs... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }
         public Builder transition(@Nullable Output<BucketTransitionArgs> transition) {
             this.transition = transition;
             return this;
         }
-
         public Builder transition(@Nullable BucketTransitionArgs transition) {
             this.transition = Output.ofNullable(transition);
             return this;
         }
-
         public Builder transitions(@Nullable Output<List<BucketTransitionArgs>> transitions) {
             this.transitions = transitions;
             return this;
         }
-
         public Builder transitions(@Nullable List<BucketTransitionArgs> transitions) {
             this.transitions = Output.ofNullable(transitions);
             return this;
         }
-        public BucketRuleArgs build() {
+        public Builder transitions(BucketTransitionArgs... transitions) {
+            return transitions(List.of(transitions));
+        }        public BucketRuleArgs build() {
             return new BucketRuleArgs(abortIncompleteMultipartUpload, expirationDate, expirationInDays, expiredObjectDeleteMarker, id, noncurrentVersionExpiration, noncurrentVersionExpirationInDays, noncurrentVersionTransition, noncurrentVersionTransitions, objectSizeGreaterThan, objectSizeLessThan, prefix, status, tagFilters, transition, transitions);
         }
     }

@@ -50,8 +50,7 @@ public final class SpotFleetGroupIdentifier extends io.pulumi.resources.InvokeAr
         public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
-        }
-        public SpotFleetGroupIdentifier build() {
+        }        public SpotFleetGroupIdentifier build() {
             return new SpotFleetGroupIdentifier(groupId);
         }
     }

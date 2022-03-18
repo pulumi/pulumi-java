@@ -79,12 +79,16 @@ public final class FunctionVpcConfig extends io.pulumi.resources.InvokeArgs {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-        public FunctionVpcConfig build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public FunctionVpcConfig build() {
             return new FunctionVpcConfig(securityGroupIds, subnetIds);
         }
     }

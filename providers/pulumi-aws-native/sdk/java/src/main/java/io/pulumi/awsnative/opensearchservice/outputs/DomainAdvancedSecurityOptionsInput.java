@@ -64,17 +64,14 @@ public final class DomainAdvancedSecurityOptionsInput {
             this.enabled = enabled;
             return this;
         }
-
         public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
-
         public Builder masterUserOptions(@Nullable DomainMasterUserOptions masterUserOptions) {
             this.masterUserOptions = masterUserOptions;
             return this;
-        }
-        public DomainAdvancedSecurityOptionsInput build() {
+        }        public DomainAdvancedSecurityOptionsInput build() {
             return new DomainAdvancedSecurityOptionsInput(enabled, internalUserDatabaseEnabled, masterUserOptions);
         }
     }

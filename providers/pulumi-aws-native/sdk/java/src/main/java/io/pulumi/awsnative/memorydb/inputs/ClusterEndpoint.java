@@ -75,12 +75,10 @@ public final class ClusterEndpoint extends io.pulumi.resources.InvokeArgs {
             this.address = address;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public ClusterEndpoint build() {
+        }        public ClusterEndpoint build() {
             return new ClusterEndpoint(address, port);
         }
     }

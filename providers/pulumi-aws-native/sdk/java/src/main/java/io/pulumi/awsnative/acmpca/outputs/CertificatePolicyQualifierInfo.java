@@ -54,12 +54,10 @@ public final class CertificatePolicyQualifierInfo {
             this.policyQualifierId = Objects.requireNonNull(policyQualifierId);
             return this;
         }
-
         public Builder qualifier(CertificateQualifier qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
-        }
-        public CertificatePolicyQualifierInfo build() {
+        }        public CertificatePolicyQualifierInfo build() {
             return new CertificatePolicyQualifierInfo(policyQualifierId, qualifier);
         }
     }

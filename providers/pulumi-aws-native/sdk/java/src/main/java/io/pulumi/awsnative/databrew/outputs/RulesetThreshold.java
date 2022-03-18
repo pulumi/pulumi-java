@@ -65,17 +65,14 @@ public final class RulesetThreshold {
             this.type = type;
             return this;
         }
-
         public Builder unit(@Nullable RulesetThresholdUnit unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RulesetThreshold build() {
+        }        public RulesetThreshold build() {
             return new RulesetThreshold(type, unit, value);
         }
     }

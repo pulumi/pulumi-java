@@ -45,7 +45,9 @@ public final class RuleGroupOrStatement {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-        public RuleGroupOrStatement build() {
+        public Builder statements(RuleGroupStatement... statements) {
+            return statements(List.of(statements));
+        }        public RuleGroupOrStatement build() {
             return new RuleGroupOrStatement(statements);
         }
     }

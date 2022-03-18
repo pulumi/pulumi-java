@@ -64,17 +64,14 @@ public final class BranchBasicAuthConfig {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public BranchBasicAuthConfig build() {
+        }        public BranchBasicAuthConfig build() {
             return new BranchBasicAuthConfig(enableBasicAuth, password, username);
         }
     }

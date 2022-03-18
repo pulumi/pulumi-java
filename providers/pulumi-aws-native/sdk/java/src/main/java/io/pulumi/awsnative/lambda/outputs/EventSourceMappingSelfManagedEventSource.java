@@ -53,8 +53,7 @@ public final class EventSourceMappingSelfManagedEventSource {
         public Builder endpoints(@Nullable EventSourceMappingEndpoints endpoints) {
             this.endpoints = endpoints;
             return this;
-        }
-        public EventSourceMappingSelfManagedEventSource build() {
+        }        public EventSourceMappingSelfManagedEventSource build() {
             return new EventSourceMappingSelfManagedEventSource(endpoints);
         }
     }

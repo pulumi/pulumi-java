@@ -55,12 +55,10 @@ public final class CertificateExtendedKeyUsage {
             this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
             return this;
         }
-
         public Builder extendedKeyUsageType(@Nullable String extendedKeyUsageType) {
             this.extendedKeyUsageType = extendedKeyUsageType;
             return this;
-        }
-        public CertificateExtendedKeyUsage build() {
+        }        public CertificateExtendedKeyUsage build() {
             return new CertificateExtendedKeyUsage(extendedKeyUsageObjectIdentifier, extendedKeyUsageType);
         }
     }

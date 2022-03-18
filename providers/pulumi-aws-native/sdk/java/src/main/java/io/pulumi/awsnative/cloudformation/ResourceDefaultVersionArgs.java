@@ -92,32 +92,26 @@ public final class ResourceDefaultVersionArgs extends io.pulumi.resources.Resour
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
         }
-
         public Builder typeVersionArn(@Nullable Output<String> typeVersionArn) {
             this.typeVersionArn = typeVersionArn;
             return this;
         }
-
         public Builder typeVersionArn(@Nullable String typeVersionArn) {
             this.typeVersionArn = Output.ofNullable(typeVersionArn);
             return this;
         }
-
         public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
-        }
-        public ResourceDefaultVersionArgs build() {
+        }        public ResourceDefaultVersionArgs build() {
             return new ResourceDefaultVersionArgs(typeName, typeVersionArn, versionId);
         }
     }

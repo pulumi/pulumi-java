@@ -190,102 +190,91 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             this.capacityUnits = capacityUnits;
             return this;
         }
-
         public Builder capacityUnits(@Nullable IndexCapacityUnitsConfigurationArgs capacityUnits) {
             this.capacityUnits = Output.ofNullable(capacityUnits);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentMetadataConfigurations(@Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations) {
             this.documentMetadataConfigurations = documentMetadataConfigurations;
             return this;
         }
-
         public Builder documentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfigurationArgs> documentMetadataConfigurations) {
             this.documentMetadataConfigurations = Output.ofNullable(documentMetadataConfigurations);
             return this;
         }
-
+        public Builder documentMetadataConfigurations(IndexDocumentMetadataConfigurationArgs... documentMetadataConfigurations) {
+            return documentMetadataConfigurations(List.of(documentMetadataConfigurations));
+        }
         public Builder edition(Output<IndexEdition> edition) {
             this.edition = Objects.requireNonNull(edition);
             return this;
         }
-
         public Builder edition(IndexEdition edition) {
             this.edition = Output.of(Objects.requireNonNull(edition));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable IndexServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<IndexTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<IndexTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(IndexTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userContextPolicy(@Nullable Output<IndexUserContextPolicy> userContextPolicy) {
             this.userContextPolicy = userContextPolicy;
             return this;
         }
-
         public Builder userContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
             this.userContextPolicy = Output.ofNullable(userContextPolicy);
             return this;
         }
-
         public Builder userTokenConfigurations(@Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
             this.userTokenConfigurations = userTokenConfigurations;
             return this;
         }
-
         public Builder userTokenConfigurations(@Nullable List<IndexUserTokenConfigurationArgs> userTokenConfigurations) {
             this.userTokenConfigurations = Output.ofNullable(userTokenConfigurations);
             return this;
         }
-        public IndexArgs build() {
+        public Builder userTokenConfigurations(IndexUserTokenConfigurationArgs... userTokenConfigurations) {
+            return userTokenConfigurations(List.of(userTokenConfigurations));
+        }        public IndexArgs build() {
             return new IndexArgs(capacityUnits, description, documentMetadataConfigurations, edition, name, roleArn, serverSideEncryptionConfiguration, tags, userContextPolicy, userTokenConfigurations);
         }
     }

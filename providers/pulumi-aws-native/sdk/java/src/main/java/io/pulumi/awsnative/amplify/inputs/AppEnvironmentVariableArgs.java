@@ -65,22 +65,18 @@ public final class AppEnvironmentVariableArgs extends io.pulumi.resources.Resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public AppEnvironmentVariableArgs build() {
+        }        public AppEnvironmentVariableArgs build() {
             return new AppEnvironmentVariableArgs(name, value);
         }
     }

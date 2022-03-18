@@ -52,8 +52,7 @@ public final class DatasetFilter extends io.pulumi.resources.InvokeArgs {
         public Builder deltaTime(@Nullable DatasetDeltaTime deltaTime) {
             this.deltaTime = deltaTime;
             return this;
-        }
-        public DatasetFilter build() {
+        }        public DatasetFilter build() {
             return new DatasetFilter(deltaTime);
         }
     }

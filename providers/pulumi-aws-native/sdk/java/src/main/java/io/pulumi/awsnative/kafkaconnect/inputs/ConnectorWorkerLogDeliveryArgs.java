@@ -84,32 +84,26 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
             this.cloudWatchLogs = cloudWatchLogs;
             return this;
         }
-
         public Builder cloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDeliveryArgs cloudWatchLogs) {
             this.cloudWatchLogs = Output.ofNullable(cloudWatchLogs);
             return this;
         }
-
         public Builder firehose(@Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder firehose(@Nullable ConnectorFirehoseLogDeliveryArgs firehose) {
             this.firehose = Output.ofNullable(firehose);
             return this;
         }
-
         public Builder s3(@Nullable Output<ConnectorS3LogDeliveryArgs> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable ConnectorS3LogDeliveryArgs s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
-        }
-        public ConnectorWorkerLogDeliveryArgs build() {
+        }        public ConnectorWorkerLogDeliveryArgs build() {
             return new ConnectorWorkerLogDeliveryArgs(cloudWatchLogs, firehose, s3);
         }
     }

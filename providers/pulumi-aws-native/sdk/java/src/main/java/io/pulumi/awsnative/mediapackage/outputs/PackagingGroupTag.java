@@ -53,12 +53,10 @@ public final class PackagingGroupTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PackagingGroupTag build() {
+        }        public PackagingGroupTag build() {
             return new PackagingGroupTag(key, value);
         }
     }

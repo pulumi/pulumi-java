@@ -54,8 +54,7 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
         public Builder flowArn(String flowArn) {
             this.flowArn = Objects.requireNonNull(flowArn);
             return this;
-        }
-        public GetFlowArgs build() {
+        }        public GetFlowArgs build() {
             return new GetFlowArgs(flowArn);
         }
     }

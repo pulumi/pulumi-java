@@ -92,32 +92,29 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publicKeyMaterial(Output<String> publicKeyMaterial) {
             this.publicKeyMaterial = Objects.requireNonNull(publicKeyMaterial);
             return this;
         }
-
         public Builder publicKeyMaterial(String publicKeyMaterial) {
             this.publicKeyMaterial = Output.of(Objects.requireNonNull(publicKeyMaterial));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<PlaybackKeyPairTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<PlaybackKeyPairTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PlaybackKeyPairArgs build() {
+        public Builder tags(PlaybackKeyPairTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public PlaybackKeyPairArgs build() {
             return new PlaybackKeyPairArgs(name, publicKeyMaterial, tags);
         }
     }

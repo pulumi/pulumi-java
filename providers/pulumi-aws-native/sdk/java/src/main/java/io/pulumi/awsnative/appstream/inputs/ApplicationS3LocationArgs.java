@@ -65,22 +65,18 @@ public final class ApplicationS3LocationArgs extends io.pulumi.resources.Resourc
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
-
         public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Output.of(Objects.requireNonNull(s3Bucket));
             return this;
         }
-
         public Builder s3Key(Output<String> s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
-
         public Builder s3Key(String s3Key) {
             this.s3Key = Output.of(Objects.requireNonNull(s3Key));
             return this;
-        }
-        public ApplicationS3LocationArgs build() {
+        }        public ApplicationS3LocationArgs build() {
             return new ApplicationS3LocationArgs(s3Bucket, s3Key);
         }
     }

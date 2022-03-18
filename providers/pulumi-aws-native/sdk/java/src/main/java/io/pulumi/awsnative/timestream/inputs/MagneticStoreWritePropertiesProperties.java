@@ -79,12 +79,10 @@ public final class MagneticStoreWritePropertiesProperties extends io.pulumi.reso
             this.enableMagneticStoreWrites = Objects.requireNonNull(enableMagneticStoreWrites);
             return this;
         }
-
         public Builder magneticStoreRejectedDataLocation(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
             this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
-        }
-        public MagneticStoreWritePropertiesProperties build() {
+        }        public MagneticStoreWritePropertiesProperties build() {
             return new MagneticStoreWritePropertiesProperties(enableMagneticStoreWrites, magneticStoreRejectedDataLocation);
         }
     }

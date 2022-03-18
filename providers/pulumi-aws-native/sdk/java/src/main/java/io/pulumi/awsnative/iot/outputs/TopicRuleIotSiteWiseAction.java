@@ -55,12 +55,13 @@ public final class TopicRuleIotSiteWiseAction {
             this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries);
             return this;
         }
-
+        public Builder putAssetPropertyValueEntries(TopicRulePutAssetPropertyValueEntry... putAssetPropertyValueEntries) {
+            return putAssetPropertyValueEntries(List.of(putAssetPropertyValueEntries));
+        }
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleIotSiteWiseAction build() {
+        }        public TopicRuleIotSiteWiseAction build() {
             return new TopicRuleIotSiteWiseAction(putAssetPropertyValueEntries, roleArn);
         }
     }

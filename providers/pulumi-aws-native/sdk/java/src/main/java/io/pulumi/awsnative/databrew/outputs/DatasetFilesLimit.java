@@ -89,17 +89,14 @@ public final class DatasetFilesLimit {
             this.maxFiles = Objects.requireNonNull(maxFiles);
             return this;
         }
-
         public Builder order(@Nullable DatasetFilesLimitOrder order) {
             this.order = order;
             return this;
         }
-
         public Builder orderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
             this.orderedBy = orderedBy;
             return this;
-        }
-        public DatasetFilesLimit build() {
+        }        public DatasetFilesLimit build() {
             return new DatasetFilesLimit(maxFiles, order, orderedBy);
         }
     }

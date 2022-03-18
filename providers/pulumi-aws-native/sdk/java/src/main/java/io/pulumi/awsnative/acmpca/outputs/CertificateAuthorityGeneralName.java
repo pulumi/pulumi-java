@@ -106,42 +106,34 @@ public final class CertificateAuthorityGeneralName {
             this.directoryName = directoryName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder ediPartyName(@Nullable CertificateAuthorityEdiPartyName ediPartyName) {
             this.ediPartyName = ediPartyName;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder otherName(@Nullable CertificateAuthorityOtherName otherName) {
             this.otherName = otherName;
             return this;
         }
-
         public Builder registeredId(@Nullable String registeredId) {
             this.registeredId = registeredId;
             return this;
         }
-
         public Builder rfc822Name(@Nullable String rfc822Name) {
             this.rfc822Name = rfc822Name;
             return this;
         }
-
         public Builder uniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
             this.uniformResourceIdentifier = uniformResourceIdentifier;
             return this;
-        }
-        public CertificateAuthorityGeneralName build() {
+        }        public CertificateAuthorityGeneralName build() {
             return new CertificateAuthorityGeneralName(directoryName, dnsName, ediPartyName, ipAddress, otherName, registeredId, rfc822Name, uniformResourceIdentifier);
         }
     }

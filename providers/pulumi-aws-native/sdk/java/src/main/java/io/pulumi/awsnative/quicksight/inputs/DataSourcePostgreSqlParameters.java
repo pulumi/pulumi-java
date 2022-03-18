@@ -93,17 +93,14 @@ public final class DataSourcePostgreSqlParameters extends io.pulumi.resources.In
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourcePostgreSqlParameters build() {
+        }        public DataSourcePostgreSqlParameters build() {
             return new DataSourcePostgreSqlParameters(database, host, port);
         }
     }

@@ -126,52 +126,42 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
-
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
             return this;
         }
-
         public Builder encryptionMethod(@Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
-
         public Builder encryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = Output.ofNullable(encryptionMethod);
             return this;
         }
-
         public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
-
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = Output.ofNullable(keyRotationIntervalSeconds);
             return this;
         }
-
         public Builder repeatExtXKey(@Nullable Output<Boolean> repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
-
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             this.repeatExtXKey = Output.ofNullable(repeatExtXKey);
             return this;
         }
-
         public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
-        }
-        public OriginEndpointHlsEncryptionArgs build() {
+        }        public OriginEndpointHlsEncryptionArgs build() {
             return new OriginEndpointHlsEncryptionArgs(constantInitializationVector, encryptionMethod, keyRotationIntervalSeconds, repeatExtXKey, spekeKeyProvider);
         }
     }

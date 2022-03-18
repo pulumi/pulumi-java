@@ -74,22 +74,18 @@ public final class BotMessage {
             this.customPayload = customPayload;
             return this;
         }
-
         public Builder imageResponseCard(@Nullable BotImageResponseCard imageResponseCard) {
             this.imageResponseCard = imageResponseCard;
             return this;
         }
-
         public Builder plainTextMessage(@Nullable BotPlainTextMessage plainTextMessage) {
             this.plainTextMessage = plainTextMessage;
             return this;
         }
-
         public Builder sSMLMessage(@Nullable BotSSMLMessage sSMLMessage) {
             this.sSMLMessage = sSMLMessage;
             return this;
-        }
-        public BotMessage build() {
+        }        public BotMessage build() {
             return new BotMessage(customPayload, imageResponseCard, plainTextMessage, sSMLMessage);
         }
     }

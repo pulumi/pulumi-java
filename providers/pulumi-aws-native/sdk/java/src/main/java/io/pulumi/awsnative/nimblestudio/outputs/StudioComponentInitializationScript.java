@@ -89,22 +89,18 @@ public final class StudioComponentInitializationScript {
             this.launchProfileProtocolVersion = launchProfileProtocolVersion;
             return this;
         }
-
         public Builder platform(@Nullable StudioComponentLaunchProfilePlatform platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder runContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
             this.runContext = runContext;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = script;
             return this;
-        }
-        public StudioComponentInitializationScript build() {
+        }        public StudioComponentInitializationScript build() {
             return new StudioComponentInitializationScript(launchProfileProtocolVersion, platform, runContext, script);
         }
     }

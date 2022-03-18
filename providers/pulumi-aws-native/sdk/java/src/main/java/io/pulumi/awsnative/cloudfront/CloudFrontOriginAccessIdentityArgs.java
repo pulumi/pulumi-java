@@ -52,12 +52,10 @@ public final class CloudFrontOriginAccessIdentityArgs extends io.pulumi.resource
             this.cloudFrontOriginAccessIdentityConfig = Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig);
             return this;
         }
-
         public Builder cloudFrontOriginAccessIdentityConfig(CloudFrontOriginAccessIdentityConfigArgs cloudFrontOriginAccessIdentityConfig) {
             this.cloudFrontOriginAccessIdentityConfig = Output.of(Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig));
             return this;
-        }
-        public CloudFrontOriginAccessIdentityArgs build() {
+        }        public CloudFrontOriginAccessIdentityArgs build() {
             return new CloudFrontOriginAccessIdentityArgs(cloudFrontOriginAccessIdentityConfig);
         }
     }

@@ -64,17 +64,14 @@ public final class TaskDefinitionPortMapping {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder hostPort(@Nullable Integer hostPort) {
             this.hostPort = hostPort;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public TaskDefinitionPortMapping build() {
+        }        public TaskDefinitionPortMapping build() {
             return new TaskDefinitionPortMapping(containerPort, hostPort, protocol);
         }
     }

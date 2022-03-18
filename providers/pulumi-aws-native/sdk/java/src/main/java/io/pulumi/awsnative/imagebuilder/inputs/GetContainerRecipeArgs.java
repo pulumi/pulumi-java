@@ -54,8 +54,7 @@ public final class GetContainerRecipeArgs extends io.pulumi.resources.InvokeArgs
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetContainerRecipeArgs build() {
+        }        public GetContainerRecipeArgs build() {
             return new GetContainerRecipeArgs(arn);
         }
     }

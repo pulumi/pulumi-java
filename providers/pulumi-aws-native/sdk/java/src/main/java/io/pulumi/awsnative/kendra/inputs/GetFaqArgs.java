@@ -68,12 +68,10 @@ public final class GetFaqArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder indexId(String indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
-        }
-        public GetFaqArgs build() {
+        }        public GetFaqArgs build() {
             return new GetFaqArgs(id, indexId);
         }
     }

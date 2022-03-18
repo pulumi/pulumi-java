@@ -45,8 +45,7 @@ public final class FirewallPolicyActionDefinition {
         public Builder publishMetricAction(@Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
-        }
-        public FirewallPolicyActionDefinition build() {
+        }        public FirewallPolicyActionDefinition build() {
             return new FirewallPolicyActionDefinition(publishMetricAction);
         }
     }

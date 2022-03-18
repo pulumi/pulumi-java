@@ -72,22 +72,18 @@ public final class GetImageVersionResult {
             this.containerImage = containerImage;
             return this;
         }
-
         public Builder imageArn(@Nullable String imageArn) {
             this.imageArn = imageArn;
             return this;
         }
-
         public Builder imageVersionArn(@Nullable String imageVersionArn) {
             this.imageVersionArn = imageVersionArn;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
-        }
-        public GetImageVersionResult build() {
+        }        public GetImageVersionResult build() {
             return new GetImageVersionResult(containerImage, imageArn, imageVersionArn, version);
         }
     }

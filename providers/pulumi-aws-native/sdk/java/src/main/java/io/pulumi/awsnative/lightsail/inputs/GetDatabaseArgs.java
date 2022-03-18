@@ -54,8 +54,7 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
         public Builder relationalDatabaseName(String relationalDatabaseName) {
             this.relationalDatabaseName = Objects.requireNonNull(relationalDatabaseName);
             return this;
-        }
-        public GetDatabaseArgs build() {
+        }        public GetDatabaseArgs build() {
             return new GetDatabaseArgs(relationalDatabaseName);
         }
     }

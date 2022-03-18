@@ -58,8 +58,7 @@ public final class BucketEventBridgeConfiguration extends io.pulumi.resources.In
         public Builder eventBridgeEnabled(Boolean eventBridgeEnabled) {
             this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled);
             return this;
-        }
-        public BucketEventBridgeConfiguration build() {
+        }        public BucketEventBridgeConfiguration build() {
             return new BucketEventBridgeConfiguration(eventBridgeEnabled);
         }
     }

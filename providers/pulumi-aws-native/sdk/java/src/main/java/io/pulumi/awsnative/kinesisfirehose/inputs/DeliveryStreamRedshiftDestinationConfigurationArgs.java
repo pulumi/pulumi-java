@@ -180,112 +180,90 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = Output.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
-
         public Builder clusterJDBCURL(Output<String> clusterJDBCURL) {
             this.clusterJDBCURL = Objects.requireNonNull(clusterJDBCURL);
             return this;
         }
-
         public Builder clusterJDBCURL(String clusterJDBCURL) {
             this.clusterJDBCURL = Output.of(Objects.requireNonNull(clusterJDBCURL));
             return this;
         }
-
         public Builder copyCommand(Output<DeliveryStreamCopyCommandArgs> copyCommand) {
             this.copyCommand = Objects.requireNonNull(copyCommand);
             return this;
         }
-
         public Builder copyCommand(DeliveryStreamCopyCommandArgs copyCommand) {
             this.copyCommand = Output.of(Objects.requireNonNull(copyCommand));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder processingConfiguration(@Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
-
         public Builder retryOptions(@Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public Builder retryOptions(@Nullable DeliveryStreamRedshiftRetryOptionsArgs retryOptions) {
             this.retryOptions = Output.ofNullable(retryOptions);
             return this;
         }
-
         public Builder roleARN(Output<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Output.of(Objects.requireNonNull(roleARN));
             return this;
         }
-
         public Builder s3BackupConfiguration(@Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
-
         public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3BackupConfiguration) {
             this.s3BackupConfiguration = Output.ofNullable(s3BackupConfiguration);
             return this;
         }
-
         public Builder s3BackupMode(@Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
-
         public Builder s3Configuration(Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
-
         public Builder s3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
             this.s3Configuration = Output.of(Objects.requireNonNull(s3Configuration));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public DeliveryStreamRedshiftDestinationConfigurationArgs build() {
+        }        public DeliveryStreamRedshiftDestinationConfigurationArgs build() {
             return new DeliveryStreamRedshiftDestinationConfigurationArgs(cloudWatchLoggingOptions, clusterJDBCURL, copyCommand, password, processingConfiguration, retryOptions, roleARN, s3BackupConfiguration, s3BackupMode, s3Configuration, username);
         }
     }

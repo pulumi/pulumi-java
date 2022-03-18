@@ -66,22 +66,18 @@ public final class SpotFleetMemoryMiBRequestArgs extends io.pulumi.resources.Res
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Integer max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Integer> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = Output.ofNullable(min);
             return this;
-        }
-        public SpotFleetMemoryMiBRequestArgs build() {
+        }        public SpotFleetMemoryMiBRequestArgs build() {
             return new SpotFleetMemoryMiBRequestArgs(max, min);
         }
     }

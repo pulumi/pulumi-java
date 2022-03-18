@@ -175,57 +175,46 @@ public final class ListenerAuthenticateOidcConfig extends io.pulumi.resources.In
             this.authenticationRequestExtraParams = authenticationRequestExtraParams;
             return this;
         }
-
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder onUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = onUnauthenticatedRequest;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder sessionCookieName(@Nullable String sessionCookieName) {
             this.sessionCookieName = sessionCookieName;
             return this;
         }
-
         public Builder sessionTimeout(@Nullable String sessionTimeout) {
             this.sessionTimeout = sessionTimeout;
             return this;
         }
-
         public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
-
         public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
-        }
-        public ListenerAuthenticateOidcConfig build() {
+        }        public ListenerAuthenticateOidcConfig build() {
             return new ListenerAuthenticateOidcConfig(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, userInfoEndpoint);
         }
     }

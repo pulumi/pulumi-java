@@ -65,12 +65,10 @@ public final class BucketReplicationTime extends io.pulumi.resources.InvokeArgs 
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder time(BucketReplicationTimeValue time) {
             this.time = Objects.requireNonNull(time);
             return this;
-        }
-        public BucketReplicationTime build() {
+        }        public BucketReplicationTime build() {
             return new BucketReplicationTime(status, time);
         }
     }

@@ -66,22 +66,18 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends io.pulumi.resourc
             this.numberOfNotifiedThings = numberOfNotifiedThings;
             return this;
         }
-
         public Builder numberOfNotifiedThings(@Nullable Integer numberOfNotifiedThings) {
             this.numberOfNotifiedThings = Output.ofNullable(numberOfNotifiedThings);
             return this;
         }
-
         public Builder numberOfSucceededThings(@Nullable Output<Integer> numberOfSucceededThings) {
             this.numberOfSucceededThings = numberOfSucceededThings;
             return this;
         }
-
         public Builder numberOfSucceededThings(@Nullable Integer numberOfSucceededThings) {
             this.numberOfSucceededThings = Output.ofNullable(numberOfSucceededThings);
             return this;
-        }
-        public JobTemplateRateIncreaseCriteriaArgs build() {
+        }        public JobTemplateRateIncreaseCriteriaArgs build() {
             return new JobTemplateRateIncreaseCriteriaArgs(numberOfNotifiedThings, numberOfSucceededThings);
         }
     }

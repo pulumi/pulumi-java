@@ -76,12 +76,10 @@ public final class IndexTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public IndexTag build() {
+        }        public IndexTag build() {
             return new IndexTag(key, value);
         }
     }

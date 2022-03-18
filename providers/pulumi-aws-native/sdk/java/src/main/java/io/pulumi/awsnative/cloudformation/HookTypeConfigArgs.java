@@ -109,42 +109,34 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable String configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder configurationAlias(@Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias) {
             this.configurationAlias = configurationAlias;
             return this;
         }
-
         public Builder configurationAlias(@Nullable HookTypeConfigConfigurationAlias configurationAlias) {
             this.configurationAlias = Output.ofNullable(configurationAlias);
             return this;
         }
-
         public Builder typeArn(@Nullable Output<String> typeArn) {
             this.typeArn = typeArn;
             return this;
         }
-
         public Builder typeArn(@Nullable String typeArn) {
             this.typeArn = Output.ofNullable(typeArn);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
-        }
-        public HookTypeConfigArgs build() {
+        }        public HookTypeConfigArgs build() {
             return new HookTypeConfigArgs(configuration, configurationAlias, typeArn, typeName);
         }
     }

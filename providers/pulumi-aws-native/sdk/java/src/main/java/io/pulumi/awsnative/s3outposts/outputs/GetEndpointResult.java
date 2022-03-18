@@ -130,32 +130,29 @@ public final class GetEndpointResult {
             this.arn = arn;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<EndpointNetworkInterface> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
+        public Builder networkInterfaces(EndpointNetworkInterface... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder status(@Nullable EndpointStatus status) {
             this.status = status;
             return this;
-        }
-        public GetEndpointResult build() {
+        }        public GetEndpointResult build() {
             return new GetEndpointResult(arn, cidrBlock, creationTime, id, networkInterfaces, status);
         }
     }

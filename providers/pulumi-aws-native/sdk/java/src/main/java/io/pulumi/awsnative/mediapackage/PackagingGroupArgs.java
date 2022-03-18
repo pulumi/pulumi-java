@@ -93,32 +93,29 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.authorization = authorization;
             return this;
         }
-
         public Builder authorization(@Nullable PackagingGroupAuthorizationArgs authorization) {
             this.authorization = Output.ofNullable(authorization);
             return this;
         }
-
         public Builder egressAccessLogs(@Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
-
         public Builder egressAccessLogs(@Nullable PackagingGroupLogConfigurationArgs egressAccessLogs) {
             this.egressAccessLogs = Output.ofNullable(egressAccessLogs);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<PackagingGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<PackagingGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PackagingGroupArgs build() {
+        public Builder tags(PackagingGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public PackagingGroupArgs build() {
             return new PackagingGroupArgs(authorization, egressAccessLogs, tags);
         }
     }

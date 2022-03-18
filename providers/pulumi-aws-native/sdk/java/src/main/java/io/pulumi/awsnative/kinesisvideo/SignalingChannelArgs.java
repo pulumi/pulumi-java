@@ -110,42 +110,37 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
             this.messageTtlSeconds = messageTtlSeconds;
             return this;
         }
-
         public Builder messageTtlSeconds(@Nullable Integer messageTtlSeconds) {
             this.messageTtlSeconds = Output.ofNullable(messageTtlSeconds);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<SignalingChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<SignalingChannelTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(SignalingChannelTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable Output<SignalingChannelType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable SignalingChannelType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SignalingChannelArgs build() {
+        }        public SignalingChannelArgs build() {
             return new SignalingChannelArgs(messageTtlSeconds, name, tags, type);
         }
     }

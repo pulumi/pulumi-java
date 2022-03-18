@@ -68,12 +68,13 @@ public final class SpotFleetLaunchTemplateConfig extends io.pulumi.resources.Inv
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
-
         public Builder overrides(@Nullable List<SpotFleetLaunchTemplateOverrides> overrides) {
             this.overrides = overrides;
             return this;
         }
-        public SpotFleetLaunchTemplateConfig build() {
+        public Builder overrides(SpotFleetLaunchTemplateOverrides... overrides) {
+            return overrides(List.of(overrides));
+        }        public SpotFleetLaunchTemplateConfig build() {
             return new SpotFleetLaunchTemplateConfig(launchTemplateSpecification, overrides);
         }
     }

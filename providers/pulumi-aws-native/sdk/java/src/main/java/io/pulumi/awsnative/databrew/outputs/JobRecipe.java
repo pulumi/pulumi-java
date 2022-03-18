@@ -71,12 +71,10 @@ public final class JobRecipe {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public JobRecipe build() {
+        }        public JobRecipe build() {
             return new JobRecipe(name, version);
         }
     }

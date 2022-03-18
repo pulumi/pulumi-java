@@ -56,12 +56,10 @@ public final class BotAliasTextLogSetting {
             this.destination = destination;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public BotAliasTextLogSetting build() {
+        }        public BotAliasTextLogSetting build() {
             return new BotAliasTextLogSetting(destination, enabled);
         }
     }

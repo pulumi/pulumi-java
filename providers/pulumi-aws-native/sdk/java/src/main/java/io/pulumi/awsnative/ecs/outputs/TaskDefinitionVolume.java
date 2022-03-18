@@ -74,22 +74,18 @@ public final class TaskDefinitionVolume {
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
-
         public Builder eFSVolumeConfiguration(@Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration) {
             this.eFSVolumeConfiguration = eFSVolumeConfiguration;
             return this;
         }
-
         public Builder host(@Nullable TaskDefinitionHostVolumeProperties host) {
             this.host = host;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public TaskDefinitionVolume build() {
+        }        public TaskDefinitionVolume build() {
             return new TaskDefinitionVolume(dockerVolumeConfiguration, eFSVolumeConfiguration, host, name);
         }
     }

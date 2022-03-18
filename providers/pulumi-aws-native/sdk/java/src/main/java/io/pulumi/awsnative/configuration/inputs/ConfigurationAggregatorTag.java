@@ -76,12 +76,10 @@ public final class ConfigurationAggregatorTag extends io.pulumi.resources.Invoke
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ConfigurationAggregatorTag build() {
+        }        public ConfigurationAggregatorTag build() {
             return new ConfigurationAggregatorTag(key, value);
         }
     }

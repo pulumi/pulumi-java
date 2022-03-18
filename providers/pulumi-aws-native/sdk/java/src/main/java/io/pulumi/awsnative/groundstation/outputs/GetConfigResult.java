@@ -90,32 +90,29 @@ public final class GetConfigResult {
             this.arn = arn;
             return this;
         }
-
         public Builder configData(@Nullable ConfigData configData) {
             this.configData = configData;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<ConfigTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ConfigTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetConfigResult build() {
+        }        public GetConfigResult build() {
             return new GetConfigResult(arn, configData, id, name, tags, type);
         }
     }

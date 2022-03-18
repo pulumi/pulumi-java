@@ -68,12 +68,10 @@ public final class QuickConnectQueueQuickConnectConfig extends io.pulumi.resourc
             this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
             return this;
         }
-
         public Builder queueArn(String queueArn) {
             this.queueArn = Objects.requireNonNull(queueArn);
             return this;
-        }
-        public QuickConnectQueueQuickConnectConfig build() {
+        }        public QuickConnectQueueQuickConnectConfig build() {
             return new QuickConnectQueueQuickConnectConfig(contactFlowArn, queueArn);
         }
     }

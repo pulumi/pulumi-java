@@ -56,12 +56,13 @@ public final class DatasetQueryAction {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(DatasetFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder sqlQuery(String sqlQuery) {
             this.sqlQuery = Objects.requireNonNull(sqlQuery);
             return this;
-        }
-        public DatasetQueryAction build() {
+        }        public DatasetQueryAction build() {
             return new DatasetQueryAction(filters, sqlQuery);
         }
     }

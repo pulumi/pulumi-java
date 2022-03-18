@@ -68,12 +68,13 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration extends io.pulumi.re
             this.seedUrls = Objects.requireNonNull(seedUrls);
             return this;
         }
-
+        public Builder seedUrls(String... seedUrls) {
+            return seedUrls(List.of(seedUrls));
+        }
         public Builder webCrawlerMode(@Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
             this.webCrawlerMode = webCrawlerMode;
             return this;
-        }
-        public DataSourceWebCrawlerSeedUrlConfiguration build() {
+        }        public DataSourceWebCrawlerSeedUrlConfiguration build() {
             return new DataSourceWebCrawlerSeedUrlConfiguration(seedUrls, webCrawlerMode);
         }
     }

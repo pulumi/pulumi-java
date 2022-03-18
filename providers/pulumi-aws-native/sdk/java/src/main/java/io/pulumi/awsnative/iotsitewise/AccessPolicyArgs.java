@@ -91,32 +91,26 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPolicyIdentity = Objects.requireNonNull(accessPolicyIdentity);
             return this;
         }
-
         public Builder accessPolicyIdentity(AccessPolicyIdentityArgs accessPolicyIdentity) {
             this.accessPolicyIdentity = Output.of(Objects.requireNonNull(accessPolicyIdentity));
             return this;
         }
-
         public Builder accessPolicyPermission(Output<String> accessPolicyPermission) {
             this.accessPolicyPermission = Objects.requireNonNull(accessPolicyPermission);
             return this;
         }
-
         public Builder accessPolicyPermission(String accessPolicyPermission) {
             this.accessPolicyPermission = Output.of(Objects.requireNonNull(accessPolicyPermission));
             return this;
         }
-
         public Builder accessPolicyResource(Output<AccessPolicyResourceArgs> accessPolicyResource) {
             this.accessPolicyResource = Objects.requireNonNull(accessPolicyResource);
             return this;
         }
-
         public Builder accessPolicyResource(AccessPolicyResourceArgs accessPolicyResource) {
             this.accessPolicyResource = Output.of(Objects.requireNonNull(accessPolicyResource));
             return this;
-        }
-        public AccessPolicyArgs build() {
+        }        public AccessPolicyArgs build() {
             return new AccessPolicyArgs(accessPolicyIdentity, accessPolicyPermission, accessPolicyResource);
         }
     }

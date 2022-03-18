@@ -82,27 +82,22 @@ public final class ResponseHeadersPolicyConfig {
             this.comment = comment;
             return this;
         }
-
         public Builder corsConfig(@Nullable ResponseHeadersPolicyCorsConfig corsConfig) {
             this.corsConfig = corsConfig;
             return this;
         }
-
         public Builder customHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig) {
             this.customHeadersConfig = customHeadersConfig;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder securityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
             this.securityHeadersConfig = securityHeadersConfig;
             return this;
-        }
-        public ResponseHeadersPolicyConfig build() {
+        }        public ResponseHeadersPolicyConfig build() {
             return new ResponseHeadersPolicyConfig(comment, corsConfig, customHeadersConfig, name, securityHeadersConfig);
         }
     }

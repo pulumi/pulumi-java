@@ -53,8 +53,7 @@ public final class GetAlertResult {
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public GetAlertResult build() {
+        }        public GetAlertResult build() {
             return new GetAlertResult(arn);
         }
     }

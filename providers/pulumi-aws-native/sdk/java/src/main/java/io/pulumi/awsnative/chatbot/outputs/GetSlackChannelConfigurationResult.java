@@ -153,37 +153,36 @@ public final class GetSlackChannelConfigurationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder guardrailPolicies(@Nullable List<String> guardrailPolicies) {
             this.guardrailPolicies = guardrailPolicies;
             return this;
         }
-
+        public Builder guardrailPolicies(String... guardrailPolicies) {
+            return guardrailPolicies(List.of(guardrailPolicies));
+        }
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder slackChannelId(@Nullable String slackChannelId) {
             this.slackChannelId = slackChannelId;
             return this;
         }
-
         public Builder snsTopicArns(@Nullable List<String> snsTopicArns) {
             this.snsTopicArns = snsTopicArns;
             return this;
         }
-
+        public Builder snsTopicArns(String... snsTopicArns) {
+            return snsTopicArns(List.of(snsTopicArns));
+        }
         public Builder userRoleRequired(@Nullable Boolean userRoleRequired) {
             this.userRoleRequired = userRoleRequired;
             return this;
-        }
-        public GetSlackChannelConfigurationResult build() {
+        }        public GetSlackChannelConfigurationResult build() {
             return new GetSlackChannelConfigurationResult(arn, guardrailPolicies, iamRoleArn, loggingLevel, slackChannelId, snsTopicArns, userRoleRequired);
         }
     }

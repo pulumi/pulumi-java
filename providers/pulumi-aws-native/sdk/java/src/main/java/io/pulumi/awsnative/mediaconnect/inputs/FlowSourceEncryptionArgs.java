@@ -192,92 +192,74 @@ public final class FlowSourceEncryptionArgs extends io.pulumi.resources.Resource
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder algorithm(FlowSourceEncryptionAlgorithm algorithm) {
             this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
-
         public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
-
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
             return this;
         }
-
         public Builder deviceId(@Nullable Output<String> deviceId) {
             this.deviceId = deviceId;
             return this;
         }
-
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = Output.ofNullable(deviceId);
             return this;
         }
-
         public Builder keyType(@Nullable Output<FlowSourceEncryptionKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder keyType(@Nullable FlowSourceEncryptionKeyType keyType) {
             this.keyType = Output.ofNullable(keyType);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Output.ofNullable(secretArn);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public FlowSourceEncryptionArgs build() {
+        }        public FlowSourceEncryptionArgs build() {
             return new FlowSourceEncryptionArgs(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
         }
     }

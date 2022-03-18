@@ -244,67 +244,57 @@ public final class GetFleetMetricResult {
             this.aggregationField = aggregationField;
             return this;
         }
-
         public Builder aggregationType(@Nullable FleetMetricAggregationType aggregationType) {
             this.aggregationType = aggregationType;
             return this;
         }
-
         public Builder creationDate(@Nullable Double creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder indexName(@Nullable String indexName) {
             this.indexName = indexName;
             return this;
         }
-
         public Builder lastModifiedDate(@Nullable Double lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
-
         public Builder metricArn(@Nullable String metricArn) {
             this.metricArn = metricArn;
             return this;
         }
-
         public Builder period(@Nullable Integer period) {
             this.period = period;
             return this;
         }
-
         public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryVersion(@Nullable String queryVersion) {
             this.queryVersion = queryVersion;
             return this;
         }
-
         public Builder tags(@Nullable List<FleetMetricTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(FleetMetricTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
-        }
-        public GetFleetMetricResult build() {
+        }        public GetFleetMetricResult build() {
             return new GetFleetMetricResult(aggregationField, aggregationType, creationDate, description, indexName, lastModifiedDate, metricArn, period, queryString, queryVersion, tags, unit, version);
         }
     }

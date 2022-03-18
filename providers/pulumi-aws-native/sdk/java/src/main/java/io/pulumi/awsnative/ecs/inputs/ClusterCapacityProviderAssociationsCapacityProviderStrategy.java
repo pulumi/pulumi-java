@@ -81,17 +81,14 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategy e
             this.base = base;
             return this;
         }
-
         public Builder capacityProvider(Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public ClusterCapacityProviderAssociationsCapacityProviderStrategy build() {
+        }        public ClusterCapacityProviderAssociationsCapacityProviderStrategy build() {
             return new ClusterCapacityProviderAssociationsCapacityProviderStrategy(base, capacityProvider, weight);
         }
     }

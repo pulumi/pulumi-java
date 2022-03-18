@@ -116,62 +116,53 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
             this.hTTPPort = hTTPPort;
             return this;
         }
-
         public Builder hTTPPort(@Nullable Integer hTTPPort) {
             this.hTTPPort = Output.ofNullable(hTTPPort);
             return this;
         }
-
         public Builder hTTPSPort(@Nullable Output<Integer> hTTPSPort) {
             this.hTTPSPort = hTTPSPort;
             return this;
         }
-
         public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
             this.hTTPSPort = Output.ofNullable(hTTPSPort);
             return this;
         }
-
         public Builder originKeepaliveTimeout(@Nullable Output<Integer> originKeepaliveTimeout) {
             this.originKeepaliveTimeout = originKeepaliveTimeout;
             return this;
         }
-
         public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
             this.originKeepaliveTimeout = Output.ofNullable(originKeepaliveTimeout);
             return this;
         }
-
         public Builder originProtocolPolicy(Output<String> originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
-
         public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Output.of(Objects.requireNonNull(originProtocolPolicy));
             return this;
         }
-
         public Builder originReadTimeout(@Nullable Output<Integer> originReadTimeout) {
             this.originReadTimeout = originReadTimeout;
             return this;
         }
-
         public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
             this.originReadTimeout = Output.ofNullable(originReadTimeout);
             return this;
         }
-
         public Builder originSSLProtocols(@Nullable Output<List<String>> originSSLProtocols) {
             this.originSSLProtocols = originSSLProtocols;
             return this;
         }
-
         public Builder originSSLProtocols(@Nullable List<String> originSSLProtocols) {
             this.originSSLProtocols = Output.ofNullable(originSSLProtocols);
             return this;
         }
-        public DistributionCustomOriginConfigArgs build() {
+        public Builder originSSLProtocols(String... originSSLProtocols) {
+            return originSSLProtocols(List.of(originSSLProtocols));
+        }        public DistributionCustomOriginConfigArgs build() {
             return new DistributionCustomOriginConfigArgs(hTTPPort, hTTPSPort, originKeepaliveTimeout, originProtocolPolicy, originReadTimeout, originSSLProtocols);
         }
     }

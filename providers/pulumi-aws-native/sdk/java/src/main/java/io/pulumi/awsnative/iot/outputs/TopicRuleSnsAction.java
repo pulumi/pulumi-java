@@ -63,17 +63,14 @@ public final class TopicRuleSnsAction {
             this.messageFormat = messageFormat;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder targetArn(String targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
-        }
-        public TopicRuleSnsAction build() {
+        }        public TopicRuleSnsAction build() {
             return new TopicRuleSnsAction(messageFormat, roleArn, targetArn);
         }
     }

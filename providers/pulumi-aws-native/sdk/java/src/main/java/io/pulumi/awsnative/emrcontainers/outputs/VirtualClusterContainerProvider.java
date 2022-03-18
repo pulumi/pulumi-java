@@ -78,17 +78,14 @@ public final class VirtualClusterContainerProvider {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder info(VirtualClusterContainerInfo info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VirtualClusterContainerProvider build() {
+        }        public VirtualClusterContainerProvider build() {
             return new VirtualClusterContainerProvider(id, info, type);
         }
     }

@@ -75,12 +75,10 @@ public final class AttributesItemProperties extends io.pulumi.resources.InvokeAr
             this.attributeName = attributeName;
             return this;
         }
-
         public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
             this.attributeType = attributeType;
             return this;
-        }
-        public AttributesItemProperties build() {
+        }        public AttributesItemProperties build() {
             return new AttributesItemProperties(attributeName, attributeType);
         }
     }

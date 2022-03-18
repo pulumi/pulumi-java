@@ -53,12 +53,13 @@ public final class ResponseHeadersPolicyAccessControlAllowMethodsArgs extends io
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<String> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-        public ResponseHeadersPolicyAccessControlAllowMethodsArgs build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyAccessControlAllowMethodsArgs build() {
             return new ResponseHeadersPolicyAccessControlAllowMethodsArgs(items);
         }
     }

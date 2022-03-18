@@ -77,22 +77,18 @@ public final class AssetHierarchyArgs extends io.pulumi.resources.ResourceArgs {
             this.childAssetId = Objects.requireNonNull(childAssetId);
             return this;
         }
-
         public Builder childAssetId(String childAssetId) {
             this.childAssetId = Output.of(Objects.requireNonNull(childAssetId));
             return this;
         }
-
         public Builder logicalId(Output<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
-
         public Builder logicalId(String logicalId) {
             this.logicalId = Output.of(Objects.requireNonNull(logicalId));
             return this;
-        }
-        public AssetHierarchyArgs build() {
+        }        public AssetHierarchyArgs build() {
             return new AssetHierarchyArgs(childAssetId, logicalId);
         }
     }

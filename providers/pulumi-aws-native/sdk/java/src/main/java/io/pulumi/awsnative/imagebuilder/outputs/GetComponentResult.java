@@ -89,17 +89,14 @@ public final class GetComponentResult {
             this.arn = arn;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder type(@Nullable ComponentType type) {
             this.type = type;
             return this;
-        }
-        public GetComponentResult build() {
+        }        public GetComponentResult build() {
             return new GetComponentResult(arn, encrypted, type);
         }
     }

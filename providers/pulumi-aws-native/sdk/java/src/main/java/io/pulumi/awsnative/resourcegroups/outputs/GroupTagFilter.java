@@ -56,12 +56,13 @@ public final class GroupTagFilter {
             this.key = key;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public GroupTagFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GroupTagFilter build() {
             return new GroupTagFilter(key, values);
         }
     }

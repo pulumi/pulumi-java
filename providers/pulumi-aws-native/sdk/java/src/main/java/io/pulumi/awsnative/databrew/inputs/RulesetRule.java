@@ -127,32 +127,32 @@ public final class RulesetRule extends io.pulumi.resources.InvokeArgs {
             this.checkExpression = Objects.requireNonNull(checkExpression);
             return this;
         }
-
         public Builder columnSelectors(@Nullable List<RulesetColumnSelector> columnSelectors) {
             this.columnSelectors = columnSelectors;
             return this;
         }
-
+        public Builder columnSelectors(RulesetColumnSelector... columnSelectors) {
+            return columnSelectors(List.of(columnSelectors));
+        }
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder substitutionMap(@Nullable List<RulesetSubstitutionValue> substitutionMap) {
             this.substitutionMap = substitutionMap;
             return this;
         }
-
+        public Builder substitutionMap(RulesetSubstitutionValue... substitutionMap) {
+            return substitutionMap(List.of(substitutionMap));
+        }
         public Builder threshold(@Nullable RulesetThreshold threshold) {
             this.threshold = threshold;
             return this;
-        }
-        public RulesetRule build() {
+        }        public RulesetRule build() {
             return new RulesetRule(checkExpression, columnSelectors, disabled, name, substitutionMap, threshold);
         }
     }

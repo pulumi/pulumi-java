@@ -69,12 +69,10 @@ public final class DetectorModelSetVariable {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
-        }
-        public DetectorModelSetVariable build() {
+        }        public DetectorModelSetVariable build() {
             return new DetectorModelSetVariable(value, variableName);
         }
     }

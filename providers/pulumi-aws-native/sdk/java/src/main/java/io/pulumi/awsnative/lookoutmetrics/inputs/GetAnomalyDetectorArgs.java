@@ -50,8 +50,7 @@ public final class GetAnomalyDetectorArgs extends io.pulumi.resources.InvokeArgs
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetAnomalyDetectorArgs build() {
+        }        public GetAnomalyDetectorArgs build() {
             return new GetAnomalyDetectorArgs(arn);
         }
     }

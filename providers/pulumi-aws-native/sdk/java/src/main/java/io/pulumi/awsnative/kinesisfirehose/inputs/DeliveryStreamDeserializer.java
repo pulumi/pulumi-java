@@ -67,12 +67,10 @@ public final class DeliveryStreamDeserializer extends io.pulumi.resources.Invoke
             this.hiveJsonSerDe = hiveJsonSerDe;
             return this;
         }
-
         public Builder openXJsonSerDe(@Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
             this.openXJsonSerDe = openXJsonSerDe;
             return this;
-        }
-        public DeliveryStreamDeserializer build() {
+        }        public DeliveryStreamDeserializer build() {
             return new DeliveryStreamDeserializer(hiveJsonSerDe, openXJsonSerDe);
         }
     }

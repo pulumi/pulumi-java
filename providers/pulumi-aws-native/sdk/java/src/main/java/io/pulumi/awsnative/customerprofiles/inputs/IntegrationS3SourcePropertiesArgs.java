@@ -66,22 +66,18 @@ public final class IntegrationS3SourcePropertiesArgs extends io.pulumi.resources
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
-        }
-        public IntegrationS3SourcePropertiesArgs build() {
+        }        public IntegrationS3SourcePropertiesArgs build() {
             return new IntegrationS3SourcePropertiesArgs(bucketName, bucketPrefix);
         }
     }

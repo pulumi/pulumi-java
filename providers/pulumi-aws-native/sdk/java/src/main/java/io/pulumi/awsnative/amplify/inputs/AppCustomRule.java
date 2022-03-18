@@ -90,22 +90,18 @@ public final class AppCustomRule extends io.pulumi.resources.InvokeArgs {
             this.condition = condition;
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public AppCustomRule build() {
+        }        public AppCustomRule build() {
             return new AppCustomRule(condition, source, status, target);
         }
     }

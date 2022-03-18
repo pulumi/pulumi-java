@@ -146,37 +146,36 @@ public final class GetLocationSMBResult {
             this.agentArns = agentArns;
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
-
         public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
-
         public Builder mountOptions(@Nullable LocationSMBMountOptions mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationSMBTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(LocationSMBTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder user(@Nullable String user) {
             this.user = user;
             return this;
-        }
-        public GetLocationSMBResult build() {
+        }        public GetLocationSMBResult build() {
             return new GetLocationSMBResult(agentArns, domain, locationArn, locationUri, mountOptions, tags, user);
         }
     }

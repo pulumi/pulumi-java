@@ -270,162 +270,136 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
-
         public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
             this.applyOnlyAtCronInterval = Output.ofNullable(applyOnlyAtCronInterval);
             return this;
         }
-
         public Builder associationName(@Nullable Output<String> associationName) {
             this.associationName = associationName;
             return this;
         }
-
         public Builder associationName(@Nullable String associationName) {
             this.associationName = Output.ofNullable(associationName);
             return this;
         }
-
         public Builder automationTargetParameterName(@Nullable Output<String> automationTargetParameterName) {
             this.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
-
         public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
             this.automationTargetParameterName = Output.ofNullable(automationTargetParameterName);
             return this;
         }
-
         public Builder calendarNames(@Nullable Output<List<String>> calendarNames) {
             this.calendarNames = calendarNames;
             return this;
         }
-
         public Builder calendarNames(@Nullable List<String> calendarNames) {
             this.calendarNames = Output.ofNullable(calendarNames);
             return this;
         }
-
+        public Builder calendarNames(String... calendarNames) {
+            return calendarNames(List.of(calendarNames));
+        }
         public Builder complianceSeverity(@Nullable Output<AssociationComplianceSeverity> complianceSeverity) {
             this.complianceSeverity = complianceSeverity;
             return this;
         }
-
         public Builder complianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
             this.complianceSeverity = Output.ofNullable(complianceSeverity);
             return this;
         }
-
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Output.ofNullable(documentVersion);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
-
         public Builder maxConcurrency(@Nullable String maxConcurrency) {
             this.maxConcurrency = Output.ofNullable(maxConcurrency);
             return this;
         }
-
         public Builder maxErrors(@Nullable Output<String> maxErrors) {
             this.maxErrors = maxErrors;
             return this;
         }
-
         public Builder maxErrors(@Nullable String maxErrors) {
             this.maxErrors = Output.ofNullable(maxErrors);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputLocation(@Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder outputLocation(@Nullable AssociationInstanceAssociationOutputLocationArgs outputLocation) {
             this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
-
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = Output.ofNullable(scheduleExpression);
             return this;
         }
-
         public Builder syncCompliance(@Nullable Output<AssociationSyncCompliance> syncCompliance) {
             this.syncCompliance = syncCompliance;
             return this;
         }
-
         public Builder syncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
             this.syncCompliance = Output.ofNullable(syncCompliance);
             return this;
         }
-
         public Builder targets(@Nullable Output<List<AssociationTargetArgs>> targets) {
             this.targets = targets;
             return this;
         }
-
         public Builder targets(@Nullable List<AssociationTargetArgs> targets) {
             this.targets = Output.ofNullable(targets);
             return this;
         }
-
+        public Builder targets(AssociationTargetArgs... targets) {
+            return targets(List.of(targets));
+        }
         public Builder waitForSuccessTimeoutSeconds(@Nullable Output<Integer> waitForSuccessTimeoutSeconds) {
             this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
         }
-
         public Builder waitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
             this.waitForSuccessTimeoutSeconds = Output.ofNullable(waitForSuccessTimeoutSeconds);
             return this;
-        }
-        public AssociationArgs build() {
+        }        public AssociationArgs build() {
             return new AssociationArgs(applyOnlyAtCronInterval, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, syncCompliance, targets, waitForSuccessTimeoutSeconds);
         }
     }

@@ -96,42 +96,34 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
-
         public Builder removeEncryptionConfiguration(@Nullable Output<Boolean> removeEncryptionConfiguration) {
             this.removeEncryptionConfiguration = removeEncryptionConfiguration;
             return this;
         }
-
         public Builder removeEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
             this.removeEncryptionConfiguration = Output.ofNullable(removeEncryptionConfiguration);
             return this;
         }
-
         public Builder removeOutputLocation(@Nullable Output<Boolean> removeOutputLocation) {
             this.removeOutputLocation = removeOutputLocation;
             return this;
         }
-
         public Builder removeOutputLocation(@Nullable Boolean removeOutputLocation) {
             this.removeOutputLocation = Output.ofNullable(removeOutputLocation);
             return this;
-        }
-        public WorkGroupResultConfigurationUpdatesArgs build() {
+        }        public WorkGroupResultConfigurationUpdatesArgs build() {
             return new WorkGroupResultConfigurationUpdatesArgs(encryptionConfiguration, outputLocation, removeEncryptionConfiguration, removeOutputLocation);
         }
     }

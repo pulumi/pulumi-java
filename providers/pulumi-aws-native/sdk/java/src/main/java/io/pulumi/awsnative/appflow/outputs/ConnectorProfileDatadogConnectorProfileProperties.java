@@ -51,8 +51,7 @@ public final class ConnectorProfileDatadogConnectorProfileProperties {
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
-        }
-        public ConnectorProfileDatadogConnectorProfileProperties build() {
+        }        public ConnectorProfileDatadogConnectorProfileProperties build() {
             return new ConnectorProfileDatadogConnectorProfileProperties(instanceUrl);
         }
     }

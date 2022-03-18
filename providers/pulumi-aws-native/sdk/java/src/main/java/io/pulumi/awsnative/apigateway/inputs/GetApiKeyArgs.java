@@ -54,8 +54,7 @@ public final class GetApiKeyArgs extends io.pulumi.resources.InvokeArgs {
         public Builder aPIKeyId(String aPIKeyId) {
             this.aPIKeyId = Objects.requireNonNull(aPIKeyId);
             return this;
-        }
-        public GetApiKeyArgs build() {
+        }        public GetApiKeyArgs build() {
             return new GetApiKeyArgs(aPIKeyId);
         }
     }

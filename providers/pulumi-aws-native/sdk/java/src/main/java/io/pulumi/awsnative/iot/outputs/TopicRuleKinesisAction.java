@@ -63,17 +63,14 @@ public final class TopicRuleKinesisAction {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder streamName(String streamName) {
             this.streamName = Objects.requireNonNull(streamName);
             return this;
-        }
-        public TopicRuleKinesisAction build() {
+        }        public TopicRuleKinesisAction build() {
             return new TopicRuleKinesisAction(partitionKey, roleArn, streamName);
         }
     }

@@ -52,12 +52,10 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
             this.originRequestPolicyConfig = Objects.requireNonNull(originRequestPolicyConfig);
             return this;
         }
-
         public Builder originRequestPolicyConfig(OriginRequestPolicyConfigArgs originRequestPolicyConfig) {
             this.originRequestPolicyConfig = Output.of(Objects.requireNonNull(originRequestPolicyConfig));
             return this;
-        }
-        public OriginRequestPolicyArgs build() {
+        }        public OriginRequestPolicyArgs build() {
             return new OriginRequestPolicyArgs(originRequestPolicyConfig);
         }
     }

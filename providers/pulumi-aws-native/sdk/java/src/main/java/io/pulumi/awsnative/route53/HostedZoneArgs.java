@@ -123,52 +123,48 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
             this.hostedZoneConfig = hostedZoneConfig;
             return this;
         }
-
         public Builder hostedZoneConfig(@Nullable HostedZoneConfigArgs hostedZoneConfig) {
             this.hostedZoneConfig = Output.ofNullable(hostedZoneConfig);
             return this;
         }
-
         public Builder hostedZoneTags(@Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags) {
             this.hostedZoneTags = hostedZoneTags;
             return this;
         }
-
         public Builder hostedZoneTags(@Nullable List<HostedZoneTagArgs> hostedZoneTags) {
             this.hostedZoneTags = Output.ofNullable(hostedZoneTags);
             return this;
         }
-
+        public Builder hostedZoneTags(HostedZoneTagArgs... hostedZoneTags) {
+            return hostedZoneTags(List.of(hostedZoneTags));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder queryLoggingConfig(@Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig) {
             this.queryLoggingConfig = queryLoggingConfig;
             return this;
         }
-
         public Builder queryLoggingConfig(@Nullable HostedZoneQueryLoggingConfigArgs queryLoggingConfig) {
             this.queryLoggingConfig = Output.ofNullable(queryLoggingConfig);
             return this;
         }
-
         public Builder vPCs(@Nullable Output<List<HostedZoneVPCArgs>> vPCs) {
             this.vPCs = vPCs;
             return this;
         }
-
         public Builder vPCs(@Nullable List<HostedZoneVPCArgs> vPCs) {
             this.vPCs = Output.ofNullable(vPCs);
             return this;
         }
-        public HostedZoneArgs build() {
+        public Builder vPCs(HostedZoneVPCArgs... vPCs) {
+            return vPCs(List.of(vPCs));
+        }        public HostedZoneArgs build() {
             return new HostedZoneArgs(hostedZoneConfig, hostedZoneTags, name, queryLoggingConfig, vPCs);
         }
     }

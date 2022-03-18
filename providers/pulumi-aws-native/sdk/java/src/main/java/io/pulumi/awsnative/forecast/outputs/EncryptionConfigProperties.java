@@ -55,12 +55,10 @@ public final class EncryptionConfigProperties {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public EncryptionConfigProperties build() {
+        }        public EncryptionConfigProperties build() {
             return new EncryptionConfigProperties(kmsKeyArn, roleArn);
         }
     }

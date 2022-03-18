@@ -70,22 +70,18 @@ public final class AnomalyDetectorTimestampColumnArgs extends io.pulumi.resource
             this.columnFormat = columnFormat;
             return this;
         }
-
         public Builder columnFormat(@Nullable String columnFormat) {
             this.columnFormat = Output.ofNullable(columnFormat);
             return this;
         }
-
         public Builder columnName(@Nullable Output<String> columnName) {
             this.columnName = columnName;
             return this;
         }
-
         public Builder columnName(@Nullable String columnName) {
             this.columnName = Output.ofNullable(columnName);
             return this;
-        }
-        public AnomalyDetectorTimestampColumnArgs build() {
+        }        public AnomalyDetectorTimestampColumnArgs build() {
             return new AnomalyDetectorTimestampColumnArgs(columnFormat, columnName);
         }
     }

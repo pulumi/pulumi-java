@@ -104,52 +104,42 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
             this.booleanValue = booleanValue;
             return this;
         }
-
         public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = Output.ofNullable(booleanValue);
             return this;
         }
-
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
-
         public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
-
         public Builder longValue(@Nullable Output<Double> longValue) {
             this.longValue = longValue;
             return this;
         }
-
         public Builder longValue(@Nullable Double longValue) {
             this.longValue = Output.ofNullable(longValue);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
-
         public Builder variationName(@Nullable Output<String> variationName) {
             this.variationName = variationName;
             return this;
         }
-
         public Builder variationName(@Nullable String variationName) {
             this.variationName = Output.ofNullable(variationName);
             return this;
-        }
-        public FeatureVariationObjectArgs build() {
+        }        public FeatureVariationObjectArgs build() {
             return new FeatureVariationObjectArgs(booleanValue, doubleValue, longValue, stringValue, variationName);
         }
     }

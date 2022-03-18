@@ -124,52 +124,42 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.deploymentCanarySettings = deploymentCanarySettings;
             return this;
         }
-
         public Builder deploymentCanarySettings(@Nullable DeploymentCanarySettingsArgs deploymentCanarySettings) {
             this.deploymentCanarySettings = Output.ofNullable(deploymentCanarySettings);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
-
         public Builder restApiId(String restApiId) {
             this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
-
         public Builder stageDescription(@Nullable Output<DeploymentStageDescriptionArgs> stageDescription) {
             this.stageDescription = stageDescription;
             return this;
         }
-
         public Builder stageDescription(@Nullable DeploymentStageDescriptionArgs stageDescription) {
             this.stageDescription = Output.ofNullable(stageDescription);
             return this;
         }
-
         public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = Output.ofNullable(stageName);
             return this;
-        }
-        public DeploymentArgs build() {
+        }        public DeploymentArgs build() {
             return new DeploymentArgs(deploymentCanarySettings, description, restApiId, stageDescription, stageName);
         }
     }

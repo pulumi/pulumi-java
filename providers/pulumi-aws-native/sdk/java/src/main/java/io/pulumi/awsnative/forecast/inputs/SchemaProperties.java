@@ -54,7 +54,9 @@ public final class SchemaProperties extends io.pulumi.resources.InvokeArgs {
             this.attributes = attributes;
             return this;
         }
-        public SchemaProperties build() {
+        public Builder attributes(AttributesItemProperties... attributes) {
+            return attributes(List.of(attributes));
+        }        public SchemaProperties build() {
             return new SchemaProperties(attributes);
         }
     }

@@ -75,22 +75,18 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder encryptionType(RepositoryEncryptionType encryptionType) {
             this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
             return this;
         }
-
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Output.ofNullable(kmsKey);
             return this;
-        }
-        public RepositoryEncryptionConfigurationArgs build() {
+        }        public RepositoryEncryptionConfigurationArgs build() {
             return new RepositoryEncryptionConfigurationArgs(encryptionType, kmsKey);
         }
     }

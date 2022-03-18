@@ -60,12 +60,10 @@ public final class IPAMIpamOperatingRegionArgs extends io.pulumi.resources.Resou
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
-
         public Builder regionName(String regionName) {
             this.regionName = Output.of(Objects.requireNonNull(regionName));
             return this;
-        }
-        public IPAMIpamOperatingRegionArgs build() {
+        }        public IPAMIpamOperatingRegionArgs build() {
             return new IPAMIpamOperatingRegionArgs(regionName);
         }
     }

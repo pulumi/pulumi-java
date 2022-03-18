@@ -141,62 +141,59 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.dBProxyEndpointName = dBProxyEndpointName;
             return this;
         }
-
         public Builder dBProxyEndpointName(@Nullable String dBProxyEndpointName) {
             this.dBProxyEndpointName = Output.ofNullable(dBProxyEndpointName);
             return this;
         }
-
         public Builder dBProxyName(Output<String> dBProxyName) {
             this.dBProxyName = Objects.requireNonNull(dBProxyName);
             return this;
         }
-
         public Builder dBProxyName(String dBProxyName) {
             this.dBProxyName = Output.of(Objects.requireNonNull(dBProxyName));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DBProxyEndpointTagFormatArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DBProxyEndpointTagFormatArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder targetRole(@Nullable Output<DBProxyEndpointTargetRole> targetRole) {
             this.targetRole = targetRole;
             return this;
         }
-
         public Builder targetRole(@Nullable DBProxyEndpointTargetRole targetRole) {
             this.targetRole = Output.ofNullable(targetRole);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }
         public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
-
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
-        public DBProxyEndpointArgs build() {
+        public Builder vpcSubnetIds(String... vpcSubnetIds) {
+            return vpcSubnetIds(List.of(vpcSubnetIds));
+        }        public DBProxyEndpointArgs build() {
             return new DBProxyEndpointArgs(dBProxyEndpointName, dBProxyName, tags, targetRole, vpcSecurityGroupIds, vpcSubnetIds);
         }
     }

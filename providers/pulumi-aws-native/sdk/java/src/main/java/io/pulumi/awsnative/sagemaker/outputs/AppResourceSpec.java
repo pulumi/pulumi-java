@@ -88,17 +88,14 @@ public final class AppResourceSpec {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
-
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
-        }
-        public AppResourceSpec build() {
+        }        public AppResourceSpec build() {
             return new AppResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }
     }

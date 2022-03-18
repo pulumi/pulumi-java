@@ -81,27 +81,22 @@ public final class TaskDefinitionDockerVolumeConfiguration {
             this.autoprovision = autoprovision;
             return this;
         }
-
         public Builder driver(@Nullable String driver) {
             this.driver = driver;
             return this;
         }
-
         public Builder driverOpts(@Nullable Object driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
-
         public Builder labels(@Nullable Object labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
-        }
-        public TaskDefinitionDockerVolumeConfiguration build() {
+        }        public TaskDefinitionDockerVolumeConfiguration build() {
             return new TaskDefinitionDockerVolumeConfiguration(autoprovision, driver, driverOpts, labels, scope);
         }
     }

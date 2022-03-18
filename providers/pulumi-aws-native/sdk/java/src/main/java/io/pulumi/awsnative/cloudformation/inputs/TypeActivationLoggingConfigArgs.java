@@ -74,22 +74,18 @@ public final class TypeActivationLoggingConfigArgs extends io.pulumi.resources.R
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
-
         public Builder logRoleArn(@Nullable Output<String> logRoleArn) {
             this.logRoleArn = logRoleArn;
             return this;
         }
-
         public Builder logRoleArn(@Nullable String logRoleArn) {
             this.logRoleArn = Output.ofNullable(logRoleArn);
             return this;
-        }
-        public TypeActivationLoggingConfigArgs build() {
+        }        public TypeActivationLoggingConfigArgs build() {
             return new TypeActivationLoggingConfigArgs(logGroupName, logRoleArn);
         }
     }

@@ -53,8 +53,7 @@ public final class ThemeBorderStyle {
         public Builder show(@Nullable Boolean show) {
             this.show = show;
             return this;
-        }
-        public ThemeBorderStyle build() {
+        }        public ThemeBorderStyle build() {
             return new ThemeBorderStyle(show);
         }
     }

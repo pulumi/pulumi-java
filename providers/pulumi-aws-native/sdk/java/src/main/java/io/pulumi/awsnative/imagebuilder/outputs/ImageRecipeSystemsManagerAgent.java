@@ -53,8 +53,7 @@ public final class ImageRecipeSystemsManagerAgent {
         public Builder uninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
             this.uninstallAfterBuild = uninstallAfterBuild;
             return this;
-        }
-        public ImageRecipeSystemsManagerAgent build() {
+        }        public ImageRecipeSystemsManagerAgent build() {
             return new ImageRecipeSystemsManagerAgent(uninstallAfterBuild);
         }
     }

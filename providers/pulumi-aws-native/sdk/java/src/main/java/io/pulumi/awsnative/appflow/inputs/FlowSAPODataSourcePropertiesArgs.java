@@ -52,12 +52,10 @@ public final class FlowSAPODataSourcePropertiesArgs extends io.pulumi.resources.
             this.objectPath = Objects.requireNonNull(objectPath);
             return this;
         }
-
         public Builder objectPath(String objectPath) {
             this.objectPath = Output.of(Objects.requireNonNull(objectPath));
             return this;
-        }
-        public FlowSAPODataSourcePropertiesArgs build() {
+        }        public FlowSAPODataSourcePropertiesArgs build() {
             return new FlowSAPODataSourcePropertiesArgs(objectPath);
         }
     }

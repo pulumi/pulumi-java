@@ -84,32 +84,26 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder storageClass(BucketTransitionStorageClass storageClass) {
             this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
         }
-
         public Builder transitionDate(@Nullable Output<String> transitionDate) {
             this.transitionDate = transitionDate;
             return this;
         }
-
         public Builder transitionDate(@Nullable String transitionDate) {
             this.transitionDate = Output.ofNullable(transitionDate);
             return this;
         }
-
         public Builder transitionInDays(@Nullable Output<Integer> transitionInDays) {
             this.transitionInDays = transitionInDays;
             return this;
         }
-
         public Builder transitionInDays(@Nullable Integer transitionInDays) {
             this.transitionInDays = Output.ofNullable(transitionInDays);
             return this;
-        }
-        public BucketTransitionArgs build() {
+        }        public BucketTransitionArgs build() {
             return new BucketTransitionArgs(storageClass, transitionDate, transitionInDays);
         }
     }

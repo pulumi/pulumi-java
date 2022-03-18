@@ -65,12 +65,10 @@ public final class DatasetRetentionPeriod extends io.pulumi.resources.InvokeArgs
             this.numberOfDays = Objects.requireNonNull(numberOfDays);
             return this;
         }
-
         public Builder unlimited(Boolean unlimited) {
             this.unlimited = Objects.requireNonNull(unlimited);
             return this;
-        }
-        public DatasetRetentionPeriod build() {
+        }        public DatasetRetentionPeriod build() {
             return new DatasetRetentionPeriod(numberOfDays, unlimited);
         }
     }

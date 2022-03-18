@@ -144,62 +144,53 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
             this.cmafPackage = cmafPackage;
             return this;
         }
-
         public Builder cmafPackage(@Nullable PackagingConfigurationCmafPackageArgs cmafPackage) {
             this.cmafPackage = Output.ofNullable(cmafPackage);
             return this;
         }
-
         public Builder dashPackage(@Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
-
         public Builder dashPackage(@Nullable PackagingConfigurationDashPackageArgs dashPackage) {
             this.dashPackage = Output.ofNullable(dashPackage);
             return this;
         }
-
         public Builder hlsPackage(@Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
-
         public Builder hlsPackage(@Nullable PackagingConfigurationHlsPackageArgs hlsPackage) {
             this.hlsPackage = Output.ofNullable(hlsPackage);
             return this;
         }
-
         public Builder mssPackage(@Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
-
         public Builder mssPackage(@Nullable PackagingConfigurationMssPackageArgs mssPackage) {
             this.mssPackage = Output.ofNullable(mssPackage);
             return this;
         }
-
         public Builder packagingGroupId(Output<String> packagingGroupId) {
             this.packagingGroupId = Objects.requireNonNull(packagingGroupId);
             return this;
         }
-
         public Builder packagingGroupId(String packagingGroupId) {
             this.packagingGroupId = Output.of(Objects.requireNonNull(packagingGroupId));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<PackagingConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<PackagingConfigurationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PackagingConfigurationArgs build() {
+        public Builder tags(PackagingConfigurationTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public PackagingConfigurationArgs build() {
             return new PackagingConfigurationArgs(cmafPackage, dashPackage, hlsPackage, mssPackage, packagingGroupId, tags);
         }
     }

@@ -90,32 +90,29 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder systemIds(Output<List<String>> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
-
         public Builder systemIds(List<String> systemIds) {
             this.systemIds = Output.of(Objects.requireNonNull(systemIds));
             return this;
         }
-
+        public Builder systemIds(String... systemIds) {
+            return systemIds(List.of(systemIds));
+        }
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public PackagingConfigurationSpekeKeyProviderArgs build() {
+        }        public PackagingConfigurationSpekeKeyProviderArgs build() {
             return new PackagingConfigurationSpekeKeyProviderArgs(roleArn, systemIds, url);
         }
     }

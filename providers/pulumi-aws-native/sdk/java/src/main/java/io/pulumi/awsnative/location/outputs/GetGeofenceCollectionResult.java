@@ -79,27 +79,22 @@ public final class GetGeofenceCollectionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder collectionArn(@Nullable String collectionArn) {
             this.collectionArn = collectionArn;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
-        }
-        public GetGeofenceCollectionResult build() {
+        }        public GetGeofenceCollectionResult build() {
             return new GetGeofenceCollectionResult(arn, collectionArn, createTime, kmsKeyId, updateTime);
         }
     }

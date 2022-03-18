@@ -117,62 +117,50 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPolicy = accessPolicy;
             return this;
         }
-
         public Builder accessPolicy(@Nullable Object accessPolicy) {
             this.accessPolicy = Output.ofNullable(accessPolicy);
             return this;
         }
-
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
             this.backupVaultName = backupVaultName;
             return this;
         }
-
         public Builder backupVaultName(@Nullable String backupVaultName) {
             this.backupVaultName = Output.ofNullable(backupVaultName);
             return this;
         }
-
         public Builder backupVaultTags(@Nullable Output<Object> backupVaultTags) {
             this.backupVaultTags = backupVaultTags;
             return this;
         }
-
         public Builder backupVaultTags(@Nullable Object backupVaultTags) {
             this.backupVaultTags = Output.ofNullable(backupVaultTags);
             return this;
         }
-
         public Builder encryptionKeyArn(@Nullable Output<String> encryptionKeyArn) {
             this.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
-
         public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
             this.encryptionKeyArn = Output.ofNullable(encryptionKeyArn);
             return this;
         }
-
         public Builder lockConfiguration(@Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration) {
             this.lockConfiguration = lockConfiguration;
             return this;
         }
-
         public Builder lockConfiguration(@Nullable BackupVaultLockConfigurationTypeArgs lockConfiguration) {
             this.lockConfiguration = Output.ofNullable(lockConfiguration);
             return this;
         }
-
         public Builder notifications(@Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications) {
             this.notifications = notifications;
             return this;
         }
-
         public Builder notifications(@Nullable BackupVaultNotificationObjectTypeArgs notifications) {
             this.notifications = Output.ofNullable(notifications);
             return this;
-        }
-        public BackupVaultArgs build() {
+        }        public BackupVaultArgs build() {
             return new BackupVaultArgs(accessPolicy, backupVaultName, backupVaultTags, encryptionKeyArn, lockConfiguration, notifications);
         }
     }

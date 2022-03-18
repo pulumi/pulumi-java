@@ -43,8 +43,7 @@ public final class FlowZendeskSourceProperties {
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowZendeskSourceProperties build() {
+        }        public FlowZendeskSourceProperties build() {
             return new FlowZendeskSourceProperties(object);
         }
     }

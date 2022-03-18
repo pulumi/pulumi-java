@@ -98,27 +98,22 @@ public final class GetSafetyRuleResult {
             this.assertionRule = assertionRule;
             return this;
         }
-
         public Builder gatingRule(@Nullable SafetyRuleGatingRule gatingRule) {
             this.gatingRule = gatingRule;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder safetyRuleArn(@Nullable String safetyRuleArn) {
             this.safetyRuleArn = safetyRuleArn;
             return this;
         }
-
         public Builder status(@Nullable SafetyRuleStatus status) {
             this.status = status;
             return this;
-        }
-        public GetSafetyRuleResult build() {
+        }        public GetSafetyRuleResult build() {
             return new GetSafetyRuleResult(assertionRule, gatingRule, name, safetyRuleArn, status);
         }
     }

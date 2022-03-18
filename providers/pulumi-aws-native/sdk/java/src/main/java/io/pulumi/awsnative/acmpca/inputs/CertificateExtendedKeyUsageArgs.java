@@ -70,22 +70,18 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
             this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
             return this;
         }
-
         public Builder extendedKeyUsageObjectIdentifier(@Nullable String extendedKeyUsageObjectIdentifier) {
             this.extendedKeyUsageObjectIdentifier = Output.ofNullable(extendedKeyUsageObjectIdentifier);
             return this;
         }
-
         public Builder extendedKeyUsageType(@Nullable Output<String> extendedKeyUsageType) {
             this.extendedKeyUsageType = extendedKeyUsageType;
             return this;
         }
-
         public Builder extendedKeyUsageType(@Nullable String extendedKeyUsageType) {
             this.extendedKeyUsageType = Output.ofNullable(extendedKeyUsageType);
             return this;
-        }
-        public CertificateExtendedKeyUsageArgs build() {
+        }        public CertificateExtendedKeyUsageArgs build() {
             return new CertificateExtendedKeyUsageArgs(extendedKeyUsageObjectIdentifier, extendedKeyUsageType);
         }
     }

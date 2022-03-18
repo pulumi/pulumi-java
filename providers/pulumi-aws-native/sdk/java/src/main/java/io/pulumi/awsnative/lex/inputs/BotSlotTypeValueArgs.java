@@ -71,22 +71,21 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
             this.sampleValue = Objects.requireNonNull(sampleValue);
             return this;
         }
-
         public Builder sampleValue(BotSampleValueArgs sampleValue) {
             this.sampleValue = Output.of(Objects.requireNonNull(sampleValue));
             return this;
         }
-
         public Builder synonyms(@Nullable Output<List<BotSampleValueArgs>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
-
         public Builder synonyms(@Nullable List<BotSampleValueArgs> synonyms) {
             this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
-        public BotSlotTypeValueArgs build() {
+        public Builder synonyms(BotSampleValueArgs... synonyms) {
+            return synonyms(List.of(synonyms));
+        }        public BotSlotTypeValueArgs build() {
             return new BotSlotTypeValueArgs(sampleValue, synonyms);
         }
     }

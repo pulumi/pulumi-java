@@ -66,17 +66,17 @@ public final class StateMachineLoggingConfiguration {
             this.destinations = destinations;
             return this;
         }
-
+        public Builder destinations(StateMachineLogDestination... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
-
         public Builder level(@Nullable StateMachineLoggingConfigurationLevel level) {
             this.level = level;
             return this;
-        }
-        public StateMachineLoggingConfiguration build() {
+        }        public StateMachineLoggingConfiguration build() {
             return new StateMachineLoggingConfiguration(destinations, includeExecutionData, level);
         }
     }

@@ -119,27 +119,25 @@ public final class GetDetectorModelResult {
             this.detectorModelDefinition = detectorModelDefinition;
             return this;
         }
-
         public Builder detectorModelDescription(@Nullable String detectorModelDescription) {
             this.detectorModelDescription = detectorModelDescription;
             return this;
         }
-
         public Builder evaluationMethod(@Nullable DetectorModelEvaluationMethod evaluationMethod) {
             this.evaluationMethod = evaluationMethod;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorModelTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDetectorModelResult build() {
+        public Builder tags(DetectorModelTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDetectorModelResult build() {
             return new GetDetectorModelResult(detectorModelDefinition, detectorModelDescription, evaluationMethod, roleArn, tags);
         }
     }

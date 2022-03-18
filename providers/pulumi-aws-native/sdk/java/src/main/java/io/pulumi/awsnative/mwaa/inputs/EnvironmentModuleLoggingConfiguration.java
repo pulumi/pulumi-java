@@ -84,17 +84,14 @@ public final class EnvironmentModuleLoggingConfiguration extends io.pulumi.resou
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logLevel(@Nullable EnvironmentLoggingLevel logLevel) {
             this.logLevel = logLevel;
             return this;
-        }
-        public EnvironmentModuleLoggingConfiguration build() {
+        }        public EnvironmentModuleLoggingConfiguration build() {
             return new EnvironmentModuleLoggingConfiguration(cloudWatchLogGroupArn, enabled, logLevel);
         }
     }

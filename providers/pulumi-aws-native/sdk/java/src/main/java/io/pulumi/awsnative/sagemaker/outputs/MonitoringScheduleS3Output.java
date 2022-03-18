@@ -88,17 +88,14 @@ public final class MonitoringScheduleS3Output {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder s3UploadMode(@Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
-        }
-        public MonitoringScheduleS3Output build() {
+        }        public MonitoringScheduleS3Output build() {
             return new MonitoringScheduleS3Output(localPath, s3UploadMode, s3Uri);
         }
     }

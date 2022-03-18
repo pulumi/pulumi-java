@@ -106,42 +106,34 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder queryStatement(Output<String> queryStatement) {
             this.queryStatement = Objects.requireNonNull(queryStatement);
             return this;
         }
-
         public Builder queryStatement(String queryStatement) {
             this.queryStatement = Output.of(Objects.requireNonNull(queryStatement));
             return this;
         }
-
         public Builder statementName(Output<String> statementName) {
             this.statementName = Objects.requireNonNull(statementName);
             return this;
         }
-
         public Builder statementName(String statementName) {
             this.statementName = Output.of(Objects.requireNonNull(statementName));
             return this;
         }
-
         public Builder workGroup(Output<String> workGroup) {
             this.workGroup = Objects.requireNonNull(workGroup);
             return this;
         }
-
         public Builder workGroup(String workGroup) {
             this.workGroup = Output.of(Objects.requireNonNull(workGroup));
             return this;
-        }
-        public PreparedStatementArgs build() {
+        }        public PreparedStatementArgs build() {
             return new PreparedStatementArgs(description, queryStatement, statementName, workGroup);
         }
     }

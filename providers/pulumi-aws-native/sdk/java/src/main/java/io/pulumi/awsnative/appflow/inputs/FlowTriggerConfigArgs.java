@@ -79,22 +79,18 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
             this.triggerProperties = triggerProperties;
             return this;
         }
-
         public Builder triggerProperties(@Nullable FlowScheduledTriggerPropertiesArgs triggerProperties) {
             this.triggerProperties = Output.ofNullable(triggerProperties);
             return this;
         }
-
         public Builder triggerType(Output<FlowTriggerType> triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
-
         public Builder triggerType(FlowTriggerType triggerType) {
             this.triggerType = Output.of(Objects.requireNonNull(triggerType));
             return this;
-        }
-        public FlowTriggerConfigArgs build() {
+        }        public FlowTriggerConfigArgs build() {
             return new FlowTriggerConfigArgs(triggerProperties, triggerType);
         }
     }

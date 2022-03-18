@@ -67,22 +67,18 @@ public final class IndexUserTokenConfigurationArgs extends io.pulumi.resources.R
             this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
             return this;
         }
-
         public Builder jsonTokenTypeConfiguration(@Nullable IndexJsonTokenTypeConfigurationArgs jsonTokenTypeConfiguration) {
             this.jsonTokenTypeConfiguration = Output.ofNullable(jsonTokenTypeConfiguration);
             return this;
         }
-
         public Builder jwtTokenTypeConfiguration(@Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration) {
             this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
             return this;
         }
-
         public Builder jwtTokenTypeConfiguration(@Nullable IndexJwtTokenTypeConfigurationArgs jwtTokenTypeConfiguration) {
             this.jwtTokenTypeConfiguration = Output.ofNullable(jwtTokenTypeConfiguration);
             return this;
-        }
-        public IndexUserTokenConfigurationArgs build() {
+        }        public IndexUserTokenConfigurationArgs build() {
             return new IndexUserTokenConfigurationArgs(jsonTokenTypeConfiguration, jwtTokenTypeConfiguration);
         }
     }

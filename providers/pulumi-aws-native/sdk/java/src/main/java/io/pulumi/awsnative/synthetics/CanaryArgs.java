@@ -272,142 +272,117 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactConfig = artifactConfig;
             return this;
         }
-
         public Builder artifactConfig(@Nullable CanaryArtifactConfigArgs artifactConfig) {
             this.artifactConfig = Output.ofNullable(artifactConfig);
             return this;
         }
-
         public Builder artifactS3Location(Output<String> artifactS3Location) {
             this.artifactS3Location = Objects.requireNonNull(artifactS3Location);
             return this;
         }
-
         public Builder artifactS3Location(String artifactS3Location) {
             this.artifactS3Location = Output.of(Objects.requireNonNull(artifactS3Location));
             return this;
         }
-
         public Builder code(Output<CanaryCodeArgs> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder code(CanaryCodeArgs code) {
             this.code = Output.of(Objects.requireNonNull(code));
             return this;
         }
-
         public Builder executionRoleArn(Output<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
-
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
-
         public Builder failureRetentionPeriod(@Nullable Output<Integer> failureRetentionPeriod) {
             this.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
-
         public Builder failureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
             this.failureRetentionPeriod = Output.ofNullable(failureRetentionPeriod);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder runConfig(@Nullable Output<CanaryRunConfigArgs> runConfig) {
             this.runConfig = runConfig;
             return this;
         }
-
         public Builder runConfig(@Nullable CanaryRunConfigArgs runConfig) {
             this.runConfig = Output.ofNullable(runConfig);
             return this;
         }
-
         public Builder runtimeVersion(Output<String> runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Output.of(Objects.requireNonNull(runtimeVersion));
             return this;
         }
-
         public Builder schedule(Output<CanaryScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(CanaryScheduleArgs schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public Builder startCanaryAfterCreation(Output<Boolean> startCanaryAfterCreation) {
             this.startCanaryAfterCreation = Objects.requireNonNull(startCanaryAfterCreation);
             return this;
         }
-
         public Builder startCanaryAfterCreation(Boolean startCanaryAfterCreation) {
             this.startCanaryAfterCreation = Output.of(Objects.requireNonNull(startCanaryAfterCreation));
             return this;
         }
-
         public Builder successRetentionPeriod(@Nullable Output<Integer> successRetentionPeriod) {
             this.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
-
         public Builder successRetentionPeriod(@Nullable Integer successRetentionPeriod) {
             this.successRetentionPeriod = Output.ofNullable(successRetentionPeriod);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<CanaryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<CanaryTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(CanaryTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vPCConfig(@Nullable Output<CanaryVPCConfigArgs> vPCConfig) {
             this.vPCConfig = vPCConfig;
             return this;
         }
-
         public Builder vPCConfig(@Nullable CanaryVPCConfigArgs vPCConfig) {
             this.vPCConfig = Output.ofNullable(vPCConfig);
             return this;
         }
-
         public Builder visualReference(@Nullable Output<CanaryVisualReferenceArgs> visualReference) {
             this.visualReference = visualReference;
             return this;
         }
-
         public Builder visualReference(@Nullable CanaryVisualReferenceArgs visualReference) {
             this.visualReference = Output.ofNullable(visualReference);
             return this;
-        }
-        public CanaryArgs build() {
+        }        public CanaryArgs build() {
             return new CanaryArgs(artifactConfig, artifactS3Location, code, executionRoleArn, failureRetentionPeriod, name, runConfig, runtimeVersion, schedule, startCanaryAfterCreation, successRetentionPeriod, tags, vPCConfig, visualReference);
         }
     }

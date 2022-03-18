@@ -45,8 +45,7 @@ public final class KnowledgeBaseSourceConfiguration {
         public Builder appIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
             this.appIntegrations = appIntegrations;
             return this;
-        }
-        public KnowledgeBaseSourceConfiguration build() {
+        }        public KnowledgeBaseSourceConfiguration build() {
             return new KnowledgeBaseSourceConfiguration(appIntegrations);
         }
     }

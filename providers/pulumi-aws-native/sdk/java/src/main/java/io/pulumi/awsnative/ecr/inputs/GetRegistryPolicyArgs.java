@@ -50,8 +50,7 @@ public final class GetRegistryPolicyArgs extends io.pulumi.resources.InvokeArgs 
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
-        }
-        public GetRegistryPolicyArgs build() {
+        }        public GetRegistryPolicyArgs build() {
             return new GetRegistryPolicyArgs(registryId);
         }
     }

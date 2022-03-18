@@ -69,22 +69,18 @@ public final class ReplicationConfigurationReplicationDestinationArgs extends io
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder registryId(Output<String> registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Output.of(Objects.requireNonNull(registryId));
             return this;
-        }
-        public ReplicationConfigurationReplicationDestinationArgs build() {
+        }        public ReplicationConfigurationReplicationDestinationArgs build() {
             return new ReplicationConfigurationReplicationDestinationArgs(region, registryId);
         }
     }

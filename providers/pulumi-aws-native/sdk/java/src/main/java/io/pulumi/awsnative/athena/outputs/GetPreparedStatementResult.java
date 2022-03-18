@@ -71,12 +71,10 @@ public final class GetPreparedStatementResult {
             this.description = description;
             return this;
         }
-
         public Builder queryStatement(@Nullable String queryStatement) {
             this.queryStatement = queryStatement;
             return this;
-        }
-        public GetPreparedStatementResult build() {
+        }        public GetPreparedStatementResult build() {
             return new GetPreparedStatementResult(description, queryStatement);
         }
     }

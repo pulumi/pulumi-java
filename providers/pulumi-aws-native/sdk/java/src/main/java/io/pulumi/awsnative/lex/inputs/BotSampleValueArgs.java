@@ -60,12 +60,10 @@ public final class BotSampleValueArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public BotSampleValueArgs build() {
+        }        public BotSampleValueArgs build() {
             return new BotSampleValueArgs(value);
         }
     }

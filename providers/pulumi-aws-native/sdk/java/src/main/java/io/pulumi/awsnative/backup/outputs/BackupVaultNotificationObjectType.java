@@ -54,12 +54,13 @@ public final class BackupVaultNotificationObjectType {
             this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
             return this;
         }
-
+        public Builder backupVaultEvents(String... backupVaultEvents) {
+            return backupVaultEvents(List.of(backupVaultEvents));
+        }
         public Builder sNSTopicArn(String sNSTopicArn) {
             this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn);
             return this;
-        }
-        public BackupVaultNotificationObjectType build() {
+        }        public BackupVaultNotificationObjectType build() {
             return new BackupVaultNotificationObjectType(backupVaultEvents, sNSTopicArn);
         }
     }

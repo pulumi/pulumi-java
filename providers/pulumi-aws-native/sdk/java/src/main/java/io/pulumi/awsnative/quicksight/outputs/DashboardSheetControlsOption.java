@@ -45,8 +45,7 @@ public final class DashboardSheetControlsOption {
         public Builder visibilityState(@Nullable DashboardUIState visibilityState) {
             this.visibilityState = visibilityState;
             return this;
-        }
-        public DashboardSheetControlsOption build() {
+        }        public DashboardSheetControlsOption build() {
             return new DashboardSheetControlsOption(visibilityState);
         }
     }

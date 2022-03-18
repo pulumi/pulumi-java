@@ -54,12 +54,13 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
             this.types = types;
             return this;
         }
-
         public Builder types(@Nullable List<String> types) {
             this.types = Output.ofNullable(types);
             return this;
         }
-        public DomainNameEndpointConfigurationArgs build() {
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }        public DomainNameEndpointConfigurationArgs build() {
             return new DomainNameEndpointConfigurationArgs(types);
         }
     }

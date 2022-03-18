@@ -95,32 +95,26 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
             this.configUri = Objects.requireNonNull(configUri);
             return this;
         }
-
         public Builder configUri(String configUri) {
             this.configUri = Output.of(Objects.requireNonNull(configUri));
             return this;
         }
-
         public Builder environment(@Nullable Output<Object> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable Object environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder imageUri(Output<String> imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Output.of(Objects.requireNonNull(imageUri));
             return this;
-        }
-        public ModelBiasJobDefinitionModelBiasAppSpecificationArgs build() {
+        }        public ModelBiasJobDefinitionModelBiasAppSpecificationArgs build() {
             return new ModelBiasJobDefinitionModelBiasAppSpecificationArgs(configUri, environment, imageUri);
         }
     }

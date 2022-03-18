@@ -64,12 +64,10 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder indexId(String indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
-        }
-        public GetDataSourceArgs build() {
+        }        public GetDataSourceArgs build() {
             return new GetDataSourceArgs(id, indexId);
         }
     }

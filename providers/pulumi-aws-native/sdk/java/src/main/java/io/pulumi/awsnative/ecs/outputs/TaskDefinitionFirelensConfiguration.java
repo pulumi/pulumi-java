@@ -56,12 +56,10 @@ public final class TaskDefinitionFirelensConfiguration {
             this.options = options;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public TaskDefinitionFirelensConfiguration build() {
+        }        public TaskDefinitionFirelensConfiguration build() {
             return new TaskDefinitionFirelensConfiguration(options, type);
         }
     }

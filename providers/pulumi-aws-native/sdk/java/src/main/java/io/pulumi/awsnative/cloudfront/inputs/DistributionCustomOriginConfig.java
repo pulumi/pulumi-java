@@ -116,32 +116,29 @@ public final class DistributionCustomOriginConfig extends io.pulumi.resources.In
             this.hTTPPort = hTTPPort;
             return this;
         }
-
         public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
             this.hTTPSPort = hTTPSPort;
             return this;
         }
-
         public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
             this.originKeepaliveTimeout = originKeepaliveTimeout;
             return this;
         }
-
         public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
-
         public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
             this.originReadTimeout = originReadTimeout;
             return this;
         }
-
         public Builder originSSLProtocols(@Nullable List<String> originSSLProtocols) {
             this.originSSLProtocols = originSSLProtocols;
             return this;
         }
-        public DistributionCustomOriginConfig build() {
+        public Builder originSSLProtocols(String... originSSLProtocols) {
+            return originSSLProtocols(List.of(originSSLProtocols));
+        }        public DistributionCustomOriginConfig build() {
             return new DistributionCustomOriginConfig(hTTPPort, hTTPSPort, originKeepaliveTimeout, originProtocolPolicy, originReadTimeout, originSSLProtocols);
         }
     }

@@ -119,52 +119,42 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ec2ImageId(Output<String> ec2ImageId) {
             this.ec2ImageId = Objects.requireNonNull(ec2ImageId);
             return this;
         }
-
         public Builder ec2ImageId(String ec2ImageId) {
             this.ec2ImageId = Output.of(Objects.requireNonNull(ec2ImageId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder studioId(Output<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
-
         public Builder studioId(String studioId) {
             this.studioId = Output.of(Objects.requireNonNull(studioId));
             return this;
         }
-
         public Builder tags(@Nullable Output<StreamingImageTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable StreamingImageTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public StreamingImageArgs build() {
+        }        public StreamingImageArgs build() {
             return new StreamingImageArgs(description, ec2ImageId, name, studioId, tags);
         }
     }

@@ -88,17 +88,14 @@ public final class JobDatabaseOutput extends io.pulumi.resources.InvokeArgs {
             this.databaseOptions = Objects.requireNonNull(databaseOptions);
             return this;
         }
-
         public Builder databaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
             this.databaseOutputMode = databaseOutputMode;
             return this;
         }
-
         public Builder glueConnectionName(String glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
-        }
-        public JobDatabaseOutput build() {
+        }        public JobDatabaseOutput build() {
             return new JobDatabaseOutput(databaseOptions, databaseOutputMode, glueConnectionName);
         }
     }

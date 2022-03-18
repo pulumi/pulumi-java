@@ -58,8 +58,7 @@ public final class BucketVersioningConfiguration extends io.pulumi.resources.Inv
         public Builder status(BucketVersioningConfigurationStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BucketVersioningConfiguration build() {
+        }        public BucketVersioningConfiguration build() {
             return new BucketVersioningConfiguration(status);
         }
     }

@@ -56,12 +56,10 @@ public final class AlertAction {
             this.lambdaConfiguration = lambdaConfiguration;
             return this;
         }
-
         public Builder sNSConfiguration(@Nullable AlertSNSConfiguration sNSConfiguration) {
             this.sNSConfiguration = sNSConfiguration;
             return this;
-        }
-        public AlertAction build() {
+        }        public AlertAction build() {
             return new AlertAction(lambdaConfiguration, sNSConfiguration);
         }
     }

@@ -80,17 +80,14 @@ public final class ModelQualityJobDefinitionNetworkConfig {
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ModelQualityJobDefinitionVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
-        }
-        public ModelQualityJobDefinitionNetworkConfig build() {
+        }        public ModelQualityJobDefinitionNetworkConfig build() {
             return new ModelQualityJobDefinitionNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }
     }

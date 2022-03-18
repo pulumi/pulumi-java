@@ -80,32 +80,29 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder source(@Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder throughResources(@Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources) {
             this.throughResources = throughResources;
             return this;
         }
-
         public Builder throughResources(@Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs> throughResources) {
             this.throughResources = Output.ofNullable(throughResources);
             return this;
         }
-        public NetworkInsightsAccessScopeAccessScopePathRequestArgs build() {
+        public Builder throughResources(NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs... throughResources) {
+            return throughResources(List.of(throughResources));
+        }        public NetworkInsightsAccessScopeAccessScopePathRequestArgs build() {
             return new NetworkInsightsAccessScopeAccessScopePathRequestArgs(destination, source, throughResources);
         }
     }

@@ -114,42 +114,46 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
-
         public Builder dateTimeParameters(@Nullable List<DashboardDateTimeParameterArgs> dateTimeParameters) {
             this.dateTimeParameters = Output.ofNullable(dateTimeParameters);
             return this;
         }
-
+        public Builder dateTimeParameters(DashboardDateTimeParameterArgs... dateTimeParameters) {
+            return dateTimeParameters(List.of(dateTimeParameters));
+        }
         public Builder decimalParameters(@Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
-
         public Builder decimalParameters(@Nullable List<DashboardDecimalParameterArgs> decimalParameters) {
             this.decimalParameters = Output.ofNullable(decimalParameters);
             return this;
         }
-
+        public Builder decimalParameters(DashboardDecimalParameterArgs... decimalParameters) {
+            return decimalParameters(List.of(decimalParameters));
+        }
         public Builder integerParameters(@Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
-
         public Builder integerParameters(@Nullable List<DashboardIntegerParameterArgs> integerParameters) {
             this.integerParameters = Output.ofNullable(integerParameters);
             return this;
         }
-
+        public Builder integerParameters(DashboardIntegerParameterArgs... integerParameters) {
+            return integerParameters(List.of(integerParameters));
+        }
         public Builder stringParameters(@Nullable Output<List<DashboardStringParameterArgs>> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }
-
         public Builder stringParameters(@Nullable List<DashboardStringParameterArgs> stringParameters) {
             this.stringParameters = Output.ofNullable(stringParameters);
             return this;
         }
-        public DashboardParametersArgs build() {
+        public Builder stringParameters(DashboardStringParameterArgs... stringParameters) {
+            return stringParameters(List.of(stringParameters));
+        }        public DashboardParametersArgs build() {
             return new DashboardParametersArgs(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }
     }

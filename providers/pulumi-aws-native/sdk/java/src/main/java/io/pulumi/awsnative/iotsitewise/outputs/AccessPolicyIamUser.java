@@ -53,8 +53,7 @@ public final class AccessPolicyIamUser {
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public AccessPolicyIamUser build() {
+        }        public AccessPolicyIamUser build() {
             return new AccessPolicyIamUser(arn);
         }
     }

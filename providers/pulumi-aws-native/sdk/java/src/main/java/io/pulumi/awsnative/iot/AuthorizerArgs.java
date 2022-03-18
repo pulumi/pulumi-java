@@ -131,72 +131,61 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizerFunctionArn = Objects.requireNonNull(authorizerFunctionArn);
             return this;
         }
-
         public Builder authorizerFunctionArn(String authorizerFunctionArn) {
             this.authorizerFunctionArn = Output.of(Objects.requireNonNull(authorizerFunctionArn));
             return this;
         }
-
         public Builder authorizerName(@Nullable Output<String> authorizerName) {
             this.authorizerName = authorizerName;
             return this;
         }
-
         public Builder authorizerName(@Nullable String authorizerName) {
             this.authorizerName = Output.ofNullable(authorizerName);
             return this;
         }
-
         public Builder signingDisabled(@Nullable Output<Boolean> signingDisabled) {
             this.signingDisabled = signingDisabled;
             return this;
         }
-
         public Builder signingDisabled(@Nullable Boolean signingDisabled) {
             this.signingDisabled = Output.ofNullable(signingDisabled);
             return this;
         }
-
         public Builder status(@Nullable Output<AuthorizerStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable AuthorizerStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AuthorizerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AuthorizerTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(AuthorizerTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tokenKeyName(@Nullable Output<String> tokenKeyName) {
             this.tokenKeyName = tokenKeyName;
             return this;
         }
-
         public Builder tokenKeyName(@Nullable String tokenKeyName) {
             this.tokenKeyName = Output.ofNullable(tokenKeyName);
             return this;
         }
-
         public Builder tokenSigningPublicKeys(@Nullable Output<Object> tokenSigningPublicKeys) {
             this.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
         }
-
         public Builder tokenSigningPublicKeys(@Nullable Object tokenSigningPublicKeys) {
             this.tokenSigningPublicKeys = Output.ofNullable(tokenSigningPublicKeys);
             return this;
-        }
-        public AuthorizerArgs build() {
+        }        public AuthorizerArgs build() {
             return new AuthorizerArgs(authorizerFunctionArn, authorizerName, signingDisabled, status, tags, tokenKeyName, tokenSigningPublicKeys);
         }
     }

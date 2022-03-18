@@ -66,22 +66,18 @@ public final class BackupPlanLifecycleResourceTypeArgs extends io.pulumi.resourc
             this.deleteAfterDays = deleteAfterDays;
             return this;
         }
-
         public Builder deleteAfterDays(@Nullable Double deleteAfterDays) {
             this.deleteAfterDays = Output.ofNullable(deleteAfterDays);
             return this;
         }
-
         public Builder moveToColdStorageAfterDays(@Nullable Output<Double> moveToColdStorageAfterDays) {
             this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
             return this;
         }
-
         public Builder moveToColdStorageAfterDays(@Nullable Double moveToColdStorageAfterDays) {
             this.moveToColdStorageAfterDays = Output.ofNullable(moveToColdStorageAfterDays);
             return this;
-        }
-        public BackupPlanLifecycleResourceTypeArgs build() {
+        }        public BackupPlanLifecycleResourceTypeArgs build() {
             return new BackupPlanLifecycleResourceTypeArgs(deleteAfterDays, moveToColdStorageAfterDays);
         }
     }

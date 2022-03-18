@@ -88,32 +88,26 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
             this.databaseOptions = Objects.requireNonNull(databaseOptions);
             return this;
         }
-
         public Builder databaseOptions(JobDatabaseTableOutputOptionsArgs databaseOptions) {
             this.databaseOptions = Output.of(Objects.requireNonNull(databaseOptions));
             return this;
         }
-
         public Builder databaseOutputMode(@Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode) {
             this.databaseOutputMode = databaseOutputMode;
             return this;
         }
-
         public Builder databaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
             this.databaseOutputMode = Output.ofNullable(databaseOutputMode);
             return this;
         }
-
         public Builder glueConnectionName(Output<String> glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
-
         public Builder glueConnectionName(String glueConnectionName) {
             this.glueConnectionName = Output.of(Objects.requireNonNull(glueConnectionName));
             return this;
-        }
-        public JobDatabaseOutputArgs build() {
+        }        public JobDatabaseOutputArgs build() {
             return new JobDatabaseOutputArgs(databaseOptions, databaseOutputMode, glueConnectionName);
         }
     }

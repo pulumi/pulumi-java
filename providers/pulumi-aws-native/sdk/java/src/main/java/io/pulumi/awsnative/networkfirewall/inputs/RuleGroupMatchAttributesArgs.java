@@ -118,62 +118,68 @@ public final class RuleGroupMatchAttributesArgs extends io.pulumi.resources.Reso
             this.destinationPorts = destinationPorts;
             return this;
         }
-
         public Builder destinationPorts(@Nullable List<RuleGroupPortRangeArgs> destinationPorts) {
             this.destinationPorts = Output.ofNullable(destinationPorts);
             return this;
         }
-
+        public Builder destinationPorts(RuleGroupPortRangeArgs... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder destinations(@Nullable Output<List<RuleGroupAddressArgs>> destinations) {
             this.destinations = destinations;
             return this;
         }
-
         public Builder destinations(@Nullable List<RuleGroupAddressArgs> destinations) {
             this.destinations = Output.ofNullable(destinations);
             return this;
         }
-
+        public Builder destinations(RuleGroupAddressArgs... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder protocols(@Nullable Output<List<Integer>> protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder protocols(@Nullable List<Integer> protocols) {
             this.protocols = Output.ofNullable(protocols);
             return this;
         }
-
+        public Builder protocols(Integer... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder sourcePorts(@Nullable Output<List<RuleGroupPortRangeArgs>> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
-
         public Builder sourcePorts(@Nullable List<RuleGroupPortRangeArgs> sourcePorts) {
             this.sourcePorts = Output.ofNullable(sourcePorts);
             return this;
         }
-
+        public Builder sourcePorts(RuleGroupPortRangeArgs... sourcePorts) {
+            return sourcePorts(List.of(sourcePorts));
+        }
         public Builder sources(@Nullable Output<List<RuleGroupAddressArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<RuleGroupAddressArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-
+        public Builder sources(RuleGroupAddressArgs... sources) {
+            return sources(List.of(sources));
+        }
         public Builder tCPFlags(@Nullable Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags) {
             this.tCPFlags = tCPFlags;
             return this;
         }
-
         public Builder tCPFlags(@Nullable List<RuleGroupTCPFlagFieldArgs> tCPFlags) {
             this.tCPFlags = Output.ofNullable(tCPFlags);
             return this;
         }
-        public RuleGroupMatchAttributesArgs build() {
+        public Builder tCPFlags(RuleGroupTCPFlagFieldArgs... tCPFlags) {
+            return tCPFlags(List.of(tCPFlags));
+        }        public RuleGroupMatchAttributesArgs build() {
             return new RuleGroupMatchAttributesArgs(destinationPorts, destinations, protocols, sourcePorts, sources, tCPFlags);
         }
     }

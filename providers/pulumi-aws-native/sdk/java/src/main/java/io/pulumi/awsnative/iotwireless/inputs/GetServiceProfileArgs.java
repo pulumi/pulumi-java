@@ -54,8 +54,7 @@ public final class GetServiceProfileArgs extends io.pulumi.resources.InvokeArgs 
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetServiceProfileArgs build() {
+        }        public GetServiceProfileArgs build() {
             return new GetServiceProfileArgs(id);
         }
     }

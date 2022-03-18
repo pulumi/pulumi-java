@@ -107,27 +107,25 @@ public final class GetLocationNFSResult {
             this.locationArn = locationArn;
             return this;
         }
-
         public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
-
         public Builder mountOptions(@Nullable LocationNFSMountOptions mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder onPremConfig(@Nullable LocationNFSOnPremConfig onPremConfig) {
             this.onPremConfig = onPremConfig;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationNFSTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetLocationNFSResult build() {
+        public Builder tags(LocationNFSTag... tags) {
+            return tags(List.of(tags));
+        }        public GetLocationNFSResult build() {
             return new GetLocationNFSResult(locationArn, locationUri, mountOptions, onPremConfig, tags);
         }
     }

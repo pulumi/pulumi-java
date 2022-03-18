@@ -99,37 +99,33 @@ public final class GetProvisioningTemplateResult {
             this.description = description;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder preProvisioningHook(@Nullable ProvisioningTemplateProvisioningHook preProvisioningHook) {
             this.preProvisioningHook = preProvisioningHook;
             return this;
         }
-
         public Builder provisioningRoleArn(@Nullable String provisioningRoleArn) {
             this.provisioningRoleArn = provisioningRoleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<ProvisioningTemplateTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ProvisioningTemplateTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder templateArn(@Nullable String templateArn) {
             this.templateArn = templateArn;
             return this;
         }
-
         public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = templateBody;
             return this;
-        }
-        public GetProvisioningTemplateResult build() {
+        }        public GetProvisioningTemplateResult build() {
             return new GetProvisioningTemplateResult(description, enabled, preProvisioningHook, provisioningRoleArn, tags, templateArn, templateBody);
         }
     }

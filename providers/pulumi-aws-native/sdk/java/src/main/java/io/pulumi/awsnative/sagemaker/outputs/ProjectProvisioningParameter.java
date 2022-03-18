@@ -69,12 +69,10 @@ public final class ProjectProvisioningParameter {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ProjectProvisioningParameter build() {
+        }        public ProjectProvisioningParameter build() {
             return new ProjectProvisioningParameter(key, value);
         }
     }

@@ -196,102 +196,91 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             this.accessDirection = accessDirection;
             return this;
         }
-
         public Builder accessDirection(@Nullable String accessDirection) {
             this.accessDirection = Output.ofNullable(accessDirection);
             return this;
         }
-
         public Builder accessFrom(@Nullable Output<String> accessFrom) {
             this.accessFrom = accessFrom;
             return this;
         }
-
         public Builder accessFrom(@Nullable String accessFrom) {
             this.accessFrom = Output.ofNullable(accessFrom);
             return this;
         }
-
         public Builder accessType(@Nullable Output<String> accessType) {
             this.accessType = accessType;
             return this;
         }
-
         public Builder accessType(@Nullable String accessType) {
             this.accessType = Output.ofNullable(accessType);
             return this;
         }
-
         public Builder cidrListAliases(@Nullable Output<List<String>> cidrListAliases) {
             this.cidrListAliases = cidrListAliases;
             return this;
         }
-
         public Builder cidrListAliases(@Nullable List<String> cidrListAliases) {
             this.cidrListAliases = Output.ofNullable(cidrListAliases);
             return this;
         }
-
+        public Builder cidrListAliases(String... cidrListAliases) {
+            return cidrListAliases(List.of(cidrListAliases));
+        }
         public Builder cidrs(@Nullable Output<List<String>> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
-
         public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = Output.ofNullable(cidrs);
             return this;
         }
-
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }
         public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
-
         public Builder commonName(@Nullable String commonName) {
             this.commonName = Output.ofNullable(commonName);
             return this;
         }
-
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
             this.fromPort = fromPort;
             return this;
         }
-
         public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = Output.ofNullable(fromPort);
             return this;
         }
-
         public Builder ipv6Cidrs(@Nullable Output<List<String>> ipv6Cidrs) {
             this.ipv6Cidrs = ipv6Cidrs;
             return this;
         }
-
         public Builder ipv6Cidrs(@Nullable List<String> ipv6Cidrs) {
             this.ipv6Cidrs = Output.ofNullable(ipv6Cidrs);
             return this;
         }
-
+        public Builder ipv6Cidrs(String... ipv6Cidrs) {
+            return ipv6Cidrs(List.of(ipv6Cidrs));
+        }
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
-
         public Builder toPort(@Nullable Integer toPort) {
             this.toPort = Output.ofNullable(toPort);
             return this;
-        }
-        public InstancePortArgs build() {
+        }        public InstancePortArgs build() {
             return new InstancePortArgs(accessDirection, accessFrom, accessType, cidrListAliases, cidrs, commonName, fromPort, ipv6Cidrs, protocol, toPort);
         }
     }

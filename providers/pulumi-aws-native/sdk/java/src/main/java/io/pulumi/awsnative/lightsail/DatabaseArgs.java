@@ -286,152 +286,128 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder backupRetention(@Nullable Output<Boolean> backupRetention) {
             this.backupRetention = backupRetention;
             return this;
         }
-
         public Builder backupRetention(@Nullable Boolean backupRetention) {
             this.backupRetention = Output.ofNullable(backupRetention);
             return this;
         }
-
         public Builder caCertificateIdentifier(@Nullable Output<String> caCertificateIdentifier) {
             this.caCertificateIdentifier = caCertificateIdentifier;
             return this;
         }
-
         public Builder caCertificateIdentifier(@Nullable String caCertificateIdentifier) {
             this.caCertificateIdentifier = Output.ofNullable(caCertificateIdentifier);
             return this;
         }
-
         public Builder masterDatabaseName(Output<String> masterDatabaseName) {
             this.masterDatabaseName = Objects.requireNonNull(masterDatabaseName);
             return this;
         }
-
         public Builder masterDatabaseName(String masterDatabaseName) {
             this.masterDatabaseName = Output.of(Objects.requireNonNull(masterDatabaseName));
             return this;
         }
-
         public Builder masterUserPassword(@Nullable Output<String> masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
         }
-
         public Builder masterUserPassword(@Nullable String masterUserPassword) {
             this.masterUserPassword = Output.ofNullable(masterUserPassword);
             return this;
         }
-
         public Builder masterUsername(Output<String> masterUsername) {
             this.masterUsername = Objects.requireNonNull(masterUsername);
             return this;
         }
-
         public Builder masterUsername(String masterUsername) {
             this.masterUsername = Output.of(Objects.requireNonNull(masterUsername));
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
-
         public Builder relationalDatabaseBlueprintId(Output<String> relationalDatabaseBlueprintId) {
             this.relationalDatabaseBlueprintId = Objects.requireNonNull(relationalDatabaseBlueprintId);
             return this;
         }
-
         public Builder relationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
             this.relationalDatabaseBlueprintId = Output.of(Objects.requireNonNull(relationalDatabaseBlueprintId));
             return this;
         }
-
         public Builder relationalDatabaseBundleId(Output<String> relationalDatabaseBundleId) {
             this.relationalDatabaseBundleId = Objects.requireNonNull(relationalDatabaseBundleId);
             return this;
         }
-
         public Builder relationalDatabaseBundleId(String relationalDatabaseBundleId) {
             this.relationalDatabaseBundleId = Output.of(Objects.requireNonNull(relationalDatabaseBundleId));
             return this;
         }
-
         public Builder relationalDatabaseName(Output<String> relationalDatabaseName) {
             this.relationalDatabaseName = Objects.requireNonNull(relationalDatabaseName);
             return this;
         }
-
         public Builder relationalDatabaseName(String relationalDatabaseName) {
             this.relationalDatabaseName = Output.of(Objects.requireNonNull(relationalDatabaseName));
             return this;
         }
-
         public Builder relationalDatabaseParameters(@Nullable Output<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters) {
             this.relationalDatabaseParameters = relationalDatabaseParameters;
             return this;
         }
-
         public Builder relationalDatabaseParameters(@Nullable List<DatabaseRelationalDatabaseParameterArgs> relationalDatabaseParameters) {
             this.relationalDatabaseParameters = Output.ofNullable(relationalDatabaseParameters);
             return this;
         }
-
+        public Builder relationalDatabaseParameters(DatabaseRelationalDatabaseParameterArgs... relationalDatabaseParameters) {
+            return relationalDatabaseParameters(List.of(relationalDatabaseParameters));
+        }
         public Builder rotateMasterUserPassword(@Nullable Output<Boolean> rotateMasterUserPassword) {
             this.rotateMasterUserPassword = rotateMasterUserPassword;
             return this;
         }
-
         public Builder rotateMasterUserPassword(@Nullable Boolean rotateMasterUserPassword) {
             this.rotateMasterUserPassword = Output.ofNullable(rotateMasterUserPassword);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DatabaseTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DatabaseTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DatabaseArgs build() {
+        public Builder tags(DatabaseTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DatabaseArgs build() {
             return new DatabaseArgs(availabilityZone, backupRetention, caCertificateIdentifier, masterDatabaseName, masterUserPassword, masterUsername, preferredBackupWindow, preferredMaintenanceWindow, publiclyAccessible, relationalDatabaseBlueprintId, relationalDatabaseBundleId, relationalDatabaseName, relationalDatabaseParameters, rotateMasterUserPassword, tags);
         }
     }

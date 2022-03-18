@@ -65,12 +65,10 @@ public final class BackupPlanAdvancedBackupSettingResourceType extends io.pulumi
             this.backupOptions = Objects.requireNonNull(backupOptions);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public BackupPlanAdvancedBackupSettingResourceType build() {
+        }        public BackupPlanAdvancedBackupSettingResourceType build() {
             return new BackupPlanAdvancedBackupSettingResourceType(backupOptions, resourceType);
         }
     }

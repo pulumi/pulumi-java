@@ -72,12 +72,10 @@ public final class PackagingGroupAuthorization extends io.pulumi.resources.Invok
             this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret);
             return this;
         }
-
         public Builder secretsRoleArn(String secretsRoleArn) {
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
-        }
-        public PackagingGroupAuthorization build() {
+        }        public PackagingGroupAuthorization build() {
             return new PackagingGroupAuthorization(cdnIdentifierSecret, secretsRoleArn);
         }
     }

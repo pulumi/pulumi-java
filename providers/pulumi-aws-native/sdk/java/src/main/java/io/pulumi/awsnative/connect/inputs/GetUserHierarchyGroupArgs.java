@@ -54,8 +54,7 @@ public final class GetUserHierarchyGroupArgs extends io.pulumi.resources.InvokeA
         public Builder userHierarchyGroupArn(String userHierarchyGroupArn) {
             this.userHierarchyGroupArn = Objects.requireNonNull(userHierarchyGroupArn);
             return this;
-        }
-        public GetUserHierarchyGroupArgs build() {
+        }        public GetUserHierarchyGroupArgs build() {
             return new GetUserHierarchyGroupArgs(userHierarchyGroupArn);
         }
     }

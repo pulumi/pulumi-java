@@ -67,22 +67,21 @@ public final class ListenerRuleHttpHeaderConfigArgs extends io.pulumi.resources.
             this.httpHeaderName = httpHeaderName;
             return this;
         }
-
         public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = Output.ofNullable(httpHeaderName);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ListenerRuleHttpHeaderConfigArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleHttpHeaderConfigArgs build() {
             return new ListenerRuleHttpHeaderConfigArgs(httpHeaderName, values);
         }
     }

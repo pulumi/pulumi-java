@@ -141,62 +141,62 @@ public final class DataSourceSharePointConfiguration {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
-
         public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
             this.disableLocalGroups = disableLocalGroups;
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder sharePointVersion(DataSourceSharePointConfigurationSharePointVersion sharePointVersion) {
             this.sharePointVersion = Objects.requireNonNull(sharePointVersion);
             return this;
         }
-
         public Builder sslCertificateS3Path(@Nullable DataSourceS3Path sslCertificateS3Path) {
             this.sslCertificateS3Path = sslCertificateS3Path;
             return this;
         }
-
         public Builder urls(List<String> urls) {
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
-
+        public Builder urls(String... urls) {
+            return urls(List.of(urls));
+        }
         public Builder useChangeLog(@Nullable Boolean useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
-        }
-        public DataSourceSharePointConfiguration build() {
+        }        public DataSourceSharePointConfiguration build() {
             return new DataSourceSharePointConfiguration(crawlAttachments, disableLocalGroups, documentTitleFieldName, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn, sharePointVersion, sslCertificateS3Path, urls, useChangeLog, vpcConfiguration);
         }
     }

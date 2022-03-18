@@ -96,17 +96,14 @@ public final class FlowDestinationFlowConfig extends io.pulumi.resources.InvokeA
             this.connectorProfileName = connectorProfileName;
             return this;
         }
-
         public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder destinationConnectorProperties(FlowDestinationConnectorProperties destinationConnectorProperties) {
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
-        }
-        public FlowDestinationFlowConfig build() {
+        }        public FlowDestinationFlowConfig build() {
             return new FlowDestinationFlowConfig(connectorProfileName, connectorType, destinationConnectorProperties);
         }
     }

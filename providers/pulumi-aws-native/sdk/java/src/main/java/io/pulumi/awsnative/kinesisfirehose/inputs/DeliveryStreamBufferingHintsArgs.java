@@ -66,22 +66,18 @@ public final class DeliveryStreamBufferingHintsArgs extends io.pulumi.resources.
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
-
         public Builder sizeInMBs(@Nullable Output<Integer> sizeInMBs) {
             this.sizeInMBs = sizeInMBs;
             return this;
         }
-
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
             this.sizeInMBs = Output.ofNullable(sizeInMBs);
             return this;
-        }
-        public DeliveryStreamBufferingHintsArgs build() {
+        }        public DeliveryStreamBufferingHintsArgs build() {
             return new DeliveryStreamBufferingHintsArgs(intervalInSeconds, sizeInMBs);
         }
     }

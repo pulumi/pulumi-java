@@ -419,197 +419,209 @@ public final class TaskDefinitionContainerDefinition {
             this.command = command;
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<TaskDefinitionContainerDependency> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(TaskDefinitionContainerDependency... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder disableNetworking(@Nullable Boolean disableNetworking) {
             this.disableNetworking = disableNetworking;
             return this;
         }
-
         public Builder dnsSearchDomains(@Nullable List<String> dnsSearchDomains) {
             this.dnsSearchDomains = dnsSearchDomains;
             return this;
         }
-
+        public Builder dnsSearchDomains(String... dnsSearchDomains) {
+            return dnsSearchDomains(List.of(dnsSearchDomains));
+        }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder dockerLabels(@Nullable Object dockerLabels) {
             this.dockerLabels = dockerLabels;
             return this;
         }
-
         public Builder dockerSecurityOptions(@Nullable List<String> dockerSecurityOptions) {
             this.dockerSecurityOptions = dockerSecurityOptions;
             return this;
         }
-
+        public Builder dockerSecurityOptions(String... dockerSecurityOptions) {
+            return dockerSecurityOptions(List.of(dockerSecurityOptions));
+        }
         public Builder entryPoint(@Nullable List<String> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
-
+        public Builder entryPoint(String... entryPoint) {
+            return entryPoint(List.of(entryPoint));
+        }
         public Builder environment(@Nullable List<TaskDefinitionKeyValuePair> environment) {
             this.environment = environment;
             return this;
         }
-
+        public Builder environment(TaskDefinitionKeyValuePair... environment) {
+            return environment(List.of(environment));
+        }
         public Builder environmentFiles(@Nullable List<TaskDefinitionEnvironmentFile> environmentFiles) {
             this.environmentFiles = environmentFiles;
             return this;
         }
-
+        public Builder environmentFiles(TaskDefinitionEnvironmentFile... environmentFiles) {
+            return environmentFiles(List.of(environmentFiles));
+        }
         public Builder essential(@Nullable Boolean essential) {
             this.essential = essential;
             return this;
         }
-
         public Builder extraHosts(@Nullable List<TaskDefinitionHostEntry> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
-
+        public Builder extraHosts(TaskDefinitionHostEntry... extraHosts) {
+            return extraHosts(List.of(extraHosts));
+        }
         public Builder firelensConfiguration(@Nullable TaskDefinitionFirelensConfiguration firelensConfiguration) {
             this.firelensConfiguration = firelensConfiguration;
             return this;
         }
-
         public Builder healthCheck(@Nullable TaskDefinitionHealthCheck healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
-
         public Builder interactive(@Nullable Boolean interactive) {
             this.interactive = interactive;
             return this;
         }
-
         public Builder links(@Nullable List<String> links) {
             this.links = links;
             return this;
         }
-
+        public Builder links(String... links) {
+            return links(List.of(links));
+        }
         public Builder linuxParameters(@Nullable TaskDefinitionLinuxParameters linuxParameters) {
             this.linuxParameters = linuxParameters;
             return this;
         }
-
         public Builder logConfiguration(@Nullable TaskDefinitionLogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
-
         public Builder memory(@Nullable Integer memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder memoryReservation(@Nullable Integer memoryReservation) {
             this.memoryReservation = memoryReservation;
             return this;
         }
-
         public Builder mountPoints(@Nullable List<TaskDefinitionMountPoint> mountPoints) {
             this.mountPoints = mountPoints;
             return this;
         }
-
+        public Builder mountPoints(TaskDefinitionMountPoint... mountPoints) {
+            return mountPoints(List.of(mountPoints));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder portMappings(@Nullable List<TaskDefinitionPortMapping> portMappings) {
             this.portMappings = portMappings;
             return this;
         }
-
+        public Builder portMappings(TaskDefinitionPortMapping... portMappings) {
+            return portMappings(List.of(portMappings));
+        }
         public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = privileged;
             return this;
         }
-
         public Builder pseudoTerminal(@Nullable Boolean pseudoTerminal) {
             this.pseudoTerminal = pseudoTerminal;
             return this;
         }
-
         public Builder readonlyRootFilesystem(@Nullable Boolean readonlyRootFilesystem) {
             this.readonlyRootFilesystem = readonlyRootFilesystem;
             return this;
         }
-
         public Builder repositoryCredentials(@Nullable TaskDefinitionRepositoryCredentials repositoryCredentials) {
             this.repositoryCredentials = repositoryCredentials;
             return this;
         }
-
         public Builder resourceRequirements(@Nullable List<TaskDefinitionResourceRequirement> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
-
+        public Builder resourceRequirements(TaskDefinitionResourceRequirement... resourceRequirements) {
+            return resourceRequirements(List.of(resourceRequirements));
+        }
         public Builder secrets(@Nullable List<TaskDefinitionSecret> secrets) {
             this.secrets = secrets;
             return this;
         }
-
+        public Builder secrets(TaskDefinitionSecret... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder startTimeout(@Nullable Integer startTimeout) {
             this.startTimeout = startTimeout;
             return this;
         }
-
         public Builder stopTimeout(@Nullable Integer stopTimeout) {
             this.stopTimeout = stopTimeout;
             return this;
         }
-
         public Builder systemControls(@Nullable List<TaskDefinitionSystemControl> systemControls) {
             this.systemControls = systemControls;
             return this;
         }
-
+        public Builder systemControls(TaskDefinitionSystemControl... systemControls) {
+            return systemControls(List.of(systemControls));
+        }
         public Builder ulimits(@Nullable List<TaskDefinitionUlimit> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
-
+        public Builder ulimits(TaskDefinitionUlimit... ulimits) {
+            return ulimits(List.of(ulimits));
+        }
         public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }
-
         public Builder volumesFrom(@Nullable List<TaskDefinitionVolumeFrom> volumesFrom) {
             this.volumesFrom = volumesFrom;
             return this;
         }
-
+        public Builder volumesFrom(TaskDefinitionVolumeFrom... volumesFrom) {
+            return volumesFrom(List.of(volumesFrom));
+        }
         public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
-        }
-        public TaskDefinitionContainerDefinition build() {
+        }        public TaskDefinitionContainerDefinition build() {
             return new TaskDefinitionContainerDefinition(command, cpu, dependsOn, disableNetworking, dnsSearchDomains, dnsServers, dockerLabels, dockerSecurityOptions, entryPoint, environment, environmentFiles, essential, extraHosts, firelensConfiguration, healthCheck, hostname, image, interactive, links, linuxParameters, logConfiguration, memory, memoryReservation, mountPoints, name, portMappings, privileged, pseudoTerminal, readonlyRootFilesystem, repositoryCredentials, resourceRequirements, secrets, startTimeout, stopTimeout, systemControls, ulimits, user, volumesFrom, workingDirectory);
         }
     }

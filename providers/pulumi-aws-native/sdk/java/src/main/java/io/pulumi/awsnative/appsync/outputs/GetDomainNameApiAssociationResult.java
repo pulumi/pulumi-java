@@ -55,12 +55,10 @@ public final class GetDomainNameApiAssociationResult {
             this.apiAssociationIdentifier = apiAssociationIdentifier;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = apiId;
             return this;
-        }
-        public GetDomainNameApiAssociationResult build() {
+        }        public GetDomainNameApiAssociationResult build() {
             return new GetDomainNameApiAssociationResult(apiAssociationIdentifier, apiId);
         }
     }

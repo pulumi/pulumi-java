@@ -140,62 +140,59 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             this.activationKey = Objects.requireNonNull(activationKey);
             return this;
         }
-
         public Builder activationKey(String activationKey) {
             this.activationKey = Output.of(Objects.requireNonNull(activationKey));
             return this;
         }
-
         public Builder agentName(@Nullable Output<String> agentName) {
             this.agentName = agentName;
             return this;
         }
-
         public Builder agentName(@Nullable String agentName) {
             this.agentName = Output.ofNullable(agentName);
             return this;
         }
-
         public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
-
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
             this.securityGroupArns = Output.ofNullable(securityGroupArns);
             return this;
         }
-
+        public Builder securityGroupArns(String... securityGroupArns) {
+            return securityGroupArns(List.of(securityGroupArns));
+        }
         public Builder subnetArns(@Nullable Output<List<String>> subnetArns) {
             this.subnetArns = subnetArns;
             return this;
         }
-
         public Builder subnetArns(@Nullable List<String> subnetArns) {
             this.subnetArns = Output.ofNullable(subnetArns);
             return this;
         }
-
+        public Builder subnetArns(String... subnetArns) {
+            return subnetArns(List.of(subnetArns));
+        }
         public Builder tags(@Nullable Output<List<AgentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AgentTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(AgentTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
-        }
-        public AgentArgs build() {
+        }        public AgentArgs build() {
             return new AgentArgs(activationKey, agentName, securityGroupArns, subnetArns, tags, vpcEndpointId);
         }
     }

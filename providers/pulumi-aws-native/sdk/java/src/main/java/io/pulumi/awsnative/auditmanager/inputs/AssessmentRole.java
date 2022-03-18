@@ -71,12 +71,10 @@ public final class AssessmentRole extends io.pulumi.resources.InvokeArgs {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleType(@Nullable AssessmentRoleType roleType) {
             this.roleType = roleType;
             return this;
-        }
-        public AssessmentRole build() {
+        }        public AssessmentRole build() {
             return new AssessmentRole(roleArn, roleType);
         }
     }

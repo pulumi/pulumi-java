@@ -78,32 +78,26 @@ public final class PipelineChannelArgs extends io.pulumi.resources.ResourceArgs 
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder channelName(String channelName) {
             this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = Output.ofNullable(next);
             return this;
-        }
-        public PipelineChannelArgs build() {
+        }        public PipelineChannelArgs build() {
             return new PipelineChannelArgs(channelName, name, next);
         }
     }

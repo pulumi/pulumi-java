@@ -56,12 +56,10 @@ public final class PresignedUrlConfigProperties {
             this.expiresInSec = expiresInSec;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public PresignedUrlConfigProperties build() {
+        }        public PresignedUrlConfigProperties build() {
             return new PresignedUrlConfigProperties(expiresInSec, roleArn);
         }
     }

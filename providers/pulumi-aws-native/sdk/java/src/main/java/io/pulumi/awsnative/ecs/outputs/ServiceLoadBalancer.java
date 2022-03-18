@@ -72,22 +72,18 @@ public final class ServiceLoadBalancer {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
-        }
-        public ServiceLoadBalancer build() {
+        }        public ServiceLoadBalancer build() {
             return new ServiceLoadBalancer(containerName, containerPort, loadBalancerName, targetGroupArn);
         }
     }

@@ -79,32 +79,26 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreateArgs extends io.
             this.loRaWAN = loRaWAN;
             return this;
         }
-
         public Builder loRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs loRaWAN) {
             this.loRaWAN = Output.ofNullable(loRaWAN);
             return this;
         }
-
         public Builder updateDataRole(@Nullable Output<String> updateDataRole) {
             this.updateDataRole = updateDataRole;
             return this;
         }
-
         public Builder updateDataRole(@Nullable String updateDataRole) {
             this.updateDataRole = Output.ofNullable(updateDataRole);
             return this;
         }
-
         public Builder updateDataSource(@Nullable Output<String> updateDataSource) {
             this.updateDataSource = updateDataSource;
             return this;
         }
-
         public Builder updateDataSource(@Nullable String updateDataSource) {
             this.updateDataSource = Output.ofNullable(updateDataSource);
             return this;
-        }
-        public TaskDefinitionUpdateWirelessGatewayTaskCreateArgs build() {
+        }        public TaskDefinitionUpdateWirelessGatewayTaskCreateArgs build() {
             return new TaskDefinitionUpdateWirelessGatewayTaskCreateArgs(loRaWAN, updateDataRole, updateDataSource);
         }
     }

@@ -253,132 +253,112 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
-
         public Builder authMode(StudioAuthMode authMode) {
             this.authMode = Output.of(Objects.requireNonNull(authMode));
             return this;
         }
-
         public Builder defaultS3Location(Output<String> defaultS3Location) {
             this.defaultS3Location = Objects.requireNonNull(defaultS3Location);
             return this;
         }
-
         public Builder defaultS3Location(String defaultS3Location) {
             this.defaultS3Location = Output.of(Objects.requireNonNull(defaultS3Location));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder engineSecurityGroupId(Output<String> engineSecurityGroupId) {
             this.engineSecurityGroupId = Objects.requireNonNull(engineSecurityGroupId);
             return this;
         }
-
         public Builder engineSecurityGroupId(String engineSecurityGroupId) {
             this.engineSecurityGroupId = Output.of(Objects.requireNonNull(engineSecurityGroupId));
             return this;
         }
-
         public Builder idpAuthUrl(@Nullable Output<String> idpAuthUrl) {
             this.idpAuthUrl = idpAuthUrl;
             return this;
         }
-
         public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
             this.idpAuthUrl = Output.ofNullable(idpAuthUrl);
             return this;
         }
-
         public Builder idpRelayStateParameterName(@Nullable Output<String> idpRelayStateParameterName) {
             this.idpRelayStateParameterName = idpRelayStateParameterName;
             return this;
         }
-
         public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
             this.idpRelayStateParameterName = Output.ofNullable(idpRelayStateParameterName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder serviceRole(Output<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
-
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
             return this;
         }
-
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<List<StudioTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<StudioTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(StudioTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userRole(@Nullable Output<String> userRole) {
             this.userRole = userRole;
             return this;
         }
-
         public Builder userRole(@Nullable String userRole) {
             this.userRole = Output.ofNullable(userRole);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public Builder workspaceSecurityGroupId(Output<String> workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId);
             return this;
         }
-
         public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Output.of(Objects.requireNonNull(workspaceSecurityGroupId));
             return this;
-        }
-        public StudioArgs build() {
+        }        public StudioArgs build() {
             return new StudioArgs(authMode, defaultS3Location, description, engineSecurityGroupId, idpAuthUrl, idpRelayStateParameterName, name, serviceRole, subnetIds, tags, userRole, vpcId, workspaceSecurityGroupId);
         }
     }

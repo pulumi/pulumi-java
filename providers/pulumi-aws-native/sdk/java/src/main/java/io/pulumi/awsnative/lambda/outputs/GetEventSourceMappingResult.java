@@ -319,87 +319,82 @@ public final class GetEventSourceMappingResult {
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder bisectBatchOnFunctionError(@Nullable Boolean bisectBatchOnFunctionError) {
             this.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
             return this;
         }
-
         public Builder destinationConfig(@Nullable EventSourceMappingDestinationConfig destinationConfig) {
             this.destinationConfig = destinationConfig;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder filterCriteria(@Nullable FilterCriteriaProperties filterCriteria) {
             this.filterCriteria = filterCriteria;
             return this;
         }
-
         public Builder functionName(@Nullable String functionName) {
             this.functionName = functionName;
             return this;
         }
-
         public Builder functionResponseTypes(@Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes) {
             this.functionResponseTypes = functionResponseTypes;
             return this;
         }
-
+        public Builder functionResponseTypes(EventSourceMappingFunctionResponseTypesItem... functionResponseTypes) {
+            return functionResponseTypes(List.of(functionResponseTypes));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder maximumBatchingWindowInSeconds(@Nullable Integer maximumBatchingWindowInSeconds) {
             this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
             return this;
         }
-
         public Builder maximumRecordAgeInSeconds(@Nullable Integer maximumRecordAgeInSeconds) {
             this.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
             return this;
         }
-
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
-
         public Builder parallelizationFactor(@Nullable Integer parallelizationFactor) {
             this.parallelizationFactor = parallelizationFactor;
             return this;
         }
-
         public Builder queues(@Nullable List<String> queues) {
             this.queues = queues;
             return this;
         }
-
+        public Builder queues(String... queues) {
+            return queues(List.of(queues));
+        }
         public Builder sourceAccessConfigurations(@Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations) {
             this.sourceAccessConfigurations = sourceAccessConfigurations;
             return this;
         }
-
+        public Builder sourceAccessConfigurations(EventSourceMappingSourceAccessConfiguration... sourceAccessConfigurations) {
+            return sourceAccessConfigurations(List.of(sourceAccessConfigurations));
+        }
         public Builder startingPositionTimestamp(@Nullable Double startingPositionTimestamp) {
             this.startingPositionTimestamp = startingPositionTimestamp;
             return this;
         }
-
         public Builder topics(@Nullable List<String> topics) {
             this.topics = topics;
             return this;
         }
-
+        public Builder topics(String... topics) {
+            return topics(List.of(topics));
+        }
         public Builder tumblingWindowInSeconds(@Nullable Integer tumblingWindowInSeconds) {
             this.tumblingWindowInSeconds = tumblingWindowInSeconds;
             return this;
-        }
-        public GetEventSourceMappingResult build() {
+        }        public GetEventSourceMappingResult build() {
             return new GetEventSourceMappingResult(batchSize, bisectBatchOnFunctionError, destinationConfig, enabled, filterCriteria, functionName, functionResponseTypes, id, maximumBatchingWindowInSeconds, maximumRecordAgeInSeconds, maximumRetryAttempts, parallelizationFactor, queues, sourceAccessConfigurations, startingPositionTimestamp, topics, tumblingWindowInSeconds);
         }
     }

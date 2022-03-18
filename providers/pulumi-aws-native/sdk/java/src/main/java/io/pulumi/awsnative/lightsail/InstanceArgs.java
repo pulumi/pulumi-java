@@ -225,122 +225,104 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.addOns = addOns;
             return this;
         }
-
         public Builder addOns(@Nullable List<InstanceAddOnArgs> addOns) {
             this.addOns = Output.ofNullable(addOns);
             return this;
         }
-
+        public Builder addOns(InstanceAddOnArgs... addOns) {
+            return addOns(List.of(addOns));
+        }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder blueprintId(Output<String> blueprintId) {
             this.blueprintId = Objects.requireNonNull(blueprintId);
             return this;
         }
-
         public Builder blueprintId(String blueprintId) {
             this.blueprintId = Output.of(Objects.requireNonNull(blueprintId));
             return this;
         }
-
         public Builder bundleId(Output<String> bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder bundleId(String bundleId) {
             this.bundleId = Output.of(Objects.requireNonNull(bundleId));
             return this;
         }
-
         public Builder hardware(@Nullable Output<InstanceHardwareArgs> hardware) {
             this.hardware = hardware;
             return this;
         }
-
         public Builder hardware(@Nullable InstanceHardwareArgs hardware) {
             this.hardware = Output.ofNullable(hardware);
             return this;
         }
-
         public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
-
         public Builder keyPairName(@Nullable Output<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
-
         public Builder keyPairName(@Nullable String keyPairName) {
             this.keyPairName = Output.ofNullable(keyPairName);
             return this;
         }
-
         public Builder location(@Nullable Output<InstanceLocationArgs> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable InstanceLocationArgs location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networking(@Nullable Output<InstanceNetworkingArgs> networking) {
             this.networking = networking;
             return this;
         }
-
         public Builder networking(@Nullable InstanceNetworkingArgs networking) {
             this.networking = Output.ofNullable(networking);
             return this;
         }
-
         public Builder state(@Nullable Output<InstanceStateArgs> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable InstanceStateArgs state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<InstanceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<InstanceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(InstanceTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = Output.ofNullable(userData);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(addOns, availabilityZone, blueprintId, bundleId, hardware, instanceName, keyPairName, location, networking, state, tags, userData);
         }
     }

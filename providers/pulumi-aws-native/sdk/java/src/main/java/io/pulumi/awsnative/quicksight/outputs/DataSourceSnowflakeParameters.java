@@ -85,17 +85,14 @@ public final class DataSourceSnowflakeParameters {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder warehouse(String warehouse) {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
-        }
-        public DataSourceSnowflakeParameters build() {
+        }        public DataSourceSnowflakeParameters build() {
             return new DataSourceSnowflakeParameters(database, host, warehouse);
         }
     }

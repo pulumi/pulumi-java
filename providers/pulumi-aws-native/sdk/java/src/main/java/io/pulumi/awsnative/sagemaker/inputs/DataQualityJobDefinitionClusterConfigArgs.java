@@ -111,42 +111,34 @@ public final class DataQualityJobDefinitionClusterConfigArgs extends io.pulumi.r
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
-
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Output.of(Objects.requireNonNull(instanceCount));
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder volumeKmsKeyId(@Nullable Output<String> volumeKmsKeyId) {
             this.volumeKmsKeyId = volumeKmsKeyId;
             return this;
         }
-
         public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
             this.volumeKmsKeyId = Output.ofNullable(volumeKmsKeyId);
             return this;
         }
-
         public Builder volumeSizeInGB(Output<Integer> volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Output.of(Objects.requireNonNull(volumeSizeInGB));
             return this;
-        }
-        public DataQualityJobDefinitionClusterConfigArgs build() {
+        }        public DataQualityJobDefinitionClusterConfigArgs build() {
             return new DataQualityJobDefinitionClusterConfigArgs(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }
     }

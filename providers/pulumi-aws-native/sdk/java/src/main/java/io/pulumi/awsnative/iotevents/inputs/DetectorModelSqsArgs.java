@@ -88,32 +88,26 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
             this.payload = payload;
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
             this.payload = Output.ofNullable(payload);
             return this;
         }
-
         public Builder queueUrl(Output<String> queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
-
         public Builder queueUrl(String queueUrl) {
             this.queueUrl = Output.of(Objects.requireNonNull(queueUrl));
             return this;
         }
-
         public Builder useBase64(@Nullable Output<Boolean> useBase64) {
             this.useBase64 = useBase64;
             return this;
         }
-
         public Builder useBase64(@Nullable Boolean useBase64) {
             this.useBase64 = Output.ofNullable(useBase64);
             return this;
-        }
-        public DetectorModelSqsArgs build() {
+        }        public DetectorModelSqsArgs build() {
             return new DetectorModelSqsArgs(payload, queueUrl, useBase64);
         }
     }

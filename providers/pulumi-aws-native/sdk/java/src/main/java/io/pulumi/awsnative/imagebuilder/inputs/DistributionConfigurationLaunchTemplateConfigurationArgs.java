@@ -95,32 +95,26 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
-
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = Output.ofNullable(launchTemplateId);
             return this;
         }
-
         public Builder setDefaultVersion(@Nullable Output<Boolean> setDefaultVersion) {
             this.setDefaultVersion = setDefaultVersion;
             return this;
         }
-
         public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
             this.setDefaultVersion = Output.ofNullable(setDefaultVersion);
             return this;
-        }
-        public DistributionConfigurationLaunchTemplateConfigurationArgs build() {
+        }        public DistributionConfigurationLaunchTemplateConfigurationArgs build() {
             return new DistributionConfigurationLaunchTemplateConfigurationArgs(accountId, launchTemplateId, setDefaultVersion);
         }
     }

@@ -127,52 +127,42 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable ApplicationLogEncoding encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
-
         public Builder logPath(@Nullable Output<String> logPath) {
             this.logPath = logPath;
             return this;
         }
-
         public Builder logPath(@Nullable String logPath) {
             this.logPath = Output.ofNullable(logPath);
             return this;
         }
-
         public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
         }
-
         public Builder patternSet(@Nullable Output<String> patternSet) {
             this.patternSet = patternSet;
             return this;
         }
-
         public Builder patternSet(@Nullable String patternSet) {
             this.patternSet = Output.ofNullable(patternSet);
             return this;
-        }
-        public ApplicationLogArgs build() {
+        }        public ApplicationLogArgs build() {
             return new ApplicationLogArgs(encoding, logGroupName, logPath, logType, patternSet);
         }
     }

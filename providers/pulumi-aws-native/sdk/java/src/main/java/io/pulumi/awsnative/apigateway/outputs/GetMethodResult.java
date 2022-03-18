@@ -205,52 +205,48 @@ public final class GetMethodResult {
             this.apiKeyRequired = apiKeyRequired;
             return this;
         }
-
         public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
             this.authorizationScopes = authorizationScopes;
             return this;
         }
-
+        public Builder authorizationScopes(String... authorizationScopes) {
+            return authorizationScopes(List.of(authorizationScopes));
+        }
         public Builder authorizationType(@Nullable MethodAuthorizationType authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
-
         public Builder authorizerId(@Nullable String authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
-
         public Builder integration(@Nullable MethodIntegration integration) {
             this.integration = integration;
             return this;
         }
-
         public Builder methodResponses(@Nullable List<MethodResponse> methodResponses) {
             this.methodResponses = methodResponses;
             return this;
         }
-
+        public Builder methodResponses(MethodResponse... methodResponses) {
+            return methodResponses(List.of(methodResponses));
+        }
         public Builder operationName(@Nullable String operationName) {
             this.operationName = operationName;
             return this;
         }
-
         public Builder requestModels(@Nullable Object requestModels) {
             this.requestModels = requestModels;
             return this;
         }
-
         public Builder requestParameters(@Nullable Object requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
-
         public Builder requestValidatorId(@Nullable String requestValidatorId) {
             this.requestValidatorId = requestValidatorId;
             return this;
-        }
-        public GetMethodResult build() {
+        }        public GetMethodResult build() {
             return new GetMethodResult(apiKeyRequired, authorizationScopes, authorizationType, authorizerId, integration, methodResponses, operationName, requestModels, requestParameters, requestValidatorId);
         }
     }

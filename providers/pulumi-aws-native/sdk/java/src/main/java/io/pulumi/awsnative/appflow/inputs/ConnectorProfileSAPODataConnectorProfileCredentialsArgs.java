@@ -67,22 +67,18 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
-
         public Builder basicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs basicAuthCredentials) {
             this.basicAuthCredentials = Output.ofNullable(basicAuthCredentials);
             return this;
         }
-
         public Builder oAuthCredentials(@Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials) {
             this.oAuthCredentials = oAuthCredentials;
             return this;
         }
-
         public Builder oAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs oAuthCredentials) {
             this.oAuthCredentials = Output.ofNullable(oAuthCredentials);
             return this;
-        }
-        public ConnectorProfileSAPODataConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileSAPODataConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsArgs(basicAuthCredentials, oAuthCredentials);
         }
     }

@@ -77,32 +77,26 @@ public final class WirelessDeviceOtaaV11Args extends io.pulumi.resources.Resourc
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
-
         public Builder appKey(String appKey) {
             this.appKey = Output.of(Objects.requireNonNull(appKey));
             return this;
         }
-
         public Builder joinEui(Output<String> joinEui) {
             this.joinEui = Objects.requireNonNull(joinEui);
             return this;
         }
-
         public Builder joinEui(String joinEui) {
             this.joinEui = Output.of(Objects.requireNonNull(joinEui));
             return this;
         }
-
         public Builder nwkKey(Output<String> nwkKey) {
             this.nwkKey = Objects.requireNonNull(nwkKey);
             return this;
         }
-
         public Builder nwkKey(String nwkKey) {
             this.nwkKey = Output.of(Objects.requireNonNull(nwkKey));
             return this;
-        }
-        public WirelessDeviceOtaaV11Args build() {
+        }        public WirelessDeviceOtaaV11Args build() {
             return new WirelessDeviceOtaaV11Args(appKey, joinEui, nwkKey);
         }
     }

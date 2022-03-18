@@ -53,7 +53,9 @@ public final class CodeSigningConfigAllowedPublishers {
             this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
             return this;
         }
-        public CodeSigningConfigAllowedPublishers build() {
+        public Builder signingProfileVersionArns(String... signingProfileVersionArns) {
+            return signingProfileVersionArns(List.of(signingProfileVersionArns));
+        }        public CodeSigningConfigAllowedPublishers build() {
             return new CodeSigningConfigAllowedPublishers(signingProfileVersionArns);
         }
     }

@@ -61,17 +61,14 @@ public final class FeatureGroupDataCatalogConfig {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public FeatureGroupDataCatalogConfig build() {
+        }        public FeatureGroupDataCatalogConfig build() {
             return new FeatureGroupDataCatalogConfig(catalog, database, tableName);
         }
     }

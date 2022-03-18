@@ -56,12 +56,10 @@ public final class TableClusteringKeyColumn {
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder orderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
             this.orderBy = orderBy;
             return this;
-        }
-        public TableClusteringKeyColumn build() {
+        }        public TableClusteringKeyColumn build() {
             return new TableClusteringKeyColumn(column, orderBy);
         }
     }

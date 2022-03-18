@@ -54,8 +54,7 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
-        }
-        public GetGatewayArgs build() {
+        }        public GetGatewayArgs build() {
             return new GetGatewayArgs(gatewayId);
         }
     }

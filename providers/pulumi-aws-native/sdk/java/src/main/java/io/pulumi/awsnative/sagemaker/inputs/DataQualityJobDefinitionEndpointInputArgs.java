@@ -108,42 +108,34 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends io.pulumi.r
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
-
         public Builder localPath(Output<String> localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Output.of(Objects.requireNonNull(localPath));
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable Output<DataQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = Output.ofNullable(s3DataDistributionType);
             return this;
         }
-
         public Builder s3InputMode(@Nullable Output<DataQualityJobDefinitionEndpointInputS3InputMode> s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
-
         public Builder s3InputMode(@Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = Output.ofNullable(s3InputMode);
             return this;
-        }
-        public DataQualityJobDefinitionEndpointInputArgs build() {
+        }        public DataQualityJobDefinitionEndpointInputArgs build() {
             return new DataQualityJobDefinitionEndpointInputArgs(endpointName, localPath, s3DataDistributionType, s3InputMode);
         }
     }

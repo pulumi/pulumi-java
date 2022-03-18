@@ -90,32 +90,26 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder localeCode(@Nullable Output<String> localeCode) {
             this.localeCode = localeCode;
             return this;
         }
-
         public Builder localeCode(@Nullable String localeCode) {
             this.localeCode = Output.ofNullable(localeCode);
             return this;
         }
-
         public Builder timezoneOffset(@Nullable Output<String> timezoneOffset) {
             this.timezoneOffset = timezoneOffset;
             return this;
         }
-
         public Builder timezoneOffset(@Nullable String timezoneOffset) {
             this.timezoneOffset = Output.ofNullable(timezoneOffset);
             return this;
-        }
-        public DatasetDatetimeOptionsArgs build() {
+        }        public DatasetDatetimeOptionsArgs build() {
             return new DatasetDatetimeOptionsArgs(format, localeCode, timezoneOffset);
         }
     }

@@ -127,52 +127,48 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
             this.containerArguments = containerArguments;
             return this;
         }
-
         public Builder containerArguments(@Nullable List<String> containerArguments) {
             this.containerArguments = Output.ofNullable(containerArguments);
             return this;
         }
-
+        public Builder containerArguments(String... containerArguments) {
+            return containerArguments(List.of(containerArguments));
+        }
         public Builder containerEntrypoint(@Nullable Output<List<String>> containerEntrypoint) {
             this.containerEntrypoint = containerEntrypoint;
             return this;
         }
-
         public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
             this.containerEntrypoint = Output.ofNullable(containerEntrypoint);
             return this;
         }
-
+        public Builder containerEntrypoint(String... containerEntrypoint) {
+            return containerEntrypoint(List.of(containerEntrypoint));
+        }
         public Builder imageUri(Output<String> imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Output.of(Objects.requireNonNull(imageUri));
             return this;
         }
-
         public Builder postAnalyticsProcessorSourceUri(@Nullable Output<String> postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
-
         public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = Output.ofNullable(postAnalyticsProcessorSourceUri);
             return this;
         }
-
         public Builder recordPreprocessorSourceUri(@Nullable Output<String> recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
-
         public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = Output.ofNullable(recordPreprocessorSourceUri);
             return this;
-        }
-        public MonitoringScheduleMonitoringAppSpecificationArgs build() {
+        }        public MonitoringScheduleMonitoringAppSpecificationArgs build() {
             return new MonitoringScheduleMonitoringAppSpecificationArgs(containerArguments, containerEntrypoint, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
         }
     }

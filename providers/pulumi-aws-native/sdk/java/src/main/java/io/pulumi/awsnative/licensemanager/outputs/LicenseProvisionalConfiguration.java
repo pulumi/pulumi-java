@@ -43,8 +43,7 @@ public final class LicenseProvisionalConfiguration {
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
-        }
-        public LicenseProvisionalConfiguration build() {
+        }        public LicenseProvisionalConfiguration build() {
             return new LicenseProvisionalConfiguration(maxTimeToLiveInMinutes);
         }
     }

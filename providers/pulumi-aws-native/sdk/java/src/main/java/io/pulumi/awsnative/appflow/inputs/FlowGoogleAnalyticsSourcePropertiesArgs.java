@@ -52,12 +52,10 @@ public final class FlowGoogleAnalyticsSourcePropertiesArgs extends io.pulumi.res
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowGoogleAnalyticsSourcePropertiesArgs build() {
+        }        public FlowGoogleAnalyticsSourcePropertiesArgs build() {
             return new FlowGoogleAnalyticsSourcePropertiesArgs(object);
         }
     }

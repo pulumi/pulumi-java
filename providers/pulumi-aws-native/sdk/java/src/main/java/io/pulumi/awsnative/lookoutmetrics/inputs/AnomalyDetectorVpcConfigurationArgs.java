@@ -66,22 +66,24 @@ public final class AnomalyDetectorVpcConfigurationArgs extends io.pulumi.resourc
             this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList);
             return this;
         }
-
         public Builder securityGroupIdList(List<String> securityGroupIdList) {
             this.securityGroupIdList = Output.of(Objects.requireNonNull(securityGroupIdList));
             return this;
         }
-
+        public Builder securityGroupIdList(String... securityGroupIdList) {
+            return securityGroupIdList(List.of(securityGroupIdList));
+        }
         public Builder subnetIdList(Output<List<String>> subnetIdList) {
             this.subnetIdList = Objects.requireNonNull(subnetIdList);
             return this;
         }
-
         public Builder subnetIdList(List<String> subnetIdList) {
             this.subnetIdList = Output.of(Objects.requireNonNull(subnetIdList));
             return this;
         }
-        public AnomalyDetectorVpcConfigurationArgs build() {
+        public Builder subnetIdList(String... subnetIdList) {
+            return subnetIdList(List.of(subnetIdList));
+        }        public AnomalyDetectorVpcConfigurationArgs build() {
             return new AnomalyDetectorVpcConfigurationArgs(securityGroupIdList, subnetIdList);
         }
     }

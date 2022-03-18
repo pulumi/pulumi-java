@@ -91,22 +91,18 @@ public final class InAppTemplateButtonConfig extends io.pulumi.resources.InvokeA
             this.android = android;
             return this;
         }
-
         public Builder defaultConfig(@Nullable InAppTemplateDefaultButtonConfiguration defaultConfig) {
             this.defaultConfig = defaultConfig;
             return this;
         }
-
         public Builder iOS(@Nullable InAppTemplateOverrideButtonConfiguration iOS) {
             this.iOS = iOS;
             return this;
         }
-
         public Builder web(@Nullable InAppTemplateOverrideButtonConfiguration web) {
             this.web = web;
             return this;
-        }
-        public InAppTemplateButtonConfig build() {
+        }        public InAppTemplateButtonConfig build() {
             return new InAppTemplateButtonConfig(android, defaultConfig, iOS, web);
         }
     }

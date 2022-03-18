@@ -61,12 +61,10 @@ public final class EventSourceMappingFilterArgs extends io.pulumi.resources.Reso
             this.pattern = pattern;
             return this;
         }
-
         public Builder pattern(@Nullable String pattern) {
             this.pattern = Output.ofNullable(pattern);
             return this;
-        }
-        public EventSourceMappingFilterArgs build() {
+        }        public EventSourceMappingFilterArgs build() {
             return new EventSourceMappingFilterArgs(pattern);
         }
     }

@@ -54,8 +54,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetChannelArgs build() {
+        }        public GetChannelArgs build() {
             return new GetChannelArgs(id);
         }
     }

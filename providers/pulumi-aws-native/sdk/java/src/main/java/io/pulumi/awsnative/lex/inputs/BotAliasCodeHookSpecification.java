@@ -54,8 +54,7 @@ public final class BotAliasCodeHookSpecification extends io.pulumi.resources.Inv
         public Builder lambdaCodeHook(BotAliasLambdaCodeHook lambdaCodeHook) {
             this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
             return this;
-        }
-        public BotAliasCodeHookSpecification build() {
+        }        public BotAliasCodeHookSpecification build() {
             return new BotAliasCodeHookSpecification(lambdaCodeHook);
         }
     }

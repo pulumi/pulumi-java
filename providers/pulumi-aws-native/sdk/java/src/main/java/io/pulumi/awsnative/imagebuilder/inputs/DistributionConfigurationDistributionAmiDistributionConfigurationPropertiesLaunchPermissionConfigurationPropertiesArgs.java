@@ -111,42 +111,46 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.organizationArns = organizationArns;
             return this;
         }
-
         public Builder organizationArns(@Nullable List<String> organizationArns) {
             this.organizationArns = Output.ofNullable(organizationArns);
             return this;
         }
-
+        public Builder organizationArns(String... organizationArns) {
+            return organizationArns(List.of(organizationArns));
+        }
         public Builder organizationalUnitArns(@Nullable Output<List<String>> organizationalUnitArns) {
             this.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
-
         public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
             this.organizationalUnitArns = Output.ofNullable(organizationalUnitArns);
             return this;
         }
-
+        public Builder organizationalUnitArns(String... organizationalUnitArns) {
+            return organizationalUnitArns(List.of(organizationalUnitArns));
+        }
         public Builder userGroups(@Nullable Output<List<String>> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
-
         public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = Output.ofNullable(userGroups);
             return this;
         }
-
+        public Builder userGroups(String... userGroups) {
+            return userGroups(List.of(userGroups));
+        }
         public Builder userIds(@Nullable Output<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
-
         public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = Output.ofNullable(userIds);
             return this;
         }
-        public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs build() {
+        public Builder userIds(String... userIds) {
+            return userIds(List.of(userIds));
+        }        public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs(organizationArns, organizationalUnitArns, userGroups, userIds);
         }
     }

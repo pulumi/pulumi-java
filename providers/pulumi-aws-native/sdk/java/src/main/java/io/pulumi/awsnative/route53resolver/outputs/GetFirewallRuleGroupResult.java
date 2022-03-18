@@ -237,62 +237,56 @@ public final class GetFirewallRuleGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creatorRequestId(@Nullable String creatorRequestId) {
             this.creatorRequestId = creatorRequestId;
             return this;
         }
-
         public Builder firewallRules(@Nullable List<FirewallRuleGroupFirewallRule> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
-
+        public Builder firewallRules(FirewallRuleGroupFirewallRule... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder modificationTime(@Nullable String modificationTime) {
             this.modificationTime = modificationTime;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ruleCount(@Nullable Integer ruleCount) {
             this.ruleCount = ruleCount;
             return this;
         }
-
         public Builder shareStatus(@Nullable FirewallRuleGroupShareStatus shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
-
         public Builder status(@Nullable FirewallRuleGroupStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
-
         public Builder tags(@Nullable List<FirewallRuleGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFirewallRuleGroupResult build() {
+        public Builder tags(FirewallRuleGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFirewallRuleGroupResult build() {
             return new GetFirewallRuleGroupResult(arn, creationTime, creatorRequestId, firewallRules, id, modificationTime, ownerId, ruleCount, shareStatus, status, statusMessage, tags);
         }
     }

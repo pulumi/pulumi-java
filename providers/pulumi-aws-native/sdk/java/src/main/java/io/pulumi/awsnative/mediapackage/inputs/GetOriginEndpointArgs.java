@@ -54,8 +54,7 @@ public final class GetOriginEndpointArgs extends io.pulumi.resources.InvokeArgs 
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetOriginEndpointArgs build() {
+        }        public GetOriginEndpointArgs build() {
             return new GetOriginEndpointArgs(id);
         }
     }

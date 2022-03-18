@@ -192,122 +192,107 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.deleteAllPolicyResources = deleteAllPolicyResources;
             return this;
         }
-
         public Builder deleteAllPolicyResources(@Nullable Boolean deleteAllPolicyResources) {
             this.deleteAllPolicyResources = Output.ofNullable(deleteAllPolicyResources);
             return this;
         }
-
         public Builder excludeMap(@Nullable Output<PolicyIEMapArgs> excludeMap) {
             this.excludeMap = excludeMap;
             return this;
         }
-
         public Builder excludeMap(@Nullable PolicyIEMapArgs excludeMap) {
             this.excludeMap = Output.ofNullable(excludeMap);
             return this;
         }
-
         public Builder excludeResourceTags(Output<Boolean> excludeResourceTags) {
             this.excludeResourceTags = Objects.requireNonNull(excludeResourceTags);
             return this;
         }
-
         public Builder excludeResourceTags(Boolean excludeResourceTags) {
             this.excludeResourceTags = Output.of(Objects.requireNonNull(excludeResourceTags));
             return this;
         }
-
         public Builder includeMap(@Nullable Output<PolicyIEMapArgs> includeMap) {
             this.includeMap = includeMap;
             return this;
         }
-
         public Builder includeMap(@Nullable PolicyIEMapArgs includeMap) {
             this.includeMap = Output.ofNullable(includeMap);
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
         }
-
         public Builder remediationEnabled(Output<Boolean> remediationEnabled) {
             this.remediationEnabled = Objects.requireNonNull(remediationEnabled);
             return this;
         }
-
         public Builder remediationEnabled(Boolean remediationEnabled) {
             this.remediationEnabled = Output.of(Objects.requireNonNull(remediationEnabled));
             return this;
         }
-
         public Builder resourceTags(@Nullable Output<List<PolicyResourceTagArgs>> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
-
         public Builder resourceTags(@Nullable List<PolicyResourceTagArgs> resourceTags) {
             this.resourceTags = Output.ofNullable(resourceTags);
             return this;
         }
-
+        public Builder resourceTags(PolicyResourceTagArgs... resourceTags) {
+            return resourceTags(List.of(resourceTags));
+        }
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder resourceTypeList(@Nullable Output<List<String>> resourceTypeList) {
             this.resourceTypeList = resourceTypeList;
             return this;
         }
-
         public Builder resourceTypeList(@Nullable List<String> resourceTypeList) {
             this.resourceTypeList = Output.ofNullable(resourceTypeList);
             return this;
         }
-
+        public Builder resourceTypeList(String... resourceTypeList) {
+            return resourceTypeList(List.of(resourceTypeList));
+        }
         public Builder resourcesCleanUp(@Nullable Output<Boolean> resourcesCleanUp) {
             this.resourcesCleanUp = resourcesCleanUp;
             return this;
         }
-
         public Builder resourcesCleanUp(@Nullable Boolean resourcesCleanUp) {
             this.resourcesCleanUp = Output.ofNullable(resourcesCleanUp);
             return this;
         }
-
         public Builder securityServicePolicyData(Output<SecurityServicePolicyDataPropertiesArgs> securityServicePolicyData) {
             this.securityServicePolicyData = Objects.requireNonNull(securityServicePolicyData);
             return this;
         }
-
         public Builder securityServicePolicyData(SecurityServicePolicyDataPropertiesArgs securityServicePolicyData) {
             this.securityServicePolicyData = Output.of(Objects.requireNonNull(securityServicePolicyData));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<PolicyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<PolicyTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PolicyArgs build() {
+        public Builder tags(PolicyTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public PolicyArgs build() {
             return new PolicyArgs(deleteAllPolicyResources, excludeMap, excludeResourceTags, includeMap, policyName, remediationEnabled, resourceTags, resourceType, resourceTypeList, resourcesCleanUp, securityServicePolicyData, tags);
         }
     }

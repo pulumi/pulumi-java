@@ -122,52 +122,48 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder ipAddressType(@Nullable Output<AcceleratorIpAddressType> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
-
         public Builder ipAddressType(@Nullable AcceleratorIpAddressType ipAddressType) {
             this.ipAddressType = Output.ofNullable(ipAddressType);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AcceleratorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AcceleratorTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AcceleratorArgs build() {
+        public Builder tags(AcceleratorTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AcceleratorArgs build() {
             return new AcceleratorArgs(enabled, ipAddressType, ipAddresses, name, tags);
         }
     }

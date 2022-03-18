@@ -91,32 +91,26 @@ public final class ModelExplainabilityJobDefinitionNetworkConfigArgs extends io.
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
-
         public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
             this.enableInterContainerTrafficEncryption = Output.ofNullable(enableInterContainerTrafficEncryption);
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = Output.ofNullable(enableNetworkIsolation);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<ModelExplainabilityJobDefinitionVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ModelExplainabilityJobDefinitionVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public ModelExplainabilityJobDefinitionNetworkConfigArgs build() {
+        }        public ModelExplainabilityJobDefinitionNetworkConfigArgs build() {
             return new ModelExplainabilityJobDefinitionNetworkConfigArgs(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }
     }

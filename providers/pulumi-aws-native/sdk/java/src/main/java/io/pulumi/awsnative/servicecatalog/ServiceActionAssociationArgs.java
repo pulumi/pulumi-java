@@ -77,32 +77,26 @@ public final class ServiceActionAssociationArgs extends io.pulumi.resources.Reso
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder provisioningArtifactId(Output<String> provisioningArtifactId) {
             this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId);
             return this;
         }
-
         public Builder provisioningArtifactId(String provisioningArtifactId) {
             this.provisioningArtifactId = Output.of(Objects.requireNonNull(provisioningArtifactId));
             return this;
         }
-
         public Builder serviceActionId(Output<String> serviceActionId) {
             this.serviceActionId = Objects.requireNonNull(serviceActionId);
             return this;
         }
-
         public Builder serviceActionId(String serviceActionId) {
             this.serviceActionId = Output.of(Objects.requireNonNull(serviceActionId));
             return this;
-        }
-        public ServiceActionAssociationArgs build() {
+        }        public ServiceActionAssociationArgs build() {
             return new ServiceActionAssociationArgs(productId, provisioningArtifactId, serviceActionId);
         }
     }

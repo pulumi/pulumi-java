@@ -106,42 +106,34 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
             this.autoPlacement = autoPlacement;
             return this;
         }
-
         public Builder autoPlacement(@Nullable String autoPlacement) {
             this.autoPlacement = Output.ofNullable(autoPlacement);
             return this;
         }
-
         public Builder availabilityZone(Output<String> availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
-
         public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
         }
-
         public Builder hostRecovery(@Nullable String hostRecovery) {
             this.hostRecovery = Output.ofNullable(hostRecovery);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
-        }
-        public HostArgs build() {
+        }        public HostArgs build() {
             return new HostArgs(autoPlacement, availabilityZone, hostRecovery, instanceType);
         }
     }

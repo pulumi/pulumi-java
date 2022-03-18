@@ -53,12 +53,13 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<ResponseHeadersPolicyCustomHeaderArgs> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-        public ResponseHeadersPolicyCustomHeadersConfigArgs build() {
+        public Builder items(ResponseHeadersPolicyCustomHeaderArgs... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyCustomHeadersConfigArgs build() {
             return new ResponseHeadersPolicyCustomHeadersConfigArgs(items);
         }
     }

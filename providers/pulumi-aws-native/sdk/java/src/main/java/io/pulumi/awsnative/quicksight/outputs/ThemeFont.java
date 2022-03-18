@@ -45,8 +45,7 @@ public final class ThemeFont {
         public Builder fontFamily(@Nullable String fontFamily) {
             this.fontFamily = fontFamily;
             return this;
-        }
-        public ThemeFont build() {
+        }        public ThemeFont build() {
             return new ThemeFont(fontFamily);
         }
     }

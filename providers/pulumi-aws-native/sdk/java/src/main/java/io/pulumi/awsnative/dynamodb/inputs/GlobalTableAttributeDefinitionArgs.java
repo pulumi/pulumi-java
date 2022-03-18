@@ -65,22 +65,18 @@ public final class GlobalTableAttributeDefinitionArgs extends io.pulumi.resource
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder attributeName(String attributeName) {
             this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
-
         public Builder attributeType(Output<String> attributeType) {
             this.attributeType = Objects.requireNonNull(attributeType);
             return this;
         }
-
         public Builder attributeType(String attributeType) {
             this.attributeType = Output.of(Objects.requireNonNull(attributeType));
             return this;
-        }
-        public GlobalTableAttributeDefinitionArgs build() {
+        }        public GlobalTableAttributeDefinitionArgs build() {
             return new GlobalTableAttributeDefinitionArgs(attributeName, attributeType);
         }
     }

@@ -192,52 +192,54 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder entityTypes(@Nullable List<DetectorEntityType> entityTypes) {
             this.entityTypes = entityTypes;
             return this;
         }
-
+        public Builder entityTypes(DetectorEntityType... entityTypes) {
+            return entityTypes(List.of(entityTypes));
+        }
         public Builder eventVariables(@Nullable List<DetectorEventVariable> eventVariables) {
             this.eventVariables = eventVariables;
             return this;
         }
-
+        public Builder eventVariables(DetectorEventVariable... eventVariables) {
+            return eventVariables(List.of(eventVariables));
+        }
         public Builder inline(@Nullable Boolean inline) {
             this.inline = inline;
             return this;
         }
-
         public Builder labels(@Nullable List<DetectorLabel> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(DetectorLabel... labels) {
+            return labels(List.of(labels));
+        }
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }
-        public DetectorEventType build() {
+        public Builder tags(DetectorTag... tags) {
+            return tags(List.of(tags));
+        }        public DetectorEventType build() {
             return new DetectorEventType(arn, createdTime, description, entityTypes, eventVariables, inline, labels, lastUpdatedTime, name, tags);
         }
     }

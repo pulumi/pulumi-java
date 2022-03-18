@@ -52,12 +52,10 @@ public final class TopicRulePutItemInputArgs extends io.pulumi.resources.Resourc
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public TopicRulePutItemInputArgs build() {
+        }        public TopicRulePutItemInputArgs build() {
             return new TopicRulePutItemInputArgs(tableName);
         }
     }

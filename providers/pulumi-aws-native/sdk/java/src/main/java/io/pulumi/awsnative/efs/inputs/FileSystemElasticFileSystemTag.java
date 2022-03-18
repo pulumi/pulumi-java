@@ -64,12 +64,10 @@ public final class FileSystemElasticFileSystemTag extends io.pulumi.resources.In
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FileSystemElasticFileSystemTag build() {
+        }        public FileSystemElasticFileSystemTag build() {
             return new FileSystemElasticFileSystemTag(key, value);
         }
     }

@@ -50,8 +50,7 @@ public final class GetRouteCalculatorArgs extends io.pulumi.resources.InvokeArgs
         public Builder calculatorName(String calculatorName) {
             this.calculatorName = Objects.requireNonNull(calculatorName);
             return this;
-        }
-        public GetRouteCalculatorArgs build() {
+        }        public GetRouteCalculatorArgs build() {
             return new GetRouteCalculatorArgs(calculatorName);
         }
     }

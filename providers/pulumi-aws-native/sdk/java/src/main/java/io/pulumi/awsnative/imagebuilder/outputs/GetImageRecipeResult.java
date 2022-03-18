@@ -72,12 +72,10 @@ public final class GetImageRecipeResult {
             this.additionalInstanceConfiguration = additionalInstanceConfiguration;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public GetImageRecipeResult build() {
+        }        public GetImageRecipeResult build() {
             return new GetImageRecipeResult(additionalInstanceConfiguration, arn);
         }
     }

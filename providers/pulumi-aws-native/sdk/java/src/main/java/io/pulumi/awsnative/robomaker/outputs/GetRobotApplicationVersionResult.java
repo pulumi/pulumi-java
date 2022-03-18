@@ -55,12 +55,10 @@ public final class GetRobotApplicationVersionResult {
             this.applicationVersion = applicationVersion;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public GetRobotApplicationVersionResult build() {
+        }        public GetRobotApplicationVersionResult build() {
             return new GetRobotApplicationVersionResult(applicationVersion, arn);
         }
     }

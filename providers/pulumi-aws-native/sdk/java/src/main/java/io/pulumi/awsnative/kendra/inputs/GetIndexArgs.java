@@ -50,8 +50,7 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetIndexArgs build() {
+        }        public GetIndexArgs build() {
             return new GetIndexArgs(id);
         }
     }

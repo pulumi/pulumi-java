@@ -98,37 +98,36 @@ public final class GetSubnetResult {
             this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
-
+        public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
+            return ipv6CidrBlocks(List.of(ipv6CidrBlocks));
+        }
         public Builder mapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
             return this;
         }
-
         public Builder networkAclAssociationId(@Nullable String networkAclAssociationId) {
             this.networkAclAssociationId = networkAclAssociationId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder tags(@Nullable List<SubnetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetSubnetResult build() {
+        public Builder tags(SubnetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetSubnetResult build() {
             return new GetSubnetResult(assignIpv6AddressOnCreation, ipv6CidrBlock, ipv6CidrBlocks, mapPublicIpOnLaunch, networkAclAssociationId, subnetId, tags);
         }
     }

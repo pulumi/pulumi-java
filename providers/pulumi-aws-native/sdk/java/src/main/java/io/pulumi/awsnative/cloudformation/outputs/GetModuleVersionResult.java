@@ -177,42 +177,34 @@ public final class GetModuleVersionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder documentationUrl(@Nullable String documentationUrl) {
             this.documentationUrl = documentationUrl;
             return this;
         }
-
         public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder visibility(@Nullable ModuleVersionVisibility visibility) {
             this.visibility = visibility;
             return this;
-        }
-        public GetModuleVersionResult build() {
+        }        public GetModuleVersionResult build() {
             return new GetModuleVersionResult(arn, description, documentationUrl, isDefaultVersion, schema, timeCreated, versionId, visibility);
         }
     }

@@ -71,22 +71,18 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
             this.channelTargetInfo = channelTargetInfo;
             return this;
         }
-
         public Builder channelTargetInfo(@Nullable ContactChannelTargetInfoArgs channelTargetInfo) {
             this.channelTargetInfo = Output.ofNullable(channelTargetInfo);
             return this;
         }
-
         public Builder contactTargetInfo(@Nullable Output<ContactTargetInfoArgs> contactTargetInfo) {
             this.contactTargetInfo = contactTargetInfo;
             return this;
         }
-
         public Builder contactTargetInfo(@Nullable ContactTargetInfoArgs contactTargetInfo) {
             this.contactTargetInfo = Output.ofNullable(contactTargetInfo);
             return this;
-        }
-        public ContactTargetsArgs build() {
+        }        public ContactTargetsArgs build() {
             return new ContactTargetsArgs(channelTargetInfo, contactTargetInfo);
         }
     }

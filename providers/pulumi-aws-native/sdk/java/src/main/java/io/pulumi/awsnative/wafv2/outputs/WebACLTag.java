@@ -55,12 +55,10 @@ public final class WebACLTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public WebACLTag build() {
+        }        public WebACLTag build() {
             return new WebACLTag(key, value);
         }
     }

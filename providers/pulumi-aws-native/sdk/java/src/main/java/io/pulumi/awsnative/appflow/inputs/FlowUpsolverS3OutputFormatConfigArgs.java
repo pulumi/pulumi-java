@@ -80,32 +80,26 @@ public final class FlowUpsolverS3OutputFormatConfigArgs extends io.pulumi.resour
             this.aggregationConfig = aggregationConfig;
             return this;
         }
-
         public Builder aggregationConfig(@Nullable FlowAggregationConfigArgs aggregationConfig) {
             this.aggregationConfig = Output.ofNullable(aggregationConfig);
             return this;
         }
-
         public Builder fileType(@Nullable Output<FlowFileType> fileType) {
             this.fileType = fileType;
             return this;
         }
-
         public Builder fileType(@Nullable FlowFileType fileType) {
             this.fileType = Output.ofNullable(fileType);
             return this;
         }
-
         public Builder prefixConfig(Output<FlowPrefixConfigArgs> prefixConfig) {
             this.prefixConfig = Objects.requireNonNull(prefixConfig);
             return this;
         }
-
         public Builder prefixConfig(FlowPrefixConfigArgs prefixConfig) {
             this.prefixConfig = Output.of(Objects.requireNonNull(prefixConfig));
             return this;
-        }
-        public FlowUpsolverS3OutputFormatConfigArgs build() {
+        }        public FlowUpsolverS3OutputFormatConfigArgs build() {
             return new FlowUpsolverS3OutputFormatConfigArgs(aggregationConfig, fileType, prefixConfig);
         }
     }

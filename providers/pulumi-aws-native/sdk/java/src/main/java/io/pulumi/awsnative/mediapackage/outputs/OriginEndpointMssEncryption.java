@@ -43,8 +43,7 @@ public final class OriginEndpointMssEncryption {
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
-        }
-        public OriginEndpointMssEncryption build() {
+        }        public OriginEndpointMssEncryption build() {
             return new OriginEndpointMssEncryption(spekeKeyProvider);
         }
     }

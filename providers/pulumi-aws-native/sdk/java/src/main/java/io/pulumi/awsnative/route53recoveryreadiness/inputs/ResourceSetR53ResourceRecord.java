@@ -78,12 +78,10 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
             this.domainName = domainName;
             return this;
         }
-
         public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = recordSetId;
             return this;
-        }
-        public ResourceSetR53ResourceRecord build() {
+        }        public ResourceSetR53ResourceRecord build() {
             return new ResourceSetR53ResourceRecord(domainName, recordSetId);
         }
     }

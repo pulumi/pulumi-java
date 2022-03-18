@@ -54,8 +54,7 @@ public final class GetCanaryArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetCanaryArgs build() {
+        }        public GetCanaryArgs build() {
             return new GetCanaryArgs(name);
         }
     }

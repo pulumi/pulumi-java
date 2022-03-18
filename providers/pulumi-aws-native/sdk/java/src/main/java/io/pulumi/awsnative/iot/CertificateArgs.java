@@ -104,52 +104,42 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.cACertificatePem = cACertificatePem;
             return this;
         }
-
         public Builder cACertificatePem(@Nullable String cACertificatePem) {
             this.cACertificatePem = Output.ofNullable(cACertificatePem);
             return this;
         }
-
         public Builder certificateMode(@Nullable Output<CertificateMode> certificateMode) {
             this.certificateMode = certificateMode;
             return this;
         }
-
         public Builder certificateMode(@Nullable CertificateMode certificateMode) {
             this.certificateMode = Output.ofNullable(certificateMode);
             return this;
         }
-
         public Builder certificatePem(@Nullable Output<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
-
         public Builder certificatePem(@Nullable String certificatePem) {
             this.certificatePem = Output.ofNullable(certificatePem);
             return this;
         }
-
         public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
-
         public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = Output.ofNullable(certificateSigningRequest);
             return this;
         }
-
         public Builder status(Output<CertificateStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(CertificateStatus status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(cACertificatePem, certificateMode, certificatePem, certificateSigningRequest, status);
         }
     }

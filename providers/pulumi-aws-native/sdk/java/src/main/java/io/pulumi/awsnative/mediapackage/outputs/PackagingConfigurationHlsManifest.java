@@ -123,32 +123,26 @@ public final class PackagingConfigurationHlsManifest {
             this.adMarkers = adMarkers;
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
-
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
-
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
-        }
-        public PackagingConfigurationHlsManifest build() {
+        }        public PackagingConfigurationHlsManifest build() {
             return new PackagingConfigurationHlsManifest(adMarkers, includeIframeOnlyStream, manifestName, programDateTimeIntervalSeconds, repeatExtXKey, streamSelection);
         }
     }

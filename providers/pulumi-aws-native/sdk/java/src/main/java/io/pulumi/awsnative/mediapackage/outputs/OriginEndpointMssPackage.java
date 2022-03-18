@@ -89,22 +89,18 @@ public final class OriginEndpointMssPackage {
             this.encryption = encryption;
             return this;
         }
-
         public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
-        }
-        public OriginEndpointMssPackage build() {
+        }        public OriginEndpointMssPackage build() {
             return new OriginEndpointMssPackage(encryption, manifestWindowSeconds, segmentDurationSeconds, streamSelection);
         }
     }

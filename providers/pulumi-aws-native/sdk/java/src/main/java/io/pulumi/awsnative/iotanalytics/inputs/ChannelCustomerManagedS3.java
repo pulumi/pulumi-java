@@ -78,17 +78,14 @@ public final class ChannelCustomerManagedS3 extends io.pulumi.resources.InvokeAr
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder keyPrefix(@Nullable String keyPrefix) {
             this.keyPrefix = keyPrefix;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public ChannelCustomerManagedS3 build() {
+        }        public ChannelCustomerManagedS3 build() {
             return new ChannelCustomerManagedS3(bucket, keyPrefix, roleArn);
         }
     }

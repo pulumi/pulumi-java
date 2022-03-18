@@ -96,32 +96,32 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
             this.gatingControls = Objects.requireNonNull(gatingControls);
             return this;
         }
-
         public Builder gatingControls(List<String> gatingControls) {
             this.gatingControls = Output.of(Objects.requireNonNull(gatingControls));
             return this;
         }
-
+        public Builder gatingControls(String... gatingControls) {
+            return gatingControls(List.of(gatingControls));
+        }
         public Builder targetControls(Output<List<String>> targetControls) {
             this.targetControls = Objects.requireNonNull(targetControls);
             return this;
         }
-
         public Builder targetControls(List<String> targetControls) {
             this.targetControls = Output.of(Objects.requireNonNull(targetControls));
             return this;
         }
-
+        public Builder targetControls(String... targetControls) {
+            return targetControls(List.of(targetControls));
+        }
         public Builder waitPeriodMs(Output<Integer> waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
-
         public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Output.of(Objects.requireNonNull(waitPeriodMs));
             return this;
-        }
-        public SafetyRuleGatingRuleArgs build() {
+        }        public SafetyRuleGatingRuleArgs build() {
             return new SafetyRuleGatingRuleArgs(gatingControls, targetControls, waitPeriodMs);
         }
     }

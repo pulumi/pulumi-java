@@ -121,52 +121,42 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
             this.criteria = criteria;
             return this;
         }
-
         public Builder criteria(@Nullable SecurityProfileBehaviorCriteriaArgs criteria) {
             this.criteria = Output.ofNullable(criteria);
             return this;
         }
-
         public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable String metric) {
             this.metric = Output.ofNullable(metric);
             return this;
         }
-
         public Builder metricDimension(@Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }
-
         public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
             this.metricDimension = Output.ofNullable(metricDimension);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder suppressAlerts(@Nullable Output<Boolean> suppressAlerts) {
             this.suppressAlerts = suppressAlerts;
             return this;
         }
-
         public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
             this.suppressAlerts = Output.ofNullable(suppressAlerts);
             return this;
-        }
-        public SecurityProfileBehaviorArgs build() {
+        }        public SecurityProfileBehaviorArgs build() {
             return new SecurityProfileBehaviorArgs(criteria, metric, metricDimension, name, suppressAlerts);
         }
     }

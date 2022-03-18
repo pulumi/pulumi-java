@@ -66,22 +66,18 @@ public final class EC2FleetNetworkInterfaceCountRequestArgs extends io.pulumi.re
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Integer max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Integer> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = Output.ofNullable(min);
             return this;
-        }
-        public EC2FleetNetworkInterfaceCountRequestArgs build() {
+        }        public EC2FleetNetworkInterfaceCountRequestArgs build() {
             return new EC2FleetNetworkInterfaceCountRequestArgs(max, min);
         }
     }

@@ -43,8 +43,7 @@ public final class BucketAccessControlTranslation {
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
-        }
-        public BucketAccessControlTranslation build() {
+        }        public BucketAccessControlTranslation build() {
             return new BucketAccessControlTranslation(owner);
         }
     }

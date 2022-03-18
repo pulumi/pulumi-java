@@ -78,12 +78,10 @@ public final class DetectorModelAssetPropertyTimestamp extends io.pulumi.resourc
             this.offsetInNanos = offsetInNanos;
             return this;
         }
-
         public Builder timeInSeconds(String timeInSeconds) {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
-        }
-        public DetectorModelAssetPropertyTimestamp build() {
+        }        public DetectorModelAssetPropertyTimestamp build() {
             return new DetectorModelAssetPropertyTimestamp(offsetInNanos, timeInSeconds);
         }
     }

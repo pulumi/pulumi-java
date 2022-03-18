@@ -88,17 +88,14 @@ public final class ModelBiasJobDefinitionS3Output {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder s3UploadMode(@Nullable ModelBiasJobDefinitionS3OutputS3UploadMode s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
-        }
-        public ModelBiasJobDefinitionS3Output build() {
+        }        public ModelBiasJobDefinitionS3Output build() {
             return new ModelBiasJobDefinitionS3Output(localPath, s3UploadMode, s3Uri);
         }
     }

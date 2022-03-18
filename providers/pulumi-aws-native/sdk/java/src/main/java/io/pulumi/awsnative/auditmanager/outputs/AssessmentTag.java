@@ -69,12 +69,10 @@ public final class AssessmentTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AssessmentTag build() {
+        }        public AssessmentTag build() {
             return new AssessmentTag(key, value);
         }
     }

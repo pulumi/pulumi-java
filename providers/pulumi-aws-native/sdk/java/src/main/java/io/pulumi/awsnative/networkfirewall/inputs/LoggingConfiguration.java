@@ -52,7 +52,9 @@ public final class LoggingConfiguration extends io.pulumi.resources.InvokeArgs {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
-        public LoggingConfiguration build() {
+        public Builder logDestinationConfigs(LoggingConfigurationLogDestinationConfig... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }        public LoggingConfiguration build() {
             return new LoggingConfiguration(logDestinationConfigs);
         }
     }

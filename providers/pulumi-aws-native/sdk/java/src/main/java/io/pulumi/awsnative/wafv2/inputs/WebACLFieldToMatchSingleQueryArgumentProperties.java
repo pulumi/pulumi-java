@@ -54,8 +54,7 @@ public final class WebACLFieldToMatchSingleQueryArgumentProperties extends io.pu
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebACLFieldToMatchSingleQueryArgumentProperties build() {
+        }        public WebACLFieldToMatchSingleQueryArgumentProperties build() {
             return new WebACLFieldToMatchSingleQueryArgumentProperties(name);
         }
     }

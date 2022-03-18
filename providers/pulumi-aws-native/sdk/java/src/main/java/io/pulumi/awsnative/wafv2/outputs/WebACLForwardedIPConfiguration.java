@@ -54,12 +54,10 @@ public final class WebACLForwardedIPConfiguration {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
-        }
-        public WebACLForwardedIPConfiguration build() {
+        }        public WebACLForwardedIPConfiguration build() {
             return new WebACLForwardedIPConfiguration(fallbackBehavior, headerName);
         }
     }

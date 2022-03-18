@@ -53,8 +53,7 @@ public final class GetEgressOnlyInternetGatewayResult {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetEgressOnlyInternetGatewayResult build() {
+        }        public GetEgressOnlyInternetGatewayResult build() {
             return new GetEgressOnlyInternetGatewayResult(id);
         }
     }

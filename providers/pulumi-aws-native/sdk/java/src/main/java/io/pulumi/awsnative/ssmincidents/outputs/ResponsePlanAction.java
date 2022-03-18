@@ -45,8 +45,7 @@ public final class ResponsePlanAction {
         public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
             this.ssmAutomation = ssmAutomation;
             return this;
-        }
-        public ResponsePlanAction build() {
+        }        public ResponsePlanAction build() {
             return new ResponsePlanAction(ssmAutomation);
         }
     }

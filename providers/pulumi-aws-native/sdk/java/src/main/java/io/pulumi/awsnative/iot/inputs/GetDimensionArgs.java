@@ -54,8 +54,7 @@ public final class GetDimensionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetDimensionArgs build() {
+        }        public GetDimensionArgs build() {
             return new GetDimensionArgs(name);
         }
     }

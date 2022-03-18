@@ -45,8 +45,7 @@ public final class ManagedExecutionProperties {
         public Builder active(@Nullable Boolean active) {
             this.active = active;
             return this;
-        }
-        public ManagedExecutionProperties build() {
+        }        public ManagedExecutionProperties build() {
             return new ManagedExecutionProperties(active);
         }
     }

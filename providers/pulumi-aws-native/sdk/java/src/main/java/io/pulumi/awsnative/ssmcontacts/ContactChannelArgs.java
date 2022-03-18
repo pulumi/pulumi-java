@@ -124,52 +124,42 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.channelAddress = channelAddress;
             return this;
         }
-
         public Builder channelAddress(@Nullable String channelAddress) {
             this.channelAddress = Output.ofNullable(channelAddress);
             return this;
         }
-
         public Builder channelName(@Nullable Output<String> channelName) {
             this.channelName = channelName;
             return this;
         }
-
         public Builder channelName(@Nullable String channelName) {
             this.channelName = Output.ofNullable(channelName);
             return this;
         }
-
         public Builder channelType(@Nullable Output<ContactChannelChannelType> channelType) {
             this.channelType = channelType;
             return this;
         }
-
         public Builder channelType(@Nullable ContactChannelChannelType channelType) {
             this.channelType = Output.ofNullable(channelType);
             return this;
         }
-
         public Builder contactId(@Nullable Output<String> contactId) {
             this.contactId = contactId;
             return this;
         }
-
         public Builder contactId(@Nullable String contactId) {
             this.contactId = Output.ofNullable(contactId);
             return this;
         }
-
         public Builder deferActivation(@Nullable Output<Boolean> deferActivation) {
             this.deferActivation = deferActivation;
             return this;
         }
-
         public Builder deferActivation(@Nullable Boolean deferActivation) {
             this.deferActivation = Output.ofNullable(deferActivation);
             return this;
-        }
-        public ContactChannelArgs build() {
+        }        public ContactChannelArgs build() {
             return new ContactChannelArgs(channelAddress, channelName, channelType, contactId, deferActivation);
         }
     }

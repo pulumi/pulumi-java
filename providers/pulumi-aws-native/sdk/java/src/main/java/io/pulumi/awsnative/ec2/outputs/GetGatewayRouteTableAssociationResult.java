@@ -71,12 +71,10 @@ public final class GetGatewayRouteTableAssociationResult {
             this.associationId = associationId;
             return this;
         }
-
         public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = routeTableId;
             return this;
-        }
-        public GetGatewayRouteTableAssociationResult build() {
+        }        public GetGatewayRouteTableAssociationResult build() {
             return new GetGatewayRouteTableAssociationResult(associationId, routeTableId);
         }
     }

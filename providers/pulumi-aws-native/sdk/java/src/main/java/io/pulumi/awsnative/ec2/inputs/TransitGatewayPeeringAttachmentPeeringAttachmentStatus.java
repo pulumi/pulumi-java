@@ -74,12 +74,10 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
-        }
-        public TransitGatewayPeeringAttachmentPeeringAttachmentStatus build() {
+        }        public TransitGatewayPeeringAttachmentPeeringAttachmentStatus build() {
             return new TransitGatewayPeeringAttachmentPeeringAttachmentStatus(code, message);
         }
     }

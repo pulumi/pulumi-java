@@ -61,17 +61,14 @@ public final class WirelessDeviceOtaaV11 {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
-
         public Builder joinEui(String joinEui) {
             this.joinEui = Objects.requireNonNull(joinEui);
             return this;
         }
-
         public Builder nwkKey(String nwkKey) {
             this.nwkKey = Objects.requireNonNull(nwkKey);
             return this;
-        }
-        public WirelessDeviceOtaaV11 build() {
+        }        public WirelessDeviceOtaaV11 build() {
             return new WirelessDeviceOtaaV11(appKey, joinEui, nwkKey);
         }
     }

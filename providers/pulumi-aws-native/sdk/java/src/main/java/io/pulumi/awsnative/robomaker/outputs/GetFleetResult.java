@@ -56,12 +56,10 @@ public final class GetFleetResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable FleetTags tags) {
             this.tags = tags;
             return this;
-        }
-        public GetFleetResult build() {
+        }        public GetFleetResult build() {
             return new GetFleetResult(arn, tags);
         }
     }

@@ -69,12 +69,10 @@ public final class ExperimentTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ExperimentTag build() {
+        }        public ExperimentTag build() {
             return new ExperimentTag(key, value);
         }
     }

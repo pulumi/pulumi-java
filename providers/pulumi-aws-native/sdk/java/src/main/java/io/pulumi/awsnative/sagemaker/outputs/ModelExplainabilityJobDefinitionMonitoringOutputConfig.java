@@ -73,12 +73,13 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder monitoringOutputs(List<ModelExplainabilityJobDefinitionMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-        public ModelExplainabilityJobDefinitionMonitoringOutputConfig build() {
+        public Builder monitoringOutputs(ModelExplainabilityJobDefinitionMonitoringOutput... monitoringOutputs) {
+            return monitoringOutputs(List.of(monitoringOutputs));
+        }        public ModelExplainabilityJobDefinitionMonitoringOutputConfig build() {
             return new ModelExplainabilityJobDefinitionMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
         }
     }

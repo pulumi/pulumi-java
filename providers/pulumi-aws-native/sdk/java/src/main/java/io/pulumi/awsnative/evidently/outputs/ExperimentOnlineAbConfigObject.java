@@ -57,12 +57,13 @@ public final class ExperimentOnlineAbConfigObject {
             this.controlTreatmentName = controlTreatmentName;
             return this;
         }
-
         public Builder treatmentWeights(@Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
             this.treatmentWeights = treatmentWeights;
             return this;
         }
-        public ExperimentOnlineAbConfigObject build() {
+        public Builder treatmentWeights(ExperimentTreatmentToWeight... treatmentWeights) {
+            return treatmentWeights(List.of(treatmentWeights));
+        }        public ExperimentOnlineAbConfigObject build() {
             return new ExperimentOnlineAbConfigObject(controlTreatmentName, treatmentWeights);
         }
     }

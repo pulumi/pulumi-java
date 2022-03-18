@@ -56,8 +56,7 @@ public final class AssessmentAWSService extends io.pulumi.resources.InvokeArgs {
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
-        }
-        public AssessmentAWSService build() {
+        }        public AssessmentAWSService build() {
             return new AssessmentAWSService(serviceName);
         }
     }

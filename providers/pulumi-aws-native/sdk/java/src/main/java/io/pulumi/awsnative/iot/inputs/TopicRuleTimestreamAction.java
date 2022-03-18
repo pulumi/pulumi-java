@@ -118,32 +118,29 @@ public final class TopicRuleTimestreamAction extends io.pulumi.resources.InvokeA
             this.batchMode = batchMode;
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder dimensions(List<TopicRuleTimestreamDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
+        public Builder dimensions(TopicRuleTimestreamDimension... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder timestamp(@Nullable TopicRuleTimestreamTimestamp timestamp) {
             this.timestamp = timestamp;
             return this;
-        }
-        public TopicRuleTimestreamAction build() {
+        }        public TopicRuleTimestreamAction build() {
             return new TopicRuleTimestreamAction(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);
         }
     }

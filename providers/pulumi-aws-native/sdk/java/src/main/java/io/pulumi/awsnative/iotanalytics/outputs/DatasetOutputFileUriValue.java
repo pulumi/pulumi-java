@@ -43,8 +43,7 @@ public final class DatasetOutputFileUriValue {
         public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
-        }
-        public DatasetOutputFileUriValue build() {
+        }        public DatasetOutputFileUriValue build() {
             return new DatasetOutputFileUriValue(fileName);
         }
     }

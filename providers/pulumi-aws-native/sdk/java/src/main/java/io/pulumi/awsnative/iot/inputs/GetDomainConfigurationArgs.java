@@ -50,8 +50,7 @@ public final class GetDomainConfigurationArgs extends io.pulumi.resources.Invoke
         public Builder domainConfigurationName(String domainConfigurationName) {
             this.domainConfigurationName = Objects.requireNonNull(domainConfigurationName);
             return this;
-        }
-        public GetDomainConfigurationArgs build() {
+        }        public GetDomainConfigurationArgs build() {
             return new GetDomainConfigurationArgs(domainConfigurationName);
         }
     }

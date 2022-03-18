@@ -106,22 +106,21 @@ public final class GetLogGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder tags(@Nullable List<LogGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetLogGroupResult build() {
+        public Builder tags(LogGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetLogGroupResult build() {
             return new GetLogGroupResult(arn, kmsKeyId, retentionInDays, tags);
         }
     }

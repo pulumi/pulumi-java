@@ -71,12 +71,10 @@ public final class LoadBalancerTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public LoadBalancerTag build() {
+        }        public LoadBalancerTag build() {
             return new LoadBalancerTag(key, value);
         }
     }

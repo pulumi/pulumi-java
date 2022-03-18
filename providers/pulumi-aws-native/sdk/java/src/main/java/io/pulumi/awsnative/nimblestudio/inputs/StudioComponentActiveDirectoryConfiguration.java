@@ -96,17 +96,17 @@ public final class StudioComponentActiveDirectoryConfiguration extends io.pulumi
             this.computerAttributes = computerAttributes;
             return this;
         }
-
+        public Builder computerAttributes(StudioComponentActiveDirectoryComputerAttribute... computerAttributes) {
+            return computerAttributes(List.of(computerAttributes));
+        }
         public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = directoryId;
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
-        }
-        public StudioComponentActiveDirectoryConfiguration build() {
+        }        public StudioComponentActiveDirectoryConfiguration build() {
             return new StudioComponentActiveDirectoryConfiguration(computerAttributes, directoryId, organizationalUnitDistinguishedName);
         }
     }

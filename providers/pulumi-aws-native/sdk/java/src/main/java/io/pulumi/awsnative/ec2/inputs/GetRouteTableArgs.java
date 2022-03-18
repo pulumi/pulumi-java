@@ -54,8 +54,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
-        }
-        public GetRouteTableArgs build() {
+        }        public GetRouteTableArgs build() {
             return new GetRouteTableArgs(routeTableId);
         }
     }

@@ -56,12 +56,10 @@ public final class ScheduledActionPauseClusterMessageArgs extends io.pulumi.reso
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
-        }
-        public ScheduledActionPauseClusterMessageArgs build() {
+        }        public ScheduledActionPauseClusterMessageArgs build() {
             return new ScheduledActionPauseClusterMessageArgs(clusterIdentifier);
         }
     }

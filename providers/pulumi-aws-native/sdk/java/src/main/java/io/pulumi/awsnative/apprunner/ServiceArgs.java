@@ -140,72 +140,61 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.autoScalingConfigurationArn = autoScalingConfigurationArn;
             return this;
         }
-
         public Builder autoScalingConfigurationArn(@Nullable String autoScalingConfigurationArn) {
             this.autoScalingConfigurationArn = Output.ofNullable(autoScalingConfigurationArn);
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable ServiceEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder healthCheckConfiguration(@Nullable Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration) {
             this.healthCheckConfiguration = healthCheckConfiguration;
             return this;
         }
-
         public Builder healthCheckConfiguration(@Nullable ServiceHealthCheckConfigurationArgs healthCheckConfiguration) {
             this.healthCheckConfiguration = Output.ofNullable(healthCheckConfiguration);
             return this;
         }
-
         public Builder instanceConfiguration(@Nullable Output<ServiceInstanceConfigurationArgs> instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
-
         public Builder instanceConfiguration(@Nullable ServiceInstanceConfigurationArgs instanceConfiguration) {
             this.instanceConfiguration = Output.ofNullable(instanceConfiguration);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder sourceConfiguration(Output<ServiceSourceConfigurationArgs> sourceConfiguration) {
             this.sourceConfiguration = Objects.requireNonNull(sourceConfiguration);
             return this;
         }
-
         public Builder sourceConfiguration(ServiceSourceConfigurationArgs sourceConfiguration) {
             this.sourceConfiguration = Output.of(Objects.requireNonNull(sourceConfiguration));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ServiceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ServiceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ServiceArgs build() {
+        public Builder tags(ServiceTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ServiceArgs build() {
             return new ServiceArgs(autoScalingConfigurationArn, encryptionConfiguration, healthCheckConfiguration, instanceConfiguration, serviceName, sourceConfiguration, tags);
         }
     }

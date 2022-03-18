@@ -130,52 +130,42 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
             this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient);
             return this;
         }
-
         public Builder agreeToInstallHANADBClient(Boolean agreeToInstallHANADBClient) {
             this.agreeToInstallHANADBClient = Output.of(Objects.requireNonNull(agreeToInstallHANADBClient));
             return this;
         }
-
         public Builder hANAPort(Output<String> hANAPort) {
             this.hANAPort = Objects.requireNonNull(hANAPort);
             return this;
         }
-
         public Builder hANAPort(String hANAPort) {
             this.hANAPort = Output.of(Objects.requireNonNull(hANAPort));
             return this;
         }
-
         public Builder hANASID(Output<String> hANASID) {
             this.hANASID = Objects.requireNonNull(hANASID);
             return this;
         }
-
         public Builder hANASID(String hANASID) {
             this.hANASID = Output.of(Objects.requireNonNull(hANASID));
             return this;
         }
-
         public Builder hANASecretName(Output<String> hANASecretName) {
             this.hANASecretName = Objects.requireNonNull(hANASecretName);
             return this;
         }
-
         public Builder hANASecretName(String hANASecretName) {
             this.hANASecretName = Output.of(Objects.requireNonNull(hANASecretName));
             return this;
         }
-
         public Builder prometheusPort(@Nullable Output<String> prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }
-
         public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = Output.ofNullable(prometheusPort);
             return this;
-        }
-        public ApplicationHANAPrometheusExporterArgs build() {
+        }        public ApplicationHANAPrometheusExporterArgs build() {
             return new ApplicationHANAPrometheusExporterArgs(agreeToInstallHANADBClient, hANAPort, hANASID, hANASecretName, prometheusPort);
         }
     }

@@ -80,32 +80,26 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
             this.customerManagedS3 = customerManagedS3;
             return this;
         }
-
         public Builder customerManagedS3(@Nullable DatastoreCustomerManagedS3Args customerManagedS3) {
             this.customerManagedS3 = Output.ofNullable(customerManagedS3);
             return this;
         }
-
         public Builder iotSiteWiseMultiLayerStorage(@Nullable Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage) {
             this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
             return this;
         }
-
         public Builder iotSiteWiseMultiLayerStorage(@Nullable DatastoreIotSiteWiseMultiLayerStorageArgs iotSiteWiseMultiLayerStorage) {
             this.iotSiteWiseMultiLayerStorage = Output.ofNullable(iotSiteWiseMultiLayerStorage);
             return this;
         }
-
         public Builder serviceManagedS3(@Nullable Output<DatastoreServiceManagedS3Args> serviceManagedS3) {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
-
         public Builder serviceManagedS3(@Nullable DatastoreServiceManagedS3Args serviceManagedS3) {
             this.serviceManagedS3 = Output.ofNullable(serviceManagedS3);
             return this;
-        }
-        public DatastoreStorageArgs build() {
+        }        public DatastoreStorageArgs build() {
             return new DatastoreStorageArgs(customerManagedS3, iotSiteWiseMultiLayerStorage, serviceManagedS3);
         }
     }

@@ -97,32 +97,35 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
             this.alarmMetrics = alarmMetrics;
             return this;
         }
-
         public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetricArgs> alarmMetrics) {
             this.alarmMetrics = Output.ofNullable(alarmMetrics);
             return this;
         }
-
+        public Builder alarmMetrics(ApplicationAlarmMetricArgs... alarmMetrics) {
+            return alarmMetrics(List.of(alarmMetrics));
+        }
         public Builder logs(@Nullable Output<List<ApplicationLogArgs>> logs) {
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable List<ApplicationLogArgs> logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
+        public Builder logs(ApplicationLogArgs... logs) {
+            return logs(List.of(logs));
+        }
         public Builder windowsEvents(@Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents) {
             this.windowsEvents = windowsEvents;
             return this;
         }
-
         public Builder windowsEvents(@Nullable List<ApplicationWindowsEventArgs> windowsEvents) {
             this.windowsEvents = Output.ofNullable(windowsEvents);
             return this;
         }
-        public ApplicationSubComponentConfigurationDetailsArgs build() {
+        public Builder windowsEvents(ApplicationWindowsEventArgs... windowsEvents) {
+            return windowsEvents(List.of(windowsEvents));
+        }        public ApplicationSubComponentConfigurationDetailsArgs build() {
             return new ApplicationSubComponentConfigurationDetailsArgs(alarmMetrics, logs, windowsEvents);
         }
     }

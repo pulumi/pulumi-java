@@ -109,42 +109,34 @@ public final class ListenerAction {
             this.authenticateCognitoConfig = authenticateCognitoConfig;
             return this;
         }
-
         public Builder authenticateOidcConfig(@Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig) {
             this.authenticateOidcConfig = authenticateOidcConfig;
             return this;
         }
-
         public Builder fixedResponseConfig(@Nullable ListenerFixedResponseConfig fixedResponseConfig) {
             this.fixedResponseConfig = fixedResponseConfig;
             return this;
         }
-
         public Builder forwardConfig(@Nullable ListenerForwardConfig forwardConfig) {
             this.forwardConfig = forwardConfig;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
-
         public Builder redirectConfig(@Nullable ListenerRedirectConfig redirectConfig) {
             this.redirectConfig = redirectConfig;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListenerAction build() {
+        }        public ListenerAction build() {
             return new ListenerAction(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
         }
     }

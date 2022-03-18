@@ -45,8 +45,7 @@ public final class FindingsFilterFindingCriteria {
         public Builder criterion(@Nullable FindingsFilterCriterion criterion) {
             this.criterion = criterion;
             return this;
-        }
-        public FindingsFilterFindingCriteria build() {
+        }        public FindingsFilterFindingCriteria build() {
             return new FindingsFilterFindingCriteria(criterion);
         }
     }

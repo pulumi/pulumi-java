@@ -80,17 +80,14 @@ public final class DatasetAction extends io.pulumi.resources.InvokeArgs {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public Builder containerAction(@Nullable DatasetContainerAction containerAction) {
             this.containerAction = containerAction;
             return this;
         }
-
         public Builder queryAction(@Nullable DatasetQueryAction queryAction) {
             this.queryAction = queryAction;
             return this;
-        }
-        public DatasetAction build() {
+        }        public DatasetAction build() {
             return new DatasetAction(actionName, containerAction, queryAction);
         }
     }

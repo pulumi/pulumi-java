@@ -56,12 +56,10 @@ public final class WorkGroupEncryptionConfiguration {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
-        }
-        public WorkGroupEncryptionConfiguration build() {
+        }        public WorkGroupEncryptionConfiguration build() {
             return new WorkGroupEncryptionConfiguration(encryptionOption, kmsKey);
         }
     }

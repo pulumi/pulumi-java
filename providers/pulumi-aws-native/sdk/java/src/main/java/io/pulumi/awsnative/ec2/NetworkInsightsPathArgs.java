@@ -130,72 +130,61 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder destinationIp(@Nullable Output<String> destinationIp) {
             this.destinationIp = destinationIp;
             return this;
         }
-
         public Builder destinationIp(@Nullable String destinationIp) {
             this.destinationIp = Output.ofNullable(destinationIp);
             return this;
         }
-
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
-
         public Builder protocol(Output<NetworkInsightsPathProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(NetworkInsightsPathProtocol protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder sourceIp(@Nullable Output<String> sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
-
         public Builder sourceIp(@Nullable String sourceIp) {
             this.sourceIp = Output.ofNullable(sourceIp);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<NetworkInsightsPathTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInsightsPathTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public NetworkInsightsPathArgs build() {
+        public Builder tags(NetworkInsightsPathTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public NetworkInsightsPathArgs build() {
             return new NetworkInsightsPathArgs(destination, destinationIp, destinationPort, protocol, source, sourceIp, tags);
         }
     }

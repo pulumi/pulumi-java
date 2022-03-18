@@ -71,12 +71,13 @@ public final class DashboardIntegerParameter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<Double> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public DashboardIntegerParameter build() {
+        public Builder values(Double... values) {
+            return values(List.of(values));
+        }        public DashboardIntegerParameter build() {
             return new DashboardIntegerParameter(name, values);
         }
     }

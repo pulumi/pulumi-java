@@ -70,12 +70,10 @@ public final class ApplicationSubComponentTypeConfiguration {
             this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails);
             return this;
         }
-
         public Builder subComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
             this.subComponentType = Objects.requireNonNull(subComponentType);
             return this;
-        }
-        public ApplicationSubComponentTypeConfiguration build() {
+        }        public ApplicationSubComponentTypeConfiguration build() {
             return new ApplicationSubComponentTypeConfiguration(subComponentConfigurationDetails, subComponentType);
         }
     }

@@ -128,72 +128,79 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = Output.ofNullable(destinationAddresses);
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
-
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = Output.ofNullable(destinationPorts);
             return this;
         }
-
+        public Builder destinationPorts(String... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder destinationPrefixLists(@Nullable Output<List<String>> destinationPrefixLists) {
             this.destinationPrefixLists = destinationPrefixLists;
             return this;
         }
-
         public Builder destinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
             this.destinationPrefixLists = Output.ofNullable(destinationPrefixLists);
             return this;
         }
-
+        public Builder destinationPrefixLists(String... destinationPrefixLists) {
+            return destinationPrefixLists(List.of(destinationPrefixLists));
+        }
         public Builder protocols(@Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder protocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
             this.protocols = Output.ofNullable(protocols);
             return this;
         }
-
+        public Builder protocols(NetworkInsightsAccessScopeProtocol... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = Output.ofNullable(sourceAddresses);
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourcePorts(@Nullable Output<List<String>> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
-
         public Builder sourcePorts(@Nullable List<String> sourcePorts) {
             this.sourcePorts = Output.ofNullable(sourcePorts);
             return this;
         }
-
+        public Builder sourcePorts(String... sourcePorts) {
+            return sourcePorts(List.of(sourcePorts));
+        }
         public Builder sourcePrefixLists(@Nullable Output<List<String>> sourcePrefixLists) {
             this.sourcePrefixLists = sourcePrefixLists;
             return this;
         }
-
         public Builder sourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
             this.sourcePrefixLists = Output.ofNullable(sourcePrefixLists);
             return this;
         }
-        public NetworkInsightsAccessScopePacketHeaderStatementRequestArgs build() {
+        public Builder sourcePrefixLists(String... sourcePrefixLists) {
+            return sourcePrefixLists(List.of(sourcePrefixLists));
+        }        public NetworkInsightsAccessScopePacketHeaderStatementRequestArgs build() {
             return new NetworkInsightsAccessScopePacketHeaderStatementRequestArgs(destinationAddresses, destinationPorts, destinationPrefixLists, protocols, sourceAddresses, sourcePorts, sourcePrefixLists);
         }
     }

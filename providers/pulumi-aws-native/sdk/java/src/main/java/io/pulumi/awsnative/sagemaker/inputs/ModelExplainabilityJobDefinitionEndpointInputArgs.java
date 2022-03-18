@@ -156,72 +156,58 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
-
         public Builder featuresAttribute(@Nullable Output<String> featuresAttribute) {
             this.featuresAttribute = featuresAttribute;
             return this;
         }
-
         public Builder featuresAttribute(@Nullable String featuresAttribute) {
             this.featuresAttribute = Output.ofNullable(featuresAttribute);
             return this;
         }
-
         public Builder inferenceAttribute(@Nullable Output<String> inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
-
         public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
             this.inferenceAttribute = Output.ofNullable(inferenceAttribute);
             return this;
         }
-
         public Builder localPath(Output<String> localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Output.of(Objects.requireNonNull(localPath));
             return this;
         }
-
         public Builder probabilityAttribute(@Nullable Output<String> probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
-
         public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
             this.probabilityAttribute = Output.ofNullable(probabilityAttribute);
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable Output<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = Output.ofNullable(s3DataDistributionType);
             return this;
         }
-
         public Builder s3InputMode(@Nullable Output<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
-
         public Builder s3InputMode(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = Output.ofNullable(s3InputMode);
             return this;
-        }
-        public ModelExplainabilityJobDefinitionEndpointInputArgs build() {
+        }        public ModelExplainabilityJobDefinitionEndpointInputArgs build() {
             return new ModelExplainabilityJobDefinitionEndpointInputArgs(endpointName, featuresAttribute, inferenceAttribute, localPath, probabilityAttribute, s3DataDistributionType, s3InputMode);
         }
     }

@@ -68,12 +68,10 @@ public final class GetStudioComponentArgs extends io.pulumi.resources.InvokeArgs
             this.studioComponentId = Objects.requireNonNull(studioComponentId);
             return this;
         }
-
         public Builder studioId(String studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
-        }
-        public GetStudioComponentArgs build() {
+        }        public GetStudioComponentArgs build() {
             return new GetStudioComponentArgs(studioComponentId, studioId);
         }
     }

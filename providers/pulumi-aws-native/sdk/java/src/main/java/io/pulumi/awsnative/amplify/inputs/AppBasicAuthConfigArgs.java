@@ -79,32 +79,26 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
-
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public AppBasicAuthConfigArgs build() {
+        }        public AppBasicAuthConfigArgs build() {
             return new AppBasicAuthConfigArgs(enableBasicAuth, password, username);
         }
     }

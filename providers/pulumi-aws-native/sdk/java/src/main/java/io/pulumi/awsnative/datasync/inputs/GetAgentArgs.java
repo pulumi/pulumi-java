@@ -54,8 +54,7 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
         public Builder agentArn(String agentArn) {
             this.agentArn = Objects.requireNonNull(agentArn);
             return this;
-        }
-        public GetAgentArgs build() {
+        }        public GetAgentArgs build() {
             return new GetAgentArgs(agentArn);
         }
     }

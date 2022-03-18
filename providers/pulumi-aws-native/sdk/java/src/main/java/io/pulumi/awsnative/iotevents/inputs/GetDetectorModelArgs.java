@@ -54,8 +54,7 @@ public final class GetDetectorModelArgs extends io.pulumi.resources.InvokeArgs {
         public Builder detectorModelName(String detectorModelName) {
             this.detectorModelName = Objects.requireNonNull(detectorModelName);
             return this;
-        }
-        public GetDetectorModelArgs build() {
+        }        public GetDetectorModelArgs build() {
             return new GetDetectorModelArgs(detectorModelName);
         }
     }

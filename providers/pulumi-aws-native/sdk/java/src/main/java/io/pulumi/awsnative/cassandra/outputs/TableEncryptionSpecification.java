@@ -56,12 +56,10 @@ public final class TableEncryptionSpecification {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder kmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
             this.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
-        }
-        public TableEncryptionSpecification build() {
+        }        public TableEncryptionSpecification build() {
             return new TableEncryptionSpecification(encryptionType, kmsKeyIdentifier);
         }
     }

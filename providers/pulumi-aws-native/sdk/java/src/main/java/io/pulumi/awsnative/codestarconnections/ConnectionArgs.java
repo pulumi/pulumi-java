@@ -108,42 +108,37 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder hostArn(@Nullable Output<String> hostArn) {
             this.hostArn = hostArn;
             return this;
         }
-
         public Builder hostArn(@Nullable String hostArn) {
             this.hostArn = Output.ofNullable(hostArn);
             return this;
         }
-
         public Builder providerType(@Nullable Output<String> providerType) {
             this.providerType = providerType;
             return this;
         }
-
         public Builder providerType(@Nullable String providerType) {
             this.providerType = Output.ofNullable(providerType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ConnectionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ConnectionTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ConnectionArgs build() {
+        public Builder tags(ConnectionTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ConnectionArgs build() {
             return new ConnectionArgs(connectionName, hostArn, providerType, tags);
         }
     }

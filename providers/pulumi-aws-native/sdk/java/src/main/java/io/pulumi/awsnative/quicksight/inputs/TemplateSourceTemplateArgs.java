@@ -60,12 +60,10 @@ public final class TemplateSourceTemplateArgs extends io.pulumi.resources.Resour
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
-        }
-        public TemplateSourceTemplateArgs build() {
+        }        public TemplateSourceTemplateArgs build() {
             return new TemplateSourceTemplateArgs(arn);
         }
     }

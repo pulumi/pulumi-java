@@ -149,82 +149,72 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
-
         public Builder capacity(Integer capacity) {
             this.capacity = Output.of(Objects.requireNonNull(capacity));
             return this;
         }
-
         public Builder customResponseBodies(@Nullable Output<RuleGroupCustomResponseBodiesArgs> customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
-
         public Builder customResponseBodies(@Nullable RuleGroupCustomResponseBodiesArgs customResponseBodies) {
             this.customResponseBodies = Output.ofNullable(customResponseBodies);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<RuleGroupRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<RuleGroupRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(RuleGroupRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder scope(Output<RuleGroupScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(RuleGroupScope scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<RuleGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RuleGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(RuleGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder visibilityConfig(Output<RuleGroupVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public Builder visibilityConfig(RuleGroupVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
-        }
-        public RuleGroupArgs build() {
+        }        public RuleGroupArgs build() {
             return new RuleGroupArgs(capacity, customResponseBodies, description, name, rules, scope, tags, visibilityConfig);
         }
     }

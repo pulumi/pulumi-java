@@ -57,12 +57,10 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
             this.sourceArn = sourceArn;
             return this;
         }
-
         public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = Output.ofNullable(sourceArn);
             return this;
-        }
-        public DatasetMetadataArgs build() {
+        }        public DatasetMetadataArgs build() {
             return new DatasetMetadataArgs(sourceArn);
         }
     }

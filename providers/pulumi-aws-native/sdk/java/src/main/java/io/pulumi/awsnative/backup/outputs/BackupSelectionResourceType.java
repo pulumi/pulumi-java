@@ -90,32 +90,35 @@ public final class BackupSelectionResourceType {
             this.conditions = conditions;
             return this;
         }
-
         public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
-
         public Builder listOfTags(@Nullable List<BackupSelectionConditionResourceType> listOfTags) {
             this.listOfTags = listOfTags;
             return this;
         }
-
+        public Builder listOfTags(BackupSelectionConditionResourceType... listOfTags) {
+            return listOfTags(List.of(listOfTags));
+        }
         public Builder notResources(@Nullable List<String> notResources) {
             this.notResources = notResources;
             return this;
         }
-
+        public Builder notResources(String... notResources) {
+            return notResources(List.of(notResources));
+        }
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder selectionName(String selectionName) {
             this.selectionName = Objects.requireNonNull(selectionName);
             return this;
-        }
-        public BackupSelectionResourceType build() {
+        }        public BackupSelectionResourceType build() {
             return new BackupSelectionResourceType(conditions, iamRoleArn, listOfTags, notResources, resources, selectionName);
         }
     }

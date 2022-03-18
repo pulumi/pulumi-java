@@ -50,8 +50,7 @@ public final class ImportValueArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ImportValueArgs build() {
+        }        public ImportValueArgs build() {
             return new ImportValueArgs(name);
         }
     }

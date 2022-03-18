@@ -124,52 +124,45 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             this.dashboardDefinition = Objects.requireNonNull(dashboardDefinition);
             return this;
         }
-
         public Builder dashboardDefinition(String dashboardDefinition) {
             this.dashboardDefinition = Output.of(Objects.requireNonNull(dashboardDefinition));
             return this;
         }
-
         public Builder dashboardDescription(Output<String> dashboardDescription) {
             this.dashboardDescription = Objects.requireNonNull(dashboardDescription);
             return this;
         }
-
         public Builder dashboardDescription(String dashboardDescription) {
             this.dashboardDescription = Output.of(Objects.requireNonNull(dashboardDescription));
             return this;
         }
-
         public Builder dashboardName(@Nullable Output<String> dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
-
         public Builder dashboardName(@Nullable String dashboardName) {
             this.dashboardName = Output.ofNullable(dashboardName);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DashboardTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DashboardArgs build() {
+        public Builder tags(DashboardTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DashboardArgs build() {
             return new DashboardArgs(dashboardDefinition, dashboardDescription, dashboardName, projectId, tags);
         }
     }

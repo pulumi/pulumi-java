@@ -80,27 +80,22 @@ public final class FlowVeevaSourceProperties {
             this.documentType = documentType;
             return this;
         }
-
         public Builder includeAllVersions(@Nullable Boolean includeAllVersions) {
             this.includeAllVersions = includeAllVersions;
             return this;
         }
-
         public Builder includeRenditions(@Nullable Boolean includeRenditions) {
             this.includeRenditions = includeRenditions;
             return this;
         }
-
         public Builder includeSourceFiles(@Nullable Boolean includeSourceFiles) {
             this.includeSourceFiles = includeSourceFiles;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowVeevaSourceProperties build() {
+        }        public FlowVeevaSourceProperties build() {
             return new FlowVeevaSourceProperties(documentType, includeAllVersions, includeRenditions, includeSourceFiles, object);
         }
     }

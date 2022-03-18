@@ -54,8 +54,7 @@ public final class GetContactListArgs extends io.pulumi.resources.InvokeArgs {
         public Builder contactListName(String contactListName) {
             this.contactListName = Objects.requireNonNull(contactListName);
             return this;
-        }
-        public GetContactListArgs build() {
+        }        public GetContactListArgs build() {
             return new GetContactListArgs(contactListName);
         }
     }

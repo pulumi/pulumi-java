@@ -170,82 +170,72 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
-
         public Builder baseThemeId(@Nullable Output<String> baseThemeId) {
             this.baseThemeId = baseThemeId;
             return this;
         }
-
         public Builder baseThemeId(@Nullable String baseThemeId) {
             this.baseThemeId = Output.ofNullable(baseThemeId);
             return this;
         }
-
         public Builder configuration(@Nullable Output<ThemeConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable ThemeConfigurationArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<ThemeResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<ThemeResourcePermissionArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(ThemeResourcePermissionArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder tags(@Nullable Output<List<ThemeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ThemeTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ThemeTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder themeId(Output<String> themeId) {
             this.themeId = Objects.requireNonNull(themeId);
             return this;
         }
-
         public Builder themeId(String themeId) {
             this.themeId = Output.of(Objects.requireNonNull(themeId));
             return this;
         }
-
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
-
         public Builder versionDescription(@Nullable String versionDescription) {
             this.versionDescription = Output.ofNullable(versionDescription);
             return this;
-        }
-        public ThemeArgs build() {
+        }        public ThemeArgs build() {
             return new ThemeArgs(awsAccountId, baseThemeId, configuration, name, permissions, tags, themeId, versionDescription);
         }
     }

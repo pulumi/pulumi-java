@@ -102,52 +102,42 @@ public final class ProfilePermissionArgs extends io.pulumi.resources.ResourceArg
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
-
         public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = Output.ofNullable(profileVersion);
             return this;
         }
-
         public Builder statementId(Output<String> statementId) {
             this.statementId = Objects.requireNonNull(statementId);
             return this;
         }
-
         public Builder statementId(String statementId) {
             this.statementId = Output.of(Objects.requireNonNull(statementId));
             return this;
-        }
-        public ProfilePermissionArgs build() {
+        }        public ProfilePermissionArgs build() {
             return new ProfilePermissionArgs(action, principal, profileName, profileVersion, statementId);
         }
     }

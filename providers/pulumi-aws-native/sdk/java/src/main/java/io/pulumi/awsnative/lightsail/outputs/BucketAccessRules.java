@@ -72,12 +72,10 @@ public final class BucketAccessRules {
             this.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
-
         public Builder getObject(@Nullable String getObject) {
             this.getObject = getObject;
             return this;
-        }
-        public BucketAccessRules build() {
+        }        public BucketAccessRules build() {
             return new BucketAccessRules(allowPublicOverrides, getObject);
         }
     }

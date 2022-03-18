@@ -220,57 +220,46 @@ public final class GetImagePipelineResult {
             this.arn = arn;
             return this;
         }
-
         public Builder containerRecipeArn(@Nullable String containerRecipeArn) {
             this.containerRecipeArn = containerRecipeArn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
             this.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
-
         public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
-
         public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
             this.imageRecipeArn = imageRecipeArn;
             return this;
         }
-
         public Builder imageTestsConfiguration(@Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration) {
             this.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
-
         public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
-
         public Builder schedule(@Nullable ImagePipelineSchedule schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder status(@Nullable ImagePipelineStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
-        }
-        public GetImagePipelineResult build() {
+        }        public GetImagePipelineResult build() {
             return new GetImagePipelineResult(arn, containerRecipeArn, description, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, schedule, status, tags);
         }
     }

@@ -92,32 +92,29 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.readinessCheckName = readinessCheckName;
             return this;
         }
-
         public Builder readinessCheckName(@Nullable String readinessCheckName) {
             this.readinessCheckName = Output.ofNullable(readinessCheckName);
             return this;
         }
-
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
             this.resourceSetName = resourceSetName;
             return this;
         }
-
         public Builder resourceSetName(@Nullable String resourceSetName) {
             this.resourceSetName = Output.ofNullable(resourceSetName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ReadinessCheckTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ReadinessCheckTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ReadinessCheckArgs build() {
+        public Builder tags(ReadinessCheckTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ReadinessCheckArgs build() {
             return new ReadinessCheckArgs(readinessCheckName, resourceSetName, tags);
         }
     }

@@ -54,8 +54,7 @@ public final class GetRuleGroupsNamespaceArgs extends io.pulumi.resources.Invoke
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetRuleGroupsNamespaceArgs build() {
+        }        public GetRuleGroupsNamespaceArgs build() {
             return new GetRuleGroupsNamespaceArgs(arn);
         }
     }

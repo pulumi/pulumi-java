@@ -56,12 +56,10 @@ public final class ConfigUplinkEchoConfig {
             this.antennaUplinkConfigArn = antennaUplinkConfigArn;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public ConfigUplinkEchoConfig build() {
+        }        public ConfigUplinkEchoConfig build() {
             return new ConfigUplinkEchoConfig(antennaUplinkConfigArn, enabled);
         }
     }

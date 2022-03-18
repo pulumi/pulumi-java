@@ -176,82 +176,75 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationFlowConfigList(Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList) {
             this.destinationFlowConfigList = Objects.requireNonNull(destinationFlowConfigList);
             return this;
         }
-
         public Builder destinationFlowConfigList(List<FlowDestinationFlowConfigArgs> destinationFlowConfigList) {
             this.destinationFlowConfigList = Output.of(Objects.requireNonNull(destinationFlowConfigList));
             return this;
         }
-
+        public Builder destinationFlowConfigList(FlowDestinationFlowConfigArgs... destinationFlowConfigList) {
+            return destinationFlowConfigList(List.of(destinationFlowConfigList));
+        }
         public Builder flowName(@Nullable Output<String> flowName) {
             this.flowName = flowName;
             return this;
         }
-
         public Builder flowName(@Nullable String flowName) {
             this.flowName = Output.ofNullable(flowName);
             return this;
         }
-
         public Builder kMSArn(@Nullable Output<String> kMSArn) {
             this.kMSArn = kMSArn;
             return this;
         }
-
         public Builder kMSArn(@Nullable String kMSArn) {
             this.kMSArn = Output.ofNullable(kMSArn);
             return this;
         }
-
         public Builder sourceFlowConfig(Output<FlowSourceFlowConfigArgs> sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
-
         public Builder sourceFlowConfig(FlowSourceFlowConfigArgs sourceFlowConfig) {
             this.sourceFlowConfig = Output.of(Objects.requireNonNull(sourceFlowConfig));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FlowTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FlowTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(FlowTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tasks(Output<List<FlowTaskArgs>> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
-
         public Builder tasks(List<FlowTaskArgs> tasks) {
             this.tasks = Output.of(Objects.requireNonNull(tasks));
             return this;
         }
-
+        public Builder tasks(FlowTaskArgs... tasks) {
+            return tasks(List.of(tasks));
+        }
         public Builder triggerConfig(Output<FlowTriggerConfigArgs> triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }
-
         public Builder triggerConfig(FlowTriggerConfigArgs triggerConfig) {
             this.triggerConfig = Output.of(Objects.requireNonNull(triggerConfig));
             return this;
-        }
-        public FlowArgs build() {
+        }        public FlowArgs build() {
             return new FlowArgs(description, destinationFlowConfigList, flowName, kMSArn, sourceFlowConfig, tags, tasks, triggerConfig);
         }
     }

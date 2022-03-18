@@ -179,112 +179,99 @@ public final class SpotFleetInstanceNetworkInterfaceSpecificationArgs extends io
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
-
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
-
         public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = Output.ofNullable(deviceIndex);
             return this;
         }
-
         public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = Output.ofNullable(groups);
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
-
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable List<SpotFleetInstanceIpv6AddressArgs> ipv6Addresses) {
             this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
-
+        public Builder ipv6Addresses(SpotFleetInstanceIpv6AddressArgs... ipv6Addresses) {
+            return ipv6Addresses(List.of(ipv6Addresses));
+        }
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder privateIpAddresses(@Nullable Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
-
         public Builder privateIpAddresses(@Nullable List<SpotFleetPrivateIpAddressSpecificationArgs> privateIpAddresses) {
             this.privateIpAddresses = Output.ofNullable(privateIpAddresses);
             return this;
         }
-
+        public Builder privateIpAddresses(SpotFleetPrivateIpAddressSpecificationArgs... privateIpAddresses) {
+            return privateIpAddresses(List.of(privateIpAddresses));
+        }
         public Builder secondaryPrivateIpAddressCount(@Nullable Output<Integer> secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
-
         public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = Output.ofNullable(secondaryPrivateIpAddressCount);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public SpotFleetInstanceNetworkInterfaceSpecificationArgs build() {
+        }        public SpotFleetInstanceNetworkInterfaceSpecificationArgs build() {
             return new SpotFleetInstanceNetworkInterfaceSpecificationArgs(associatePublicIpAddress, deleteOnTermination, description, deviceIndex, groups, ipv6AddressCount, ipv6Addresses, networkInterfaceId, privateIpAddresses, secondaryPrivateIpAddressCount, subnetId);
         }
     }

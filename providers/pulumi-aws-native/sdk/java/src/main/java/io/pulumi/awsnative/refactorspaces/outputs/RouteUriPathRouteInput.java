@@ -75,22 +75,21 @@ public final class RouteUriPathRouteInput {
             this.activationState = Objects.requireNonNull(activationState);
             return this;
         }
-
         public Builder includeChildPaths(@Nullable Boolean includeChildPaths) {
             this.includeChildPaths = includeChildPaths;
             return this;
         }
-
         public Builder methods(@Nullable List<RouteMethod> methods) {
             this.methods = methods;
             return this;
         }
-
+        public Builder methods(RouteMethod... methods) {
+            return methods(List.of(methods));
+        }
         public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = sourcePath;
             return this;
-        }
-        public RouteUriPathRouteInput build() {
+        }        public RouteUriPathRouteInput build() {
             return new RouteUriPathRouteInput(activationState, includeChildPaths, methods, sourcePath);
         }
     }

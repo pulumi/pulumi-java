@@ -143,62 +143,53 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder retentionPeriodHours(@Nullable Output<Integer> retentionPeriodHours) {
             this.retentionPeriodHours = retentionPeriodHours;
             return this;
         }
-
         public Builder retentionPeriodHours(@Nullable Integer retentionPeriodHours) {
             this.retentionPeriodHours = Output.ofNullable(retentionPeriodHours);
             return this;
         }
-
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
-
         public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = Output.ofNullable(shardCount);
             return this;
         }
-
         public Builder streamEncryption(@Nullable Output<StreamEncryptionArgs> streamEncryption) {
             this.streamEncryption = streamEncryption;
             return this;
         }
-
         public Builder streamEncryption(@Nullable StreamEncryptionArgs streamEncryption) {
             this.streamEncryption = Output.ofNullable(streamEncryption);
             return this;
         }
-
         public Builder streamModeDetails(@Nullable Output<StreamModeDetailsArgs> streamModeDetails) {
             this.streamModeDetails = streamModeDetails;
             return this;
         }
-
         public Builder streamModeDetails(@Nullable StreamModeDetailsArgs streamModeDetails) {
             this.streamModeDetails = Output.ofNullable(streamModeDetails);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<StreamTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public StreamArgs build() {
+        public Builder tags(StreamTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public StreamArgs build() {
             return new StreamArgs(name, retentionPeriodHours, shardCount, streamEncryption, streamModeDetails, tags);
         }
     }

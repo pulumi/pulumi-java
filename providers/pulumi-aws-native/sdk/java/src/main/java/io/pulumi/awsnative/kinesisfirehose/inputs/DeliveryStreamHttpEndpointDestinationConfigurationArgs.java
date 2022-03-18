@@ -157,92 +157,74 @@ public final class DeliveryStreamHttpEndpointDestinationConfigurationArgs extend
             this.bufferingHints = bufferingHints;
             return this;
         }
-
         public Builder bufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
             this.bufferingHints = Output.ofNullable(bufferingHints);
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = Output.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
-
         public Builder endpointConfiguration(Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration) {
             this.endpointConfiguration = Objects.requireNonNull(endpointConfiguration);
             return this;
         }
-
         public Builder endpointConfiguration(DeliveryStreamHttpEndpointConfigurationArgs endpointConfiguration) {
             this.endpointConfiguration = Output.of(Objects.requireNonNull(endpointConfiguration));
             return this;
         }
-
         public Builder processingConfiguration(@Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
-
         public Builder requestConfiguration(@Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration) {
             this.requestConfiguration = requestConfiguration;
             return this;
         }
-
         public Builder requestConfiguration(@Nullable DeliveryStreamHttpEndpointRequestConfigurationArgs requestConfiguration) {
             this.requestConfiguration = Output.ofNullable(requestConfiguration);
             return this;
         }
-
         public Builder retryOptions(@Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public Builder retryOptions(@Nullable DeliveryStreamRetryOptionsArgs retryOptions) {
             this.retryOptions = Output.ofNullable(retryOptions);
             return this;
         }
-
         public Builder roleARN(@Nullable Output<String> roleARN) {
             this.roleARN = roleARN;
             return this;
         }
-
         public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = Output.ofNullable(roleARN);
             return this;
         }
-
         public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
-
         public Builder s3Configuration(Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
-
         public Builder s3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
             this.s3Configuration = Output.of(Objects.requireNonNull(s3Configuration));
             return this;
-        }
-        public DeliveryStreamHttpEndpointDestinationConfigurationArgs build() {
+        }        public DeliveryStreamHttpEndpointDestinationConfigurationArgs build() {
             return new DeliveryStreamHttpEndpointDestinationConfigurationArgs(bufferingHints, cloudWatchLoggingOptions, endpointConfiguration, processingConfiguration, requestConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration);
         }
     }

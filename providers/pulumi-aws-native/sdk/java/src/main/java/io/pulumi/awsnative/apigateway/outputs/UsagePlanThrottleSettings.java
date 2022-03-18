@@ -72,12 +72,10 @@ public final class UsagePlanThrottleSettings {
             this.burstLimit = burstLimit;
             return this;
         }
-
         public Builder rateLimit(@Nullable Double rateLimit) {
             this.rateLimit = rateLimit;
             return this;
-        }
-        public UsagePlanThrottleSettings build() {
+        }        public UsagePlanThrottleSettings build() {
             return new UsagePlanThrottleSettings(burstLimit, rateLimit);
         }
     }

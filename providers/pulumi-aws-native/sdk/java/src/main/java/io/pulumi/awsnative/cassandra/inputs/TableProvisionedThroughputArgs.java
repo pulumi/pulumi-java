@@ -69,22 +69,18 @@ public final class TableProvisionedThroughputArgs extends io.pulumi.resources.Re
             this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits);
             return this;
         }
-
         public Builder readCapacityUnits(Integer readCapacityUnits) {
             this.readCapacityUnits = Output.of(Objects.requireNonNull(readCapacityUnits));
             return this;
         }
-
         public Builder writeCapacityUnits(Output<Integer> writeCapacityUnits) {
             this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits);
             return this;
         }
-
         public Builder writeCapacityUnits(Integer writeCapacityUnits) {
             this.writeCapacityUnits = Output.of(Objects.requireNonNull(writeCapacityUnits));
             return this;
-        }
-        public TableProvisionedThroughputArgs build() {
+        }        public TableProvisionedThroughputArgs build() {
             return new TableProvisionedThroughputArgs(readCapacityUnits, writeCapacityUnits);
         }
     }

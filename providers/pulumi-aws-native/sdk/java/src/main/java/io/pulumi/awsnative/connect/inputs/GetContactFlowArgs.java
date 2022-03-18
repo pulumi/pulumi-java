@@ -54,8 +54,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
         public Builder contactFlowArn(String contactFlowArn) {
             this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
             return this;
-        }
-        public GetContactFlowArgs build() {
+        }        public GetContactFlowArgs build() {
             return new GetContactFlowArgs(contactFlowArn);
         }
     }

@@ -79,32 +79,26 @@ public final class TopicRuleIotAnalyticsActionArgs extends io.pulumi.resources.R
             this.batchMode = batchMode;
             return this;
         }
-
         public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = Output.ofNullable(batchMode);
             return this;
         }
-
         public Builder channelName(Output<String> channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder channelName(String channelName) {
             this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public TopicRuleIotAnalyticsActionArgs build() {
+        }        public TopicRuleIotAnalyticsActionArgs build() {
             return new TopicRuleIotAnalyticsActionArgs(batchMode, channelName, roleArn);
         }
     }

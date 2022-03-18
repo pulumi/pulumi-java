@@ -120,27 +120,22 @@ public final class BucketRedirectRule {
             this.hostName = hostName;
             return this;
         }
-
         public Builder httpRedirectCode(@Nullable String httpRedirectCode) {
             this.httpRedirectCode = httpRedirectCode;
             return this;
         }
-
         public Builder protocol(@Nullable BucketRedirectRuleProtocol protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder replaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
             this.replaceKeyPrefixWith = replaceKeyPrefixWith;
             return this;
         }
-
         public Builder replaceKeyWith(@Nullable String replaceKeyWith) {
             this.replaceKeyWith = replaceKeyWith;
             return this;
-        }
-        public BucketRedirectRule build() {
+        }        public BucketRedirectRule build() {
             return new BucketRedirectRule(hostName, httpRedirectCode, protocol, replaceKeyPrefixWith, replaceKeyWith);
         }
     }

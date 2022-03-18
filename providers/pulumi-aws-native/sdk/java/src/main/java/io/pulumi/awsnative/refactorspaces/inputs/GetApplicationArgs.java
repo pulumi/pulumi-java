@@ -64,12 +64,10 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
-
         public Builder environmentIdentifier(String environmentIdentifier) {
             this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
             return this;
-        }
-        public GetApplicationArgs build() {
+        }        public GetApplicationArgs build() {
             return new GetApplicationArgs(applicationIdentifier, environmentIdentifier);
         }
     }

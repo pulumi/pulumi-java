@@ -79,22 +79,18 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
             this.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
-
         public Builder allowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
             this.allowPublicOverrides = Output.ofNullable(allowPublicOverrides);
             return this;
         }
-
         public Builder getObject(@Nullable Output<String> getObject) {
             this.getObject = getObject;
             return this;
         }
-
         public Builder getObject(@Nullable String getObject) {
             this.getObject = Output.ofNullable(getObject);
             return this;
-        }
-        public BucketAccessRulesArgs build() {
+        }        public BucketAccessRulesArgs build() {
             return new BucketAccessRulesArgs(allowPublicOverrides, getObject);
         }
     }

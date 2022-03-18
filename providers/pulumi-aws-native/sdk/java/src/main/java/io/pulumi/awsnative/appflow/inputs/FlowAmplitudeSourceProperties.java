@@ -50,8 +50,7 @@ public final class FlowAmplitudeSourceProperties extends io.pulumi.resources.Inv
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowAmplitudeSourceProperties build() {
+        }        public FlowAmplitudeSourceProperties build() {
             return new FlowAmplitudeSourceProperties(object);
         }
     }

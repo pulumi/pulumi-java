@@ -54,8 +54,7 @@ public final class GetEgressOnlyInternetGatewayArgs extends io.pulumi.resources.
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetEgressOnlyInternetGatewayArgs build() {
+        }        public GetEgressOnlyInternetGatewayArgs build() {
             return new GetEgressOnlyInternetGatewayArgs(id);
         }
     }

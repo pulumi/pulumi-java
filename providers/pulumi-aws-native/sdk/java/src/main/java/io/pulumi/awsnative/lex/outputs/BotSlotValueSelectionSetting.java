@@ -56,12 +56,10 @@ public final class BotSlotValueSelectionSetting {
             this.regexFilter = regexFilter;
             return this;
         }
-
         public Builder resolutionStrategy(BotSlotValueResolutionStrategy resolutionStrategy) {
             this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy);
             return this;
-        }
-        public BotSlotValueSelectionSetting build() {
+        }        public BotSlotValueSelectionSetting build() {
             return new BotSlotValueSelectionSetting(regexFilter, resolutionStrategy);
         }
     }

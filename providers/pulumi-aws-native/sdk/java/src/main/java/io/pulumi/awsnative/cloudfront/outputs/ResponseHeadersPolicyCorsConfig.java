@@ -100,37 +100,30 @@ public final class ResponseHeadersPolicyCorsConfig {
             this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials);
             return this;
         }
-
         public Builder accessControlAllowHeaders(ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders) {
             this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders);
             return this;
         }
-
         public Builder accessControlAllowMethods(ResponseHeadersPolicyAccessControlAllowMethods accessControlAllowMethods) {
             this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods);
             return this;
         }
-
         public Builder accessControlAllowOrigins(ResponseHeadersPolicyAccessControlAllowOrigins accessControlAllowOrigins) {
             this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins);
             return this;
         }
-
         public Builder accessControlExposeHeaders(@Nullable ResponseHeadersPolicyAccessControlExposeHeaders accessControlExposeHeaders) {
             this.accessControlExposeHeaders = accessControlExposeHeaders;
             return this;
         }
-
         public Builder accessControlMaxAgeSec(@Nullable Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
-
         public Builder originOverride(Boolean originOverride) {
             this.originOverride = Objects.requireNonNull(originOverride);
             return this;
-        }
-        public ResponseHeadersPolicyCorsConfig build() {
+        }        public ResponseHeadersPolicyCorsConfig build() {
             return new ResponseHeadersPolicyCorsConfig(accessControlAllowCredentials, accessControlAllowHeaders, accessControlAllowMethods, accessControlAllowOrigins, accessControlExposeHeaders, accessControlMaxAgeSec, originOverride);
         }
     }

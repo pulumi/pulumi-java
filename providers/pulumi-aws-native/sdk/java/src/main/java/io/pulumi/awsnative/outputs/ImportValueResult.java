@@ -45,8 +45,7 @@ public final class ImportValueResult {
         public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
-        }
-        public ImportValueResult build() {
+        }        public ImportValueResult build() {
             return new ImportValueResult(value);
         }
     }

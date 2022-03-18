@@ -80,22 +80,21 @@ public final class MonitoringScheduleMonitoringOutputConfigArgs extends io.pulum
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder monitoringOutputs(Output<List<MonitoringScheduleMonitoringOutputArgs>> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-
         public Builder monitoringOutputs(List<MonitoringScheduleMonitoringOutputArgs> monitoringOutputs) {
             this.monitoringOutputs = Output.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
-        public MonitoringScheduleMonitoringOutputConfigArgs build() {
+        public Builder monitoringOutputs(MonitoringScheduleMonitoringOutputArgs... monitoringOutputs) {
+            return monitoringOutputs(List.of(monitoringOutputs));
+        }        public MonitoringScheduleMonitoringOutputConfigArgs build() {
             return new MonitoringScheduleMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
         }
     }

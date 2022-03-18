@@ -104,52 +104,42 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }
-
         public Builder autoScalingGroupName(String autoScalingGroupName) {
             this.autoScalingGroupName = Output.of(Objects.requireNonNull(autoScalingGroupName));
             return this;
         }
-
         public Builder instanceReusePolicy(@Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy) {
             this.instanceReusePolicy = instanceReusePolicy;
             return this;
         }
-
         public Builder instanceReusePolicy(@Nullable WarmPoolInstanceReusePolicyArgs instanceReusePolicy) {
             this.instanceReusePolicy = Output.ofNullable(instanceReusePolicy);
             return this;
         }
-
         public Builder maxGroupPreparedCapacity(@Nullable Output<Integer> maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
-
         public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = Output.ofNullable(maxGroupPreparedCapacity);
             return this;
         }
-
         public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
         }
-
         public Builder poolState(@Nullable Output<String> poolState) {
             this.poolState = poolState;
             return this;
         }
-
         public Builder poolState(@Nullable String poolState) {
             this.poolState = Output.ofNullable(poolState);
             return this;
-        }
-        public WarmPoolArgs build() {
+        }        public WarmPoolArgs build() {
             return new WarmPoolArgs(autoScalingGroupName, instanceReusePolicy, maxGroupPreparedCapacity, minSize, poolState);
         }
     }

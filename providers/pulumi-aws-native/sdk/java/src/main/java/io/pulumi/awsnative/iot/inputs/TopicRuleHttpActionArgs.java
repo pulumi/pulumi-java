@@ -93,42 +93,37 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
             this.auth = auth;
             return this;
         }
-
         public Builder auth(@Nullable TopicRuleHttpAuthorizationArgs auth) {
             this.auth = Output.ofNullable(auth);
             return this;
         }
-
         public Builder confirmationUrl(@Nullable Output<String> confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
-
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = Output.ofNullable(confirmationUrl);
             return this;
         }
-
         public Builder headers(@Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<TopicRuleHttpActionHeaderArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(TopicRuleHttpActionHeaderArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public TopicRuleHttpActionArgs build() {
+        }        public TopicRuleHttpActionArgs build() {
             return new TopicRuleHttpActionArgs(auth, confirmationUrl, headers, url);
         }
     }

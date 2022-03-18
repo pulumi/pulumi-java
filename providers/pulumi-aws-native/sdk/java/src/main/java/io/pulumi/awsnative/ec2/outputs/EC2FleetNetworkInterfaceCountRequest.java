@@ -55,12 +55,10 @@ public final class EC2FleetNetworkInterfaceCountRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public EC2FleetNetworkInterfaceCountRequest build() {
+        }        public EC2FleetNetworkInterfaceCountRequest build() {
             return new EC2FleetNetworkInterfaceCountRequest(max, min);
         }
     }

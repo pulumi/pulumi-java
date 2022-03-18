@@ -43,8 +43,7 @@ public final class DetectorModelClearTimer {
         public Builder timerName(String timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
-        }
-        public DetectorModelClearTimer build() {
+        }        public DetectorModelClearTimer build() {
             return new DetectorModelClearTimer(timerName);
         }
     }

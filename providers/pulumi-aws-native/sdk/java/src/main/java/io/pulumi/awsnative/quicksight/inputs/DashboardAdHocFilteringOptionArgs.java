@@ -57,12 +57,10 @@ public final class DashboardAdHocFilteringOptionArgs extends io.pulumi.resources
             this.availabilityStatus = availabilityStatus;
             return this;
         }
-
         public Builder availabilityStatus(@Nullable DashboardBehavior availabilityStatus) {
             this.availabilityStatus = Output.ofNullable(availabilityStatus);
             return this;
-        }
-        public DashboardAdHocFilteringOptionArgs build() {
+        }        public DashboardAdHocFilteringOptionArgs build() {
             return new DashboardAdHocFilteringOptionArgs(availabilityStatus);
         }
     }

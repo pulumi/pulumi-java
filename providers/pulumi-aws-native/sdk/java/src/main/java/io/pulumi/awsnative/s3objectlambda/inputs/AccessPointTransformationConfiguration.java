@@ -70,12 +70,13 @@ public final class AccessPointTransformationConfiguration extends io.pulumi.reso
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder contentTransformation(Object contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
-        }
-        public AccessPointTransformationConfiguration build() {
+        }        public AccessPointTransformationConfiguration build() {
             return new AccessPointTransformationConfiguration(actions, contentTransformation);
         }
     }

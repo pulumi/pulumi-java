@@ -55,12 +55,10 @@ public final class FilterPortRangeFilter {
             this.beginInclusive = beginInclusive;
             return this;
         }
-
         public Builder endInclusive(@Nullable Integer endInclusive) {
             this.endInclusive = endInclusive;
             return this;
-        }
-        public FilterPortRangeFilter build() {
+        }        public FilterPortRangeFilter build() {
             return new FilterPortRangeFilter(beginInclusive, endInclusive);
         }
     }

@@ -68,12 +68,13 @@ public final class DataSourceConfluenceAttachmentConfiguration extends io.pulumi
             this.attachmentFieldMappings = attachmentFieldMappings;
             return this;
         }
-
+        public Builder attachmentFieldMappings(DataSourceConfluenceAttachmentToIndexFieldMapping... attachmentFieldMappings) {
+            return attachmentFieldMappings(List.of(attachmentFieldMappings));
+        }
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
-        }
-        public DataSourceConfluenceAttachmentConfiguration build() {
+        }        public DataSourceConfluenceAttachmentConfiguration build() {
             return new DataSourceConfluenceAttachmentConfiguration(attachmentFieldMappings, crawlAttachments);
         }
     }

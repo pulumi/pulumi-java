@@ -50,8 +50,7 @@ public final class FirewallPolicyDimension extends io.pulumi.resources.InvokeArg
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FirewallPolicyDimension build() {
+        }        public FirewallPolicyDimension build() {
             return new FirewallPolicyDimension(value);
         }
     }

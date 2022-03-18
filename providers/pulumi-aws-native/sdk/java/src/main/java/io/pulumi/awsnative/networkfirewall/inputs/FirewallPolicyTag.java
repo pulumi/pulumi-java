@@ -64,12 +64,10 @@ public final class FirewallPolicyTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FirewallPolicyTag build() {
+        }        public FirewallPolicyTag build() {
             return new FirewallPolicyTag(key, value);
         }
     }

@@ -72,12 +72,10 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
-
         public Builder memberId(String memberId) {
             this.memberId = Objects.requireNonNull(memberId);
             return this;
-        }
-        public GetMemberInvitationArgs build() {
+        }        public GetMemberInvitationArgs build() {
             return new GetMemberInvitationArgs(graphArn, memberId);
         }
     }

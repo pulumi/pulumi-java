@@ -50,8 +50,7 @@ public final class GetEC2FleetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder fleetId(String fleetId) {
             this.fleetId = Objects.requireNonNull(fleetId);
             return this;
-        }
-        public GetEC2FleetArgs build() {
+        }        public GetEC2FleetArgs build() {
             return new GetEC2FleetArgs(fleetId);
         }
     }

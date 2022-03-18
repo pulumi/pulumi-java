@@ -54,8 +54,7 @@ public final class GetRecipeArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRecipeArgs build() {
+        }        public GetRecipeArgs build() {
             return new GetRecipeArgs(name);
         }
     }

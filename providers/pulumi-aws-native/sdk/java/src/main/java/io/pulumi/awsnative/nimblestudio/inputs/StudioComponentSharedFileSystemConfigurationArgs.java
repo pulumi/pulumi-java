@@ -126,52 +126,42 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
-
         public Builder linuxMountPoint(@Nullable Output<String> linuxMountPoint) {
             this.linuxMountPoint = linuxMountPoint;
             return this;
         }
-
         public Builder linuxMountPoint(@Nullable String linuxMountPoint) {
             this.linuxMountPoint = Output.ofNullable(linuxMountPoint);
             return this;
         }
-
         public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
-
         public Builder shareName(@Nullable String shareName) {
             this.shareName = Output.ofNullable(shareName);
             return this;
         }
-
         public Builder windowsMountDrive(@Nullable Output<String> windowsMountDrive) {
             this.windowsMountDrive = windowsMountDrive;
             return this;
         }
-
         public Builder windowsMountDrive(@Nullable String windowsMountDrive) {
             this.windowsMountDrive = Output.ofNullable(windowsMountDrive);
             return this;
-        }
-        public StudioComponentSharedFileSystemConfigurationArgs build() {
+        }        public StudioComponentSharedFileSystemConfigurationArgs build() {
             return new StudioComponentSharedFileSystemConfigurationArgs(endpoint, fileSystemId, linuxMountPoint, shareName, windowsMountDrive);
         }
     }

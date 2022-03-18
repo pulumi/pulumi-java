@@ -45,8 +45,7 @@ public final class TaskSetNetworkConfiguration {
         public Builder awsVpcConfiguration(@Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration) {
             this.awsVpcConfiguration = awsVpcConfiguration;
             return this;
-        }
-        public TaskSetNetworkConfiguration build() {
+        }        public TaskSetNetworkConfiguration build() {
             return new TaskSetNetworkConfiguration(awsVpcConfiguration);
         }
     }

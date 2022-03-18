@@ -75,12 +75,10 @@ public final class DetectorModelIotTopicPublish extends io.pulumi.resources.Invo
             this.mqttTopic = Objects.requireNonNull(mqttTopic);
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
-        }
-        public DetectorModelIotTopicPublish build() {
+        }        public DetectorModelIotTopicPublish build() {
             return new DetectorModelIotTopicPublish(mqttTopic, payload);
         }
     }

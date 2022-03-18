@@ -94,42 +94,37 @@ public final class RuleGroupRulesSourceArgs extends io.pulumi.resources.Resource
             this.rulesSourceList = rulesSourceList;
             return this;
         }
-
         public Builder rulesSourceList(@Nullable RuleGroupRulesSourceListArgs rulesSourceList) {
             this.rulesSourceList = Output.ofNullable(rulesSourceList);
             return this;
         }
-
         public Builder rulesString(@Nullable Output<String> rulesString) {
             this.rulesString = rulesString;
             return this;
         }
-
         public Builder rulesString(@Nullable String rulesString) {
             this.rulesString = Output.ofNullable(rulesString);
             return this;
         }
-
         public Builder statefulRules(@Nullable Output<List<RuleGroupStatefulRuleArgs>> statefulRules) {
             this.statefulRules = statefulRules;
             return this;
         }
-
         public Builder statefulRules(@Nullable List<RuleGroupStatefulRuleArgs> statefulRules) {
             this.statefulRules = Output.ofNullable(statefulRules);
             return this;
         }
-
+        public Builder statefulRules(RuleGroupStatefulRuleArgs... statefulRules) {
+            return statefulRules(List.of(statefulRules));
+        }
         public Builder statelessRulesAndCustomActions(@Nullable Output<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }
-
         public Builder statelessRulesAndCustomActions(@Nullable RuleGroupStatelessRulesAndCustomActionsArgs statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = Output.ofNullable(statelessRulesAndCustomActions);
             return this;
-        }
-        public RuleGroupRulesSourceArgs build() {
+        }        public RuleGroupRulesSourceArgs build() {
             return new RuleGroupRulesSourceArgs(rulesSourceList, rulesString, statefulRules, statelessRulesAndCustomActions);
         }
     }

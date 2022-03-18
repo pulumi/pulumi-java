@@ -85,32 +85,29 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
             this.filesLimit = filesLimit;
             return this;
         }
-
         public Builder filesLimit(@Nullable DatasetFilesLimitArgs filesLimit) {
             this.filesLimit = Output.ofNullable(filesLimit);
             return this;
         }
-
         public Builder lastModifiedDateCondition(@Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition) {
             this.lastModifiedDateCondition = lastModifiedDateCondition;
             return this;
         }
-
         public Builder lastModifiedDateCondition(@Nullable DatasetFilterExpressionArgs lastModifiedDateCondition) {
             this.lastModifiedDateCondition = Output.ofNullable(lastModifiedDateCondition);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<DatasetPathParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<DatasetPathParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-        public DatasetPathOptionsArgs build() {
+        public Builder parameters(DatasetPathParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }        public DatasetPathOptionsArgs build() {
             return new DatasetPathOptionsArgs(filesLimit, lastModifiedDateCondition, parameters);
         }
     }

@@ -403,222 +403,190 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             this.buildId = buildId;
             return this;
         }
-
         public Builder buildId(@Nullable String buildId) {
             this.buildId = Output.ofNullable(buildId);
             return this;
         }
-
         public Builder certificateConfiguration(@Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration) {
             this.certificateConfiguration = certificateConfiguration;
             return this;
         }
-
         public Builder certificateConfiguration(@Nullable FleetCertificateConfigurationArgs certificateConfiguration) {
             this.certificateConfiguration = Output.ofNullable(certificateConfiguration);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder desiredEC2Instances(@Nullable Output<Integer> desiredEC2Instances) {
             this.desiredEC2Instances = desiredEC2Instances;
             return this;
         }
-
         public Builder desiredEC2Instances(@Nullable Integer desiredEC2Instances) {
             this.desiredEC2Instances = Output.ofNullable(desiredEC2Instances);
             return this;
         }
-
         public Builder eC2InboundPermissions(@Nullable Output<List<FleetIpPermissionArgs>> eC2InboundPermissions) {
             this.eC2InboundPermissions = eC2InboundPermissions;
             return this;
         }
-
         public Builder eC2InboundPermissions(@Nullable List<FleetIpPermissionArgs> eC2InboundPermissions) {
             this.eC2InboundPermissions = Output.ofNullable(eC2InboundPermissions);
             return this;
         }
-
+        public Builder eC2InboundPermissions(FleetIpPermissionArgs... eC2InboundPermissions) {
+            return eC2InboundPermissions(List.of(eC2InboundPermissions));
+        }
         public Builder eC2InstanceType(@Nullable Output<String> eC2InstanceType) {
             this.eC2InstanceType = eC2InstanceType;
             return this;
         }
-
         public Builder eC2InstanceType(@Nullable String eC2InstanceType) {
             this.eC2InstanceType = Output.ofNullable(eC2InstanceType);
             return this;
         }
-
         public Builder fleetType(@Nullable Output<FleetType> fleetType) {
             this.fleetType = fleetType;
             return this;
         }
-
         public Builder fleetType(@Nullable FleetType fleetType) {
             this.fleetType = Output.ofNullable(fleetType);
             return this;
         }
-
         public Builder instanceRoleARN(@Nullable Output<String> instanceRoleARN) {
             this.instanceRoleARN = instanceRoleARN;
             return this;
         }
-
         public Builder instanceRoleARN(@Nullable String instanceRoleARN) {
             this.instanceRoleARN = Output.ofNullable(instanceRoleARN);
             return this;
         }
-
         public Builder locations(@Nullable Output<List<FleetLocationConfigurationArgs>> locations) {
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<FleetLocationConfigurationArgs> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(FleetLocationConfigurationArgs... locations) {
+            return locations(List.of(locations));
+        }
         public Builder logPaths(@Nullable Output<List<String>> logPaths) {
             this.logPaths = logPaths;
             return this;
         }
-
         public Builder logPaths(@Nullable List<String> logPaths) {
             this.logPaths = Output.ofNullable(logPaths);
             return this;
         }
-
+        public Builder logPaths(String... logPaths) {
+            return logPaths(List.of(logPaths));
+        }
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
-
         public Builder metricGroups(@Nullable Output<List<String>> metricGroups) {
             this.metricGroups = metricGroups;
             return this;
         }
-
         public Builder metricGroups(@Nullable List<String> metricGroups) {
             this.metricGroups = Output.ofNullable(metricGroups);
             return this;
         }
-
+        public Builder metricGroups(String... metricGroups) {
+            return metricGroups(List.of(metricGroups));
+        }
         public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder newGameSessionProtectionPolicy(@Nullable Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
-
         public Builder newGameSessionProtectionPolicy(@Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = Output.ofNullable(newGameSessionProtectionPolicy);
             return this;
         }
-
         public Builder peerVpcAwsAccountId(@Nullable Output<String> peerVpcAwsAccountId) {
             this.peerVpcAwsAccountId = peerVpcAwsAccountId;
             return this;
         }
-
         public Builder peerVpcAwsAccountId(@Nullable String peerVpcAwsAccountId) {
             this.peerVpcAwsAccountId = Output.ofNullable(peerVpcAwsAccountId);
             return this;
         }
-
         public Builder peerVpcId(@Nullable Output<String> peerVpcId) {
             this.peerVpcId = peerVpcId;
             return this;
         }
-
         public Builder peerVpcId(@Nullable String peerVpcId) {
             this.peerVpcId = Output.ofNullable(peerVpcId);
             return this;
         }
-
         public Builder resourceCreationLimitPolicy(@Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
-
         public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = Output.ofNullable(resourceCreationLimitPolicy);
             return this;
         }
-
         public Builder runtimeConfiguration(@Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
-
         public Builder runtimeConfiguration(@Nullable FleetRuntimeConfigurationArgs runtimeConfiguration) {
             this.runtimeConfiguration = Output.ofNullable(runtimeConfiguration);
             return this;
         }
-
         public Builder scriptId(@Nullable Output<String> scriptId) {
             this.scriptId = scriptId;
             return this;
         }
-
         public Builder scriptId(@Nullable String scriptId) {
             this.scriptId = Output.ofNullable(scriptId);
             return this;
         }
-
         public Builder serverLaunchParameters(@Nullable Output<String> serverLaunchParameters) {
             this.serverLaunchParameters = serverLaunchParameters;
             return this;
         }
-
         public Builder serverLaunchParameters(@Nullable String serverLaunchParameters) {
             this.serverLaunchParameters = Output.ofNullable(serverLaunchParameters);
             return this;
         }
-
         public Builder serverLaunchPath(@Nullable Output<String> serverLaunchPath) {
             this.serverLaunchPath = serverLaunchPath;
             return this;
         }
-
         public Builder serverLaunchPath(@Nullable String serverLaunchPath) {
             this.serverLaunchPath = Output.ofNullable(serverLaunchPath);
             return this;
-        }
-        public FleetArgs build() {
+        }        public FleetArgs build() {
             return new FleetArgs(buildId, certificateConfiguration, description, desiredEC2Instances, eC2InboundPermissions, eC2InstanceType, fleetType, instanceRoleARN, locations, logPaths, maxSize, metricGroups, minSize, name, newGameSessionProtectionPolicy, peerVpcAwsAccountId, peerVpcId, resourceCreationLimitPolicy, runtimeConfiguration, scriptId, serverLaunchParameters, serverLaunchPath);
         }
     }

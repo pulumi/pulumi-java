@@ -75,12 +75,10 @@ public final class OriginEndpointDashEncryption extends io.pulumi.resources.Invo
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
-
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
-        }
-        public OriginEndpointDashEncryption build() {
+        }        public OriginEndpointDashEncryption build() {
             return new OriginEndpointDashEncryption(keyRotationIntervalSeconds, spekeKeyProvider);
         }
     }

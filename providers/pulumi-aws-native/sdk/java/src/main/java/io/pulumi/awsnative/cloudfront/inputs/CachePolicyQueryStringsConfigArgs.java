@@ -67,22 +67,21 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
-
         public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Output.of(Objects.requireNonNull(queryStringBehavior));
             return this;
         }
-
         public Builder queryStrings(@Nullable Output<List<String>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-
         public Builder queryStrings(@Nullable List<String> queryStrings) {
             this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
-        public CachePolicyQueryStringsConfigArgs build() {
+        public Builder queryStrings(String... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public CachePolicyQueryStringsConfigArgs build() {
             return new CachePolicyQueryStringsConfigArgs(queryStringBehavior, queryStrings);
         }
     }

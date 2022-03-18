@@ -52,12 +52,10 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }
-
         public Builder immunityTime(Integer immunityTime) {
             this.immunityTime = Output.of(Objects.requireNonNull(immunityTime));
             return this;
-        }
-        public WebACLImmunityTimePropertyArgs build() {
+        }        public WebACLImmunityTimePropertyArgs build() {
             return new WebACLImmunityTimePropertyArgs(immunityTime);
         }
     }

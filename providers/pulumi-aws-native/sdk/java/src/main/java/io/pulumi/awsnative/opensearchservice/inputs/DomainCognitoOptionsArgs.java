@@ -91,42 +91,34 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder identityPoolId(@Nullable Output<String> identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
-
         public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = Output.ofNullable(identityPoolId);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
-
         public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Output.ofNullable(userPoolId);
             return this;
-        }
-        public DomainCognitoOptionsArgs build() {
+        }        public DomainCognitoOptionsArgs build() {
             return new DomainCognitoOptionsArgs(enabled, identityPoolId, roleArn, userPoolId);
         }
     }

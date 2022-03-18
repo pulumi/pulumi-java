@@ -94,32 +94,26 @@ public final class DataSourceAuroraPostgreSqlParametersArgs extends io.pulumi.re
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
-
         public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder port(Output<Double> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Double port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public DataSourceAuroraPostgreSqlParametersArgs build() {
+        }        public DataSourceAuroraPostgreSqlParametersArgs build() {
             return new DataSourceAuroraPostgreSqlParametersArgs(database, host, port);
         }
     }

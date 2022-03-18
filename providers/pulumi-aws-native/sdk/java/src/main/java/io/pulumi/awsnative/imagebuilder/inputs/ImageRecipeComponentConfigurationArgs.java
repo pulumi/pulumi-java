@@ -80,22 +80,21 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
             this.componentArn = componentArn;
             return this;
         }
-
         public Builder componentArn(@Nullable String componentArn) {
             this.componentArn = Output.ofNullable(componentArn);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ImageRecipeComponentParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-        public ImageRecipeComponentConfigurationArgs build() {
+        public Builder parameters(ImageRecipeComponentParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }        public ImageRecipeComponentConfigurationArgs build() {
             return new ImageRecipeComponentConfigurationArgs(componentArn, parameters);
         }
     }

@@ -149,42 +149,34 @@ public final class FlowDestinationConnectorProperties extends io.pulumi.resource
             this.eventBridge = eventBridge;
             return this;
         }
-
         public Builder lookoutMetrics(@Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics) {
             this.lookoutMetrics = lookoutMetrics;
             return this;
         }
-
         public Builder redshift(@Nullable FlowRedshiftDestinationProperties redshift) {
             this.redshift = redshift;
             return this;
         }
-
         public Builder s3(@Nullable FlowS3DestinationProperties s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder salesforce(@Nullable FlowSalesforceDestinationProperties salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder snowflake(@Nullable FlowSnowflakeDestinationProperties snowflake) {
             this.snowflake = snowflake;
             return this;
         }
-
         public Builder upsolver(@Nullable FlowUpsolverDestinationProperties upsolver) {
             this.upsolver = upsolver;
             return this;
         }
-
         public Builder zendesk(@Nullable FlowZendeskDestinationProperties zendesk) {
             this.zendesk = zendesk;
             return this;
-        }
-        public FlowDestinationConnectorProperties build() {
+        }        public FlowDestinationConnectorProperties build() {
             return new FlowDestinationConnectorProperties(eventBridge, lookoutMetrics, redshift, s3, salesforce, snowflake, upsolver, zendesk);
         }
     }

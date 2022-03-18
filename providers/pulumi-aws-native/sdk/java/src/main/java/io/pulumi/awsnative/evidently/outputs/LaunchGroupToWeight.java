@@ -54,12 +54,10 @@ public final class LaunchGroupToWeight {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder splitWeight(Integer splitWeight) {
             this.splitWeight = Objects.requireNonNull(splitWeight);
             return this;
-        }
-        public LaunchGroupToWeight build() {
+        }        public LaunchGroupToWeight build() {
             return new LaunchGroupToWeight(groupName, splitWeight);
         }
     }

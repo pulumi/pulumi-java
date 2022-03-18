@@ -80,17 +80,14 @@ public final class SamplingRuleRecord {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
-
         public Builder samplingRule(@Nullable SamplingRule samplingRule) {
             this.samplingRule = samplingRule;
             return this;
-        }
-        public SamplingRuleRecord build() {
+        }        public SamplingRuleRecord build() {
             return new SamplingRuleRecord(createdAt, modifiedAt, samplingRule);
         }
     }

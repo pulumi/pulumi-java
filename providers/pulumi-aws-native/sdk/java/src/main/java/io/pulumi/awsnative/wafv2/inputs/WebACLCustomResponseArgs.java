@@ -93,32 +93,29 @@ public final class WebACLCustomResponseArgs extends io.pulumi.resources.Resource
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = Output.ofNullable(customResponseBodyKey);
             return this;
         }
-
         public Builder responseCode(Output<Integer> responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Output.of(Objects.requireNonNull(responseCode));
             return this;
         }
-
         public Builder responseHeaders(@Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<WebACLCustomHTTPHeaderArgs> responseHeaders) {
             this.responseHeaders = Output.ofNullable(responseHeaders);
             return this;
         }
-        public WebACLCustomResponseArgs build() {
+        public Builder responseHeaders(WebACLCustomHTTPHeaderArgs... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public WebACLCustomResponseArgs build() {
             return new WebACLCustomResponseArgs(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

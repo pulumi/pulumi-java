@@ -53,8 +53,7 @@ public final class ThemeMarginStyle {
         public Builder show(@Nullable Boolean show) {
             this.show = show;
             return this;
-        }
-        public ThemeMarginStyle build() {
+        }        public ThemeMarginStyle build() {
             return new ThemeMarginStyle(show);
         }
     }

@@ -107,52 +107,42 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
             this.instanceWarmupPeriod = instanceWarmupPeriod;
             return this;
         }
-
         public Builder instanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
             this.instanceWarmupPeriod = Output.ofNullable(instanceWarmupPeriod);
             return this;
         }
-
         public Builder maximumScalingStepSize(@Nullable Output<Integer> maximumScalingStepSize) {
             this.maximumScalingStepSize = maximumScalingStepSize;
             return this;
         }
-
         public Builder maximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
             this.maximumScalingStepSize = Output.ofNullable(maximumScalingStepSize);
             return this;
         }
-
         public Builder minimumScalingStepSize(@Nullable Output<Integer> minimumScalingStepSize) {
             this.minimumScalingStepSize = minimumScalingStepSize;
             return this;
         }
-
         public Builder minimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
             this.minimumScalingStepSize = Output.ofNullable(minimumScalingStepSize);
             return this;
         }
-
         public Builder status(@Nullable Output<CapacityProviderManagedScalingStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable CapacityProviderManagedScalingStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder targetCapacity(@Nullable Output<Integer> targetCapacity) {
             this.targetCapacity = targetCapacity;
             return this;
         }
-
         public Builder targetCapacity(@Nullable Integer targetCapacity) {
             this.targetCapacity = Output.ofNullable(targetCapacity);
             return this;
-        }
-        public CapacityProviderManagedScalingArgs build() {
+        }        public CapacityProviderManagedScalingArgs build() {
             return new CapacityProviderManagedScalingArgs(instanceWarmupPeriod, maximumScalingStepSize, minimumScalingStepSize, status, targetCapacity);
         }
     }

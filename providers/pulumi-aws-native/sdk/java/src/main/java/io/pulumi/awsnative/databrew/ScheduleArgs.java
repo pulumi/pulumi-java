@@ -100,42 +100,40 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.cronExpression = Objects.requireNonNull(cronExpression);
             return this;
         }
-
         public Builder cronExpression(String cronExpression) {
             this.cronExpression = Output.of(Objects.requireNonNull(cronExpression));
             return this;
         }
-
         public Builder jobNames(@Nullable Output<List<String>> jobNames) {
             this.jobNames = jobNames;
             return this;
         }
-
         public Builder jobNames(@Nullable List<String> jobNames) {
             this.jobNames = Output.ofNullable(jobNames);
             return this;
         }
-
+        public Builder jobNames(String... jobNames) {
+            return jobNames(List.of(jobNames));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ScheduleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ScheduleTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ScheduleArgs build() {
+        public Builder tags(ScheduleTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(cronExpression, jobNames, name, tags);
         }
     }

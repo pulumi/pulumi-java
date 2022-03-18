@@ -87,17 +87,14 @@ public final class GetUserHierarchyGroupResult {
             this.instanceArn = instanceArn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder userHierarchyGroupArn(@Nullable String userHierarchyGroupArn) {
             this.userHierarchyGroupArn = userHierarchyGroupArn;
             return this;
-        }
-        public GetUserHierarchyGroupResult build() {
+        }        public GetUserHierarchyGroupResult build() {
             return new GetUserHierarchyGroupResult(instanceArn, name, userHierarchyGroupArn);
         }
     }

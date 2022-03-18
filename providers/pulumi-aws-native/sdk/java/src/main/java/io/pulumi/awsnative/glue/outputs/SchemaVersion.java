@@ -72,12 +72,10 @@ public final class SchemaVersion {
             this.isLatest = isLatest;
             return this;
         }
-
         public Builder versionNumber(@Nullable Integer versionNumber) {
             this.versionNumber = versionNumber;
             return this;
-        }
-        public SchemaVersion build() {
+        }        public SchemaVersion build() {
             return new SchemaVersion(isLatest, versionNumber);
         }
     }

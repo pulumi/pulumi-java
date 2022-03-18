@@ -53,12 +53,10 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
             this.ruleOrder = ruleOrder;
             return this;
         }
-
         public Builder ruleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
             this.ruleOrder = Output.ofNullable(ruleOrder);
             return this;
-        }
-        public RuleGroupStatefulRuleOptionsArgs build() {
+        }        public RuleGroupStatefulRuleOptionsArgs build() {
             return new RuleGroupStatefulRuleOptionsArgs(ruleOrder);
         }
     }

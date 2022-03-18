@@ -71,12 +71,10 @@ public final class GraphTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GraphTag build() {
+        }        public GraphTag build() {
             return new GraphTag(key, value);
         }
     }

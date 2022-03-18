@@ -135,57 +135,55 @@ public final class GetGlobalTableResult {
             this.arn = arn;
             return this;
         }
-
         public Builder attributeDefinitions(@Nullable List<GlobalTableAttributeDefinition> attributeDefinitions) {
             this.attributeDefinitions = attributeDefinitions;
             return this;
         }
-
+        public Builder attributeDefinitions(GlobalTableAttributeDefinition... attributeDefinitions) {
+            return attributeDefinitions(List.of(attributeDefinitions));
+        }
         public Builder billingMode(@Nullable String billingMode) {
             this.billingMode = billingMode;
             return this;
         }
-
         public Builder globalSecondaryIndexes(@Nullable List<GlobalTableGlobalSecondaryIndex> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
-
+        public Builder globalSecondaryIndexes(GlobalTableGlobalSecondaryIndex... globalSecondaryIndexes) {
+            return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
+        }
         public Builder replicas(@Nullable List<GlobalTableReplicaSpecification> replicas) {
             this.replicas = replicas;
             return this;
         }
-
+        public Builder replicas(GlobalTableReplicaSpecification... replicas) {
+            return replicas(List.of(replicas));
+        }
         public Builder sSESpecification(@Nullable GlobalTableSSESpecification sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
-
         public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = streamArn;
             return this;
         }
-
         public Builder streamSpecification(@Nullable GlobalTableStreamSpecification streamSpecification) {
             this.streamSpecification = streamSpecification;
             return this;
         }
-
         public Builder tableId(@Nullable String tableId) {
             this.tableId = tableId;
             return this;
         }
-
         public Builder timeToLiveSpecification(@Nullable GlobalTableTimeToLiveSpecification timeToLiveSpecification) {
             this.timeToLiveSpecification = timeToLiveSpecification;
             return this;
         }
-
         public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
-        }
-        public GetGlobalTableResult build() {
+        }        public GetGlobalTableResult build() {
             return new GetGlobalTableResult(arn, attributeDefinitions, billingMode, globalSecondaryIndexes, replicas, sSESpecification, streamArn, streamSpecification, tableId, timeToLiveSpecification, writeProvisionedThroughputSettings);
         }
     }

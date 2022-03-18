@@ -130,27 +130,25 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
             this.executionRole = executionRole;
             return this;
         }
-
         public Builder jupyterServerAppSettings(@Nullable DomainJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
-
         public Builder kernelGatewayAppSettings(@Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sharingSettings(@Nullable DomainSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
-        }
-        public DomainUserSettings build() {
+        }        public DomainUserSettings build() {
             return new DomainUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
         }
     }

@@ -50,8 +50,7 @@ public final class FlowMarketoSourceProperties extends io.pulumi.resources.Invok
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowMarketoSourceProperties build() {
+        }        public FlowMarketoSourceProperties build() {
             return new FlowMarketoSourceProperties(object);
         }
     }

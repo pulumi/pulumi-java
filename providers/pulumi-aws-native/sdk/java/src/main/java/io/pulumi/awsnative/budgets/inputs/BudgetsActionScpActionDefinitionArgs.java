@@ -66,22 +66,21 @@ public final class BudgetsActionScpActionDefinitionArgs extends io.pulumi.resour
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
-
         public Builder targetIds(Output<List<String>> targetIds) {
             this.targetIds = Objects.requireNonNull(targetIds);
             return this;
         }
-
         public Builder targetIds(List<String> targetIds) {
             this.targetIds = Output.of(Objects.requireNonNull(targetIds));
             return this;
         }
-        public BudgetsActionScpActionDefinitionArgs build() {
+        public Builder targetIds(String... targetIds) {
+            return targetIds(List.of(targetIds));
+        }        public BudgetsActionScpActionDefinitionArgs build() {
             return new BudgetsActionScpActionDefinitionArgs(policyId, targetIds);
         }
     }

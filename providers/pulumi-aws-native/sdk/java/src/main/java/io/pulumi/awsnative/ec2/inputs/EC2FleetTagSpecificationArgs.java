@@ -68,22 +68,21 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable EC2FleetTagSpecificationResourceType resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<EC2FleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<EC2FleetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public EC2FleetTagSpecificationArgs build() {
+        public Builder tags(EC2FleetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public EC2FleetTagSpecificationArgs build() {
             return new EC2FleetTagSpecificationArgs(resourceType, tags);
         }
     }

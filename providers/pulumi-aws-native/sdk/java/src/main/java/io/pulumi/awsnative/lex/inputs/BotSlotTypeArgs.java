@@ -122,62 +122,53 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder externalSourceSetting(@Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting) {
             this.externalSourceSetting = externalSourceSetting;
             return this;
         }
-
         public Builder externalSourceSetting(@Nullable BotExternalSourceSettingArgs externalSourceSetting) {
             this.externalSourceSetting = Output.ofNullable(externalSourceSetting);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parentSlotTypeSignature(@Nullable Output<String> parentSlotTypeSignature) {
             this.parentSlotTypeSignature = parentSlotTypeSignature;
             return this;
         }
-
         public Builder parentSlotTypeSignature(@Nullable String parentSlotTypeSignature) {
             this.parentSlotTypeSignature = Output.ofNullable(parentSlotTypeSignature);
             return this;
         }
-
         public Builder slotTypeValues(@Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues) {
             this.slotTypeValues = slotTypeValues;
             return this;
         }
-
         public Builder slotTypeValues(@Nullable List<BotSlotTypeValueArgs> slotTypeValues) {
             this.slotTypeValues = Output.ofNullable(slotTypeValues);
             return this;
         }
-
+        public Builder slotTypeValues(BotSlotTypeValueArgs... slotTypeValues) {
+            return slotTypeValues(List.of(slotTypeValues));
+        }
         public Builder valueSelectionSetting(@Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting) {
             this.valueSelectionSetting = valueSelectionSetting;
             return this;
         }
-
         public Builder valueSelectionSetting(@Nullable BotSlotValueSelectionSettingArgs valueSelectionSetting) {
             this.valueSelectionSetting = Output.ofNullable(valueSelectionSetting);
             return this;
-        }
-        public BotSlotTypeArgs build() {
+        }        public BotSlotTypeArgs build() {
             return new BotSlotTypeArgs(description, externalSourceSetting, name, parentSlotTypeSignature, slotTypeValues, valueSelectionSetting);
         }
     }

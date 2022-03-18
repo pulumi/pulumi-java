@@ -53,8 +53,7 @@ public final class GetGlobalClusterResult {
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
-        }
-        public GetGlobalClusterResult build() {
+        }        public GetGlobalClusterResult build() {
             return new GetGlobalClusterResult(deletionProtection);
         }
     }

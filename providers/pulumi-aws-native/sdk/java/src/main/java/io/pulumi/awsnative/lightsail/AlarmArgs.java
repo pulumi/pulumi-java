@@ -222,112 +222,96 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
             this.alarmName = alarmName;
             return this;
         }
-
         public Builder alarmName(@Nullable String alarmName) {
             this.alarmName = Output.ofNullable(alarmName);
             return this;
         }
-
         public Builder comparisonOperator(Output<String> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
-
         public Builder contactProtocols(@Nullable Output<List<String>> contactProtocols) {
             this.contactProtocols = contactProtocols;
             return this;
         }
-
         public Builder contactProtocols(@Nullable List<String> contactProtocols) {
             this.contactProtocols = Output.ofNullable(contactProtocols);
             return this;
         }
-
+        public Builder contactProtocols(String... contactProtocols) {
+            return contactProtocols(List.of(contactProtocols));
+        }
         public Builder datapointsToAlarm(@Nullable Output<Integer> datapointsToAlarm) {
             this.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
-
         public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
             this.datapointsToAlarm = Output.ofNullable(datapointsToAlarm);
             return this;
         }
-
         public Builder evaluationPeriods(Output<Integer> evaluationPeriods) {
             this.evaluationPeriods = Objects.requireNonNull(evaluationPeriods);
             return this;
         }
-
         public Builder evaluationPeriods(Integer evaluationPeriods) {
             this.evaluationPeriods = Output.of(Objects.requireNonNull(evaluationPeriods));
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder monitoredResourceName(Output<String> monitoredResourceName) {
             this.monitoredResourceName = Objects.requireNonNull(monitoredResourceName);
             return this;
         }
-
         public Builder monitoredResourceName(String monitoredResourceName) {
             this.monitoredResourceName = Output.of(Objects.requireNonNull(monitoredResourceName));
             return this;
         }
-
         public Builder notificationEnabled(@Nullable Output<Boolean> notificationEnabled) {
             this.notificationEnabled = notificationEnabled;
             return this;
         }
-
         public Builder notificationEnabled(@Nullable Boolean notificationEnabled) {
             this.notificationEnabled = Output.ofNullable(notificationEnabled);
             return this;
         }
-
         public Builder notificationTriggers(@Nullable Output<List<String>> notificationTriggers) {
             this.notificationTriggers = notificationTriggers;
             return this;
         }
-
         public Builder notificationTriggers(@Nullable List<String> notificationTriggers) {
             this.notificationTriggers = Output.ofNullable(notificationTriggers);
             return this;
         }
-
+        public Builder notificationTriggers(String... notificationTriggers) {
+            return notificationTriggers(List.of(notificationTriggers));
+        }
         public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public Builder treatMissingData(@Nullable Output<String> treatMissingData) {
             this.treatMissingData = treatMissingData;
             return this;
         }
-
         public Builder treatMissingData(@Nullable String treatMissingData) {
             this.treatMissingData = Output.ofNullable(treatMissingData);
             return this;
-        }
-        public AlarmArgs build() {
+        }        public AlarmArgs build() {
             return new AlarmArgs(alarmName, comparisonOperator, contactProtocols, datapointsToAlarm, evaluationPeriods, metricName, monitoredResourceName, notificationEnabled, notificationTriggers, threshold, treatMissingData);
         }
     }

@@ -56,12 +56,10 @@ public final class WebACLFieldToMatchSingleQueryArgumentPropertiesArgs extends i
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebACLFieldToMatchSingleQueryArgumentPropertiesArgs build() {
+        }        public WebACLFieldToMatchSingleQueryArgumentPropertiesArgs build() {
             return new WebACLFieldToMatchSingleQueryArgumentPropertiesArgs(name);
         }
     }

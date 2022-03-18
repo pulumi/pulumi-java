@@ -88,17 +88,14 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecification {
             this.configUri = Objects.requireNonNull(configUri);
             return this;
         }
-
         public Builder environment(@Nullable Object environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
-        }
-        public ModelBiasJobDefinitionModelBiasAppSpecification build() {
+        }        public ModelBiasJobDefinitionModelBiasAppSpecification build() {
             return new ModelBiasJobDefinitionModelBiasAppSpecification(configUri, environment, imageUri);
         }
     }

@@ -53,12 +53,10 @@ public final class DeliveryStreamAmazonopensearchserviceRetryOptionsArgs extends
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = Output.ofNullable(durationInSeconds);
             return this;
-        }
-        public DeliveryStreamAmazonopensearchserviceRetryOptionsArgs build() {
+        }        public DeliveryStreamAmazonopensearchserviceRetryOptionsArgs build() {
             return new DeliveryStreamAmazonopensearchserviceRetryOptionsArgs(durationInSeconds);
         }
     }

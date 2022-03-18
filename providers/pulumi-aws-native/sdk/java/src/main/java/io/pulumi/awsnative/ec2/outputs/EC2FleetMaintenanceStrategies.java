@@ -45,8 +45,7 @@ public final class EC2FleetMaintenanceStrategies {
         public Builder capacityRebalance(@Nullable EC2FleetCapacityRebalance capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
-        }
-        public EC2FleetMaintenanceStrategies build() {
+        }        public EC2FleetMaintenanceStrategies build() {
             return new EC2FleetMaintenanceStrategies(capacityRebalance);
         }
     }

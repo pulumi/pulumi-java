@@ -138,62 +138,50 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
             this.adMarkers = adMarkers;
             return this;
         }
-
         public Builder adMarkers(@Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers) {
             this.adMarkers = Output.ofNullable(adMarkers);
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Output<Boolean> includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = Output.ofNullable(includeIframeOnlyStream);
             return this;
         }
-
         public Builder manifestName(@Nullable Output<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Output<Integer> programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = Output.ofNullable(programDateTimeIntervalSeconds);
             return this;
         }
-
         public Builder repeatExtXKey(@Nullable Output<Boolean> repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
-
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             this.repeatExtXKey = Output.ofNullable(repeatExtXKey);
             return this;
         }
-
         public Builder streamSelection(@Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
             this.streamSelection = Output.ofNullable(streamSelection);
             return this;
-        }
-        public PackagingConfigurationHlsManifestArgs build() {
+        }        public PackagingConfigurationHlsManifestArgs build() {
             return new PackagingConfigurationHlsManifestArgs(adMarkers, includeIframeOnlyStream, manifestName, programDateTimeIntervalSeconds, repeatExtXKey, streamSelection);
         }
     }

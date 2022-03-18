@@ -124,52 +124,42 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(AlertActionArgs action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder alertDescription(@Nullable Output<String> alertDescription) {
             this.alertDescription = alertDescription;
             return this;
         }
-
         public Builder alertDescription(@Nullable String alertDescription) {
             this.alertDescription = Output.ofNullable(alertDescription);
             return this;
         }
-
         public Builder alertName(@Nullable Output<String> alertName) {
             this.alertName = alertName;
             return this;
         }
-
         public Builder alertName(@Nullable String alertName) {
             this.alertName = Output.ofNullable(alertName);
             return this;
         }
-
         public Builder alertSensitivityThreshold(Output<Integer> alertSensitivityThreshold) {
             this.alertSensitivityThreshold = Objects.requireNonNull(alertSensitivityThreshold);
             return this;
         }
-
         public Builder alertSensitivityThreshold(Integer alertSensitivityThreshold) {
             this.alertSensitivityThreshold = Output.of(Objects.requireNonNull(alertSensitivityThreshold));
             return this;
         }
-
         public Builder anomalyDetectorArn(Output<String> anomalyDetectorArn) {
             this.anomalyDetectorArn = Objects.requireNonNull(anomalyDetectorArn);
             return this;
         }
-
         public Builder anomalyDetectorArn(String anomalyDetectorArn) {
             this.anomalyDetectorArn = Output.of(Objects.requireNonNull(anomalyDetectorArn));
             return this;
-        }
-        public AlertArgs build() {
+        }        public AlertArgs build() {
             return new AlertArgs(action, alertDescription, alertName, alertSensitivityThreshold, anomalyDetectorArn);
         }
     }

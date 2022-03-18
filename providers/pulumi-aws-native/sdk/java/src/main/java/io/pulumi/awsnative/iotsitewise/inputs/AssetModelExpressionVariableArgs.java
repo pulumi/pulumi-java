@@ -74,22 +74,18 @@ public final class AssetModelExpressionVariableArgs extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(Output<AssetModelVariableValueArgs> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(AssetModelVariableValueArgs value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public AssetModelExpressionVariableArgs build() {
+        }        public AssetModelExpressionVariableArgs build() {
             return new AssetModelExpressionVariableArgs(name, value);
         }
     }

@@ -124,52 +124,45 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
             this.certificateAlternativeNames = certificateAlternativeNames;
             return this;
         }
-
         public Builder certificateAlternativeNames(@Nullable List<String> certificateAlternativeNames) {
             this.certificateAlternativeNames = Output.ofNullable(certificateAlternativeNames);
             return this;
         }
-
+        public Builder certificateAlternativeNames(String... certificateAlternativeNames) {
+            return certificateAlternativeNames(List.of(certificateAlternativeNames));
+        }
         public Builder certificateDomainName(Output<String> certificateDomainName) {
             this.certificateDomainName = Objects.requireNonNull(certificateDomainName);
             return this;
         }
-
         public Builder certificateDomainName(String certificateDomainName) {
             this.certificateDomainName = Output.of(Objects.requireNonNull(certificateDomainName));
             return this;
         }
-
         public Builder certificateName(Output<String> certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
-
         public Builder certificateName(String certificateName) {
             this.certificateName = Output.of(Objects.requireNonNull(certificateName));
             return this;
         }
-
         public Builder isAttached(@Nullable Output<Boolean> isAttached) {
             this.isAttached = isAttached;
             return this;
         }
-
         public Builder isAttached(@Nullable Boolean isAttached) {
             this.isAttached = Output.ofNullable(isAttached);
             return this;
         }
-
         public Builder loadBalancerName(Output<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
-
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
             return this;
-        }
-        public LoadBalancerTlsCertificateArgs build() {
+        }        public LoadBalancerTlsCertificateArgs build() {
             return new LoadBalancerTlsCertificateArgs(certificateAlternativeNames, certificateDomainName, certificateName, isAttached, loadBalancerName);
         }
     }

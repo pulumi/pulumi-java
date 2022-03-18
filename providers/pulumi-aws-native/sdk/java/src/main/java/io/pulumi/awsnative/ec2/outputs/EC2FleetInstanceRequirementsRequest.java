@@ -227,107 +227,107 @@ public final class EC2FleetInstanceRequirementsRequest {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
-
         public Builder acceleratorManufacturers(@Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers) {
             this.acceleratorManufacturers = acceleratorManufacturers;
             return this;
         }
-
+        public Builder acceleratorManufacturers(EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem... acceleratorManufacturers) {
+            return acceleratorManufacturers(List.of(acceleratorManufacturers));
+        }
         public Builder acceleratorNames(@Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames) {
             this.acceleratorNames = acceleratorNames;
             return this;
         }
-
+        public Builder acceleratorNames(EC2FleetInstanceRequirementsRequestAcceleratorNamesItem... acceleratorNames) {
+            return acceleratorNames(List.of(acceleratorNames));
+        }
         public Builder acceleratorTotalMemoryMiB(@Nullable EC2FleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB) {
             this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
             return this;
         }
-
         public Builder acceleratorTypes(@Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes) {
             this.acceleratorTypes = acceleratorTypes;
             return this;
         }
-
+        public Builder acceleratorTypes(EC2FleetInstanceRequirementsRequestAcceleratorTypesItem... acceleratorTypes) {
+            return acceleratorTypes(List.of(acceleratorTypes));
+        }
         public Builder bareMetal(@Nullable EC2FleetInstanceRequirementsRequestBareMetal bareMetal) {
             this.bareMetal = bareMetal;
             return this;
         }
-
         public Builder baselineEbsBandwidthMbps(@Nullable EC2FleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps) {
             this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
             return this;
         }
-
         public Builder burstablePerformance(@Nullable EC2FleetInstanceRequirementsRequestBurstablePerformance burstablePerformance) {
             this.burstablePerformance = burstablePerformance;
             return this;
         }
-
         public Builder cpuManufacturers(@Nullable List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers) {
             this.cpuManufacturers = cpuManufacturers;
             return this;
         }
-
+        public Builder cpuManufacturers(EC2FleetInstanceRequirementsRequestCpuManufacturersItem... cpuManufacturers) {
+            return cpuManufacturers(List.of(cpuManufacturers));
+        }
         public Builder excludedInstanceTypes(@Nullable List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }
-
+        public Builder excludedInstanceTypes(String... excludedInstanceTypes) {
+            return excludedInstanceTypes(List.of(excludedInstanceTypes));
+        }
         public Builder instanceGenerations(@Nullable List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations) {
             this.instanceGenerations = instanceGenerations;
             return this;
         }
-
+        public Builder instanceGenerations(EC2FleetInstanceRequirementsRequestInstanceGenerationsItem... instanceGenerations) {
+            return instanceGenerations(List.of(instanceGenerations));
+        }
         public Builder localStorage(@Nullable EC2FleetInstanceRequirementsRequestLocalStorage localStorage) {
             this.localStorage = localStorage;
             return this;
         }
-
         public Builder localStorageTypes(@Nullable List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes) {
             this.localStorageTypes = localStorageTypes;
             return this;
         }
-
+        public Builder localStorageTypes(EC2FleetInstanceRequirementsRequestLocalStorageTypesItem... localStorageTypes) {
+            return localStorageTypes(List.of(localStorageTypes));
+        }
         public Builder memoryGiBPerVCpu(@Nullable EC2FleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu) {
             this.memoryGiBPerVCpu = memoryGiBPerVCpu;
             return this;
         }
-
         public Builder memoryMiB(@Nullable EC2FleetMemoryMiBRequest memoryMiB) {
             this.memoryMiB = memoryMiB;
             return this;
         }
-
         public Builder networkInterfaceCount(@Nullable EC2FleetNetworkInterfaceCountRequest networkInterfaceCount) {
             this.networkInterfaceCount = networkInterfaceCount;
             return this;
         }
-
         public Builder onDemandMaxPricePercentageOverLowestPrice(@Nullable Integer onDemandMaxPricePercentageOverLowestPrice) {
             this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
             return this;
         }
-
         public Builder requireHibernateSupport(@Nullable Boolean requireHibernateSupport) {
             this.requireHibernateSupport = requireHibernateSupport;
             return this;
         }
-
         public Builder spotMaxPricePercentageOverLowestPrice(@Nullable Integer spotMaxPricePercentageOverLowestPrice) {
             this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
             return this;
         }
-
         public Builder totalLocalStorageGB(@Nullable EC2FleetTotalLocalStorageGBRequest totalLocalStorageGB) {
             this.totalLocalStorageGB = totalLocalStorageGB;
             return this;
         }
-
         public Builder vCpuCount(@Nullable EC2FleetVCpuCountRangeRequest vCpuCount) {
             this.vCpuCount = vCpuCount;
             return this;
-        }
-        public EC2FleetInstanceRequirementsRequest build() {
+        }        public EC2FleetInstanceRequirementsRequest build() {
             return new EC2FleetInstanceRequirementsRequest(acceleratorCount, acceleratorManufacturers, acceleratorNames, acceleratorTotalMemoryMiB, acceleratorTypes, bareMetal, baselineEbsBandwidthMbps, burstablePerformance, cpuManufacturers, excludedInstanceTypes, instanceGenerations, localStorage, localStorageTypes, memoryGiBPerVCpu, memoryMiB, networkInterfaceCount, onDemandMaxPricePercentageOverLowestPrice, requireHibernateSupport, spotMaxPricePercentageOverLowestPrice, totalLocalStorageGB, vCpuCount);
         }
     }

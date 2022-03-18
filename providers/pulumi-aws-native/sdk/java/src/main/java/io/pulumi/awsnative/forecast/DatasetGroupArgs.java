@@ -109,42 +109,40 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetArns = datasetArns;
             return this;
         }
-
         public Builder datasetArns(@Nullable List<String> datasetArns) {
             this.datasetArns = Output.ofNullable(datasetArns);
             return this;
         }
-
+        public Builder datasetArns(String... datasetArns) {
+            return datasetArns(List.of(datasetArns));
+        }
         public Builder datasetGroupName(@Nullable Output<String> datasetGroupName) {
             this.datasetGroupName = datasetGroupName;
             return this;
         }
-
         public Builder datasetGroupName(@Nullable String datasetGroupName) {
             this.datasetGroupName = Output.ofNullable(datasetGroupName);
             return this;
         }
-
         public Builder domain(Output<DatasetGroupDomain> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(DatasetGroupDomain domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DatasetGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DatasetGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DatasetGroupArgs build() {
+        public Builder tags(DatasetGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DatasetGroupArgs build() {
             return new DatasetGroupArgs(datasetArns, datasetGroupName, domain, tags);
         }
     }

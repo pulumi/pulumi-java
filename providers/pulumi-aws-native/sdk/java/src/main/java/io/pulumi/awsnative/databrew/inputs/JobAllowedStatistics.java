@@ -52,7 +52,9 @@ public final class JobAllowedStatistics extends io.pulumi.resources.InvokeArgs {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
-        public JobAllowedStatistics build() {
+        public Builder statistics(String... statistics) {
+            return statistics(List.of(statistics));
+        }        public JobAllowedStatistics build() {
             return new JobAllowedStatistics(statistics);
         }
     }

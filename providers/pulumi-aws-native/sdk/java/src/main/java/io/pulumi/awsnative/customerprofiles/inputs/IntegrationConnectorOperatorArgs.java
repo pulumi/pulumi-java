@@ -106,52 +106,42 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
             this.marketo = marketo;
             return this;
         }
-
         public Builder marketo(@Nullable IntegrationMarketoConnectorOperator marketo) {
             this.marketo = Output.ofNullable(marketo);
             return this;
         }
-
         public Builder s3(@Nullable Output<IntegrationS3ConnectorOperator> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable IntegrationS3ConnectorOperator s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder salesforce(@Nullable Output<IntegrationSalesforceConnectorOperator> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder salesforce(@Nullable IntegrationSalesforceConnectorOperator salesforce) {
             this.salesforce = Output.ofNullable(salesforce);
             return this;
         }
-
         public Builder serviceNow(@Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder serviceNow(@Nullable IntegrationServiceNowConnectorOperator serviceNow) {
             this.serviceNow = Output.ofNullable(serviceNow);
             return this;
         }
-
         public Builder zendesk(@Nullable Output<IntegrationZendeskConnectorOperator> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
-
         public Builder zendesk(@Nullable IntegrationZendeskConnectorOperator zendesk) {
             this.zendesk = Output.ofNullable(zendesk);
             return this;
-        }
-        public IntegrationConnectorOperatorArgs build() {
+        }        public IntegrationConnectorOperatorArgs build() {
             return new IntegrationConnectorOperatorArgs(marketo, s3, salesforce, serviceNow, zendesk);
         }
     }

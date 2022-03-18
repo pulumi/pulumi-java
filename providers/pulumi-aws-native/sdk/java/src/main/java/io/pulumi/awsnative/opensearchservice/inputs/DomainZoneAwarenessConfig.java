@@ -52,8 +52,7 @@ public final class DomainZoneAwarenessConfig extends io.pulumi.resources.InvokeA
         public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
             this.availabilityZoneCount = availabilityZoneCount;
             return this;
-        }
-        public DomainZoneAwarenessConfig build() {
+        }        public DomainZoneAwarenessConfig build() {
             return new DomainZoneAwarenessConfig(availabilityZoneCount);
         }
     }

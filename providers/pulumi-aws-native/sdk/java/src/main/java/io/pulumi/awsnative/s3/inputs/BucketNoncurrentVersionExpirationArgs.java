@@ -78,22 +78,18 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
-
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
             this.newerNoncurrentVersions = Output.ofNullable(newerNoncurrentVersions);
             return this;
         }
-
         public Builder noncurrentDays(Output<Integer> noncurrentDays) {
             this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
             return this;
         }
-
         public Builder noncurrentDays(Integer noncurrentDays) {
             this.noncurrentDays = Output.of(Objects.requireNonNull(noncurrentDays));
             return this;
-        }
-        public BucketNoncurrentVersionExpirationArgs build() {
+        }        public BucketNoncurrentVersionExpirationArgs build() {
             return new BucketNoncurrentVersionExpirationArgs(newerNoncurrentVersions, noncurrentDays);
         }
     }

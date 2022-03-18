@@ -65,17 +65,14 @@ public final class BotFulfillmentCodeHookSetting {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder fulfillmentUpdatesSpecification(@Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification) {
             this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
             return this;
         }
-
         public Builder postFulfillmentStatusSpecification(@Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
             this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
             return this;
-        }
-        public BotFulfillmentCodeHookSetting build() {
+        }        public BotFulfillmentCodeHookSetting build() {
             return new BotFulfillmentCodeHookSetting(enabled, fulfillmentUpdatesSpecification, postFulfillmentStatusSpecification);
         }
     }

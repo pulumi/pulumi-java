@@ -50,8 +50,7 @@ public final class FlowSAPODataSourceProperties extends io.pulumi.resources.Invo
         public Builder objectPath(String objectPath) {
             this.objectPath = Objects.requireNonNull(objectPath);
             return this;
-        }
-        public FlowSAPODataSourceProperties build() {
+        }        public FlowSAPODataSourceProperties build() {
             return new FlowSAPODataSourceProperties(objectPath);
         }
     }

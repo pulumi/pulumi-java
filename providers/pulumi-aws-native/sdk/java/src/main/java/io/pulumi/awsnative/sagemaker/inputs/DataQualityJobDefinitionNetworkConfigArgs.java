@@ -91,32 +91,26 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
-
         public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
             this.enableInterContainerTrafficEncryption = Output.ofNullable(enableInterContainerTrafficEncryption);
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = Output.ofNullable(enableNetworkIsolation);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<DataQualityJobDefinitionVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable DataQualityJobDefinitionVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public DataQualityJobDefinitionNetworkConfigArgs build() {
+        }        public DataQualityJobDefinitionNetworkConfigArgs build() {
             return new DataQualityJobDefinitionNetworkConfigArgs(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }
     }

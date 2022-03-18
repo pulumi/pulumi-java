@@ -104,42 +104,34 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder formatVersion(@Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion) {
             this.formatVersion = formatVersion;
             return this;
         }
-
         public Builder formatVersion(@Nullable DataSetRowLevelPermissionFormatVersion formatVersion) {
             this.formatVersion = Output.ofNullable(formatVersion);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder permissionPolicy(Output<DataSetRowLevelPermissionPolicy> permissionPolicy) {
             this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
             return this;
         }
-
         public Builder permissionPolicy(DataSetRowLevelPermissionPolicy permissionPolicy) {
             this.permissionPolicy = Output.of(Objects.requireNonNull(permissionPolicy));
             return this;
-        }
-        public DataSetRowLevelPermissionDataSetArgs build() {
+        }        public DataSetRowLevelPermissionDataSetArgs build() {
             return new DataSetRowLevelPermissionDataSetArgs(arn, formatVersion, namespace, permissionPolicy);
         }
     }

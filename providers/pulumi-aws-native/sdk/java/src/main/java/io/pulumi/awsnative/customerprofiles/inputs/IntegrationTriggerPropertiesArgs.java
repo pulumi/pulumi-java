@@ -53,12 +53,10 @@ public final class IntegrationTriggerPropertiesArgs extends io.pulumi.resources.
             this.scheduled = scheduled;
             return this;
         }
-
         public Builder scheduled(@Nullable IntegrationScheduledTriggerPropertiesArgs scheduled) {
             this.scheduled = Output.ofNullable(scheduled);
             return this;
-        }
-        public IntegrationTriggerPropertiesArgs build() {
+        }        public IntegrationTriggerPropertiesArgs build() {
             return new IntegrationTriggerPropertiesArgs(scheduled);
         }
     }

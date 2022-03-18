@@ -61,12 +61,10 @@ public final class ThemeMarginStyleArgs extends io.pulumi.resources.ResourceArgs
             this.show = show;
             return this;
         }
-
         public Builder show(@Nullable Boolean show) {
             this.show = Output.ofNullable(show);
             return this;
-        }
-        public ThemeMarginStyleArgs build() {
+        }        public ThemeMarginStyleArgs build() {
             return new ThemeMarginStyleArgs(show);
         }
     }

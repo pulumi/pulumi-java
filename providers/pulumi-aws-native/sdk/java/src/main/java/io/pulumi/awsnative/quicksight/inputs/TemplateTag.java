@@ -77,12 +77,10 @@ public final class TemplateTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TemplateTag build() {
+        }        public TemplateTag build() {
             return new TemplateTag(key, value);
         }
     }

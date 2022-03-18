@@ -91,32 +91,29 @@ public final class GetExperimentTemplateResult {
             this.actions = actions;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder stopConditions(@Nullable List<ExperimentTemplateStopCondition> stopConditions) {
             this.stopConditions = stopConditions;
             return this;
         }
-
+        public Builder stopConditions(ExperimentTemplateStopCondition... stopConditions) {
+            return stopConditions(List.of(stopConditions));
+        }
         public Builder targets(@Nullable ExperimentTemplateTargetMap targets) {
             this.targets = targets;
             return this;
-        }
-        public GetExperimentTemplateResult build() {
+        }        public GetExperimentTemplateResult build() {
             return new GetExperimentTemplateResult(actions, description, id, roleArn, stopConditions, targets);
         }
     }

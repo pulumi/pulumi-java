@@ -71,12 +71,10 @@ public final class WebACLOverrideAction {
             this.count = count;
             return this;
         }
-
         public Builder none(@Nullable Object none) {
             this.none = none;
             return this;
-        }
-        public WebACLOverrideAction build() {
+        }        public WebACLOverrideAction build() {
             return new WebACLOverrideAction(count, none);
         }
     }

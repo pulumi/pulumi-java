@@ -54,8 +54,7 @@ public final class GetClientCertificateArgs extends io.pulumi.resources.InvokeAr
         public Builder clientCertificateId(String clientCertificateId) {
             this.clientCertificateId = Objects.requireNonNull(clientCertificateId);
             return this;
-        }
-        public GetClientCertificateArgs build() {
+        }        public GetClientCertificateArgs build() {
             return new GetClientCertificateArgs(clientCertificateId);
         }
     }

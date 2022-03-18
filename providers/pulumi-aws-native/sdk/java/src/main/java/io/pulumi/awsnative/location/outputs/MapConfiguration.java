@@ -43,8 +43,7 @@ public final class MapConfiguration {
         public Builder style(String style) {
             this.style = Objects.requireNonNull(style);
             return this;
-        }
-        public MapConfiguration build() {
+        }        public MapConfiguration build() {
             return new MapConfiguration(style);
         }
     }

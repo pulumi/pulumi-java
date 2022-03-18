@@ -217,132 +217,121 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dialogCodeHook(@Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
-
         public Builder dialogCodeHook(@Nullable BotDialogCodeHookSettingArgs dialogCodeHook) {
             this.dialogCodeHook = Output.ofNullable(dialogCodeHook);
             return this;
         }
-
         public Builder fulfillmentCodeHook(@Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook) {
             this.fulfillmentCodeHook = fulfillmentCodeHook;
             return this;
         }
-
         public Builder fulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSettingArgs fulfillmentCodeHook) {
             this.fulfillmentCodeHook = Output.ofNullable(fulfillmentCodeHook);
             return this;
         }
-
         public Builder inputContexts(@Nullable Output<List<BotInputContextArgs>> inputContexts) {
             this.inputContexts = inputContexts;
             return this;
         }
-
         public Builder inputContexts(@Nullable List<BotInputContextArgs> inputContexts) {
             this.inputContexts = Output.ofNullable(inputContexts);
             return this;
         }
-
+        public Builder inputContexts(BotInputContextArgs... inputContexts) {
+            return inputContexts(List.of(inputContexts));
+        }
         public Builder intentClosingSetting(@Nullable Output<BotIntentClosingSettingArgs> intentClosingSetting) {
             this.intentClosingSetting = intentClosingSetting;
             return this;
         }
-
         public Builder intentClosingSetting(@Nullable BotIntentClosingSettingArgs intentClosingSetting) {
             this.intentClosingSetting = Output.ofNullable(intentClosingSetting);
             return this;
         }
-
         public Builder intentConfirmationSetting(@Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting) {
             this.intentConfirmationSetting = intentConfirmationSetting;
             return this;
         }
-
         public Builder intentConfirmationSetting(@Nullable BotIntentConfirmationSettingArgs intentConfirmationSetting) {
             this.intentConfirmationSetting = Output.ofNullable(intentConfirmationSetting);
             return this;
         }
-
         public Builder kendraConfiguration(@Nullable Output<BotKendraConfigurationArgs> kendraConfiguration) {
             this.kendraConfiguration = kendraConfiguration;
             return this;
         }
-
         public Builder kendraConfiguration(@Nullable BotKendraConfigurationArgs kendraConfiguration) {
             this.kendraConfiguration = Output.ofNullable(kendraConfiguration);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder outputContexts(@Nullable Output<List<BotOutputContextArgs>> outputContexts) {
             this.outputContexts = outputContexts;
             return this;
         }
-
         public Builder outputContexts(@Nullable List<BotOutputContextArgs> outputContexts) {
             this.outputContexts = Output.ofNullable(outputContexts);
             return this;
         }
-
+        public Builder outputContexts(BotOutputContextArgs... outputContexts) {
+            return outputContexts(List.of(outputContexts));
+        }
         public Builder parentIntentSignature(@Nullable Output<String> parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
-
         public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
             this.parentIntentSignature = Output.ofNullable(parentIntentSignature);
             return this;
         }
-
         public Builder sampleUtterances(@Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
-
         public Builder sampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
             this.sampleUtterances = Output.ofNullable(sampleUtterances);
             return this;
         }
-
+        public Builder sampleUtterances(BotSampleUtteranceArgs... sampleUtterances) {
+            return sampleUtterances(List.of(sampleUtterances));
+        }
         public Builder slotPriorities(@Nullable Output<List<BotSlotPriorityArgs>> slotPriorities) {
             this.slotPriorities = slotPriorities;
             return this;
         }
-
         public Builder slotPriorities(@Nullable List<BotSlotPriorityArgs> slotPriorities) {
             this.slotPriorities = Output.ofNullable(slotPriorities);
             return this;
         }
-
+        public Builder slotPriorities(BotSlotPriorityArgs... slotPriorities) {
+            return slotPriorities(List.of(slotPriorities));
+        }
         public Builder slots(@Nullable Output<List<BotSlotArgs>> slots) {
             this.slots = slots;
             return this;
         }
-
         public Builder slots(@Nullable List<BotSlotArgs> slots) {
             this.slots = Output.ofNullable(slots);
             return this;
         }
-        public BotIntentArgs build() {
+        public Builder slots(BotSlotArgs... slots) {
+            return slots(List.of(slots));
+        }        public BotIntentArgs build() {
             return new BotIntentArgs(description, dialogCodeHook, fulfillmentCodeHook, inputContexts, intentClosingSetting, intentConfirmationSetting, kendraConfiguration, name, outputContexts, parentIntentSignature, sampleUtterances, slotPriorities, slots);
         }
     }

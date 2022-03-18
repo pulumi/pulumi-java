@@ -54,7 +54,9 @@ public final class DataSourceConfluencePageConfiguration extends io.pulumi.resou
             this.pageFieldMappings = pageFieldMappings;
             return this;
         }
-        public DataSourceConfluencePageConfiguration build() {
+        public Builder pageFieldMappings(DataSourceConfluencePageToIndexFieldMapping... pageFieldMappings) {
+            return pageFieldMappings(List.of(pageFieldMappings));
+        }        public DataSourceConfluencePageConfiguration build() {
             return new DataSourceConfluencePageConfiguration(pageFieldMappings);
         }
     }

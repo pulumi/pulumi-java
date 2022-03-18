@@ -52,12 +52,10 @@ public final class DatasetTriggeringDatasetArgs extends io.pulumi.resources.Reso
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
-
         public Builder datasetName(String datasetName) {
             this.datasetName = Output.of(Objects.requireNonNull(datasetName));
             return this;
-        }
-        public DatasetTriggeringDatasetArgs build() {
+        }        public DatasetTriggeringDatasetArgs build() {
             return new DatasetTriggeringDatasetArgs(datasetName);
         }
     }

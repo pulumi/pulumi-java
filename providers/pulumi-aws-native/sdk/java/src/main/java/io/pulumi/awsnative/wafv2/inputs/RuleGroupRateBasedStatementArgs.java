@@ -93,42 +93,34 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
-
         public Builder aggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
             this.aggregateKeyType = Output.of(Objects.requireNonNull(aggregateKeyType));
             return this;
         }
-
         public Builder forwardedIPConfig(@Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-
         public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
             this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
             return this;
         }
-
         public Builder limit(Output<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder limit(Integer limit) {
             this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable Output<RuleGroupStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable RuleGroupStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
             return this;
-        }
-        public RuleGroupRateBasedStatementArgs build() {
+        }        public RuleGroupRateBasedStatementArgs build() {
             return new RuleGroupRateBasedStatementArgs(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
         }
     }

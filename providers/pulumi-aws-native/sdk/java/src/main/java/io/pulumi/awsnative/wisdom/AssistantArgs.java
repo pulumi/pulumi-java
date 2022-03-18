@@ -106,52 +106,45 @@ public final class AssistantArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable AssistantServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AssistantTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AssistantTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(AssistantTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(Output<AssistantType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(AssistantType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AssistantArgs build() {
+        }        public AssistantArgs build() {
             return new AssistantArgs(description, name, serverSideEncryptionConfiguration, tags, type);
         }
     }

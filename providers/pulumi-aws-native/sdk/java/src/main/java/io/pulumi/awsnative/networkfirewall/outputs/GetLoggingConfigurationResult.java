@@ -45,8 +45,7 @@ public final class GetLoggingConfigurationResult {
         public Builder loggingConfiguration(@Nullable LoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
-        }
-        public GetLoggingConfigurationResult build() {
+        }        public GetLoggingConfigurationResult build() {
             return new GetLoggingConfigurationResult(loggingConfiguration);
         }
     }

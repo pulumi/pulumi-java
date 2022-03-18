@@ -50,8 +50,7 @@ public final class DeliveryStreamKMSEncryptionConfig extends io.pulumi.resources
         public Builder aWSKMSKeyARN(String aWSKMSKeyARN) {
             this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN);
             return this;
-        }
-        public DeliveryStreamKMSEncryptionConfig build() {
+        }        public DeliveryStreamKMSEncryptionConfig build() {
             return new DeliveryStreamKMSEncryptionConfig(aWSKMSKeyARN);
         }
     }

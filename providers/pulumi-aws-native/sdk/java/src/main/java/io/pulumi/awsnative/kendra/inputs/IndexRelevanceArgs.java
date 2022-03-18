@@ -107,52 +107,45 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder freshness(@Nullable Output<Boolean> freshness) {
             this.freshness = freshness;
             return this;
         }
-
         public Builder freshness(@Nullable Boolean freshness) {
             this.freshness = Output.ofNullable(freshness);
             return this;
         }
-
         public Builder importance(@Nullable Output<Integer> importance) {
             this.importance = importance;
             return this;
         }
-
         public Builder importance(@Nullable Integer importance) {
             this.importance = Output.ofNullable(importance);
             return this;
         }
-
         public Builder rankOrder(@Nullable Output<IndexOrder> rankOrder) {
             this.rankOrder = rankOrder;
             return this;
         }
-
         public Builder rankOrder(@Nullable IndexOrder rankOrder) {
             this.rankOrder = Output.ofNullable(rankOrder);
             return this;
         }
-
         public Builder valueImportanceItems(@Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
             this.valueImportanceItems = valueImportanceItems;
             return this;
         }
-
         public Builder valueImportanceItems(@Nullable List<IndexValueImportanceItemArgs> valueImportanceItems) {
             this.valueImportanceItems = Output.ofNullable(valueImportanceItems);
             return this;
         }
-        public IndexRelevanceArgs build() {
+        public Builder valueImportanceItems(IndexValueImportanceItemArgs... valueImportanceItems) {
+            return valueImportanceItems(List.of(valueImportanceItems));
+        }        public IndexRelevanceArgs build() {
             return new IndexRelevanceArgs(duration, freshness, importance, rankOrder, valueImportanceItems);
         }
     }

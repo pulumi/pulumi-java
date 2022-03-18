@@ -56,12 +56,10 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
             this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
             return this;
         }
-
         public Builder lambdaCodeHook(BotAliasLambdaCodeHookArgs lambdaCodeHook) {
             this.lambdaCodeHook = Output.of(Objects.requireNonNull(lambdaCodeHook));
             return this;
-        }
-        public BotAliasCodeHookSpecificationArgs build() {
+        }        public BotAliasCodeHookSpecificationArgs build() {
             return new BotAliasCodeHookSpecificationArgs(lambdaCodeHook);
         }
     }

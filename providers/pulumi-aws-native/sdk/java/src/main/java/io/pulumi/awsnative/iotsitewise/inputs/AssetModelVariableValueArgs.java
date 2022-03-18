@@ -66,22 +66,18 @@ public final class AssetModelVariableValueArgs extends io.pulumi.resources.Resou
             this.hierarchyLogicalId = hierarchyLogicalId;
             return this;
         }
-
         public Builder hierarchyLogicalId(@Nullable String hierarchyLogicalId) {
             this.hierarchyLogicalId = Output.ofNullable(hierarchyLogicalId);
             return this;
         }
-
         public Builder propertyLogicalId(Output<String> propertyLogicalId) {
             this.propertyLogicalId = Objects.requireNonNull(propertyLogicalId);
             return this;
         }
-
         public Builder propertyLogicalId(String propertyLogicalId) {
             this.propertyLogicalId = Output.of(Objects.requireNonNull(propertyLogicalId));
             return this;
-        }
-        public AssetModelVariableValueArgs build() {
+        }        public AssetModelVariableValueArgs build() {
             return new AssetModelVariableValueArgs(hierarchyLogicalId, propertyLogicalId);
         }
     }

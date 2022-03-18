@@ -57,12 +57,13 @@ public final class GetActivityResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<ActivityTagsEntry> tags) {
             this.tags = tags;
             return this;
         }
-        public GetActivityResult build() {
+        public Builder tags(ActivityTagsEntry... tags) {
+            return tags(List.of(tags));
+        }        public GetActivityResult build() {
             return new GetActivityResult(arn, tags);
         }
     }

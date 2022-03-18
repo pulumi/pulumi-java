@@ -126,52 +126,48 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder status(Output<BucketIntelligentTieringConfigurationStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(BucketIntelligentTieringConfigurationStatus status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder tagFilters(@Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
             this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
-
+        public Builder tagFilters(BucketTagFilterArgs... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }
         public Builder tierings(Output<List<BucketTieringArgs>> tierings) {
             this.tierings = Objects.requireNonNull(tierings);
             return this;
         }
-
         public Builder tierings(List<BucketTieringArgs> tierings) {
             this.tierings = Output.of(Objects.requireNonNull(tierings));
             return this;
         }
-        public BucketIntelligentTieringConfigurationArgs build() {
+        public Builder tierings(BucketTieringArgs... tierings) {
+            return tierings(List.of(tierings));
+        }        public BucketIntelligentTieringConfigurationArgs build() {
             return new BucketIntelligentTieringConfigurationArgs(id, prefix, status, tagFilters, tierings);
         }
     }

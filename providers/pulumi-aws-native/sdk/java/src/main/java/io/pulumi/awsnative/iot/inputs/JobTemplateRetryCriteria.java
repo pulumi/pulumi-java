@@ -71,12 +71,10 @@ public final class JobTemplateRetryCriteria extends io.pulumi.resources.InvokeAr
             this.failureType = failureType;
             return this;
         }
-
         public Builder numberOfRetries(@Nullable Integer numberOfRetries) {
             this.numberOfRetries = numberOfRetries;
             return this;
-        }
-        public JobTemplateRetryCriteria build() {
+        }        public JobTemplateRetryCriteria build() {
             return new JobTemplateRetryCriteria(failureType, numberOfRetries);
         }
     }

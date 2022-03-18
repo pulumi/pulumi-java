@@ -70,12 +70,13 @@ public final class LocationEFSEc2Config {
             this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
             return this;
         }
-
+        public Builder securityGroupArns(String... securityGroupArns) {
+            return securityGroupArns(List.of(securityGroupArns));
+        }
         public Builder subnetArn(String subnetArn) {
             this.subnetArn = Objects.requireNonNull(subnetArn);
             return this;
-        }
-        public LocationEFSEc2Config build() {
+        }        public LocationEFSEc2Config build() {
             return new LocationEFSEc2Config(securityGroupArns, subnetArn);
         }
     }

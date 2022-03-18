@@ -45,8 +45,7 @@ public final class ApplicationInstanceManifestPayload {
         public Builder payloadData(@Nullable String payloadData) {
             this.payloadData = payloadData;
             return this;
-        }
-        public ApplicationInstanceManifestPayload build() {
+        }        public ApplicationInstanceManifestPayload build() {
             return new ApplicationInstanceManifestPayload(payloadData);
         }
     }

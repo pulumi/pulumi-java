@@ -53,12 +53,10 @@ public final class TransitGatewayVpcAttachmentTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TransitGatewayVpcAttachmentTag build() {
+        }        public TransitGatewayVpcAttachmentTag build() {
             return new TransitGatewayVpcAttachmentTag(key, value);
         }
     }

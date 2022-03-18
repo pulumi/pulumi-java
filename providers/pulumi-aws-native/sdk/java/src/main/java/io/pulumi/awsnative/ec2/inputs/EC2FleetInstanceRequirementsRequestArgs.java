@@ -314,212 +314,191 @@ public final class EC2FleetInstanceRequirementsRequestArgs extends io.pulumi.res
             this.acceleratorCount = acceleratorCount;
             return this;
         }
-
         public Builder acceleratorCount(@Nullable EC2FleetAcceleratorCountRequestArgs acceleratorCount) {
             this.acceleratorCount = Output.ofNullable(acceleratorCount);
             return this;
         }
-
         public Builder acceleratorManufacturers(@Nullable Output<List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers) {
             this.acceleratorManufacturers = acceleratorManufacturers;
             return this;
         }
-
         public Builder acceleratorManufacturers(@Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers) {
             this.acceleratorManufacturers = Output.ofNullable(acceleratorManufacturers);
             return this;
         }
-
+        public Builder acceleratorManufacturers(EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem... acceleratorManufacturers) {
+            return acceleratorManufacturers(List.of(acceleratorManufacturers));
+        }
         public Builder acceleratorNames(@Nullable Output<List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames) {
             this.acceleratorNames = acceleratorNames;
             return this;
         }
-
         public Builder acceleratorNames(@Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames) {
             this.acceleratorNames = Output.ofNullable(acceleratorNames);
             return this;
         }
-
+        public Builder acceleratorNames(EC2FleetInstanceRequirementsRequestAcceleratorNamesItem... acceleratorNames) {
+            return acceleratorNames(List.of(acceleratorNames));
+        }
         public Builder acceleratorTotalMemoryMiB(@Nullable Output<EC2FleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB) {
             this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
             return this;
         }
-
         public Builder acceleratorTotalMemoryMiB(@Nullable EC2FleetAcceleratorTotalMemoryMiBRequestArgs acceleratorTotalMemoryMiB) {
             this.acceleratorTotalMemoryMiB = Output.ofNullable(acceleratorTotalMemoryMiB);
             return this;
         }
-
         public Builder acceleratorTypes(@Nullable Output<List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes) {
             this.acceleratorTypes = acceleratorTypes;
             return this;
         }
-
         public Builder acceleratorTypes(@Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes) {
             this.acceleratorTypes = Output.ofNullable(acceleratorTypes);
             return this;
         }
-
+        public Builder acceleratorTypes(EC2FleetInstanceRequirementsRequestAcceleratorTypesItem... acceleratorTypes) {
+            return acceleratorTypes(List.of(acceleratorTypes));
+        }
         public Builder bareMetal(@Nullable Output<EC2FleetInstanceRequirementsRequestBareMetal> bareMetal) {
             this.bareMetal = bareMetal;
             return this;
         }
-
         public Builder bareMetal(@Nullable EC2FleetInstanceRequirementsRequestBareMetal bareMetal) {
             this.bareMetal = Output.ofNullable(bareMetal);
             return this;
         }
-
         public Builder baselineEbsBandwidthMbps(@Nullable Output<EC2FleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps) {
             this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
             return this;
         }
-
         public Builder baselineEbsBandwidthMbps(@Nullable EC2FleetBaselineEbsBandwidthMbpsRequestArgs baselineEbsBandwidthMbps) {
             this.baselineEbsBandwidthMbps = Output.ofNullable(baselineEbsBandwidthMbps);
             return this;
         }
-
         public Builder burstablePerformance(@Nullable Output<EC2FleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance) {
             this.burstablePerformance = burstablePerformance;
             return this;
         }
-
         public Builder burstablePerformance(@Nullable EC2FleetInstanceRequirementsRequestBurstablePerformance burstablePerformance) {
             this.burstablePerformance = Output.ofNullable(burstablePerformance);
             return this;
         }
-
         public Builder cpuManufacturers(@Nullable Output<List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers) {
             this.cpuManufacturers = cpuManufacturers;
             return this;
         }
-
         public Builder cpuManufacturers(@Nullable List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers) {
             this.cpuManufacturers = Output.ofNullable(cpuManufacturers);
             return this;
         }
-
+        public Builder cpuManufacturers(EC2FleetInstanceRequirementsRequestCpuManufacturersItem... cpuManufacturers) {
+            return cpuManufacturers(List.of(cpuManufacturers));
+        }
         public Builder excludedInstanceTypes(@Nullable Output<List<String>> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }
-
         public Builder excludedInstanceTypes(@Nullable List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = Output.ofNullable(excludedInstanceTypes);
             return this;
         }
-
+        public Builder excludedInstanceTypes(String... excludedInstanceTypes) {
+            return excludedInstanceTypes(List.of(excludedInstanceTypes));
+        }
         public Builder instanceGenerations(@Nullable Output<List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations) {
             this.instanceGenerations = instanceGenerations;
             return this;
         }
-
         public Builder instanceGenerations(@Nullable List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations) {
             this.instanceGenerations = Output.ofNullable(instanceGenerations);
             return this;
         }
-
+        public Builder instanceGenerations(EC2FleetInstanceRequirementsRequestInstanceGenerationsItem... instanceGenerations) {
+            return instanceGenerations(List.of(instanceGenerations));
+        }
         public Builder localStorage(@Nullable Output<EC2FleetInstanceRequirementsRequestLocalStorage> localStorage) {
             this.localStorage = localStorage;
             return this;
         }
-
         public Builder localStorage(@Nullable EC2FleetInstanceRequirementsRequestLocalStorage localStorage) {
             this.localStorage = Output.ofNullable(localStorage);
             return this;
         }
-
         public Builder localStorageTypes(@Nullable Output<List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes) {
             this.localStorageTypes = localStorageTypes;
             return this;
         }
-
         public Builder localStorageTypes(@Nullable List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes) {
             this.localStorageTypes = Output.ofNullable(localStorageTypes);
             return this;
         }
-
+        public Builder localStorageTypes(EC2FleetInstanceRequirementsRequestLocalStorageTypesItem... localStorageTypes) {
+            return localStorageTypes(List.of(localStorageTypes));
+        }
         public Builder memoryGiBPerVCpu(@Nullable Output<EC2FleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu) {
             this.memoryGiBPerVCpu = memoryGiBPerVCpu;
             return this;
         }
-
         public Builder memoryGiBPerVCpu(@Nullable EC2FleetMemoryGiBPerVCpuRequestArgs memoryGiBPerVCpu) {
             this.memoryGiBPerVCpu = Output.ofNullable(memoryGiBPerVCpu);
             return this;
         }
-
         public Builder memoryMiB(@Nullable Output<EC2FleetMemoryMiBRequestArgs> memoryMiB) {
             this.memoryMiB = memoryMiB;
             return this;
         }
-
         public Builder memoryMiB(@Nullable EC2FleetMemoryMiBRequestArgs memoryMiB) {
             this.memoryMiB = Output.ofNullable(memoryMiB);
             return this;
         }
-
         public Builder networkInterfaceCount(@Nullable Output<EC2FleetNetworkInterfaceCountRequestArgs> networkInterfaceCount) {
             this.networkInterfaceCount = networkInterfaceCount;
             return this;
         }
-
         public Builder networkInterfaceCount(@Nullable EC2FleetNetworkInterfaceCountRequestArgs networkInterfaceCount) {
             this.networkInterfaceCount = Output.ofNullable(networkInterfaceCount);
             return this;
         }
-
         public Builder onDemandMaxPricePercentageOverLowestPrice(@Nullable Output<Integer> onDemandMaxPricePercentageOverLowestPrice) {
             this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
             return this;
         }
-
         public Builder onDemandMaxPricePercentageOverLowestPrice(@Nullable Integer onDemandMaxPricePercentageOverLowestPrice) {
             this.onDemandMaxPricePercentageOverLowestPrice = Output.ofNullable(onDemandMaxPricePercentageOverLowestPrice);
             return this;
         }
-
         public Builder requireHibernateSupport(@Nullable Output<Boolean> requireHibernateSupport) {
             this.requireHibernateSupport = requireHibernateSupport;
             return this;
         }
-
         public Builder requireHibernateSupport(@Nullable Boolean requireHibernateSupport) {
             this.requireHibernateSupport = Output.ofNullable(requireHibernateSupport);
             return this;
         }
-
         public Builder spotMaxPricePercentageOverLowestPrice(@Nullable Output<Integer> spotMaxPricePercentageOverLowestPrice) {
             this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
             return this;
         }
-
         public Builder spotMaxPricePercentageOverLowestPrice(@Nullable Integer spotMaxPricePercentageOverLowestPrice) {
             this.spotMaxPricePercentageOverLowestPrice = Output.ofNullable(spotMaxPricePercentageOverLowestPrice);
             return this;
         }
-
         public Builder totalLocalStorageGB(@Nullable Output<EC2FleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB) {
             this.totalLocalStorageGB = totalLocalStorageGB;
             return this;
         }
-
         public Builder totalLocalStorageGB(@Nullable EC2FleetTotalLocalStorageGBRequestArgs totalLocalStorageGB) {
             this.totalLocalStorageGB = Output.ofNullable(totalLocalStorageGB);
             return this;
         }
-
         public Builder vCpuCount(@Nullable Output<EC2FleetVCpuCountRangeRequestArgs> vCpuCount) {
             this.vCpuCount = vCpuCount;
             return this;
         }
-
         public Builder vCpuCount(@Nullable EC2FleetVCpuCountRangeRequestArgs vCpuCount) {
             this.vCpuCount = Output.ofNullable(vCpuCount);
             return this;
-        }
-        public EC2FleetInstanceRequirementsRequestArgs build() {
+        }        public EC2FleetInstanceRequirementsRequestArgs build() {
             return new EC2FleetInstanceRequirementsRequestArgs(acceleratorCount, acceleratorManufacturers, acceleratorNames, acceleratorTotalMemoryMiB, acceleratorTypes, bareMetal, baselineEbsBandwidthMbps, burstablePerformance, cpuManufacturers, excludedInstanceTypes, instanceGenerations, localStorage, localStorageTypes, memoryGiBPerVCpu, memoryMiB, networkInterfaceCount, onDemandMaxPricePercentageOverLowestPrice, requireHibernateSupport, spotMaxPricePercentageOverLowestPrice, totalLocalStorageGB, vCpuCount);
         }
     }

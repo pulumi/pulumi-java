@@ -50,8 +50,7 @@ public final class WebACLLabel extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebACLLabel build() {
+        }        public WebACLLabel build() {
             return new WebACLLabel(name);
         }
     }

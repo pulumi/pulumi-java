@@ -154,42 +154,34 @@ public final class RuleGroupFieldToMatch {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder body(@Nullable Object body) {
             this.body = body;
             return this;
         }
-
         public Builder jsonBody(@Nullable RuleGroupJsonBody jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
-
         public Builder method(@Nullable Object method) {
             this.method = method;
             return this;
         }
-
         public Builder queryString(@Nullable Object queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder singleHeader(@Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = uriPath;
             return this;
-        }
-        public RuleGroupFieldToMatch build() {
+        }        public RuleGroupFieldToMatch build() {
             return new RuleGroupFieldToMatch(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

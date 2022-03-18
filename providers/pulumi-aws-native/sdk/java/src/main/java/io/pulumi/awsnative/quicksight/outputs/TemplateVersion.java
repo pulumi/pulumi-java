@@ -187,47 +187,47 @@ public final class TemplateVersion {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder dataSetConfigurations(@Nullable List<TemplateDataSetConfiguration> dataSetConfigurations) {
             this.dataSetConfigurations = dataSetConfigurations;
             return this;
         }
-
+        public Builder dataSetConfigurations(TemplateDataSetConfiguration... dataSetConfigurations) {
+            return dataSetConfigurations(List.of(dataSetConfigurations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder errors(@Nullable List<TemplateError> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(TemplateError... errors) {
+            return errors(List.of(errors));
+        }
         public Builder sheets(@Nullable List<TemplateSheet> sheets) {
             this.sheets = sheets;
             return this;
         }
-
+        public Builder sheets(TemplateSheet... sheets) {
+            return sheets(List.of(sheets));
+        }
         public Builder sourceEntityArn(@Nullable String sourceEntityArn) {
             this.sourceEntityArn = sourceEntityArn;
             return this;
         }
-
         public Builder status(@Nullable TemplateResourceStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = themeArn;
             return this;
         }
-
         public Builder versionNumber(@Nullable Double versionNumber) {
             this.versionNumber = versionNumber;
             return this;
-        }
-        public TemplateVersion build() {
+        }        public TemplateVersion build() {
             return new TemplateVersion(createdTime, dataSetConfigurations, description, errors, sheets, sourceEntityArn, status, themeArn, versionNumber);
         }
     }

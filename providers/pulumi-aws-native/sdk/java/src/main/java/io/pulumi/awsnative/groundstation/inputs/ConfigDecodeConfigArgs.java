@@ -53,12 +53,10 @@ public final class ConfigDecodeConfigArgs extends io.pulumi.resources.ResourceAr
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
         }
-
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
             this.unvalidatedJSON = Output.ofNullable(unvalidatedJSON);
             return this;
-        }
-        public ConfigDecodeConfigArgs build() {
+        }        public ConfigDecodeConfigArgs build() {
             return new ConfigDecodeConfigArgs(unvalidatedJSON);
         }
     }

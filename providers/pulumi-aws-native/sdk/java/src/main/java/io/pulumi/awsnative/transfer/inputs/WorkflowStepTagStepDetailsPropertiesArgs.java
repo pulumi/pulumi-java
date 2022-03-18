@@ -80,22 +80,21 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<WorkflowS3TagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<WorkflowS3TagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public WorkflowStepTagStepDetailsPropertiesArgs build() {
+        public Builder tags(WorkflowS3TagArgs... tags) {
+            return tags(List.of(tags));
+        }        public WorkflowStepTagStepDetailsPropertiesArgs build() {
             return new WorkflowStepTagStepDetailsPropertiesArgs(name, tags);
         }
     }

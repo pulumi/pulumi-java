@@ -123,52 +123,42 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder hostedZoneArn(@Nullable Output<String> hostedZoneArn) {
             this.hostedZoneArn = hostedZoneArn;
             return this;
         }
-
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
             this.hostedZoneArn = Output.ofNullable(hostedZoneArn);
             return this;
         }
-
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
-
         public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = Output.ofNullable(recordSetId);
             return this;
         }
-
         public Builder recordType(@Nullable Output<String> recordType) {
             this.recordType = recordType;
             return this;
         }
-
         public Builder recordType(@Nullable String recordType) {
             this.recordType = Output.ofNullable(recordType);
             return this;
         }
-
         public Builder targetResource(@Nullable Output<ResourceSetTargetResourceArgs> targetResource) {
             this.targetResource = targetResource;
             return this;
         }
-
         public Builder targetResource(@Nullable ResourceSetTargetResourceArgs targetResource) {
             this.targetResource = Output.ofNullable(targetResource);
             return this;
-        }
-        public ResourceSetDNSTargetResourceArgs build() {
+        }        public ResourceSetDNSTargetResourceArgs build() {
             return new ResourceSetDNSTargetResourceArgs(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
         }
     }

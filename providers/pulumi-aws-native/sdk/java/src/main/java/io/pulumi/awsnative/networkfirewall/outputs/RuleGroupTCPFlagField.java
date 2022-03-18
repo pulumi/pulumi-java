@@ -55,12 +55,16 @@ public final class RuleGroupTCPFlagField {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
-
+        public Builder flags(RuleGroupTCPFlag... flags) {
+            return flags(List.of(flags));
+        }
         public Builder masks(@Nullable List<RuleGroupTCPFlag> masks) {
             this.masks = masks;
             return this;
         }
-        public RuleGroupTCPFlagField build() {
+        public Builder masks(RuleGroupTCPFlag... masks) {
+            return masks(List.of(masks));
+        }        public RuleGroupTCPFlagField build() {
             return new RuleGroupTCPFlagField(flags, masks);
         }
     }

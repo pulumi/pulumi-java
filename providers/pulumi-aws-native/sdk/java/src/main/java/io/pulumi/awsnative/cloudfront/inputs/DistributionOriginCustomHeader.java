@@ -64,12 +64,10 @@ public final class DistributionOriginCustomHeader extends io.pulumi.resources.In
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
-        }
-        public DistributionOriginCustomHeader build() {
+        }        public DistributionOriginCustomHeader build() {
             return new DistributionOriginCustomHeader(headerName, headerValue);
         }
     }

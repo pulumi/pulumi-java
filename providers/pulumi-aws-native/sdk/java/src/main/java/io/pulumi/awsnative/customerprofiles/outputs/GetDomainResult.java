@@ -138,32 +138,29 @@ public final class GetDomainResult {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder deadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
             this.deadLetterQueueUrl = deadLetterQueueUrl;
             return this;
         }
-
         public Builder defaultEncryptionKey(@Nullable String defaultEncryptionKey) {
             this.defaultEncryptionKey = defaultEncryptionKey;
             return this;
         }
-
         public Builder defaultExpirationDays(@Nullable Integer defaultExpirationDays) {
             this.defaultExpirationDays = defaultExpirationDays;
             return this;
         }
-
         public Builder lastUpdatedAt(@Nullable String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
-
         public Builder tags(@Nullable List<DomainTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDomainResult build() {
+        public Builder tags(DomainTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDomainResult build() {
             return new GetDomainResult(createdAt, deadLetterQueueUrl, defaultEncryptionKey, defaultExpirationDays, lastUpdatedAt, tags);
         }
     }

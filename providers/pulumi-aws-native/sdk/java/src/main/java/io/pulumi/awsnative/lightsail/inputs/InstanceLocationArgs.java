@@ -78,22 +78,18 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder regionName(@Nullable Output<String> regionName) {
             this.regionName = regionName;
             return this;
         }
-
         public Builder regionName(@Nullable String regionName) {
             this.regionName = Output.ofNullable(regionName);
             return this;
-        }
-        public InstanceLocationArgs build() {
+        }        public InstanceLocationArgs build() {
             return new InstanceLocationArgs(availabilityZone, regionName);
         }
     }

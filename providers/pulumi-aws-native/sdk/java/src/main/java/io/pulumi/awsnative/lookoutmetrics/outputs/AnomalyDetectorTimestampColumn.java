@@ -63,12 +63,10 @@ public final class AnomalyDetectorTimestampColumn {
             this.columnFormat = columnFormat;
             return this;
         }
-
         public Builder columnName(@Nullable String columnName) {
             this.columnName = columnName;
             return this;
-        }
-        public AnomalyDetectorTimestampColumn build() {
+        }        public AnomalyDetectorTimestampColumn build() {
             return new AnomalyDetectorTimestampColumn(columnFormat, columnName);
         }
     }

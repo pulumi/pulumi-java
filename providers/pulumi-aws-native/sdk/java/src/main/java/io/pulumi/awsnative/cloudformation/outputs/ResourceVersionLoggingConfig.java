@@ -71,12 +71,10 @@ public final class ResourceVersionLoggingConfig {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logRoleArn(@Nullable String logRoleArn) {
             this.logRoleArn = logRoleArn;
             return this;
-        }
-        public ResourceVersionLoggingConfig build() {
+        }        public ResourceVersionLoggingConfig build() {
             return new ResourceVersionLoggingConfig(logGroupName, logRoleArn);
         }
     }

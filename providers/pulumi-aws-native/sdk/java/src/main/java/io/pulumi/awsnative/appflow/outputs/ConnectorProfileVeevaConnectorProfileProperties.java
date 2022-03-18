@@ -51,8 +51,7 @@ public final class ConnectorProfileVeevaConnectorProfileProperties {
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
-        }
-        public ConnectorProfileVeevaConnectorProfileProperties build() {
+        }        public ConnectorProfileVeevaConnectorProfileProperties build() {
             return new ConnectorProfileVeevaConnectorProfileProperties(instanceUrl);
         }
     }

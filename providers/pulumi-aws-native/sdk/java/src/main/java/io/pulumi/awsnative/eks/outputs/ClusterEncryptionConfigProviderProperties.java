@@ -53,8 +53,7 @@ public final class ClusterEncryptionConfigProviderProperties {
         public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = keyArn;
             return this;
-        }
-        public ClusterEncryptionConfigProviderProperties build() {
+        }        public ClusterEncryptionConfigProviderProperties build() {
             return new ClusterEncryptionConfigProviderProperties(keyArn);
         }
     }

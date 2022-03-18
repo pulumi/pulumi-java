@@ -87,17 +87,14 @@ public final class BotGrammarSlotTypeSource {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3ObjectKey(String s3ObjectKey) {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
-        }
-        public BotGrammarSlotTypeSource build() {
+        }        public BotGrammarSlotTypeSource build() {
             return new BotGrammarSlotTypeSource(kmsKeyArn, s3BucketName, s3ObjectKey);
         }
     }

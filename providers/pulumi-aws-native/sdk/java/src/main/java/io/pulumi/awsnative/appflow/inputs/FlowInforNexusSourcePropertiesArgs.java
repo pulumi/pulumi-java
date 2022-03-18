@@ -52,12 +52,10 @@ public final class FlowInforNexusSourcePropertiesArgs extends io.pulumi.resource
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowInforNexusSourcePropertiesArgs build() {
+        }        public FlowInforNexusSourcePropertiesArgs build() {
             return new FlowInforNexusSourcePropertiesArgs(object);
         }
     }

@@ -102,52 +102,42 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder bucketRegion(Output<String> bucketRegion) {
             this.bucketRegion = Objects.requireNonNull(bucketRegion);
             return this;
         }
-
         public Builder bucketRegion(String bucketRegion) {
             this.bucketRegion = Output.of(Objects.requireNonNull(bucketRegion));
             return this;
         }
-
         public Builder kMSKeyArn(@Nullable Output<String> kMSKeyArn) {
             this.kMSKeyArn = kMSKeyArn;
             return this;
         }
-
         public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
             this.kMSKeyArn = Output.ofNullable(kMSKeyArn);
             return this;
         }
-
         public Builder syncFormat(Output<String> syncFormat) {
             this.syncFormat = Objects.requireNonNull(syncFormat);
             return this;
         }
-
         public Builder syncFormat(String syncFormat) {
             this.syncFormat = Output.of(Objects.requireNonNull(syncFormat));
             return this;
-        }
-        public ResourceDataSyncS3DestinationArgs build() {
+        }        public ResourceDataSyncS3DestinationArgs build() {
             return new ResourceDataSyncS3DestinationArgs(bucketName, bucketPrefix, bucketRegion, kMSKeyArn, syncFormat);
         }
     }

@@ -64,12 +64,10 @@ public final class DatasetIotEventsDestinationConfiguration extends io.pulumi.re
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public DatasetIotEventsDestinationConfiguration build() {
+        }        public DatasetIotEventsDestinationConfiguration build() {
             return new DatasetIotEventsDestinationConfiguration(inputName, roleArn);
         }
     }

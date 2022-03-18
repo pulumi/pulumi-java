@@ -77,12 +77,13 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
-
         public Builder resourceList(List<String> resourceList) {
             this.resourceList = Objects.requireNonNull(resourceList);
             return this;
         }
-        public ApplicationCustomComponent build() {
+        public Builder resourceList(String... resourceList) {
+            return resourceList(List.of(resourceList));
+        }        public ApplicationCustomComponent build() {
             return new ApplicationCustomComponent(componentName, resourceList);
         }
     }

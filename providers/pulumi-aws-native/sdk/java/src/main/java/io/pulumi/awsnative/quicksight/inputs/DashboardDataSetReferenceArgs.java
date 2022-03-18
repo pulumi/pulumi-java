@@ -77,22 +77,18 @@ public final class DashboardDataSetReferenceArgs extends io.pulumi.resources.Res
             this.dataSetArn = Objects.requireNonNull(dataSetArn);
             return this;
         }
-
         public Builder dataSetArn(String dataSetArn) {
             this.dataSetArn = Output.of(Objects.requireNonNull(dataSetArn));
             return this;
         }
-
         public Builder dataSetPlaceholder(Output<String> dataSetPlaceholder) {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }
-
         public Builder dataSetPlaceholder(String dataSetPlaceholder) {
             this.dataSetPlaceholder = Output.of(Objects.requireNonNull(dataSetPlaceholder));
             return this;
-        }
-        public DashboardDataSetReferenceArgs build() {
+        }        public DashboardDataSetReferenceArgs build() {
             return new DashboardDataSetReferenceArgs(dataSetArn, dataSetPlaceholder);
         }
     }

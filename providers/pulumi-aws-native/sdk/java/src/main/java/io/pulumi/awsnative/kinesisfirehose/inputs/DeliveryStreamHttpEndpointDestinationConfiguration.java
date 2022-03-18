@@ -157,47 +157,38 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration extends io
             this.bufferingHints = bufferingHints;
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder endpointConfiguration(DeliveryStreamHttpEndpointConfiguration endpointConfiguration) {
             this.endpointConfiguration = Objects.requireNonNull(endpointConfiguration);
             return this;
         }
-
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder requestConfiguration(@Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration) {
             this.requestConfiguration = requestConfiguration;
             return this;
         }
-
         public Builder retryOptions(@Nullable DeliveryStreamRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = roleARN;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
-        }
-        public DeliveryStreamHttpEndpointDestinationConfiguration build() {
+        }        public DeliveryStreamHttpEndpointDestinationConfiguration build() {
             return new DeliveryStreamHttpEndpointDestinationConfiguration(bufferingHints, cloudWatchLoggingOptions, endpointConfiguration, processingConfiguration, requestConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration);
         }
     }

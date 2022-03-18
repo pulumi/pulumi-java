@@ -154,37 +154,33 @@ public final class GetLinkResult {
             this.bandwidth = bandwidth;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder linkArn(@Nullable String linkArn) {
             this.linkArn = linkArn;
             return this;
         }
-
         public Builder linkId(@Nullable String linkId) {
             this.linkId = linkId;
             return this;
         }
-
         public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
         }
-
         public Builder tags(@Nullable List<LinkTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(LinkTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetLinkResult build() {
+        }        public GetLinkResult build() {
             return new GetLinkResult(bandwidth, description, linkArn, linkId, provider, tags, type);
         }
     }

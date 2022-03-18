@@ -76,22 +76,21 @@ public final class BotResponseSpecificationArgs extends io.pulumi.resources.Reso
             this.allowInterrupt = allowInterrupt;
             return this;
         }
-
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = Output.ofNullable(allowInterrupt);
             return this;
         }
-
         public Builder messageGroupsList(Output<List<BotMessageGroupArgs>> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
-
         public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
             this.messageGroupsList = Output.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }
-        public BotResponseSpecificationArgs build() {
+        public Builder messageGroupsList(BotMessageGroupArgs... messageGroupsList) {
+            return messageGroupsList(List.of(messageGroupsList));
+        }        public BotResponseSpecificationArgs build() {
             return new BotResponseSpecificationArgs(allowInterrupt, messageGroupsList);
         }
     }

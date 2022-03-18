@@ -73,12 +73,10 @@ public final class ConnectorProfileConnectorOAuthRequest {
             this.authCode = authCode;
             return this;
         }
-
         public Builder redirectUri(@Nullable String redirectUri) {
             this.redirectUri = redirectUri;
             return this;
-        }
-        public ConnectorProfileConnectorOAuthRequest build() {
+        }        public ConnectorProfileConnectorOAuthRequest build() {
             return new ConnectorProfileConnectorOAuthRequest(authCode, redirectUri);
         }
     }

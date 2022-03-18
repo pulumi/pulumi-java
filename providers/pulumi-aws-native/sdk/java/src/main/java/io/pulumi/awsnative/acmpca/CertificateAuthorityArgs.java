@@ -171,82 +171,69 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             this.csrExtensions = csrExtensions;
             return this;
         }
-
         public Builder csrExtensions(@Nullable CertificateAuthorityCsrExtensionsArgs csrExtensions) {
             this.csrExtensions = Output.ofNullable(csrExtensions);
             return this;
         }
-
         public Builder keyAlgorithm(Output<String> keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
-
         public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Output.of(Objects.requireNonNull(keyAlgorithm));
             return this;
         }
-
         public Builder keyStorageSecurityStandard(@Nullable Output<String> keyStorageSecurityStandard) {
             this.keyStorageSecurityStandard = keyStorageSecurityStandard;
             return this;
         }
-
         public Builder keyStorageSecurityStandard(@Nullable String keyStorageSecurityStandard) {
             this.keyStorageSecurityStandard = Output.ofNullable(keyStorageSecurityStandard);
             return this;
         }
-
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
-
         public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
             this.revocationConfiguration = Output.ofNullable(revocationConfiguration);
             return this;
         }
-
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
-
         public Builder signingAlgorithm(String signingAlgorithm) {
             this.signingAlgorithm = Output.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
-
         public Builder subject(Output<CertificateAuthoritySubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder subject(CertificateAuthoritySubjectArgs subject) {
             this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<CertificateAuthorityTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<CertificateAuthorityTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(CertificateAuthorityTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public CertificateAuthorityArgs build() {
+        }        public CertificateAuthorityArgs build() {
             return new CertificateAuthorityArgs(csrExtensions, keyAlgorithm, keyStorageSecurityStandard, revocationConfiguration, signingAlgorithm, subject, tags, type);
         }
     }

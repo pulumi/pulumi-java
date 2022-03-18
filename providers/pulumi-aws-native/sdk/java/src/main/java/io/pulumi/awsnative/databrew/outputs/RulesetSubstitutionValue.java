@@ -69,12 +69,10 @@ public final class RulesetSubstitutionValue {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder valueReference(String valueReference) {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
-        }
-        public RulesetSubstitutionValue build() {
+        }        public RulesetSubstitutionValue build() {
             return new RulesetSubstitutionValue(value, valueReference);
         }
     }

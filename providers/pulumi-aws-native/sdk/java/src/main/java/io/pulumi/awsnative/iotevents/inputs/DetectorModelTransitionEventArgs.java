@@ -112,42 +112,37 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<DetectorModelActionArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(DetectorModelActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder condition(Output<String> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder condition(String condition) {
             this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
         }
-
         public Builder eventName(Output<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
-
         public Builder eventName(String eventName) {
             this.eventName = Output.of(Objects.requireNonNull(eventName));
             return this;
         }
-
         public Builder nextState(Output<String> nextState) {
             this.nextState = Objects.requireNonNull(nextState);
             return this;
         }
-
         public Builder nextState(String nextState) {
             this.nextState = Output.of(Objects.requireNonNull(nextState));
             return this;
-        }
-        public DetectorModelTransitionEventArgs build() {
+        }        public DetectorModelTransitionEventArgs build() {
             return new DetectorModelTransitionEventArgs(actions, condition, eventName, nextState);
         }
     }

@@ -66,22 +66,18 @@ public final class LicenseBorrowConfigurationArgs extends io.pulumi.resources.Re
             this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn);
             return this;
         }
-
         public Builder allowEarlyCheckIn(Boolean allowEarlyCheckIn) {
             this.allowEarlyCheckIn = Output.of(Objects.requireNonNull(allowEarlyCheckIn));
             return this;
         }
-
         public Builder maxTimeToLiveInMinutes(Output<Integer> maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }
-
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Output.of(Objects.requireNonNull(maxTimeToLiveInMinutes));
             return this;
-        }
-        public LicenseBorrowConfigurationArgs build() {
+        }        public LicenseBorrowConfigurationArgs build() {
             return new LicenseBorrowConfigurationArgs(allowEarlyCheckIn, maxTimeToLiveInMinutes);
         }
     }

@@ -104,22 +104,18 @@ public final class MulticastGroupLoRaWAN {
             this.dlClass = Objects.requireNonNull(dlClass);
             return this;
         }
-
         public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
             this.numberOfDevicesInGroup = numberOfDevicesInGroup;
             return this;
         }
-
         public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
             this.numberOfDevicesRequested = numberOfDevicesRequested;
             return this;
         }
-
         public Builder rfRegion(String rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
-        }
-        public MulticastGroupLoRaWAN build() {
+        }        public MulticastGroupLoRaWAN build() {
             return new MulticastGroupLoRaWAN(dlClass, numberOfDevicesInGroup, numberOfDevicesRequested, rfRegion);
         }
     }

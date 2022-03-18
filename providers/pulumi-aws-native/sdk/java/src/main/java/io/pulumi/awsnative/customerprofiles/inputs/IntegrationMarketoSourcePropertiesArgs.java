@@ -52,12 +52,10 @@ public final class IntegrationMarketoSourcePropertiesArgs extends io.pulumi.reso
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public IntegrationMarketoSourcePropertiesArgs build() {
+        }        public IntegrationMarketoSourcePropertiesArgs build() {
             return new IntegrationMarketoSourcePropertiesArgs(object);
         }
     }

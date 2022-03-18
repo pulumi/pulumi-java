@@ -78,32 +78,32 @@ public final class DeliveryStreamVpcConfigurationArgs extends io.pulumi.resource
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Output.of(Objects.requireNonNull(roleARN));
             return this;
         }
-
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-        public DeliveryStreamVpcConfigurationArgs build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public DeliveryStreamVpcConfigurationArgs build() {
             return new DeliveryStreamVpcConfigurationArgs(roleARN, securityGroupIds, subnetIds);
         }
     }

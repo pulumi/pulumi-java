@@ -69,22 +69,18 @@ public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resour
             this.nameAssigner = Objects.requireNonNull(nameAssigner);
             return this;
         }
-
         public Builder nameAssigner(String nameAssigner) {
             this.nameAssigner = Output.of(Objects.requireNonNull(nameAssigner));
             return this;
         }
-
         public Builder partyName(Output<String> partyName) {
             this.partyName = Objects.requireNonNull(partyName);
             return this;
         }
-
         public Builder partyName(String partyName) {
             this.partyName = Output.of(Objects.requireNonNull(partyName));
             return this;
-        }
-        public CertificateAuthorityEdiPartyNameArgs build() {
+        }        public CertificateAuthorityEdiPartyNameArgs build() {
             return new CertificateAuthorityEdiPartyNameArgs(nameAssigner, partyName);
         }
     }

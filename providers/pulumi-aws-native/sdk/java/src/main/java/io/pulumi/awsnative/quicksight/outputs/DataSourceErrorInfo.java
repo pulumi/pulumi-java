@@ -64,12 +64,10 @@ public final class DataSourceErrorInfo {
             this.message = message;
             return this;
         }
-
         public Builder type(@Nullable DataSourceErrorInfoType type) {
             this.type = type;
             return this;
-        }
-        public DataSourceErrorInfo build() {
+        }        public DataSourceErrorInfo build() {
             return new DataSourceErrorInfo(message, type);
         }
     }

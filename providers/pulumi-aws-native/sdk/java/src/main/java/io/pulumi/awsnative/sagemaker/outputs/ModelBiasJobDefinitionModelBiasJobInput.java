@@ -54,12 +54,10 @@ public final class ModelBiasJobDefinitionModelBiasJobInput {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
-
         public Builder groundTruthS3Input(ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
             this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
             return this;
-        }
-        public ModelBiasJobDefinitionModelBiasJobInput build() {
+        }        public ModelBiasJobDefinitionModelBiasJobInput build() {
             return new ModelBiasJobDefinitionModelBiasJobInput(endpointInput, groundTruthS3Input);
         }
     }

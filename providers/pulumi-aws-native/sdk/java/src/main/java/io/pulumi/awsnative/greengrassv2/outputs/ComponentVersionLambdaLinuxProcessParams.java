@@ -56,12 +56,10 @@ public final class ComponentVersionLambdaLinuxProcessParams {
             this.containerParams = containerParams;
             return this;
         }
-
         public Builder isolationMode(@Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
             this.isolationMode = isolationMode;
             return this;
-        }
-        public ComponentVersionLambdaLinuxProcessParams build() {
+        }        public ComponentVersionLambdaLinuxProcessParams build() {
             return new ComponentVersionLambdaLinuxProcessParams(containerParams, isolationMode);
         }
     }

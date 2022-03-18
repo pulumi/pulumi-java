@@ -129,52 +129,45 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
             this.documentName = Objects.requireNonNull(documentName);
             return this;
         }
-
         public Builder documentName(String documentName) {
             this.documentName = Output.of(Objects.requireNonNull(documentName));
             return this;
         }
-
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Output.ofNullable(documentVersion);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ResponsePlanSsmParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(ResponsePlanSsmParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder targetAccount(@Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount) {
             this.targetAccount = targetAccount;
             return this;
         }
-
         public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
             this.targetAccount = Output.ofNullable(targetAccount);
             return this;
-        }
-        public ResponsePlanSsmAutomationArgs build() {
+        }        public ResponsePlanSsmAutomationArgs build() {
             return new ResponsePlanSsmAutomationArgs(documentName, documentVersion, parameters, roleArn, targetAccount);
         }
     }

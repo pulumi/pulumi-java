@@ -73,12 +73,10 @@ public final class DashboardSheet {
             this.name = name;
             return this;
         }
-
         public Builder sheetId(@Nullable String sheetId) {
             this.sheetId = sheetId;
             return this;
-        }
-        public DashboardSheet build() {
+        }        public DashboardSheet build() {
             return new DashboardSheet(name, sheetId);
         }
     }

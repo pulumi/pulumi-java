@@ -78,22 +78,21 @@ public final class AnalysisStringParameterArgs extends io.pulumi.resources.Resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public AnalysisStringParameterArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public AnalysisStringParameterArgs build() {
             return new AnalysisStringParameterArgs(name, values);
         }
     }

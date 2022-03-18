@@ -88,17 +88,17 @@ public final class GetUserGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }
-        public GetUserGroupResult build() {
+        public Builder userIds(String... userIds) {
+            return userIds(List.of(userIds));
+        }        public GetUserGroupResult build() {
             return new GetUserGroupResult(arn, status, userIds);
         }
     }

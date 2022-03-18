@@ -172,47 +172,41 @@ public final class GetMonitoringScheduleResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = endpointName;
             return this;
         }
-
         public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = failureReason;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder lastMonitoringExecutionSummary(@Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary) {
             this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
             return this;
         }
-
         public Builder monitoringScheduleArn(@Nullable String monitoringScheduleArn) {
             this.monitoringScheduleArn = monitoringScheduleArn;
             return this;
         }
-
         public Builder monitoringScheduleConfig(@Nullable MonitoringScheduleConfig monitoringScheduleConfig) {
             this.monitoringScheduleConfig = monitoringScheduleConfig;
             return this;
         }
-
         public Builder monitoringScheduleStatus(@Nullable MonitoringScheduleStatus monitoringScheduleStatus) {
             this.monitoringScheduleStatus = monitoringScheduleStatus;
             return this;
         }
-
         public Builder tags(@Nullable List<MonitoringScheduleTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetMonitoringScheduleResult build() {
+        public Builder tags(MonitoringScheduleTag... tags) {
+            return tags(List.of(tags));
+        }        public GetMonitoringScheduleResult build() {
             return new GetMonitoringScheduleResult(creationTime, endpointName, failureReason, lastModifiedTime, lastMonitoringExecutionSummary, monitoringScheduleArn, monitoringScheduleConfig, monitoringScheduleStatus, tags);
         }
     }

@@ -45,8 +45,7 @@ public final class ConfigAntennaDownlinkConfig {
         public Builder spectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
-        }
-        public ConfigAntennaDownlinkConfig build() {
+        }        public ConfigAntennaDownlinkConfig build() {
             return new ConfigAntennaDownlinkConfig(spectrumConfig);
         }
     }

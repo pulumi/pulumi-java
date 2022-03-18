@@ -138,32 +138,29 @@ public final class GetQuickConnectResult {
             this.description = description;
             return this;
         }
-
         public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder quickConnectArn(@Nullable String quickConnectArn) {
             this.quickConnectArn = quickConnectArn;
             return this;
         }
-
         public Builder quickConnectConfig(@Nullable QuickConnectConfig quickConnectConfig) {
             this.quickConnectConfig = quickConnectConfig;
             return this;
         }
-
         public Builder tags(@Nullable List<QuickConnectTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetQuickConnectResult build() {
+        public Builder tags(QuickConnectTag... tags) {
+            return tags(List.of(tags));
+        }        public GetQuickConnectResult build() {
             return new GetQuickConnectResult(description, instanceArn, name, quickConnectArn, quickConnectConfig, tags);
         }
     }

@@ -52,12 +52,10 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
-        }
-        public SpotFleetGroupIdentifierArgs build() {
+        }        public SpotFleetGroupIdentifierArgs build() {
             return new SpotFleetGroupIdentifierArgs(groupId);
         }
     }

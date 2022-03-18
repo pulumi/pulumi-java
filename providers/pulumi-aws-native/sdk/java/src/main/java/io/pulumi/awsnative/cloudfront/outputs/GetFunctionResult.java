@@ -81,27 +81,22 @@ public final class GetFunctionResult {
             this.functionARN = functionARN;
             return this;
         }
-
         public Builder functionConfig(@Nullable FunctionConfig functionConfig) {
             this.functionConfig = functionConfig;
             return this;
         }
-
         public Builder functionMetadata(@Nullable FunctionMetadata functionMetadata) {
             this.functionMetadata = functionMetadata;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
-        }
-        public GetFunctionResult build() {
+        }        public GetFunctionResult build() {
             return new GetFunctionResult(functionARN, functionConfig, functionMetadata, name, stage);
         }
     }

@@ -193,92 +193,77 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableKeyRotation(@Nullable Output<Boolean> enableKeyRotation) {
             this.enableKeyRotation = enableKeyRotation;
             return this;
         }
-
         public Builder enableKeyRotation(@Nullable Boolean enableKeyRotation) {
             this.enableKeyRotation = Output.ofNullable(enableKeyRotation);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder keyPolicy(Output<Object> keyPolicy) {
             this.keyPolicy = Objects.requireNonNull(keyPolicy);
             return this;
         }
-
         public Builder keyPolicy(Object keyPolicy) {
             this.keyPolicy = Output.of(Objects.requireNonNull(keyPolicy));
             return this;
         }
-
         public Builder keySpec(@Nullable Output<KeySpec> keySpec) {
             this.keySpec = keySpec;
             return this;
         }
-
         public Builder keySpec(@Nullable KeySpec keySpec) {
             this.keySpec = Output.ofNullable(keySpec);
             return this;
         }
-
         public Builder keyUsage(@Nullable Output<KeyUsage> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder keyUsage(@Nullable KeyUsage keyUsage) {
             this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
-
         public Builder multiRegion(@Nullable Output<Boolean> multiRegion) {
             this.multiRegion = multiRegion;
             return this;
         }
-
         public Builder multiRegion(@Nullable Boolean multiRegion) {
             this.multiRegion = Output.ofNullable(multiRegion);
             return this;
         }
-
         public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
             this.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
-
         public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
             this.pendingWindowInDays = Output.ofNullable(pendingWindowInDays);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<KeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<KeyTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public KeyArgs build() {
+        public Builder tags(KeyTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public KeyArgs build() {
             return new KeyArgs(description, enableKeyRotation, enabled, keyPolicy, keySpec, keyUsage, multiRegion, pendingWindowInDays, tags);
         }
     }

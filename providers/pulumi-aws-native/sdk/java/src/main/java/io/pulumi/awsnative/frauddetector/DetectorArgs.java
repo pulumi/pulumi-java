@@ -169,82 +169,75 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             this.associatedModels = associatedModels;
             return this;
         }
-
         public Builder associatedModels(@Nullable List<DetectorModelArgs> associatedModels) {
             this.associatedModels = Output.ofNullable(associatedModels);
             return this;
         }
-
+        public Builder associatedModels(DetectorModelArgs... associatedModels) {
+            return associatedModels(List.of(associatedModels));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
-
         public Builder detectorId(String detectorId) {
             this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
-
         public Builder detectorVersionStatus(@Nullable Output<DetectorVersionStatus> detectorVersionStatus) {
             this.detectorVersionStatus = detectorVersionStatus;
             return this;
         }
-
         public Builder detectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
             this.detectorVersionStatus = Output.ofNullable(detectorVersionStatus);
             return this;
         }
-
         public Builder eventType(Output<DetectorEventTypeArgs> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public Builder eventType(DetectorEventTypeArgs eventType) {
             this.eventType = Output.of(Objects.requireNonNull(eventType));
             return this;
         }
-
         public Builder ruleExecutionMode(@Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode) {
             this.ruleExecutionMode = ruleExecutionMode;
             return this;
         }
-
         public Builder ruleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
             this.ruleExecutionMode = Output.ofNullable(ruleExecutionMode);
             return this;
         }
-
         public Builder rules(Output<List<DetectorRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public Builder rules(List<DetectorRuleArgs> rules) {
             this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
-
+        public Builder rules(DetectorRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DetectorArgs build() {
+        public Builder tags(DetectorTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DetectorArgs build() {
             return new DetectorArgs(associatedModels, description, detectorId, detectorVersionStatus, eventType, ruleExecutionMode, rules, tags);
         }
     }

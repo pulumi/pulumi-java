@@ -54,8 +54,7 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetNetworkInterfaceArgs build() {
+        }        public GetNetworkInterfaceArgs build() {
             return new GetNetworkInterfaceArgs(id);
         }
     }

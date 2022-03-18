@@ -75,22 +75,27 @@ public final class CertificateExtensions {
             this.certificatePolicies = certificatePolicies;
             return this;
         }
-
+        public Builder certificatePolicies(CertificatePolicyInformation... certificatePolicies) {
+            return certificatePolicies(List.of(certificatePolicies));
+        }
         public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
-
+        public Builder extendedKeyUsage(CertificateExtendedKeyUsage... extendedKeyUsage) {
+            return extendedKeyUsage(List.of(extendedKeyUsage));
+        }
         public Builder keyUsage(@Nullable CertificateKeyUsage keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable List<CertificateGeneralName> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-        public CertificateExtensions build() {
+        public Builder subjectAlternativeNames(CertificateGeneralName... subjectAlternativeNames) {
+            return subjectAlternativeNames(List.of(subjectAlternativeNames));
+        }        public CertificateExtensions build() {
             return new CertificateExtensions(certificatePolicies, extendedKeyUsage, keyUsage, subjectAlternativeNames);
         }
     }

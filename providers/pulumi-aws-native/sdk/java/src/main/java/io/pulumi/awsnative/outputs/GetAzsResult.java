@@ -45,7 +45,9 @@ public final class GetAzsResult {
             this.azs = Objects.requireNonNull(azs);
             return this;
         }
-        public GetAzsResult build() {
+        public Builder azs(String... azs) {
+            return azs(List.of(azs));
+        }        public GetAzsResult build() {
             return new GetAzsResult(azs);
         }
     }

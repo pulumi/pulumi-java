@@ -79,22 +79,18 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.isLatest = isLatest;
             return this;
         }
-
         public Builder isLatest(@Nullable Boolean isLatest) {
             this.isLatest = Output.ofNullable(isLatest);
             return this;
         }
-
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public Builder versionNumber(@Nullable Integer versionNumber) {
             this.versionNumber = Output.ofNullable(versionNumber);
             return this;
-        }
-        public SchemaVersionArgs build() {
+        }        public SchemaVersionArgs build() {
             return new SchemaVersionArgs(isLatest, versionNumber);
         }
     }

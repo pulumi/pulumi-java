@@ -65,22 +65,18 @@ public final class DomainNameApiAssociationArgs extends io.pulumi.resources.Reso
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
-        }
-        public DomainNameApiAssociationArgs build() {
+        }        public DomainNameApiAssociationArgs build() {
             return new DomainNameApiAssociationArgs(apiId, domainName);
         }
     }

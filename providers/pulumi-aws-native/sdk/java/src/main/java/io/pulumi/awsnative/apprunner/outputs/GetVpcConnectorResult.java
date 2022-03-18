@@ -72,12 +72,10 @@ public final class GetVpcConnectorResult {
             this.vpcConnectorArn = vpcConnectorArn;
             return this;
         }
-
         public Builder vpcConnectorRevision(@Nullable Integer vpcConnectorRevision) {
             this.vpcConnectorRevision = vpcConnectorRevision;
             return this;
-        }
-        public GetVpcConnectorResult build() {
+        }        public GetVpcConnectorResult build() {
             return new GetVpcConnectorResult(vpcConnectorArn, vpcConnectorRevision);
         }
     }

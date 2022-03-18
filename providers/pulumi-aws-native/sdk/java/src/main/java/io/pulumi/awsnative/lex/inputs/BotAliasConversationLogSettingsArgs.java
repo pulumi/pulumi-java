@@ -72,22 +72,24 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
             this.audioLogSettings = audioLogSettings;
             return this;
         }
-
         public Builder audioLogSettings(@Nullable List<BotAliasAudioLogSettingArgs> audioLogSettings) {
             this.audioLogSettings = Output.ofNullable(audioLogSettings);
             return this;
         }
-
+        public Builder audioLogSettings(BotAliasAudioLogSettingArgs... audioLogSettings) {
+            return audioLogSettings(List.of(audioLogSettings));
+        }
         public Builder textLogSettings(@Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings) {
             this.textLogSettings = textLogSettings;
             return this;
         }
-
         public Builder textLogSettings(@Nullable List<BotAliasTextLogSettingArgs> textLogSettings) {
             this.textLogSettings = Output.ofNullable(textLogSettings);
             return this;
         }
-        public BotAliasConversationLogSettingsArgs build() {
+        public Builder textLogSettings(BotAliasTextLogSettingArgs... textLogSettings) {
+            return textLogSettings(List.of(textLogSettings));
+        }        public BotAliasConversationLogSettingsArgs build() {
             return new BotAliasConversationLogSettingsArgs(audioLogSettings, textLogSettings);
         }
     }

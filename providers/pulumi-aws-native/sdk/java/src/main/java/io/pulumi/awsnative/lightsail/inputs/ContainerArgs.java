@@ -129,52 +129,51 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder environment(@Nullable Output<List<ContainerEnvironmentVariableArgs>> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable List<ContainerEnvironmentVariableArgs> environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
+        public Builder environment(ContainerEnvironmentVariableArgs... environment) {
+            return environment(List.of(environment));
+        }
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<ContainerPortInfoArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<ContainerPortInfoArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-        public ContainerArgs build() {
+        public Builder ports(ContainerPortInfoArgs... ports) {
+            return ports(List.of(ports));
+        }        public ContainerArgs build() {
             return new ContainerArgs(command, containerName, environment, image, ports);
         }
     }

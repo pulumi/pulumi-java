@@ -50,8 +50,7 @@ public final class FlowSlackSourceProperties extends io.pulumi.resources.InvokeA
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowSlackSourceProperties build() {
+        }        public FlowSlackSourceProperties build() {
             return new FlowSlackSourceProperties(object);
         }
     }

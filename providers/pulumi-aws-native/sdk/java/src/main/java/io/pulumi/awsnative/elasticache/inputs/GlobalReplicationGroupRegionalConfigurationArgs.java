@@ -92,32 +92,29 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
             this.replicationGroupId = replicationGroupId;
             return this;
         }
-
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
             this.replicationGroupId = Output.ofNullable(replicationGroupId);
             return this;
         }
-
         public Builder replicationGroupRegion(@Nullable Output<String> replicationGroupRegion) {
             this.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
-
         public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
             this.replicationGroupRegion = Output.ofNullable(replicationGroupRegion);
             return this;
         }
-
         public Builder reshardingConfigurations(@Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations) {
             this.reshardingConfigurations = reshardingConfigurations;
             return this;
         }
-
         public Builder reshardingConfigurations(@Nullable List<GlobalReplicationGroupReshardingConfigurationArgs> reshardingConfigurations) {
             this.reshardingConfigurations = Output.ofNullable(reshardingConfigurations);
             return this;
         }
-        public GlobalReplicationGroupRegionalConfigurationArgs build() {
+        public Builder reshardingConfigurations(GlobalReplicationGroupReshardingConfigurationArgs... reshardingConfigurations) {
+            return reshardingConfigurations(List.of(reshardingConfigurations));
+        }        public GlobalReplicationGroupRegionalConfigurationArgs build() {
             return new GlobalReplicationGroupRegionalConfigurationArgs(replicationGroupId, replicationGroupRegion, reshardingConfigurations);
         }
     }

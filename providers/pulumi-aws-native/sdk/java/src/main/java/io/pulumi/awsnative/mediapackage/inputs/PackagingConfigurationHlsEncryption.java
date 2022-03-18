@@ -92,17 +92,14 @@ public final class PackagingConfigurationHlsEncryption extends io.pulumi.resourc
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
-
         public Builder encryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
-
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
-        }
-        public PackagingConfigurationHlsEncryption build() {
+        }        public PackagingConfigurationHlsEncryption build() {
             return new PackagingConfigurationHlsEncryption(constantInitializationVector, encryptionMethod, spekeKeyProvider);
         }
     }

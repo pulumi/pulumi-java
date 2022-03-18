@@ -95,17 +95,14 @@ public final class DomainCustomImage extends io.pulumi.resources.InvokeArgs {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
             this.imageVersionNumber = imageVersionNumber;
             return this;
-        }
-        public DomainCustomImage build() {
+        }        public DomainCustomImage build() {
             return new DomainCustomImage(appImageConfigName, imageName, imageVersionNumber);
         }
     }

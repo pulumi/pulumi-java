@@ -54,12 +54,10 @@ public final class DatasetDeltaTime {
             this.offsetSeconds = Objects.requireNonNull(offsetSeconds);
             return this;
         }
-
         public Builder timeExpression(String timeExpression) {
             this.timeExpression = Objects.requireNonNull(timeExpression);
             return this;
-        }
-        public DatasetDeltaTime build() {
+        }        public DatasetDeltaTime build() {
             return new DatasetDeltaTime(offsetSeconds, timeExpression);
         }
     }

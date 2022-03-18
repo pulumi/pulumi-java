@@ -43,8 +43,7 @@ public final class CertificateQualifier {
         public Builder cpsUri(String cpsUri) {
             this.cpsUri = Objects.requireNonNull(cpsUri);
             return this;
-        }
-        public CertificateQualifier build() {
+        }        public CertificateQualifier build() {
             return new CertificateQualifier(cpsUri);
         }
     }

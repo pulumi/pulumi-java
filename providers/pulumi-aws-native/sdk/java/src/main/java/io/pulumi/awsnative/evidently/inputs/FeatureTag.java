@@ -76,12 +76,10 @@ public final class FeatureTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FeatureTag build() {
+        }        public FeatureTag build() {
             return new FeatureTag(key, value);
         }
     }

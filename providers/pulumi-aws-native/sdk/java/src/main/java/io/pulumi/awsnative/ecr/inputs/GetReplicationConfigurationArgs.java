@@ -54,8 +54,7 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
-        }
-        public GetReplicationConfigurationArgs build() {
+        }        public GetReplicationConfigurationArgs build() {
             return new GetReplicationConfigurationArgs(registryId);
         }
     }

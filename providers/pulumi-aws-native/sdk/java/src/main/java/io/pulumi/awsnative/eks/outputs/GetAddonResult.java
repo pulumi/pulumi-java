@@ -105,22 +105,21 @@ public final class GetAddonResult {
             this.addonVersion = addonVersion;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<AddonTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAddonResult build() {
+        public Builder tags(AddonTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAddonResult build() {
             return new GetAddonResult(addonVersion, arn, serviceAccountRoleArn, tags);
         }
     }

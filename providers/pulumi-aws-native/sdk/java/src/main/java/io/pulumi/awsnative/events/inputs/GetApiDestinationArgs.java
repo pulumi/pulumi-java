@@ -54,8 +54,7 @@ public final class GetApiDestinationArgs extends io.pulumi.resources.InvokeArgs 
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetApiDestinationArgs build() {
+        }        public GetApiDestinationArgs build() {
             return new GetApiDestinationArgs(name);
         }
     }

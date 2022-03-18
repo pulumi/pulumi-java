@@ -282,192 +282,169 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
             this.aliases = aliases;
             return this;
         }
-
         public Builder aliases(@Nullable List<String> aliases) {
             this.aliases = Output.ofNullable(aliases);
             return this;
         }
-
+        public Builder aliases(String... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder cNAMEs(@Nullable Output<List<String>> cNAMEs) {
             this.cNAMEs = cNAMEs;
             return this;
         }
-
         public Builder cNAMEs(@Nullable List<String> cNAMEs) {
             this.cNAMEs = Output.ofNullable(cNAMEs);
             return this;
         }
-
+        public Builder cNAMEs(String... cNAMEs) {
+            return cNAMEs(List.of(cNAMEs));
+        }
         public Builder cacheBehaviors(@Nullable Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors) {
             this.cacheBehaviors = cacheBehaviors;
             return this;
         }
-
         public Builder cacheBehaviors(@Nullable List<DistributionCacheBehaviorArgs> cacheBehaviors) {
             this.cacheBehaviors = Output.ofNullable(cacheBehaviors);
             return this;
         }
-
+        public Builder cacheBehaviors(DistributionCacheBehaviorArgs... cacheBehaviors) {
+            return cacheBehaviors(List.of(cacheBehaviors));
+        }
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder customErrorResponses(@Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses) {
             this.customErrorResponses = customErrorResponses;
             return this;
         }
-
         public Builder customErrorResponses(@Nullable List<DistributionCustomErrorResponseArgs> customErrorResponses) {
             this.customErrorResponses = Output.ofNullable(customErrorResponses);
             return this;
         }
-
+        public Builder customErrorResponses(DistributionCustomErrorResponseArgs... customErrorResponses) {
+            return customErrorResponses(List.of(customErrorResponses));
+        }
         public Builder customOrigin(@Nullable Output<DistributionLegacyCustomOriginArgs> customOrigin) {
             this.customOrigin = customOrigin;
             return this;
         }
-
         public Builder customOrigin(@Nullable DistributionLegacyCustomOriginArgs customOrigin) {
             this.customOrigin = Output.ofNullable(customOrigin);
             return this;
         }
-
         public Builder defaultCacheBehavior(@Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior) {
             this.defaultCacheBehavior = defaultCacheBehavior;
             return this;
         }
-
         public Builder defaultCacheBehavior(@Nullable DistributionDefaultCacheBehaviorArgs defaultCacheBehavior) {
             this.defaultCacheBehavior = Output.ofNullable(defaultCacheBehavior);
             return this;
         }
-
         public Builder defaultRootObject(@Nullable Output<String> defaultRootObject) {
             this.defaultRootObject = defaultRootObject;
             return this;
         }
-
         public Builder defaultRootObject(@Nullable String defaultRootObject) {
             this.defaultRootObject = Output.ofNullable(defaultRootObject);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder httpVersion(@Nullable Output<String> httpVersion) {
             this.httpVersion = httpVersion;
             return this;
         }
-
         public Builder httpVersion(@Nullable String httpVersion) {
             this.httpVersion = Output.ofNullable(httpVersion);
             return this;
         }
-
         public Builder iPV6Enabled(@Nullable Output<Boolean> iPV6Enabled) {
             this.iPV6Enabled = iPV6Enabled;
             return this;
         }
-
         public Builder iPV6Enabled(@Nullable Boolean iPV6Enabled) {
             this.iPV6Enabled = Output.ofNullable(iPV6Enabled);
             return this;
         }
-
         public Builder logging(@Nullable Output<DistributionLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable DistributionLoggingArgs logging) {
             this.logging = Output.ofNullable(logging);
             return this;
         }
-
         public Builder originGroups(@Nullable Output<DistributionOriginGroupsArgs> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
-
         public Builder originGroups(@Nullable DistributionOriginGroupsArgs originGroups) {
             this.originGroups = Output.ofNullable(originGroups);
             return this;
         }
-
         public Builder origins(@Nullable Output<List<DistributionOriginArgs>> origins) {
             this.origins = origins;
             return this;
         }
-
         public Builder origins(@Nullable List<DistributionOriginArgs> origins) {
             this.origins = Output.ofNullable(origins);
             return this;
         }
-
+        public Builder origins(DistributionOriginArgs... origins) {
+            return origins(List.of(origins));
+        }
         public Builder priceClass(@Nullable Output<String> priceClass) {
             this.priceClass = priceClass;
             return this;
         }
-
         public Builder priceClass(@Nullable String priceClass) {
             this.priceClass = Output.ofNullable(priceClass);
             return this;
         }
-
         public Builder restrictions(@Nullable Output<DistributionRestrictionsArgs> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
-
         public Builder restrictions(@Nullable DistributionRestrictionsArgs restrictions) {
             this.restrictions = Output.ofNullable(restrictions);
             return this;
         }
-
         public Builder s3Origin(@Nullable Output<DistributionLegacyS3OriginArgs> s3Origin) {
             this.s3Origin = s3Origin;
             return this;
         }
-
         public Builder s3Origin(@Nullable DistributionLegacyS3OriginArgs s3Origin) {
             this.s3Origin = Output.ofNullable(s3Origin);
             return this;
         }
-
         public Builder viewerCertificate(@Nullable Output<DistributionViewerCertificateArgs> viewerCertificate) {
             this.viewerCertificate = viewerCertificate;
             return this;
         }
-
         public Builder viewerCertificate(@Nullable DistributionViewerCertificateArgs viewerCertificate) {
             this.viewerCertificate = Output.ofNullable(viewerCertificate);
             return this;
         }
-
         public Builder webACLId(@Nullable Output<String> webACLId) {
             this.webACLId = webACLId;
             return this;
         }
-
         public Builder webACLId(@Nullable String webACLId) {
             this.webACLId = Output.ofNullable(webACLId);
             return this;
-        }
-        public DistributionConfigArgs build() {
+        }        public DistributionConfigArgs build() {
             return new DistributionConfigArgs(aliases, cNAMEs, cacheBehaviors, comment, customErrorResponses, customOrigin, defaultCacheBehavior, defaultRootObject, enabled, httpVersion, iPV6Enabled, logging, originGroups, origins, priceClass, restrictions, s3Origin, viewerCertificate, webACLId);
         }
     }

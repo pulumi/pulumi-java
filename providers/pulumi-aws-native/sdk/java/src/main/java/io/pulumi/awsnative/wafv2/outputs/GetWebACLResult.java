@@ -143,57 +143,52 @@ public final class GetWebACLResult {
             this.arn = arn;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder captchaConfig(@Nullable WebACLCaptchaConfig captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
-
         public Builder customResponseBodies(@Nullable WebACLCustomResponseBodies customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
-
         public Builder defaultAction(@Nullable WebACLDefaultAction defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder labelNamespace(@Nullable String labelNamespace) {
             this.labelNamespace = labelNamespace;
             return this;
         }
-
         public Builder rules(@Nullable List<WebACLRule> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(WebACLRule... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable List<WebACLTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(WebACLTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder visibilityConfig(@Nullable WebACLVisibilityConfig visibilityConfig) {
             this.visibilityConfig = visibilityConfig;
             return this;
-        }
-        public GetWebACLResult build() {
+        }        public GetWebACLResult build() {
             return new GetWebACLResult(arn, capacity, captchaConfig, customResponseBodies, defaultAction, description, id, labelNamespace, rules, tags, visibilityConfig);
         }
     }

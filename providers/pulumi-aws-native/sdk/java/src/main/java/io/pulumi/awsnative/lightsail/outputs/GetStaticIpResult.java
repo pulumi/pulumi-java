@@ -96,22 +96,18 @@ public final class GetStaticIpResult {
             this.attachedTo = attachedTo;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder isAttached(@Nullable Boolean isAttached) {
             this.isAttached = isAttached;
             return this;
         }
-
         public Builder staticIpArn(@Nullable String staticIpArn) {
             this.staticIpArn = staticIpArn;
             return this;
-        }
-        public GetStaticIpResult build() {
+        }        public GetStaticIpResult build() {
             return new GetStaticIpResult(attachedTo, ipAddress, isAttached, staticIpArn);
         }
     }

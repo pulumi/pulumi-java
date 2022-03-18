@@ -73,22 +73,18 @@ public final class DistributionCustomErrorResponse {
             this.errorCachingMinTTL = errorCachingMinTTL;
             return this;
         }
-
         public Builder errorCode(Integer errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder responseCode(@Nullable Integer responseCode) {
             this.responseCode = responseCode;
             return this;
         }
-
         public Builder responsePagePath(@Nullable String responsePagePath) {
             this.responsePagePath = responsePagePath;
             return this;
-        }
-        public DistributionCustomErrorResponse build() {
+        }        public DistributionCustomErrorResponse build() {
             return new DistributionCustomErrorResponse(errorCachingMinTTL, errorCode, responseCode, responsePagePath);
         }
     }

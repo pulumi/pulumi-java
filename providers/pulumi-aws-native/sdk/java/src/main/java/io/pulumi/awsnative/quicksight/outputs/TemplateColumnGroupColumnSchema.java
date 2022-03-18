@@ -53,8 +53,7 @@ public final class TemplateColumnGroupColumnSchema {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public TemplateColumnGroupColumnSchema build() {
+        }        public TemplateColumnGroupColumnSchema build() {
             return new TemplateColumnGroupColumnSchema(name);
         }
     }

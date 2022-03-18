@@ -102,42 +102,37 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
             this.destinationConfiguration = Objects.requireNonNull(destinationConfiguration);
             return this;
         }
-
         public Builder destinationConfiguration(RecordingConfigurationDestinationConfigurationArgs destinationConfiguration) {
             this.destinationConfiguration = Output.of(Objects.requireNonNull(destinationConfiguration));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<RecordingConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RecordingConfigurationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(RecordingConfigurationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder thumbnailConfiguration(@Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
             this.thumbnailConfiguration = thumbnailConfiguration;
             return this;
         }
-
         public Builder thumbnailConfiguration(@Nullable RecordingConfigurationThumbnailConfigurationArgs thumbnailConfiguration) {
             this.thumbnailConfiguration = Output.ofNullable(thumbnailConfiguration);
             return this;
-        }
-        public RecordingConfigurationArgs build() {
+        }        public RecordingConfigurationArgs build() {
             return new RecordingConfigurationArgs(destinationConfiguration, name, tags, thumbnailConfiguration);
         }
     }

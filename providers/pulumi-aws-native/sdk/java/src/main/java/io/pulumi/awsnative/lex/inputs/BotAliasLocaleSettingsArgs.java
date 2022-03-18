@@ -75,22 +75,18 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
             this.codeHookSpecification = codeHookSpecification;
             return this;
         }
-
         public Builder codeHookSpecification(@Nullable BotAliasCodeHookSpecificationArgs codeHookSpecification) {
             this.codeHookSpecification = Output.ofNullable(codeHookSpecification);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public BotAliasLocaleSettingsArgs build() {
+        }        public BotAliasLocaleSettingsArgs build() {
             return new BotAliasLocaleSettingsArgs(codeHookSpecification, enabled);
         }
     }

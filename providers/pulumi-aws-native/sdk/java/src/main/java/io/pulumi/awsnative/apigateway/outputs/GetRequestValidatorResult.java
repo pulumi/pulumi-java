@@ -88,17 +88,14 @@ public final class GetRequestValidatorResult {
             this.requestValidatorId = requestValidatorId;
             return this;
         }
-
         public Builder validateRequestBody(@Nullable Boolean validateRequestBody) {
             this.validateRequestBody = validateRequestBody;
             return this;
         }
-
         public Builder validateRequestParameters(@Nullable Boolean validateRequestParameters) {
             this.validateRequestParameters = validateRequestParameters;
             return this;
-        }
-        public GetRequestValidatorResult build() {
+        }        public GetRequestValidatorResult build() {
             return new GetRequestValidatorResult(requestValidatorId, validateRequestBody, validateRequestParameters);
         }
     }
