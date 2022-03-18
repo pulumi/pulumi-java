@@ -70,17 +70,14 @@ public final class FutureReservationTimeWindowResponse {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public FutureReservationTimeWindowResponse build() {
+        }        public FutureReservationTimeWindowResponse build() {
             return new FutureReservationTimeWindowResponse(duration, endTime, startTime);
         }
     }

@@ -232,62 +232,53 @@ public final class GetInstanceGroupResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namedPorts(List<NamedPortResponse> namedPorts) {
             this.namedPorts = Objects.requireNonNull(namedPorts);
             return this;
         }
-
+        public Builder namedPorts(NamedPortResponse... namedPorts) {
+            return namedPorts(List.of(namedPorts));
+        }
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstanceGroupResult build() {
+        }        public GetInstanceGroupResult build() {
             return new GetInstanceGroupResult(creationTimestamp, description, fingerprint, kind, name, namedPorts, network, region, selfLink, size, subnetwork, zone);
         }
     }

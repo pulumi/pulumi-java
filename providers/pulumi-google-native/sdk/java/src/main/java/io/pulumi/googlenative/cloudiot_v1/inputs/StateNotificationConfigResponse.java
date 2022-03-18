@@ -58,8 +58,7 @@ public final class StateNotificationConfigResponse extends io.pulumi.resources.I
         public Builder pubsubTopicName(String pubsubTopicName) {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
-        }
-        public StateNotificationConfigResponse build() {
+        }        public StateNotificationConfigResponse build() {
             return new StateNotificationConfigResponse(pubsubTopicName);
         }
     }

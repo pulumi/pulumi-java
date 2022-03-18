@@ -79,22 +79,18 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
             this.fixedDelay = fixedDelay;
             return this;
         }
-
         public Builder fixedDelay(@Nullable DurationArgs fixedDelay) {
             this.fixedDelay = Output.ofNullable(fixedDelay);
             return this;
         }
-
         public Builder percentage(@Nullable Output<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
-
         public Builder percentage(@Nullable Double percentage) {
             this.percentage = Output.ofNullable(percentage);
             return this;
-        }
-        public HttpFaultDelayArgs build() {
+        }        public HttpFaultDelayArgs build() {
             return new HttpFaultDelayArgs(fixedDelay, percentage);
         }
     }

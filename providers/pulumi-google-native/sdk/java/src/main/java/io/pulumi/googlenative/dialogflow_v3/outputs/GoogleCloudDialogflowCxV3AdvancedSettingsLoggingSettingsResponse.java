@@ -69,12 +69,10 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
             this.enableInteractionLogging = Objects.requireNonNull(enableInteractionLogging);
             return this;
         }
-
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse build() {
+        }        public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse(enableInteractionLogging, enableStackdriverLogging);
         }
     }

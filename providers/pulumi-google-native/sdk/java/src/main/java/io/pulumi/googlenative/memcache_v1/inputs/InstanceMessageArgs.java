@@ -75,22 +75,18 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable InstanceMessageCode code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
-        }
-        public InstanceMessageArgs build() {
+        }        public InstanceMessageArgs build() {
             return new InstanceMessageArgs(code, message);
         }
     }

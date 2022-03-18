@@ -102,22 +102,18 @@ public final class CloudSqlPropertiesResponse {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CloudSqlPropertiesResponse build() {
+        }        public CloudSqlPropertiesResponse build() {
             return new CloudSqlPropertiesResponse(credential, database, instanceId, type);
         }
     }

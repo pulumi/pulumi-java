@@ -70,12 +70,10 @@ public final class RangePartitioningResponse {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder range(RangePartitioningRangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
-        }
-        public RangePartitioningResponse build() {
+        }        public RangePartitioningResponse build() {
             return new RangePartitioningResponse(field, range);
         }
     }

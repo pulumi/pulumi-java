@@ -86,17 +86,14 @@ public final class SdkHarnessContainerImageResponse {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder useSingleCorePerContainer(Boolean useSingleCorePerContainer) {
             this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer);
             return this;
-        }
-        public SdkHarnessContainerImageResponse build() {
+        }        public SdkHarnessContainerImageResponse build() {
             return new SdkHarnessContainerImageResponse(containerImage, environmentId, useSingleCorePerContainer);
         }
     }

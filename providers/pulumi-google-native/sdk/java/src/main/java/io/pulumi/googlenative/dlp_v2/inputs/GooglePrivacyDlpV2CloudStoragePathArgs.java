@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2CloudStoragePathArgs extends io.pulumi.reso
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public GooglePrivacyDlpV2CloudStoragePathArgs build() {
+        }        public GooglePrivacyDlpV2CloudStoragePathArgs build() {
             return new GooglePrivacyDlpV2CloudStoragePathArgs(path);
         }
     }

@@ -138,32 +138,26 @@ public final class GooglePrivacyDlpV2ActionResponse {
             this.jobNotificationEmails = Objects.requireNonNull(jobNotificationEmails);
             return this;
         }
-
         public Builder pubSub(GooglePrivacyDlpV2PublishToPubSubResponse pubSub) {
             this.pubSub = Objects.requireNonNull(pubSub);
             return this;
         }
-
         public Builder publishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog) {
             this.publishFindingsToCloudDataCatalog = Objects.requireNonNull(publishFindingsToCloudDataCatalog);
             return this;
         }
-
         public Builder publishSummaryToCscc(GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc) {
             this.publishSummaryToCscc = Objects.requireNonNull(publishSummaryToCscc);
             return this;
         }
-
         public Builder publishToStackdriver(GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver) {
             this.publishToStackdriver = Objects.requireNonNull(publishToStackdriver);
             return this;
         }
-
         public Builder saveFindings(GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
-        }
-        public GooglePrivacyDlpV2ActionResponse build() {
+        }        public GooglePrivacyDlpV2ActionResponse build() {
             return new GooglePrivacyDlpV2ActionResponse(jobNotificationEmails, pubSub, publishFindingsToCloudDataCatalog, publishSummaryToCscc, publishToStackdriver, saveFindings);
         }
     }

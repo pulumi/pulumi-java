@@ -61,17 +61,14 @@ public final class NodeTemplateNodeTypeFlexibilityResponse {
             this.cpus = Objects.requireNonNull(cpus);
             return this;
         }
-
         public Builder localSsd(String localSsd) {
             this.localSsd = Objects.requireNonNull(localSsd);
             return this;
         }
-
         public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
-        }
-        public NodeTemplateNodeTypeFlexibilityResponse build() {
+        }        public NodeTemplateNodeTypeFlexibilityResponse build() {
             return new NodeTemplateNodeTypeFlexibilityResponse(cpus, localSsd, memory);
         }
     }

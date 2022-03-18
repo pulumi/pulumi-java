@@ -64,12 +64,10 @@ public final class GetBillingAccountExclusionArgs extends io.pulumi.resources.In
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public Builder exclusionId(String exclusionId) {
             this.exclusionId = Objects.requireNonNull(exclusionId);
             return this;
-        }
-        public GetBillingAccountExclusionArgs build() {
+        }        public GetBillingAccountExclusionArgs build() {
             return new GetBillingAccountExclusionArgs(billingAccountId, exclusionId);
         }
     }

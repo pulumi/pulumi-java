@@ -51,8 +51,7 @@ public final class AzureCredentialsResponse {
         public Builder sasToken(String sasToken) {
             this.sasToken = Objects.requireNonNull(sasToken);
             return this;
-        }
-        public AzureCredentialsResponse build() {
+        }        public AzureCredentialsResponse build() {
             return new AzureCredentialsResponse(sasToken);
         }
     }

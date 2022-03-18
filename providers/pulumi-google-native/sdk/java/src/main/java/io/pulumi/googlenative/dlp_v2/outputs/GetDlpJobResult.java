@@ -201,52 +201,45 @@ public final class GetDlpJobResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder errors(List<GooglePrivacyDlpV2ErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(GooglePrivacyDlpV2ErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder inspectDetails(GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails) {
             this.inspectDetails = Objects.requireNonNull(inspectDetails);
             return this;
         }
-
         public Builder jobTriggerName(String jobTriggerName) {
             this.jobTriggerName = Objects.requireNonNull(jobTriggerName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder riskDetails(GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails) {
             this.riskDetails = Objects.requireNonNull(riskDetails);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDlpJobResult build() {
+        }        public GetDlpJobResult build() {
             return new GetDlpJobResult(createTime, endTime, errors, inspectDetails, jobTriggerName, name, riskDetails, startTime, state, type);
         }
     }

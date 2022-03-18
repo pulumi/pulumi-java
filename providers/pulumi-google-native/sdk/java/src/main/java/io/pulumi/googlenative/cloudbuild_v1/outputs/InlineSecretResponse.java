@@ -70,12 +70,10 @@ public final class InlineSecretResponse {
             this.envMap = Objects.requireNonNull(envMap);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public InlineSecretResponse build() {
+        }        public InlineSecretResponse build() {
             return new InlineSecretResponse(envMap, kmsKeyName);
         }
     }

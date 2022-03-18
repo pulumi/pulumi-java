@@ -119,27 +119,22 @@ public final class HiveMetastoreConfigResponse {
             this.auxiliaryVersions = Objects.requireNonNull(auxiliaryVersions);
             return this;
         }
-
         public Builder configOverrides(Map<String,String> configOverrides) {
             this.configOverrides = Objects.requireNonNull(configOverrides);
             return this;
         }
-
         public Builder endpointProtocol(String endpointProtocol) {
             this.endpointProtocol = Objects.requireNonNull(endpointProtocol);
             return this;
         }
-
         public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public HiveMetastoreConfigResponse build() {
+        }        public HiveMetastoreConfigResponse build() {
             return new HiveMetastoreConfigResponse(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);
         }
     }

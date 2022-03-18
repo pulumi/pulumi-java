@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
             this.partToExtract = partToExtract;
             return this;
         }
-
         public Builder partToExtract(@Nullable GooglePrivacyDlpV2TimePartConfigPartToExtract partToExtract) {
             this.partToExtract = Output.ofNullable(partToExtract);
             return this;
-        }
-        public GooglePrivacyDlpV2TimePartConfigArgs build() {
+        }        public GooglePrivacyDlpV2TimePartConfigArgs build() {
             return new GooglePrivacyDlpV2TimePartConfigArgs(partToExtract);
         }
     }

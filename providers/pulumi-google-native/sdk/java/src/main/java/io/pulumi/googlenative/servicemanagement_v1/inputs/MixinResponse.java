@@ -76,12 +76,10 @@ public final class MixinResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder root(String root) {
             this.root = Objects.requireNonNull(root);
             return this;
-        }
-        public MixinResponse build() {
+        }        public MixinResponse build() {
             return new MixinResponse(name, root);
         }
     }

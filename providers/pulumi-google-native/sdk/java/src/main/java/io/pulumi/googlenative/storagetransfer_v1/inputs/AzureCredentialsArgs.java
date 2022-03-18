@@ -60,12 +60,10 @@ public final class AzureCredentialsArgs extends io.pulumi.resources.ResourceArgs
             this.sasToken = Objects.requireNonNull(sasToken);
             return this;
         }
-
         public Builder sasToken(String sasToken) {
             this.sasToken = Output.of(Objects.requireNonNull(sasToken));
             return this;
-        }
-        public AzureCredentialsArgs build() {
+        }        public AzureCredentialsArgs build() {
             return new AzureCredentialsArgs(sasToken);
         }
     }

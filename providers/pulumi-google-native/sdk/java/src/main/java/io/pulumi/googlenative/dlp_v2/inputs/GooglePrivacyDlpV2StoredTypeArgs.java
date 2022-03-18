@@ -78,22 +78,18 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public GooglePrivacyDlpV2StoredTypeArgs build() {
+        }        public GooglePrivacyDlpV2StoredTypeArgs build() {
             return new GooglePrivacyDlpV2StoredTypeArgs(createTime, name);
         }
     }

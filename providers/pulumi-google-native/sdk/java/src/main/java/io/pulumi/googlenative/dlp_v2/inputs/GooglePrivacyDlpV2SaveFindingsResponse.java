@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.reso
         public Builder outputConfig(GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2SaveFindingsResponse build() {
+        }        public GooglePrivacyDlpV2SaveFindingsResponse build() {
             return new GooglePrivacyDlpV2SaveFindingsResponse(outputConfig);
         }
     }

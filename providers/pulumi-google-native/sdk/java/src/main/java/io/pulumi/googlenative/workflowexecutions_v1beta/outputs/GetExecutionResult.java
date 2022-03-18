@@ -182,47 +182,38 @@ public final class GetExecutionResult {
             this.argument = Objects.requireNonNull(argument);
             return this;
         }
-
         public Builder callLogLevel(String callLogLevel) {
             this.callLogLevel = Objects.requireNonNull(callLogLevel);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder error(ErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder workflowRevisionId(String workflowRevisionId) {
             this.workflowRevisionId = Objects.requireNonNull(workflowRevisionId);
             return this;
-        }
-        public GetExecutionResult build() {
+        }        public GetExecutionResult build() {
             return new GetExecutionResult(argument, callLogLevel, endTime, error, name, result, startTime, state, workflowRevisionId);
         }
     }

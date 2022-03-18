@@ -79,22 +79,18 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.ellipticCurve = ellipticCurve;
             return this;
         }
-
         public Builder ellipticCurve(@Nullable EcKeyTypeArgs ellipticCurve) {
             this.ellipticCurve = Output.ofNullable(ellipticCurve);
             return this;
         }
-
         public Builder rsa(@Nullable Output<RsaKeyTypeArgs> rsa) {
             this.rsa = rsa;
             return this;
         }
-
         public Builder rsa(@Nullable RsaKeyTypeArgs rsa) {
             this.rsa = Output.ofNullable(rsa);
             return this;
-        }
-        public AllowedKeyTypeArgs build() {
+        }        public AllowedKeyTypeArgs build() {
             return new AllowedKeyTypeArgs(ellipticCurve, rsa);
         }
     }

@@ -172,42 +172,34 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
             this.acl = Objects.requireNonNull(acl);
             return this;
         }
-
         public Builder gid(String gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
-
         public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder symlink(String symlink) {
             this.symlink = Objects.requireNonNull(symlink);
             return this;
         }
-
         public Builder temporaryHold(String temporaryHold) {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public MetadataOptionsResponse build() {
+        }        public MetadataOptionsResponse build() {
             return new MetadataOptionsResponse(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, uid);
         }
     }

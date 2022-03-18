@@ -85,17 +85,14 @@ public final class TfLiteModelResponse {
             this.automlModel = Objects.requireNonNull(automlModel);
             return this;
         }
-
         public Builder gcsTfliteUri(String gcsTfliteUri) {
             this.gcsTfliteUri = Objects.requireNonNull(gcsTfliteUri);
             return this;
         }
-
         public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
-        }
-        public TfLiteModelResponse build() {
+        }        public TfLiteModelResponse build() {
             return new TfLiteModelResponse(automlModel, gcsTfliteUri, sizeBytes);
         }
     }

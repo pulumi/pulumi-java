@@ -602,177 +602,160 @@ public final class GetRegionDiskResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
             this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
             return this;
         }
-
         public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lastAttachTimestamp(String lastAttachTimestamp) {
             this.lastAttachTimestamp = Objects.requireNonNull(lastAttachTimestamp);
             return this;
         }
-
         public Builder lastDetachTimestamp(String lastDetachTimestamp) {
             this.lastDetachTimestamp = Objects.requireNonNull(lastDetachTimestamp);
             return this;
         }
-
         public Builder licenseCodes(List<String> licenseCodes) {
             this.licenseCodes = Objects.requireNonNull(licenseCodes);
             return this;
         }
-
+        public Builder licenseCodes(String... licenseCodes) {
+            return licenseCodes(List.of(licenseCodes));
+        }
         public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder options(String options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder physicalBlockSizeBytes(String physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = Objects.requireNonNull(physicalBlockSizeBytes);
             return this;
         }
-
         public Builder provisionedIops(String provisionedIops) {
             this.provisionedIops = Objects.requireNonNull(provisionedIops);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder replicaZones(List<String> replicaZones) {
             this.replicaZones = Objects.requireNonNull(replicaZones);
             return this;
         }
-
+        public Builder replicaZones(String... replicaZones) {
+            return replicaZones(List.of(replicaZones));
+        }
         public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder sizeGb(String sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
-
         public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
-
         public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
-
         public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
             return this;
         }
-
         public Builder sourceImageId(String sourceImageId) {
             this.sourceImageId = Objects.requireNonNull(sourceImageId);
             return this;
         }
-
         public Builder sourceSnapshot(String sourceSnapshot) {
             this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public Builder sourceSnapshotId(String sourceSnapshotId) {
             this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
             return this;
         }
-
         public Builder sourceStorageObject(String sourceStorageObject) {
             this.sourceStorageObject = Objects.requireNonNull(sourceStorageObject);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder users(List<String> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
-
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetRegionDiskResult build() {
+        }        public GetRegionDiskResult build() {
             return new GetRegionDiskResult(creationTimestamp, description, diskEncryptionKey, guestOsFeatures, kind, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, licenseCodes, licenses, locationHint, name, options, physicalBlockSizeBytes, provisionedIops, region, replicaZones, resourcePolicies, satisfiesPzs, selfLink, sizeGb, sourceDisk, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceStorageObject, status, type, users, zone);
         }
     }

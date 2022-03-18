@@ -120,27 +120,22 @@ public final class GetServiceResult {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder metadata(ObjectMetaResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder spec(ServiceSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder status(ServiceStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(apiVersion, kind, metadata, spec, status);
         }
     }

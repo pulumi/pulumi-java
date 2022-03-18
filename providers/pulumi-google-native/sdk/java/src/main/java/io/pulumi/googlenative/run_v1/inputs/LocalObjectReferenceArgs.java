@@ -61,12 +61,10 @@ public final class LocalObjectReferenceArgs extends io.pulumi.resources.Resource
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public LocalObjectReferenceArgs build() {
+        }        public LocalObjectReferenceArgs build() {
             return new LocalObjectReferenceArgs(name);
         }
     }

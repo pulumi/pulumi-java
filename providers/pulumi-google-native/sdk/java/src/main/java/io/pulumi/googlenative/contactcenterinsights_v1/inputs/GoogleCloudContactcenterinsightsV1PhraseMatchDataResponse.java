@@ -76,12 +76,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder phraseMatcher(String phraseMatcher) {
             this.phraseMatcher = Objects.requireNonNull(phraseMatcher);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(displayName, phraseMatcher);
         }
     }

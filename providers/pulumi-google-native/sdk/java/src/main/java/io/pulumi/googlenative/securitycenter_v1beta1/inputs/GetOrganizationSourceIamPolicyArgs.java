@@ -64,12 +64,10 @@ public final class GetOrganizationSourceIamPolicyArgs extends io.pulumi.resource
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
-        }
-        public GetOrganizationSourceIamPolicyArgs build() {
+        }        public GetOrganizationSourceIamPolicyArgs build() {
             return new GetOrganizationSourceIamPolicyArgs(organizationId, sourceId);
         }
     }

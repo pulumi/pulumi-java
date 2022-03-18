@@ -76,12 +76,10 @@ public final class ExternalProtectionLevelOptionsResponse extends io.pulumi.reso
             this.ekmConnectionKeyPath = Objects.requireNonNull(ekmConnectionKeyPath);
             return this;
         }
-
         public Builder externalKeyUri(String externalKeyUri) {
             this.externalKeyUri = Objects.requireNonNull(externalKeyUri);
             return this;
-        }
-        public ExternalProtectionLevelOptionsResponse build() {
+        }        public ExternalProtectionLevelOptionsResponse build() {
             return new ExternalProtectionLevelOptionsResponse(ekmConnectionKeyPath, externalKeyUri);
         }
     }

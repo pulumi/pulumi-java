@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2EntityIdResponse extends io.pulumi.resource
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
-        }
-        public GooglePrivacyDlpV2EntityIdResponse build() {
+        }        public GooglePrivacyDlpV2EntityIdResponse build() {
             return new GooglePrivacyDlpV2EntityIdResponse(field);
         }
     }

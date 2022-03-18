@@ -77,22 +77,18 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
             this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
             return this;
         }
-
         public Builder sourceLanguageCode(String sourceLanguageCode) {
             this.sourceLanguageCode = Output.of(Objects.requireNonNull(sourceLanguageCode));
             return this;
         }
-
         public Builder targetLanguageCode(Output<String> targetLanguageCode) {
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
         }
-
         public Builder targetLanguageCode(String targetLanguageCode) {
             this.targetLanguageCode = Output.of(Objects.requireNonNull(targetLanguageCode));
             return this;
-        }
-        public LanguageCodePairArgs build() {
+        }        public LanguageCodePairArgs build() {
             return new LanguageCodePairArgs(sourceLanguageCode, targetLanguageCode);
         }
     }

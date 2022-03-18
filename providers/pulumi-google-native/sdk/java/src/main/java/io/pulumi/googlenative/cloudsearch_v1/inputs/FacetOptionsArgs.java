@@ -111,42 +111,34 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.numFacetBuckets = numFacetBuckets;
             return this;
         }
-
         public Builder numFacetBuckets(@Nullable Integer numFacetBuckets) {
             this.numFacetBuckets = Output.ofNullable(numFacetBuckets);
             return this;
         }
-
         public Builder objectType(@Nullable Output<String> objectType) {
             this.objectType = objectType;
             return this;
         }
-
         public Builder objectType(@Nullable String objectType) {
             this.objectType = Output.ofNullable(objectType);
             return this;
         }
-
         public Builder operatorName(@Nullable Output<String> operatorName) {
             this.operatorName = operatorName;
             return this;
         }
-
         public Builder operatorName(@Nullable String operatorName) {
             this.operatorName = Output.ofNullable(operatorName);
             return this;
         }
-
         public Builder sourceName(@Nullable Output<String> sourceName) {
             this.sourceName = sourceName;
             return this;
         }
-
         public Builder sourceName(@Nullable String sourceName) {
             this.sourceName = Output.ofNullable(sourceName);
             return this;
-        }
-        public FacetOptionsArgs build() {
+        }        public FacetOptionsArgs build() {
             return new FacetOptionsArgs(numFacetBuckets, objectType, operatorName, sourceName);
         }
     }

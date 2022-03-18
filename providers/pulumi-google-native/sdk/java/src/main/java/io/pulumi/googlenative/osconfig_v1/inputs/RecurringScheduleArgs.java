@@ -163,72 +163,58 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder frequency(Output<RecurringScheduleFrequency> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder frequency(RecurringScheduleFrequency frequency) {
             this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
-
         public Builder monthly(Output<MonthlyScheduleArgs> monthly) {
             this.monthly = Objects.requireNonNull(monthly);
             return this;
         }
-
         public Builder monthly(MonthlyScheduleArgs monthly) {
             this.monthly = Output.of(Objects.requireNonNull(monthly));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder timeOfDay(Output<TimeOfDayArgs> timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
-
         public Builder timeOfDay(TimeOfDayArgs timeOfDay) {
             this.timeOfDay = Output.of(Objects.requireNonNull(timeOfDay));
             return this;
         }
-
         public Builder timeZone(Output<TimeZoneArgs> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder timeZone(TimeZoneArgs timeZone) {
             this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
         }
-
         public Builder weekly(Output<WeeklyScheduleArgs> weekly) {
             this.weekly = Objects.requireNonNull(weekly);
             return this;
         }
-
         public Builder weekly(WeeklyScheduleArgs weekly) {
             this.weekly = Output.of(Objects.requireNonNull(weekly));
             return this;
-        }
-        public RecurringScheduleArgs build() {
+        }        public RecurringScheduleArgs build() {
             return new RecurringScheduleArgs(endTime, frequency, monthly, startTime, timeOfDay, timeZone, weekly);
         }
     }

@@ -118,27 +118,22 @@ public final class IPAllocationPolicyResponse {
             this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
             return this;
         }
-
         public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
             return this;
         }
-
         public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
             return this;
         }
-
         public Builder useIpAliases(Boolean useIpAliases) {
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
-        }
-        public IPAllocationPolicyResponse build() {
+        }        public IPAllocationPolicyResponse build() {
             return new IPAllocationPolicyResponse(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }
     }

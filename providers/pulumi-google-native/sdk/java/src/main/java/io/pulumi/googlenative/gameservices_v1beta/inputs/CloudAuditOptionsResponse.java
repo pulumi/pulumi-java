@@ -77,12 +77,10 @@ public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeA
             this.authorizationLoggingOptions = Objects.requireNonNull(authorizationLoggingOptions);
             return this;
         }
-
         public Builder logName(String logName) {
             this.logName = Objects.requireNonNull(logName);
             return this;
-        }
-        public CloudAuditOptionsResponse build() {
+        }        public CloudAuditOptionsResponse build() {
             return new CloudAuditOptionsResponse(authorizationLoggingOptions, logName);
         }
     }

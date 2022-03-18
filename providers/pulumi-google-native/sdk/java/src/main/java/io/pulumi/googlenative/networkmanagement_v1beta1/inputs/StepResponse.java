@@ -364,97 +364,78 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
             this.abort = Objects.requireNonNull(abort);
             return this;
         }
-
         public Builder causesDrop(Boolean causesDrop) {
             this.causesDrop = Objects.requireNonNull(causesDrop);
             return this;
         }
-
         public Builder cloudSqlInstance(CloudSQLInstanceInfoResponse cloudSqlInstance) {
             this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
             return this;
         }
-
         public Builder deliver(DeliverInfoResponse deliver) {
             this.deliver = Objects.requireNonNull(deliver);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder drop(DropInfoResponse drop) {
             this.drop = Objects.requireNonNull(drop);
             return this;
         }
-
         public Builder endpoint(EndpointInfoResponse endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder firewall(FirewallInfoResponse firewall) {
             this.firewall = Objects.requireNonNull(firewall);
             return this;
         }
-
         public Builder forward(ForwardInfoResponse forward) {
             this.forward = Objects.requireNonNull(forward);
             return this;
         }
-
         public Builder forwardingRule(ForwardingRuleInfoResponse forwardingRule) {
             this.forwardingRule = Objects.requireNonNull(forwardingRule);
             return this;
         }
-
         public Builder gkeMaster(GKEMasterInfoResponse gkeMaster) {
             this.gkeMaster = Objects.requireNonNull(gkeMaster);
             return this;
         }
-
         public Builder instance(InstanceInfoResponse instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder loadBalancer(LoadBalancerInfoResponse loadBalancer) {
             this.loadBalancer = Objects.requireNonNull(loadBalancer);
             return this;
         }
-
         public Builder network(NetworkInfoResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder route(RouteInfoResponse route) {
             this.route = Objects.requireNonNull(route);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder vpnGateway(VpnGatewayInfoResponse vpnGateway) {
             this.vpnGateway = Objects.requireNonNull(vpnGateway);
             return this;
         }
-
         public Builder vpnTunnel(VpnTunnelInfoResponse vpnTunnel) {
             this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
             return this;
-        }
-        public StepResponse build() {
+        }        public StepResponse build() {
             return new StepResponse(abort, causesDrop, cloudSqlInstance, deliver, description, drop, endpoint, firewall, forward, forwardingRule, gkeMaster, instance, loadBalancer, network, project, route, state, vpnGateway, vpnTunnel);
         }
     }

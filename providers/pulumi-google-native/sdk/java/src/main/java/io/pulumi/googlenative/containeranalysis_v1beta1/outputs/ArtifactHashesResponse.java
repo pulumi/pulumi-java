@@ -43,8 +43,7 @@ public final class ArtifactHashesResponse {
         public Builder sha256(String sha256) {
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
-        }
-        public ArtifactHashesResponse build() {
+        }        public ArtifactHashesResponse build() {
             return new ArtifactHashesResponse(sha256);
         }
     }

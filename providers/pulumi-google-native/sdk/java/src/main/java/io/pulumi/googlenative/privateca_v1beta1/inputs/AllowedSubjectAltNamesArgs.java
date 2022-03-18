@@ -144,62 +144,62 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
             this.allowCustomSans = allowCustomSans;
             return this;
         }
-
         public Builder allowCustomSans(@Nullable Boolean allowCustomSans) {
             this.allowCustomSans = Output.ofNullable(allowCustomSans);
             return this;
         }
-
         public Builder allowGlobbingDnsWildcards(@Nullable Output<Boolean> allowGlobbingDnsWildcards) {
             this.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
             return this;
         }
-
         public Builder allowGlobbingDnsWildcards(@Nullable Boolean allowGlobbingDnsWildcards) {
             this.allowGlobbingDnsWildcards = Output.ofNullable(allowGlobbingDnsWildcards);
             return this;
         }
-
         public Builder allowedDnsNames(@Nullable Output<List<String>> allowedDnsNames) {
             this.allowedDnsNames = allowedDnsNames;
             return this;
         }
-
         public Builder allowedDnsNames(@Nullable List<String> allowedDnsNames) {
             this.allowedDnsNames = Output.ofNullable(allowedDnsNames);
             return this;
         }
-
+        public Builder allowedDnsNames(String... allowedDnsNames) {
+            return allowedDnsNames(List.of(allowedDnsNames));
+        }
         public Builder allowedEmailAddresses(@Nullable Output<List<String>> allowedEmailAddresses) {
             this.allowedEmailAddresses = allowedEmailAddresses;
             return this;
         }
-
         public Builder allowedEmailAddresses(@Nullable List<String> allowedEmailAddresses) {
             this.allowedEmailAddresses = Output.ofNullable(allowedEmailAddresses);
             return this;
         }
-
+        public Builder allowedEmailAddresses(String... allowedEmailAddresses) {
+            return allowedEmailAddresses(List.of(allowedEmailAddresses));
+        }
         public Builder allowedIps(@Nullable Output<List<String>> allowedIps) {
             this.allowedIps = allowedIps;
             return this;
         }
-
         public Builder allowedIps(@Nullable List<String> allowedIps) {
             this.allowedIps = Output.ofNullable(allowedIps);
             return this;
         }
-
+        public Builder allowedIps(String... allowedIps) {
+            return allowedIps(List.of(allowedIps));
+        }
         public Builder allowedUris(@Nullable Output<List<String>> allowedUris) {
             this.allowedUris = allowedUris;
             return this;
         }
-
         public Builder allowedUris(@Nullable List<String> allowedUris) {
             this.allowedUris = Output.ofNullable(allowedUris);
             return this;
         }
-        public AllowedSubjectAltNamesArgs build() {
+        public Builder allowedUris(String... allowedUris) {
+            return allowedUris(List.of(allowedUris));
+        }        public AllowedSubjectAltNamesArgs build() {
             return new AllowedSubjectAltNamesArgs(allowCustomSans, allowGlobbingDnsWildcards, allowedDnsNames, allowedEmailAddresses, allowedIps, allowedUris);
         }
     }

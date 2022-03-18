@@ -69,12 +69,10 @@ public final class RevocationDetailsResponse {
             this.revocationState = Objects.requireNonNull(revocationState);
             return this;
         }
-
         public Builder revocationTime(String revocationTime) {
             this.revocationTime = Objects.requireNonNull(revocationTime);
             return this;
-        }
-        public RevocationDetailsResponse build() {
+        }        public RevocationDetailsResponse build() {
             return new RevocationDetailsResponse(revocationState, revocationTime);
         }
     }

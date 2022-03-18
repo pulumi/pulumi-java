@@ -201,52 +201,48 @@ public final class GetJobTriggerResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder errors(List<GooglePrivacyDlpV2ErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(GooglePrivacyDlpV2ErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder inspectJob(GooglePrivacyDlpV2InspectJobConfigResponse inspectJob) {
             this.inspectJob = Objects.requireNonNull(inspectJob);
             return this;
         }
-
         public Builder lastRunTime(String lastRunTime) {
             this.lastRunTime = Objects.requireNonNull(lastRunTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder triggers(List<GooglePrivacyDlpV2TriggerResponse> triggers) {
             this.triggers = Objects.requireNonNull(triggers);
             return this;
         }
-
+        public Builder triggers(GooglePrivacyDlpV2TriggerResponse... triggers) {
+            return triggers(List.of(triggers));
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetJobTriggerResult build() {
+        }        public GetJobTriggerResult build() {
             return new GetJobTriggerResult(createTime, description, displayName, errors, inspectJob, lastRunTime, name, status, triggers, updateTime);
         }
     }

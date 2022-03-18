@@ -85,17 +85,14 @@ public final class PositionResponse {
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder length(String length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
-
         public Builder line(String line) {
             this.line = Objects.requireNonNull(line);
             return this;
-        }
-        public PositionResponse build() {
+        }        public PositionResponse build() {
             return new PositionResponse(column, length, line);
         }
     }

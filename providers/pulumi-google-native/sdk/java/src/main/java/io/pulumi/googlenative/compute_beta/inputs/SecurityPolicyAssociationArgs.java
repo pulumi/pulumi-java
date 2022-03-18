@@ -74,22 +74,18 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
             this.attachmentId = attachmentId;
             return this;
         }
-
         public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = Output.ofNullable(attachmentId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SecurityPolicyAssociationArgs build() {
+        }        public SecurityPolicyAssociationArgs build() {
             return new SecurityPolicyAssociationArgs(attachmentId, name);
         }
     }

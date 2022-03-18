@@ -79,22 +79,24 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends io.pulumi.resou
             this.colorFamilies = colorFamilies;
             return this;
         }
-
         public Builder colorFamilies(@Nullable List<String> colorFamilies) {
             this.colorFamilies = Output.ofNullable(colorFamilies);
             return this;
         }
-
+        public Builder colorFamilies(String... colorFamilies) {
+            return colorFamilies(List.of(colorFamilies));
+        }
         public Builder colors(@Nullable Output<List<String>> colors) {
             this.colors = colors;
             return this;
         }
-
         public Builder colors(@Nullable List<String> colors) {
             this.colors = Output.ofNullable(colors);
             return this;
         }
-        public GoogleCloudRetailV2alphaColorInfoArgs build() {
+        public Builder colors(String... colors) {
+            return colors(List.of(colors));
+        }        public GoogleCloudRetailV2alphaColorInfoArgs build() {
             return new GoogleCloudRetailV2alphaColorInfoArgs(colorFamilies, colors);
         }
     }

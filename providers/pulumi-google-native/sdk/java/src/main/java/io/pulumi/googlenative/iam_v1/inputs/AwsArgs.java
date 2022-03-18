@@ -60,12 +60,10 @@ public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
-        }
-        public AwsArgs build() {
+        }        public AwsArgs build() {
             return new AwsArgs(accountId);
         }
     }

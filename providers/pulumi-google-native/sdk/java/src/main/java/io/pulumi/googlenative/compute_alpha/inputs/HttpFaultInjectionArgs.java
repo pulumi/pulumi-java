@@ -79,22 +79,18 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
             this.abort = abort;
             return this;
         }
-
         public Builder abort(@Nullable HttpFaultAbortArgs abort) {
             this.abort = Output.ofNullable(abort);
             return this;
         }
-
         public Builder delay(@Nullable Output<HttpFaultDelayArgs> delay) {
             this.delay = delay;
             return this;
         }
-
         public Builder delay(@Nullable HttpFaultDelayArgs delay) {
             this.delay = Output.ofNullable(delay);
             return this;
-        }
-        public HttpFaultInjectionArgs build() {
+        }        public HttpFaultInjectionArgs build() {
             return new HttpFaultInjectionArgs(abort, delay);
         }
     }

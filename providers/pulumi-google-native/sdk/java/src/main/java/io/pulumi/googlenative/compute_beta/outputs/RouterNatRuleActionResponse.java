@@ -70,12 +70,16 @@ public final class RouterNatRuleActionResponse {
             this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps);
             return this;
         }
-
+        public Builder sourceNatActiveIps(String... sourceNatActiveIps) {
+            return sourceNatActiveIps(List.of(sourceNatActiveIps));
+        }
         public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
             this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
             return this;
         }
-        public RouterNatRuleActionResponse build() {
+        public Builder sourceNatDrainIps(String... sourceNatDrainIps) {
+            return sourceNatDrainIps(List.of(sourceNatDrainIps));
+        }        public RouterNatRuleActionResponse build() {
             return new RouterNatRuleActionResponse(sourceNatActiveIps, sourceNatDrainIps);
         }
     }

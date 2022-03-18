@@ -126,52 +126,42 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
-
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
-
         public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = Output.ofNullable(tablePrefix);
             return this;
-        }
-        public GoogleCloudApigeeV1DatastoreConfigArgs build() {
+        }        public GoogleCloudApigeeV1DatastoreConfigArgs build() {
             return new GoogleCloudApigeeV1DatastoreConfigArgs(bucketName, datasetName, path, project, tablePrefix);
         }
     }

@@ -79,22 +79,21 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
             this.operation = operation;
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = Output.ofNullable(operation);
             return this;
         }
-
         public Builder operationTypes(Output<List<String>> operationTypes) {
             this.operationTypes = Objects.requireNonNull(operationTypes);
             return this;
         }
-
         public Builder operationTypes(List<String> operationTypes) {
             this.operationTypes = Output.of(Objects.requireNonNull(operationTypes));
             return this;
         }
-        public GoogleCloudApigeeV1GraphQLOperationArgs build() {
+        public Builder operationTypes(String... operationTypes) {
+            return operationTypes(List.of(operationTypes));
+        }        public GoogleCloudApigeeV1GraphQLOperationArgs build() {
             return new GoogleCloudApigeeV1GraphQLOperationArgs(operation, operationTypes);
         }
     }

@@ -229,122 +229,107 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultRouteAction = defaultRouteAction;
             return this;
         }
-
         public Builder defaultRouteAction(@Nullable HttpRouteActionArgs defaultRouteAction) {
             this.defaultRouteAction = Output.ofNullable(defaultRouteAction);
             return this;
         }
-
         public Builder defaultService(@Nullable Output<String> defaultService) {
             this.defaultService = defaultService;
             return this;
         }
-
         public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = Output.ofNullable(defaultService);
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable HttpRedirectActionArgs defaultUrlRedirect) {
             this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<HttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder hostRules(@Nullable Output<List<HostRuleArgs>> hostRules) {
             this.hostRules = hostRules;
             return this;
         }
-
         public Builder hostRules(@Nullable List<HostRuleArgs> hostRules) {
             this.hostRules = Output.ofNullable(hostRules);
             return this;
         }
-
+        public Builder hostRules(HostRuleArgs... hostRules) {
+            return hostRules(List.of(hostRules));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pathMatchers(@Nullable Output<List<PathMatcherArgs>> pathMatchers) {
             this.pathMatchers = pathMatchers;
             return this;
         }
-
         public Builder pathMatchers(@Nullable List<PathMatcherArgs> pathMatchers) {
             this.pathMatchers = Output.ofNullable(pathMatchers);
             return this;
         }
-
+        public Builder pathMatchers(PathMatcherArgs... pathMatchers) {
+            return pathMatchers(List.of(pathMatchers));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder tests(@Nullable Output<List<UrlMapTestArgs>> tests) {
             this.tests = tests;
             return this;
         }
-
         public Builder tests(@Nullable List<UrlMapTestArgs> tests) {
             this.tests = Output.ofNullable(tests);
             return this;
         }
-        public RegionUrlMapArgs build() {
+        public Builder tests(UrlMapTestArgs... tests) {
+            return tests(List.of(tests));
+        }        public RegionUrlMapArgs build() {
             return new RegionUrlMapArgs(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, hostRules, name, pathMatchers, project, region, requestId, tests);
         }
     }

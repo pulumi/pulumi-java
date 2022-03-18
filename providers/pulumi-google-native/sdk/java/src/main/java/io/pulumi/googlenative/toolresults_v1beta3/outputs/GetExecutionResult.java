@@ -170,42 +170,37 @@ public final class GetExecutionResult {
             this.completionTime = Objects.requireNonNull(completionTime);
             return this;
         }
-
         public Builder creationTime(TimestampResponse creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder dimensionDefinitions(List<MatrixDimensionDefinitionResponse> dimensionDefinitions) {
             this.dimensionDefinitions = Objects.requireNonNull(dimensionDefinitions);
             return this;
         }
-
+        public Builder dimensionDefinitions(MatrixDimensionDefinitionResponse... dimensionDefinitions) {
+            return dimensionDefinitions(List.of(dimensionDefinitions));
+        }
         public Builder executionId(String executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder outcome(OutcomeResponse outcome) {
             this.outcome = Objects.requireNonNull(outcome);
             return this;
         }
-
         public Builder specification(SpecificationResponse specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder testExecutionMatrixId(String testExecutionMatrixId) {
             this.testExecutionMatrixId = Objects.requireNonNull(testExecutionMatrixId);
             return this;
-        }
-        public GetExecutionResult build() {
+        }        public GetExecutionResult build() {
             return new GetExecutionResult(completionTime, creationTime, dimensionDefinitions, executionId, outcome, specification, state, testExecutionMatrixId);
         }
     }

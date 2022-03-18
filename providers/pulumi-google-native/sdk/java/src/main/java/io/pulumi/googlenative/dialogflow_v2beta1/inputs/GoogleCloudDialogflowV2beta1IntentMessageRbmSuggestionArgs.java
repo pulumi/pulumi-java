@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder reply(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply) {
             this.reply = reply;
             return this;
         }
-
         public Builder reply(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs reply) {
             this.reply = Output.ofNullable(reply);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs(action, reply);
         }
     }

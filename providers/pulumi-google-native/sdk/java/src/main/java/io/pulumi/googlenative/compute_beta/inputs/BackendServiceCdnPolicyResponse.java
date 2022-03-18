@@ -242,62 +242,59 @@ public final class BackendServiceCdnPolicyResponse extends io.pulumi.resources.I
             this.bypassCacheOnRequestHeaders = Objects.requireNonNull(bypassCacheOnRequestHeaders);
             return this;
         }
-
+        public Builder bypassCacheOnRequestHeaders(BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse... bypassCacheOnRequestHeaders) {
+            return bypassCacheOnRequestHeaders(List.of(bypassCacheOnRequestHeaders));
+        }
         public Builder cacheKeyPolicy(CacheKeyPolicyResponse cacheKeyPolicy) {
             this.cacheKeyPolicy = Objects.requireNonNull(cacheKeyPolicy);
             return this;
         }
-
         public Builder cacheMode(String cacheMode) {
             this.cacheMode = Objects.requireNonNull(cacheMode);
             return this;
         }
-
         public Builder clientTtl(Integer clientTtl) {
             this.clientTtl = Objects.requireNonNull(clientTtl);
             return this;
         }
-
         public Builder defaultTtl(Integer defaultTtl) {
             this.defaultTtl = Objects.requireNonNull(defaultTtl);
             return this;
         }
-
         public Builder maxTtl(Integer maxTtl) {
             this.maxTtl = Objects.requireNonNull(maxTtl);
             return this;
         }
-
         public Builder negativeCaching(Boolean negativeCaching) {
             this.negativeCaching = Objects.requireNonNull(negativeCaching);
             return this;
         }
-
         public Builder negativeCachingPolicy(List<BackendServiceCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy) {
             this.negativeCachingPolicy = Objects.requireNonNull(negativeCachingPolicy);
             return this;
         }
-
+        public Builder negativeCachingPolicy(BackendServiceCdnPolicyNegativeCachingPolicyResponse... negativeCachingPolicy) {
+            return negativeCachingPolicy(List.of(negativeCachingPolicy));
+        }
         public Builder requestCoalescing(Boolean requestCoalescing) {
             this.requestCoalescing = Objects.requireNonNull(requestCoalescing);
             return this;
         }
-
         public Builder serveWhileStale(Integer serveWhileStale) {
             this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
             return this;
         }
-
         public Builder signedUrlCacheMaxAgeSec(String signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
         }
-
         public Builder signedUrlKeyNames(List<String> signedUrlKeyNames) {
             this.signedUrlKeyNames = Objects.requireNonNull(signedUrlKeyNames);
             return this;
         }
-        public BackendServiceCdnPolicyResponse build() {
+        public Builder signedUrlKeyNames(String... signedUrlKeyNames) {
+            return signedUrlKeyNames(List.of(signedUrlKeyNames));
+        }        public BackendServiceCdnPolicyResponse build() {
             return new BackendServiceCdnPolicyResponse(bypassCacheOnRequestHeaders, cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, requestCoalescing, serveWhileStale, signedUrlCacheMaxAgeSec, signedUrlKeyNames);
         }
     }

@@ -119,27 +119,25 @@ public final class PollingOptionsResponse {
             this.diagnostics = Objects.requireNonNull(diagnostics);
             return this;
         }
-
+        public Builder diagnostics(DiagnosticResponse... diagnostics) {
+            return diagnostics(List.of(diagnostics));
+        }
         public Builder failCondition(String failCondition) {
             this.failCondition = Objects.requireNonNull(failCondition);
             return this;
         }
-
         public Builder finishCondition(String finishCondition) {
             this.finishCondition = Objects.requireNonNull(finishCondition);
             return this;
         }
-
         public Builder pollingLink(String pollingLink) {
             this.pollingLink = Objects.requireNonNull(pollingLink);
             return this;
         }
-
         public Builder targetLink(String targetLink) {
             this.targetLink = Objects.requireNonNull(targetLink);
             return this;
-        }
-        public PollingOptionsResponse build() {
+        }        public PollingOptionsResponse build() {
             return new PollingOptionsResponse(diagnostics, failCondition, finishCondition, pollingLink, targetLink);
         }
     }

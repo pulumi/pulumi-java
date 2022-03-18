@@ -93,17 +93,14 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder valueFrom(EnvVarSourceResponse valueFrom) {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
-        }
-        public EnvVarResponse build() {
+        }        public EnvVarResponse build() {
             return new EnvVarResponse(name, value, valueFrom);
         }
     }

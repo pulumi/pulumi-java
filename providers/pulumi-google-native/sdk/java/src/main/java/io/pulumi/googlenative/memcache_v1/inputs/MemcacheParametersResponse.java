@@ -55,8 +55,7 @@ public final class MemcacheParametersResponse extends io.pulumi.resources.Invoke
         public Builder params(Map<String,String> params) {
             this.params = Objects.requireNonNull(params);
             return this;
-        }
-        public MemcacheParametersResponse build() {
+        }        public MemcacheParametersResponse build() {
             return new MemcacheParametersResponse(params);
         }
     }

@@ -93,17 +93,14 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder noExternalIp(Boolean noExternalIp) {
             this.noExternalIp = Objects.requireNonNull(noExternalIp);
             return this;
-        }
-        public WorkerConfigResponse build() {
+        }        public WorkerConfigResponse build() {
             return new WorkerConfigResponse(diskSizeGb, machineType, noExternalIp);
         }
     }

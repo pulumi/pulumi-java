@@ -102,22 +102,18 @@ public final class GetAnalysisResult {
             this.analysisResult = Objects.requireNonNull(analysisResult);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder requestTime(String requestTime) {
             this.requestTime = Objects.requireNonNull(requestTime);
             return this;
-        }
-        public GetAnalysisResult build() {
+        }        public GetAnalysisResult build() {
             return new GetAnalysisResult(analysisResult, createTime, name, requestTime);
         }
     }

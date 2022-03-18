@@ -51,8 +51,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
         public Builder newValue(GooglePrivacyDlpV2ValueResponse newValue) {
             this.newValue = Objects.requireNonNull(newValue);
             return this;
-        }
-        public GooglePrivacyDlpV2ReplaceValueConfigResponse build() {
+        }        public GooglePrivacyDlpV2ReplaceValueConfigResponse build() {
             return new GooglePrivacyDlpV2ReplaceValueConfigResponse(newValue);
         }
     }

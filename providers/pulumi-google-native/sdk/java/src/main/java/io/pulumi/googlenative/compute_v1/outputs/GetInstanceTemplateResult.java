@@ -167,42 +167,34 @@ public final class GetInstanceTemplateResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(InstancePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
-
         public Builder sourceInstanceParams(SourceInstanceParamsResponse sourceInstanceParams) {
             this.sourceInstanceParams = Objects.requireNonNull(sourceInstanceParams);
             return this;
-        }
-        public GetInstanceTemplateResult build() {
+        }        public GetInstanceTemplateResult build() {
             return new GetInstanceTemplateResult(creationTimestamp, description, kind, name, properties, selfLink, sourceInstance, sourceInstanceParams);
         }
     }

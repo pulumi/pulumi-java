@@ -66,12 +66,10 @@ public final class GetGlobalPublicDelegatedPrefixArgs extends io.pulumi.resource
             this.project = project;
             return this;
         }
-
         public Builder publicDelegatedPrefix(String publicDelegatedPrefix) {
             this.publicDelegatedPrefix = Objects.requireNonNull(publicDelegatedPrefix);
             return this;
-        }
-        public GetGlobalPublicDelegatedPrefixArgs build() {
+        }        public GetGlobalPublicDelegatedPrefixArgs build() {
             return new GetGlobalPublicDelegatedPrefixArgs(project, publicDelegatedPrefix);
         }
     }

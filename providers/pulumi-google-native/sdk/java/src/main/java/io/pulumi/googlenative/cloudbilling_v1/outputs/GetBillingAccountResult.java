@@ -102,22 +102,18 @@ public final class GetBillingAccountResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder masterBillingAccount(String masterBillingAccount) {
             this.masterBillingAccount = Objects.requireNonNull(masterBillingAccount);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder open(Boolean open) {
             this.open = Objects.requireNonNull(open);
             return this;
-        }
-        public GetBillingAccountResult build() {
+        }        public GetBillingAccountResult build() {
             return new GetBillingAccountResult(displayName, masterBillingAccount, name, open);
         }
     }

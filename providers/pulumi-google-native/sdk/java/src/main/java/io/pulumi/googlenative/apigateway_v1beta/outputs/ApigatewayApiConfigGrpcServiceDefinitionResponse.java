@@ -70,12 +70,13 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse {
             this.fileDescriptorSet = Objects.requireNonNull(fileDescriptorSet);
             return this;
         }
-
         public Builder source(List<ApigatewayApiConfigFileResponse> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-        public ApigatewayApiConfigGrpcServiceDefinitionResponse build() {
+        public Builder source(ApigatewayApiConfigFileResponse... source) {
+            return source(List.of(source));
+        }        public ApigatewayApiConfigGrpcServiceDefinitionResponse build() {
             return new ApigatewayApiConfigGrpcServiceDefinitionResponse(fileDescriptorSet, source);
         }
     }

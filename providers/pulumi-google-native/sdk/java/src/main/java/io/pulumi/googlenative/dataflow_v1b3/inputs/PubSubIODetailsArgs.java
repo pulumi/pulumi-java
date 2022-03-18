@@ -78,22 +78,18 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
             this.subscription = subscription;
             return this;
         }
-
         public Builder subscription(@Nullable String subscription) {
             this.subscription = Output.ofNullable(subscription);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public PubSubIODetailsArgs build() {
+        }        public PubSubIODetailsArgs build() {
             return new PubSubIODetailsArgs(subscription, topic);
         }
     }

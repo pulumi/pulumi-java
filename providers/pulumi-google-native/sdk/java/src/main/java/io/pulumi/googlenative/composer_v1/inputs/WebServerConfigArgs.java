@@ -61,12 +61,10 @@ public final class WebServerConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
-        }
-        public WebServerConfigArgs build() {
+        }        public WebServerConfigArgs build() {
             return new WebServerConfigArgs(machineType);
         }
     }

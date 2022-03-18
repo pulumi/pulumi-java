@@ -53,7 +53,9 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
-        public GooglePrivacyDlpV2ExcludeInfoTypesResponse build() {
+        public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }        public GooglePrivacyDlpV2ExcludeInfoTypesResponse build() {
             return new GooglePrivacyDlpV2ExcludeInfoTypesResponse(infoTypes);
         }
     }

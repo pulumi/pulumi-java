@@ -175,42 +175,34 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
             this.elapsedTime = Objects.requireNonNull(elapsedTime);
             return this;
         }
-
         public Builder errorCount(Integer errorCount) {
             this.errorCount = Objects.requireNonNull(errorCount);
             return this;
         }
-
         public Builder failureCount(Integer failureCount) {
             this.failureCount = Objects.requireNonNull(failureCount);
             return this;
         }
-
         public Builder flakyCount(Integer flakyCount) {
             this.flakyCount = Objects.requireNonNull(flakyCount);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder skippedCount(Integer skippedCount) {
             this.skippedCount = Objects.requireNonNull(skippedCount);
             return this;
         }
-
         public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public Builder xmlSource(FileReferenceResponse xmlSource) {
             this.xmlSource = Objects.requireNonNull(xmlSource);
             return this;
-        }
-        public TestSuiteOverviewResponse build() {
+        }        public TestSuiteOverviewResponse build() {
             return new TestSuiteOverviewResponse(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);
         }
     }

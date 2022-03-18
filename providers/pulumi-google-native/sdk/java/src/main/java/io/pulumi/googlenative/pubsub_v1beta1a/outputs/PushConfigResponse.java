@@ -51,8 +51,7 @@ public final class PushConfigResponse {
         public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
-        }
-        public PushConfigResponse build() {
+        }        public PushConfigResponse build() {
             return new PushConfigResponse(pushEndpoint);
         }
     }

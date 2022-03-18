@@ -405,112 +405,93 @@ public final class GetNoteResult {
             this.attestationAuthority = Objects.requireNonNull(attestationAuthority);
             return this;
         }
-
         public Builder baseImage(BasisResponse baseImage) {
             this.baseImage = Objects.requireNonNull(baseImage);
             return this;
         }
-
         public Builder buildType(BuildTypeResponse buildType) {
             this.buildType = Objects.requireNonNull(buildType);
             return this;
         }
-
         public Builder compliance(ComplianceNoteResponse compliance) {
             this.compliance = Objects.requireNonNull(compliance);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deployable(DeployableResponse deployable) {
             this.deployable = Objects.requireNonNull(deployable);
             return this;
         }
-
         public Builder discovery(DiscoveryResponse discovery) {
             this.discovery = Objects.requireNonNull(discovery);
             return this;
         }
-
         public Builder dsseAttestation(DSSEAttestationNoteResponse dsseAttestation) {
             this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder $package(PackageResponse $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
-
         public Builder relatedUrl(List<RelatedUrlResponse> relatedUrl) {
             this.relatedUrl = Objects.requireNonNull(relatedUrl);
             return this;
         }
-
+        public Builder relatedUrl(RelatedUrlResponse... relatedUrl) {
+            return relatedUrl(List.of(relatedUrl));
+        }
         public Builder sbom(DocumentNoteResponse sbom) {
             this.sbom = Objects.requireNonNull(sbom);
             return this;
         }
-
         public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
-
         public Builder spdxFile(FileNoteResponse spdxFile) {
             this.spdxFile = Objects.requireNonNull(spdxFile);
             return this;
         }
-
         public Builder spdxPackage(PackageInfoNoteResponse spdxPackage) {
             this.spdxPackage = Objects.requireNonNull(spdxPackage);
             return this;
         }
-
         public Builder spdxRelationship(RelationshipNoteResponse spdxRelationship) {
             this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder upgrade(UpgradeNoteResponse upgrade) {
             this.upgrade = Objects.requireNonNull(upgrade);
             return this;
         }
-
         public Builder vulnerabilityType(VulnerabilityTypeResponse vulnerabilityType) {
             this.vulnerabilityType = Objects.requireNonNull(vulnerabilityType);
             return this;
-        }
-        public GetNoteResult build() {
+        }        public GetNoteResult build() {
             return new GetNoteResult(attestationAuthority, baseImage, buildType, compliance, createTime, deployable, discovery, dsseAttestation, expirationTime, kind, longDescription, name, $package, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, updateTime, upgrade, vulnerabilityType);
         }
     }

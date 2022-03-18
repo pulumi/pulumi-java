@@ -151,37 +151,30 @@ public final class GetRouteResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder destinationAddress(String destinationAddress) {
             this.destinationAddress = Objects.requireNonNull(destinationAddress);
             return this;
         }
-
         public Builder destinationPort(Integer destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetRouteResult build() {
+        }        public GetRouteResult build() {
             return new GetRouteResult(createTime, destinationAddress, destinationPort, displayName, labels, name, updateTime);
         }
     }

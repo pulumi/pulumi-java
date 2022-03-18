@@ -61,12 +61,10 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
             this.bigqueryDestination = bigqueryDestination;
             return this;
         }
-
         public Builder bigqueryDestination(@Nullable GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs bigqueryDestination) {
             this.bigqueryDestination = Output.ofNullable(bigqueryDestination);
             return this;
-        }
-        public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs build() {
+        }        public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs build() {
             return new GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(bigqueryDestination);
         }
     }

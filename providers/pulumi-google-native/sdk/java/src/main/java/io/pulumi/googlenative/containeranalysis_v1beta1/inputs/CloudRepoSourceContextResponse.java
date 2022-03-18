@@ -94,17 +94,14 @@ public final class CloudRepoSourceContextResponse extends io.pulumi.resources.In
             this.aliasContext = Objects.requireNonNull(aliasContext);
             return this;
         }
-
         public Builder repoId(RepoIdResponse repoId) {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
-        }
-        public CloudRepoSourceContextResponse build() {
+        }        public CloudRepoSourceContextResponse build() {
             return new CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
         }
     }

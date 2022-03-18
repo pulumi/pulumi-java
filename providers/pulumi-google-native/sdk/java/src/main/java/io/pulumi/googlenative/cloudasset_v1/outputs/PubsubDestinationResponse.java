@@ -51,8 +51,7 @@ public final class PubsubDestinationResponse {
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public PubsubDestinationResponse build() {
+        }        public PubsubDestinationResponse build() {
             return new PubsubDestinationResponse(topic);
         }
     }

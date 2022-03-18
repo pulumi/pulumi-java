@@ -199,52 +199,45 @@ public final class GetBackupResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder databaseDialect(String databaseDialect) {
             this.databaseDialect = Objects.requireNonNull(databaseDialect);
             return this;
         }
-
         public Builder encryptionInfo(EncryptionInfoResponse encryptionInfo) {
             this.encryptionInfo = Objects.requireNonNull(encryptionInfo);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder referencingDatabases(List<String> referencingDatabases) {
             this.referencingDatabases = Objects.requireNonNull(referencingDatabases);
             return this;
         }
-
+        public Builder referencingDatabases(String... referencingDatabases) {
+            return referencingDatabases(List.of(referencingDatabases));
+        }
         public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder versionTime(String versionTime) {
             this.versionTime = Objects.requireNonNull(versionTime);
             return this;
-        }
-        public GetBackupResult build() {
+        }        public GetBackupResult build() {
             return new GetBackupResult(createTime, database, databaseDialect, encryptionInfo, expireTime, name, referencingDatabases, sizeBytes, state, versionTime);
         }
     }

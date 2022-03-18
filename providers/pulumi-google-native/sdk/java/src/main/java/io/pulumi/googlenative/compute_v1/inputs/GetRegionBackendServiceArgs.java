@@ -78,17 +78,14 @@ public final class GetRegionBackendServiceArgs extends io.pulumi.resources.Invok
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionBackendServiceArgs build() {
+        }        public GetRegionBackendServiceArgs build() {
             return new GetRegionBackendServiceArgs(backendService, project, region);
         }
     }

@@ -96,32 +96,26 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder negated(@Nullable Output<Boolean> negated) {
             this.negated = negated;
             return this;
         }
-
         public Builder negated(@Nullable Boolean negated) {
             this.negated = Output.ofNullable(negated);
             return this;
         }
-
         public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Output.of(Objects.requireNonNull(query));
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs(config, negated, query);
         }
     }

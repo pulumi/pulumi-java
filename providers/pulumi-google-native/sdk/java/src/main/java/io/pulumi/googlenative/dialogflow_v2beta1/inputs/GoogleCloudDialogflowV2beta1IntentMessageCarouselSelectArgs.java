@@ -61,12 +61,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs e
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-        public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs build() {
+        public Builder items(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs... items) {
+            return items(List.of(items));
+        }        public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs(items);
         }
     }

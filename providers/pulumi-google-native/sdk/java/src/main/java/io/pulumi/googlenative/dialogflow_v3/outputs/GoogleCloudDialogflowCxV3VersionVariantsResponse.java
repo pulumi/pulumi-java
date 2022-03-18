@@ -53,7 +53,9 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsResponse {
             this.variants = Objects.requireNonNull(variants);
             return this;
         }
-        public GoogleCloudDialogflowCxV3VersionVariantsResponse build() {
+        public Builder variants(GoogleCloudDialogflowCxV3VersionVariantsVariantResponse... variants) {
+            return variants(List.of(variants));
+        }        public GoogleCloudDialogflowCxV3VersionVariantsResponse build() {
             return new GoogleCloudDialogflowCxV3VersionVariantsResponse(variants);
         }
     }

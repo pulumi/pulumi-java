@@ -69,12 +69,10 @@ public final class OracleSourceConfigResponse {
             this.allowlist = Objects.requireNonNull(allowlist);
             return this;
         }
-
         public Builder rejectlist(OracleRdbmsResponse rejectlist) {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
-        }
-        public OracleSourceConfigResponse build() {
+        }        public OracleSourceConfigResponse build() {
             return new OracleSourceConfigResponse(allowlist, rejectlist);
         }
     }

@@ -79,22 +79,18 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder secretEnv(@Nullable Output<Map<String,String>> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
         }
-
         public Builder secretEnv(@Nullable Map<String,String> secretEnv) {
             this.secretEnv = Output.ofNullable(secretEnv);
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(kmsKeyName, secretEnv);
         }
     }

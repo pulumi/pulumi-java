@@ -71,12 +71,13 @@ public final class CompositeFilterResponse {
             this.logicOperator = Objects.requireNonNull(logicOperator);
             return this;
         }
-
         public Builder subFilters(List<FilterResponse> subFilters) {
             this.subFilters = Objects.requireNonNull(subFilters);
             return this;
         }
-        public CompositeFilterResponse build() {
+        public Builder subFilters(FilterResponse... subFilters) {
+            return subFilters(List.of(subFilters));
+        }        public CompositeFilterResponse build() {
             return new CompositeFilterResponse(logicOperator, subFilters);
         }
     }

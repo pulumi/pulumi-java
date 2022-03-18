@@ -78,17 +78,14 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder scheduleId(String scheduleId) {
             this.scheduleId = Objects.requireNonNull(scheduleId);
             return this;
-        }
-        public GetScheduleArgs build() {
+        }        public GetScheduleArgs build() {
             return new GetScheduleArgs(location, project, scheduleId);
         }
     }

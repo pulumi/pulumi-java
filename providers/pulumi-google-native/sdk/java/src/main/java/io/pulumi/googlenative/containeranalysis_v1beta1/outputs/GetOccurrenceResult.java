@@ -354,97 +354,78 @@ public final class GetOccurrenceResult {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public Builder build(GrafeasV1beta1BuildDetailsResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deployment(GrafeasV1beta1DeploymentDetailsResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public Builder derivedImage(GrafeasV1beta1ImageDetailsResponse derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }
-
         public Builder discovered(GrafeasV1beta1DiscoveryDetailsResponse discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
-
         public Builder installation(GrafeasV1beta1PackageDetailsResponse installation) {
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
-
         public Builder intoto(GrafeasV1beta1IntotoDetailsResponse intoto) {
             this.intoto = Objects.requireNonNull(intoto);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder noteName(String noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
-
         public Builder remediation(String remediation) {
             this.remediation = Objects.requireNonNull(remediation);
             return this;
         }
-
         public Builder resource(ResourceResponse resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder sbom(DocumentOccurrenceResponse sbom) {
             this.sbom = Objects.requireNonNull(sbom);
             return this;
         }
-
         public Builder spdxFile(FileOccurrenceResponse spdxFile) {
             this.spdxFile = Objects.requireNonNull(spdxFile);
             return this;
         }
-
         public Builder spdxPackage(PackageInfoOccurrenceResponse spdxPackage) {
             this.spdxPackage = Objects.requireNonNull(spdxPackage);
             return this;
         }
-
         public Builder spdxRelationship(RelationshipOccurrenceResponse spdxRelationship) {
             this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder vulnerability(GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
-        }
-        public GetOccurrenceResult build() {
+        }        public GetOccurrenceResult build() {
             return new GetOccurrenceResult(attestation, build, createTime, deployment, derivedImage, discovered, installation, intoto, kind, name, noteName, remediation, resource, sbom, spdxFile, spdxPackage, spdxRelationship, updateTime, vulnerability);
         }
     }

@@ -104,22 +104,18 @@ public final class ElementaryStreamResponse {
             this.audioStream = Objects.requireNonNull(audioStream);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder textStream(TextStreamResponse textStream) {
             this.textStream = Objects.requireNonNull(textStream);
             return this;
         }
-
         public Builder videoStream(VideoStreamResponse videoStream) {
             this.videoStream = Objects.requireNonNull(videoStream);
             return this;
-        }
-        public ElementaryStreamResponse build() {
+        }        public ElementaryStreamResponse build() {
             return new ElementaryStreamResponse(audioStream, key, textStream, videoStream);
         }
     }

@@ -96,32 +96,29 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Output.ofNullable(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder queryFileUri(Output<String> queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
-
         public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Output.of(Objects.requireNonNull(queryFileUri));
             return this;
         }
-
         public Builder queryVariables(@Nullable Output<Map<String,String>> queryVariables) {
             this.queryVariables = queryVariables;
             return this;
         }
-
         public Builder queryVariables(@Nullable Map<String,String> queryVariables) {
             this.queryVariables = Output.ofNullable(queryVariables);
             return this;
-        }
-        public SparkSqlBatchArgs build() {
+        }        public SparkSqlBatchArgs build() {
             return new SparkSqlBatchArgs(jarFileUris, queryFileUri, queryVariables);
         }
     }

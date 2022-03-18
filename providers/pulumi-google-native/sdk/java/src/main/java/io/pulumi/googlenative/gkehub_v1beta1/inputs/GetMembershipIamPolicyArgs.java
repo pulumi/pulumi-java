@@ -90,22 +90,18 @@ public final class GetMembershipIamPolicyArgs extends io.pulumi.resources.Invoke
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder membershipId(String membershipId) {
             this.membershipId = Objects.requireNonNull(membershipId);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetMembershipIamPolicyArgs build() {
+        }        public GetMembershipIamPolicyArgs build() {
             return new GetMembershipIamPolicyArgs(location, membershipId, optionsRequestedPolicyVersion, project);
         }
     }

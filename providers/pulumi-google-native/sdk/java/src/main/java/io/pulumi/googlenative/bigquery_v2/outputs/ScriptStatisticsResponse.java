@@ -71,12 +71,13 @@ public final class ScriptStatisticsResponse {
             this.evaluationKind = Objects.requireNonNull(evaluationKind);
             return this;
         }
-
         public Builder stackFrames(List<ScriptStackFrameResponse> stackFrames) {
             this.stackFrames = Objects.requireNonNull(stackFrames);
             return this;
         }
-        public ScriptStatisticsResponse build() {
+        public Builder stackFrames(ScriptStackFrameResponse... stackFrames) {
+            return stackFrames(List.of(stackFrames));
+        }        public ScriptStatisticsResponse build() {
             return new ScriptStatisticsResponse(evaluationKind, stackFrames);
         }
     }

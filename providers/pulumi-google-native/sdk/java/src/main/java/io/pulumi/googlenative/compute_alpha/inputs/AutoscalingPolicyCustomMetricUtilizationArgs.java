@@ -128,52 +128,42 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable String metric) {
             this.metric = Output.ofNullable(metric);
             return this;
         }
-
         public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
-
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
             this.singleInstanceAssignment = Output.ofNullable(singleInstanceAssignment);
             return this;
         }
-
         public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
             this.utilizationTarget = utilizationTarget;
             return this;
         }
-
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
             this.utilizationTarget = Output.ofNullable(utilizationTarget);
             return this;
         }
-
         public Builder utilizationTargetType(@Nullable Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType) {
             this.utilizationTargetType = utilizationTargetType;
             return this;
         }
-
         public Builder utilizationTargetType(@Nullable AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType utilizationTargetType) {
             this.utilizationTargetType = Output.ofNullable(utilizationTargetType);
             return this;
-        }
-        public AutoscalingPolicyCustomMetricUtilizationArgs build() {
+        }        public AutoscalingPolicyCustomMetricUtilizationArgs build() {
             return new AutoscalingPolicyCustomMetricUtilizationArgs(filter, metric, singleInstanceAssignment, utilizationTarget, utilizationTargetType);
         }
     }

@@ -103,22 +103,18 @@ public final class GetFolderReplayResult {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resultsSummary(GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse resultsSummary) {
             this.resultsSummary = Objects.requireNonNull(resultsSummary);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetFolderReplayResult build() {
+        }        public GetFolderReplayResult build() {
             return new GetFolderReplayResult(config, name, resultsSummary, state);
         }
     }

@@ -61,12 +61,10 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
             this.enableConfidentialCompute = enableConfidentialCompute;
             return this;
         }
-
         public Builder enableConfidentialCompute(@Nullable Boolean enableConfidentialCompute) {
             this.enableConfidentialCompute = Output.ofNullable(enableConfidentialCompute);
             return this;
-        }
-        public ConfidentialInstanceConfigArgs build() {
+        }        public ConfidentialInstanceConfigArgs build() {
             return new ConfidentialInstanceConfigArgs(enableConfidentialCompute);
         }
     }

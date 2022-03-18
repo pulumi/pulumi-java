@@ -116,52 +116,45 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
             this.customClassId = Objects.requireNonNull(customClassId);
             return this;
         }
-
         public Builder customClassId(String customClassId) {
             this.customClassId = Output.of(Objects.requireNonNull(customClassId));
             return this;
         }
-
         public Builder items(@Nullable Output<List<ClassItemArgs>> items) {
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<ClassItemArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-
+        public Builder items(ClassItemArgs... items) {
+            return items(List.of(items));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public CustomClassArgs build() {
+        }        public CustomClassArgs build() {
             return new CustomClassArgs(customClassId, items, location, name, project);
         }
     }

@@ -90,22 +90,18 @@ public final class GetEndpointPolicyIamPolicyArgs extends io.pulumi.resources.In
             this.endpointPolicyId = Objects.requireNonNull(endpointPolicyId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetEndpointPolicyIamPolicyArgs build() {
+        }        public GetEndpointPolicyIamPolicyArgs build() {
             return new GetEndpointPolicyIamPolicyArgs(endpointPolicyId, location, optionsRequestedPolicyVersion, project);
         }
     }

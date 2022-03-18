@@ -206,112 +206,90 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hub(@Nullable Output<String> hub) {
             this.hub = hub;
             return this;
         }
-
         public Builder hub(@Nullable String hub) {
             this.hub = Output.ofNullable(hub);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder linkedInterconnectAttachments(@Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
-
         public Builder linkedInterconnectAttachments(@Nullable LinkedInterconnectAttachmentsArgs linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = Output.ofNullable(linkedInterconnectAttachments);
             return this;
         }
-
         public Builder linkedRouterApplianceInstances(@Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
-
         public Builder linkedRouterApplianceInstances(@Nullable LinkedRouterApplianceInstancesArgs linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = Output.ofNullable(linkedRouterApplianceInstances);
             return this;
         }
-
         public Builder linkedVpnTunnels(@Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels) {
             this.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
-
         public Builder linkedVpnTunnels(@Nullable LinkedVpnTunnelsArgs linkedVpnTunnels) {
             this.linkedVpnTunnels = Output.ofNullable(linkedVpnTunnels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder spokeId(Output<String> spokeId) {
             this.spokeId = Objects.requireNonNull(spokeId);
             return this;
         }
-
         public Builder spokeId(String spokeId) {
             this.spokeId = Output.of(Objects.requireNonNull(spokeId));
             return this;
-        }
-        public SpokeArgs build() {
+        }        public SpokeArgs build() {
             return new SpokeArgs(description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, location, name, project, requestId, spokeId);
         }
     }

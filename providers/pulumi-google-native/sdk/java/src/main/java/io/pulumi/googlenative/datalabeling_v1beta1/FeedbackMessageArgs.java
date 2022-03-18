@@ -180,102 +180,82 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             this.annotatedDatasetId = Objects.requireNonNull(annotatedDatasetId);
             return this;
         }
-
         public Builder annotatedDatasetId(String annotatedDatasetId) {
             this.annotatedDatasetId = Output.of(Objects.requireNonNull(annotatedDatasetId));
             return this;
         }
-
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder feedbackThreadId(Output<String> feedbackThreadId) {
             this.feedbackThreadId = Objects.requireNonNull(feedbackThreadId);
             return this;
         }
-
         public Builder feedbackThreadId(String feedbackThreadId) {
             this.feedbackThreadId = Output.of(Objects.requireNonNull(feedbackThreadId));
             return this;
         }
-
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operatorFeedbackMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata) {
             this.operatorFeedbackMetadata = operatorFeedbackMetadata;
             return this;
         }
-
         public Builder operatorFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs operatorFeedbackMetadata) {
             this.operatorFeedbackMetadata = Output.ofNullable(operatorFeedbackMetadata);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requesterFeedbackMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata) {
             this.requesterFeedbackMetadata = requesterFeedbackMetadata;
             return this;
         }
-
         public Builder requesterFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs requesterFeedbackMetadata) {
             this.requesterFeedbackMetadata = Output.ofNullable(requesterFeedbackMetadata);
             return this;
-        }
-        public FeedbackMessageArgs build() {
+        }        public FeedbackMessageArgs build() {
             return new FeedbackMessageArgs(annotatedDatasetId, body, createTime, datasetId, feedbackThreadId, image, name, operatorFeedbackMetadata, project, requesterFeedbackMetadata);
         }
     }

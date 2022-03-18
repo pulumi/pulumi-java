@@ -144,62 +144,50 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.connectionAttributes = connectionAttributes;
             return this;
         }
-
         public Builder connectionAttributes(@Nullable Map<String,String> connectionAttributes) {
             this.connectionAttributes = Output.ofNullable(connectionAttributes);
             return this;
         }
-
         public Builder databaseService(Output<String> databaseService) {
             this.databaseService = Objects.requireNonNull(databaseService);
             return this;
         }
-
         public Builder databaseService(String databaseService) {
             this.databaseService = Output.of(Objects.requireNonNull(databaseService));
             return this;
         }
-
         public Builder hostname(Output<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder hostname(String hostname) {
             this.hostname = Output.of(Objects.requireNonNull(hostname));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public OracleProfileArgs build() {
+        }        public OracleProfileArgs build() {
             return new OracleProfileArgs(connectionAttributes, databaseService, hostname, password, port, username);
         }
     }

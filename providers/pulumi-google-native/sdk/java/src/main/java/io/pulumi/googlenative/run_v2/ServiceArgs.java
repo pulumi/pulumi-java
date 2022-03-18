@@ -273,152 +273,125 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder binaryAuthorization(@Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization) {
             this.binaryAuthorization = binaryAuthorization;
             return this;
         }
-
         public Builder binaryAuthorization(@Nullable GoogleCloudRunOpV2BinaryAuthorizationArgs binaryAuthorization) {
             this.binaryAuthorization = Output.ofNullable(binaryAuthorization);
             return this;
         }
-
         public Builder client(@Nullable Output<String> client) {
             this.client = client;
             return this;
         }
-
         public Builder client(@Nullable String client) {
             this.client = Output.ofNullable(client);
             return this;
         }
-
         public Builder clientVersion(@Nullable Output<String> clientVersion) {
             this.clientVersion = clientVersion;
             return this;
         }
-
         public Builder clientVersion(@Nullable String clientVersion) {
             this.clientVersion = Output.ofNullable(clientVersion);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ingress(@Nullable Output<ServiceIngress> ingress) {
             this.ingress = ingress;
             return this;
         }
-
         public Builder ingress(@Nullable ServiceIngress ingress) {
             this.ingress = Output.ofNullable(ingress);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder launchStage(@Nullable Output<ServiceLaunchStage> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
-
         public Builder launchStage(@Nullable ServiceLaunchStage launchStage) {
             this.launchStage = Output.ofNullable(launchStage);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
-
         public Builder template(Output<GoogleCloudRunOpV2RevisionTemplateArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder template(GoogleCloudRunOpV2RevisionTemplateArgs template) {
             this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
-
         public Builder traffic(@Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic) {
             this.traffic = traffic;
             return this;
         }
-
         public Builder traffic(@Nullable List<GoogleCloudRunOpV2TrafficTargetArgs> traffic) {
             this.traffic = Output.ofNullable(traffic);
             return this;
         }
-
+        public Builder traffic(GoogleCloudRunOpV2TrafficTargetArgs... traffic) {
+            return traffic(List.of(traffic));
+        }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(annotations, binaryAuthorization, client, clientVersion, description, ingress, labels, launchStage, location, name, project, serviceId, template, traffic, validateOnly);
         }
     }

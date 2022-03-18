@@ -130,52 +130,42 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
             this.color = color;
             return this;
         }
-
         public Builder color(@Nullable ThresholdColor color) {
             this.color = Output.ofNullable(color);
             return this;
         }
-
         public Builder direction(@Nullable Output<ThresholdDirection> direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder direction(@Nullable ThresholdDirection direction) {
             this.direction = Output.ofNullable(direction);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder targetAxis(@Nullable Output<ThresholdTargetAxis> targetAxis) {
             this.targetAxis = targetAxis;
             return this;
         }
-
         public Builder targetAxis(@Nullable ThresholdTargetAxis targetAxis) {
             this.targetAxis = Output.ofNullable(targetAxis);
             return this;
         }
-
         public Builder value(@Nullable Output<Double> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ThresholdArgs build() {
+        }        public ThresholdArgs build() {
             return new ThresholdArgs(color, direction, label, targetAxis, value);
         }
     }

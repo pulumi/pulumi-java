@@ -61,12 +61,13 @@ public final class PackageOccurrenceArgs extends io.pulumi.resources.ResourceArg
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(List<LocationArgs> location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-        public PackageOccurrenceArgs build() {
+        public Builder location(LocationArgs... location) {
+            return location(List.of(location));
+        }        public PackageOccurrenceArgs build() {
             return new PackageOccurrenceArgs(location);
         }
     }

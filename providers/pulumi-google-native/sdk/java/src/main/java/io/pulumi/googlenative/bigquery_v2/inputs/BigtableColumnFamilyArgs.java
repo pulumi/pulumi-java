@@ -125,52 +125,45 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<BigtableColumnArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-
+        public Builder columns(BigtableColumnArgs... columns) {
+            return columns(List.of(columns));
+        }
         public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder familyId(@Nullable Output<String> familyId) {
             this.familyId = familyId;
             return this;
         }
-
         public Builder familyId(@Nullable String familyId) {
             this.familyId = Output.ofNullable(familyId);
             return this;
         }
-
         public Builder onlyReadLatest(@Nullable Output<Boolean> onlyReadLatest) {
             this.onlyReadLatest = onlyReadLatest;
             return this;
         }
-
         public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
             this.onlyReadLatest = Output.ofNullable(onlyReadLatest);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public BigtableColumnFamilyArgs build() {
+        }        public BigtableColumnFamilyArgs build() {
             return new BigtableColumnFamilyArgs(columns, encoding, familyId, onlyReadLatest, type);
         }
     }

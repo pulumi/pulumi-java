@@ -77,12 +77,10 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
             this.strength = Objects.requireNonNull(strength);
             return this;
         }
-
         public Builder tune(String tune) {
             this.tune = Objects.requireNonNull(tune);
             return this;
-        }
-        public DenoiseResponse build() {
+        }        public DenoiseResponse build() {
             return new DenoiseResponse(strength, tune);
         }
     }

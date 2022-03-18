@@ -95,32 +95,26 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable Map<String,String> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
         public Builder externalIPs(@Nullable Output<Map<String,String>> externalIPs) {
             this.externalIPs = externalIPs;
             return this;
         }
-
         public Builder externalIPs(@Nullable Map<String,String> externalIPs) {
             this.externalIPs = Output.ofNullable(externalIPs);
             return this;
         }
-
         public Builder internalIPs(@Nullable Output<Map<String,String>> internalIPs) {
             this.internalIPs = internalIPs;
             return this;
         }
-
         public Builder internalIPs(@Nullable Map<String,String> internalIPs) {
             this.internalIPs = Output.ofNullable(internalIPs);
             return this;
-        }
-        public StatefulPolicyPreservedStateArgs build() {
+        }        public StatefulPolicyPreservedStateArgs build() {
             return new StatefulPolicyPreservedStateArgs(disks, externalIPs, internalIPs);
         }
     }

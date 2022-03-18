@@ -508,147 +508,130 @@ public final class GetJobResult {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder applicationInfo(ApplicationInfoResponse applicationInfo) {
             this.applicationInfo = Objects.requireNonNull(applicationInfo);
             return this;
         }
-
         public Builder companyDisplayName(String companyDisplayName) {
             this.companyDisplayName = Objects.requireNonNull(companyDisplayName);
             return this;
         }
-
         public Builder companyName(String companyName) {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
-
         public Builder compensationInfo(CompensationInfoResponse compensationInfo) {
             this.compensationInfo = Objects.requireNonNull(compensationInfo);
             return this;
         }
-
         public Builder customAttributes(Map<String,String> customAttributes) {
             this.customAttributes = Objects.requireNonNull(customAttributes);
             return this;
         }
-
         public Builder degreeTypes(List<String> degreeTypes) {
             this.degreeTypes = Objects.requireNonNull(degreeTypes);
             return this;
         }
-
+        public Builder degreeTypes(String... degreeTypes) {
+            return degreeTypes(List.of(degreeTypes));
+        }
         public Builder department(String department) {
             this.department = Objects.requireNonNull(department);
             return this;
         }
-
         public Builder derivedInfo(JobDerivedInfoResponse derivedInfo) {
             this.derivedInfo = Objects.requireNonNull(derivedInfo);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder employmentTypes(List<String> employmentTypes) {
             this.employmentTypes = Objects.requireNonNull(employmentTypes);
             return this;
         }
-
+        public Builder employmentTypes(String... employmentTypes) {
+            return employmentTypes(List.of(employmentTypes));
+        }
         public Builder incentives(String incentives) {
             this.incentives = Objects.requireNonNull(incentives);
             return this;
         }
-
         public Builder jobBenefits(List<String> jobBenefits) {
             this.jobBenefits = Objects.requireNonNull(jobBenefits);
             return this;
         }
-
+        public Builder jobBenefits(String... jobBenefits) {
+            return jobBenefits(List.of(jobBenefits));
+        }
         public Builder jobEndTime(String jobEndTime) {
             this.jobEndTime = Objects.requireNonNull(jobEndTime);
             return this;
         }
-
         public Builder jobLevel(String jobLevel) {
             this.jobLevel = Objects.requireNonNull(jobLevel);
             return this;
         }
-
         public Builder jobStartTime(String jobStartTime) {
             this.jobStartTime = Objects.requireNonNull(jobStartTime);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder postingCreateTime(String postingCreateTime) {
             this.postingCreateTime = Objects.requireNonNull(postingCreateTime);
             return this;
         }
-
         public Builder postingExpireTime(String postingExpireTime) {
             this.postingExpireTime = Objects.requireNonNull(postingExpireTime);
             return this;
         }
-
         public Builder postingPublishTime(String postingPublishTime) {
             this.postingPublishTime = Objects.requireNonNull(postingPublishTime);
             return this;
         }
-
         public Builder postingRegion(String postingRegion) {
             this.postingRegion = Objects.requireNonNull(postingRegion);
             return this;
         }
-
         public Builder postingUpdateTime(String postingUpdateTime) {
             this.postingUpdateTime = Objects.requireNonNull(postingUpdateTime);
             return this;
         }
-
         public Builder processingOptions(ProcessingOptionsResponse processingOptions) {
             this.processingOptions = Objects.requireNonNull(processingOptions);
             return this;
         }
-
         public Builder promotionValue(Integer promotionValue) {
             this.promotionValue = Objects.requireNonNull(promotionValue);
             return this;
         }
-
         public Builder qualifications(String qualifications) {
             this.qualifications = Objects.requireNonNull(qualifications);
             return this;
         }
-
         public Builder requisitionId(String requisitionId) {
             this.requisitionId = Objects.requireNonNull(requisitionId);
             return this;
         }
-
         public Builder responsibilities(String responsibilities) {
             this.responsibilities = Objects.requireNonNull(responsibilities);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(addresses, applicationInfo, companyDisplayName, companyName, compensationInfo, customAttributes, degreeTypes, department, derivedInfo, description, employmentTypes, incentives, jobBenefits, jobEndTime, jobLevel, jobStartTime, languageCode, name, postingCreateTime, postingExpireTime, postingPublishTime, postingRegion, postingUpdateTime, processingOptions, promotionValue, qualifications, requisitionId, responsibilities, title);
         }
     }

@@ -173,42 +173,37 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
             this.affectedCircuits = Objects.requireNonNull(affectedCircuits);
             return this;
         }
-
+        public Builder affectedCircuits(String... affectedCircuits) {
+            return affectedCircuits(List.of(affectedCircuits));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder issueType(String issueType) {
             this.issueType = Objects.requireNonNull(issueType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public InterconnectOutageNotificationResponse build() {
+        }        public InterconnectOutageNotificationResponse build() {
             return new InterconnectOutageNotificationResponse(affectedCircuits, description, endTime, issueType, name, source, startTime, state);
         }
     }

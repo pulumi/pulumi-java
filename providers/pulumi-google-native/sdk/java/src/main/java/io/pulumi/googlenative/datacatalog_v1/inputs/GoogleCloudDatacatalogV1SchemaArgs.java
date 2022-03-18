@@ -62,12 +62,13 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<GoogleCloudDatacatalogV1ColumnSchemaArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-        public GoogleCloudDatacatalogV1SchemaArgs build() {
+        public Builder columns(GoogleCloudDatacatalogV1ColumnSchemaArgs... columns) {
+            return columns(List.of(columns));
+        }        public GoogleCloudDatacatalogV1SchemaArgs build() {
             return new GoogleCloudDatacatalogV1SchemaArgs(columns);
         }
     }

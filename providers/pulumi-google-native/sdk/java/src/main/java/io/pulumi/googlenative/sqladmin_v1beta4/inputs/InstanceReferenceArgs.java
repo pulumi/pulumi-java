@@ -94,32 +94,26 @@ public final class InstanceReferenceArgs extends io.pulumi.resources.ResourceArg
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public InstanceReferenceArgs build() {
+        }        public InstanceReferenceArgs build() {
             return new InstanceReferenceArgs(name, project, region);
         }
     }

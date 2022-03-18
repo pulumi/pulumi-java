@@ -151,37 +151,30 @@ public final class GetProjectResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(ResourceIdResponse parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder projectNumber(String projectNumber) {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
-        }
-        public GetProjectResult build() {
+        }        public GetProjectResult build() {
             return new GetProjectResult(createTime, labels, lifecycleState, name, parent, projectId, projectNumber);
         }
     }

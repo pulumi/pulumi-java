@@ -110,22 +110,18 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
             this.launchParameter = Objects.requireNonNull(launchParameter);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder validateOnly(Boolean validateOnly) {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse build() {
+        }        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(launchParameter, location, project, validateOnly);
         }
     }

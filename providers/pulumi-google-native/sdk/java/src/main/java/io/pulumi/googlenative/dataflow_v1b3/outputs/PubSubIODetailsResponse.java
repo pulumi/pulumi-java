@@ -69,12 +69,10 @@ public final class PubSubIODetailsResponse {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public PubSubIODetailsResponse build() {
+        }        public PubSubIODetailsResponse build() {
             return new PubSubIODetailsResponse(subscription, topic);
         }
     }

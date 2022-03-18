@@ -113,42 +113,34 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
             this.dictionary = dictionary;
             return this;
         }
-
         public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
             this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable GooglePrivacyDlpV2ExcludeInfoTypesArgs excludeInfoTypes) {
             this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
-
         public Builder matchingType(@Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType) {
             this.matchingType = matchingType;
             return this;
         }
-
         public Builder matchingType(@Nullable GooglePrivacyDlpV2ExclusionRuleMatchingType matchingType) {
             this.matchingType = Output.ofNullable(matchingType);
             return this;
         }
-
         public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
             this.regex = Output.ofNullable(regex);
             return this;
-        }
-        public GooglePrivacyDlpV2ExclusionRuleArgs build() {
+        }        public GooglePrivacyDlpV2ExclusionRuleArgs build() {
             return new GooglePrivacyDlpV2ExclusionRuleArgs(dictionary, excludeInfoTypes, matchingType, regex);
         }
     }

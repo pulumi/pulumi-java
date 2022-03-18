@@ -90,22 +90,18 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
             this.collectionGroupId = Objects.requireNonNull(collectionGroupId);
             return this;
         }
-
         public Builder databaseId(String databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder indexId(String indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetIndexArgs build() {
+        }        public GetIndexArgs build() {
             return new GetIndexArgs(collectionGroupId, databaseId, indexId, project);
         }
     }

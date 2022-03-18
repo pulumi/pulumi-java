@@ -86,17 +86,14 @@ public final class PickTimeSeriesFilterResponse {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder numTimeSeries(Integer numTimeSeries) {
             this.numTimeSeries = Objects.requireNonNull(numTimeSeries);
             return this;
         }
-
         public Builder rankingMethod(String rankingMethod) {
             this.rankingMethod = Objects.requireNonNull(rankingMethod);
             return this;
-        }
-        public PickTimeSeriesFilterResponse build() {
+        }        public PickTimeSeriesFilterResponse build() {
             return new PickTimeSeriesFilterResponse(direction, numTimeSeries, rankingMethod);
         }
     }

@@ -92,17 +92,14 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
-        }
-        public NetworkResponse build() {
+        }        public NetworkResponse build() {
             return new NetworkResponse(network, project, subnetwork);
         }
     }

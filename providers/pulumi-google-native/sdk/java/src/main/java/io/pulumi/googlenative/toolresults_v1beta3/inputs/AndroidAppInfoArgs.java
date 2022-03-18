@@ -110,42 +110,34 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = Output.ofNullable(packageName);
             return this;
         }
-
         public Builder versionCode(@Nullable Output<String> versionCode) {
             this.versionCode = versionCode;
             return this;
         }
-
         public Builder versionCode(@Nullable String versionCode) {
             this.versionCode = Output.ofNullable(versionCode);
             return this;
         }
-
         public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
-
         public Builder versionName(@Nullable String versionName) {
             this.versionName = Output.ofNullable(versionName);
             return this;
-        }
-        public AndroidAppInfoArgs build() {
+        }        public AndroidAppInfoArgs build() {
             return new AndroidAppInfoArgs(name, packageName, versionCode, versionName);
         }
     }

@@ -78,22 +78,18 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder maxSize(@Nullable String maxSize) {
             this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
-
         public Builder minSize(@Nullable Output<String> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable String minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
-        }
-        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs build() {
+        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(maxSize, minSize);
         }
     }

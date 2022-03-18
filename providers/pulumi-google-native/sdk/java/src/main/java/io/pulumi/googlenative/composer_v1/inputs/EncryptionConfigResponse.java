@@ -58,8 +58,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public EncryptionConfigResponse build() {
+        }        public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(kmsKeyName);
         }
     }

@@ -95,32 +95,26 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder noExternalIp(@Nullable Output<Boolean> noExternalIp) {
             this.noExternalIp = noExternalIp;
             return this;
         }
-
         public Builder noExternalIp(@Nullable Boolean noExternalIp) {
             this.noExternalIp = Output.ofNullable(noExternalIp);
             return this;
-        }
-        public WorkerConfigArgs build() {
+        }        public WorkerConfigArgs build() {
             return new WorkerConfigArgs(diskSizeGb, machineType, noExternalIp);
         }
     }

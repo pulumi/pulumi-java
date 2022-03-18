@@ -78,22 +78,21 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
             this.v1Name = Objects.requireNonNull(v1Name);
             return this;
         }
-
         public Builder v1Name(String v1Name) {
             this.v1Name = Output.of(Objects.requireNonNull(v1Name));
             return this;
         }
-
         public Builder v2Blob(Output<List<String>> v2Blob) {
             this.v2Blob = Objects.requireNonNull(v2Blob);
             return this;
         }
-
         public Builder v2Blob(List<String> v2Blob) {
             this.v2Blob = Output.of(Objects.requireNonNull(v2Blob));
             return this;
         }
-        public FingerprintArgs build() {
+        public Builder v2Blob(String... v2Blob) {
+            return v2Blob(List.of(v2Blob));
+        }        public FingerprintArgs build() {
             return new FingerprintArgs(v1Name, v2Blob);
         }
     }

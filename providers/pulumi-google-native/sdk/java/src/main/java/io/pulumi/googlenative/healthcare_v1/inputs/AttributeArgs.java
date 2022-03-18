@@ -79,22 +79,21 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
             this.attributeDefinitionId = attributeDefinitionId;
             return this;
         }
-
         public Builder attributeDefinitionId(@Nullable String attributeDefinitionId) {
             this.attributeDefinitionId = Output.ofNullable(attributeDefinitionId);
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public AttributeArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public AttributeArgs build() {
             return new AttributeArgs(attributeDefinitionId, values);
         }
     }

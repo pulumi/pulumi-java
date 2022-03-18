@@ -146,32 +146,29 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
             this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
             return this;
         }
-
         public Builder allowedKeyTypes(List<AllowedKeyTypeResponse> allowedKeyTypes) {
             this.allowedKeyTypes = Objects.requireNonNull(allowedKeyTypes);
             return this;
         }
-
+        public Builder allowedKeyTypes(AllowedKeyTypeResponse... allowedKeyTypes) {
+            return allowedKeyTypes(List.of(allowedKeyTypes));
+        }
         public Builder baselineValues(X509ParametersResponse baselineValues) {
             this.baselineValues = Objects.requireNonNull(baselineValues);
             return this;
         }
-
         public Builder identityConstraints(CertificateIdentityConstraintsResponse identityConstraints) {
             this.identityConstraints = Objects.requireNonNull(identityConstraints);
             return this;
         }
-
         public Builder maximumLifetime(String maximumLifetime) {
             this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
             return this;
         }
-
         public Builder passthroughExtensions(CertificateExtensionConstraintsResponse passthroughExtensions) {
             this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
             return this;
-        }
-        public IssuancePolicyResponse build() {
+        }        public IssuancePolicyResponse build() {
             return new IssuancePolicyResponse(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime, passthroughExtensions);
         }
     }

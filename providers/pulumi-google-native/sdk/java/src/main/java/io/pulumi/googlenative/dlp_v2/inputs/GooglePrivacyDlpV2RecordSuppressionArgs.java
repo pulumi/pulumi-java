@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
-        }
-        public GooglePrivacyDlpV2RecordSuppressionArgs build() {
+        }        public GooglePrivacyDlpV2RecordSuppressionArgs build() {
             return new GooglePrivacyDlpV2RecordSuppressionArgs(condition);
         }
     }

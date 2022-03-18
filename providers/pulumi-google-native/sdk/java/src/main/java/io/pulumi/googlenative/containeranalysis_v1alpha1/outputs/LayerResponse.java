@@ -69,12 +69,10 @@ public final class LayerResponse {
             this.arguments = Objects.requireNonNull(arguments);
             return this;
         }
-
         public Builder directive(String directive) {
             this.directive = Objects.requireNonNull(directive);
             return this;
-        }
-        public LayerResponse build() {
+        }        public LayerResponse build() {
             return new LayerResponse(arguments, directive);
         }
     }

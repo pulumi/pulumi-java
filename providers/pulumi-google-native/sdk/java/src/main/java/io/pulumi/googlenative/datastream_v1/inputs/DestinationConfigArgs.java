@@ -79,22 +79,18 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
             this.destinationConnectionProfile = Objects.requireNonNull(destinationConnectionProfile);
             return this;
         }
-
         public Builder destinationConnectionProfile(String destinationConnectionProfile) {
             this.destinationConnectionProfile = Output.of(Objects.requireNonNull(destinationConnectionProfile));
             return this;
         }
-
         public Builder gcsDestinationConfig(@Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig) {
             this.gcsDestinationConfig = gcsDestinationConfig;
             return this;
         }
-
         public Builder gcsDestinationConfig(@Nullable GcsDestinationConfigArgs gcsDestinationConfig) {
             this.gcsDestinationConfig = Output.ofNullable(gcsDestinationConfig);
             return this;
-        }
-        public DestinationConfigArgs build() {
+        }        public DestinationConfigArgs build() {
             return new DestinationConfigArgs(destinationConnectionProfile, gcsDestinationConfig);
         }
     }

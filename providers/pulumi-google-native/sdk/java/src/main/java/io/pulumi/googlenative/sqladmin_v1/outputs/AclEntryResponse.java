@@ -101,22 +101,18 @@ public final class AclEntryResponse {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AclEntryResponse build() {
+        }        public AclEntryResponse build() {
             return new AclEntryResponse(expirationTime, kind, name, value);
         }
     }

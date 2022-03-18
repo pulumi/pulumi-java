@@ -79,22 +79,18 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.recursiveStructureDepth = recursiveStructureDepth;
             return this;
         }
-
         public Builder recursiveStructureDepth(@Nullable String recursiveStructureDepth) {
             this.recursiveStructureDepth = Output.ofNullable(recursiveStructureDepth);
             return this;
         }
-
         public Builder schemaType(@Nullable Output<SchemaConfigSchemaType> schemaType) {
             this.schemaType = schemaType;
             return this;
         }
-
         public Builder schemaType(@Nullable SchemaConfigSchemaType schemaType) {
             this.schemaType = Output.ofNullable(schemaType);
             return this;
-        }
-        public SchemaConfigArgs build() {
+        }        public SchemaConfigArgs build() {
             return new SchemaConfigArgs(recursiveStructureDepth, schemaType);
         }
     }

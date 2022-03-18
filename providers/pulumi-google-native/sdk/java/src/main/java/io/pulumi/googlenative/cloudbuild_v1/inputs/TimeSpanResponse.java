@@ -76,12 +76,10 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public TimeSpanResponse build() {
+        }        public TimeSpanResponse build() {
             return new TimeSpanResponse(endTime, startTime);
         }
     }

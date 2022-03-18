@@ -90,22 +90,18 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends io.pulumi.reso
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder regionId(String regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
-
         public Builder workflowTemplateId(String workflowTemplateId) {
             this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId);
             return this;
-        }
-        public GetRegionWorkflowTemplateIamPolicyArgs build() {
+        }        public GetRegionWorkflowTemplateIamPolicyArgs build() {
             return new GetRegionWorkflowTemplateIamPolicyArgs(optionsRequestedPolicyVersion, project, regionId, workflowTemplateId);
         }
     }

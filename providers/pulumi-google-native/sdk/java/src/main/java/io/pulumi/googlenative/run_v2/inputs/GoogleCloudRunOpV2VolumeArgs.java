@@ -96,32 +96,26 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
             this.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
-
         public Builder cloudSqlInstance(@Nullable GoogleCloudRunOpV2CloudSqlInstanceArgs cloudSqlInstance) {
             this.cloudSqlInstance = Output.ofNullable(cloudSqlInstance);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder secret(@Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable GoogleCloudRunOpV2SecretVolumeSourceArgs secret) {
             this.secret = Output.ofNullable(secret);
             return this;
-        }
-        public GoogleCloudRunOpV2VolumeArgs build() {
+        }        public GoogleCloudRunOpV2VolumeArgs build() {
             return new GoogleCloudRunOpV2VolumeArgs(cloudSqlInstance, name, secret);
         }
     }

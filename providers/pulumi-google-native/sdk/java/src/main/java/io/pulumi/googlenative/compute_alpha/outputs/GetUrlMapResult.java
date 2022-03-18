@@ -268,72 +268,67 @@ public final class GetUrlMapResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder defaultRouteAction(HttpRouteActionResponse defaultRouteAction) {
             this.defaultRouteAction = Objects.requireNonNull(defaultRouteAction);
             return this;
         }
-
         public Builder defaultService(String defaultService) {
             this.defaultService = Objects.requireNonNull(defaultService);
             return this;
         }
-
         public Builder defaultUrlRedirect(HttpRedirectActionResponse defaultUrlRedirect) {
             this.defaultUrlRedirect = Objects.requireNonNull(defaultUrlRedirect);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder headerAction(HttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
-
         public Builder hostRules(List<HostRuleResponse> hostRules) {
             this.hostRules = Objects.requireNonNull(hostRules);
             return this;
         }
-
+        public Builder hostRules(HostRuleResponse... hostRules) {
+            return hostRules(List.of(hostRules));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pathMatchers(List<PathMatcherResponse> pathMatchers) {
             this.pathMatchers = Objects.requireNonNull(pathMatchers);
             return this;
         }
-
+        public Builder pathMatchers(PathMatcherResponse... pathMatchers) {
+            return pathMatchers(List.of(pathMatchers));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder tests(List<UrlMapTestResponse> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
-        public GetUrlMapResult build() {
+        public Builder tests(UrlMapTestResponse... tests) {
+            return tests(List.of(tests));
+        }        public GetUrlMapResult build() {
             return new GetUrlMapResult(creationTimestamp, defaultRouteAction, defaultService, defaultUrlRedirect, description, fingerprint, headerAction, hostRules, kind, name, pathMatchers, region, selfLink, tests);
         }
     }

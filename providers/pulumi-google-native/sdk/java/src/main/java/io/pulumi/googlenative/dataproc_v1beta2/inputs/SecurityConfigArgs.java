@@ -61,12 +61,10 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
-
         public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
             this.kerberosConfig = Output.ofNullable(kerberosConfig);
             return this;
-        }
-        public SecurityConfigArgs build() {
+        }        public SecurityConfigArgs build() {
             return new SecurityConfigArgs(kerberosConfig);
         }
     }

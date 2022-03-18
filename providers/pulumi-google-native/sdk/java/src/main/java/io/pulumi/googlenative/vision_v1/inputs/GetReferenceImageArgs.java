@@ -90,22 +90,18 @@ public final class GetReferenceImageArgs extends io.pulumi.resources.InvokeArgs 
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder referenceImageId(String referenceImageId) {
             this.referenceImageId = Objects.requireNonNull(referenceImageId);
             return this;
-        }
-        public GetReferenceImageArgs build() {
+        }        public GetReferenceImageArgs build() {
             return new GetReferenceImageArgs(location, productId, project, referenceImageId);
         }
     }

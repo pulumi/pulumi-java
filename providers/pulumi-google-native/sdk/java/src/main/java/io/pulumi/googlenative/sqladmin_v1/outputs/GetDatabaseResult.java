@@ -158,42 +158,34 @@ public final class GetDatabaseResult {
             this.charset = Objects.requireNonNull(charset);
             return this;
         }
-
         public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder sqlserverDatabaseDetails(SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
             this.sqlserverDatabaseDetails = Objects.requireNonNull(sqlserverDatabaseDetails);
             return this;
-        }
-        public GetDatabaseResult build() {
+        }        public GetDatabaseResult build() {
             return new GetDatabaseResult(charset, collation, instance, kind, name, project, selfLink, sqlserverDatabaseDetails);
         }
     }

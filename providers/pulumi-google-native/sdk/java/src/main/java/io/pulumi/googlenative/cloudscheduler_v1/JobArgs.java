@@ -214,112 +214,90 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
-
         public Builder appEngineHttpTarget(@Nullable AppEngineHttpTargetArgs appEngineHttpTarget) {
             this.appEngineHttpTarget = Output.ofNullable(appEngineHttpTarget);
             return this;
         }
-
         public Builder attemptDeadline(@Nullable Output<String> attemptDeadline) {
             this.attemptDeadline = attemptDeadline;
             return this;
         }
-
         public Builder attemptDeadline(@Nullable String attemptDeadline) {
             this.attemptDeadline = Output.ofNullable(attemptDeadline);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder httpTarget(@Nullable Output<HttpTargetArgs> httpTarget) {
             this.httpTarget = httpTarget;
             return this;
         }
-
         public Builder httpTarget(@Nullable HttpTargetArgs httpTarget) {
             this.httpTarget = Output.ofNullable(httpTarget);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pubsubTarget(@Nullable Output<PubsubTargetArgs> pubsubTarget) {
             this.pubsubTarget = pubsubTarget;
             return this;
         }
-
         public Builder pubsubTarget(@Nullable PubsubTargetArgs pubsubTarget) {
             this.pubsubTarget = Output.ofNullable(pubsubTarget);
             return this;
         }
-
         public Builder retryConfig(@Nullable Output<RetryConfigArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
-
         public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
             this.retryConfig = Output.ofNullable(retryConfig);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(appEngineHttpTarget, attemptDeadline, description, httpTarget, location, name, project, pubsubTarget, retryConfig, schedule, timeZone);
         }
     }

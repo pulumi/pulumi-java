@@ -78,17 +78,14 @@ public final class GetGameServerDeploymentArgs extends io.pulumi.resources.Invok
             this.gameServerDeploymentId = Objects.requireNonNull(gameServerDeploymentId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetGameServerDeploymentArgs build() {
+        }        public GetGameServerDeploymentArgs build() {
             return new GetGameServerDeploymentArgs(gameServerDeploymentId, location, project);
         }
     }

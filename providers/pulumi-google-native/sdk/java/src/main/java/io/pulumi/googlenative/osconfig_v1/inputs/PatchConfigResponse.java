@@ -195,47 +195,38 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
-
         public Builder goo(GooSettingsResponse goo) {
             this.goo = Objects.requireNonNull(goo);
             return this;
         }
-
         public Builder migInstancesAllowed(Boolean migInstancesAllowed) {
             this.migInstancesAllowed = Objects.requireNonNull(migInstancesAllowed);
             return this;
         }
-
         public Builder postStep(ExecStepResponse postStep) {
             this.postStep = Objects.requireNonNull(postStep);
             return this;
         }
-
         public Builder preStep(ExecStepResponse preStep) {
             this.preStep = Objects.requireNonNull(preStep);
             return this;
         }
-
         public Builder rebootConfig(String rebootConfig) {
             this.rebootConfig = Objects.requireNonNull(rebootConfig);
             return this;
         }
-
         public Builder windowsUpdate(WindowsUpdateSettingsResponse windowsUpdate) {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }
-
         public Builder yum(YumSettingsResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
-
         public Builder zypper(ZypperSettingsResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
-        }
-        public PatchConfigResponse build() {
+        }        public PatchConfigResponse build() {
             return new PatchConfigResponse(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }
     }

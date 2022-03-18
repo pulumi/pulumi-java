@@ -180,82 +180,72 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder isFallback(@Nullable Output<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
-
         public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Output.ofNullable(isFallback);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3IntentParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(GoogleCloudDialogflowCxV3IntentParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder trainingPhrases(@Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases) {
             this.trainingPhrases = trainingPhrases;
             return this;
         }
-
         public Builder trainingPhrases(@Nullable List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs> trainingPhrases) {
             this.trainingPhrases = Output.ofNullable(trainingPhrases);
             return this;
         }
-        public GoogleCloudDialogflowCxV3IntentArgs build() {
+        public Builder trainingPhrases(GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs... trainingPhrases) {
+            return trainingPhrases(List.of(trainingPhrases));
+        }        public GoogleCloudDialogflowCxV3IntentArgs build() {
             return new GoogleCloudDialogflowCxV3IntentArgs(description, displayName, isFallback, labels, name, parameters, priority, trainingPhrases);
         }
     }

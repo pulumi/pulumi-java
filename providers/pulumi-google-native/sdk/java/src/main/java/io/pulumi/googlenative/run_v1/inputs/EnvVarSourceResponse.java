@@ -77,12 +77,10 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.configMapKeyRef = Objects.requireNonNull(configMapKeyRef);
             return this;
         }
-
         public Builder secretKeyRef(SecretKeySelectorResponse secretKeyRef) {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
-        }
-        public EnvVarSourceResponse build() {
+        }        public EnvVarSourceResponse build() {
             return new EnvVarSourceResponse(configMapKeyRef, secretKeyRef);
         }
     }

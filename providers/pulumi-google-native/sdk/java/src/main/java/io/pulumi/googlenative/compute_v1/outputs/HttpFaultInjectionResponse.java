@@ -70,12 +70,10 @@ public final class HttpFaultInjectionResponse {
             this.abort = Objects.requireNonNull(abort);
             return this;
         }
-
         public Builder delay(HttpFaultDelayResponse delay) {
             this.delay = Objects.requireNonNull(delay);
             return this;
-        }
-        public HttpFaultInjectionResponse build() {
+        }        public HttpFaultInjectionResponse build() {
             return new HttpFaultInjectionResponse(abort, delay);
         }
     }

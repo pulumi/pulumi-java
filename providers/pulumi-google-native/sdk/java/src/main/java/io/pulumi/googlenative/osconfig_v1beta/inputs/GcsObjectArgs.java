@@ -93,32 +93,26 @@ public final class GcsObjectArgs extends io.pulumi.resources.ResourceArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder generationNumber(Output<String> generationNumber) {
             this.generationNumber = Objects.requireNonNull(generationNumber);
             return this;
         }
-
         public Builder generationNumber(String generationNumber) {
             this.generationNumber = Output.of(Objects.requireNonNull(generationNumber));
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public GcsObjectArgs build() {
+        }        public GcsObjectArgs build() {
             return new GcsObjectArgs(bucket, generationNumber, object);
         }
     }

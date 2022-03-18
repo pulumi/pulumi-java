@@ -78,17 +78,14 @@ public final class GetPrivateConnectionArgs extends io.pulumi.resources.InvokeAr
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder privateConnectionId(String privateConnectionId) {
             this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPrivateConnectionArgs build() {
+        }        public GetPrivateConnectionArgs build() {
             return new GetPrivateConnectionArgs(location, privateConnectionId, project);
         }
     }

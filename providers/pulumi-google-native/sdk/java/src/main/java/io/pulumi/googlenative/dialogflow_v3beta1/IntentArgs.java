@@ -224,122 +224,104 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder agentId(String agentId) {
             this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder isFallback(@Nullable Output<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
-
         public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Output.ofNullable(isFallback);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(GoogleCloudDialogflowCxV3beta1IntentParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder trainingPhrases(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs>> trainingPhrases) {
             this.trainingPhrases = trainingPhrases;
             return this;
         }
-
         public Builder trainingPhrases(@Nullable List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs> trainingPhrases) {
             this.trainingPhrases = Output.ofNullable(trainingPhrases);
             return this;
         }
-        public IntentArgs build() {
+        public Builder trainingPhrases(GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs... trainingPhrases) {
+            return trainingPhrases(List.of(trainingPhrases));
+        }        public IntentArgs build() {
             return new IntentArgs(agentId, description, displayName, isFallback, labels, languageCode, location, name, parameters, priority, project, trainingPhrases);
         }
     }

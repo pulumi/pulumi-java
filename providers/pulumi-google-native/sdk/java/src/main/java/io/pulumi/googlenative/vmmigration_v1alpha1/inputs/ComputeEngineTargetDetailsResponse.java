@@ -322,87 +322,79 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
             this.additionalLicenses = Objects.requireNonNull(additionalLicenses);
             return this;
         }
-
+        public Builder additionalLicenses(String... additionalLicenses) {
+            return additionalLicenses(List.of(additionalLicenses));
+        }
         public Builder appliedLicense(AppliedLicenseResponse appliedLicense) {
             this.appliedLicense = Objects.requireNonNull(appliedLicense);
             return this;
         }
-
         public Builder bootOption(String bootOption) {
             this.bootOption = Objects.requireNonNull(bootOption);
             return this;
         }
-
         public Builder computeScheduling(ComputeSchedulingResponse computeScheduling) {
             this.computeScheduling = Objects.requireNonNull(computeScheduling);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder licenseType(String licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder machineTypeSeries(String machineTypeSeries) {
             this.machineTypeSeries = Objects.requireNonNull(machineTypeSeries);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder networkTags(List<String> networkTags) {
             this.networkTags = Objects.requireNonNull(networkTags);
             return this;
         }
-
+        public Builder networkTags(String... networkTags) {
+            return networkTags(List.of(networkTags));
+        }
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder secureBoot(Boolean secureBoot) {
             this.secureBoot = Objects.requireNonNull(secureBoot);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder vmName(String vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public ComputeEngineTargetDetailsResponse build() {
+        }        public ComputeEngineTargetDetailsResponse build() {
             return new ComputeEngineTargetDetailsResponse(additionalLicenses, appliedLicense, bootOption, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, project, secureBoot, serviceAccount, vmName, zone);
         }
     }

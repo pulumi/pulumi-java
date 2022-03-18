@@ -79,22 +79,24 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder roles(@Nullable Output<List<String>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<String> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-        public AccessSelectorArgs build() {
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }        public AccessSelectorArgs build() {
             return new AccessSelectorArgs(permissions, roles);
         }
     }

@@ -60,7 +60,9 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse exten
             this.deltaPresenceEstimationHistogram = Objects.requireNonNull(deltaPresenceEstimationHistogram);
             return this;
         }
-        public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse build() {
+        public Builder deltaPresenceEstimationHistogram(GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse... deltaPresenceEstimationHistogram) {
+            return deltaPresenceEstimationHistogram(List.of(deltaPresenceEstimationHistogram));
+        }        public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(deltaPresenceEstimationHistogram);
         }
     }

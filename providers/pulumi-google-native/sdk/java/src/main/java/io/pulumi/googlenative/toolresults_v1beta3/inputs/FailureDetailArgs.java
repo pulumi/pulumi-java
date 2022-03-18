@@ -158,72 +158,58 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.crashed = crashed;
             return this;
         }
-
         public Builder crashed(@Nullable Boolean crashed) {
             this.crashed = Output.ofNullable(crashed);
             return this;
         }
-
         public Builder deviceOutOfMemory(@Nullable Output<Boolean> deviceOutOfMemory) {
             this.deviceOutOfMemory = deviceOutOfMemory;
             return this;
         }
-
         public Builder deviceOutOfMemory(@Nullable Boolean deviceOutOfMemory) {
             this.deviceOutOfMemory = Output.ofNullable(deviceOutOfMemory);
             return this;
         }
-
         public Builder failedRoboscript(@Nullable Output<Boolean> failedRoboscript) {
             this.failedRoboscript = failedRoboscript;
             return this;
         }
-
         public Builder failedRoboscript(@Nullable Boolean failedRoboscript) {
             this.failedRoboscript = Output.ofNullable(failedRoboscript);
             return this;
         }
-
         public Builder notInstalled(@Nullable Output<Boolean> notInstalled) {
             this.notInstalled = notInstalled;
             return this;
         }
-
         public Builder notInstalled(@Nullable Boolean notInstalled) {
             this.notInstalled = Output.ofNullable(notInstalled);
             return this;
         }
-
         public Builder otherNativeCrash(@Nullable Output<Boolean> otherNativeCrash) {
             this.otherNativeCrash = otherNativeCrash;
             return this;
         }
-
         public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
             this.otherNativeCrash = Output.ofNullable(otherNativeCrash);
             return this;
         }
-
         public Builder timedOut(@Nullable Output<Boolean> timedOut) {
             this.timedOut = timedOut;
             return this;
         }
-
         public Builder timedOut(@Nullable Boolean timedOut) {
             this.timedOut = Output.ofNullable(timedOut);
             return this;
         }
-
         public Builder unableToCrawl(@Nullable Output<Boolean> unableToCrawl) {
             this.unableToCrawl = unableToCrawl;
             return this;
         }
-
         public Builder unableToCrawl(@Nullable Boolean unableToCrawl) {
             this.unableToCrawl = Output.ofNullable(unableToCrawl);
             return this;
-        }
-        public FailureDetailArgs build() {
+        }        public FailureDetailArgs build() {
             return new FailureDetailArgs(crashed, deviceOutOfMemory, failedRoboscript, notInstalled, otherNativeCrash, timedOut, unableToCrawl);
         }
     }

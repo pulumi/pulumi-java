@@ -104,22 +104,18 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse {
             this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
             return this;
         }
-
         public Builder injectedParameters(Map<String,String> injectedParameters) {
             this.injectedParameters = Objects.requireNonNull(injectedParameters);
             return this;
         }
-
         public Builder input(GoogleCloudDialogflowCxV3QueryInputResponse input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder isWebhookEnabled(Boolean isWebhookEnabled) {
             this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse build() {
+        }        public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse build() {
             return new GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse(enableSentimentAnalysis, injectedParameters, input, isWebhookEnabled);
         }
     }

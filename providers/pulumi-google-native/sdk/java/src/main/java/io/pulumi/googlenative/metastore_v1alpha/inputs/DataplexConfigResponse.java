@@ -59,8 +59,7 @@ public final class DataplexConfigResponse extends io.pulumi.resources.InvokeArgs
         public Builder lakeResources(Map<String,String> lakeResources) {
             this.lakeResources = Objects.requireNonNull(lakeResources);
             return this;
-        }
-        public DataplexConfigResponse build() {
+        }        public DataplexConfigResponse build() {
             return new DataplexConfigResponse(lakeResources);
         }
     }

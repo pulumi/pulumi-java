@@ -263,72 +263,58 @@ public final class DetailResponse {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
-
         public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
-
         public Builder affectedVersionEnd(VersionResponse affectedVersionEnd) {
             this.affectedVersionEnd = Objects.requireNonNull(affectedVersionEnd);
             return this;
         }
-
         public Builder affectedVersionStart(VersionResponse affectedVersionStart) {
             this.affectedVersionStart = Objects.requireNonNull(affectedVersionStart);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fixedCpeUri(String fixedCpeUri) {
             this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri);
             return this;
         }
-
         public Builder fixedPackage(String fixedPackage) {
             this.fixedPackage = Objects.requireNonNull(fixedPackage);
             return this;
         }
-
         public Builder fixedVersion(VersionResponse fixedVersion) {
             this.fixedVersion = Objects.requireNonNull(fixedVersion);
             return this;
         }
-
         public Builder isObsolete(Boolean isObsolete) {
             this.isObsolete = Objects.requireNonNull(isObsolete);
             return this;
         }
-
         public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public Builder severityName(String severityName) {
             this.severityName = Objects.requireNonNull(severityName);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder sourceUpdateTime(String sourceUpdateTime) {
             this.sourceUpdateTime = Objects.requireNonNull(sourceUpdateTime);
             return this;
         }
-
         public Builder vendor(String vendor) {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
-        }
-        public DetailResponse build() {
+        }        public DetailResponse build() {
             return new DetailResponse(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);
         }
     }

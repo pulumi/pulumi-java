@@ -109,42 +109,34 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
             this.buttonId = Objects.requireNonNull(buttonId);
             return this;
         }
-
         public Builder buttonId(String buttonId) {
             this.buttonId = Output.of(Objects.requireNonNull(buttonId));
             return this;
         }
-
         public Builder deploymentId(Output<String> deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
-
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = Output.of(Objects.requireNonNull(deploymentId));
             return this;
         }
-
         public Builder endpointDomain(Output<String> endpointDomain) {
             this.endpointDomain = Objects.requireNonNull(endpointDomain);
             return this;
         }
-
         public Builder endpointDomain(String endpointDomain) {
             this.endpointDomain = Output.of(Objects.requireNonNull(endpointDomain));
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs build() {
+        }        public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs(buttonId, deploymentId, endpointDomain, organizationId);
         }
     }

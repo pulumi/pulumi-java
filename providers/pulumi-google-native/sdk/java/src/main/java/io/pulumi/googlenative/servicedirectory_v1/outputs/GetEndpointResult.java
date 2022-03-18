@@ -119,27 +119,22 @@ public final class GetEndpointResult {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public GetEndpointResult build() {
+        }        public GetEndpointResult build() {
             return new GetEndpointResult(address, annotations, name, network, port);
         }
     }

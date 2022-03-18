@@ -58,8 +58,7 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse exte
         public Builder agent(String agent) {
             this.agent = Objects.requireNonNull(agent);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse build() {
+        }        public GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse(agent);
         }
     }

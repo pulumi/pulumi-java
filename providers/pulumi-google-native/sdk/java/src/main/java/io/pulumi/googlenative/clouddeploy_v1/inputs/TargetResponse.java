@@ -258,67 +258,57 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder anthosCluster(AnthosClusterResponse anthosCluster) {
             this.anthosCluster = Objects.requireNonNull(anthosCluster);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder executionConfigs(List<ExecutionConfigResponse> executionConfigs) {
             this.executionConfigs = Objects.requireNonNull(executionConfigs);
             return this;
         }
-
+        public Builder executionConfigs(ExecutionConfigResponse... executionConfigs) {
+            return executionConfigs(List.of(executionConfigs));
+        }
         public Builder gke(GkeClusterResponse gke) {
             this.gke = Objects.requireNonNull(gke);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder requireApproval(Boolean requireApproval) {
             this.requireApproval = Objects.requireNonNull(requireApproval);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public TargetResponse build() {
+        }        public TargetResponse build() {
             return new TargetResponse(annotations, anthosCluster, createTime, description, etag, executionConfigs, gke, labels, name, requireApproval, targetId, uid, updateTime);
         }
     }

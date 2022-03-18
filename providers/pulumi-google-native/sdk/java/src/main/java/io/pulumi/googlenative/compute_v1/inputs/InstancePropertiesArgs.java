@@ -378,202 +378,177 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
             this.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
-
         public Builder advancedMachineFeatures(@Nullable AdvancedMachineFeaturesArgs advancedMachineFeatures) {
             this.advancedMachineFeatures = Output.ofNullable(advancedMachineFeatures);
             return this;
         }
-
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
-
         public Builder canIpForward(@Nullable Boolean canIpForward) {
             this.canIpForward = Output.ofNullable(canIpForward);
             return this;
         }
-
         public Builder confidentialInstanceConfig(@Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             this.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
-
         public Builder confidentialInstanceConfig(@Nullable ConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             this.confidentialInstanceConfig = Output.ofNullable(confidentialInstanceConfig);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disks(@Nullable Output<List<AttachedDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<AttachedDiskArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(AttachedDiskArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder guestAccelerators(@Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
-
         public Builder guestAccelerators(@Nullable List<AcceleratorConfigArgs> guestAccelerators) {
             this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(AcceleratorConfigArgs... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder metadata(@Nullable Output<MetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable MetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
-
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder networkPerformanceConfig(@Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig) {
             this.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
-
         public Builder networkPerformanceConfig(@Nullable NetworkPerformanceConfigArgs networkPerformanceConfig) {
             this.networkPerformanceConfig = Output.ofNullable(networkPerformanceConfig);
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable InstancePropertiesPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
-
         public Builder reservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
             this.reservationAffinity = Output.ofNullable(reservationAffinity);
             return this;
         }
-
         public Builder resourceManagerTags(@Nullable Output<Map<String,String>> resourceManagerTags) {
             this.resourceManagerTags = resourceManagerTags;
             return this;
         }
-
         public Builder resourceManagerTags(@Nullable Map<String,String> resourceManagerTags) {
             this.resourceManagerTags = Output.ofNullable(resourceManagerTags);
             return this;
         }
-
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
-
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
             this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder scheduling(@Nullable SchedulingArgs scheduling) {
             this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
-
         public Builder serviceAccounts(@Nullable Output<List<ServiceAccountArgs>> serviceAccounts) {
             this.serviceAccounts = serviceAccounts;
             return this;
         }
-
         public Builder serviceAccounts(@Nullable List<ServiceAccountArgs> serviceAccounts) {
             this.serviceAccounts = Output.ofNullable(serviceAccounts);
             return this;
         }
-
+        public Builder serviceAccounts(ServiceAccountArgs... serviceAccounts) {
+            return serviceAccounts(List.of(serviceAccounts));
+        }
         public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
-
         public Builder tags(@Nullable Output<TagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable TagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public InstancePropertiesArgs build() {
+        }        public InstancePropertiesArgs build() {
             return new InstancePropertiesArgs(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, description, disks, guestAccelerators, labels, machineType, metadata, minCpuPlatform, networkInterfaces, networkPerformanceConfig, privateIpv6GoogleAccess, reservationAffinity, resourceManagerTags, resourcePolicies, scheduling, serviceAccounts, shieldedInstanceConfig, tags);
         }
     }

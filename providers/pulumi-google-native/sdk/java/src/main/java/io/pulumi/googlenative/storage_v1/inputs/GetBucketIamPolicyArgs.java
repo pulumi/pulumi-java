@@ -90,22 +90,18 @@ public final class GetBucketIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetBucketIamPolicyArgs build() {
+        }        public GetBucketIamPolicyArgs build() {
             return new GetBucketIamPolicyArgs(bucket, optionsRequestedPolicyVersion, provisionalUserProject, userProject);
         }
     }

@@ -90,22 +90,18 @@ public final class GetInstanceClusterBackupIamPolicyArgs extends io.pulumi.resou
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetInstanceClusterBackupIamPolicyArgs build() {
+        }        public GetInstanceClusterBackupIamPolicyArgs build() {
             return new GetInstanceClusterBackupIamPolicyArgs(backupId, clusterId, instanceId, project);
         }
     }

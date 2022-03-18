@@ -78,22 +78,18 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.maxSurge = maxSurge;
             return this;
         }
-
         public Builder maxSurge(@Nullable Integer maxSurge) {
             this.maxSurge = Output.ofNullable(maxSurge);
             return this;
         }
-
         public Builder maxUnavailable(@Nullable Output<Integer> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public Builder maxUnavailable(@Nullable Integer maxUnavailable) {
             this.maxUnavailable = Output.ofNullable(maxUnavailable);
             return this;
-        }
-        public UpgradeSettingsArgs build() {
+        }        public UpgradeSettingsArgs build() {
             return new UpgradeSettingsArgs(maxSurge, maxUnavailable);
         }
     }

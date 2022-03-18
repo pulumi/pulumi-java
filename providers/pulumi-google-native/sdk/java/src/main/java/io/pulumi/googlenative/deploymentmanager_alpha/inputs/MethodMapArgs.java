@@ -126,52 +126,42 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
             this.create = create;
             return this;
         }
-
         public Builder create(@Nullable String create) {
             this.create = Output.ofNullable(create);
             return this;
         }
-
         public Builder delete(@Nullable Output<String> delete) {
             this.delete = delete;
             return this;
         }
-
         public Builder delete(@Nullable String delete) {
             this.delete = Output.ofNullable(delete);
             return this;
         }
-
         public Builder get(@Nullable Output<String> get) {
             this.get = get;
             return this;
         }
-
         public Builder get(@Nullable String get) {
             this.get = Output.ofNullable(get);
             return this;
         }
-
         public Builder setIamPolicy(@Nullable Output<String> setIamPolicy) {
             this.setIamPolicy = setIamPolicy;
             return this;
         }
-
         public Builder setIamPolicy(@Nullable String setIamPolicy) {
             this.setIamPolicy = Output.ofNullable(setIamPolicy);
             return this;
         }
-
         public Builder update(@Nullable Output<String> update) {
             this.update = update;
             return this;
         }
-
         public Builder update(@Nullable String update) {
             this.update = Output.ofNullable(update);
             return this;
-        }
-        public MethodMapArgs build() {
+        }        public MethodMapArgs build() {
             return new MethodMapArgs(create, delete, get, setIamPolicy, update);
         }
     }

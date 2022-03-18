@@ -94,32 +94,26 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.gid = gid;
             return this;
         }
-
         public Builder gid(@Nullable String gid) {
             this.gid = Output.ofNullable(gid);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder systemId(@Nullable Output<String> systemId) {
             this.systemId = systemId;
             return this;
         }
-
         public Builder systemId(@Nullable String systemId) {
             this.systemId = Output.ofNullable(systemId);
             return this;
-        }
-        public PosixGroupArgs build() {
+        }        public PosixGroupArgs build() {
             return new PosixGroupArgs(gid, name, systemId);
         }
     }

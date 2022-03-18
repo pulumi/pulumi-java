@@ -201,52 +201,42 @@ public final class GetConnectionProfileResult {
             this.cloudsql = Objects.requireNonNull(cloudsql);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder mysql(MySqlConnectionProfileResponse mysql) {
             this.mysql = Objects.requireNonNull(mysql);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetConnectionProfileResult build() {
+        }        public GetConnectionProfileResult build() {
             return new GetConnectionProfileResult(cloudsql, createTime, displayName, error, labels, mysql, name, provider, state, updateTime);
         }
     }

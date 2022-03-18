@@ -96,32 +96,26 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.configMapRef = configMapRef;
             return this;
         }
-
         public Builder configMapRef(@Nullable ConfigMapEnvSourceArgs configMapRef) {
             this.configMapRef = Output.ofNullable(configMapRef);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<SecretEnvSourceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable SecretEnvSourceArgs secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
-        }
-        public EnvFromSourceArgs build() {
+        }        public EnvFromSourceArgs build() {
             return new EnvFromSourceArgs(configMapRef, prefix, secretRef);
         }
     }

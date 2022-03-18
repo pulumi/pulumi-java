@@ -160,72 +160,70 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
             this.contains = contains;
             return this;
         }
-
         public Builder contains(@Nullable List<String> contains) {
             this.contains = Output.ofNullable(contains);
             return this;
         }
-
+        public Builder contains(String... contains) {
+            return contains(List.of(contains));
+        }
         public Builder intervals(@Nullable Output<List<GoogleCloudRetailV2alphaIntervalArgs>> intervals) {
             this.intervals = intervals;
             return this;
         }
-
         public Builder intervals(@Nullable List<GoogleCloudRetailV2alphaIntervalArgs> intervals) {
             this.intervals = Output.ofNullable(intervals);
             return this;
         }
-
+        public Builder intervals(GoogleCloudRetailV2alphaIntervalArgs... intervals) {
+            return intervals(List.of(intervals));
+        }
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder orderBy(@Nullable Output<String> orderBy) {
             this.orderBy = orderBy;
             return this;
         }
-
         public Builder orderBy(@Nullable String orderBy) {
             this.orderBy = Output.ofNullable(orderBy);
             return this;
         }
-
         public Builder prefixes(@Nullable Output<List<String>> prefixes) {
             this.prefixes = prefixes;
             return this;
         }
-
         public Builder prefixes(@Nullable List<String> prefixes) {
             this.prefixes = Output.ofNullable(prefixes);
             return this;
         }
-
+        public Builder prefixes(String... prefixes) {
+            return prefixes(List.of(prefixes));
+        }
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder restrictedValues(@Nullable Output<List<String>> restrictedValues) {
             this.restrictedValues = restrictedValues;
             return this;
         }
-
         public Builder restrictedValues(@Nullable List<String> restrictedValues) {
             this.restrictedValues = Output.ofNullable(restrictedValues);
             return this;
         }
-        public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs build() {
+        public Builder restrictedValues(String... restrictedValues) {
+            return restrictedValues(List.of(restrictedValues));
+        }        public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs build() {
             return new GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs(contains, intervals, key, orderBy, prefixes, query, restrictedValues);
         }
     }

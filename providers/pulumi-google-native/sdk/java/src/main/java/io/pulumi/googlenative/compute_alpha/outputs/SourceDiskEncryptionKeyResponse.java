@@ -70,12 +70,10 @@ public final class SourceDiskEncryptionKeyResponse {
             this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
             return this;
         }
-
         public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
-        }
-        public SourceDiskEncryptionKeyResponse build() {
+        }        public SourceDiskEncryptionKeyResponse build() {
             return new SourceDiskEncryptionKeyResponse(diskEncryptionKey, sourceDisk);
         }
     }

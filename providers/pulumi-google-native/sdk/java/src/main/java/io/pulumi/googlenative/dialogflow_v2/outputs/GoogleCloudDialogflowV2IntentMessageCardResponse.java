@@ -103,22 +103,21 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
-
+        public Builder buttons(GoogleCloudDialogflowV2IntentMessageCardButtonResponse... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageCardResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageCardResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageCardResponse(buttons, imageUri, subtitle, title);
         }
     }

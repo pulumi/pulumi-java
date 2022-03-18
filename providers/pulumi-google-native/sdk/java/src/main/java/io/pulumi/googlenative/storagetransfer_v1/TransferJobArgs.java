@@ -191,92 +191,74 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder latestOperationName(@Nullable Output<String> latestOperationName) {
             this.latestOperationName = latestOperationName;
             return this;
         }
-
         public Builder latestOperationName(@Nullable String latestOperationName) {
             this.latestOperationName = Output.ofNullable(latestOperationName);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<LoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable LoggingConfigArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable ScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder status(@Nullable Output<TransferJobStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable TransferJobStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder transferSpec(@Nullable Output<TransferSpecArgs> transferSpec) {
             this.transferSpec = transferSpec;
             return this;
         }
-
         public Builder transferSpec(@Nullable TransferSpecArgs transferSpec) {
             this.transferSpec = Output.ofNullable(transferSpec);
             return this;
-        }
-        public TransferJobArgs build() {
+        }        public TransferJobArgs build() {
             return new TransferJobArgs(description, latestOperationName, loggingConfig, name, notificationConfig, project, schedule, status, transferSpec);
         }
     }

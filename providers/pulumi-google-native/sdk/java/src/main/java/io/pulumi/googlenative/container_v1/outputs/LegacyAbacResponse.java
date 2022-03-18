@@ -51,8 +51,7 @@ public final class LegacyAbacResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public LegacyAbacResponse build() {
+        }        public LegacyAbacResponse build() {
             return new LegacyAbacResponse(enabled);
         }
     }

@@ -196,92 +196,77 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder algorithm(@Nullable GoogleCloudMlV1__HyperparameterSpecAlgorithm algorithm) {
             this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
-
         public Builder enableTrialEarlyStopping(@Nullable Output<Boolean> enableTrialEarlyStopping) {
             this.enableTrialEarlyStopping = enableTrialEarlyStopping;
             return this;
         }
-
         public Builder enableTrialEarlyStopping(@Nullable Boolean enableTrialEarlyStopping) {
             this.enableTrialEarlyStopping = Output.ofNullable(enableTrialEarlyStopping);
             return this;
         }
-
         public Builder goal(Output<GoogleCloudMlV1__HyperparameterSpecGoal> goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
-
         public Builder goal(GoogleCloudMlV1__HyperparameterSpecGoal goal) {
             this.goal = Output.of(Objects.requireNonNull(goal));
             return this;
         }
-
         public Builder hyperparameterMetricTag(@Nullable Output<String> hyperparameterMetricTag) {
             this.hyperparameterMetricTag = hyperparameterMetricTag;
             return this;
         }
-
         public Builder hyperparameterMetricTag(@Nullable String hyperparameterMetricTag) {
             this.hyperparameterMetricTag = Output.ofNullable(hyperparameterMetricTag);
             return this;
         }
-
         public Builder maxFailedTrials(@Nullable Output<Integer> maxFailedTrials) {
             this.maxFailedTrials = maxFailedTrials;
             return this;
         }
-
         public Builder maxFailedTrials(@Nullable Integer maxFailedTrials) {
             this.maxFailedTrials = Output.ofNullable(maxFailedTrials);
             return this;
         }
-
         public Builder maxParallelTrials(@Nullable Output<Integer> maxParallelTrials) {
             this.maxParallelTrials = maxParallelTrials;
             return this;
         }
-
         public Builder maxParallelTrials(@Nullable Integer maxParallelTrials) {
             this.maxParallelTrials = Output.ofNullable(maxParallelTrials);
             return this;
         }
-
         public Builder maxTrials(@Nullable Output<Integer> maxTrials) {
             this.maxTrials = maxTrials;
             return this;
         }
-
         public Builder maxTrials(@Nullable Integer maxTrials) {
             this.maxTrials = Output.ofNullable(maxTrials);
             return this;
         }
-
         public Builder params(Output<List<GoogleCloudMlV1__ParameterSpecArgs>> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
-
         public Builder params(List<GoogleCloudMlV1__ParameterSpecArgs> params) {
             this.params = Output.of(Objects.requireNonNull(params));
             return this;
         }
-
+        public Builder params(GoogleCloudMlV1__ParameterSpecArgs... params) {
+            return params(List.of(params));
+        }
         public Builder resumePreviousJobId(@Nullable Output<String> resumePreviousJobId) {
             this.resumePreviousJobId = resumePreviousJobId;
             return this;
         }
-
         public Builder resumePreviousJobId(@Nullable String resumePreviousJobId) {
             this.resumePreviousJobId = Output.ofNullable(resumePreviousJobId);
             return this;
-        }
-        public GoogleCloudMlV1__HyperparameterSpecArgs build() {
+        }        public GoogleCloudMlV1__HyperparameterSpecArgs build() {
             return new GoogleCloudMlV1__HyperparameterSpecArgs(algorithm, enableTrialEarlyStopping, goal, hyperparameterMetricTag, maxFailedTrials, maxParallelTrials, maxTrials, params, resumePreviousJobId);
         }
     }

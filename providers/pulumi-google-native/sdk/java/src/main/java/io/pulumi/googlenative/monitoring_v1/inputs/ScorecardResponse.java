@@ -112,22 +112,21 @@ public final class ScorecardResponse extends io.pulumi.resources.InvokeArgs {
             this.gaugeView = Objects.requireNonNull(gaugeView);
             return this;
         }
-
         public Builder sparkChartView(SparkChartViewResponse sparkChartView) {
             this.sparkChartView = Objects.requireNonNull(sparkChartView);
             return this;
         }
-
         public Builder thresholds(List<ThresholdResponse> thresholds) {
             this.thresholds = Objects.requireNonNull(thresholds);
             return this;
         }
-
+        public Builder thresholds(ThresholdResponse... thresholds) {
+            return thresholds(List.of(thresholds));
+        }
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
-        }
-        public ScorecardResponse build() {
+        }        public ScorecardResponse build() {
             return new ScorecardResponse(gaugeView, sparkChartView, thresholds, timeSeriesQuery);
         }
     }

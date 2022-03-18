@@ -51,8 +51,7 @@ public final class HintResponse {
         public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
-        }
-        public HintResponse build() {
+        }        public HintResponse build() {
             return new HintResponse(humanReadableName);
         }
     }

@@ -127,52 +127,42 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
             this.deleted = deleted;
             return this;
         }
-
         public Builder deleted(@Nullable String deleted) {
             this.deleted = Output.ofNullable(deleted);
             return this;
         }
-
         public Builder deprecated(@Nullable Output<String> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
-
         public Builder deprecated(@Nullable String deprecated) {
             this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
-
         public Builder obsolete(@Nullable Output<String> obsolete) {
             this.obsolete = obsolete;
             return this;
         }
-
         public Builder obsolete(@Nullable String obsolete) {
             this.obsolete = Output.ofNullable(obsolete);
             return this;
         }
-
         public Builder replacement(@Nullable Output<String> replacement) {
             this.replacement = replacement;
             return this;
         }
-
         public Builder replacement(@Nullable String replacement) {
             this.replacement = Output.ofNullable(replacement);
             return this;
         }
-
         public Builder state(@Nullable Output<DeprecationStatusState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable DeprecationStatusState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public DeprecationStatusArgs build() {
+        }        public DeprecationStatusArgs build() {
             return new DeprecationStatusArgs(deleted, deprecated, obsolete, replacement, state);
         }
     }

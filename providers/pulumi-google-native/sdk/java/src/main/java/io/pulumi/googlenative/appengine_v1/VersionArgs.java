@@ -615,352 +615,294 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             this.apiConfig = apiConfig;
             return this;
         }
-
         public Builder apiConfig(@Nullable ApiConfigHandlerArgs apiConfig) {
             this.apiConfig = Output.ofNullable(apiConfig);
             return this;
         }
-
         public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder automaticScaling(@Nullable Output<AutomaticScalingArgs> automaticScaling) {
             this.automaticScaling = automaticScaling;
             return this;
         }
-
         public Builder automaticScaling(@Nullable AutomaticScalingArgs automaticScaling) {
             this.automaticScaling = Output.ofNullable(automaticScaling);
             return this;
         }
-
         public Builder basicScaling(@Nullable Output<BasicScalingArgs> basicScaling) {
             this.basicScaling = basicScaling;
             return this;
         }
-
         public Builder basicScaling(@Nullable BasicScalingArgs basicScaling) {
             this.basicScaling = Output.ofNullable(basicScaling);
             return this;
         }
-
         public Builder betaSettings(@Nullable Output<Map<String,String>> betaSettings) {
             this.betaSettings = betaSettings;
             return this;
         }
-
         public Builder betaSettings(@Nullable Map<String,String> betaSettings) {
             this.betaSettings = Output.ofNullable(betaSettings);
             return this;
         }
-
         public Builder buildEnvVariables(@Nullable Output<Map<String,String>> buildEnvVariables) {
             this.buildEnvVariables = buildEnvVariables;
             return this;
         }
-
         public Builder buildEnvVariables(@Nullable Map<String,String> buildEnvVariables) {
             this.buildEnvVariables = Output.ofNullable(buildEnvVariables);
             return this;
         }
-
         public Builder defaultExpiration(@Nullable Output<String> defaultExpiration) {
             this.defaultExpiration = defaultExpiration;
             return this;
         }
-
         public Builder defaultExpiration(@Nullable String defaultExpiration) {
             this.defaultExpiration = Output.ofNullable(defaultExpiration);
             return this;
         }
-
         public Builder deployment(@Nullable Output<DeploymentArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
-
         public Builder deployment(@Nullable DeploymentArgs deployment) {
             this.deployment = Output.ofNullable(deployment);
             return this;
         }
-
         public Builder endpointsApiService(@Nullable Output<EndpointsApiServiceArgs> endpointsApiService) {
             this.endpointsApiService = endpointsApiService;
             return this;
         }
-
         public Builder endpointsApiService(@Nullable EndpointsApiServiceArgs endpointsApiService) {
             this.endpointsApiService = Output.ofNullable(endpointsApiService);
             return this;
         }
-
         public Builder entrypoint(@Nullable Output<EntrypointArgs> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
-
         public Builder entrypoint(@Nullable EntrypointArgs entrypoint) {
             this.entrypoint = Output.ofNullable(entrypoint);
             return this;
         }
-
         public Builder env(@Nullable Output<String> env) {
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable String env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
         public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
-
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
             this.envVariables = Output.ofNullable(envVariables);
             return this;
         }
-
         public Builder errorHandlers(@Nullable Output<List<ErrorHandlerArgs>> errorHandlers) {
             this.errorHandlers = errorHandlers;
             return this;
         }
-
         public Builder errorHandlers(@Nullable List<ErrorHandlerArgs> errorHandlers) {
             this.errorHandlers = Output.ofNullable(errorHandlers);
             return this;
         }
-
+        public Builder errorHandlers(ErrorHandlerArgs... errorHandlers) {
+            return errorHandlers(List.of(errorHandlers));
+        }
         public Builder handlers(@Nullable Output<List<UrlMapArgs>> handlers) {
             this.handlers = handlers;
             return this;
         }
-
         public Builder handlers(@Nullable List<UrlMapArgs> handlers) {
             this.handlers = Output.ofNullable(handlers);
             return this;
         }
-
+        public Builder handlers(UrlMapArgs... handlers) {
+            return handlers(List.of(handlers));
+        }
         public Builder healthCheck(@Nullable Output<HealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder healthCheck(@Nullable HealthCheckArgs healthCheck) {
             this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder inboundServices(@Nullable Output<List<VersionInboundServicesItem>> inboundServices) {
             this.inboundServices = inboundServices;
             return this;
         }
-
         public Builder inboundServices(@Nullable List<VersionInboundServicesItem> inboundServices) {
             this.inboundServices = Output.ofNullable(inboundServices);
             return this;
         }
-
+        public Builder inboundServices(VersionInboundServicesItem... inboundServices) {
+            return inboundServices(List.of(inboundServices));
+        }
         public Builder instanceClass(@Nullable Output<String> instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
-
         public Builder instanceClass(@Nullable String instanceClass) {
             this.instanceClass = Output.ofNullable(instanceClass);
             return this;
         }
-
         public Builder libraries(@Nullable Output<List<LibraryArgs>> libraries) {
             this.libraries = libraries;
             return this;
         }
-
         public Builder libraries(@Nullable List<LibraryArgs> libraries) {
             this.libraries = Output.ofNullable(libraries);
             return this;
         }
-
+        public Builder libraries(LibraryArgs... libraries) {
+            return libraries(List.of(libraries));
+        }
         public Builder livenessCheck(@Nullable Output<LivenessCheckArgs> livenessCheck) {
             this.livenessCheck = livenessCheck;
             return this;
         }
-
         public Builder livenessCheck(@Nullable LivenessCheckArgs livenessCheck) {
             this.livenessCheck = Output.ofNullable(livenessCheck);
             return this;
         }
-
         public Builder manualScaling(@Nullable Output<ManualScalingArgs> manualScaling) {
             this.manualScaling = manualScaling;
             return this;
         }
-
         public Builder manualScaling(@Nullable ManualScalingArgs manualScaling) {
             this.manualScaling = Output.ofNullable(manualScaling);
             return this;
         }
-
         public Builder network(@Nullable Output<NetworkArgs> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable NetworkArgs network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder nobuildFilesRegex(@Nullable Output<String> nobuildFilesRegex) {
             this.nobuildFilesRegex = nobuildFilesRegex;
             return this;
         }
-
         public Builder nobuildFilesRegex(@Nullable String nobuildFilesRegex) {
             this.nobuildFilesRegex = Output.ofNullable(nobuildFilesRegex);
             return this;
         }
-
         public Builder readinessCheck(@Nullable Output<ReadinessCheckArgs> readinessCheck) {
             this.readinessCheck = readinessCheck;
             return this;
         }
-
         public Builder readinessCheck(@Nullable ReadinessCheckArgs readinessCheck) {
             this.readinessCheck = Output.ofNullable(readinessCheck);
             return this;
         }
-
         public Builder resources(@Nullable Output<ResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable ResourcesArgs resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
         public Builder runtime(@Nullable Output<String> runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder runtime(@Nullable String runtime) {
             this.runtime = Output.ofNullable(runtime);
             return this;
         }
-
         public Builder runtimeApiVersion(@Nullable Output<String> runtimeApiVersion) {
             this.runtimeApiVersion = runtimeApiVersion;
             return this;
         }
-
         public Builder runtimeApiVersion(@Nullable String runtimeApiVersion) {
             this.runtimeApiVersion = Output.ofNullable(runtimeApiVersion);
             return this;
         }
-
         public Builder runtimeChannel(@Nullable Output<String> runtimeChannel) {
             this.runtimeChannel = runtimeChannel;
             return this;
         }
-
         public Builder runtimeChannel(@Nullable String runtimeChannel) {
             this.runtimeChannel = Output.ofNullable(runtimeChannel);
             return this;
         }
-
         public Builder runtimeMainExecutablePath(@Nullable Output<String> runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = runtimeMainExecutablePath;
             return this;
         }
-
         public Builder runtimeMainExecutablePath(@Nullable String runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = Output.ofNullable(runtimeMainExecutablePath);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
-
         public Builder servingStatus(@Nullable Output<VersionServingStatus> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
-
         public Builder servingStatus(@Nullable VersionServingStatus servingStatus) {
             this.servingStatus = Output.ofNullable(servingStatus);
             return this;
         }
-
         public Builder threadsafe(@Nullable Output<Boolean> threadsafe) {
             this.threadsafe = threadsafe;
             return this;
         }
-
         public Builder threadsafe(@Nullable Boolean threadsafe) {
             this.threadsafe = Output.ofNullable(threadsafe);
             return this;
         }
-
         public Builder vm(@Nullable Output<Boolean> vm) {
             this.vm = vm;
             return this;
         }
-
         public Builder vm(@Nullable Boolean vm) {
             this.vm = Output.ofNullable(vm);
             return this;
         }
-
         public Builder vpcAccessConnector(@Nullable Output<VpcAccessConnectorArgs> vpcAccessConnector) {
             this.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
-
         public Builder vpcAccessConnector(@Nullable VpcAccessConnectorArgs vpcAccessConnector) {
             this.vpcAccessConnector = Output.ofNullable(vpcAccessConnector);
             return this;
-        }
-        public VersionArgs build() {
+        }        public VersionArgs build() {
             return new VersionArgs(apiConfig, appId, automaticScaling, basicScaling, betaSettings, buildEnvVariables, defaultExpiration, deployment, endpointsApiService, entrypoint, env, envVariables, errorHandlers, handlers, healthCheck, id, inboundServices, instanceClass, libraries, livenessCheck, manualScaling, network, nobuildFilesRegex, readinessCheck, resources, runtime, runtimeApiVersion, runtimeChannel, runtimeMainExecutablePath, serviceAccount, serviceId, servingStatus, threadsafe, vm, vpcAccessConnector);
         }
     }

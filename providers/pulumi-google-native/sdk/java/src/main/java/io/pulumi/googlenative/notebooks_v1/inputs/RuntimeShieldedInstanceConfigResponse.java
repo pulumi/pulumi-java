@@ -92,17 +92,14 @@ public final class RuntimeShieldedInstanceConfigResponse extends io.pulumi.resou
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
-
         public Builder enableVtpm(Boolean enableVtpm) {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
-        }
-        public RuntimeShieldedInstanceConfigResponse build() {
+        }        public RuntimeShieldedInstanceConfigResponse build() {
             return new RuntimeShieldedInstanceConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }
     }

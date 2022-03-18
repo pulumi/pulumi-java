@@ -78,17 +78,14 @@ public final class GetPhraseSetArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder phraseSetId(String phraseSetId) {
             this.phraseSetId = Objects.requireNonNull(phraseSetId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPhraseSetArgs build() {
+        }        public GetPhraseSetArgs build() {
             return new GetPhraseSetArgs(location, phraseSetId, project);
         }
     }

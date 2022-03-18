@@ -96,32 +96,26 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
             this.collection = collection;
             return this;
         }
-
         public Builder collection(@Nullable String collection) {
             this.collection = Output.ofNullable(collection);
             return this;
         }
-
         public Builder methodMap(@Nullable Output<MethodMapArgs> methodMap) {
             this.methodMap = methodMap;
             return this;
         }
-
         public Builder methodMap(@Nullable MethodMapArgs methodMap) {
             this.methodMap = Output.ofNullable(methodMap);
             return this;
         }
-
         public Builder options(@Nullable Output<OptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable OptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
-        }
-        public CollectionOverrideArgs build() {
+        }        public CollectionOverrideArgs build() {
             return new CollectionOverrideArgs(collection, methodMap, options);
         }
     }

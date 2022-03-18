@@ -421,117 +421,94 @@ public final class GetOccurrenceResult {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public Builder buildDetails(BuildDetailsResponse buildDetails) {
             this.buildDetails = Objects.requireNonNull(buildDetails);
             return this;
         }
-
         public Builder compliance(ComplianceOccurrenceResponse compliance) {
             this.compliance = Objects.requireNonNull(compliance);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deployment(DeploymentResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public Builder derivedImage(DerivedResponse derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }
-
         public Builder discovered(DiscoveredResponse discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
-
         public Builder dsseAttestation(DSSEAttestationOccurrenceResponse dsseAttestation) {
             this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
             return this;
         }
-
         public Builder envelope(EnvelopeResponse envelope) {
             this.envelope = Objects.requireNonNull(envelope);
             return this;
         }
-
         public Builder installation(InstallationResponse installation) {
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder noteName(String noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
-
         public Builder remediation(String remediation) {
             this.remediation = Objects.requireNonNull(remediation);
             return this;
         }
-
         public Builder resource(ResourceResponse resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resourceUrl(String resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }
-
         public Builder sbom(DocumentOccurrenceResponse sbom) {
             this.sbom = Objects.requireNonNull(sbom);
             return this;
         }
-
         public Builder spdxFile(FileOccurrenceResponse spdxFile) {
             this.spdxFile = Objects.requireNonNull(spdxFile);
             return this;
         }
-
         public Builder spdxPackage(PackageInfoOccurrenceResponse spdxPackage) {
             this.spdxPackage = Objects.requireNonNull(spdxPackage);
             return this;
         }
-
         public Builder spdxRelationship(RelationshipOccurrenceResponse spdxRelationship) {
             this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder upgrade(UpgradeOccurrenceResponse upgrade) {
             this.upgrade = Objects.requireNonNull(upgrade);
             return this;
         }
-
         public Builder vulnerabilityDetails(VulnerabilityDetailsResponse vulnerabilityDetails) {
             this.vulnerabilityDetails = Objects.requireNonNull(vulnerabilityDetails);
             return this;
-        }
-        public GetOccurrenceResult build() {
+        }        public GetOccurrenceResult build() {
             return new GetOccurrenceResult(attestation, buildDetails, compliance, createTime, deployment, derivedImage, discovered, dsseAttestation, envelope, installation, kind, name, noteName, remediation, resource, resourceUrl, sbom, spdxFile, spdxPackage, spdxRelationship, updateTime, upgrade, vulnerabilityDetails);
         }
     }

@@ -59,8 +59,7 @@ public final class RuntimeMetricsResponse extends io.pulumi.resources.InvokeArgs
         public Builder systemMetrics(Map<String,String> systemMetrics) {
             this.systemMetrics = Objects.requireNonNull(systemMetrics);
             return this;
-        }
-        public RuntimeMetricsResponse build() {
+        }        public RuntimeMetricsResponse build() {
             return new RuntimeMetricsResponse(systemMetrics);
         }
     }

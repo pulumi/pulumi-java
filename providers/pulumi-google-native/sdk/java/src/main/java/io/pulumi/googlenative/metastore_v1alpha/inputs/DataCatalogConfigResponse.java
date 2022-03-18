@@ -58,8 +58,7 @@ public final class DataCatalogConfigResponse extends io.pulumi.resources.InvokeA
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public DataCatalogConfigResponse build() {
+        }        public DataCatalogConfigResponse build() {
             return new DataCatalogConfigResponse(enabled);
         }
     }

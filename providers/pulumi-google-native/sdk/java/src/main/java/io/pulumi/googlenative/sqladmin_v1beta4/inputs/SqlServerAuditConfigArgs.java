@@ -78,22 +78,18 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public SqlServerAuditConfigArgs build() {
+        }        public SqlServerAuditConfigArgs build() {
             return new SqlServerAuditConfigArgs(bucket, kind);
         }
     }

@@ -217,57 +217,49 @@ public final class GetBillingAccountSinkResult {
             this.bigqueryOptions = Objects.requireNonNull(bigqueryOptions);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder exclusions(List<LogExclusionResponse> exclusions) {
             this.exclusions = Objects.requireNonNull(exclusions);
             return this;
         }
-
+        public Builder exclusions(LogExclusionResponse... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder includeChildren(Boolean includeChildren) {
             this.includeChildren = Objects.requireNonNull(includeChildren);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder writerIdentity(String writerIdentity) {
             this.writerIdentity = Objects.requireNonNull(writerIdentity);
             return this;
-        }
-        public GetBillingAccountSinkResult build() {
+        }        public GetBillingAccountSinkResult build() {
             return new GetBillingAccountSinkResult(bigqueryOptions, createTime, description, destination, disabled, exclusions, filter, includeChildren, name, updateTime, writerIdentity);
         }
     }

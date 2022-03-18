@@ -204,52 +204,42 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
             this.domainMappingReason = Objects.requireNonNull(domainMappingReason);
             return this;
         }
-
         public Builder executionReason(String executionReason) {
             this.executionReason = Objects.requireNonNull(executionReason);
             return this;
         }
-
         public Builder internalReason(String internalReason) {
             this.internalReason = Objects.requireNonNull(internalReason);
             return this;
         }
-
         public Builder lastTransitionTime(String lastTransitionTime) {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder revisionReason(String revisionReason) {
             this.revisionReason = Objects.requireNonNull(revisionReason);
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudRunOpV2ConditionResponse build() {
+        }        public GoogleCloudRunOpV2ConditionResponse build() {
             return new GoogleCloudRunOpV2ConditionResponse(domainMappingReason, executionReason, internalReason, lastTransitionTime, message, reason, revisionReason, severity, state, type);
         }
     }

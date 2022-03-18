@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder versionVariants(@Nullable Output<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants) {
             this.versionVariants = versionVariants;
             return this;
         }
-
         public Builder versionVariants(@Nullable GoogleCloudDialogflowCxV3beta1VersionVariantsArgs versionVariants) {
             this.versionVariants = Output.ofNullable(versionVariants);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs(condition, versionVariants);
         }
     }

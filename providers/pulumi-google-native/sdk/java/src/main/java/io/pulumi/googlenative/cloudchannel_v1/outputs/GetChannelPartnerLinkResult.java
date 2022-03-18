@@ -166,42 +166,34 @@ public final class GetChannelPartnerLinkResult {
             this.channelPartnerCloudIdentityInfo = Objects.requireNonNull(channelPartnerCloudIdentityInfo);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder inviteLinkUri(String inviteLinkUri) {
             this.inviteLinkUri = Objects.requireNonNull(inviteLinkUri);
             return this;
         }
-
         public Builder linkState(String linkState) {
             this.linkState = Objects.requireNonNull(linkState);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicId(String publicId) {
             this.publicId = Objects.requireNonNull(publicId);
             return this;
         }
-
         public Builder resellerCloudIdentityId(String resellerCloudIdentityId) {
             this.resellerCloudIdentityId = Objects.requireNonNull(resellerCloudIdentityId);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetChannelPartnerLinkResult build() {
+        }        public GetChannelPartnerLinkResult build() {
             return new GetChannelPartnerLinkResult(channelPartnerCloudIdentityInfo, createTime, inviteLinkUri, linkState, name, publicId, resellerCloudIdentityId, updateTime);
         }
     }

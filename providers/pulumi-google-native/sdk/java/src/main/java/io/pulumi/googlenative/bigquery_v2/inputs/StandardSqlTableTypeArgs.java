@@ -62,12 +62,13 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<StandardSqlFieldArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-        public StandardSqlTableTypeArgs build() {
+        public Builder columns(StandardSqlFieldArgs... columns) {
+            return columns(List.of(columns));
+        }        public StandardSqlTableTypeArgs build() {
             return new StandardSqlTableTypeArgs(columns);
         }
     }

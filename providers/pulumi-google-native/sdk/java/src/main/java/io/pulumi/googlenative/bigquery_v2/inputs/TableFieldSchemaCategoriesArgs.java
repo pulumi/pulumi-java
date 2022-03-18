@@ -62,12 +62,13 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
             this.names = names;
             return this;
         }
-
         public Builder names(@Nullable List<String> names) {
             this.names = Output.ofNullable(names);
             return this;
         }
-        public TableFieldSchemaCategoriesArgs build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public TableFieldSchemaCategoriesArgs build() {
             return new TableFieldSchemaCategoriesArgs(names);
         }
     }

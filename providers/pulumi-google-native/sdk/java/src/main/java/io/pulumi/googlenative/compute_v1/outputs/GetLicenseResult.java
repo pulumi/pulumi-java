@@ -159,42 +159,34 @@ public final class GetLicenseResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder licenseCode(String licenseCode) {
             this.licenseCode = Objects.requireNonNull(licenseCode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceRequirements(LicenseResourceRequirementsResponse resourceRequirements) {
             this.resourceRequirements = Objects.requireNonNull(resourceRequirements);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder transferable(Boolean transferable) {
             this.transferable = Objects.requireNonNull(transferable);
             return this;
-        }
-        public GetLicenseResult build() {
+        }        public GetLicenseResult build() {
             return new GetLicenseResult(creationTimestamp, description, kind, licenseCode, name, resourceRequirements, selfLink, transferable);
         }
     }

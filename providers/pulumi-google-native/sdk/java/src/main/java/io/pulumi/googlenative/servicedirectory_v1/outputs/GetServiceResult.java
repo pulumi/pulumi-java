@@ -88,17 +88,17 @@ public final class GetServiceResult {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder endpoints(List<EndpointResponse> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
+        public Builder endpoints(EndpointResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(annotations, endpoints, name);
         }
     }

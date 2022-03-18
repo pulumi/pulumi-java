@@ -51,8 +51,7 @@ public final class DnsCacheConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public DnsCacheConfigResponse build() {
+        }        public DnsCacheConfigResponse build() {
             return new DnsCacheConfigResponse(enabled);
         }
     }

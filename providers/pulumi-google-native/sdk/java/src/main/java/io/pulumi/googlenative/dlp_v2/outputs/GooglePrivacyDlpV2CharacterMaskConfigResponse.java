@@ -105,22 +105,21 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse {
             this.charactersToIgnore = Objects.requireNonNull(charactersToIgnore);
             return this;
         }
-
+        public Builder charactersToIgnore(GooglePrivacyDlpV2CharsToIgnoreResponse... charactersToIgnore) {
+            return charactersToIgnore(List.of(charactersToIgnore));
+        }
         public Builder maskingCharacter(String maskingCharacter) {
             this.maskingCharacter = Objects.requireNonNull(maskingCharacter);
             return this;
         }
-
         public Builder numberToMask(Integer numberToMask) {
             this.numberToMask = Objects.requireNonNull(numberToMask);
             return this;
         }
-
         public Builder reverseOrder(Boolean reverseOrder) {
             this.reverseOrder = Objects.requireNonNull(reverseOrder);
             return this;
-        }
-        public GooglePrivacyDlpV2CharacterMaskConfigResponse build() {
+        }        public GooglePrivacyDlpV2CharacterMaskConfigResponse build() {
             return new GooglePrivacyDlpV2CharacterMaskConfigResponse(charactersToIgnore, maskingCharacter, numberToMask, reverseOrder);
         }
     }

@@ -79,22 +79,18 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
             this.customAccount = customAccount;
             return this;
         }
-
         public Builder customAccount(@Nullable CustomAccountArgs customAccount) {
             this.customAccount = Output.ofNullable(customAccount);
             return this;
         }
-
         public Builder googleAccount(@Nullable Output<GoogleAccountArgs> googleAccount) {
             this.googleAccount = googleAccount;
             return this;
         }
-
         public Builder googleAccount(@Nullable GoogleAccountArgs googleAccount) {
             this.googleAccount = Output.ofNullable(googleAccount);
             return this;
-        }
-        public AuthenticationArgs build() {
+        }        public AuthenticationArgs build() {
             return new AuthenticationArgs(customAccount, googleAccount);
         }
     }

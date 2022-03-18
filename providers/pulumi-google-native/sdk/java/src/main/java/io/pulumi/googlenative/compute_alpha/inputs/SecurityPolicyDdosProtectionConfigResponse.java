@@ -50,8 +50,7 @@ public final class SecurityPolicyDdosProtectionConfigResponse extends io.pulumi.
         public Builder ddosProtection(String ddosProtection) {
             this.ddosProtection = Objects.requireNonNull(ddosProtection);
             return this;
-        }
-        public SecurityPolicyDdosProtectionConfigResponse build() {
+        }        public SecurityPolicyDdosProtectionConfigResponse build() {
             return new SecurityPolicyDdosProtectionConfigResponse(ddosProtection);
         }
     }

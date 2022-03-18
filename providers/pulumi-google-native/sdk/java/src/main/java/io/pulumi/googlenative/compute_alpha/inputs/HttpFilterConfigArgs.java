@@ -94,32 +94,26 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable String config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder configTypeUrl(@Nullable Output<String> configTypeUrl) {
             this.configTypeUrl = configTypeUrl;
             return this;
         }
-
         public Builder configTypeUrl(@Nullable String configTypeUrl) {
             this.configTypeUrl = Output.ofNullable(configTypeUrl);
             return this;
         }
-
         public Builder filterName(@Nullable Output<String> filterName) {
             this.filterName = filterName;
             return this;
         }
-
         public Builder filterName(@Nullable String filterName) {
             this.filterName = Output.ofNullable(filterName);
             return this;
-        }
-        public HttpFilterConfigArgs build() {
+        }        public HttpFilterConfigArgs build() {
             return new HttpFilterConfigArgs(config, configTypeUrl, filterName);
         }
     }

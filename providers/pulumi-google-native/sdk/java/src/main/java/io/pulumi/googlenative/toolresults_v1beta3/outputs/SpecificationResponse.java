@@ -70,12 +70,10 @@ public final class SpecificationResponse {
             this.androidTest = Objects.requireNonNull(androidTest);
             return this;
         }
-
         public Builder iosTest(IosTestResponse iosTest) {
             this.iosTest = Objects.requireNonNull(iosTest);
             return this;
-        }
-        public SpecificationResponse build() {
+        }        public SpecificationResponse build() {
             return new SpecificationResponse(androidTest, iosTest);
         }
     }

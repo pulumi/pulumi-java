@@ -93,17 +93,14 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse ext
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder minDuration(String minDuration) {
             this.minDuration = Objects.requireNonNull(minDuration);
             return this;
         }
-
         public Builder trafficPercent(Integer trafficPercent) {
             this.trafficPercent = Objects.requireNonNull(trafficPercent);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse build() {
+        }        public GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse build() {
             return new GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse(displayName, minDuration, trafficPercent);
         }
     }

@@ -66,12 +66,10 @@ public final class GetOccurrenceIamPolicyArgs extends io.pulumi.resources.Invoke
             this.occurrenceId = Objects.requireNonNull(occurrenceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetOccurrenceIamPolicyArgs build() {
+        }        public GetOccurrenceIamPolicyArgs build() {
             return new GetOccurrenceIamPolicyArgs(occurrenceId, project);
         }
     }

@@ -69,12 +69,10 @@ public final class MysqlSourceConfigResponse {
             this.allowlist = Objects.requireNonNull(allowlist);
             return this;
         }
-
         public Builder rejectlist(MysqlRdbmsResponse rejectlist) {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
-        }
-        public MysqlSourceConfigResponse build() {
+        }        public MysqlSourceConfigResponse build() {
             return new MysqlSourceConfigResponse(allowlist, rejectlist);
         }
     }

@@ -129,52 +129,42 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
             this.authFailAction = authFailAction;
             return this;
         }
-
         public Builder authFailAction(@Nullable ApiConfigHandlerAuthFailAction authFailAction) {
             this.authFailAction = Output.ofNullable(authFailAction);
             return this;
         }
-
         public Builder login(@Nullable Output<ApiConfigHandlerLogin> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable ApiConfigHandlerLogin login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
         }
-
         public Builder securityLevel(@Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
-
         public Builder securityLevel(@Nullable ApiConfigHandlerSecurityLevel securityLevel) {
             this.securityLevel = Output.ofNullable(securityLevel);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public ApiConfigHandlerArgs build() {
+        }        public ApiConfigHandlerArgs build() {
             return new ApiConfigHandlerArgs(authFailAction, login, script, securityLevel, url);
         }
     }

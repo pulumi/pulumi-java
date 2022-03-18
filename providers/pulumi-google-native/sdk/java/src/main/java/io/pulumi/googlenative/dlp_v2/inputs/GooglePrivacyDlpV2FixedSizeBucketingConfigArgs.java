@@ -94,32 +94,26 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
-
         public Builder bucketSize(Double bucketSize) {
             this.bucketSize = Output.of(Objects.requireNonNull(bucketSize));
             return this;
         }
-
         public Builder lowerBound(Output<GooglePrivacyDlpV2ValueArgs> lowerBound) {
             this.lowerBound = Objects.requireNonNull(lowerBound);
             return this;
         }
-
         public Builder lowerBound(GooglePrivacyDlpV2ValueArgs lowerBound) {
             this.lowerBound = Output.of(Objects.requireNonNull(lowerBound));
             return this;
         }
-
         public Builder upperBound(Output<GooglePrivacyDlpV2ValueArgs> upperBound) {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
-
         public Builder upperBound(GooglePrivacyDlpV2ValueArgs upperBound) {
             this.upperBound = Output.of(Objects.requireNonNull(upperBound));
             return this;
-        }
-        public GooglePrivacyDlpV2FixedSizeBucketingConfigArgs build() {
+        }        public GooglePrivacyDlpV2FixedSizeBucketingConfigArgs build() {
             return new GooglePrivacyDlpV2FixedSizeBucketingConfigArgs(bucketSize, lowerBound, upperBound);
         }
     }

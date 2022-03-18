@@ -78,17 +78,14 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAgentArgs build() {
+        }        public GetAgentArgs build() {
             return new GetAgentArgs(agentId, location, project);
         }
     }

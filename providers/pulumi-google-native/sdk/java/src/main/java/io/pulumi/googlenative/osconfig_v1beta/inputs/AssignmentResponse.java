@@ -127,27 +127,37 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
             this.groupLabels = Objects.requireNonNull(groupLabels);
             return this;
         }
-
+        public Builder groupLabels(AssignmentGroupLabelResponse... groupLabels) {
+            return groupLabels(List.of(groupLabels));
+        }
         public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes);
             return this;
         }
-
+        public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
+            return instanceNamePrefixes(List.of(instanceNamePrefixes));
+        }
         public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder osTypes(List<AssignmentOsTypeResponse> osTypes) {
             this.osTypes = Objects.requireNonNull(osTypes);
             return this;
         }
-
+        public Builder osTypes(AssignmentOsTypeResponse... osTypes) {
+            return osTypes(List.of(osTypes));
+        }
         public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-        public AssignmentResponse build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public AssignmentResponse build() {
             return new AssignmentResponse(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
         }
     }

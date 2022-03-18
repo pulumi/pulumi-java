@@ -222,122 +222,101 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
-
         public Builder hl7V2StoreId(String hl7V2StoreId) {
             this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder messageType(@Nullable Output<String> messageType) {
             this.messageType = messageType;
             return this;
         }
-
         public Builder messageType(@Nullable String messageType) {
             this.messageType = Output.ofNullable(messageType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder patientIds(@Nullable Output<List<PatientIdArgs>> patientIds) {
             this.patientIds = patientIds;
             return this;
         }
-
         public Builder patientIds(@Nullable List<PatientIdArgs> patientIds) {
             this.patientIds = Output.ofNullable(patientIds);
             return this;
         }
-
+        public Builder patientIds(PatientIdArgs... patientIds) {
+            return patientIds(List.of(patientIds));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schematizedData(@Nullable Output<SchematizedDataArgs> schematizedData) {
             this.schematizedData = schematizedData;
             return this;
         }
-
         public Builder schematizedData(@Nullable SchematizedDataArgs schematizedData) {
             this.schematizedData = Output.ofNullable(schematizedData);
             return this;
         }
-
         public Builder sendFacility(@Nullable Output<String> sendFacility) {
             this.sendFacility = sendFacility;
             return this;
         }
-
         public Builder sendFacility(@Nullable String sendFacility) {
             this.sendFacility = Output.ofNullable(sendFacility);
             return this;
         }
-
         public Builder sendTime(@Nullable Output<String> sendTime) {
             this.sendTime = sendTime;
             return this;
         }
-
         public Builder sendTime(@Nullable String sendTime) {
             this.sendTime = Output.ofNullable(sendTime);
             return this;
-        }
-        public MessageArgs build() {
+        }        public MessageArgs build() {
             return new MessageArgs(data, datasetId, hl7V2StoreId, labels, location, messageType, name, patientIds, project, schematizedData, sendFacility, sendTime);
         }
     }

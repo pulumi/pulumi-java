@@ -120,27 +120,22 @@ public final class GetJobResult {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder metadata(ObjectMetaResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder spec(JobSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder status(JobStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(apiVersion, kind, metadata, spec, status);
         }
     }

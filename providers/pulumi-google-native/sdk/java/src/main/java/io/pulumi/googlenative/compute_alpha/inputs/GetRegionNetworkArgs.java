@@ -78,17 +78,14 @@ public final class GetRegionNetworkArgs extends io.pulumi.resources.InvokeArgs {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionNetworkArgs build() {
+        }        public GetRegionNetworkArgs build() {
             return new GetRegionNetworkArgs(network, project, region);
         }
     }

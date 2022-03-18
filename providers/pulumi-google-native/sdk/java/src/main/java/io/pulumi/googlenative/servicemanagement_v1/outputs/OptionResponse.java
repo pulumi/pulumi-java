@@ -70,12 +70,10 @@ public final class OptionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(Map<String,String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public OptionResponse build() {
+        }        public OptionResponse build() {
             return new OptionResponse(name, value);
         }
     }

@@ -77,12 +77,10 @@ public final class DurationResponse extends io.pulumi.resources.InvokeArgs {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public DurationResponse build() {
+        }        public DurationResponse build() {
             return new DurationResponse(nanos, seconds);
         }
     }

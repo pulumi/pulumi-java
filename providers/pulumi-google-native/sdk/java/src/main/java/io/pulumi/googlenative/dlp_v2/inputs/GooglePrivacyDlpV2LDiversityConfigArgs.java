@@ -79,22 +79,21 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
             this.quasiIds = quasiIds;
             return this;
         }
-
         public Builder quasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
             this.quasiIds = Output.ofNullable(quasiIds);
             return this;
         }
-
+        public Builder quasiIds(GooglePrivacyDlpV2FieldIdArgs... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }
         public Builder sensitiveAttribute(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
             this.sensitiveAttribute = sensitiveAttribute;
             return this;
         }
-
         public Builder sensitiveAttribute(@Nullable GooglePrivacyDlpV2FieldIdArgs sensitiveAttribute) {
             this.sensitiveAttribute = Output.ofNullable(sensitiveAttribute);
             return this;
-        }
-        public GooglePrivacyDlpV2LDiversityConfigArgs build() {
+        }        public GooglePrivacyDlpV2LDiversityConfigArgs build() {
             return new GooglePrivacyDlpV2LDiversityConfigArgs(quasiIds, sensitiveAttribute);
         }
     }

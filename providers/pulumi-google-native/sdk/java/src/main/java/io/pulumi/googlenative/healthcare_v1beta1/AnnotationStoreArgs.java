@@ -123,62 +123,50 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
             this.annotationStoreId = annotationStoreId;
             return this;
         }
-
         public Builder annotationStoreId(@Nullable String annotationStoreId) {
             this.annotationStoreId = Output.ofNullable(annotationStoreId);
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public AnnotationStoreArgs build() {
+        }        public AnnotationStoreArgs build() {
             return new AnnotationStoreArgs(annotationStoreId, datasetId, labels, location, name, project);
         }
     }

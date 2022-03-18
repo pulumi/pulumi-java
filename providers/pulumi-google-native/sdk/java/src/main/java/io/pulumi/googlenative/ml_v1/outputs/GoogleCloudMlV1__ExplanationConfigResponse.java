@@ -87,17 +87,14 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
             this.integratedGradientsAttribution = Objects.requireNonNull(integratedGradientsAttribution);
             return this;
         }
-
         public Builder sampledShapleyAttribution(GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution) {
             this.sampledShapleyAttribution = Objects.requireNonNull(sampledShapleyAttribution);
             return this;
         }
-
         public Builder xraiAttribution(GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
             this.xraiAttribution = Objects.requireNonNull(xraiAttribution);
             return this;
-        }
-        public GoogleCloudMlV1__ExplanationConfigResponse build() {
+        }        public GoogleCloudMlV1__ExplanationConfigResponse build() {
             return new GoogleCloudMlV1__ExplanationConfigResponse(integratedGradientsAttribution, sampledShapleyAttribution, xraiAttribution);
         }
     }

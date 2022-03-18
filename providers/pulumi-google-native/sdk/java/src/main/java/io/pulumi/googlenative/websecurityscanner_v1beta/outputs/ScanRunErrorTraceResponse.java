@@ -87,17 +87,14 @@ public final class ScanRunErrorTraceResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder mostCommonHttpErrorCode(Integer mostCommonHttpErrorCode) {
             this.mostCommonHttpErrorCode = Objects.requireNonNull(mostCommonHttpErrorCode);
             return this;
         }
-
         public Builder scanConfigError(ScanConfigErrorResponse scanConfigError) {
             this.scanConfigError = Objects.requireNonNull(scanConfigError);
             return this;
-        }
-        public ScanRunErrorTraceResponse build() {
+        }        public ScanRunErrorTraceResponse build() {
             return new ScanRunErrorTraceResponse(code, mostCommonHttpErrorCode, scanConfigError);
         }
     }

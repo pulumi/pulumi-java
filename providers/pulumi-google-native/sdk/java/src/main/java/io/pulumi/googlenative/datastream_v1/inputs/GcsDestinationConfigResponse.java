@@ -127,27 +127,22 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
             this.avroFileFormat = Objects.requireNonNull(avroFileFormat);
             return this;
         }
-
         public Builder fileRotationInterval(String fileRotationInterval) {
             this.fileRotationInterval = Objects.requireNonNull(fileRotationInterval);
             return this;
         }
-
         public Builder fileRotationMb(Integer fileRotationMb) {
             this.fileRotationMb = Objects.requireNonNull(fileRotationMb);
             return this;
         }
-
         public Builder jsonFileFormat(JsonFileFormatResponse jsonFileFormat) {
             this.jsonFileFormat = Objects.requireNonNull(jsonFileFormat);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public GcsDestinationConfigResponse build() {
+        }        public GcsDestinationConfigResponse build() {
             return new GcsDestinationConfigResponse(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
         }
     }

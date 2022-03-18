@@ -113,42 +113,34 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
             this.apt = apt;
             return this;
         }
-
         public Builder apt(@Nullable AptRepositoryArgs apt) {
             this.apt = Output.ofNullable(apt);
             return this;
         }
-
         public Builder goo(@Nullable Output<GooRepositoryArgs> goo) {
             this.goo = goo;
             return this;
         }
-
         public Builder goo(@Nullable GooRepositoryArgs goo) {
             this.goo = Output.ofNullable(goo);
             return this;
         }
-
         public Builder yum(@Nullable Output<YumRepositoryArgs> yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder yum(@Nullable YumRepositoryArgs yum) {
             this.yum = Output.ofNullable(yum);
             return this;
         }
-
         public Builder zypper(@Nullable Output<ZypperRepositoryArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
-
         public Builder zypper(@Nullable ZypperRepositoryArgs zypper) {
             this.zypper = Output.ofNullable(zypper);
             return this;
-        }
-        public PackageRepositoryArgs build() {
+        }        public PackageRepositoryArgs build() {
             return new PackageRepositoryArgs(apt, goo, yum, zypper);
         }
     }

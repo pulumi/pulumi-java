@@ -71,12 +71,16 @@ public final class QuotaResponse {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
-
+        public Builder limits(QuotaLimitResponse... limits) {
+            return limits(List.of(limits));
+        }
         public Builder metricRules(List<MetricRuleResponse> metricRules) {
             this.metricRules = Objects.requireNonNull(metricRules);
             return this;
         }
-        public QuotaResponse build() {
+        public Builder metricRules(MetricRuleResponse... metricRules) {
+            return metricRules(List.of(metricRules));
+        }        public QuotaResponse build() {
             return new QuotaResponse(limits, metricRules);
         }
     }

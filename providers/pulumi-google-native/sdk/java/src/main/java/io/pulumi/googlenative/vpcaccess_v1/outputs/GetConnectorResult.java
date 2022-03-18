@@ -216,57 +216,49 @@ public final class GetConnectorResult {
             this.connectedProjects = Objects.requireNonNull(connectedProjects);
             return this;
         }
-
+        public Builder connectedProjects(String... connectedProjects) {
+            return connectedProjects(List.of(connectedProjects));
+        }
         public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public Builder maxThroughput(Integer maxThroughput) {
             this.maxThroughput = Objects.requireNonNull(maxThroughput);
             return this;
         }
-
         public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
-
         public Builder minThroughput(Integer minThroughput) {
             this.minThroughput = Objects.requireNonNull(minThroughput);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder subnet(SubnetResponse subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
-        }
-        public GetConnectorResult build() {
+        }        public GetConnectorResult build() {
             return new GetConnectorResult(connectedProjects, ipCidrRange, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, state, subnet);
         }
     }

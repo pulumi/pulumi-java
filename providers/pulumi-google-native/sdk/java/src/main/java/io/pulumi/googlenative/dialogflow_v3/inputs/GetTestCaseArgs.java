@@ -90,22 +90,18 @@ public final class GetTestCaseArgs extends io.pulumi.resources.InvokeArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder testCaseId(String testCaseId) {
             this.testCaseId = Objects.requireNonNull(testCaseId);
             return this;
-        }
-        public GetTestCaseArgs build() {
+        }        public GetTestCaseArgs build() {
             return new GetTestCaseArgs(agentId, location, project, testCaseId);
         }
     }

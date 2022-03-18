@@ -79,22 +79,21 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable List<String> logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
+        public Builder logs(String... logs) {
+            return logs(List.of(logs));
+        }
         public Builder monitoredResource(@Nullable Output<String> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
-
         public Builder monitoredResource(@Nullable String monitoredResource) {
             this.monitoredResource = Output.ofNullable(monitoredResource);
             return this;
-        }
-        public LoggingDestinationArgs build() {
+        }        public LoggingDestinationArgs build() {
             return new LoggingDestinationArgs(logs, monitoredResource);
         }
     }

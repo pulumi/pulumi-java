@@ -78,22 +78,18 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public AllowedIpRangeArgs build() {
+        }        public AllowedIpRangeArgs build() {
             return new AllowedIpRangeArgs(description, value);
         }
     }

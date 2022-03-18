@@ -58,12 +58,13 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<TableFieldSchemaArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-        public TableSchemaArgs build() {
+        public Builder fields(TableFieldSchemaArgs... fields) {
+            return fields(List.of(fields));
+        }        public TableSchemaArgs build() {
             return new TableSchemaArgs(fields);
         }
     }

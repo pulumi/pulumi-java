@@ -61,12 +61,13 @@ public final class SubordinateConfigChainArgs extends io.pulumi.resources.Resour
             this.pemCertificates = Objects.requireNonNull(pemCertificates);
             return this;
         }
-
         public Builder pemCertificates(List<String> pemCertificates) {
             this.pemCertificates = Output.of(Objects.requireNonNull(pemCertificates));
             return this;
         }
-        public SubordinateConfigChainArgs build() {
+        public Builder pemCertificates(String... pemCertificates) {
+            return pemCertificates(List.of(pemCertificates));
+        }        public SubordinateConfigChainArgs build() {
             return new SubordinateConfigChainArgs(pemCertificates);
         }
     }

@@ -71,12 +71,13 @@ public final class GooglePrivacyDlpV2ErrorResponse {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder timestamps(List<String> timestamps) {
             this.timestamps = Objects.requireNonNull(timestamps);
             return this;
         }
-        public GooglePrivacyDlpV2ErrorResponse build() {
+        public Builder timestamps(String... timestamps) {
+            return timestamps(List.of(timestamps));
+        }        public GooglePrivacyDlpV2ErrorResponse build() {
             return new GooglePrivacyDlpV2ErrorResponse(details, timestamps);
         }
     }

@@ -53,7 +53,9 @@ public final class V2ServerKeyRestrictionsResponse {
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }
-        public V2ServerKeyRestrictionsResponse build() {
+        public Builder allowedIps(String... allowedIps) {
+            return allowedIps(List.of(allowedIps));
+        }        public V2ServerKeyRestrictionsResponse build() {
             return new V2ServerKeyRestrictionsResponse(allowedIps);
         }
     }

@@ -77,12 +77,10 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse extends io.p
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder versionVariants(GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3VariantsHistoryResponse build() {
+        }        public GoogleCloudDialogflowCxV3VariantsHistoryResponse build() {
             return new GoogleCloudDialogflowCxV3VariantsHistoryResponse(updateTime, versionVariants);
         }
     }

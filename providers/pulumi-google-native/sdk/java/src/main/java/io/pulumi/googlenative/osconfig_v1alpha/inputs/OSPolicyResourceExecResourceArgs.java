@@ -78,22 +78,18 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
             this.enforce = enforce;
             return this;
         }
-
         public Builder enforce(@Nullable OSPolicyResourceExecResourceExecArgs enforce) {
             this.enforce = Output.ofNullable(enforce);
             return this;
         }
-
         public Builder validate(Output<OSPolicyResourceExecResourceExecArgs> validate) {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }
-
         public Builder validate(OSPolicyResourceExecResourceExecArgs validate) {
             this.validate = Output.of(Objects.requireNonNull(validate));
             return this;
-        }
-        public OSPolicyResourceExecResourceArgs build() {
+        }        public OSPolicyResourceExecResourceArgs build() {
             return new OSPolicyResourceExecResourceArgs(enforce, validate);
         }
     }

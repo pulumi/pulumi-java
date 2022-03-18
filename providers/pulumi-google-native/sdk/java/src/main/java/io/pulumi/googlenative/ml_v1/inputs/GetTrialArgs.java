@@ -90,22 +90,18 @@ public final class GetTrialArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder studyId(String studyId) {
             this.studyId = Objects.requireNonNull(studyId);
             return this;
         }
-
         public Builder trialId(String trialId) {
             this.trialId = Objects.requireNonNull(trialId);
             return this;
-        }
-        public GetTrialArgs build() {
+        }        public GetTrialArgs build() {
             return new GetTrialArgs(location, project, studyId, trialId);
         }
     }

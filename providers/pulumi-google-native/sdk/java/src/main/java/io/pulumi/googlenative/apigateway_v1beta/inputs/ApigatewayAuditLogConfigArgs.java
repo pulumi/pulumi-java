@@ -80,22 +80,21 @@ public final class ApigatewayAuditLogConfigArgs extends io.pulumi.resources.Reso
             this.exemptedMembers = exemptedMembers;
             return this;
         }
-
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
             this.exemptedMembers = Output.ofNullable(exemptedMembers);
             return this;
         }
-
+        public Builder exemptedMembers(String... exemptedMembers) {
+            return exemptedMembers(List.of(exemptedMembers));
+        }
         public Builder logType(@Nullable Output<ApigatewayAuditLogConfigLogType> logType) {
             this.logType = logType;
             return this;
         }
-
         public Builder logType(@Nullable ApigatewayAuditLogConfigLogType logType) {
             this.logType = Output.ofNullable(logType);
             return this;
-        }
-        public ApigatewayAuditLogConfigArgs build() {
+        }        public ApigatewayAuditLogConfigArgs build() {
             return new ApigatewayAuditLogConfigArgs(exemptedMembers, logType);
         }
     }

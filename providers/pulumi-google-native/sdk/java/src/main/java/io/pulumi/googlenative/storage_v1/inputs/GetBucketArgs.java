@@ -114,32 +114,26 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
             this.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
-
         public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
-
         public Builder projection(@Nullable String projection) {
             this.projection = projection;
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetBucketArgs build() {
+        }        public GetBucketArgs build() {
             return new GetBucketArgs(bucket, ifMetagenerationMatch, ifMetagenerationNotMatch, projection, provisionalUserProject, userProject);
         }
     }

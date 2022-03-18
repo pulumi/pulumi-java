@@ -92,32 +92,29 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.columnFamilies = columnFamilies;
             return this;
         }
-
         public Builder columnFamilies(@Nullable List<BigtableColumnFamilyArgs> columnFamilies) {
             this.columnFamilies = Output.ofNullable(columnFamilies);
             return this;
         }
-
+        public Builder columnFamilies(BigtableColumnFamilyArgs... columnFamilies) {
+            return columnFamilies(List.of(columnFamilies));
+        }
         public Builder ignoreUnspecifiedColumnFamilies(@Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies) {
             this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
             return this;
         }
-
         public Builder ignoreUnspecifiedColumnFamilies(@Nullable Boolean ignoreUnspecifiedColumnFamilies) {
             this.ignoreUnspecifiedColumnFamilies = Output.ofNullable(ignoreUnspecifiedColumnFamilies);
             return this;
         }
-
         public Builder readRowkeyAsString(@Nullable Output<Boolean> readRowkeyAsString) {
             this.readRowkeyAsString = readRowkeyAsString;
             return this;
         }
-
         public Builder readRowkeyAsString(@Nullable Boolean readRowkeyAsString) {
             this.readRowkeyAsString = Output.ofNullable(readRowkeyAsString);
             return this;
-        }
-        public BigtableOptionsArgs build() {
+        }        public BigtableOptionsArgs build() {
             return new BigtableOptionsArgs(columnFamilies, ignoreUnspecifiedColumnFamilies, readRowkeyAsString);
         }
     }

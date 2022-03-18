@@ -95,32 +95,26 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder oauth2ClientId(@Nullable Output<String> oauth2ClientId) {
             this.oauth2ClientId = oauth2ClientId;
             return this;
         }
-
         public Builder oauth2ClientId(@Nullable String oauth2ClientId) {
             this.oauth2ClientId = Output.ofNullable(oauth2ClientId);
             return this;
         }
-
         public Builder oauth2ClientSecret(@Nullable Output<String> oauth2ClientSecret) {
             this.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
-
         public Builder oauth2ClientSecret(@Nullable String oauth2ClientSecret) {
             this.oauth2ClientSecret = Output.ofNullable(oauth2ClientSecret);
             return this;
-        }
-        public IdentityAwareProxyArgs build() {
+        }        public IdentityAwareProxyArgs build() {
             return new IdentityAwareProxyArgs(enabled, oauth2ClientId, oauth2ClientSecret);
         }
     }

@@ -146,72 +146,58 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
             this.control = Objects.requireNonNull(control);
             return this;
         }
-
         public Builder control(String control) {
             this.control = Output.of(Objects.requireNonNull(control));
             return this;
         }
-
         public Builder endTime(Output<String> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Output.of(Objects.requireNonNull(endTime));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder metricLabels(Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels) {
             this.metricLabels = Objects.requireNonNull(metricLabels);
             return this;
         }
-
         public Builder metricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs metricLabels) {
             this.metricLabels = Output.of(Objects.requireNonNull(metricLabels));
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public Builder treatment(Output<String> treatment) {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }
-
         public Builder treatment(String treatment) {
             this.treatment = Output.of(Objects.requireNonNull(treatment));
             return this;
-        }
-        public CanaryEvaluationArgs build() {
+        }        public CanaryEvaluationArgs build() {
             return new CanaryEvaluationArgs(control, endTime, instanceId, metricLabels, organizationId, startTime, treatment);
         }
     }

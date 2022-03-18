@@ -69,12 +69,10 @@ public final class ObjectAccessControlProjectTeamResponse {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }
-
         public Builder team(String team) {
             this.team = Objects.requireNonNull(team);
             return this;
-        }
-        public ObjectAccessControlProjectTeamResponse build() {
+        }        public ObjectAccessControlProjectTeamResponse build() {
             return new ObjectAccessControlProjectTeamResponse(projectNumber, team);
         }
     }

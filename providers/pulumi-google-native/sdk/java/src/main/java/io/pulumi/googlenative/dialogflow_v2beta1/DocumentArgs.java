@@ -238,132 +238,109 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentUri(@Nullable Output<String> contentUri) {
             this.contentUri = contentUri;
             return this;
         }
-
         public Builder contentUri(@Nullable String contentUri) {
             this.contentUri = Output.ofNullable(contentUri);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enableAutoReload(@Nullable Output<Boolean> enableAutoReload) {
             this.enableAutoReload = enableAutoReload;
             return this;
         }
-
         public Builder enableAutoReload(@Nullable Boolean enableAutoReload) {
             this.enableAutoReload = Output.ofNullable(enableAutoReload);
             return this;
         }
-
         public Builder importGcsCustomMetadata(@Nullable Output<String> importGcsCustomMetadata) {
             this.importGcsCustomMetadata = importGcsCustomMetadata;
             return this;
         }
-
         public Builder importGcsCustomMetadata(@Nullable String importGcsCustomMetadata) {
             this.importGcsCustomMetadata = Output.ofNullable(importGcsCustomMetadata);
             return this;
         }
-
         public Builder knowledgeBaseId(Output<String> knowledgeBaseId) {
             this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
             return this;
         }
-
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = Output.of(Objects.requireNonNull(knowledgeBaseId));
             return this;
         }
-
         public Builder knowledgeTypes(Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes) {
             this.knowledgeTypes = Objects.requireNonNull(knowledgeTypes);
             return this;
         }
-
         public Builder knowledgeTypes(List<DocumentKnowledgeTypesItem> knowledgeTypes) {
             this.knowledgeTypes = Output.of(Objects.requireNonNull(knowledgeTypes));
             return this;
         }
-
+        public Builder knowledgeTypes(DocumentKnowledgeTypesItem... knowledgeTypes) {
+            return knowledgeTypes(List.of(knowledgeTypes));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder mimeType(Output<String> mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public Builder mimeType(String mimeType) {
             this.mimeType = Output.of(Objects.requireNonNull(mimeType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rawContent(@Nullable Output<String> rawContent) {
             this.rawContent = rawContent;
             return this;
         }
-
         public Builder rawContent(@Nullable String rawContent) {
             this.rawContent = Output.ofNullable(rawContent);
             return this;
-        }
-        public DocumentArgs build() {
+        }        public DocumentArgs build() {
             return new DocumentArgs(content, contentUri, displayName, enableAutoReload, importGcsCustomMetadata, knowledgeBaseId, knowledgeTypes, location, metadata, mimeType, name, project, rawContent);
         }
     }

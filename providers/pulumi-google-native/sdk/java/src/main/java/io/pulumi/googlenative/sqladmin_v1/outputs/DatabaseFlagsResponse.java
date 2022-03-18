@@ -69,12 +69,10 @@ public final class DatabaseFlagsResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DatabaseFlagsResponse build() {
+        }        public DatabaseFlagsResponse build() {
             return new DatabaseFlagsResponse(name, value);
         }
     }

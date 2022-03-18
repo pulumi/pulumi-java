@@ -70,12 +70,10 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder versionVariants(GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse build() {
             return new GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(updateTime, versionVariants);
         }
     }

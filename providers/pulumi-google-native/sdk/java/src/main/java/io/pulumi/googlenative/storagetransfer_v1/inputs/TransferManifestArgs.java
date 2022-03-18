@@ -61,12 +61,10 @@ public final class TransferManifestArgs extends io.pulumi.resources.ResourceArgs
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
-        }
-        public TransferManifestArgs build() {
+        }        public TransferManifestArgs build() {
             return new TransferManifestArgs(location);
         }
     }

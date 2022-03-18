@@ -58,8 +58,7 @@ public final class DebugOptionsResponse extends io.pulumi.resources.InvokeArgs {
         public Builder enableHotKeyLogging(Boolean enableHotKeyLogging) {
             this.enableHotKeyLogging = Objects.requireNonNull(enableHotKeyLogging);
             return this;
-        }
-        public DebugOptionsResponse build() {
+        }        public DebugOptionsResponse build() {
             return new DebugOptionsResponse(enableHotKeyLogging);
         }
     }

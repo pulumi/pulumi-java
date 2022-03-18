@@ -92,32 +92,29 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
             this.arrayType = arrayType;
             return this;
         }
-
         public Builder arrayType(@Nullable QueryParameterTypeArgs arrayType) {
             this.arrayType = Output.ofNullable(arrayType);
             return this;
         }
-
         public Builder structTypes(@Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes) {
             this.structTypes = structTypes;
             return this;
         }
-
         public Builder structTypes(@Nullable List<QueryParameterTypeStructTypesItemArgs> structTypes) {
             this.structTypes = Output.ofNullable(structTypes);
             return this;
         }
-
+        public Builder structTypes(QueryParameterTypeStructTypesItemArgs... structTypes) {
+            return structTypes(List.of(structTypes));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public QueryParameterTypeArgs build() {
+        }        public QueryParameterTypeArgs build() {
             return new QueryParameterTypeArgs(arrayType, structTypes, type);
         }
     }

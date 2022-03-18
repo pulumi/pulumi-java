@@ -60,7 +60,9 @@ public final class GoogleCloudDialogflowCxV3beta1FormResponse extends io.pulumi.
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1FormResponse build() {
+        public Builder parameters(GoogleCloudDialogflowCxV3beta1FormParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }        public GoogleCloudDialogflowCxV3beta1FormResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FormResponse(parameters);
         }
     }

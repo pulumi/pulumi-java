@@ -114,42 +114,37 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
             this.allowWithoutCredential = allowWithoutCredential;
             return this;
         }
-
         public Builder allowWithoutCredential(@Nullable Boolean allowWithoutCredential) {
             this.allowWithoutCredential = Output.ofNullable(allowWithoutCredential);
             return this;
         }
-
         public Builder oauth(@Nullable Output<OAuthRequirementsArgs> oauth) {
             this.oauth = oauth;
             return this;
         }
-
         public Builder oauth(@Nullable OAuthRequirementsArgs oauth) {
             this.oauth = Output.ofNullable(oauth);
             return this;
         }
-
         public Builder requirements(@Nullable Output<List<AuthRequirementArgs>> requirements) {
             this.requirements = requirements;
             return this;
         }
-
         public Builder requirements(@Nullable List<AuthRequirementArgs> requirements) {
             this.requirements = Output.ofNullable(requirements);
             return this;
         }
-
+        public Builder requirements(AuthRequirementArgs... requirements) {
+            return requirements(List.of(requirements));
+        }
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public AuthenticationRuleArgs build() {
+        }        public AuthenticationRuleArgs build() {
             return new AuthenticationRuleArgs(allowWithoutCredential, oauth, requirements, selector);
         }
     }

@@ -80,22 +80,21 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
             this.failOpen = failOpen;
             return this;
         }
-
         public Builder failOpen(@Nullable Boolean failOpen) {
             this.failOpen = Output.ofNullable(failOpen);
             return this;
         }
-
         public Builder preSharedKeys(Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys) {
             this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
             return this;
         }
-
         public Builder preSharedKeys(List<InterconnectMacsecPreSharedKeyArgs> preSharedKeys) {
             this.preSharedKeys = Output.of(Objects.requireNonNull(preSharedKeys));
             return this;
         }
-        public InterconnectMacsecArgs build() {
+        public Builder preSharedKeys(InterconnectMacsecPreSharedKeyArgs... preSharedKeys) {
+            return preSharedKeys(List.of(preSharedKeys));
+        }        public InterconnectMacsecArgs build() {
             return new InterconnectMacsecArgs(failOpen, preSharedKeys);
         }
     }

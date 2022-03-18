@@ -185,47 +185,41 @@ public final class GetDocumentResult {
             this.contentUri = Objects.requireNonNull(contentUri);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enableAutoReload(Boolean enableAutoReload) {
             this.enableAutoReload = Objects.requireNonNull(enableAutoReload);
             return this;
         }
-
         public Builder knowledgeTypes(List<String> knowledgeTypes) {
             this.knowledgeTypes = Objects.requireNonNull(knowledgeTypes);
             return this;
         }
-
+        public Builder knowledgeTypes(String... knowledgeTypes) {
+            return knowledgeTypes(List.of(knowledgeTypes));
+        }
         public Builder latestReloadStatus(GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus) {
             this.latestReloadStatus = Objects.requireNonNull(latestReloadStatus);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rawContent(String rawContent) {
             this.rawContent = Objects.requireNonNull(rawContent);
             return this;
-        }
-        public GetDocumentResult build() {
+        }        public GetDocumentResult build() {
             return new GetDocumentResult(contentUri, displayName, enableAutoReload, knowledgeTypes, latestReloadStatus, metadata, mimeType, name, rawContent);
         }
     }

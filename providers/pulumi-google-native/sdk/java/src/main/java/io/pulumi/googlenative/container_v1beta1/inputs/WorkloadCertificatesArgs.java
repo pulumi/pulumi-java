@@ -61,12 +61,10 @@ public final class WorkloadCertificatesArgs extends io.pulumi.resources.Resource
             this.enableCertificates = enableCertificates;
             return this;
         }
-
         public Builder enableCertificates(@Nullable Boolean enableCertificates) {
             this.enableCertificates = Output.ofNullable(enableCertificates);
             return this;
-        }
-        public WorkloadCertificatesArgs build() {
+        }        public WorkloadCertificatesArgs build() {
             return new WorkloadCertificatesArgs(enableCertificates);
         }
     }

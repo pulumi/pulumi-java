@@ -58,8 +58,7 @@ public final class CloudEndpointsResponse extends io.pulumi.resources.InvokeArgs
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public CloudEndpointsResponse build() {
+        }        public CloudEndpointsResponse build() {
             return new CloudEndpointsResponse(service);
         }
     }

@@ -86,17 +86,17 @@ public final class PageResponse {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder subpages(List<PageResponse> subpages) {
             this.subpages = Objects.requireNonNull(subpages);
             return this;
         }
-        public PageResponse build() {
+        public Builder subpages(PageResponse... subpages) {
+            return subpages(List.of(subpages));
+        }        public PageResponse build() {
             return new PageResponse(content, name, subpages);
         }
     }

@@ -70,12 +70,10 @@ public final class AuthenticatorGroupsConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder securityGroup(String securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
-        }
-        public AuthenticatorGroupsConfigResponse build() {
+        }        public AuthenticatorGroupsConfigResponse build() {
             return new AuthenticatorGroupsConfigResponse(enabled, securityGroup);
         }
     }

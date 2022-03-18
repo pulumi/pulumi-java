@@ -60,7 +60,9 @@ public final class QueryListResponse extends io.pulumi.resources.InvokeArgs {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-        public QueryListResponse build() {
+        public Builder queries(String... queries) {
+            return queries(List.of(queries));
+        }        public QueryListResponse build() {
             return new QueryListResponse(queries);
         }
     }

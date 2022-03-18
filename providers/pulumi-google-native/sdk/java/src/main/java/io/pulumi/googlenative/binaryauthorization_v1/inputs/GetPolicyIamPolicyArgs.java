@@ -66,12 +66,10 @@ public final class GetPolicyIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPolicyIamPolicyArgs build() {
+        }        public GetPolicyIamPolicyArgs build() {
             return new GetPolicyIamPolicyArgs(optionsRequestedPolicyVersion, project);
         }
     }

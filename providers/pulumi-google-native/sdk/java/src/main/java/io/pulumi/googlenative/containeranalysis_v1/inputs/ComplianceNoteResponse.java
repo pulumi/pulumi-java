@@ -151,37 +151,33 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
             this.cisBenchmark = Objects.requireNonNull(cisBenchmark);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder rationale(String rationale) {
             this.rationale = Objects.requireNonNull(rationale);
             return this;
         }
-
         public Builder remediation(String remediation) {
             this.remediation = Objects.requireNonNull(remediation);
             return this;
         }
-
         public Builder scanInstructions(String scanInstructions) {
             this.scanInstructions = Objects.requireNonNull(scanInstructions);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder version(List<ComplianceVersionResponse> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-        public ComplianceNoteResponse build() {
+        public Builder version(ComplianceVersionResponse... version) {
+            return version(List.of(version));
+        }        public ComplianceNoteResponse build() {
             return new ComplianceNoteResponse(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
         }
     }

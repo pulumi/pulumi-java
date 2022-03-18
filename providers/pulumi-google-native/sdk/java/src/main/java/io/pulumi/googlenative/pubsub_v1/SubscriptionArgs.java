@@ -281,152 +281,122 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
-
         public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
             this.ackDeadlineSeconds = Output.ofNullable(ackDeadlineSeconds);
             return this;
         }
-
         public Builder deadLetterPolicy(@Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy) {
             this.deadLetterPolicy = deadLetterPolicy;
             return this;
         }
-
         public Builder deadLetterPolicy(@Nullable DeadLetterPolicyArgs deadLetterPolicy) {
             this.deadLetterPolicy = Output.ofNullable(deadLetterPolicy);
             return this;
         }
-
         public Builder detached(@Nullable Output<Boolean> detached) {
             this.detached = detached;
             return this;
         }
-
         public Builder detached(@Nullable Boolean detached) {
             this.detached = Output.ofNullable(detached);
             return this;
         }
-
         public Builder enableMessageOrdering(@Nullable Output<Boolean> enableMessageOrdering) {
             this.enableMessageOrdering = enableMessageOrdering;
             return this;
         }
-
         public Builder enableMessageOrdering(@Nullable Boolean enableMessageOrdering) {
             this.enableMessageOrdering = Output.ofNullable(enableMessageOrdering);
             return this;
         }
-
         public Builder expirationPolicy(@Nullable Output<ExpirationPolicyArgs> expirationPolicy) {
             this.expirationPolicy = expirationPolicy;
             return this;
         }
-
         public Builder expirationPolicy(@Nullable ExpirationPolicyArgs expirationPolicy) {
             this.expirationPolicy = Output.ofNullable(expirationPolicy);
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
             this.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
-
         public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
             this.messageRetentionDuration = Output.ofNullable(messageRetentionDuration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
             this.pushConfig = pushConfig;
             return this;
         }
-
         public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
             this.pushConfig = Output.ofNullable(pushConfig);
             return this;
         }
-
         public Builder retainAckedMessages(@Nullable Output<Boolean> retainAckedMessages) {
             this.retainAckedMessages = retainAckedMessages;
             return this;
         }
-
         public Builder retainAckedMessages(@Nullable Boolean retainAckedMessages) {
             this.retainAckedMessages = Output.ofNullable(retainAckedMessages);
             return this;
         }
-
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
             this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
-
         public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public SubscriptionArgs build() {
+        }        public SubscriptionArgs build() {
             return new SubscriptionArgs(ackDeadlineSeconds, deadLetterPolicy, detached, enableMessageOrdering, expirationPolicy, filter, labels, messageRetentionDuration, name, project, pushConfig, retainAckedMessages, retryPolicy, subscriptionId, topic);
         }
     }

@@ -53,7 +53,9 @@ public final class BucketLifecycleResponse {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-        public BucketLifecycleResponse build() {
+        public Builder rule(BucketLifecycleRuleItemResponse... rule) {
+            return rule(List.of(rule));
+        }        public BucketLifecycleResponse build() {
             return new BucketLifecycleResponse(rule);
         }
     }

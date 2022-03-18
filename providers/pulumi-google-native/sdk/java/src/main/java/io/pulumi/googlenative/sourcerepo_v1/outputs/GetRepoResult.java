@@ -119,27 +119,22 @@ public final class GetRepoResult {
             this.mirrorConfig = Objects.requireNonNull(mirrorConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pubsubConfigs(Map<String,String> pubsubConfigs) {
             this.pubsubConfigs = Objects.requireNonNull(pubsubConfigs);
             return this;
         }
-
         public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GetRepoResult build() {
+        }        public GetRepoResult build() {
             return new GetRepoResult(mirrorConfig, name, pubsubConfigs, size, url);
         }
     }

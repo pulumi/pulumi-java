@@ -260,142 +260,114 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder addressType(@Nullable Output<AddressAddressType> addressType) {
             this.addressType = addressType;
             return this;
         }
-
         public Builder addressType(@Nullable AddressAddressType addressType) {
             this.addressType = Output.ofNullable(addressType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipVersion(@Nullable Output<AddressIpVersion> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
-
         public Builder ipVersion(@Nullable AddressIpVersion ipVersion) {
             this.ipVersion = Output.ofNullable(ipVersion);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkTier(@Nullable Output<AddressNetworkTier> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
-
         public Builder networkTier(@Nullable AddressNetworkTier networkTier) {
             this.networkTier = Output.ofNullable(networkTier);
             return this;
         }
-
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
-
         public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = Output.ofNullable(prefixLength);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder purpose(@Nullable Output<AddressPurpose> purpose) {
             this.purpose = purpose;
             return this;
         }
-
         public Builder purpose(@Nullable AddressPurpose purpose) {
             this.purpose = Output.ofNullable(purpose);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
-        }
-        public AddressArgs build() {
+        }        public AddressArgs build() {
             return new AddressArgs(address, addressType, description, ipVersion, labels, name, network, networkTier, prefixLength, project, purpose, region, requestId, subnetwork);
         }
     }

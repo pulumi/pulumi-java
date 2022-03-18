@@ -108,42 +108,34 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
-
         public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
             this.ackDeadlineSeconds = Output.ofNullable(ackDeadlineSeconds);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
             this.pushConfig = pushConfig;
             return this;
         }
-
         public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
             this.pushConfig = Output.ofNullable(pushConfig);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public SubscriptionArgs build() {
+        }        public SubscriptionArgs build() {
             return new SubscriptionArgs(ackDeadlineSeconds, name, pushConfig, topic);
         }
     }

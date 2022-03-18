@@ -51,8 +51,7 @@ public final class AttestationAuthorityHintResponse {
         public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
-        }
-        public AttestationAuthorityHintResponse build() {
+        }        public AttestationAuthorityHintResponse build() {
             return new AttestationAuthorityHintResponse(humanReadableName);
         }
     }

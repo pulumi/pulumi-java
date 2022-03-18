@@ -94,17 +94,14 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder oidcToken(OidcTokenResponse oidcToken) {
             this.oidcToken = Objects.requireNonNull(oidcToken);
             return this;
         }
-
         public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
-        }
-        public PushConfigResponse build() {
+        }        public PushConfigResponse build() {
             return new PushConfigResponse(attributes, oidcToken, pushEndpoint);
         }
     }

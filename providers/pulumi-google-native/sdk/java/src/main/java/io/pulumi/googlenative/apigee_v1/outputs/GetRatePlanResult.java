@@ -330,92 +330,80 @@ public final class GetRatePlanResult {
             this.apiproduct = Objects.requireNonNull(apiproduct);
             return this;
         }
-
         public Builder billingPeriod(String billingPeriod) {
             this.billingPeriod = Objects.requireNonNull(billingPeriod);
             return this;
         }
-
         public Builder consumptionPricingRates(List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates) {
             this.consumptionPricingRates = Objects.requireNonNull(consumptionPricingRates);
             return this;
         }
-
+        public Builder consumptionPricingRates(GoogleCloudApigeeV1RateRangeResponse... consumptionPricingRates) {
+            return consumptionPricingRates(List.of(consumptionPricingRates));
+        }
         public Builder consumptionPricingType(String consumptionPricingType) {
             this.consumptionPricingType = Objects.requireNonNull(consumptionPricingType);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder currencyCode(String currencyCode) {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder fixedFeeFrequency(Integer fixedFeeFrequency) {
             this.fixedFeeFrequency = Objects.requireNonNull(fixedFeeFrequency);
             return this;
         }
-
         public Builder fixedRecurringFee(GoogleTypeMoneyResponse fixedRecurringFee) {
             this.fixedRecurringFee = Objects.requireNonNull(fixedRecurringFee);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder revenueShareRates(List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates) {
             this.revenueShareRates = Objects.requireNonNull(revenueShareRates);
             return this;
         }
-
+        public Builder revenueShareRates(GoogleCloudApigeeV1RevenueShareRangeResponse... revenueShareRates) {
+            return revenueShareRates(List.of(revenueShareRates));
+        }
         public Builder revenueShareType(String revenueShareType) {
             this.revenueShareType = Objects.requireNonNull(revenueShareType);
             return this;
         }
-
         public Builder setupFee(GoogleTypeMoneyResponse setupFee) {
             this.setupFee = Objects.requireNonNull(setupFee);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetRatePlanResult build() {
+        }        public GetRatePlanResult build() {
             return new GetRatePlanResult(apiproduct, billingPeriod, consumptionPricingRates, consumptionPricingType, createdAt, currencyCode, description, displayName, endTime, fixedFeeFrequency, fixedRecurringFee, lastModifiedAt, name, revenueShareRates, revenueShareType, setupFee, startTime, state);
         }
     }

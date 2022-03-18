@@ -78,17 +78,14 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
             this.fieldMask = fieldMask;
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetInstanceArgs build() {
+        }        public GetInstanceArgs build() {
             return new GetInstanceArgs(fieldMask, instanceId, project);
         }
     }

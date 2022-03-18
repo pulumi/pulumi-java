@@ -60,7 +60,9 @@ public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.I
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }
-        public V2ServerKeyRestrictionsResponse build() {
+        public Builder allowedIps(String... allowedIps) {
+            return allowedIps(List.of(allowedIps));
+        }        public V2ServerKeyRestrictionsResponse build() {
             return new V2ServerKeyRestrictionsResponse(allowedIps);
         }
     }

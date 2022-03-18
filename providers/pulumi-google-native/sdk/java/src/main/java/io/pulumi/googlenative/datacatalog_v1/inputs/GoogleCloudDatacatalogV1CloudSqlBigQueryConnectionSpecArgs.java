@@ -95,32 +95,26 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder type(@Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs build() {
+        }        public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs build() {
             return new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs(database, instanceId, type);
         }
     }

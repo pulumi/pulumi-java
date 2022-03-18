@@ -129,52 +129,42 @@ public final class AppEngineHttpTargetArgs extends io.pulumi.resources.ResourceA
             this.appEngineRouting = appEngineRouting;
             return this;
         }
-
         public Builder appEngineRouting(@Nullable AppEngineRoutingArgs appEngineRouting) {
             this.appEngineRouting = Output.ofNullable(appEngineRouting);
             return this;
         }
-
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<AppEngineHttpTargetHttpMethod> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable AppEngineHttpTargetHttpMethod httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder relativeUri(@Nullable Output<String> relativeUri) {
             this.relativeUri = relativeUri;
             return this;
         }
-
         public Builder relativeUri(@Nullable String relativeUri) {
             this.relativeUri = Output.ofNullable(relativeUri);
             return this;
-        }
-        public AppEngineHttpTargetArgs build() {
+        }        public AppEngineHttpTargetArgs build() {
             return new AppEngineHttpTargetArgs(appEngineRouting, body, headers, httpMethod, relativeUri);
         }
     }

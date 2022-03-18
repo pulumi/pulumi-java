@@ -76,12 +76,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse(kind, name);
         }
     }

@@ -136,32 +136,29 @@ public final class GetUserDataMappingResult {
             this.archiveTime = Objects.requireNonNull(archiveTime);
             return this;
         }
-
         public Builder archived(Boolean archived) {
             this.archived = Objects.requireNonNull(archived);
             return this;
         }
-
         public Builder dataId(String dataId) {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceAttributes(List<AttributeResponse> resourceAttributes) {
             this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
             return this;
         }
-
+        public Builder resourceAttributes(AttributeResponse... resourceAttributes) {
+            return resourceAttributes(List.of(resourceAttributes));
+        }
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public GetUserDataMappingResult build() {
+        }        public GetUserDataMappingResult build() {
             return new GetUserDataMappingResult(archiveTime, archived, dataId, name, resourceAttributes, userId);
         }
     }

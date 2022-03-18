@@ -148,62 +148,53 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
-
         public Builder allowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
             this.allowedIssuanceModes = Output.ofNullable(allowedIssuanceModes);
             return this;
         }
-
         public Builder allowedKeyTypes(@Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes) {
             this.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
-
         public Builder allowedKeyTypes(@Nullable List<AllowedKeyTypeArgs> allowedKeyTypes) {
             this.allowedKeyTypes = Output.ofNullable(allowedKeyTypes);
             return this;
         }
-
+        public Builder allowedKeyTypes(AllowedKeyTypeArgs... allowedKeyTypes) {
+            return allowedKeyTypes(List.of(allowedKeyTypes));
+        }
         public Builder baselineValues(@Nullable Output<X509ParametersArgs> baselineValues) {
             this.baselineValues = baselineValues;
             return this;
         }
-
         public Builder baselineValues(@Nullable X509ParametersArgs baselineValues) {
             this.baselineValues = Output.ofNullable(baselineValues);
             return this;
         }
-
         public Builder identityConstraints(@Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
-
         public Builder identityConstraints(@Nullable CertificateIdentityConstraintsArgs identityConstraints) {
             this.identityConstraints = Output.ofNullable(identityConstraints);
             return this;
         }
-
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
             this.maximumLifetime = maximumLifetime;
             return this;
         }
-
         public Builder maximumLifetime(@Nullable String maximumLifetime) {
             this.maximumLifetime = Output.ofNullable(maximumLifetime);
             return this;
         }
-
         public Builder passthroughExtensions(@Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions) {
             this.passthroughExtensions = passthroughExtensions;
             return this;
         }
-
         public Builder passthroughExtensions(@Nullable CertificateExtensionConstraintsArgs passthroughExtensions) {
             this.passthroughExtensions = Output.ofNullable(passthroughExtensions);
             return this;
-        }
-        public IssuancePolicyArgs build() {
+        }        public IssuancePolicyArgs build() {
             return new IssuancePolicyArgs(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime, passthroughExtensions);
         }
     }

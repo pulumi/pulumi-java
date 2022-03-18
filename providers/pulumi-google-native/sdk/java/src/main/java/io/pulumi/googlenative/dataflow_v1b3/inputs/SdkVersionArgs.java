@@ -95,32 +95,26 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.sdkSupportStatus = sdkSupportStatus;
             return this;
         }
-
         public Builder sdkSupportStatus(@Nullable SdkVersionSdkSupportStatus sdkSupportStatus) {
             this.sdkSupportStatus = Output.ofNullable(sdkSupportStatus);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder versionDisplayName(@Nullable Output<String> versionDisplayName) {
             this.versionDisplayName = versionDisplayName;
             return this;
         }
-
         public Builder versionDisplayName(@Nullable String versionDisplayName) {
             this.versionDisplayName = Output.ofNullable(versionDisplayName);
             return this;
-        }
-        public SdkVersionArgs build() {
+        }        public SdkVersionArgs build() {
             return new SdkVersionArgs(sdkSupportStatus, version, versionDisplayName);
         }
     }

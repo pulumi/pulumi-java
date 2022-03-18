@@ -69,12 +69,10 @@ public final class GetReservationResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder throughputCapacity(String throughputCapacity) {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
-        }
-        public GetReservationResult build() {
+        }        public GetReservationResult build() {
             return new GetReservationResult(name, throughputCapacity);
         }
     }

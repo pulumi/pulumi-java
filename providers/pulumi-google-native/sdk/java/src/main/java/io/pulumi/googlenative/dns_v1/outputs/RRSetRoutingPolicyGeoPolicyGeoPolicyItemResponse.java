@@ -86,22 +86,24 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder rrdatas(List<String> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
-
+        public Builder rrdatas(String... rrdatas) {
+            return rrdatas(List.of(rrdatas));
+        }
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
             this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
             return this;
         }
-        public RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse build() {
+        public Builder signatureRrdatas(String... signatureRrdatas) {
+            return signatureRrdatas(List.of(signatureRrdatas));
+        }        public RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse build() {
             return new RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse(kind, location, rrdatas, signatureRrdatas);
         }
     }

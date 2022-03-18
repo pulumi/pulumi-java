@@ -90,22 +90,18 @@ public final class GetTaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder policyTagId(String policyTagId) {
             this.policyTagId = Objects.requireNonNull(policyTagId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder taxonomyId(String taxonomyId) {
             this.taxonomyId = Objects.requireNonNull(taxonomyId);
             return this;
-        }
-        public GetTaxonomyPolicyTagIamPolicyArgs build() {
+        }        public GetTaxonomyPolicyTagIamPolicyArgs build() {
             return new GetTaxonomyPolicyTagIamPolicyArgs(location, policyTagId, project, taxonomyId);
         }
     }

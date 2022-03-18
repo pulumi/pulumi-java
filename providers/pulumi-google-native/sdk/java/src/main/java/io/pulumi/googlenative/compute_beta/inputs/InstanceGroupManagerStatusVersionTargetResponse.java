@@ -54,8 +54,7 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends io.pu
         public Builder isReached(Boolean isReached) {
             this.isReached = Objects.requireNonNull(isReached);
             return this;
-        }
-        public InstanceGroupManagerStatusVersionTargetResponse build() {
+        }        public InstanceGroupManagerStatusVersionTargetResponse build() {
             return new InstanceGroupManagerStatusVersionTargetResponse(isReached);
         }
     }

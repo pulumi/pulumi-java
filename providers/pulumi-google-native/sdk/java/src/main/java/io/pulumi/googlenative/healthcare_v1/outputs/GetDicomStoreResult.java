@@ -87,17 +87,14 @@ public final class GetDicomStoreResult {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationConfig(NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
-        }
-        public GetDicomStoreResult build() {
+        }        public GetDicomStoreResult build() {
             return new GetDicomStoreResult(labels, name, notificationConfig);
         }
     }

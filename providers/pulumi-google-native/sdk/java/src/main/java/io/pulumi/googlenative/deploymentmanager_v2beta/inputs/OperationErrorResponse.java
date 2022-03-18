@@ -60,7 +60,9 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-        public OperationErrorResponse build() {
+        public Builder errors(OperationErrorErrorsItemResponse... errors) {
+            return errors(List.of(errors));
+        }        public OperationErrorResponse build() {
             return new OperationErrorResponse(errors);
         }
     }

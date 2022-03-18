@@ -117,27 +117,22 @@ public final class CustomerEncryptionKeyResponse {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyServiceAccount(String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = Objects.requireNonNull(kmsKeyServiceAccount);
             return this;
         }
-
         public Builder rawKey(String rawKey) {
             this.rawKey = Objects.requireNonNull(rawKey);
             return this;
         }
-
         public Builder rsaEncryptedKey(String rsaEncryptedKey) {
             this.rsaEncryptedKey = Objects.requireNonNull(rsaEncryptedKey);
             return this;
         }
-
         public Builder sha256(String sha256) {
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
-        }
-        public CustomerEncryptionKeyResponse build() {
+        }        public CustomerEncryptionKeyResponse build() {
             return new CustomerEncryptionKeyResponse(kmsKeyName, kmsKeyServiceAccount, rawKey, rsaEncryptedKey, sha256);
         }
     }

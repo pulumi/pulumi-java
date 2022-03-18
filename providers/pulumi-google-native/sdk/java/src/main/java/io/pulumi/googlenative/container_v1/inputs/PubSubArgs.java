@@ -96,32 +96,26 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder filter(@Nullable Output<FilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable FilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public PubSubArgs build() {
+        }        public PubSubArgs build() {
             return new PubSubArgs(enabled, filter, topic);
         }
     }

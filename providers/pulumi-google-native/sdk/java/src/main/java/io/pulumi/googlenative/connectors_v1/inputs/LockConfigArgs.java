@@ -79,22 +79,18 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.locked = locked;
             return this;
         }
-
         public Builder locked(@Nullable Boolean locked) {
             this.locked = Output.ofNullable(locked);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
-        }
-        public LockConfigArgs build() {
+        }        public LockConfigArgs build() {
             return new LockConfigArgs(locked, reason);
         }
     }

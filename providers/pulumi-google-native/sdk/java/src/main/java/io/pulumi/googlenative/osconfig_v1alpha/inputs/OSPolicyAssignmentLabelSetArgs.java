@@ -62,12 +62,10 @@ public final class OSPolicyAssignmentLabelSetArgs extends io.pulumi.resources.Re
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public OSPolicyAssignmentLabelSetArgs build() {
+        }        public OSPolicyAssignmentLabelSetArgs build() {
             return new OSPolicyAssignmentLabelSetArgs(labels);
         }
     }

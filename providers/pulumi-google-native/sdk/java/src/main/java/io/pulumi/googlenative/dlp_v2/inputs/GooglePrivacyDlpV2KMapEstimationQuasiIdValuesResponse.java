@@ -78,12 +78,13 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
             this.estimatedAnonymity = Objects.requireNonNull(estimatedAnonymity);
             return this;
         }
-
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-        public GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse build() {
+        public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
+            return quasiIdsValues(List.of(quasiIdsValues));
+        }        public GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(estimatedAnonymity, quasiIdsValues);
         }
     }

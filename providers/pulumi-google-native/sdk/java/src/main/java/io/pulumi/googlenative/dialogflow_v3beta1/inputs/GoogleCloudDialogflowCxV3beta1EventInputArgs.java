@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulum
             this.event = event;
             return this;
         }
-
         public Builder event(@Nullable String event) {
             this.event = Output.ofNullable(event);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1EventInputArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1EventInputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1EventInputArgs(event);
         }
     }

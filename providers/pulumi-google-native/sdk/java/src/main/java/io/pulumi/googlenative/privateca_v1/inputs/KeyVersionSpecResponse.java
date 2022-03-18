@@ -76,12 +76,10 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion);
             return this;
-        }
-        public KeyVersionSpecResponse build() {
+        }        public KeyVersionSpecResponse build() {
             return new KeyVersionSpecResponse(algorithm, cloudKmsKeyVersion);
         }
     }

@@ -92,17 +92,14 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public OperationErrorResponse build() {
+        }        public OperationErrorResponse build() {
             return new OperationErrorResponse(code, kind, message);
         }
     }

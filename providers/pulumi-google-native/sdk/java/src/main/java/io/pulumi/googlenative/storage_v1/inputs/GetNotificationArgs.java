@@ -90,22 +90,18 @@ public final class GetNotificationArgs extends io.pulumi.resources.InvokeArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder notification(String notification) {
             this.notification = Objects.requireNonNull(notification);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetNotificationArgs build() {
+        }        public GetNotificationArgs build() {
             return new GetNotificationArgs(bucket, notification, provisionalUserProject, userProject);
         }
     }

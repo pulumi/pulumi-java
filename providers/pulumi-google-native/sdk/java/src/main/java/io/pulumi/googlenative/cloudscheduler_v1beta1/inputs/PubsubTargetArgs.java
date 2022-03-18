@@ -95,32 +95,26 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder topicName(Output<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Output.of(Objects.requireNonNull(topicName));
             return this;
-        }
-        public PubsubTargetArgs build() {
+        }        public PubsubTargetArgs build() {
             return new PubsubTargetArgs(attributes, data, topicName);
         }
     }

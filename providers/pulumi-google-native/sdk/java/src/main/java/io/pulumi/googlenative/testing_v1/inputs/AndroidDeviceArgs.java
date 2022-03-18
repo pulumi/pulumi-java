@@ -109,42 +109,34 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.androidModelId = Objects.requireNonNull(androidModelId);
             return this;
         }
-
         public Builder androidModelId(String androidModelId) {
             this.androidModelId = Output.of(Objects.requireNonNull(androidModelId));
             return this;
         }
-
         public Builder androidVersionId(Output<String> androidVersionId) {
             this.androidVersionId = Objects.requireNonNull(androidVersionId);
             return this;
         }
-
         public Builder androidVersionId(String androidVersionId) {
             this.androidVersionId = Output.of(Objects.requireNonNull(androidVersionId));
             return this;
         }
-
         public Builder locale(Output<String> locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
-
         public Builder locale(String locale) {
             this.locale = Output.of(Objects.requireNonNull(locale));
             return this;
         }
-
         public Builder orientation(Output<String> orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
-
         public Builder orientation(String orientation) {
             this.orientation = Output.of(Objects.requireNonNull(orientation));
             return this;
-        }
-        public AndroidDeviceArgs build() {
+        }        public AndroidDeviceArgs build() {
             return new AndroidDeviceArgs(androidModelId, androidVersionId, locale, orientation);
         }
     }

@@ -111,22 +111,24 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
             this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize);
             return this;
         }
-
         public Builder numDistinctSensitiveValues(String numDistinctSensitiveValues) {
             this.numDistinctSensitiveValues = Objects.requireNonNull(numDistinctSensitiveValues);
             return this;
         }
-
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-
+        public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
+            return quasiIdsValues(List.of(quasiIdsValues));
+        }
         public Builder topSensitiveValues(List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
             this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues);
             return this;
         }
-        public GooglePrivacyDlpV2LDiversityEquivalenceClassResponse build() {
+        public Builder topSensitiveValues(GooglePrivacyDlpV2ValueFrequencyResponse... topSensitiveValues) {
+            return topSensitiveValues(List.of(topSensitiveValues));
+        }        public GooglePrivacyDlpV2LDiversityEquivalenceClassResponse build() {
             return new GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(equivalenceClassSize, numDistinctSensitiveValues, quasiIdsValues, topSensitiveValues);
         }
     }

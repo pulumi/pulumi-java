@@ -61,12 +61,10 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
             this.gcsFileUri = gcsFileUri;
             return this;
         }
-
         public Builder gcsFileUri(@Nullable String gcsFileUri) {
             this.gcsFileUri = Output.ofNullable(gcsFileUri);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1PdfInstructionArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1PdfInstructionArgs build() {
             return new GoogleCloudDatalabelingV1beta1PdfInstructionArgs(gcsFileUri);
         }
     }

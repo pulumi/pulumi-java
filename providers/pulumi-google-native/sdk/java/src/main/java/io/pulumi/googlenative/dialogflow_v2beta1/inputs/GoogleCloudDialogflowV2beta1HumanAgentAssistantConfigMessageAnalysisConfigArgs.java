@@ -78,22 +78,18 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
             this.enableEntityExtraction = enableEntityExtraction;
             return this;
         }
-
         public Builder enableEntityExtraction(@Nullable Boolean enableEntityExtraction) {
             this.enableEntityExtraction = Output.ofNullable(enableEntityExtraction);
             return this;
         }
-
         public Builder enableSentimentAnalysis(@Nullable Output<Boolean> enableSentimentAnalysis) {
             this.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
         }
-
         public Builder enableSentimentAnalysis(@Nullable Boolean enableSentimentAnalysis) {
             this.enableSentimentAnalysis = Output.ofNullable(enableSentimentAnalysis);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs build() {
+        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs(enableEntityExtraction, enableSentimentAnalysis);
         }
     }

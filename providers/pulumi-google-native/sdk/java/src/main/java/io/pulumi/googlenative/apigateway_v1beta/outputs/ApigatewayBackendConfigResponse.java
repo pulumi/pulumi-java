@@ -51,8 +51,7 @@ public final class ApigatewayBackendConfigResponse {
         public Builder googleServiceAccount(String googleServiceAccount) {
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
-        }
-        public ApigatewayBackendConfigResponse build() {
+        }        public ApigatewayBackendConfigResponse build() {
             return new ApigatewayBackendConfigResponse(googleServiceAccount);
         }
     }

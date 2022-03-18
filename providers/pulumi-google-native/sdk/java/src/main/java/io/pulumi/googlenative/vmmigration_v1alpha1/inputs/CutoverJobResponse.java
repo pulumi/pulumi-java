@@ -191,47 +191,38 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
             this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public Builder progressPercent(Integer progressPercent) {
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
-
         public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
-        }
-        public CutoverJobResponse build() {
+        }        public CutoverJobResponse build() {
             return new CutoverJobResponse(computeEngineTargetDetails, createTime, error, name, progress, progressPercent, state, stateMessage, stateTime);
         }
     }

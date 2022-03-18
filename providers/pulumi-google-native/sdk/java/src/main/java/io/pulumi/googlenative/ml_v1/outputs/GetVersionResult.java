@@ -463,132 +463,109 @@ public final class GetVersionResult {
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
-
         public Builder autoScaling(GoogleCloudMlV1__AutoScalingResponse autoScaling) {
             this.autoScaling = Objects.requireNonNull(autoScaling);
             return this;
         }
-
         public Builder container(GoogleCloudMlV1__ContainerSpecResponse container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deploymentUri(String deploymentUri) {
             this.deploymentUri = Objects.requireNonNull(deploymentUri);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder explanationConfig(GoogleCloudMlV1__ExplanationConfigResponse explanationConfig) {
             this.explanationConfig = Objects.requireNonNull(explanationConfig);
             return this;
         }
-
         public Builder framework(String framework) {
             this.framework = Objects.requireNonNull(framework);
             return this;
         }
-
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lastMigrationModelId(String lastMigrationModelId) {
             this.lastMigrationModelId = Objects.requireNonNull(lastMigrationModelId);
             return this;
         }
-
         public Builder lastMigrationTime(String lastMigrationTime) {
             this.lastMigrationTime = Objects.requireNonNull(lastMigrationTime);
             return this;
         }
-
         public Builder lastUseTime(String lastUseTime) {
             this.lastUseTime = Objects.requireNonNull(lastUseTime);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder manualScaling(GoogleCloudMlV1__ManualScalingResponse manualScaling) {
             this.manualScaling = Objects.requireNonNull(manualScaling);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageUris(List<String> packageUris) {
             this.packageUris = Objects.requireNonNull(packageUris);
             return this;
         }
-
+        public Builder packageUris(String... packageUris) {
+            return packageUris(List.of(packageUris));
+        }
         public Builder predictionClass(String predictionClass) {
             this.predictionClass = Objects.requireNonNull(predictionClass);
             return this;
         }
-
         public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
-
         public Builder requestLoggingConfig(GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig) {
             this.requestLoggingConfig = Objects.requireNonNull(requestLoggingConfig);
             return this;
         }
-
         public Builder routes(GoogleCloudMlV1__RouteMapResponse routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetVersionResult build() {
+        }        public GetVersionResult build() {
             return new GetVersionResult(acceleratorConfig, autoScaling, container, createTime, deploymentUri, description, errorMessage, etag, explanationConfig, framework, isDefault, labels, lastMigrationModelId, lastMigrationTime, lastUseTime, machineType, manualScaling, name, packageUris, predictionClass, pythonVersion, requestLoggingConfig, routes, runtimeVersion, serviceAccount, state);
         }
     }

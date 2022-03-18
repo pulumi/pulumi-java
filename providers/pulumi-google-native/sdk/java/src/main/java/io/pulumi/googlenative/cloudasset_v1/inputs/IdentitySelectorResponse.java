@@ -58,8 +58,7 @@ public final class IdentitySelectorResponse extends io.pulumi.resources.InvokeAr
         public Builder identity(String identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
-        }
-        public IdentitySelectorResponse build() {
+        }        public IdentitySelectorResponse build() {
             return new IdentitySelectorResponse(identity);
         }
     }

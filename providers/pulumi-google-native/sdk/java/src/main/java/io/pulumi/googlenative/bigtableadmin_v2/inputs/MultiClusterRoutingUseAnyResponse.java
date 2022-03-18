@@ -60,7 +60,9 @@ public final class MultiClusterRoutingUseAnyResponse extends io.pulumi.resources
             this.clusterIds = Objects.requireNonNull(clusterIds);
             return this;
         }
-        public MultiClusterRoutingUseAnyResponse build() {
+        public Builder clusterIds(String... clusterIds) {
+            return clusterIds(List.of(clusterIds));
+        }        public MultiClusterRoutingUseAnyResponse build() {
             return new MultiClusterRoutingUseAnyResponse(clusterIds);
         }
     }

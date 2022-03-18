@@ -228,112 +228,96 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<LabelDescriptorArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<LabelDescriptorArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(LabelDescriptorArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder launchStage(@Nullable Output<MetricDescriptorLaunchStage> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
-
         public Builder launchStage(@Nullable MetricDescriptorLaunchStage launchStage) {
             this.launchStage = Output.ofNullable(launchStage);
             return this;
         }
-
         public Builder metadata(@Nullable Output<MetricDescriptorMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable MetricDescriptorMetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder metricKind(@Nullable Output<MetricDescriptorMetricKind> metricKind) {
             this.metricKind = metricKind;
             return this;
         }
-
         public Builder metricKind(@Nullable MetricDescriptorMetricKind metricKind) {
             this.metricKind = Output.ofNullable(metricKind);
             return this;
         }
-
         public Builder monitoredResourceTypes(@Nullable Output<List<String>> monitoredResourceTypes) {
             this.monitoredResourceTypes = monitoredResourceTypes;
             return this;
         }
-
         public Builder monitoredResourceTypes(@Nullable List<String> monitoredResourceTypes) {
             this.monitoredResourceTypes = Output.ofNullable(monitoredResourceTypes);
             return this;
         }
-
+        public Builder monitoredResourceTypes(String... monitoredResourceTypes) {
+            return monitoredResourceTypes(List.of(monitoredResourceTypes));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
         }
-
         public Builder valueType(@Nullable Output<MetricDescriptorValueType> valueType) {
             this.valueType = valueType;
             return this;
         }
-
         public Builder valueType(@Nullable MetricDescriptorValueType valueType) {
             this.valueType = Output.ofNullable(valueType);
             return this;
-        }
-        public MetricDescriptorArgs build() {
+        }        public MetricDescriptorArgs build() {
             return new MetricDescriptorArgs(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, type, unit, valueType);
         }
     }

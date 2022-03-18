@@ -76,12 +76,10 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
             this.magnitude = Objects.requireNonNull(magnitude);
             return this;
         }
-
         public Builder score(Double score) {
             this.score = Objects.requireNonNull(score);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1SentimentDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1SentimentDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SentimentDataResponse(magnitude, score);
         }
     }

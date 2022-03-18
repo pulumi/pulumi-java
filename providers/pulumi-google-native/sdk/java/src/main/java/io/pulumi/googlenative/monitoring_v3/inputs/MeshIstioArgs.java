@@ -94,32 +94,26 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
             this.meshUid = meshUid;
             return this;
         }
-
         public Builder meshUid(@Nullable String meshUid) {
             this.meshUid = Output.ofNullable(meshUid);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
-
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
             this.serviceNamespace = Output.ofNullable(serviceNamespace);
             return this;
-        }
-        public MeshIstioArgs build() {
+        }        public MeshIstioArgs build() {
             return new MeshIstioArgs(meshUid, serviceName, serviceNamespace);
         }
     }

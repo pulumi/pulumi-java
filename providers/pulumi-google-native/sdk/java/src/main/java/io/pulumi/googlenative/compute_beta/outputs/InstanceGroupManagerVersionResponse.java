@@ -86,17 +86,14 @@ public final class InstanceGroupManagerVersionResponse {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder targetSize(FixedOrPercentResponse targetSize) {
             this.targetSize = Objects.requireNonNull(targetSize);
             return this;
-        }
-        public InstanceGroupManagerVersionResponse build() {
+        }        public InstanceGroupManagerVersionResponse build() {
             return new InstanceGroupManagerVersionResponse(instanceTemplate, name, targetSize);
         }
     }

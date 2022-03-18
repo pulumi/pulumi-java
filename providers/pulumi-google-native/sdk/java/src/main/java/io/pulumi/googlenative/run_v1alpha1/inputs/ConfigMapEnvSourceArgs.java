@@ -96,32 +96,26 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
             this.localObjectReference = localObjectReference;
             return this;
         }
-
         public Builder localObjectReference(@Nullable LocalObjectReferenceArgs localObjectReference) {
             this.localObjectReference = Output.ofNullable(localObjectReference);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = Output.ofNullable(optional);
             return this;
-        }
-        public ConfigMapEnvSourceArgs build() {
+        }        public ConfigMapEnvSourceArgs build() {
             return new ConfigMapEnvSourceArgs(localObjectReference, name, optional);
         }
     }

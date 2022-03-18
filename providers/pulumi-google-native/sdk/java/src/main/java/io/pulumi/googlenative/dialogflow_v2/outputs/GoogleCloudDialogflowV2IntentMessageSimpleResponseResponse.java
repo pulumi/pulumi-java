@@ -85,17 +85,14 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse {
             this.displayText = Objects.requireNonNull(displayText);
             return this;
         }
-
         public Builder ssml(String ssml) {
             this.ssml = Objects.requireNonNull(ssml);
             return this;
         }
-
         public Builder textToSpeech(String textToSpeech) {
             this.textToSpeech = Objects.requireNonNull(textToSpeech);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse(displayText, ssml, textToSpeech);
         }
     }

@@ -158,37 +158,30 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
             this.checkInterval = Objects.requireNonNull(checkInterval);
             return this;
         }
-
         public Builder disableHealthCheck(Boolean disableHealthCheck) {
             this.disableHealthCheck = Objects.requireNonNull(disableHealthCheck);
             return this;
         }
-
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder restartThreshold(Integer restartThreshold) {
             this.restartThreshold = Objects.requireNonNull(restartThreshold);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
-        }
-        public HealthCheckResponse build() {
+        }        public HealthCheckResponse build() {
             return new HealthCheckResponse(checkInterval, disableHealthCheck, healthyThreshold, host, restartThreshold, timeout, unhealthyThreshold);
         }
     }

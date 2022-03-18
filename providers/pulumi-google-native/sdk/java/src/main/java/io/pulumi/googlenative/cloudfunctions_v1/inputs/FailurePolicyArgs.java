@@ -61,12 +61,10 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.retry = retry;
             return this;
         }
-
         public Builder retry(@Nullable RetryArgs retry) {
             this.retry = Output.ofNullable(retry);
             return this;
-        }
-        public FailurePolicyArgs build() {
+        }        public FailurePolicyArgs build() {
             return new FailurePolicyArgs(retry);
         }
     }

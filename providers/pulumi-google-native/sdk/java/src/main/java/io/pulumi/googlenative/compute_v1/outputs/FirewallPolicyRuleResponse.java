@@ -217,57 +217,52 @@ public final class FirewallPolicyRuleResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder match(FirewallPolicyRuleMatcherResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
-
         public Builder targetResources(List<String> targetResources) {
             this.targetResources = Objects.requireNonNull(targetResources);
             return this;
         }
-
+        public Builder targetResources(String... targetResources) {
+            return targetResources(List.of(targetResources));
+        }
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-        public FirewallPolicyRuleResponse build() {
+        public Builder targetServiceAccounts(String... targetServiceAccounts) {
+            return targetServiceAccounts(List.of(targetServiceAccounts));
+        }        public FirewallPolicyRuleResponse build() {
             return new FirewallPolicyRuleResponse(action, description, direction, disabled, enableLogging, kind, match, priority, ruleTupleCount, targetResources, targetServiceAccounts);
         }
     }

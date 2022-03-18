@@ -145,62 +145,56 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             this.documentationRootUrl = documentationRootUrl;
             return this;
         }
-
         public Builder documentationRootUrl(@Nullable String documentationRootUrl) {
             this.documentationRootUrl = Output.ofNullable(documentationRootUrl);
             return this;
         }
-
         public Builder overview(@Nullable Output<String> overview) {
             this.overview = overview;
             return this;
         }
-
         public Builder overview(@Nullable String overview) {
             this.overview = Output.ofNullable(overview);
             return this;
         }
-
         public Builder pages(@Nullable Output<List<PageArgs>> pages) {
             this.pages = pages;
             return this;
         }
-
         public Builder pages(@Nullable List<PageArgs> pages) {
             this.pages = Output.ofNullable(pages);
             return this;
         }
-
+        public Builder pages(PageArgs... pages) {
+            return pages(List.of(pages));
+        }
         public Builder rules(@Nullable Output<List<DocumentationRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<DocumentationRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(DocumentationRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder serviceRootUrl(@Nullable Output<String> serviceRootUrl) {
             this.serviceRootUrl = serviceRootUrl;
             return this;
         }
-
         public Builder serviceRootUrl(@Nullable String serviceRootUrl) {
             this.serviceRootUrl = Output.ofNullable(serviceRootUrl);
             return this;
         }
-
         public Builder summary(@Nullable Output<String> summary) {
             this.summary = summary;
             return this;
         }
-
         public Builder summary(@Nullable String summary) {
             this.summary = Output.ofNullable(summary);
             return this;
-        }
-        public DocumentationArgs build() {
+        }        public DocumentationArgs build() {
             return new DocumentationArgs(documentationRootUrl, overview, pages, rules, serviceRootUrl, summary);
         }
     }

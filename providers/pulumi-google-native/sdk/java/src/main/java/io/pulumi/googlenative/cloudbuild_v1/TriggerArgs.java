@@ -443,252 +443,211 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.approvalConfig = approvalConfig;
             return this;
         }
-
         public Builder approvalConfig(@Nullable ApprovalConfigArgs approvalConfig) {
             this.approvalConfig = Output.ofNullable(approvalConfig);
             return this;
         }
-
         public Builder autodetect(@Nullable Output<Boolean> autodetect) {
             this.autodetect = autodetect;
             return this;
         }
-
         public Builder autodetect(@Nullable Boolean autodetect) {
             this.autodetect = Output.ofNullable(autodetect);
             return this;
         }
-
         public Builder bitbucketServerTriggerConfig(@Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig) {
             this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
             return this;
         }
-
         public Builder bitbucketServerTriggerConfig(@Nullable BitbucketServerTriggerConfigArgs bitbucketServerTriggerConfig) {
             this.bitbucketServerTriggerConfig = Output.ofNullable(bitbucketServerTriggerConfig);
             return this;
         }
-
         public Builder build(@Nullable Output<BuildArgs> build) {
             this.build = build;
             return this;
         }
-
         public Builder build(@Nullable BuildArgs build) {
             this.build = Output.ofNullable(build);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder eventType(@Nullable Output<TriggerEventType> eventType) {
             this.eventType = eventType;
             return this;
         }
-
         public Builder eventType(@Nullable TriggerEventType eventType) {
             this.eventType = Output.ofNullable(eventType);
             return this;
         }
-
         public Builder filename(@Nullable Output<String> filename) {
             this.filename = filename;
             return this;
         }
-
         public Builder filename(@Nullable String filename) {
             this.filename = Output.ofNullable(filename);
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder gitFileSource(@Nullable Output<GitFileSourceArgs> gitFileSource) {
             this.gitFileSource = gitFileSource;
             return this;
         }
-
         public Builder gitFileSource(@Nullable GitFileSourceArgs gitFileSource) {
             this.gitFileSource = Output.ofNullable(gitFileSource);
             return this;
         }
-
         public Builder github(@Nullable Output<GitHubEventsConfigArgs> github) {
             this.github = github;
             return this;
         }
-
         public Builder github(@Nullable GitHubEventsConfigArgs github) {
             this.github = Output.ofNullable(github);
             return this;
         }
-
         public Builder ignoredFiles(@Nullable Output<List<String>> ignoredFiles) {
             this.ignoredFiles = ignoredFiles;
             return this;
         }
-
         public Builder ignoredFiles(@Nullable List<String> ignoredFiles) {
             this.ignoredFiles = Output.ofNullable(ignoredFiles);
             return this;
         }
-
+        public Builder ignoredFiles(String... ignoredFiles) {
+            return ignoredFiles(List.of(ignoredFiles));
+        }
         public Builder includedFiles(@Nullable Output<List<String>> includedFiles) {
             this.includedFiles = includedFiles;
             return this;
         }
-
         public Builder includedFiles(@Nullable List<String> includedFiles) {
             this.includedFiles = Output.ofNullable(includedFiles);
             return this;
         }
-
+        public Builder includedFiles(String... includedFiles) {
+            return includedFiles(List.of(includedFiles));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
-
         public Builder pubsubConfig(@Nullable Output<PubsubConfigArgs> pubsubConfig) {
             this.pubsubConfig = pubsubConfig;
             return this;
         }
-
         public Builder pubsubConfig(@Nullable PubsubConfigArgs pubsubConfig) {
             this.pubsubConfig = Output.ofNullable(pubsubConfig);
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder sourceToBuild(@Nullable Output<GitRepoSourceArgs> sourceToBuild) {
             this.sourceToBuild = sourceToBuild;
             return this;
         }
-
         public Builder sourceToBuild(@Nullable GitRepoSourceArgs sourceToBuild) {
             this.sourceToBuild = Output.ofNullable(sourceToBuild);
             return this;
         }
-
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
-
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = Output.ofNullable(substitutions);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder triggerTemplate(@Nullable Output<RepoSourceArgs> triggerTemplate) {
             this.triggerTemplate = triggerTemplate;
             return this;
         }
-
         public Builder triggerTemplate(@Nullable RepoSourceArgs triggerTemplate) {
             this.triggerTemplate = Output.ofNullable(triggerTemplate);
             return this;
         }
-
         public Builder webhookConfig(@Nullable Output<WebhookConfigArgs> webhookConfig) {
             this.webhookConfig = webhookConfig;
             return this;
         }
-
         public Builder webhookConfig(@Nullable WebhookConfigArgs webhookConfig) {
             this.webhookConfig = Output.ofNullable(webhookConfig);
             return this;
-        }
-        public TriggerArgs build() {
+        }        public TriggerArgs build() {
             return new TriggerArgs(approvalConfig, autodetect, bitbucketServerTriggerConfig, build, description, disabled, eventType, filename, filter, gitFileSource, github, ignoredFiles, includedFiles, location, name, project, projectId, pubsubConfig, resourceName, serviceAccount, sourceToBuild, substitutions, tags, triggerTemplate, webhookConfig);
         }
     }

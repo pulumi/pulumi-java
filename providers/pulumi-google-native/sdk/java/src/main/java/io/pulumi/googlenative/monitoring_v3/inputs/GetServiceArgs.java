@@ -76,17 +76,14 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder v3Id(String v3Id) {
             this.v3Id = Objects.requireNonNull(v3Id);
             return this;
         }
-
         public Builder v3Id1(String v3Id1) {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
-        }
-        public GetServiceArgs build() {
+        }        public GetServiceArgs build() {
             return new GetServiceArgs(serviceId, v3Id, v3Id1);
         }
     }

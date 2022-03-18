@@ -96,32 +96,26 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
             this.certificatePaths = certificatePaths;
             return this;
         }
-
         public Builder certificatePaths(@Nullable TlsCertificatePathsArgs certificatePaths) {
             this.certificatePaths = Output.ofNullable(certificatePaths);
             return this;
         }
-
         public Builder certificateSource(@Nullable Output<TlsCertificateContextCertificateSource> certificateSource) {
             this.certificateSource = certificateSource;
             return this;
         }
-
         public Builder certificateSource(@Nullable TlsCertificateContextCertificateSource certificateSource) {
             this.certificateSource = Output.ofNullable(certificateSource);
             return this;
         }
-
         public Builder sdsConfig(@Nullable Output<SdsConfigArgs> sdsConfig) {
             this.sdsConfig = sdsConfig;
             return this;
         }
-
         public Builder sdsConfig(@Nullable SdsConfigArgs sdsConfig) {
             this.sdsConfig = Output.ofNullable(sdsConfig);
             return this;
-        }
-        public TlsCertificateContextArgs build() {
+        }        public TlsCertificateContextArgs build() {
             return new TlsCertificateContextArgs(certificatePaths, certificateSource, sdsConfig);
         }
     }

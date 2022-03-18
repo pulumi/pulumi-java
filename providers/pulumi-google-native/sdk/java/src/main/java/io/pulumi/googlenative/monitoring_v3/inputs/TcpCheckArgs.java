@@ -61,12 +61,10 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public TcpCheckArgs build() {
+        }        public TcpCheckArgs build() {
             return new TcpCheckArgs(port);
         }
     }

@@ -53,7 +53,9 @@ public final class AndroidDeviceListResponse {
             this.androidDevices = Objects.requireNonNull(androidDevices);
             return this;
         }
-        public AndroidDeviceListResponse build() {
+        public Builder androidDevices(AndroidDeviceResponse... androidDevices) {
+            return androidDevices(List.of(androidDevices));
+        }        public AndroidDeviceListResponse build() {
             return new AndroidDeviceListResponse(androidDevices);
         }
     }

@@ -95,32 +95,26 @@ public final class GoogleTypeMoneyArgs extends io.pulumi.resources.ResourceArgs 
             this.currencyCode = currencyCode;
             return this;
         }
-
         public Builder currencyCode(@Nullable String currencyCode) {
             this.currencyCode = Output.ofNullable(currencyCode);
             return this;
         }
-
         public Builder nanos(@Nullable Output<Integer> nanos) {
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder units(@Nullable Output<String> units) {
             this.units = units;
             return this;
         }
-
         public Builder units(@Nullable String units) {
             this.units = Output.ofNullable(units);
             return this;
-        }
-        public GoogleTypeMoneyArgs build() {
+        }        public GoogleTypeMoneyArgs build() {
             return new GoogleTypeMoneyArgs(currencyCode, nanos, units);
         }
     }

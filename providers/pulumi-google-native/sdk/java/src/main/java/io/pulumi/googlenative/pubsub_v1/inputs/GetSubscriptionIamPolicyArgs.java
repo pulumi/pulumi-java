@@ -78,17 +78,14 @@ public final class GetSubscriptionIamPolicyArgs extends io.pulumi.resources.Invo
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
-        }
-        public GetSubscriptionIamPolicyArgs build() {
+        }        public GetSubscriptionIamPolicyArgs build() {
             return new GetSubscriptionIamPolicyArgs(optionsRequestedPolicyVersion, project, subscriptionId);
         }
     }

@@ -135,32 +135,26 @@ public final class GetWorkerPoolResult {
             this.autoscale = Objects.requireNonNull(autoscale);
             return this;
         }
-
         public Builder channel(String channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder workerConfig(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public Builder workerCount(String workerCount) {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
-        }
-        public GetWorkerPoolResult build() {
+        }        public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(autoscale, channel, name, state, workerConfig, workerCount);
         }
     }

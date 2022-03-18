@@ -87,17 +87,17 @@ public final class GetTransitionRouteGroupResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-        public GetTransitionRouteGroupResult build() {
+        public Builder transitionRoutes(GoogleCloudDialogflowCxV3beta1TransitionRouteResponse... transitionRoutes) {
+            return transitionRoutes(List.of(transitionRoutes));
+        }        public GetTransitionRouteGroupResult build() {
             return new GetTransitionRouteGroupResult(displayName, name, transitionRoutes);
         }
     }

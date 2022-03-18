@@ -60,12 +60,10 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
-
         public Builder discovered(DiscoveredArgs discovered) {
             this.discovered = Output.of(Objects.requireNonNull(discovered));
             return this;
-        }
-        public GrafeasV1beta1DiscoveryDetailsArgs build() {
+        }        public GrafeasV1beta1DiscoveryDetailsArgs build() {
             return new GrafeasV1beta1DiscoveryDetailsArgs(discovered);
         }
     }

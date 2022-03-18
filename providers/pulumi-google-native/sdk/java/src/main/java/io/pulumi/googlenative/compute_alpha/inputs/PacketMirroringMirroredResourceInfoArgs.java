@@ -93,32 +93,35 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<PacketMirroringMirroredResourceInfoInstanceInfoArgs> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(PacketMirroringMirroredResourceInfoInstanceInfoArgs... instances) {
+            return instances(List.of(instances));
+        }
         public Builder subnetworks(@Nullable Output<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> subnetworks) {
             this.subnetworks = subnetworks;
             return this;
         }
-
         public Builder subnetworks(@Nullable List<PacketMirroringMirroredResourceInfoSubnetInfoArgs> subnetworks) {
             this.subnetworks = Output.ofNullable(subnetworks);
             return this;
         }
-
+        public Builder subnetworks(PacketMirroringMirroredResourceInfoSubnetInfoArgs... subnetworks) {
+            return subnetworks(List.of(subnetworks));
+        }
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PacketMirroringMirroredResourceInfoArgs build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public PacketMirroringMirroredResourceInfoArgs build() {
             return new PacketMirroringMirroredResourceInfoArgs(instances, subnetworks, tags);
         }
     }

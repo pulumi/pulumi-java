@@ -142,32 +142,26 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
             this.confidenceScore = Objects.requireNonNull(confidenceScore);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder queryRecord(String queryRecord) {
             this.queryRecord = Objects.requireNonNull(queryRecord);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse(confidenceScore, metadata, queryRecord, source, title, uri);
         }
     }

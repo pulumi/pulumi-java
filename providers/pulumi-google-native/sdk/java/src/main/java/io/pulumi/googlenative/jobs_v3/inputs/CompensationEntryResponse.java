@@ -143,32 +143,26 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder expectedUnitsPerYear(Double expectedUnitsPerYear) {
             this.expectedUnitsPerYear = Objects.requireNonNull(expectedUnitsPerYear);
             return this;
         }
-
         public Builder range(CompensationRangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
-        }
-        public CompensationEntryResponse build() {
+        }        public CompensationEntryResponse build() {
             return new CompensationEntryResponse(amount, description, expectedUnitsPerYear, range, type, unit);
         }
     }

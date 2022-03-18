@@ -78,17 +78,14 @@ public final class GetNodeTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.nodeTemplate = Objects.requireNonNull(nodeTemplate);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetNodeTemplateArgs build() {
+        }        public GetNodeTemplateArgs build() {
             return new GetNodeTemplateArgs(nodeTemplate, project, region);
         }
     }

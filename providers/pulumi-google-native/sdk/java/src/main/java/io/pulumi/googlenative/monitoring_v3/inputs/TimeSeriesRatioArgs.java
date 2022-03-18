@@ -94,32 +94,26 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
             this.badServiceFilter = badServiceFilter;
             return this;
         }
-
         public Builder badServiceFilter(@Nullable String badServiceFilter) {
             this.badServiceFilter = Output.ofNullable(badServiceFilter);
             return this;
         }
-
         public Builder goodServiceFilter(@Nullable Output<String> goodServiceFilter) {
             this.goodServiceFilter = goodServiceFilter;
             return this;
         }
-
         public Builder goodServiceFilter(@Nullable String goodServiceFilter) {
             this.goodServiceFilter = Output.ofNullable(goodServiceFilter);
             return this;
         }
-
         public Builder totalServiceFilter(@Nullable Output<String> totalServiceFilter) {
             this.totalServiceFilter = totalServiceFilter;
             return this;
         }
-
         public Builder totalServiceFilter(@Nullable String totalServiceFilter) {
             this.totalServiceFilter = Output.ofNullable(totalServiceFilter);
             return this;
-        }
-        public TimeSeriesRatioArgs build() {
+        }        public TimeSeriesRatioArgs build() {
             return new TimeSeriesRatioArgs(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }
     }

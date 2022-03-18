@@ -289,82 +289,81 @@ public final class GetApiProductResult {
             this.apiResources = Objects.requireNonNull(apiResources);
             return this;
         }
-
+        public Builder apiResources(String... apiResources) {
+            return apiResources(List.of(apiResources));
+        }
         public Builder approvalType(String approvalType) {
             this.approvalType = Objects.requireNonNull(approvalType);
             return this;
         }
-
         public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
+        public Builder attributes(GoogleCloudApigeeV1AttributeResponse... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder environments(List<String> environments) {
             this.environments = Objects.requireNonNull(environments);
             return this;
         }
-
+        public Builder environments(String... environments) {
+            return environments(List.of(environments));
+        }
         public Builder graphqlOperationGroup(GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup) {
             this.graphqlOperationGroup = Objects.requireNonNull(graphqlOperationGroup);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationGroup(GoogleCloudApigeeV1OperationGroupResponse operationGroup) {
             this.operationGroup = Objects.requireNonNull(operationGroup);
             return this;
         }
-
         public Builder proxies(List<String> proxies) {
             this.proxies = Objects.requireNonNull(proxies);
             return this;
         }
-
+        public Builder proxies(String... proxies) {
+            return proxies(List.of(proxies));
+        }
         public Builder quota(String quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
-
         public Builder quotaInterval(String quotaInterval) {
             this.quotaInterval = Objects.requireNonNull(quotaInterval);
             return this;
         }
-
         public Builder quotaTimeUnit(String quotaTimeUnit) {
             this.quotaTimeUnit = Objects.requireNonNull(quotaTimeUnit);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-        public GetApiProductResult build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public GetApiProductResult build() {
             return new GetApiProductResult(apiResources, approvalType, attributes, createdAt, description, displayName, environments, graphqlOperationGroup, lastModifiedAt, name, operationGroup, proxies, quota, quotaInterval, quotaTimeUnit, scopes);
         }
     }

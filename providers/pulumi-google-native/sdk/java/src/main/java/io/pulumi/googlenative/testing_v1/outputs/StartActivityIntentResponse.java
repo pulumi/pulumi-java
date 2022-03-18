@@ -86,17 +86,17 @@ public final class StartActivityIntentResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder categories(List<String> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public StartActivityIntentResponse build() {
+        }        public StartActivityIntentResponse build() {
             return new StartActivityIntentResponse(action, categories, uri);
         }
     }

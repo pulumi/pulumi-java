@@ -111,42 +111,34 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder keyType(@Nullable Output<BuildSignatureKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder keyType(@Nullable BuildSignatureKeyType keyType) {
             this.keyType = Output.ofNullable(keyType);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder signature(Output<String> signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public Builder signature(String signature) {
             this.signature = Output.of(Objects.requireNonNull(signature));
             return this;
-        }
-        public BuildSignatureArgs build() {
+        }        public BuildSignatureArgs build() {
             return new BuildSignatureArgs(keyId, keyType, publicKey, signature);
         }
     }

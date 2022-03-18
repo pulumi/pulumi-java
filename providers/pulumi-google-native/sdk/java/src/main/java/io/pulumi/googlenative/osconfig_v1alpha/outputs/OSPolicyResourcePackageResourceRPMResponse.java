@@ -70,12 +70,10 @@ public final class OSPolicyResourcePackageResourceRPMResponse {
             this.pullDeps = Objects.requireNonNull(pullDeps);
             return this;
         }
-
         public Builder source(OSPolicyResourceFileResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public OSPolicyResourcePackageResourceRPMResponse build() {
+        }        public OSPolicyResourcePackageResourceRPMResponse build() {
             return new OSPolicyResourcePackageResourceRPMResponse(pullDeps, source);
         }
     }

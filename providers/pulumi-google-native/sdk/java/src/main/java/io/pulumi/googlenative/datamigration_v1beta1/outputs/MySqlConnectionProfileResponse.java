@@ -152,37 +152,30 @@ public final class MySqlConnectionProfileResponse {
             this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder passwordSet(Boolean passwordSet) {
             this.passwordSet = Objects.requireNonNull(passwordSet);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder ssl(SslConfigResponse ssl) {
             this.ssl = Objects.requireNonNull(ssl);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public MySqlConnectionProfileResponse build() {
+        }        public MySqlConnectionProfileResponse build() {
             return new MySqlConnectionProfileResponse(cloudSqlId, host, password, passwordSet, port, ssl, username);
         }
     }

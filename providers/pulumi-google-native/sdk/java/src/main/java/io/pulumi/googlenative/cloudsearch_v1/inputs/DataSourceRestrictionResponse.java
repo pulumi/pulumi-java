@@ -78,12 +78,13 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
             this.filterOptions = Objects.requireNonNull(filterOptions);
             return this;
         }
-
+        public Builder filterOptions(FilterOptionsResponse... filterOptions) {
+            return filterOptions(List.of(filterOptions));
+        }
         public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public DataSourceRestrictionResponse build() {
+        }        public DataSourceRestrictionResponse build() {
             return new DataSourceRestrictionResponse(filterOptions, source);
         }
     }

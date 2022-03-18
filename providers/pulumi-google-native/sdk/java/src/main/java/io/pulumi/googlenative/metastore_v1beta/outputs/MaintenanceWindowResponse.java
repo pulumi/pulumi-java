@@ -70,12 +70,10 @@ public final class MaintenanceWindowResponse {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder hourOfDay(Integer hourOfDay) {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
-        }
-        public MaintenanceWindowResponse build() {
+        }        public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(dayOfWeek, hourOfDay);
         }
     }

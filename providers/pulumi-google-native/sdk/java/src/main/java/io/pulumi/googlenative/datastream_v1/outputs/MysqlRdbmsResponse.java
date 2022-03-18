@@ -53,7 +53,9 @@ public final class MysqlRdbmsResponse {
             this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
             return this;
         }
-        public MysqlRdbmsResponse build() {
+        public Builder mysqlDatabases(MysqlDatabaseResponse... mysqlDatabases) {
+            return mysqlDatabases(List.of(mysqlDatabases));
+        }        public MysqlRdbmsResponse build() {
             return new MysqlRdbmsResponse(mysqlDatabases);
         }
     }

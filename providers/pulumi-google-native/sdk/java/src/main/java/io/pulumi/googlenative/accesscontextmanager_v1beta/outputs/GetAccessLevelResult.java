@@ -119,27 +119,22 @@ public final class GetAccessLevelResult {
             this.basic = Objects.requireNonNull(basic);
             return this;
         }
-
         public Builder custom(CustomLevelResponse custom) {
             this.custom = Objects.requireNonNull(custom);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GetAccessLevelResult build() {
+        }        public GetAccessLevelResult build() {
             return new GetAccessLevelResult(basic, custom, description, name, title);
         }
     }

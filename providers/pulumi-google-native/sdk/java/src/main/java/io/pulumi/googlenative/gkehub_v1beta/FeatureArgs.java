@@ -140,72 +140,58 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             this.featureId = featureId;
             return this;
         }
-
         public Builder featureId(@Nullable String featureId) {
             this.featureId = Output.ofNullable(featureId);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder membershipSpecs(@Nullable Output<Map<String,String>> membershipSpecs) {
             this.membershipSpecs = membershipSpecs;
             return this;
         }
-
         public Builder membershipSpecs(@Nullable Map<String,String> membershipSpecs) {
             this.membershipSpecs = Output.ofNullable(membershipSpecs);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder spec(@Nullable Output<CommonFeatureSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable CommonFeatureSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
-        }
-        public FeatureArgs build() {
+        }        public FeatureArgs build() {
             return new FeatureArgs(featureId, labels, location, membershipSpecs, project, requestId, spec);
         }
     }

@@ -77,12 +77,13 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder operationTypes(List<String> operationTypes) {
             this.operationTypes = Objects.requireNonNull(operationTypes);
             return this;
         }
-        public GoogleCloudApigeeV1GraphQLOperationResponse build() {
+        public Builder operationTypes(String... operationTypes) {
+            return operationTypes(List.of(operationTypes));
+        }        public GoogleCloudApigeeV1GraphQLOperationResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationResponse(operation, operationTypes);
         }
     }

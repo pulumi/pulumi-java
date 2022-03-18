@@ -110,42 +110,34 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
             this.exclusiveMaximum = exclusiveMaximum;
             return this;
         }
-
         public Builder exclusiveMaximum(@Nullable Double exclusiveMaximum) {
             this.exclusiveMaximum = Output.ofNullable(exclusiveMaximum);
             return this;
         }
-
         public Builder exclusiveMinimum(@Nullable Output<Double> exclusiveMinimum) {
             this.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
-
         public Builder exclusiveMinimum(@Nullable Double exclusiveMinimum) {
             this.exclusiveMinimum = Output.ofNullable(exclusiveMinimum);
             return this;
         }
-
         public Builder maximum(@Nullable Output<Double> maximum) {
             this.maximum = maximum;
             return this;
         }
-
         public Builder maximum(@Nullable Double maximum) {
             this.maximum = Output.ofNullable(maximum);
             return this;
         }
-
         public Builder minimum(@Nullable Output<Double> minimum) {
             this.minimum = minimum;
             return this;
         }
-
         public Builder minimum(@Nullable Double minimum) {
             this.minimum = Output.ofNullable(minimum);
             return this;
-        }
-        public GoogleCloudRetailV2betaIntervalArgs build() {
+        }        public GoogleCloudRetailV2betaIntervalArgs build() {
             return new GoogleCloudRetailV2betaIntervalArgs(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }
     }

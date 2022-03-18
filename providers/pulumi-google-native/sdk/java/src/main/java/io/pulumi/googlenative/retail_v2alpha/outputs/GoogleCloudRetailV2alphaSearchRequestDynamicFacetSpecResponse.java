@@ -51,8 +51,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse build() {
+        }        public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse build() {
             return new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(mode);
         }
     }

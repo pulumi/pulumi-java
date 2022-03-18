@@ -189,47 +189,38 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder filename(String filename) {
             this.filename = Objects.requireNonNull(filename);
             return this;
         }
-
         public Builder homePage(String homePage) {
             this.homePage = Objects.requireNonNull(homePage);
             return this;
         }
-
         public Builder licenseConcluded(LicenseResponse licenseConcluded) {
             this.licenseConcluded = Objects.requireNonNull(licenseConcluded);
             return this;
         }
-
         public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public Builder sourceInfo(String sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
-
         public Builder summaryDescription(String summaryDescription) {
             this.summaryDescription = Objects.requireNonNull(summaryDescription);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public PackageInfoOccurrenceResponse build() {
+        }        public PackageInfoOccurrenceResponse build() {
             return new PackageInfoOccurrenceResponse(comment, filename, homePage, licenseConcluded, packageType, sourceInfo, summaryDescription, title, version);
         }
     }

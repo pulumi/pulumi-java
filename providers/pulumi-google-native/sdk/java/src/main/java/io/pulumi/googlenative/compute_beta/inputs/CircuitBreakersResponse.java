@@ -141,32 +141,26 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
             this.connectTimeout = Objects.requireNonNull(connectTimeout);
             return this;
         }
-
         public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
-
         public Builder maxPendingRequests(Integer maxPendingRequests) {
             this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests);
             return this;
         }
-
         public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }
-
         public Builder maxRequestsPerConnection(Integer maxRequestsPerConnection) {
             this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection);
             return this;
         }
-
         public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
-        }
-        public CircuitBreakersResponse build() {
+        }        public CircuitBreakersResponse build() {
             return new CircuitBreakersResponse(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }
     }

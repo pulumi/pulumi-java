@@ -71,12 +71,13 @@ public final class ApiOperationResponse {
             this.methodSelectors = Objects.requireNonNull(methodSelectors);
             return this;
         }
-
+        public Builder methodSelectors(MethodSelectorResponse... methodSelectors) {
+            return methodSelectors(List.of(methodSelectors));
+        }
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public ApiOperationResponse build() {
+        }        public ApiOperationResponse build() {
             return new ApiOperationResponse(methodSelectors, serviceName);
         }
     }

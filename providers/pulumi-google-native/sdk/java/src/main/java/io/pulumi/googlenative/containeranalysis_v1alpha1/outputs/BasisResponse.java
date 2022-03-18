@@ -70,12 +70,10 @@ public final class BasisResponse {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder resourceUrl(String resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
-        }
-        public BasisResponse build() {
+        }        public BasisResponse build() {
             return new BasisResponse(fingerprint, resourceUrl);
         }
     }

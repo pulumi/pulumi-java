@@ -161,82 +161,69 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BucketIamPolicyBindingsItemArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BucketIamPolicyBindingsItemArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder userProject(@Nullable Output<String> userProject) {
             this.userProject = userProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = Output.ofNullable(userProject);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public BucketIamPolicyArgs build() {
+        }        public BucketIamPolicyArgs build() {
             return new BucketIamPolicyArgs(bindings, bucket, etag, kind, provisionalUserProject, resourceId, userProject, version);
         }
     }

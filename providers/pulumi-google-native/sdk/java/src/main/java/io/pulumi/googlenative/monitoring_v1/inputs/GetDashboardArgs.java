@@ -66,12 +66,10 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
             this.dashboardId = Objects.requireNonNull(dashboardId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDashboardArgs build() {
+        }        public GetDashboardArgs build() {
             return new GetDashboardArgs(dashboardId, project);
         }
     }

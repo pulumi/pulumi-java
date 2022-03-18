@@ -79,22 +79,18 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends io.pulumi.reso
             this.pullDeps = pullDeps;
             return this;
         }
-
         public Builder pullDeps(@Nullable Boolean pullDeps) {
             this.pullDeps = Output.ofNullable(pullDeps);
             return this;
         }
-
         public Builder source(Output<OSPolicyResourceFileArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(OSPolicyResourceFileArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public OSPolicyResourcePackageResourceRPMArgs build() {
+        }        public OSPolicyResourcePackageResourceRPMArgs build() {
             return new OSPolicyResourcePackageResourceRPMArgs(pullDeps, source);
         }
     }

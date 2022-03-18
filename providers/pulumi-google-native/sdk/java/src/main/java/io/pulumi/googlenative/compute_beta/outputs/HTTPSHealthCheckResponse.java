@@ -150,37 +150,30 @@ public final class HTTPSHealthCheckResponse {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
-
         public Builder portSpecification(String portSpecification) {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
-
         public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
-
         public Builder requestPath(String requestPath) {
             this.requestPath = Objects.requireNonNull(requestPath);
             return this;
         }
-
         public Builder response(String response) {
             this.response = Objects.requireNonNull(response);
             return this;
-        }
-        public HTTPSHealthCheckResponse build() {
+        }        public HTTPSHealthCheckResponse build() {
             return new HTTPSHealthCheckResponse(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }
     }

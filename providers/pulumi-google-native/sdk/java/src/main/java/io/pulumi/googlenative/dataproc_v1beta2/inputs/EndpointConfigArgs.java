@@ -61,12 +61,10 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
-
         public Builder enableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
             this.enableHttpPortAccess = Output.ofNullable(enableHttpPortAccess);
             return this;
-        }
-        public EndpointConfigArgs build() {
+        }        public EndpointConfigArgs build() {
             return new EndpointConfigArgs(enableHttpPortAccess);
         }
     }

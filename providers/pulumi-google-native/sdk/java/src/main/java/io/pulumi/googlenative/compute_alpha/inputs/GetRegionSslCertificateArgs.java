@@ -78,17 +78,14 @@ public final class GetRegionSslCertificateArgs extends io.pulumi.resources.Invok
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder sslCertificate(String sslCertificate) {
             this.sslCertificate = Objects.requireNonNull(sslCertificate);
             return this;
-        }
-        public GetRegionSslCertificateArgs build() {
+        }        public GetRegionSslCertificateArgs build() {
             return new GetRegionSslCertificateArgs(project, region, sslCertificate);
         }
     }

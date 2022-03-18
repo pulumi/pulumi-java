@@ -78,22 +78,18 @@ public final class AliasIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
-
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
-
         public Builder subnetworkRangeName(@Nullable Output<String> subnetworkRangeName) {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
-
         public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
             this.subnetworkRangeName = Output.ofNullable(subnetworkRangeName);
             return this;
-        }
-        public AliasIpRangeArgs build() {
+        }        public AliasIpRangeArgs build() {
             return new AliasIpRangeArgs(ipCidrRange, subnetworkRangeName);
         }
     }

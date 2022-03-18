@@ -201,52 +201,45 @@ public final class GetDatabaseResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder databaseDialect(String databaseDialect) {
             this.databaseDialect = Objects.requireNonNull(databaseDialect);
             return this;
         }
-
         public Builder defaultLeader(String defaultLeader) {
             this.defaultLeader = Objects.requireNonNull(defaultLeader);
             return this;
         }
-
         public Builder earliestVersionTime(String earliestVersionTime) {
             this.earliestVersionTime = Objects.requireNonNull(earliestVersionTime);
             return this;
         }
-
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
-
         public Builder encryptionInfo(List<EncryptionInfoResponse> encryptionInfo) {
             this.encryptionInfo = Objects.requireNonNull(encryptionInfo);
             return this;
         }
-
+        public Builder encryptionInfo(EncryptionInfoResponse... encryptionInfo) {
+            return encryptionInfo(List.of(encryptionInfo));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restoreInfo(RestoreInfoResponse restoreInfo) {
             this.restoreInfo = Objects.requireNonNull(restoreInfo);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder versionRetentionPeriod(String versionRetentionPeriod) {
             this.versionRetentionPeriod = Objects.requireNonNull(versionRetentionPeriod);
             return this;
-        }
-        public GetDatabaseResult build() {
+        }        public GetDatabaseResult build() {
             return new GetDatabaseResult(createTime, databaseDialect, defaultLeader, earliestVersionTime, encryptionConfig, encryptionInfo, name, restoreInfo, state, versionRetentionPeriod);
         }
     }

@@ -69,12 +69,10 @@ public final class AllowedIpRangeResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AllowedIpRangeResponse build() {
+        }        public AllowedIpRangeResponse build() {
             return new AllowedIpRangeResponse(description, value);
         }
     }

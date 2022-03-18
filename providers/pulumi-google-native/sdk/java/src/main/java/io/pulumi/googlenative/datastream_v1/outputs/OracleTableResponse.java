@@ -71,12 +71,13 @@ public final class OracleTableResponse {
             this.oracleColumns = Objects.requireNonNull(oracleColumns);
             return this;
         }
-
+        public Builder oracleColumns(OracleColumnResponse... oracleColumns) {
+            return oracleColumns(List.of(oracleColumns));
+        }
         public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
-        }
-        public OracleTableResponse build() {
+        }        public OracleTableResponse build() {
             return new OracleTableResponse(oracleColumns, table);
         }
     }

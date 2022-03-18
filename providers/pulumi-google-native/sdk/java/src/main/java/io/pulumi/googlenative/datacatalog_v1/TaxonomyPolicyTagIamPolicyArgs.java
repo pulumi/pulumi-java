@@ -141,72 +141,61 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder policyTagId(Output<String> policyTagId) {
             this.policyTagId = Objects.requireNonNull(policyTagId);
             return this;
         }
-
         public Builder policyTagId(String policyTagId) {
             this.policyTagId = Output.of(Objects.requireNonNull(policyTagId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder taxonomyId(Output<String> taxonomyId) {
             this.taxonomyId = Objects.requireNonNull(taxonomyId);
             return this;
         }
-
         public Builder taxonomyId(String taxonomyId) {
             this.taxonomyId = Output.of(Objects.requireNonNull(taxonomyId));
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public TaxonomyPolicyTagIamPolicyArgs build() {
+        }        public TaxonomyPolicyTagIamPolicyArgs build() {
             return new TaxonomyPolicyTagIamPolicyArgs(bindings, etag, location, policyTagId, project, taxonomyId, version);
         }
     }

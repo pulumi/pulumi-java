@@ -619,182 +619,155 @@ public final class GetInterconnectAttachmentResult {
             this.adminEnabled = Objects.requireNonNull(adminEnabled);
             return this;
         }
-
         public Builder bandwidth(String bandwidth) {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
-
         public Builder candidateIpv6Subnets(List<String> candidateIpv6Subnets) {
             this.candidateIpv6Subnets = Objects.requireNonNull(candidateIpv6Subnets);
             return this;
         }
-
+        public Builder candidateIpv6Subnets(String... candidateIpv6Subnets) {
+            return candidateIpv6Subnets(List.of(candidateIpv6Subnets));
+        }
         public Builder candidateSubnets(List<String> candidateSubnets) {
             this.candidateSubnets = Objects.requireNonNull(candidateSubnets);
             return this;
         }
-
+        public Builder candidateSubnets(String... candidateSubnets) {
+            return candidateSubnets(List.of(candidateSubnets));
+        }
         public Builder cloudRouterIpAddress(String cloudRouterIpAddress) {
             this.cloudRouterIpAddress = Objects.requireNonNull(cloudRouterIpAddress);
             return this;
         }
-
         public Builder cloudRouterIpv6Address(String cloudRouterIpv6Address) {
             this.cloudRouterIpv6Address = Objects.requireNonNull(cloudRouterIpv6Address);
             return this;
         }
-
         public Builder cloudRouterIpv6InterfaceId(String cloudRouterIpv6InterfaceId) {
             this.cloudRouterIpv6InterfaceId = Objects.requireNonNull(cloudRouterIpv6InterfaceId);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder customerRouterIpAddress(String customerRouterIpAddress) {
             this.customerRouterIpAddress = Objects.requireNonNull(customerRouterIpAddress);
             return this;
         }
-
         public Builder customerRouterIpv6Address(String customerRouterIpv6Address) {
             this.customerRouterIpv6Address = Objects.requireNonNull(customerRouterIpv6Address);
             return this;
         }
-
         public Builder customerRouterIpv6InterfaceId(String customerRouterIpv6InterfaceId) {
             this.customerRouterIpv6InterfaceId = Objects.requireNonNull(customerRouterIpv6InterfaceId);
             return this;
         }
-
         public Builder dataplaneVersion(Integer dataplaneVersion) {
             this.dataplaneVersion = Objects.requireNonNull(dataplaneVersion);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder edgeAvailabilityDomain(String edgeAvailabilityDomain) {
             this.edgeAvailabilityDomain = Objects.requireNonNull(edgeAvailabilityDomain);
             return this;
         }
-
         public Builder encryption(String encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
-
         public Builder interconnect(String interconnect) {
             this.interconnect = Objects.requireNonNull(interconnect);
             return this;
         }
-
         public Builder ipsecInternalAddresses(List<String> ipsecInternalAddresses) {
             this.ipsecInternalAddresses = Objects.requireNonNull(ipsecInternalAddresses);
             return this;
         }
-
+        public Builder ipsecInternalAddresses(String... ipsecInternalAddresses) {
+            return ipsecInternalAddresses(List.of(ipsecInternalAddresses));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder mtu(Integer mtu) {
             this.mtu = Objects.requireNonNull(mtu);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationalStatus(String operationalStatus) {
             this.operationalStatus = Objects.requireNonNull(operationalStatus);
             return this;
         }
-
         public Builder pairingKey(String pairingKey) {
             this.pairingKey = Objects.requireNonNull(pairingKey);
             return this;
         }
-
         public Builder partnerAsn(String partnerAsn) {
             this.partnerAsn = Objects.requireNonNull(partnerAsn);
             return this;
         }
-
         public Builder partnerMetadata(InterconnectAttachmentPartnerMetadataResponse partnerMetadata) {
             this.partnerMetadata = Objects.requireNonNull(partnerMetadata);
             return this;
         }
-
         public Builder privateInterconnectInfo(InterconnectAttachmentPrivateInfoResponse privateInterconnectInfo) {
             this.privateInterconnectInfo = Objects.requireNonNull(privateInterconnectInfo);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder router(String router) {
             this.router = Objects.requireNonNull(router);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vlanTag8021q(Integer vlanTag8021q) {
             this.vlanTag8021q = Objects.requireNonNull(vlanTag8021q);
             return this;
-        }
-        public GetInterconnectAttachmentResult build() {
+        }        public GetInterconnectAttachmentResult build() {
             return new GetInterconnectAttachmentResult(adminEnabled, bandwidth, candidateIpv6Subnets, candidateSubnets, cloudRouterIpAddress, cloudRouterIpv6Address, cloudRouterIpv6InterfaceId, creationTimestamp, customerRouterIpAddress, customerRouterIpv6Address, customerRouterIpv6InterfaceId, dataplaneVersion, description, edgeAvailabilityDomain, encryption, interconnect, ipsecInternalAddresses, kind, labelFingerprint, labels, mtu, name, operationalStatus, pairingKey, partnerAsn, partnerMetadata, privateInterconnectInfo, region, router, satisfiesPzs, selfLink, selfLinkWithId, stackType, state, type, vlanTag8021q);
         }
     }

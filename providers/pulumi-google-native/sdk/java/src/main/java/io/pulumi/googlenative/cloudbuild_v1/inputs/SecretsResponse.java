@@ -78,12 +78,16 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
             this.inline = Objects.requireNonNull(inline);
             return this;
         }
-
+        public Builder inline(InlineSecretResponse... inline) {
+            return inline(List.of(inline));
+        }
         public Builder secretManager(List<SecretManagerSecretResponse> secretManager) {
             this.secretManager = Objects.requireNonNull(secretManager);
             return this;
         }
-        public SecretsResponse build() {
+        public Builder secretManager(SecretManagerSecretResponse... secretManager) {
+            return secretManager(List.of(secretManager));
+        }        public SecretsResponse build() {
             return new SecretsResponse(inline, secretManager);
         }
     }

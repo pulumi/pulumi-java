@@ -71,22 +71,18 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder source(Output<SourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(SourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public RulesetArgs build() {
+        }        public RulesetArgs build() {
             return new RulesetArgs(project, source);
         }
     }

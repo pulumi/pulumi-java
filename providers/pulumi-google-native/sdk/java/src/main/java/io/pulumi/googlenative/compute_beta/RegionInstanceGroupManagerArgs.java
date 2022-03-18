@@ -311,172 +311,150 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             this.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
-
         public Builder autoHealingPolicies(@Nullable List<InstanceGroupManagerAutoHealingPolicyArgs> autoHealingPolicies) {
             this.autoHealingPolicies = Output.ofNullable(autoHealingPolicies);
             return this;
         }
-
+        public Builder autoHealingPolicies(InstanceGroupManagerAutoHealingPolicyArgs... autoHealingPolicies) {
+            return autoHealingPolicies(List.of(autoHealingPolicies));
+        }
         public Builder baseInstanceName(@Nullable Output<String> baseInstanceName) {
             this.baseInstanceName = baseInstanceName;
             return this;
         }
-
         public Builder baseInstanceName(@Nullable String baseInstanceName) {
             this.baseInstanceName = Output.ofNullable(baseInstanceName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder distributionPolicy(@Nullable Output<DistributionPolicyArgs> distributionPolicy) {
             this.distributionPolicy = distributionPolicy;
             return this;
         }
-
         public Builder distributionPolicy(@Nullable DistributionPolicyArgs distributionPolicy) {
             this.distributionPolicy = Output.ofNullable(distributionPolicy);
             return this;
         }
-
         public Builder failoverAction(@Nullable Output<RegionInstanceGroupManagerFailoverAction> failoverAction) {
             this.failoverAction = failoverAction;
             return this;
         }
-
         public Builder failoverAction(@Nullable RegionInstanceGroupManagerFailoverAction failoverAction) {
             this.failoverAction = Output.ofNullable(failoverAction);
             return this;
         }
-
         public Builder instanceTemplate(@Nullable Output<String> instanceTemplate) {
             this.instanceTemplate = instanceTemplate;
             return this;
         }
-
         public Builder instanceTemplate(@Nullable String instanceTemplate) {
             this.instanceTemplate = Output.ofNullable(instanceTemplate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namedPorts(@Nullable Output<List<NamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
-
         public Builder namedPorts(@Nullable List<NamedPortArgs> namedPorts) {
             this.namedPorts = Output.ofNullable(namedPorts);
             return this;
         }
-
+        public Builder namedPorts(NamedPortArgs... namedPorts) {
+            return namedPorts(List.of(namedPorts));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder statefulPolicy(@Nullable Output<StatefulPolicyArgs> statefulPolicy) {
             this.statefulPolicy = statefulPolicy;
             return this;
         }
-
         public Builder statefulPolicy(@Nullable StatefulPolicyArgs statefulPolicy) {
             this.statefulPolicy = Output.ofNullable(statefulPolicy);
             return this;
         }
-
         public Builder targetPools(@Nullable Output<List<String>> targetPools) {
             this.targetPools = targetPools;
             return this;
         }
-
         public Builder targetPools(@Nullable List<String> targetPools) {
             this.targetPools = Output.ofNullable(targetPools);
             return this;
         }
-
+        public Builder targetPools(String... targetPools) {
+            return targetPools(List.of(targetPools));
+        }
         public Builder targetSize(@Nullable Output<Integer> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
-
         public Builder targetSize(@Nullable Integer targetSize) {
             this.targetSize = Output.ofNullable(targetSize);
             return this;
         }
-
         public Builder updatePolicy(@Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             this.updatePolicy = updatePolicy;
             return this;
         }
-
         public Builder updatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
             this.updatePolicy = Output.ofNullable(updatePolicy);
             return this;
         }
-
         public Builder versions(@Nullable Output<List<InstanceGroupManagerVersionArgs>> versions) {
             this.versions = versions;
             return this;
         }
-
         public Builder versions(@Nullable List<InstanceGroupManagerVersionArgs> versions) {
             this.versions = Output.ofNullable(versions);
             return this;
         }
-        public RegionInstanceGroupManagerArgs build() {
+        public Builder versions(InstanceGroupManagerVersionArgs... versions) {
+            return versions(List.of(versions));
+        }        public RegionInstanceGroupManagerArgs build() {
             return new RegionInstanceGroupManagerArgs(autoHealingPolicies, baseInstanceName, description, distributionPolicy, failoverAction, instanceTemplate, name, namedPorts, project, region, requestId, serviceAccount, statefulPolicy, targetPools, targetSize, updatePolicy, versions);
         }
     }

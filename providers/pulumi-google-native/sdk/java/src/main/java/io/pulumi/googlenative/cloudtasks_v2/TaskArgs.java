@@ -177,92 +177,74 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             this.appEngineHttpRequest = appEngineHttpRequest;
             return this;
         }
-
         public Builder appEngineHttpRequest(@Nullable AppEngineHttpRequestArgs appEngineHttpRequest) {
             this.appEngineHttpRequest = Output.ofNullable(appEngineHttpRequest);
             return this;
         }
-
         public Builder dispatchDeadline(@Nullable Output<String> dispatchDeadline) {
             this.dispatchDeadline = dispatchDeadline;
             return this;
         }
-
         public Builder dispatchDeadline(@Nullable String dispatchDeadline) {
             this.dispatchDeadline = Output.ofNullable(dispatchDeadline);
             return this;
         }
-
         public Builder httpRequest(@Nullable Output<HttpRequestArgs> httpRequest) {
             this.httpRequest = httpRequest;
             return this;
         }
-
         public Builder httpRequest(@Nullable HttpRequestArgs httpRequest) {
             this.httpRequest = Output.ofNullable(httpRequest);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder queueId(Output<String> queueId) {
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }
-
         public Builder queueId(String queueId) {
             this.queueId = Output.of(Objects.requireNonNull(queueId));
             return this;
         }
-
         public Builder responseView(@Nullable Output<TaskResponseView> responseView) {
             this.responseView = responseView;
             return this;
         }
-
         public Builder responseView(@Nullable TaskResponseView responseView) {
             this.responseView = Output.ofNullable(responseView);
             return this;
         }
-
         public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
         }
-
         public Builder scheduleTime(@Nullable String scheduleTime) {
             this.scheduleTime = Output.ofNullable(scheduleTime);
             return this;
-        }
-        public TaskArgs build() {
+        }        public TaskArgs build() {
             return new TaskArgs(appEngineHttpRequest, dispatchDeadline, httpRequest, location, name, project, queueId, responseView, scheduleTime);
         }
     }

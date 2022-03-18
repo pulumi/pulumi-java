@@ -87,17 +87,17 @@ public final class SparkSqlBatchResponse {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
-
         public Builder queryVariables(Map<String,String> queryVariables) {
             this.queryVariables = Objects.requireNonNull(queryVariables);
             return this;
-        }
-        public SparkSqlBatchResponse build() {
+        }        public SparkSqlBatchResponse build() {
             return new SparkSqlBatchResponse(jarFileUris, queryFileUri, queryVariables);
         }
     }

@@ -85,17 +85,14 @@ public final class LabelDescriptorResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
-        }
-        public LabelDescriptorResponse build() {
+        }        public LabelDescriptorResponse build() {
             return new LabelDescriptorResponse(description, key, valueType);
         }
     }

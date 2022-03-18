@@ -112,42 +112,34 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
-
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = Output.ofNullable(endTimeOffset);
             return this;
         }
-
         public Builder fadeType(Output<AnimationFadeFadeType> fadeType) {
             this.fadeType = Objects.requireNonNull(fadeType);
             return this;
         }
-
         public Builder fadeType(AnimationFadeFadeType fadeType) {
             this.fadeType = Output.of(Objects.requireNonNull(fadeType));
             return this;
         }
-
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
-
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
         }
-
         public Builder xy(@Nullable Output<NormalizedCoordinateArgs> xy) {
             this.xy = xy;
             return this;
         }
-
         public Builder xy(@Nullable NormalizedCoordinateArgs xy) {
             this.xy = Output.ofNullable(xy);
             return this;
-        }
-        public AnimationFadeArgs build() {
+        }        public AnimationFadeArgs build() {
             return new AnimationFadeArgs(endTimeOffset, fadeType, startTimeOffset, xy);
         }
     }

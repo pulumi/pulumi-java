@@ -78,22 +78,18 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public GoogleCloudDatacatalogV1SystemTimestampsArgs build() {
+        }        public GoogleCloudDatacatalogV1SystemTimestampsArgs build() {
             return new GoogleCloudDatacatalogV1SystemTimestampsArgs(createTime, updateTime);
         }
     }

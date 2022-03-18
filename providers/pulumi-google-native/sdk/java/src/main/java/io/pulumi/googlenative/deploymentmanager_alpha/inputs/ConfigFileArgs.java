@@ -57,12 +57,10 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
-        }
-        public ConfigFileArgs build() {
+        }        public ConfigFileArgs build() {
             return new ConfigFileArgs(content);
         }
     }

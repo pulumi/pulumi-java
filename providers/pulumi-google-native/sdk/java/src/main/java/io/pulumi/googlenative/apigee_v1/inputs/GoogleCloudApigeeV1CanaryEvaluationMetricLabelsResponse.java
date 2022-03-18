@@ -92,17 +92,14 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse build() {
+        }        public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse build() {
             return new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(env, instanceId, location);
         }
     }

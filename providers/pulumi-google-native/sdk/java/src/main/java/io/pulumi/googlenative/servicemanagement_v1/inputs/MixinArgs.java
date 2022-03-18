@@ -78,22 +78,18 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder root(@Nullable Output<String> root) {
             this.root = root;
             return this;
         }
-
         public Builder root(@Nullable String root) {
             this.root = Output.ofNullable(root);
             return this;
-        }
-        public MixinArgs build() {
+        }        public MixinArgs build() {
             return new MixinArgs(name, root);
         }
     }

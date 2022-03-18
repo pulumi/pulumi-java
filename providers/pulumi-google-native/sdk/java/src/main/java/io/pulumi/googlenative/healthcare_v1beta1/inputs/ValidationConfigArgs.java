@@ -128,52 +128,45 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
             this.disableFhirpathValidation = disableFhirpathValidation;
             return this;
         }
-
         public Builder disableFhirpathValidation(@Nullable Boolean disableFhirpathValidation) {
             this.disableFhirpathValidation = Output.ofNullable(disableFhirpathValidation);
             return this;
         }
-
         public Builder disableProfileValidation(@Nullable Output<Boolean> disableProfileValidation) {
             this.disableProfileValidation = disableProfileValidation;
             return this;
         }
-
         public Builder disableProfileValidation(@Nullable Boolean disableProfileValidation) {
             this.disableProfileValidation = Output.ofNullable(disableProfileValidation);
             return this;
         }
-
         public Builder disableReferenceTypeValidation(@Nullable Output<Boolean> disableReferenceTypeValidation) {
             this.disableReferenceTypeValidation = disableReferenceTypeValidation;
             return this;
         }
-
         public Builder disableReferenceTypeValidation(@Nullable Boolean disableReferenceTypeValidation) {
             this.disableReferenceTypeValidation = Output.ofNullable(disableReferenceTypeValidation);
             return this;
         }
-
         public Builder disableRequiredFieldValidation(@Nullable Output<Boolean> disableRequiredFieldValidation) {
             this.disableRequiredFieldValidation = disableRequiredFieldValidation;
             return this;
         }
-
         public Builder disableRequiredFieldValidation(@Nullable Boolean disableRequiredFieldValidation) {
             this.disableRequiredFieldValidation = Output.ofNullable(disableRequiredFieldValidation);
             return this;
         }
-
         public Builder enabledImplementationGuides(@Nullable Output<List<String>> enabledImplementationGuides) {
             this.enabledImplementationGuides = enabledImplementationGuides;
             return this;
         }
-
         public Builder enabledImplementationGuides(@Nullable List<String> enabledImplementationGuides) {
             this.enabledImplementationGuides = Output.ofNullable(enabledImplementationGuides);
             return this;
         }
-        public ValidationConfigArgs build() {
+        public Builder enabledImplementationGuides(String... enabledImplementationGuides) {
+            return enabledImplementationGuides(List.of(enabledImplementationGuides));
+        }        public ValidationConfigArgs build() {
             return new ValidationConfigArgs(disableFhirpathValidation, disableProfileValidation, disableReferenceTypeValidation, disableRequiredFieldValidation, enabledImplementationGuides);
         }
     }

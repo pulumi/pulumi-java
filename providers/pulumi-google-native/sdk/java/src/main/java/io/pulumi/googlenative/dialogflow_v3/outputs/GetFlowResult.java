@@ -153,37 +153,39 @@ public final class GetFlowResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder eventHandlers(List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers) {
             this.eventHandlers = Objects.requireNonNull(eventHandlers);
             return this;
         }
-
+        public Builder eventHandlers(GoogleCloudDialogflowCxV3EventHandlerResponse... eventHandlers) {
+            return eventHandlers(List.of(eventHandlers));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nluSettings(GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings) {
             this.nluSettings = Objects.requireNonNull(nluSettings);
             return this;
         }
-
         public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Objects.requireNonNull(transitionRouteGroups);
             return this;
         }
-
+        public Builder transitionRouteGroups(String... transitionRouteGroups) {
+            return transitionRouteGroups(List.of(transitionRouteGroups));
+        }
         public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-        public GetFlowResult build() {
+        public Builder transitionRoutes(GoogleCloudDialogflowCxV3TransitionRouteResponse... transitionRoutes) {
+            return transitionRoutes(List.of(transitionRoutes));
+        }        public GetFlowResult build() {
             return new GetFlowResult(description, displayName, eventHandlers, name, nluSettings, transitionRouteGroups, transitionRoutes);
         }
     }

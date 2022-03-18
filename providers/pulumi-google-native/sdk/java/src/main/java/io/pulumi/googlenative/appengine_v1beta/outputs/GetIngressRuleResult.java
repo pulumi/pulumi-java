@@ -102,22 +102,18 @@ public final class GetIngressRuleResult {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder sourceRange(String sourceRange) {
             this.sourceRange = Objects.requireNonNull(sourceRange);
             return this;
-        }
-        public GetIngressRuleResult build() {
+        }        public GetIngressRuleResult build() {
             return new GetIngressRuleResult(action, description, priority, sourceRange);
         }
     }

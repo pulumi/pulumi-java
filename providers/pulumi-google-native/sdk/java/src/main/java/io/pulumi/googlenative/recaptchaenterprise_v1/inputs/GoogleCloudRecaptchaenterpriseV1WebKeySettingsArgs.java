@@ -130,52 +130,45 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
             this.allowAllDomains = allowAllDomains;
             return this;
         }
-
         public Builder allowAllDomains(@Nullable Boolean allowAllDomains) {
             this.allowAllDomains = Output.ofNullable(allowAllDomains);
             return this;
         }
-
         public Builder allowAmpTraffic(@Nullable Output<Boolean> allowAmpTraffic) {
             this.allowAmpTraffic = allowAmpTraffic;
             return this;
         }
-
         public Builder allowAmpTraffic(@Nullable Boolean allowAmpTraffic) {
             this.allowAmpTraffic = Output.ofNullable(allowAmpTraffic);
             return this;
         }
-
         public Builder allowedDomains(@Nullable Output<List<String>> allowedDomains) {
             this.allowedDomains = allowedDomains;
             return this;
         }
-
         public Builder allowedDomains(@Nullable List<String> allowedDomains) {
             this.allowedDomains = Output.ofNullable(allowedDomains);
             return this;
         }
-
+        public Builder allowedDomains(String... allowedDomains) {
+            return allowedDomains(List.of(allowedDomains));
+        }
         public Builder challengeSecurityPreference(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference> challengeSecurityPreference) {
             this.challengeSecurityPreference = challengeSecurityPreference;
             return this;
         }
-
         public Builder challengeSecurityPreference(@Nullable GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference challengeSecurityPreference) {
             this.challengeSecurityPreference = Output.ofNullable(challengeSecurityPreference);
             return this;
         }
-
         public Builder integrationType(Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> integrationType) {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }
-
         public Builder integrationType(GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType integrationType) {
             this.integrationType = Output.of(Objects.requireNonNull(integrationType));
             return this;
-        }
-        public GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs build() {
+        }        public GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs build() {
             return new GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
         }
     }

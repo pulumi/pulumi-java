@@ -69,12 +69,10 @@ public final class AutoUpgradeOptionsResponse {
             this.autoUpgradeStartTime = Objects.requireNonNull(autoUpgradeStartTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
-        }
-        public AutoUpgradeOptionsResponse build() {
+        }        public AutoUpgradeOptionsResponse build() {
             return new AutoUpgradeOptionsResponse(autoUpgradeStartTime, description);
         }
     }

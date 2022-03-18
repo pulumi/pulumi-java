@@ -76,12 +76,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse extends i
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder ttl(Integer ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
-        }
-        public BackendBucketCdnPolicyNegativeCachingPolicyResponse build() {
+        }        public BackendBucketCdnPolicyNegativeCachingPolicyResponse build() {
             return new BackendBucketCdnPolicyNegativeCachingPolicyResponse(code, ttl);
         }
     }

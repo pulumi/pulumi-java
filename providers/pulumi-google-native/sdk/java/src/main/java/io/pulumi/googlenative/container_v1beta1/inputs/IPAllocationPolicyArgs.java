@@ -207,102 +207,82 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             this.allowRouteOverlap = allowRouteOverlap;
             return this;
         }
-
         public Builder allowRouteOverlap(@Nullable Boolean allowRouteOverlap) {
             this.allowRouteOverlap = Output.ofNullable(allowRouteOverlap);
             return this;
         }
-
         public Builder clusterIpv4CidrBlock(@Nullable Output<String> clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
-
         public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Output.ofNullable(clusterIpv4CidrBlock);
             return this;
         }
-
         public Builder clusterSecondaryRangeName(@Nullable Output<String> clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
-
         public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Output.ofNullable(clusterSecondaryRangeName);
             return this;
         }
-
         public Builder createSubnetwork(@Nullable Output<Boolean> createSubnetwork) {
             this.createSubnetwork = createSubnetwork;
             return this;
         }
-
         public Builder createSubnetwork(@Nullable Boolean createSubnetwork) {
             this.createSubnetwork = Output.ofNullable(createSubnetwork);
             return this;
         }
-
         public Builder nodeIpv4CidrBlock(@Nullable Output<String> nodeIpv4CidrBlock) {
             this.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
             return this;
         }
-
         public Builder nodeIpv4CidrBlock(@Nullable String nodeIpv4CidrBlock) {
             this.nodeIpv4CidrBlock = Output.ofNullable(nodeIpv4CidrBlock);
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(@Nullable Output<String> servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Output.ofNullable(servicesIpv4CidrBlock);
             return this;
         }
-
         public Builder servicesSecondaryRangeName(@Nullable Output<String> servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-
         public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Output.ofNullable(servicesSecondaryRangeName);
             return this;
         }
-
         public Builder subnetworkName(@Nullable Output<String> subnetworkName) {
             this.subnetworkName = subnetworkName;
             return this;
         }
-
         public Builder subnetworkName(@Nullable String subnetworkName) {
             this.subnetworkName = Output.ofNullable(subnetworkName);
             return this;
         }
-
         public Builder useIpAliases(@Nullable Output<Boolean> useIpAliases) {
             this.useIpAliases = useIpAliases;
             return this;
         }
-
         public Builder useIpAliases(@Nullable Boolean useIpAliases) {
             this.useIpAliases = Output.ofNullable(useIpAliases);
             return this;
         }
-
         public Builder useRoutes(@Nullable Output<Boolean> useRoutes) {
             this.useRoutes = useRoutes;
             return this;
         }
-
         public Builder useRoutes(@Nullable Boolean useRoutes) {
             this.useRoutes = Output.ofNullable(useRoutes);
             return this;
-        }
-        public IPAllocationPolicyArgs build() {
+        }        public IPAllocationPolicyArgs build() {
             return new IPAllocationPolicyArgs(allowRouteOverlap, clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4CidrBlock, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, useIpAliases, useRoutes);
         }
     }

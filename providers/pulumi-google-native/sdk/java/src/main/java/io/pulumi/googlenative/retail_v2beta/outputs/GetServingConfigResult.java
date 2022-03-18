@@ -311,87 +311,100 @@ public final class GetServingConfigResult {
             this.boostControlIds = Objects.requireNonNull(boostControlIds);
             return this;
         }
-
+        public Builder boostControlIds(String... boostControlIds) {
+            return boostControlIds(List.of(boostControlIds));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder diversityLevel(String diversityLevel) {
             this.diversityLevel = Objects.requireNonNull(diversityLevel);
             return this;
         }
-
         public Builder doNotAssociateControlIds(List<String> doNotAssociateControlIds) {
             this.doNotAssociateControlIds = Objects.requireNonNull(doNotAssociateControlIds);
             return this;
         }
-
+        public Builder doNotAssociateControlIds(String... doNotAssociateControlIds) {
+            return doNotAssociateControlIds(List.of(doNotAssociateControlIds));
+        }
         public Builder dynamicFacetSpec(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse dynamicFacetSpec) {
             this.dynamicFacetSpec = Objects.requireNonNull(dynamicFacetSpec);
             return this;
         }
-
         public Builder enableCategoryFilterLevel(String enableCategoryFilterLevel) {
             this.enableCategoryFilterLevel = Objects.requireNonNull(enableCategoryFilterLevel);
             return this;
         }
-
         public Builder facetControlIds(List<String> facetControlIds) {
             this.facetControlIds = Objects.requireNonNull(facetControlIds);
             return this;
         }
-
+        public Builder facetControlIds(String... facetControlIds) {
+            return facetControlIds(List.of(facetControlIds));
+        }
         public Builder filterControlIds(List<String> filterControlIds) {
             this.filterControlIds = Objects.requireNonNull(filterControlIds);
             return this;
         }
-
+        public Builder filterControlIds(String... filterControlIds) {
+            return filterControlIds(List.of(filterControlIds));
+        }
         public Builder ignoreControlIds(List<String> ignoreControlIds) {
             this.ignoreControlIds = Objects.requireNonNull(ignoreControlIds);
             return this;
         }
-
+        public Builder ignoreControlIds(String... ignoreControlIds) {
+            return ignoreControlIds(List.of(ignoreControlIds));
+        }
         public Builder modelId(String modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder onewaySynonymsControlIds(List<String> onewaySynonymsControlIds) {
             this.onewaySynonymsControlIds = Objects.requireNonNull(onewaySynonymsControlIds);
             return this;
         }
-
+        public Builder onewaySynonymsControlIds(String... onewaySynonymsControlIds) {
+            return onewaySynonymsControlIds(List.of(onewaySynonymsControlIds));
+        }
         public Builder priceRerankingLevel(String priceRerankingLevel) {
             this.priceRerankingLevel = Objects.requireNonNull(priceRerankingLevel);
             return this;
         }
-
         public Builder redirectControlIds(List<String> redirectControlIds) {
             this.redirectControlIds = Objects.requireNonNull(redirectControlIds);
             return this;
         }
-
+        public Builder redirectControlIds(String... redirectControlIds) {
+            return redirectControlIds(List.of(redirectControlIds));
+        }
         public Builder replacementControlIds(List<String> replacementControlIds) {
             this.replacementControlIds = Objects.requireNonNull(replacementControlIds);
             return this;
         }
-
+        public Builder replacementControlIds(String... replacementControlIds) {
+            return replacementControlIds(List.of(replacementControlIds));
+        }
         public Builder solutionTypes(List<String> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
-
+        public Builder solutionTypes(String... solutionTypes) {
+            return solutionTypes(List.of(solutionTypes));
+        }
         public Builder twowaySynonymsControlIds(List<String> twowaySynonymsControlIds) {
             this.twowaySynonymsControlIds = Objects.requireNonNull(twowaySynonymsControlIds);
             return this;
         }
-        public GetServingConfigResult build() {
+        public Builder twowaySynonymsControlIds(String... twowaySynonymsControlIds) {
+            return twowaySynonymsControlIds(List.of(twowaySynonymsControlIds));
+        }        public GetServingConfigResult build() {
             return new GetServingConfigResult(boostControlIds, displayName, diversityLevel, doNotAssociateControlIds, dynamicFacetSpec, enableCategoryFilterLevel, facetControlIds, filterControlIds, ignoreControlIds, modelId, name, onewaySynonymsControlIds, priceRerankingLevel, redirectControlIds, replacementControlIds, solutionTypes, twowaySynonymsControlIds);
         }
     }

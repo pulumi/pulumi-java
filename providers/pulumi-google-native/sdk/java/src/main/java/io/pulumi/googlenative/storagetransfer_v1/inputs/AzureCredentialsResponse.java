@@ -58,8 +58,7 @@ public final class AzureCredentialsResponse extends io.pulumi.resources.InvokeAr
         public Builder sasToken(String sasToken) {
             this.sasToken = Objects.requireNonNull(sasToken);
             return this;
-        }
-        public AzureCredentialsResponse build() {
+        }        public AzureCredentialsResponse build() {
             return new AzureCredentialsResponse(sasToken);
         }
     }

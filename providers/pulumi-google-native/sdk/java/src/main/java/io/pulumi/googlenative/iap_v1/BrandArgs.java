@@ -86,32 +86,26 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationTitle = applicationTitle;
             return this;
         }
-
         public Builder applicationTitle(@Nullable String applicationTitle) {
             this.applicationTitle = Output.ofNullable(applicationTitle);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
             this.supportEmail = supportEmail;
             return this;
         }
-
         public Builder supportEmail(@Nullable String supportEmail) {
             this.supportEmail = Output.ofNullable(supportEmail);
             return this;
-        }
-        public BrandArgs build() {
+        }        public BrandArgs build() {
             return new BrandArgs(applicationTitle, project, supportEmail);
         }
     }

@@ -141,32 +141,26 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
-
         public Builder blockOwnerDeletion(Boolean blockOwnerDeletion) {
             this.blockOwnerDeletion = Objects.requireNonNull(blockOwnerDeletion);
             return this;
         }
-
         public Builder controller(Boolean controller) {
             this.controller = Objects.requireNonNull(controller);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public OwnerReferenceResponse build() {
+        }        public OwnerReferenceResponse build() {
             return new OwnerReferenceResponse(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }
     }

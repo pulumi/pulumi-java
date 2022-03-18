@@ -232,62 +232,53 @@ public final class GetBackendBucketResult {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder cdnPolicy(BackendBucketCdnPolicyResponse cdnPolicy) {
             this.cdnPolicy = Objects.requireNonNull(cdnPolicy);
             return this;
         }
-
         public Builder compressionMode(String compressionMode) {
             this.compressionMode = Objects.requireNonNull(compressionMode);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder customResponseHeaders(List<String> customResponseHeaders) {
             this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
             return this;
         }
-
+        public Builder customResponseHeaders(String... customResponseHeaders) {
+            return customResponseHeaders(List.of(customResponseHeaders));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder edgeSecurityPolicy(String edgeSecurityPolicy) {
             this.edgeSecurityPolicy = Objects.requireNonNull(edgeSecurityPolicy);
             return this;
         }
-
         public Builder enableCdn(Boolean enableCdn) {
             this.enableCdn = Objects.requireNonNull(enableCdn);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
-        }
-        public GetBackendBucketResult build() {
+        }        public GetBackendBucketResult build() {
             return new GetBackendBucketResult(bucketName, cdnPolicy, compressionMode, creationTimestamp, customResponseHeaders, description, edgeSecurityPolicy, enableCdn, kind, name, selfLink, selfLinkWithId);
         }
     }

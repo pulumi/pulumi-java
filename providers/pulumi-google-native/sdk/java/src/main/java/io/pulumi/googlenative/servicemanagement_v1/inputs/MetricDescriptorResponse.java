@@ -223,57 +223,52 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder labels(List<LabelDescriptorResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(LabelDescriptorResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder launchStage(String launchStage) {
             this.launchStage = Objects.requireNonNull(launchStage);
             return this;
         }
-
         public Builder metadata(MetricDescriptorMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder metricKind(String metricKind) {
             this.metricKind = Objects.requireNonNull(metricKind);
             return this;
         }
-
         public Builder monitoredResourceTypes(List<String> monitoredResourceTypes) {
             this.monitoredResourceTypes = Objects.requireNonNull(monitoredResourceTypes);
             return this;
         }
-
+        public Builder monitoredResourceTypes(String... monitoredResourceTypes) {
+            return monitoredResourceTypes(List.of(monitoredResourceTypes));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
-        }
-        public MetricDescriptorResponse build() {
+        }        public MetricDescriptorResponse build() {
             return new MetricDescriptorResponse(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, type, unit, valueType);
         }
     }

@@ -70,12 +70,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
             this.leaveUntransformed = Objects.requireNonNull(leaveUntransformed);
             return this;
         }
-
         public Builder throwError(GooglePrivacyDlpV2ThrowErrorResponse throwError) {
             this.throwError = Objects.requireNonNull(throwError);
             return this;
-        }
-        public GooglePrivacyDlpV2TransformationErrorHandlingResponse build() {
+        }        public GooglePrivacyDlpV2TransformationErrorHandlingResponse build() {
             return new GooglePrivacyDlpV2TransformationErrorHandlingResponse(leaveUntransformed, throwError);
         }
     }

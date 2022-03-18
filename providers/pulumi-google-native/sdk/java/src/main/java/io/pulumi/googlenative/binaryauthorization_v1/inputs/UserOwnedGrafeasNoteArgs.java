@@ -80,22 +80,21 @@ public final class UserOwnedGrafeasNoteArgs extends io.pulumi.resources.Resource
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
-
         public Builder noteReference(String noteReference) {
             this.noteReference = Output.of(Objects.requireNonNull(noteReference));
             return this;
         }
-
         public Builder publicKeys(@Nullable Output<List<AttestorPublicKeyArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
-
         public Builder publicKeys(@Nullable List<AttestorPublicKeyArgs> publicKeys) {
             this.publicKeys = Output.ofNullable(publicKeys);
             return this;
         }
-        public UserOwnedGrafeasNoteArgs build() {
+        public Builder publicKeys(AttestorPublicKeyArgs... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public UserOwnedGrafeasNoteArgs build() {
             return new UserOwnedGrafeasNoteArgs(noteReference, publicKeys);
         }
     }

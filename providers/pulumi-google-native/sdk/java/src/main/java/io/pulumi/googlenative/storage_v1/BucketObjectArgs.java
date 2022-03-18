@@ -670,412 +670,333 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             this.acl = acl;
             return this;
         }
-
         public Builder acl(@Nullable List<ObjectAccessControlArgs> acl) {
             this.acl = Output.ofNullable(acl);
             return this;
         }
-
+        public Builder acl(ObjectAccessControlArgs... acl) {
+            return acl(List.of(acl));
+        }
         public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder cacheControl(@Nullable Output<String> cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
-
         public Builder cacheControl(@Nullable String cacheControl) {
             this.cacheControl = Output.ofNullable(cacheControl);
             return this;
         }
-
         public Builder componentCount(@Nullable Output<Integer> componentCount) {
             this.componentCount = componentCount;
             return this;
         }
-
         public Builder componentCount(@Nullable Integer componentCount) {
             this.componentCount = Output.ofNullable(componentCount);
             return this;
         }
-
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
-
         public Builder contentDisposition(@Nullable String contentDisposition) {
             this.contentDisposition = Output.ofNullable(contentDisposition);
             return this;
         }
-
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
-
         public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
         }
-
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
-
         public Builder contentLanguage(@Nullable String contentLanguage) {
             this.contentLanguage = Output.ofNullable(contentLanguage);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder crc32c(@Nullable Output<String> crc32c) {
             this.crc32c = crc32c;
             return this;
         }
-
         public Builder crc32c(@Nullable String crc32c) {
             this.crc32c = Output.ofNullable(crc32c);
             return this;
         }
-
         public Builder customTime(@Nullable Output<String> customTime) {
             this.customTime = customTime;
             return this;
         }
-
         public Builder customTime(@Nullable String customTime) {
             this.customTime = Output.ofNullable(customTime);
             return this;
         }
-
         public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption) {
             this.customerEncryption = customerEncryption;
             return this;
         }
-
         public Builder customerEncryption(@Nullable BucketObjectCustomerEncryptionArgs customerEncryption) {
             this.customerEncryption = Output.ofNullable(customerEncryption);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder eventBasedHold(@Nullable Output<Boolean> eventBasedHold) {
             this.eventBasedHold = eventBasedHold;
             return this;
         }
-
         public Builder eventBasedHold(@Nullable Boolean eventBasedHold) {
             this.eventBasedHold = Output.ofNullable(eventBasedHold);
             return this;
         }
-
         public Builder generation(@Nullable Output<String> generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder generation(@Nullable String generation) {
             this.generation = Output.ofNullable(generation);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ifGenerationMatch(@Nullable Output<String> ifGenerationMatch) {
             this.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
-
         public Builder ifGenerationMatch(@Nullable String ifGenerationMatch) {
             this.ifGenerationMatch = Output.ofNullable(ifGenerationMatch);
             return this;
         }
-
         public Builder ifGenerationNotMatch(@Nullable Output<String> ifGenerationNotMatch) {
             this.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
-
         public Builder ifGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
             this.ifGenerationNotMatch = Output.ofNullable(ifGenerationNotMatch);
             return this;
         }
-
         public Builder ifMetagenerationMatch(@Nullable Output<String> ifMetagenerationMatch) {
             this.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
-
         public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
             this.ifMetagenerationMatch = Output.ofNullable(ifMetagenerationMatch);
             return this;
         }
-
         public Builder ifMetagenerationNotMatch(@Nullable Output<String> ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
-
         public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = Output.ofNullable(ifMetagenerationNotMatch);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder md5Hash(@Nullable Output<String> md5Hash) {
             this.md5Hash = md5Hash;
             return this;
         }
-
         public Builder md5Hash(@Nullable String md5Hash) {
             this.md5Hash = Output.ofNullable(md5Hash);
             return this;
         }
-
         public Builder mediaLink(@Nullable Output<String> mediaLink) {
             this.mediaLink = mediaLink;
             return this;
         }
-
         public Builder mediaLink(@Nullable String mediaLink) {
             this.mediaLink = Output.ofNullable(mediaLink);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder metageneration(@Nullable Output<String> metageneration) {
             this.metageneration = metageneration;
             return this;
         }
-
         public Builder metageneration(@Nullable String metageneration) {
             this.metageneration = Output.ofNullable(metageneration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder owner(@Nullable Output<BucketObjectOwnerArgs> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable BucketObjectOwnerArgs owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
-
         public Builder predefinedAcl(@Nullable String predefinedAcl) {
             this.predefinedAcl = Output.ofNullable(predefinedAcl);
             return this;
         }
-
         public Builder projection(@Nullable Output<String> projection) {
             this.projection = projection;
             return this;
         }
-
         public Builder projection(@Nullable String projection) {
             this.projection = Output.ofNullable(projection);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
             return this;
         }
-
         public Builder retentionExpirationTime(@Nullable Output<String> retentionExpirationTime) {
             this.retentionExpirationTime = retentionExpirationTime;
             return this;
         }
-
         public Builder retentionExpirationTime(@Nullable String retentionExpirationTime) {
             this.retentionExpirationTime = Output.ofNullable(retentionExpirationTime);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable AssetOrArchive source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
-
         public Builder temporaryHold(@Nullable Output<Boolean> temporaryHold) {
             this.temporaryHold = temporaryHold;
             return this;
         }
-
         public Builder temporaryHold(@Nullable Boolean temporaryHold) {
             this.temporaryHold = Output.ofNullable(temporaryHold);
             return this;
         }
-
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
-
         public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = Output.ofNullable(timeCreated);
             return this;
         }
-
         public Builder timeDeleted(@Nullable Output<String> timeDeleted) {
             this.timeDeleted = timeDeleted;
             return this;
         }
-
         public Builder timeDeleted(@Nullable String timeDeleted) {
             this.timeDeleted = Output.ofNullable(timeDeleted);
             return this;
         }
-
         public Builder timeStorageClassUpdated(@Nullable Output<String> timeStorageClassUpdated) {
             this.timeStorageClassUpdated = timeStorageClassUpdated;
             return this;
         }
-
         public Builder timeStorageClassUpdated(@Nullable String timeStorageClassUpdated) {
             this.timeStorageClassUpdated = Output.ofNullable(timeStorageClassUpdated);
             return this;
         }
-
         public Builder updated(@Nullable Output<String> updated) {
             this.updated = updated;
             return this;
         }
-
         public Builder updated(@Nullable String updated) {
             this.updated = Output.ofNullable(updated);
             return this;
         }
-
         public Builder userProject(@Nullable Output<String> userProject) {
             this.userProject = userProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = Output.ofNullable(userProject);
             return this;
-        }
-        public BucketObjectArgs build() {
+        }        public BucketObjectArgs build() {
             return new BucketObjectArgs(acl, bucket, cacheControl, componentCount, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customTime, customerEncryption, etag, eventBasedHold, generation, id, ifGenerationMatch, ifGenerationNotMatch, ifMetagenerationMatch, ifMetagenerationNotMatch, kind, kmsKeyName, md5Hash, mediaLink, metadata, metageneration, name, owner, predefinedAcl, projection, provisionalUserProject, retentionExpirationTime, selfLink, size, source, storageClass, temporaryHold, timeCreated, timeDeleted, timeStorageClassUpdated, updated, userProject);
         }
     }

@@ -64,12 +64,10 @@ public final class GetHostQueryArgs extends io.pulumi.resources.InvokeArgs {
             this.hostQueryId = Objects.requireNonNull(hostQueryId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetHostQueryArgs build() {
+        }        public GetHostQueryArgs build() {
             return new GetHostQueryArgs(hostQueryId, organizationId);
         }
     }

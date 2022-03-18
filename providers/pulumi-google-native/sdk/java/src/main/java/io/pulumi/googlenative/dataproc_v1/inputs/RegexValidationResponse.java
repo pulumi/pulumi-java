@@ -60,7 +60,9 @@ public final class RegexValidationResponse extends io.pulumi.resources.InvokeArg
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-        public RegexValidationResponse build() {
+        public Builder regexes(String... regexes) {
+            return regexes(List.of(regexes));
+        }        public RegexValidationResponse build() {
             return new RegexValidationResponse(regexes);
         }
     }

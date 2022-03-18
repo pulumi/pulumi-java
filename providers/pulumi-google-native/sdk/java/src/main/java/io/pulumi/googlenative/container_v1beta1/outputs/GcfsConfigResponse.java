@@ -51,8 +51,7 @@ public final class GcfsConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GcfsConfigResponse build() {
+        }        public GcfsConfigResponse build() {
             return new GcfsConfigResponse(enabled);
         }
     }

@@ -182,47 +182,41 @@ public final class GetTargetSslProxyResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder sslCertificates(List<String> sslCertificates) {
             this.sslCertificates = Objects.requireNonNull(sslCertificates);
             return this;
         }
-
+        public Builder sslCertificates(String... sslCertificates) {
+            return sslCertificates(List.of(sslCertificates));
+        }
         public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
-        }
-        public GetTargetSslProxyResult build() {
+        }        public GetTargetSslProxyResult build() {
             return new GetTargetSslProxyResult(creationTimestamp, description, kind, name, proxyHeader, selfLink, service, sslCertificates, sslPolicy);
         }
     }

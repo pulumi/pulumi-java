@@ -96,32 +96,26 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.expiryDetail = expiryDetail;
             return this;
         }
-
         public Builder expiryDetail(@Nullable ExpiryDetailArgs expiryDetail) {
             this.expiryDetail = Output.ofNullable(expiryDetail);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder restrictionEvaluations(@Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations) {
             this.restrictionEvaluations = restrictionEvaluations;
             return this;
         }
-
         public Builder restrictionEvaluations(@Nullable RestrictionEvaluationsArgs restrictionEvaluations) {
             this.restrictionEvaluations = Output.ofNullable(restrictionEvaluations);
             return this;
-        }
-        public MembershipRoleArgs build() {
+        }        public MembershipRoleArgs build() {
             return new MembershipRoleArgs(expiryDetail, name, restrictionEvaluations);
         }
     }

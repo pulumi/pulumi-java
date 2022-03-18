@@ -128,52 +128,42 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
             this.boolValue = boolValue;
             return this;
         }
-
         public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = Output.ofNullable(boolValue);
             return this;
         }
-
         public Builder intValue(@Nullable Output<String> intValue) {
             this.intValue = intValue;
             return this;
         }
-
         public Builder intValue(@Nullable String intValue) {
             this.intValue = Output.ofNullable(intValue);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder secretValue(@Nullable Output<SecretArgs> secretValue) {
             this.secretValue = secretValue;
             return this;
         }
-
         public Builder secretValue(@Nullable SecretArgs secretValue) {
             this.secretValue = Output.ofNullable(secretValue);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
-        }
-        public ConfigVariableArgs build() {
+        }        public ConfigVariableArgs build() {
             return new ConfigVariableArgs(boolValue, intValue, key, secretValue, stringValue);
         }
     }

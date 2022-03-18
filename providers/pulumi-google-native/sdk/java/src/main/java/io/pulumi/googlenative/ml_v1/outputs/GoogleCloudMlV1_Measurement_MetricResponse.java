@@ -70,12 +70,10 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudMlV1_Measurement_MetricResponse build() {
+        }        public GoogleCloudMlV1_Measurement_MetricResponse build() {
             return new GoogleCloudMlV1_Measurement_MetricResponse(metric, value);
         }
     }

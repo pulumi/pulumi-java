@@ -165,42 +165,34 @@ public final class RouterInterfaceResponse {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
-
         public Builder linkedInterconnectAttachment(String linkedInterconnectAttachment) {
             this.linkedInterconnectAttachment = Objects.requireNonNull(linkedInterconnectAttachment);
             return this;
         }
-
         public Builder linkedVpnTunnel(String linkedVpnTunnel) {
             this.linkedVpnTunnel = Objects.requireNonNull(linkedVpnTunnel);
             return this;
         }
-
         public Builder managementType(String managementType) {
             this.managementType = Objects.requireNonNull(managementType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public Builder redundantInterface(String redundantInterface) {
             this.redundantInterface = Objects.requireNonNull(redundantInterface);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
-        }
-        public RouterInterfaceResponse build() {
+        }        public RouterInterfaceResponse build() {
             return new RouterInterfaceResponse(ipRange, linkedInterconnectAttachment, linkedVpnTunnel, managementType, name, privateIpAddress, redundantInterface, subnetwork);
         }
     }

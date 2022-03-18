@@ -69,12 +69,10 @@ public final class ServiceMeshTypeResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
-        }
-        public ServiceMeshTypeResponse build() {
+        }        public ServiceMeshTypeResponse build() {
             return new ServiceMeshTypeResponse(code, displayName);
         }
     }

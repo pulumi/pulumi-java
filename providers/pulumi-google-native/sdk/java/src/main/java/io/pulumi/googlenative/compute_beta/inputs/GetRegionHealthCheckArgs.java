@@ -78,17 +78,14 @@ public final class GetRegionHealthCheckArgs extends io.pulumi.resources.InvokeAr
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionHealthCheckArgs build() {
+        }        public GetRegionHealthCheckArgs build() {
             return new GetRegionHealthCheckArgs(healthCheck, project, region);
         }
     }

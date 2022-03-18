@@ -61,12 +61,10 @@ public final class ManagedPrometheusConfigArgs extends io.pulumi.resources.Resou
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ManagedPrometheusConfigArgs build() {
+        }        public ManagedPrometheusConfigArgs build() {
             return new ManagedPrometheusConfigArgs(enabled);
         }
     }

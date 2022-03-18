@@ -79,22 +79,18 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
             this.disableStreetAddressResolution = disableStreetAddressResolution;
             return this;
         }
-
         public Builder disableStreetAddressResolution(@Nullable Boolean disableStreetAddressResolution) {
             this.disableStreetAddressResolution = Output.ofNullable(disableStreetAddressResolution);
             return this;
         }
-
         public Builder htmlSanitization(@Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization) {
             this.htmlSanitization = htmlSanitization;
             return this;
         }
-
         public Builder htmlSanitization(@Nullable ProcessingOptionsHtmlSanitization htmlSanitization) {
             this.htmlSanitization = Output.ofNullable(htmlSanitization);
             return this;
-        }
-        public ProcessingOptionsArgs build() {
+        }        public ProcessingOptionsArgs build() {
             return new ProcessingOptionsArgs(disableStreetAddressResolution, htmlSanitization);
         }
     }

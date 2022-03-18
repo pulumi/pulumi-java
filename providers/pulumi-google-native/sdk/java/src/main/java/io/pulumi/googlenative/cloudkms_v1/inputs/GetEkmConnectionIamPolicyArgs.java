@@ -90,22 +90,18 @@ public final class GetEkmConnectionIamPolicyArgs extends io.pulumi.resources.Inv
             this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetEkmConnectionIamPolicyArgs build() {
+        }        public GetEkmConnectionIamPolicyArgs build() {
             return new GetEkmConnectionIamPolicyArgs(ekmConnectionId, location, optionsRequestedPolicyVersion, project);
         }
     }

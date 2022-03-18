@@ -124,27 +124,22 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
             this.bigQueryOptions = Objects.requireNonNull(bigQueryOptions);
             return this;
         }
-
         public Builder cloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions) {
             this.cloudStorageOptions = Objects.requireNonNull(cloudStorageOptions);
             return this;
         }
-
         public Builder datastoreOptions(GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions) {
             this.datastoreOptions = Objects.requireNonNull(datastoreOptions);
             return this;
         }
-
         public Builder hybridOptions(GooglePrivacyDlpV2HybridOptionsResponse hybridOptions) {
             this.hybridOptions = Objects.requireNonNull(hybridOptions);
             return this;
         }
-
         public Builder timespanConfig(GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
             this.timespanConfig = Objects.requireNonNull(timespanConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2StorageConfigResponse build() {
+        }        public GooglePrivacyDlpV2StorageConfigResponse build() {
             return new GooglePrivacyDlpV2StorageConfigResponse(bigQueryOptions, cloudStorageOptions, datastoreOptions, hybridOptions, timespanConfig);
         }
     }

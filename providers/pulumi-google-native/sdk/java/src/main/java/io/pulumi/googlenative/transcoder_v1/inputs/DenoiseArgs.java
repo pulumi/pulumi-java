@@ -79,22 +79,18 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
             this.strength = strength;
             return this;
         }
-
         public Builder strength(@Nullable Double strength) {
             this.strength = Output.ofNullable(strength);
             return this;
         }
-
         public Builder tune(@Nullable Output<String> tune) {
             this.tune = tune;
             return this;
         }
-
         public Builder tune(@Nullable String tune) {
             this.tune = Output.ofNullable(tune);
             return this;
-        }
-        public DenoiseArgs build() {
+        }        public DenoiseArgs build() {
             return new DenoiseArgs(strength, tune);
         }
     }

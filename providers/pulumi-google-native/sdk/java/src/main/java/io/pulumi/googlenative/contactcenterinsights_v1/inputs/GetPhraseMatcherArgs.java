@@ -78,17 +78,14 @@ public final class GetPhraseMatcherArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder phraseMatcherId(String phraseMatcherId) {
             this.phraseMatcherId = Objects.requireNonNull(phraseMatcherId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPhraseMatcherArgs build() {
+        }        public GetPhraseMatcherArgs build() {
             return new GetPhraseMatcherArgs(location, phraseMatcherId, project);
         }
     }

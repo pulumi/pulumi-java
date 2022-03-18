@@ -62,12 +62,13 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.clientValidationCa = clientValidationCa;
             return this;
         }
-
         public Builder clientValidationCa(@Nullable List<ValidationCAArgs> clientValidationCa) {
             this.clientValidationCa = Output.ofNullable(clientValidationCa);
             return this;
         }
-        public MTLSPolicyArgs build() {
+        public Builder clientValidationCa(ValidationCAArgs... clientValidationCa) {
+            return clientValidationCa(List.of(clientValidationCa));
+        }        public MTLSPolicyArgs build() {
             return new MTLSPolicyArgs(clientValidationCa);
         }
     }

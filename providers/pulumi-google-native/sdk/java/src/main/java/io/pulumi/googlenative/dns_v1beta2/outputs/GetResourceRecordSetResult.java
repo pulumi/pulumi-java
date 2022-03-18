@@ -144,37 +144,36 @@ public final class GetResourceRecordSetResult {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder routingPolicy(RRSetRoutingPolicyResponse routingPolicy) {
             this.routingPolicy = Objects.requireNonNull(routingPolicy);
             return this;
         }
-
         public Builder rrdatas(List<String> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
-
+        public Builder rrdatas(String... rrdatas) {
+            return rrdatas(List.of(rrdatas));
+        }
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
             this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
             return this;
         }
-
+        public Builder signatureRrdatas(String... signatureRrdatas) {
+            return signatureRrdatas(List.of(signatureRrdatas));
+        }
         public Builder ttl(Integer ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetResourceRecordSetResult build() {
+        }        public GetResourceRecordSetResult build() {
             return new GetResourceRecordSetResult(kind, name, routingPolicy, rrdatas, signatureRrdatas, ttl, type);
         }
     }

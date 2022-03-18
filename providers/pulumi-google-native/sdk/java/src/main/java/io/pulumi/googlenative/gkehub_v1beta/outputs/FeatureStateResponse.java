@@ -85,17 +85,14 @@ public final class FeatureStateResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public FeatureStateResponse build() {
+        }        public FeatureStateResponse build() {
             return new FeatureStateResponse(code, description, updateTime);
         }
     }

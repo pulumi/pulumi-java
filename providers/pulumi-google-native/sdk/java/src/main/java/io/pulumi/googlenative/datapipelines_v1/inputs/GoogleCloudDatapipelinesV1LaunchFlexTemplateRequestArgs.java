@@ -112,42 +112,34 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
             this.launchParameter = Objects.requireNonNull(launchParameter);
             return this;
         }
-
         public Builder launchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs launchParameter) {
             this.launchParameter = Output.of(Objects.requireNonNull(launchParameter));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable Boolean validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs build() {
+        }        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(launchParameter, location, project, validateOnly);
         }
     }

@@ -69,12 +69,10 @@ public final class RetryPolicyResponse {
             this.maximumBackoff = Objects.requireNonNull(maximumBackoff);
             return this;
         }
-
         public Builder minimumBackoff(String minimumBackoff) {
             this.minimumBackoff = Objects.requireNonNull(minimumBackoff);
             return this;
-        }
-        public RetryPolicyResponse build() {
+        }        public RetryPolicyResponse build() {
             return new RetryPolicyResponse(maximumBackoff, minimumBackoff);
         }
     }

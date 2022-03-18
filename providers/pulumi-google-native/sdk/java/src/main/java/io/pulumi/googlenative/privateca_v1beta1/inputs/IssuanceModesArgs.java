@@ -77,22 +77,18 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
             this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
             return this;
         }
-
         public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = Output.of(Objects.requireNonNull(allowConfigBasedIssuance));
             return this;
         }
-
         public Builder allowCsrBasedIssuance(Output<Boolean> allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
         }
-
         public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Output.of(Objects.requireNonNull(allowCsrBasedIssuance));
             return this;
-        }
-        public IssuanceModesArgs build() {
+        }        public IssuanceModesArgs build() {
             return new IssuanceModesArgs(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }
     }

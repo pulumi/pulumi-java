@@ -79,22 +79,18 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs(kind, name);
         }
     }

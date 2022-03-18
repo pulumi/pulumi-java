@@ -117,27 +117,22 @@ public final class GetAndroidAppResult {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetAndroidAppResult build() {
+        }        public GetAndroidAppResult build() {
             return new GetAndroidAppResult(appId, displayName, name, packageName, project);
         }
     }

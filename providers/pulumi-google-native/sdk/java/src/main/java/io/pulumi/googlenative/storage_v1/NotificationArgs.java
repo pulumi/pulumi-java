@@ -224,122 +224,101 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
-
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
             this.customAttributes = Output.ofNullable(customAttributes);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
-
         public Builder eventTypes(@Nullable List<String> eventTypes) {
             this.eventTypes = Output.ofNullable(eventTypes);
             return this;
         }
-
+        public Builder eventTypes(String... eventTypes) {
+            return eventTypes(List.of(eventTypes));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
             this.objectNamePrefix = objectNamePrefix;
             return this;
         }
-
         public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
             this.objectNamePrefix = Output.ofNullable(objectNamePrefix);
             return this;
         }
-
         public Builder payloadFormat(@Nullable Output<String> payloadFormat) {
             this.payloadFormat = payloadFormat;
             return this;
         }
-
         public Builder payloadFormat(@Nullable String payloadFormat) {
             this.payloadFormat = Output.ofNullable(payloadFormat);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
         }
-
         public Builder userProject(@Nullable Output<String> userProject) {
             this.userProject = userProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = Output.ofNullable(userProject);
             return this;
-        }
-        public NotificationArgs build() {
+        }        public NotificationArgs build() {
             return new NotificationArgs(bucket, customAttributes, etag, eventTypes, id, kind, objectNamePrefix, payloadFormat, provisionalUserProject, selfLink, topic, userProject);
         }
     }

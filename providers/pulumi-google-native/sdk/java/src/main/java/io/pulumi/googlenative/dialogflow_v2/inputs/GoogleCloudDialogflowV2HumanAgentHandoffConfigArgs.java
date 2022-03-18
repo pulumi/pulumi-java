@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
             this.livePersonConfig = livePersonConfig;
             return this;
         }
-
         public Builder livePersonConfig(@Nullable GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs livePersonConfig) {
             this.livePersonConfig = Output.ofNullable(livePersonConfig);
             return this;
         }
-
         public Builder salesforceLiveAgentConfig(@Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig) {
             this.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
             return this;
         }
-
         public Builder salesforceLiveAgentConfig(@Nullable GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs salesforceLiveAgentConfig) {
             this.salesforceLiveAgentConfig = Output.ofNullable(salesforceLiveAgentConfig);
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs build() {
+        }        public GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs(livePersonConfig, salesforceLiveAgentConfig);
         }
     }

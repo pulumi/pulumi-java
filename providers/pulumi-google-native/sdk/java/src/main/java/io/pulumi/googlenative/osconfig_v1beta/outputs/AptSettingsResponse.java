@@ -86,17 +86,20 @@ public final class AptSettingsResponse {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePackages(List<String> exclusivePackages) {
             this.exclusivePackages = Objects.requireNonNull(exclusivePackages);
             return this;
         }
-
+        public Builder exclusivePackages(String... exclusivePackages) {
+            return exclusivePackages(List.of(exclusivePackages));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AptSettingsResponse build() {
+        }        public AptSettingsResponse build() {
             return new AptSettingsResponse(excludes, exclusivePackages, type);
         }
     }

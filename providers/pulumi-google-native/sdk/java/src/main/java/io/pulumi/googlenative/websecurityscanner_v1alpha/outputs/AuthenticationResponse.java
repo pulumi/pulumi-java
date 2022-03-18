@@ -70,12 +70,10 @@ public final class AuthenticationResponse {
             this.customAccount = Objects.requireNonNull(customAccount);
             return this;
         }
-
         public Builder googleAccount(GoogleAccountResponse googleAccount) {
             this.googleAccount = Objects.requireNonNull(googleAccount);
             return this;
-        }
-        public AuthenticationResponse build() {
+        }        public AuthenticationResponse build() {
             return new AuthenticationResponse(customAccount, googleAccount);
         }
     }

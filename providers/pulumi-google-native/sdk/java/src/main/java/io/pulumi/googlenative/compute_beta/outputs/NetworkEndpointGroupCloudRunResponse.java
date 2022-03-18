@@ -85,17 +85,14 @@ public final class NetworkEndpointGroupCloudRunResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public Builder urlMask(String urlMask) {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
-        }
-        public NetworkEndpointGroupCloudRunResponse build() {
+        }        public NetworkEndpointGroupCloudRunResponse build() {
             return new NetworkEndpointGroupCloudRunResponse(service, tag, urlMask);
         }
     }

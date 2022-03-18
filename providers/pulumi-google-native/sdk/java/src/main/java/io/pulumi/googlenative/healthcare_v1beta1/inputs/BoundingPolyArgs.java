@@ -80,22 +80,21 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder vertices(@Nullable Output<List<VertexArgs>> vertices) {
             this.vertices = vertices;
             return this;
         }
-
         public Builder vertices(@Nullable List<VertexArgs> vertices) {
             this.vertices = Output.ofNullable(vertices);
             return this;
         }
-        public BoundingPolyArgs build() {
+        public Builder vertices(VertexArgs... vertices) {
+            return vertices(List.of(vertices));
+        }        public BoundingPolyArgs build() {
             return new BoundingPolyArgs(label, vertices);
         }
     }

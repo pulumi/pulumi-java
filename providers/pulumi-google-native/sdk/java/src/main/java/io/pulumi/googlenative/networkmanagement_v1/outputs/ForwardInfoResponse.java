@@ -69,12 +69,10 @@ public final class ForwardInfoResponse {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public ForwardInfoResponse build() {
+        }        public ForwardInfoResponse build() {
             return new ForwardInfoResponse(resourceUri, target);
         }
     }

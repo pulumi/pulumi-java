@@ -114,42 +114,37 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
             this.enableDynamicPosition = enableDynamicPosition;
             return this;
         }
-
         public Builder enableDynamicPosition(@Nullable Boolean enableDynamicPosition) {
             this.enableDynamicPosition = Output.ofNullable(enableDynamicPosition);
             return this;
         }
-
         public Builder excludedFilterKeys(@Nullable Output<List<String>> excludedFilterKeys) {
             this.excludedFilterKeys = excludedFilterKeys;
             return this;
         }
-
         public Builder excludedFilterKeys(@Nullable List<String> excludedFilterKeys) {
             this.excludedFilterKeys = Output.ofNullable(excludedFilterKeys);
             return this;
         }
-
+        public Builder excludedFilterKeys(String... excludedFilterKeys) {
+            return excludedFilterKeys(List.of(excludedFilterKeys));
+        }
         public Builder facetKey(Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey) {
             this.facetKey = Objects.requireNonNull(facetKey);
             return this;
         }
-
         public Builder facetKey(GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs facetKey) {
             this.facetKey = Output.of(Objects.requireNonNull(facetKey));
             return this;
         }
-
         public Builder limit(@Nullable Output<Integer> limit) {
             this.limit = limit;
             return this;
         }
-
         public Builder limit(@Nullable Integer limit) {
             this.limit = Output.ofNullable(limit);
             return this;
-        }
-        public GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs build() {
+        }        public GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs build() {
             return new GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs(enableDynamicPosition, excludedFilterKeys, facetKey, limit);
         }
     }

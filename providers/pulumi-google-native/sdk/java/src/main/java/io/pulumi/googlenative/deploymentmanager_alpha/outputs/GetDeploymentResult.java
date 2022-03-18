@@ -252,67 +252,60 @@ public final class GetDeploymentResult {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder insertTime(String insertTime) {
             this.insertTime = Objects.requireNonNull(insertTime);
             return this;
         }
-
         public Builder labels(List<DeploymentLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(DeploymentLabelEntryResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operation(OperationResponse operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder outputs(List<DeploymentOutputEntryResponse> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
+        public Builder outputs(DeploymentOutputEntryResponse... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder target(TargetConfigurationResponse target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder update(DeploymentUpdateResponse update) {
             this.update = Objects.requireNonNull(update);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetDeploymentResult build() {
+        }        public GetDeploymentResult build() {
             return new GetDeploymentResult(credential, description, fingerprint, insertTime, labels, manifest, name, operation, outputs, selfLink, target, update, updateTime);
         }
     }

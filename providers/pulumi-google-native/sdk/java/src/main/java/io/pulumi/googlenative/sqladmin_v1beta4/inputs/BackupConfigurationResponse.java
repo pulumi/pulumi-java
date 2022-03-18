@@ -191,47 +191,38 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
             this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings);
             return this;
         }
-
         public Builder binaryLogEnabled(Boolean binaryLogEnabled) {
             this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled);
             return this;
         }
-
         public Builder replicationLogArchivingEnabled(Boolean replicationLogArchivingEnabled) {
             this.replicationLogArchivingEnabled = Objects.requireNonNull(replicationLogArchivingEnabled);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder transactionLogRetentionDays(Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
             return this;
-        }
-        public BackupConfigurationResponse build() {
+        }        public BackupConfigurationResponse build() {
             return new BackupConfigurationResponse(backupRetentionSettings, binaryLogEnabled, enabled, kind, location, pointInTimeRecoveryEnabled, replicationLogArchivingEnabled, startTime, transactionLogRetentionDays);
         }
     }

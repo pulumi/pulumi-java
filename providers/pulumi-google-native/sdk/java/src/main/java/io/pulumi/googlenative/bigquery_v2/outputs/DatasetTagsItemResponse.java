@@ -69,12 +69,10 @@ public final class DatasetTagsItemResponse {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
-
         public Builder tagValue(String tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
-        }
-        public DatasetTagsItemResponse build() {
+        }        public DatasetTagsItemResponse build() {
             return new DatasetTagsItemResponse(tagKey, tagValue);
         }
     }

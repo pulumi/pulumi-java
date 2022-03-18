@@ -62,12 +62,13 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
             this.allowedIpRanges = allowedIpRanges;
             return this;
         }
-
         public Builder allowedIpRanges(@Nullable List<AllowedIpRangeArgs> allowedIpRanges) {
             this.allowedIpRanges = Output.ofNullable(allowedIpRanges);
             return this;
         }
-        public WebServerNetworkAccessControlArgs build() {
+        public Builder allowedIpRanges(AllowedIpRangeArgs... allowedIpRanges) {
+            return allowedIpRanges(List.of(allowedIpRanges));
+        }        public WebServerNetworkAccessControlArgs build() {
             return new WebServerNetworkAccessControlArgs(allowedIpRanges);
         }
     }

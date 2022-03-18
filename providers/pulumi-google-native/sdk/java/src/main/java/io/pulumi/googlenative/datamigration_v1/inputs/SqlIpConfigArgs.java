@@ -113,42 +113,37 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
-
         public Builder authorizedNetworks(@Nullable List<SqlAclEntryArgs> authorizedNetworks) {
             this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
             return this;
         }
-
+        public Builder authorizedNetworks(SqlAclEntryArgs... authorizedNetworks) {
+            return authorizedNetworks(List.of(authorizedNetworks));
+        }
         public Builder enableIpv4(@Nullable Output<Boolean> enableIpv4) {
             this.enableIpv4 = enableIpv4;
             return this;
         }
-
         public Builder enableIpv4(@Nullable Boolean enableIpv4) {
             this.enableIpv4 = Output.ofNullable(enableIpv4);
             return this;
         }
-
         public Builder privateNetwork(@Nullable Output<String> privateNetwork) {
             this.privateNetwork = privateNetwork;
             return this;
         }
-
         public Builder privateNetwork(@Nullable String privateNetwork) {
             this.privateNetwork = Output.ofNullable(privateNetwork);
             return this;
         }
-
         public Builder requireSsl(@Nullable Output<Boolean> requireSsl) {
             this.requireSsl = requireSsl;
             return this;
         }
-
         public Builder requireSsl(@Nullable Boolean requireSsl) {
             this.requireSsl = Output.ofNullable(requireSsl);
             return this;
-        }
-        public SqlIpConfigArgs build() {
+        }        public SqlIpConfigArgs build() {
             return new SqlIpConfigArgs(authorizedNetworks, enableIpv4, privateNetwork, requireSsl);
         }
     }

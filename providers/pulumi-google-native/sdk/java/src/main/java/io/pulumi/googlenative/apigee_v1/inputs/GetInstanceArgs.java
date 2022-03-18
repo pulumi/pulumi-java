@@ -64,12 +64,10 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetInstanceArgs build() {
+        }        public GetInstanceArgs build() {
             return new GetInstanceArgs(instanceId, organizationId);
         }
     }

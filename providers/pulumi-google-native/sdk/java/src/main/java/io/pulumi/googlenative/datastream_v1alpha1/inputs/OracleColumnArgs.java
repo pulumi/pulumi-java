@@ -192,92 +192,74 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
             this.columnName = columnName;
             return this;
         }
-
         public Builder columnName(@Nullable String columnName) {
             this.columnName = Output.ofNullable(columnName);
             return this;
         }
-
         public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder length(@Nullable Output<Integer> length) {
             this.length = length;
             return this;
         }
-
         public Builder length(@Nullable Integer length) {
             this.length = Output.ofNullable(length);
             return this;
         }
-
         public Builder nullable(@Nullable Output<Boolean> nullable) {
             this.nullable = nullable;
             return this;
         }
-
         public Builder nullable(@Nullable Boolean nullable) {
             this.nullable = Output.ofNullable(nullable);
             return this;
         }
-
         public Builder ordinalPosition(@Nullable Output<Integer> ordinalPosition) {
             this.ordinalPosition = ordinalPosition;
             return this;
         }
-
         public Builder ordinalPosition(@Nullable Integer ordinalPosition) {
             this.ordinalPosition = Output.ofNullable(ordinalPosition);
             return this;
         }
-
         public Builder precision(@Nullable Output<Integer> precision) {
             this.precision = precision;
             return this;
         }
-
         public Builder precision(@Nullable Integer precision) {
             this.precision = Output.ofNullable(precision);
             return this;
         }
-
         public Builder primaryKey(@Nullable Output<Boolean> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder primaryKey(@Nullable Boolean primaryKey) {
             this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
-
         public Builder scale(@Nullable Output<Integer> scale) {
             this.scale = scale;
             return this;
         }
-
         public Builder scale(@Nullable Integer scale) {
             this.scale = Output.ofNullable(scale);
             return this;
-        }
-        public OracleColumnArgs build() {
+        }        public OracleColumnArgs build() {
             return new OracleColumnArgs(columnName, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);
         }
     }

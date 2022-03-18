@@ -96,32 +96,26 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             this.aliasContext = aliasContext;
             return this;
         }
-
         public Builder aliasContext(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs aliasContext) {
             this.aliasContext = Output.ofNullable(aliasContext);
             return this;
         }
-
         public Builder repoId(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> repoId) {
             this.repoId = repoId;
             return this;
         }
-
         public Builder repoId(@Nullable GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs repoId) {
             this.repoId = Output.ofNullable(repoId);
             return this;
         }
-
         public Builder revisionId(@Nullable Output<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
-
         public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Output.ofNullable(revisionId);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs(aliasContext, repoId, revisionId);
         }
     }

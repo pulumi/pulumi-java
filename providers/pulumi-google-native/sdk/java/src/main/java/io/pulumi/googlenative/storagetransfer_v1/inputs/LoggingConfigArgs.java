@@ -97,32 +97,32 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
             return this;
         }
-
         public Builder enableOnpremGcsTransferLogs(@Nullable Boolean enableOnpremGcsTransferLogs) {
             this.enableOnpremGcsTransferLogs = Output.ofNullable(enableOnpremGcsTransferLogs);
             return this;
         }
-
         public Builder logActionStates(@Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates) {
             this.logActionStates = logActionStates;
             return this;
         }
-
         public Builder logActionStates(@Nullable List<LoggingConfigLogActionStatesItem> logActionStates) {
             this.logActionStates = Output.ofNullable(logActionStates);
             return this;
         }
-
+        public Builder logActionStates(LoggingConfigLogActionStatesItem... logActionStates) {
+            return logActionStates(List.of(logActionStates));
+        }
         public Builder logActions(@Nullable Output<List<LoggingConfigLogActionsItem>> logActions) {
             this.logActions = logActions;
             return this;
         }
-
         public Builder logActions(@Nullable List<LoggingConfigLogActionsItem> logActions) {
             this.logActions = Output.ofNullable(logActions);
             return this;
         }
-        public LoggingConfigArgs build() {
+        public Builder logActions(LoggingConfigLogActionsItem... logActions) {
+            return logActions(List.of(logActions));
+        }        public LoggingConfigArgs build() {
             return new LoggingConfigArgs(enableOnpremGcsTransferLogs, logActionStates, logActions);
         }
     }

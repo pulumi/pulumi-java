@@ -56,7 +56,9 @@ public final class ClusteringResponse extends io.pulumi.resources.InvokeArgs {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-        public ClusteringResponse build() {
+        public Builder fields(String... fields) {
+            return fields(List.of(fields));
+        }        public ClusteringResponse build() {
             return new ClusteringResponse(fields);
         }
     }

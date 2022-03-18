@@ -115,52 +115,42 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
-
         public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Output.of(Objects.requireNonNull(authorizedNetwork));
             return this;
         }
-
         public Builder domainResource(Output<String> domainResource) {
             this.domainResource = Objects.requireNonNull(domainResource);
             return this;
         }
-
         public Builder domainResource(String domainResource) {
             this.domainResource = Output.of(Objects.requireNonNull(domainResource));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder peeringId(Output<String> peeringId) {
             this.peeringId = Objects.requireNonNull(peeringId);
             return this;
         }
-
         public Builder peeringId(String peeringId) {
             this.peeringId = Output.of(Objects.requireNonNull(peeringId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public PeeringArgs build() {
+        }        public PeeringArgs build() {
             return new PeeringArgs(authorizedNetwork, domainResource, labels, peeringId, project);
         }
     }

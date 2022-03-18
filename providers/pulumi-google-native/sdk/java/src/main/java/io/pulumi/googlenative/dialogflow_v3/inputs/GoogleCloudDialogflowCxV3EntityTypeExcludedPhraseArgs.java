@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs extends
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs build() {
+        }        public GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs build() {
             return new GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs(value);
         }
     }

@@ -60,12 +60,10 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
             this.dsState = Objects.requireNonNull(dsState);
             return this;
         }
-
         public Builder dsState(GoogleDomainsDnsDsState dsState) {
             this.dsState = Output.of(Objects.requireNonNull(dsState));
             return this;
-        }
-        public GoogleDomainsDnsArgs build() {
+        }        public GoogleDomainsDnsArgs build() {
             return new GoogleDomainsDnsArgs(dsState);
         }
     }

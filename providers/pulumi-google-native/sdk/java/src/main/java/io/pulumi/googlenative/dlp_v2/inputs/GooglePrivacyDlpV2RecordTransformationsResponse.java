@@ -78,12 +78,16 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends io.pu
             this.fieldTransformations = Objects.requireNonNull(fieldTransformations);
             return this;
         }
-
+        public Builder fieldTransformations(GooglePrivacyDlpV2FieldTransformationResponse... fieldTransformations) {
+            return fieldTransformations(List.of(fieldTransformations));
+        }
         public Builder recordSuppressions(List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
             this.recordSuppressions = Objects.requireNonNull(recordSuppressions);
             return this;
         }
-        public GooglePrivacyDlpV2RecordTransformationsResponse build() {
+        public Builder recordSuppressions(GooglePrivacyDlpV2RecordSuppressionResponse... recordSuppressions) {
+            return recordSuppressions(List.of(recordSuppressions));
+        }        public GooglePrivacyDlpV2RecordTransformationsResponse build() {
             return new GooglePrivacyDlpV2RecordTransformationsResponse(fieldTransformations, recordSuppressions);
         }
     }

@@ -169,42 +169,34 @@ public final class GooglePrivacyDlpV2ValueResponse {
             this.booleanValue = Objects.requireNonNull(booleanValue);
             return this;
         }
-
         public Builder dateValue(GoogleTypeDateResponse dateValue) {
             this.dateValue = Objects.requireNonNull(dateValue);
             return this;
         }
-
         public Builder dayOfWeekValue(String dayOfWeekValue) {
             this.dayOfWeekValue = Objects.requireNonNull(dayOfWeekValue);
             return this;
         }
-
         public Builder floatValue(Double floatValue) {
             this.floatValue = Objects.requireNonNull(floatValue);
             return this;
         }
-
         public Builder integerValue(String integerValue) {
             this.integerValue = Objects.requireNonNull(integerValue);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public Builder timeValue(GoogleTypeTimeOfDayResponse timeValue) {
             this.timeValue = Objects.requireNonNull(timeValue);
             return this;
         }
-
         public Builder timestampValue(String timestampValue) {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
-        }
-        public GooglePrivacyDlpV2ValueResponse build() {
+        }        public GooglePrivacyDlpV2ValueResponse build() {
             return new GooglePrivacyDlpV2ValueResponse(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }
     }

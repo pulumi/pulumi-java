@@ -90,22 +90,18 @@ public final class GetChannelConnectionIamPolicyArgs extends io.pulumi.resources
             this.channelConnectionId = Objects.requireNonNull(channelConnectionId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetChannelConnectionIamPolicyArgs build() {
+        }        public GetChannelConnectionIamPolicyArgs build() {
             return new GetChannelConnectionIamPolicyArgs(channelConnectionId, location, optionsRequestedPolicyVersion, project);
         }
     }

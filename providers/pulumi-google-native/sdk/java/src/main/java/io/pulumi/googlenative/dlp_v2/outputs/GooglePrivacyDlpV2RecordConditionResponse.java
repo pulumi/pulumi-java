@@ -51,8 +51,7 @@ public final class GooglePrivacyDlpV2RecordConditionResponse {
         public Builder expressions(GooglePrivacyDlpV2ExpressionsResponse expressions) {
             this.expressions = Objects.requireNonNull(expressions);
             return this;
-        }
-        public GooglePrivacyDlpV2RecordConditionResponse build() {
+        }        public GooglePrivacyDlpV2RecordConditionResponse build() {
             return new GooglePrivacyDlpV2RecordConditionResponse(expressions);
         }
     }

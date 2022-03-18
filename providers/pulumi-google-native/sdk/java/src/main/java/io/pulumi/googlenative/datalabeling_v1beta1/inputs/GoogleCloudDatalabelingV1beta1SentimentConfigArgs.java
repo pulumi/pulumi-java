@@ -61,12 +61,10 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.
             this.enableLabelSentimentSelection = enableLabelSentimentSelection;
             return this;
         }
-
         public Builder enableLabelSentimentSelection(@Nullable Boolean enableLabelSentimentSelection) {
             this.enableLabelSentimentSelection = Output.ofNullable(enableLabelSentimentSelection);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1SentimentConfigArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1SentimentConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1SentimentConfigArgs(enableLabelSentimentSelection);
         }
     }

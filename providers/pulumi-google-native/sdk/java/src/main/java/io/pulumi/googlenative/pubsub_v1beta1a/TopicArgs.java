@@ -57,12 +57,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public TopicArgs build() {
+        }        public TopicArgs build() {
             return new TopicArgs(name);
         }
     }

@@ -87,17 +87,14 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
             this.kmsWrapped = Objects.requireNonNull(kmsWrapped);
             return this;
         }
-
         public Builder $transient(GooglePrivacyDlpV2TransientCryptoKeyResponse $transient) {
             this.$transient = Objects.requireNonNull($transient);
             return this;
         }
-
         public Builder unwrapped(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
             this.unwrapped = Objects.requireNonNull(unwrapped);
             return this;
-        }
-        public GooglePrivacyDlpV2CryptoKeyResponse build() {
+        }        public GooglePrivacyDlpV2CryptoKeyResponse build() {
             return new GooglePrivacyDlpV2CryptoKeyResponse(kmsWrapped, $transient, unwrapped);
         }
     }

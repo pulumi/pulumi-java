@@ -231,112 +231,96 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.autoscaling = autoscaling;
             return this;
         }
-
         public Builder autoscaling(@Nullable NodePoolAutoscalingArgs autoscaling) {
             this.autoscaling = Output.ofNullable(autoscaling);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<StatusConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<StatusConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(StatusConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder config(@Nullable Output<NodeConfigArgs> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable NodeConfigArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
-
         public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
             this.initialNodeCount = Output.ofNullable(initialNodeCount);
             return this;
         }
-
         public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder management(@Nullable Output<NodeManagementArgs> management) {
             this.management = management;
             return this;
         }
-
         public Builder management(@Nullable NodeManagementArgs management) {
             this.management = Output.ofNullable(management);
             return this;
         }
-
         public Builder maxPodsConstraint(@Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint) {
             this.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
-
         public Builder maxPodsConstraint(@Nullable MaxPodsConstraintArgs maxPodsConstraint) {
             this.maxPodsConstraint = Output.ofNullable(maxPodsConstraint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkConfig(@Nullable Output<NodeNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable NodeNetworkConfigArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder upgradeSettings(@Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
-
         public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
             this.upgradeSettings = Output.ofNullable(upgradeSettings);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public NodePoolArgs build() {
+        }        public NodePoolArgs build() {
             return new NodePoolArgs(autoscaling, conditions, config, initialNodeCount, locations, management, maxPodsConstraint, name, networkConfig, upgradeSettings, version);
         }
     }

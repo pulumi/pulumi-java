@@ -86,17 +86,14 @@ public final class PubsubTargetResponse {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
-        }
-        public PubsubTargetResponse build() {
+        }        public PubsubTargetResponse build() {
             return new PubsubTargetResponse(attributes, data, topicName);
         }
     }

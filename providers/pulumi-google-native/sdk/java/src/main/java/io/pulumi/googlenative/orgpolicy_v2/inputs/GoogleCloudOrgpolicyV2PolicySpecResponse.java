@@ -127,27 +127,25 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder inheritFromParent(Boolean inheritFromParent) {
             this.inheritFromParent = Objects.requireNonNull(inheritFromParent);
             return this;
         }
-
         public Builder reset(Boolean reset) {
             this.reset = Objects.requireNonNull(reset);
             return this;
         }
-
         public Builder rules(List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GoogleCloudOrgpolicyV2PolicySpecResponse build() {
+        }        public GoogleCloudOrgpolicyV2PolicySpecResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecResponse(etag, inheritFromParent, reset, rules, updateTime);
         }
     }

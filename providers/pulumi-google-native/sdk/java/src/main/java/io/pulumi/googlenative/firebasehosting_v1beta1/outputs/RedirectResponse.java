@@ -102,22 +102,18 @@ public final class RedirectResponse {
             this.glob = Objects.requireNonNull(glob);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder regex(String regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public Builder statusCode(Integer statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
-        }
-        public RedirectResponse build() {
+        }        public RedirectResponse build() {
             return new RedirectResponse(glob, location, regex, statusCode);
         }
     }

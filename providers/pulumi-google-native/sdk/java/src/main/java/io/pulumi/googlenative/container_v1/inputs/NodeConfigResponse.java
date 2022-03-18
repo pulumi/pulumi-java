@@ -459,127 +459,114 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.accelerators = Objects.requireNonNull(accelerators);
             return this;
         }
-
+        public Builder accelerators(AcceleratorConfigResponse... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder advancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
             this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
             return this;
         }
-
         public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
             return this;
         }
-
         public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder gcfsConfig(GcfsConfigResponse gcfsConfig) {
             this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
             return this;
         }
-
         public Builder gvnic(VirtualNICResponse gvnic) {
             this.gvnic = Objects.requireNonNull(gvnic);
             return this;
         }
-
         public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
-
         public Builder kubeletConfig(NodeKubeletConfigResponse kubeletConfig) {
             this.kubeletConfig = Objects.requireNonNull(kubeletConfig);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder linuxNodeConfig(LinuxNodeConfigResponse linuxNodeConfig) {
             this.linuxNodeConfig = Objects.requireNonNull(linuxNodeConfig);
             return this;
         }
-
         public Builder localSsdCount(Integer localSsdCount) {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder nodeGroup(String nodeGroup) {
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
-
         public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
-
         public Builder sandboxConfig(SandboxConfigResponse sandboxConfig) {
             this.sandboxConfig = Objects.requireNonNull(sandboxConfig);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taints(List<NodeTaintResponse> taints) {
             this.taints = Objects.requireNonNull(taints);
             return this;
         }
-
+        public Builder taints(NodeTaintResponse... taints) {
+            return taints(List.of(taints));
+        }
         public Builder workloadMetadataConfig(WorkloadMetadataConfigResponse workloadMetadataConfig) {
             this.workloadMetadataConfig = Objects.requireNonNull(workloadMetadataConfig);
             return this;
-        }
-        public NodeConfigResponse build() {
+        }        public NodeConfigResponse build() {
             return new NodeConfigResponse(accelerators, advancedMachineFeatures, bootDiskKmsKey, diskSizeGb, diskType, gcfsConfig, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, reservationAffinity, sandboxConfig, serviceAccount, shieldedInstanceConfig, tags, taints, workloadMetadataConfig);
         }
     }

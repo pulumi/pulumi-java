@@ -76,12 +76,10 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
-        }
-        public OidcTokenResponse build() {
+        }        public OidcTokenResponse build() {
             return new OidcTokenResponse(audience, serviceAccountEmail);
         }
     }

@@ -96,32 +96,29 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
             this.failureCondition = failureCondition;
             return this;
         }
-
         public Builder failureCondition(@Nullable String failureCondition) {
             this.failureCondition = Output.ofNullable(failureCondition);
             return this;
         }
-
         public Builder rolloutCondition(@Nullable Output<String> rolloutCondition) {
             this.rolloutCondition = rolloutCondition;
             return this;
         }
-
         public Builder rolloutCondition(@Nullable String rolloutCondition) {
             this.rolloutCondition = Output.ofNullable(rolloutCondition);
             return this;
         }
-
         public Builder rolloutSteps(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> rolloutSteps) {
             this.rolloutSteps = rolloutSteps;
             return this;
         }
-
         public Builder rolloutSteps(@Nullable List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs> rolloutSteps) {
             this.rolloutSteps = Output.ofNullable(rolloutSteps);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1RolloutConfigArgs build() {
+        public Builder rolloutSteps(GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs... rolloutSteps) {
+            return rolloutSteps(List.of(rolloutSteps));
+        }        public GoogleCloudDialogflowCxV3beta1RolloutConfigArgs build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutConfigArgs(failureCondition, rolloutCondition, rolloutSteps);
         }
     }

@@ -94,17 +94,17 @@ public final class ApigatewayBindingResponse extends io.pulumi.resources.InvokeA
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
-        }
-        public ApigatewayBindingResponse build() {
+        }        public ApigatewayBindingResponse build() {
             return new ApigatewayBindingResponse(condition, members, role);
         }
     }

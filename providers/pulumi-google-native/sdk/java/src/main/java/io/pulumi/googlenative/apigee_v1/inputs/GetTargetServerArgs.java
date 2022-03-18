@@ -76,17 +76,14 @@ public final class GetTargetServerArgs extends io.pulumi.resources.InvokeArgs {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder targetserverId(String targetserverId) {
             this.targetserverId = Objects.requireNonNull(targetserverId);
             return this;
-        }
-        public GetTargetServerArgs build() {
+        }        public GetTargetServerArgs build() {
             return new GetTargetServerArgs(environmentId, organizationId, targetserverId);
         }
     }

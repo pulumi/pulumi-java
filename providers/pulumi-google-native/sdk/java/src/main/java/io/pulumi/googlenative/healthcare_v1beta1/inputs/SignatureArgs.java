@@ -112,42 +112,34 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable ImageArgs image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder signatureTime(@Nullable Output<String> signatureTime) {
             this.signatureTime = signatureTime;
             return this;
         }
-
         public Builder signatureTime(@Nullable String signatureTime) {
             this.signatureTime = Output.ofNullable(signatureTime);
             return this;
         }
-
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
-        }
-        public SignatureArgs build() {
+        }        public SignatureArgs build() {
             return new SignatureArgs(image, metadata, signatureTime, userId);
         }
     }

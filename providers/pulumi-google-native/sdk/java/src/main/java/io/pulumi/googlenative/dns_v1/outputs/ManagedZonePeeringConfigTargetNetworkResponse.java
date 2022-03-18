@@ -77,17 +77,14 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
             this.deactivateTime = Objects.requireNonNull(deactivateTime);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
-        }
-        public ManagedZonePeeringConfigTargetNetworkResponse build() {
+        }        public ManagedZonePeeringConfigTargetNetworkResponse build() {
             return new ManagedZonePeeringConfigTargetNetworkResponse(deactivateTime, kind, networkUrl);
         }
     }

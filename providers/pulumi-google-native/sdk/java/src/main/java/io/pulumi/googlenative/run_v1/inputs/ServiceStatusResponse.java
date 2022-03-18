@@ -161,37 +161,36 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
+        public Builder conditions(GoogleCloudRunV1ConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
             this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName);
             return this;
         }
-
         public Builder latestReadyRevisionName(String latestReadyRevisionName) {
             this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName);
             return this;
         }
-
         public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
-
         public Builder traffic(List<TrafficTargetResponse> traffic) {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
-
+        public Builder traffic(TrafficTargetResponse... traffic) {
+            return traffic(List.of(traffic));
+        }
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public ServiceStatusResponse build() {
+        }        public ServiceStatusResponse build() {
             return new ServiceStatusResponse(address, conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, traffic, url);
         }
     }

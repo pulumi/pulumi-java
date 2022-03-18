@@ -76,12 +76,10 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }
-
         public Builder signature(String signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
-        }
-        public SignatureResponse build() {
+        }        public SignatureResponse build() {
             return new SignatureResponse(publicKeyId, signature);
         }
     }

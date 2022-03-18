@@ -126,27 +126,25 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder elementaryStreams(List<String> elementaryStreams) {
             this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
             return this;
         }
-
+        public Builder elementaryStreams(String... elementaryStreams) {
+            return elementaryStreams(List.of(elementaryStreams));
+        }
         public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder segmentSettings(SegmentSettingsResponse segmentSettings) {
             this.segmentSettings = Objects.requireNonNull(segmentSettings);
             return this;
-        }
-        public MuxStreamResponse build() {
+        }        public MuxStreamResponse build() {
             return new MuxStreamResponse(container, elementaryStreams, fileName, key, segmentSettings);
         }
     }

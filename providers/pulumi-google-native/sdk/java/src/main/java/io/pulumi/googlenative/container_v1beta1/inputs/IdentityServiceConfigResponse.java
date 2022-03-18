@@ -58,8 +58,7 @@ public final class IdentityServiceConfigResponse extends io.pulumi.resources.Inv
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public IdentityServiceConfigResponse build() {
+        }        public IdentityServiceConfigResponse build() {
             return new IdentityServiceConfigResponse(enabled);
         }
     }

@@ -119,27 +119,25 @@ public final class LoadBalancerInfoResponse {
             this.backendType = Objects.requireNonNull(backendType);
             return this;
         }
-
         public Builder backendUri(String backendUri) {
             this.backendUri = Objects.requireNonNull(backendUri);
             return this;
         }
-
         public Builder backends(List<LoadBalancerBackendResponse> backends) {
             this.backends = Objects.requireNonNull(backends);
             return this;
         }
-
+        public Builder backends(LoadBalancerBackendResponse... backends) {
+            return backends(List.of(backends));
+        }
         public Builder healthCheckUri(String healthCheckUri) {
             this.healthCheckUri = Objects.requireNonNull(healthCheckUri);
             return this;
         }
-
         public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
-        }
-        public LoadBalancerInfoResponse build() {
+        }        public LoadBalancerInfoResponse build() {
             return new LoadBalancerInfoResponse(backendType, backendUri, backends, healthCheckUri, loadBalancerType);
         }
     }

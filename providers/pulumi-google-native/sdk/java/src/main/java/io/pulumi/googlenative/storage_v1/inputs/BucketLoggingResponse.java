@@ -76,12 +76,10 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
             this.logBucket = Objects.requireNonNull(logBucket);
             return this;
         }
-
         public Builder logObjectPrefix(String logObjectPrefix) {
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
-        }
-        public BucketLoggingResponse build() {
+        }        public BucketLoggingResponse build() {
             return new BucketLoggingResponse(logBucket, logObjectPrefix);
         }
     }

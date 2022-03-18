@@ -70,12 +70,10 @@ public final class SchedulePolicyResponse {
             this.idleDuration = Objects.requireNonNull(idleDuration);
             return this;
         }
-
         public Builder skipOsAdaptation(Boolean skipOsAdaptation) {
             this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation);
             return this;
-        }
-        public SchedulePolicyResponse build() {
+        }        public SchedulePolicyResponse build() {
             return new SchedulePolicyResponse(idleDuration, skipOsAdaptation);
         }
     }

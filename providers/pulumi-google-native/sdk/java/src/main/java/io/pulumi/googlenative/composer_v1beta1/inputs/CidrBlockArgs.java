@@ -78,22 +78,18 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
-        }
-        public CidrBlockArgs build() {
+        }        public CidrBlockArgs build() {
             return new CidrBlockArgs(cidrBlock, displayName);
         }
     }

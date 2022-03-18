@@ -143,72 +143,58 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder backupId(String backupId) {
             this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sourceFileShare(@Nullable Output<String> sourceFileShare) {
             this.sourceFileShare = sourceFileShare;
             return this;
         }
-
         public Builder sourceFileShare(@Nullable String sourceFileShare) {
             this.sourceFileShare = Output.ofNullable(sourceFileShare);
             return this;
         }
-
         public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
             this.sourceInstance = sourceInstance;
             return this;
         }
-
         public Builder sourceInstance(@Nullable String sourceInstance) {
             this.sourceInstance = Output.ofNullable(sourceInstance);
             return this;
-        }
-        public BackupArgs build() {
+        }        public BackupArgs build() {
             return new BackupArgs(backupId, description, labels, location, project, sourceFileShare, sourceInstance);
         }
     }

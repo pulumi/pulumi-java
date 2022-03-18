@@ -78,22 +78,18 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
             return this;
-        }
-        public ShieldedInstanceConfigArgs build() {
+        }        public ShieldedInstanceConfigArgs build() {
             return new ShieldedInstanceConfigArgs(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

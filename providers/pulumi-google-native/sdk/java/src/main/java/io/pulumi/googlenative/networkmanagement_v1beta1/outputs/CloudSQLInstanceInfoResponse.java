@@ -133,32 +133,26 @@ public final class CloudSQLInstanceInfoResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder externalIp(String externalIp) {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
-
         public Builder internalIp(String internalIp) {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
-
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public CloudSQLInstanceInfoResponse build() {
+        }        public CloudSQLInstanceInfoResponse build() {
             return new CloudSQLInstanceInfoResponse(displayName, externalIp, internalIp, networkUri, region, uri);
         }
     }

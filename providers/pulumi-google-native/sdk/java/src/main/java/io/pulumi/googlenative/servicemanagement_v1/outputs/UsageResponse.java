@@ -87,17 +87,20 @@ public final class UsageResponse {
             this.producerNotificationChannel = Objects.requireNonNull(producerNotificationChannel);
             return this;
         }
-
         public Builder requirements(List<String> requirements) {
             this.requirements = Objects.requireNonNull(requirements);
             return this;
         }
-
+        public Builder requirements(String... requirements) {
+            return requirements(List.of(requirements));
+        }
         public Builder rules(List<UsageRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public UsageResponse build() {
+        public Builder rules(UsageRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public UsageResponse build() {
             return new UsageResponse(producerNotificationChannel, requirements, rules);
         }
     }

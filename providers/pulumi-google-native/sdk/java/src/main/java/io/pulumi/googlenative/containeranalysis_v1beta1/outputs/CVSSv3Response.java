@@ -142,57 +142,46 @@ public final class CVSSv3Response {
             this.attackComplexity = Objects.requireNonNull(attackComplexity);
             return this;
         }
-
         public Builder attackVector(String attackVector) {
             this.attackVector = Objects.requireNonNull(attackVector);
             return this;
         }
-
         public Builder availabilityImpact(String availabilityImpact) {
             this.availabilityImpact = Objects.requireNonNull(availabilityImpact);
             return this;
         }
-
         public Builder baseScore(Double baseScore) {
             this.baseScore = Objects.requireNonNull(baseScore);
             return this;
         }
-
         public Builder confidentialityImpact(String confidentialityImpact) {
             this.confidentialityImpact = Objects.requireNonNull(confidentialityImpact);
             return this;
         }
-
         public Builder exploitabilityScore(Double exploitabilityScore) {
             this.exploitabilityScore = Objects.requireNonNull(exploitabilityScore);
             return this;
         }
-
         public Builder impactScore(Double impactScore) {
             this.impactScore = Objects.requireNonNull(impactScore);
             return this;
         }
-
         public Builder integrityImpact(String integrityImpact) {
             this.integrityImpact = Objects.requireNonNull(integrityImpact);
             return this;
         }
-
         public Builder privilegesRequired(String privilegesRequired) {
             this.privilegesRequired = Objects.requireNonNull(privilegesRequired);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder userInteraction(String userInteraction) {
             this.userInteraction = Objects.requireNonNull(userInteraction);
             return this;
-        }
-        public CVSSv3Response build() {
+        }        public CVSSv3Response build() {
             return new CVSSv3Response(attackComplexity, attackVector, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
         }
     }

@@ -76,17 +76,14 @@ public final class GetReferenceArgs extends io.pulumi.resources.InvokeArgs {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder referenceId(String referenceId) {
             this.referenceId = Objects.requireNonNull(referenceId);
             return this;
-        }
-        public GetReferenceArgs build() {
+        }        public GetReferenceArgs build() {
             return new GetReferenceArgs(environmentId, organizationId, referenceId);
         }
     }

@@ -301,82 +301,69 @@ public final class GetDeviceResult {
             this.blocked = Objects.requireNonNull(blocked);
             return this;
         }
-
         public Builder config(DeviceConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder credentials(List<DeviceCredentialResponse> credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
-
+        public Builder credentials(DeviceCredentialResponse... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder gatewayConfig(GatewayConfigResponse gatewayConfig) {
             this.gatewayConfig = Objects.requireNonNull(gatewayConfig);
             return this;
         }
-
         public Builder lastConfigAckTime(String lastConfigAckTime) {
             this.lastConfigAckTime = Objects.requireNonNull(lastConfigAckTime);
             return this;
         }
-
         public Builder lastConfigSendTime(String lastConfigSendTime) {
             this.lastConfigSendTime = Objects.requireNonNull(lastConfigSendTime);
             return this;
         }
-
         public Builder lastErrorStatus(StatusResponse lastErrorStatus) {
             this.lastErrorStatus = Objects.requireNonNull(lastErrorStatus);
             return this;
         }
-
         public Builder lastErrorTime(String lastErrorTime) {
             this.lastErrorTime = Objects.requireNonNull(lastErrorTime);
             return this;
         }
-
         public Builder lastEventTime(String lastEventTime) {
             this.lastEventTime = Objects.requireNonNull(lastEventTime);
             return this;
         }
-
         public Builder lastHeartbeatTime(String lastHeartbeatTime) {
             this.lastHeartbeatTime = Objects.requireNonNull(lastHeartbeatTime);
             return this;
         }
-
         public Builder lastStateTime(String lastStateTime) {
             this.lastStateTime = Objects.requireNonNull(lastStateTime);
             return this;
         }
-
         public Builder logLevel(String logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numId(String numId) {
             this.numId = Objects.requireNonNull(numId);
             return this;
         }
-
         public Builder state(DeviceStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetDeviceResult build() {
+        }        public GetDeviceResult build() {
             return new GetDeviceResult(blocked, config, credentials, gatewayConfig, lastConfigAckTime, lastConfigSendTime, lastErrorStatus, lastErrorTime, lastEventTime, lastHeartbeatTime, lastStateTime, logLevel, metadata, name, numId, state);
         }
     }

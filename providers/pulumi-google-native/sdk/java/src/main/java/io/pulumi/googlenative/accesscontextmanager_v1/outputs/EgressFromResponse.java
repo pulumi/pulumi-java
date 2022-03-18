@@ -70,12 +70,13 @@ public final class EgressFromResponse {
             this.identities = Objects.requireNonNull(identities);
             return this;
         }
-
+        public Builder identities(String... identities) {
+            return identities(List.of(identities));
+        }
         public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
-        }
-        public EgressFromResponse build() {
+        }        public EgressFromResponse build() {
             return new EgressFromResponse(identities, identityType);
         }
     }

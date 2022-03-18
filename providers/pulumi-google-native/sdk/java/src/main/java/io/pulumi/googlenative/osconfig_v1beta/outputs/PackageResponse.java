@@ -85,17 +85,14 @@ public final class PackageResponse {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
-
         public Builder manager(String manager) {
             this.manager = Objects.requireNonNull(manager);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PackageResponse build() {
+        }        public PackageResponse build() {
             return new PackageResponse(desiredState, manager, name);
         }
     }

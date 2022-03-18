@@ -96,32 +96,26 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
             this.bucketPolicyOnly = bucketPolicyOnly;
             return this;
         }
-
         public Builder bucketPolicyOnly(@Nullable BucketIamConfigurationBucketPolicyOnlyArgs bucketPolicyOnly) {
             this.bucketPolicyOnly = Output.ofNullable(bucketPolicyOnly);
             return this;
         }
-
         public Builder publicAccessPrevention(@Nullable Output<String> publicAccessPrevention) {
             this.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
-
         public Builder publicAccessPrevention(@Nullable String publicAccessPrevention) {
             this.publicAccessPrevention = Output.ofNullable(publicAccessPrevention);
             return this;
         }
-
         public Builder uniformBucketLevelAccess(@Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
         }
-
         public Builder uniformBucketLevelAccess(@Nullable BucketIamConfigurationUniformBucketLevelAccessArgs uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = Output.ofNullable(uniformBucketLevelAccess);
             return this;
-        }
-        public BucketIamConfigurationArgs build() {
+        }        public BucketIamConfigurationArgs build() {
             return new BucketIamConfigurationArgs(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);
         }
     }

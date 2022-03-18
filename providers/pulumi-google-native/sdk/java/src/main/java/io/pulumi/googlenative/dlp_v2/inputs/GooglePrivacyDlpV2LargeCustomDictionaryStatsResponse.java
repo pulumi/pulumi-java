@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
         public Builder approxNumPhrases(String approxNumPhrases) {
             this.approxNumPhrases = Objects.requireNonNull(approxNumPhrases);
             return this;
-        }
-        public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse build() {
+        }        public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse build() {
             return new GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(approxNumPhrases);
         }
     }

@@ -194,92 +194,74 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder executionState(@Nullable Output<ScanRunExecutionState> executionState) {
             this.executionState = executionState;
             return this;
         }
-
         public Builder executionState(@Nullable ScanRunExecutionState executionState) {
             this.executionState = Output.ofNullable(executionState);
             return this;
         }
-
         public Builder hasVulnerabilities(@Nullable Output<Boolean> hasVulnerabilities) {
             this.hasVulnerabilities = hasVulnerabilities;
             return this;
         }
-
         public Builder hasVulnerabilities(@Nullable Boolean hasVulnerabilities) {
             this.hasVulnerabilities = Output.ofNullable(hasVulnerabilities);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder progressPercent(@Nullable Output<Integer> progressPercent) {
             this.progressPercent = progressPercent;
             return this;
         }
-
         public Builder progressPercent(@Nullable Integer progressPercent) {
             this.progressPercent = Output.ofNullable(progressPercent);
             return this;
         }
-
         public Builder resultState(@Nullable Output<ScanRunResultState> resultState) {
             this.resultState = resultState;
             return this;
         }
-
         public Builder resultState(@Nullable ScanRunResultState resultState) {
             this.resultState = Output.ofNullable(resultState);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder urlsCrawledCount(@Nullable Output<String> urlsCrawledCount) {
             this.urlsCrawledCount = urlsCrawledCount;
             return this;
         }
-
         public Builder urlsCrawledCount(@Nullable String urlsCrawledCount) {
             this.urlsCrawledCount = Output.ofNullable(urlsCrawledCount);
             return this;
         }
-
         public Builder urlsTestedCount(@Nullable Output<String> urlsTestedCount) {
             this.urlsTestedCount = urlsTestedCount;
             return this;
         }
-
         public Builder urlsTestedCount(@Nullable String urlsTestedCount) {
             this.urlsTestedCount = Output.ofNullable(urlsTestedCount);
             return this;
-        }
-        public ScanRunArgs build() {
+        }        public ScanRunArgs build() {
             return new ScanRunArgs(endTime, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount);
         }
     }

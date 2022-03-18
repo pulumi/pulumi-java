@@ -290,77 +290,68 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
-
         public Builder avroOptions(AvroOptionsResponse avroOptions) {
             this.avroOptions = Objects.requireNonNull(avroOptions);
             return this;
         }
-
         public Builder bigtableOptions(BigtableOptionsResponse bigtableOptions) {
             this.bigtableOptions = Objects.requireNonNull(bigtableOptions);
             return this;
         }
-
         public Builder compression(String compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
-
         public Builder connectionId(String connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
-
         public Builder csvOptions(CsvOptionsResponse csvOptions) {
             this.csvOptions = Objects.requireNonNull(csvOptions);
             return this;
         }
-
         public Builder decimalTargetTypes(List<String> decimalTargetTypes) {
             this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes);
             return this;
         }
-
+        public Builder decimalTargetTypes(String... decimalTargetTypes) {
+            return decimalTargetTypes(List.of(decimalTargetTypes));
+        }
         public Builder googleSheetsOptions(GoogleSheetsOptionsResponse googleSheetsOptions) {
             this.googleSheetsOptions = Objects.requireNonNull(googleSheetsOptions);
             return this;
         }
-
         public Builder hivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
             this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions);
             return this;
         }
-
         public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues);
             return this;
         }
-
         public Builder maxBadRecords(Integer maxBadRecords) {
             this.maxBadRecords = Objects.requireNonNull(maxBadRecords);
             return this;
         }
-
         public Builder parquetOptions(ParquetOptionsResponse parquetOptions) {
             this.parquetOptions = Objects.requireNonNull(parquetOptions);
             return this;
         }
-
         public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder sourceFormat(String sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
-
         public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-        public ExternalDataConfigurationResponse build() {
+        public Builder sourceUris(String... sourceUris) {
+            return sourceUris(List.of(sourceUris));
+        }        public ExternalDataConfigurationResponse build() {
             return new ExternalDataConfigurationResponse(autodetect, avroOptions, bigtableOptions, compression, connectionId, csvOptions, decimalTargetTypes, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, parquetOptions, schema, sourceFormat, sourceUris);
         }
     }

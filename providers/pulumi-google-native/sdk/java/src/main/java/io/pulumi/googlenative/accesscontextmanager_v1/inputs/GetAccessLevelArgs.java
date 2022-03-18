@@ -78,17 +78,14 @@ public final class GetAccessLevelArgs extends io.pulumi.resources.InvokeArgs {
             this.accessLevelFormat = accessLevelFormat;
             return this;
         }
-
         public Builder accessLevelId(String accessLevelId) {
             this.accessLevelId = Objects.requireNonNull(accessLevelId);
             return this;
         }
-
         public Builder accessPolicyId(String accessPolicyId) {
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
-        }
-        public GetAccessLevelArgs build() {
+        }        public GetAccessLevelArgs build() {
             return new GetAccessLevelArgs(accessLevelFormat, accessLevelId, accessPolicyId);
         }
     }

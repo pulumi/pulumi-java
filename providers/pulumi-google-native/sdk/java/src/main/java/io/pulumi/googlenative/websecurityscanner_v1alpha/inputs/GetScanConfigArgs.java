@@ -66,12 +66,10 @@ public final class GetScanConfigArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder scanConfigId(String scanConfigId) {
             this.scanConfigId = Objects.requireNonNull(scanConfigId);
             return this;
-        }
-        public GetScanConfigArgs build() {
+        }        public GetScanConfigArgs build() {
             return new GetScanConfigArgs(project, scanConfigId);
         }
     }

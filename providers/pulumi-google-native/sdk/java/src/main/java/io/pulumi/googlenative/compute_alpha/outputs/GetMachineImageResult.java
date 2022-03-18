@@ -316,87 +316,79 @@ public final class GetMachineImageResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder guestFlush(Boolean guestFlush) {
             this.guestFlush = Objects.requireNonNull(guestFlush);
             return this;
         }
-
         public Builder instanceProperties(InstancePropertiesResponse instanceProperties) {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder machineImageEncryptionKey(CustomerEncryptionKeyResponse machineImageEncryptionKey) {
             this.machineImageEncryptionKey = Objects.requireNonNull(machineImageEncryptionKey);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder savedDisks(List<SavedDiskResponse> savedDisks) {
             this.savedDisks = Objects.requireNonNull(savedDisks);
             return this;
         }
-
+        public Builder savedDisks(SavedDiskResponse... savedDisks) {
+            return savedDisks(List.of(savedDisks));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder sourceDiskEncryptionKeys(List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys) {
             this.sourceDiskEncryptionKeys = Objects.requireNonNull(sourceDiskEncryptionKeys);
             return this;
         }
-
+        public Builder sourceDiskEncryptionKeys(SourceDiskEncryptionKeyResponse... sourceDiskEncryptionKeys) {
+            return sourceDiskEncryptionKeys(List.of(sourceDiskEncryptionKeys));
+        }
         public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
-
         public Builder sourceInstanceProperties(SourceInstancePropertiesResponse sourceInstanceProperties) {
             this.sourceInstanceProperties = Objects.requireNonNull(sourceInstanceProperties);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }
         public Builder totalStorageBytes(String totalStorageBytes) {
             this.totalStorageBytes = Objects.requireNonNull(totalStorageBytes);
             return this;
-        }
-        public GetMachineImageResult build() {
+        }        public GetMachineImageResult build() {
             return new GetMachineImageResult(creationTimestamp, description, guestFlush, instanceProperties, kind, machineImageEncryptionKey, name, satisfiesPzs, savedDisks, selfLink, selfLinkWithId, sourceDiskEncryptionKeys, sourceInstance, sourceInstanceProperties, status, storageLocations, totalStorageBytes);
         }
     }

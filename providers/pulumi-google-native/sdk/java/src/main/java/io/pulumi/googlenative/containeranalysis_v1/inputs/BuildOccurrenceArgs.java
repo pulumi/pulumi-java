@@ -96,32 +96,26 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
             this.intotoStatement = intotoStatement;
             return this;
         }
-
         public Builder intotoStatement(@Nullable InTotoStatementArgs intotoStatement) {
             this.intotoStatement = Output.ofNullable(intotoStatement);
             return this;
         }
-
         public Builder provenance(@Nullable Output<BuildProvenanceArgs> provenance) {
             this.provenance = provenance;
             return this;
         }
-
         public Builder provenance(@Nullable BuildProvenanceArgs provenance) {
             this.provenance = Output.ofNullable(provenance);
             return this;
         }
-
         public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
             this.provenanceBytes = provenanceBytes;
             return this;
         }
-
         public Builder provenanceBytes(@Nullable String provenanceBytes) {
             this.provenanceBytes = Output.ofNullable(provenanceBytes);
             return this;
-        }
-        public BuildOccurrenceArgs build() {
+        }        public BuildOccurrenceArgs build() {
             return new BuildOccurrenceArgs(intotoStatement, provenance, provenanceBytes);
         }
     }

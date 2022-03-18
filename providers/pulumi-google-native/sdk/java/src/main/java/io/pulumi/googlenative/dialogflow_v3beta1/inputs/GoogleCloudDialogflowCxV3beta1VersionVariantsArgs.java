@@ -62,12 +62,13 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsArgs extends io.
             this.variants = variants;
             return this;
         }
-
         public Builder variants(@Nullable List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs> variants) {
             this.variants = Output.ofNullable(variants);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1VersionVariantsArgs build() {
+        public Builder variants(GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs... variants) {
+            return variants(List.of(variants));
+        }        public GoogleCloudDialogflowCxV3beta1VersionVariantsArgs build() {
             return new GoogleCloudDialogflowCxV3beta1VersionVariantsArgs(variants);
         }
     }

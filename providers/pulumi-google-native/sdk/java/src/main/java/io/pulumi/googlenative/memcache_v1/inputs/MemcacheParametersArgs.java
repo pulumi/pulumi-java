@@ -58,12 +58,10 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
             this.params = params;
             return this;
         }
-
         public Builder params(@Nullable Map<String,String> params) {
             this.params = Output.ofNullable(params);
             return this;
-        }
-        public MemcacheParametersArgs build() {
+        }        public MemcacheParametersArgs build() {
             return new MemcacheParametersArgs(params);
         }
     }

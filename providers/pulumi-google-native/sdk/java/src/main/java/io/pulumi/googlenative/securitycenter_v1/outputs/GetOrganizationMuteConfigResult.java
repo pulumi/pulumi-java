@@ -149,37 +149,30 @@ public final class GetOrganizationMuteConfigResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder mostRecentEditor(String mostRecentEditor) {
             this.mostRecentEditor = Objects.requireNonNull(mostRecentEditor);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetOrganizationMuteConfigResult build() {
+        }        public GetOrganizationMuteConfigResult build() {
             return new GetOrganizationMuteConfigResult(createTime, description, displayName, filter, mostRecentEditor, name, updateTime);
         }
     }

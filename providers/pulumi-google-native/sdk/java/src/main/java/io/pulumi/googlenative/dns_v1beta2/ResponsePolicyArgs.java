@@ -161,82 +161,72 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.clientOperationId = clientOperationId;
             return this;
         }
-
         public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder gkeClusters(@Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters) {
             this.gkeClusters = gkeClusters;
             return this;
         }
-
         public Builder gkeClusters(@Nullable List<ResponsePolicyGKEClusterArgs> gkeClusters) {
             this.gkeClusters = Output.ofNullable(gkeClusters);
             return this;
         }
-
+        public Builder gkeClusters(ResponsePolicyGKEClusterArgs... gkeClusters) {
+            return gkeClusters(List.of(gkeClusters));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder networks(@Nullable Output<List<ResponsePolicyNetworkArgs>> networks) {
             this.networks = networks;
             return this;
         }
-
         public Builder networks(@Nullable List<ResponsePolicyNetworkArgs> networks) {
             this.networks = Output.ofNullable(networks);
             return this;
         }
-
+        public Builder networks(ResponsePolicyNetworkArgs... networks) {
+            return networks(List.of(networks));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder responsePolicyName(@Nullable Output<String> responsePolicyName) {
             this.responsePolicyName = responsePolicyName;
             return this;
         }
-
         public Builder responsePolicyName(@Nullable String responsePolicyName) {
             this.responsePolicyName = Output.ofNullable(responsePolicyName);
             return this;
-        }
-        public ResponsePolicyArgs build() {
+        }        public ResponsePolicyArgs build() {
             return new ResponsePolicyArgs(clientOperationId, description, gkeClusters, id, kind, networks, project, responsePolicyName);
         }
     }

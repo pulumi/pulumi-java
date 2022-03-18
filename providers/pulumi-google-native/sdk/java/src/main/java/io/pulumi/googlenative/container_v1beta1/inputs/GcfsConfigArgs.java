@@ -61,12 +61,10 @@ public final class GcfsConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GcfsConfigArgs build() {
+        }        public GcfsConfigArgs build() {
             return new GcfsConfigArgs(enabled);
         }
     }

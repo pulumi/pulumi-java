@@ -77,12 +77,13 @@ public final class LoggingDestinationResponse extends io.pulumi.resources.Invoke
             this.logs = Objects.requireNonNull(logs);
             return this;
         }
-
+        public Builder logs(String... logs) {
+            return logs(List.of(logs));
+        }
         public Builder monitoredResource(String monitoredResource) {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
-        }
-        public LoggingDestinationResponse build() {
+        }        public LoggingDestinationResponse build() {
             return new LoggingDestinationResponse(logs, monitoredResource);
         }
     }

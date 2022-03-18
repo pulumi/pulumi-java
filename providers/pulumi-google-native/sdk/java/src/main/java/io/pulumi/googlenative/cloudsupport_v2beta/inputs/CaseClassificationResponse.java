@@ -58,8 +58,7 @@ public final class CaseClassificationResponse extends io.pulumi.resources.Invoke
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
-        }
-        public CaseClassificationResponse build() {
+        }        public CaseClassificationResponse build() {
             return new CaseClassificationResponse(displayName);
         }
     }

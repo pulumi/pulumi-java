@@ -90,22 +90,18 @@ public final class GetEntryArgs extends io.pulumi.resources.InvokeArgs {
             this.entryGroupId = Objects.requireNonNull(entryGroupId);
             return this;
         }
-
         public Builder entryId(String entryId) {
             this.entryId = Objects.requireNonNull(entryId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetEntryArgs build() {
+        }        public GetEntryArgs build() {
             return new GetEntryArgs(entryGroupId, entryId, location, project);
         }
     }

@@ -166,92 +166,74 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder backupId(String backupId) {
             this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
-
         public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder encryptionConfigEncryptionType(Output<String> encryptionConfigEncryptionType) {
             this.encryptionConfigEncryptionType = Objects.requireNonNull(encryptionConfigEncryptionType);
             return this;
         }
-
         public Builder encryptionConfigEncryptionType(String encryptionConfigEncryptionType) {
             this.encryptionConfigEncryptionType = Output.of(Objects.requireNonNull(encryptionConfigEncryptionType));
             return this;
         }
-
         public Builder encryptionConfigKmsKeyName(@Nullable Output<String> encryptionConfigKmsKeyName) {
             this.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
             return this;
         }
-
         public Builder encryptionConfigKmsKeyName(@Nullable String encryptionConfigKmsKeyName) {
             this.encryptionConfigKmsKeyName = Output.ofNullable(encryptionConfigKmsKeyName);
             return this;
         }
-
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder versionTime(@Nullable Output<String> versionTime) {
             this.versionTime = versionTime;
             return this;
         }
-
         public Builder versionTime(@Nullable String versionTime) {
             this.versionTime = Output.ofNullable(versionTime);
             return this;
-        }
-        public BackupArgs build() {
+        }        public BackupArgs build() {
             return new BackupArgs(backupId, database, encryptionConfigEncryptionType, encryptionConfigKmsKeyName, expireTime, instanceId, name, project, versionTime);
         }
     }

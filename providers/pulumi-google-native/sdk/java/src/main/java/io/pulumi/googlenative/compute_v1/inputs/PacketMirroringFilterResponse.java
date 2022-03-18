@@ -89,17 +89,20 @@ public final class PacketMirroringFilterResponse extends io.pulumi.resources.Inv
             this.cidrRanges = Objects.requireNonNull(cidrRanges);
             return this;
         }
-
+        public Builder cidrRanges(String... cidrRanges) {
+            return cidrRanges(List.of(cidrRanges));
+        }
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder ipProtocols(List<String> ipProtocols) {
             this.ipProtocols = Objects.requireNonNull(ipProtocols);
             return this;
         }
-        public PacketMirroringFilterResponse build() {
+        public Builder ipProtocols(String... ipProtocols) {
+            return ipProtocols(List.of(ipProtocols));
+        }        public PacketMirroringFilterResponse build() {
             return new PacketMirroringFilterResponse(cidrRanges, direction, ipProtocols);
         }
     }

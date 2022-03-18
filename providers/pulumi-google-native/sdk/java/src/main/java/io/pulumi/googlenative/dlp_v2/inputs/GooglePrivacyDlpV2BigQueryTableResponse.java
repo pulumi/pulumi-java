@@ -92,17 +92,14 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public GooglePrivacyDlpV2BigQueryTableResponse build() {
+        }        public GooglePrivacyDlpV2BigQueryTableResponse build() {
             return new GooglePrivacyDlpV2BigQueryTableResponse(datasetId, project, tableId);
         }
     }

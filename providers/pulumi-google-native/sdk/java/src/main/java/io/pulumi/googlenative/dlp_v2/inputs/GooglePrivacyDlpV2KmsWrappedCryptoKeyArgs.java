@@ -77,22 +77,18 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs extends io.pulumi.r
             this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
             return this;
         }
-
         public Builder cryptoKeyName(String cryptoKeyName) {
             this.cryptoKeyName = Output.of(Objects.requireNonNull(cryptoKeyName));
             return this;
         }
-
         public Builder wrappedKey(Output<String> wrappedKey) {
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
         }
-
         public Builder wrappedKey(String wrappedKey) {
             this.wrappedKey = Output.of(Objects.requireNonNull(wrappedKey));
             return this;
-        }
-        public GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs build() {
+        }        public GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs build() {
             return new GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs(cryptoKeyName, wrappedKey);
         }
     }

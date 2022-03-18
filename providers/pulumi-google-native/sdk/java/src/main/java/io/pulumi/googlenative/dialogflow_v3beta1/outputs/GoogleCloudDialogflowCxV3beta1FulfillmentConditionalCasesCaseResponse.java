@@ -71,12 +71,13 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
             this.caseContent = Objects.requireNonNull(caseContent);
             return this;
         }
-
+        public Builder caseContent(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse... caseContent) {
+            return caseContent(List.of(caseContent));
+        }
         public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse(caseContent, condition);
         }
     }

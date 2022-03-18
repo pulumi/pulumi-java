@@ -90,22 +90,18 @@ public final class GetAuthorizationPolicyIamPolicyArgs extends io.pulumi.resourc
             this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAuthorizationPolicyIamPolicyArgs build() {
+        }        public GetAuthorizationPolicyIamPolicyArgs build() {
             return new GetAuthorizationPolicyIamPolicyArgs(authorizationPolicyId, location, optionsRequestedPolicyVersion, project);
         }
     }

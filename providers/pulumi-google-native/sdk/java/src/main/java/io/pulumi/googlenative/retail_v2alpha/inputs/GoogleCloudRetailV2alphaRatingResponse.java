@@ -94,17 +94,17 @@ public final class GoogleCloudRetailV2alphaRatingResponse extends io.pulumi.reso
             this.averageRating = Objects.requireNonNull(averageRating);
             return this;
         }
-
         public Builder ratingCount(Integer ratingCount) {
             this.ratingCount = Objects.requireNonNull(ratingCount);
             return this;
         }
-
         public Builder ratingHistogram(List<Integer> ratingHistogram) {
             this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
             return this;
         }
-        public GoogleCloudRetailV2alphaRatingResponse build() {
+        public Builder ratingHistogram(Integer... ratingHistogram) {
+            return ratingHistogram(List.of(ratingHistogram));
+        }        public GoogleCloudRetailV2alphaRatingResponse build() {
             return new GoogleCloudRetailV2alphaRatingResponse(averageRating, ratingCount, ratingHistogram);
         }
     }

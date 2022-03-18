@@ -100,22 +100,18 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
             this.forwardingPath = Objects.requireNonNull(forwardingPath);
             return this;
         }
-
         public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }
-
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
+        }        public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerResponse(forwardingPath, ipv4Address, ipv6Address, kind);
         }
     }

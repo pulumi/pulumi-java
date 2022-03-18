@@ -349,97 +349,90 @@ public final class GetNodeResult {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
-
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder dataDisks(List<AttachedDiskResponse> dataDisks) {
             this.dataDisks = Objects.requireNonNull(dataDisks);
             return this;
         }
-
+        public Builder dataDisks(AttachedDiskResponse... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
-
         public Builder healthDescription(String healthDescription) {
             this.healthDescription = Objects.requireNonNull(healthDescription);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkConfig(NetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
-
         public Builder networkEndpoints(List<NetworkEndpointResponse> networkEndpoints) {
             this.networkEndpoints = Objects.requireNonNull(networkEndpoints);
             return this;
         }
-
+        public Builder networkEndpoints(NetworkEndpointResponse... networkEndpoints) {
+            return networkEndpoints(List.of(networkEndpoints));
+        }
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder schedulingConfig(SchedulingConfigResponse schedulingConfig) {
             this.schedulingConfig = Objects.requireNonNull(schedulingConfig);
             return this;
         }
-
         public Builder serviceAccount(ServiceAccountResponse serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder symptoms(List<SymptomResponse> symptoms) {
             this.symptoms = Objects.requireNonNull(symptoms);
             return this;
         }
-
+        public Builder symptoms(SymptomResponse... symptoms) {
+            return symptoms(List.of(symptoms));
+        }
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-        public GetNodeResult build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public GetNodeResult build() {
             return new GetNodeResult(acceleratorType, apiVersion, cidrBlock, createTime, dataDisks, description, health, healthDescription, labels, metadata, name, networkConfig, networkEndpoints, runtimeVersion, schedulingConfig, serviceAccount, state, symptoms, tags);
         }
     }

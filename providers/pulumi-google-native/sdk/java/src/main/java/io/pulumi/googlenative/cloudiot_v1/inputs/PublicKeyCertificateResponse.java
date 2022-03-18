@@ -93,17 +93,14 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder x509Details(X509CertificateDetailsResponse x509Details) {
             this.x509Details = Objects.requireNonNull(x509Details);
             return this;
-        }
-        public PublicKeyCertificateResponse build() {
+        }        public PublicKeyCertificateResponse build() {
             return new PublicKeyCertificateResponse(certificate, format, x509Details);
         }
     }

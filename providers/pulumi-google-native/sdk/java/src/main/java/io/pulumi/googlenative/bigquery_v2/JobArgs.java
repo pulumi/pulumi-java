@@ -101,42 +101,34 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable JobConfigurationArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder jobReference(@Nullable Output<JobReferenceArgs> jobReference) {
             this.jobReference = jobReference;
             return this;
         }
-
         public Builder jobReference(@Nullable JobReferenceArgs jobReference) {
             this.jobReference = Output.ofNullable(jobReference);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable AssetOrArchive source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(configuration, jobReference, project, source);
         }
     }

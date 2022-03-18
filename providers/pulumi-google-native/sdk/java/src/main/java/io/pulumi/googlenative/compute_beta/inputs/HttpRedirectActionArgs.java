@@ -144,62 +144,50 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
             this.hostRedirect = hostRedirect;
             return this;
         }
-
         public Builder hostRedirect(@Nullable String hostRedirect) {
             this.hostRedirect = Output.ofNullable(hostRedirect);
             return this;
         }
-
         public Builder httpsRedirect(@Nullable Output<Boolean> httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
-
         public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
             this.httpsRedirect = Output.ofNullable(httpsRedirect);
             return this;
         }
-
         public Builder pathRedirect(@Nullable Output<String> pathRedirect) {
             this.pathRedirect = pathRedirect;
             return this;
         }
-
         public Builder pathRedirect(@Nullable String pathRedirect) {
             this.pathRedirect = Output.ofNullable(pathRedirect);
             return this;
         }
-
         public Builder prefixRedirect(@Nullable Output<String> prefixRedirect) {
             this.prefixRedirect = prefixRedirect;
             return this;
         }
-
         public Builder prefixRedirect(@Nullable String prefixRedirect) {
             this.prefixRedirect = Output.ofNullable(prefixRedirect);
             return this;
         }
-
         public Builder redirectResponseCode(@Nullable Output<HttpRedirectActionRedirectResponseCode> redirectResponseCode) {
             this.redirectResponseCode = redirectResponseCode;
             return this;
         }
-
         public Builder redirectResponseCode(@Nullable HttpRedirectActionRedirectResponseCode redirectResponseCode) {
             this.redirectResponseCode = Output.ofNullable(redirectResponseCode);
             return this;
         }
-
         public Builder stripQuery(@Nullable Output<Boolean> stripQuery) {
             this.stripQuery = stripQuery;
             return this;
         }
-
         public Builder stripQuery(@Nullable Boolean stripQuery) {
             this.stripQuery = Output.ofNullable(stripQuery);
             return this;
-        }
-        public HttpRedirectActionArgs build() {
+        }        public HttpRedirectActionArgs build() {
             return new HttpRedirectActionArgs(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }
     }

@@ -104,22 +104,18 @@ public final class ResultStorageResponse {
             this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage);
             return this;
         }
-
         public Builder resultsUrl(String resultsUrl) {
             this.resultsUrl = Objects.requireNonNull(resultsUrl);
             return this;
         }
-
         public Builder toolResultsExecution(ToolResultsExecutionResponse toolResultsExecution) {
             this.toolResultsExecution = Objects.requireNonNull(toolResultsExecution);
             return this;
         }
-
         public Builder toolResultsHistory(ToolResultsHistoryResponse toolResultsHistory) {
             this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
             return this;
-        }
-        public ResultStorageResponse build() {
+        }        public ResultStorageResponse build() {
             return new ResultStorageResponse(googleCloudStorage, resultsUrl, toolResultsExecution, toolResultsHistory);
         }
     }

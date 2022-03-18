@@ -78,22 +78,18 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
-
         public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
-
         public Builder instructionMessage(@Nullable Output<String> instructionMessage) {
             this.instructionMessage = instructionMessage;
             return this;
         }
-
         public Builder instructionMessage(@Nullable String instructionMessage) {
             this.instructionMessage = Output.ofNullable(instructionMessage);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(annotationSpecSet, instructionMessage);
         }
     }

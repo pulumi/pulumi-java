@@ -94,17 +94,17 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(List<ParameterMetadataResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-        public TemplateMetadataResponse build() {
+        public Builder parameters(ParameterMetadataResponse... parameters) {
+            return parameters(List.of(parameters));
+        }        public TemplateMetadataResponse build() {
             return new TemplateMetadataResponse(description, name, parameters);
         }
     }

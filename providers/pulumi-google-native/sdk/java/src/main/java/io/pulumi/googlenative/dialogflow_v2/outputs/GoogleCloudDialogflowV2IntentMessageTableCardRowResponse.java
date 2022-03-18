@@ -71,12 +71,13 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse {
             this.cells = Objects.requireNonNull(cells);
             return this;
         }
-
+        public Builder cells(GoogleCloudDialogflowV2IntentMessageTableCardCellResponse... cells) {
+            return cells(List.of(cells));
+        }
         public Builder dividerAfter(Boolean dividerAfter) {
             this.dividerAfter = Objects.requireNonNull(dividerAfter);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageTableCardRowResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageTableCardRowResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardRowResponse(cells, dividerAfter);
         }
     }

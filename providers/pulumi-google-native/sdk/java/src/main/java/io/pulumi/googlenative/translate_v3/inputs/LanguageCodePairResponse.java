@@ -76,12 +76,10 @@ public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeAr
             this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
             return this;
         }
-
         public Builder targetLanguageCode(String targetLanguageCode) {
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
-        }
-        public LanguageCodePairResponse build() {
+        }        public LanguageCodePairResponse build() {
             return new LanguageCodePairResponse(sourceLanguageCode, targetLanguageCode);
         }
     }

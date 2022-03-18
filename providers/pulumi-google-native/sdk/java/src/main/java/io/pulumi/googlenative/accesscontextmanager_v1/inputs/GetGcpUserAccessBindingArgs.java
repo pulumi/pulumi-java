@@ -64,12 +64,10 @@ public final class GetGcpUserAccessBindingArgs extends io.pulumi.resources.Invok
             this.gcpUserAccessBindingId = Objects.requireNonNull(gcpUserAccessBindingId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetGcpUserAccessBindingArgs build() {
+        }        public GetGcpUserAccessBindingArgs build() {
             return new GetGcpUserAccessBindingArgs(gcpUserAccessBindingId, organizationId);
         }
     }

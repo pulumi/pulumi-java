@@ -307,87 +307,82 @@ public final class RouterNatResponse {
             this.drainNatIps = Objects.requireNonNull(drainNatIps);
             return this;
         }
-
+        public Builder drainNatIps(String... drainNatIps) {
+            return drainNatIps(List.of(drainNatIps));
+        }
         public Builder enableDynamicPortAllocation(Boolean enableDynamicPortAllocation) {
             this.enableDynamicPortAllocation = Objects.requireNonNull(enableDynamicPortAllocation);
             return this;
         }
-
         public Builder enableEndpointIndependentMapping(Boolean enableEndpointIndependentMapping) {
             this.enableEndpointIndependentMapping = Objects.requireNonNull(enableEndpointIndependentMapping);
             return this;
         }
-
         public Builder icmpIdleTimeoutSec(Integer icmpIdleTimeoutSec) {
             this.icmpIdleTimeoutSec = Objects.requireNonNull(icmpIdleTimeoutSec);
             return this;
         }
-
         public Builder logConfig(RouterNatLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
-
         public Builder maxPortsPerVm(Integer maxPortsPerVm) {
             this.maxPortsPerVm = Objects.requireNonNull(maxPortsPerVm);
             return this;
         }
-
         public Builder minPortsPerVm(Integer minPortsPerVm) {
             this.minPortsPerVm = Objects.requireNonNull(minPortsPerVm);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder natIpAllocateOption(String natIpAllocateOption) {
             this.natIpAllocateOption = Objects.requireNonNull(natIpAllocateOption);
             return this;
         }
-
         public Builder natIps(List<String> natIps) {
             this.natIps = Objects.requireNonNull(natIps);
             return this;
         }
-
+        public Builder natIps(String... natIps) {
+            return natIps(List.of(natIps));
+        }
         public Builder rules(List<RouterNatRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(RouterNatRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder sourceSubnetworkIpRangesToNat(String sourceSubnetworkIpRangesToNat) {
             this.sourceSubnetworkIpRangesToNat = Objects.requireNonNull(sourceSubnetworkIpRangesToNat);
             return this;
         }
-
         public Builder subnetworks(List<RouterNatSubnetworkToNatResponse> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
-
+        public Builder subnetworks(RouterNatSubnetworkToNatResponse... subnetworks) {
+            return subnetworks(List.of(subnetworks));
+        }
         public Builder tcpEstablishedIdleTimeoutSec(Integer tcpEstablishedIdleTimeoutSec) {
             this.tcpEstablishedIdleTimeoutSec = Objects.requireNonNull(tcpEstablishedIdleTimeoutSec);
             return this;
         }
-
         public Builder tcpTimeWaitTimeoutSec(Integer tcpTimeWaitTimeoutSec) {
             this.tcpTimeWaitTimeoutSec = Objects.requireNonNull(tcpTimeWaitTimeoutSec);
             return this;
         }
-
         public Builder tcpTransitoryIdleTimeoutSec(Integer tcpTransitoryIdleTimeoutSec) {
             this.tcpTransitoryIdleTimeoutSec = Objects.requireNonNull(tcpTransitoryIdleTimeoutSec);
             return this;
         }
-
         public Builder udpIdleTimeoutSec(Integer udpIdleTimeoutSec) {
             this.udpIdleTimeoutSec = Objects.requireNonNull(udpIdleTimeoutSec);
             return this;
-        }
-        public RouterNatResponse build() {
+        }        public RouterNatResponse build() {
             return new RouterNatResponse(drainNatIps, enableDynamicPortAllocation, enableEndpointIndependentMapping, icmpIdleTimeoutSec, logConfig, maxPortsPerVm, minPortsPerVm, name, natIpAllocateOption, natIps, rules, sourceSubnetworkIpRangesToNat, subnetworks, tcpEstablishedIdleTimeoutSec, tcpTimeWaitTimeoutSec, tcpTransitoryIdleTimeoutSec, udpIdleTimeoutSec);
         }
     }

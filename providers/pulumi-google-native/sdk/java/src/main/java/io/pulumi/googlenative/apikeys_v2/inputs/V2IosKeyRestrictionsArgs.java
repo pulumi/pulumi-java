@@ -62,12 +62,13 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }
-
         public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
             this.allowedBundleIds = Output.ofNullable(allowedBundleIds);
             return this;
         }
-        public V2IosKeyRestrictionsArgs build() {
+        public Builder allowedBundleIds(String... allowedBundleIds) {
+            return allowedBundleIds(List.of(allowedBundleIds));
+        }        public V2IosKeyRestrictionsArgs build() {
             return new V2IosKeyRestrictionsArgs(allowedBundleIds);
         }
     }

@@ -136,62 +136,50 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
         }
-
         public Builder accessPolicyId(String accessPolicyId) {
             this.accessPolicyId = Output.of(Objects.requireNonNull(accessPolicyId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder perimeterType(@Nullable Output<ServicePerimeterPerimeterType> perimeterType) {
             this.perimeterType = perimeterType;
             return this;
         }
-
         public Builder perimeterType(@Nullable ServicePerimeterPerimeterType perimeterType) {
             this.perimeterType = Output.ofNullable(perimeterType);
             return this;
         }
-
         public Builder status(@Nullable Output<ServicePerimeterConfigArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable ServicePerimeterConfigArgs status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public ServicePerimeterArgs build() {
+        }        public ServicePerimeterArgs build() {
             return new ServicePerimeterArgs(accessPolicyId, description, name, perimeterType, status, title);
         }
     }

@@ -118,27 +118,22 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
             this.contentUrl = Objects.requireNonNull(contentUrl);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder icon(GoogleCloudDialogflowV2IntentMessageImageResponse icon) {
             this.icon = Objects.requireNonNull(icon);
             return this;
         }
-
         public Builder largeImage(GoogleCloudDialogflowV2IntentMessageImageResponse largeImage) {
             this.largeImage = Objects.requireNonNull(largeImage);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse(contentUrl, description, icon, largeImage, name);
         }
     }

@@ -111,22 +111,18 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
             this.customTag = Objects.requireNonNull(customTag);
             return this;
         }
-
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder inferred(GoogleProtobufEmptyResponse inferred) {
             this.inferred = Objects.requireNonNull(inferred);
             return this;
         }
-
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
-        }
-        public GooglePrivacyDlpV2TaggedFieldResponse build() {
+        }        public GooglePrivacyDlpV2TaggedFieldResponse build() {
             return new GooglePrivacyDlpV2TaggedFieldResponse(customTag, field, inferred, infoType);
         }
     }

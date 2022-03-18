@@ -66,12 +66,10 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.datasourceId = Objects.requireNonNull(datasourceId);
             return this;
         }
-
         public Builder debugOptionsEnableDebugging(@Nullable String debugOptionsEnableDebugging) {
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
-        }
-        public GetDataSourceArgs build() {
+        }        public GetDataSourceArgs build() {
             return new GetDataSourceArgs(datasourceId, debugOptionsEnableDebugging);
         }
     }

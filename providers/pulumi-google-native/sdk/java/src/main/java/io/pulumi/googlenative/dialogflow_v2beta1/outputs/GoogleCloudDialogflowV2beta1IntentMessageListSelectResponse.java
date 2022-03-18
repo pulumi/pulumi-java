@@ -87,17 +87,17 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse... items) {
+            return items(List.of(items));
+        }
         public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse(items, subtitle, title);
         }
     }

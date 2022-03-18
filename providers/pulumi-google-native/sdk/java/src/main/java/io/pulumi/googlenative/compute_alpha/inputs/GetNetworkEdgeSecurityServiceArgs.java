@@ -78,17 +78,14 @@ public final class GetNetworkEdgeSecurityServiceArgs extends io.pulumi.resources
             this.networkEdgeSecurityService = Objects.requireNonNull(networkEdgeSecurityService);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetNetworkEdgeSecurityServiceArgs build() {
+        }        public GetNetworkEdgeSecurityServiceArgs build() {
             return new GetNetworkEdgeSecurityServiceArgs(networkEdgeSecurityService, project, region);
         }
     }

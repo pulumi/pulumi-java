@@ -277,152 +277,128 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
             return this;
         }
-
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder dataDisks(@Nullable Output<List<AttachedDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
-
         public Builder dataDisks(@Nullable List<AttachedDiskArgs> dataDisks) {
             this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
-
+        public Builder dataDisks(AttachedDiskArgs... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder health(@Nullable Output<NodeHealth> health) {
             this.health = health;
             return this;
         }
-
         public Builder health(@Nullable NodeHealth health) {
             this.health = Output.ofNullable(health);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder nodeId(@Nullable Output<String> nodeId) {
             this.nodeId = nodeId;
             return this;
         }
-
         public Builder nodeId(@Nullable String nodeId) {
             this.nodeId = Output.ofNullable(nodeId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder runtimeVersion(Output<String> runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Output.of(Objects.requireNonNull(runtimeVersion));
             return this;
         }
-
         public Builder schedulingConfig(@Nullable Output<SchedulingConfigArgs> schedulingConfig) {
             this.schedulingConfig = schedulingConfig;
             return this;
         }
-
         public Builder schedulingConfig(@Nullable SchedulingConfigArgs schedulingConfig) {
             this.schedulingConfig = Output.ofNullable(schedulingConfig);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<ServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable ServiceAccountArgs serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public NodeArgs build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public NodeArgs build() {
             return new NodeArgs(acceleratorType, cidrBlock, dataDisks, description, health, labels, location, metadata, networkConfig, nodeId, project, runtimeVersion, schedulingConfig, serviceAccount, tags);
         }
     }

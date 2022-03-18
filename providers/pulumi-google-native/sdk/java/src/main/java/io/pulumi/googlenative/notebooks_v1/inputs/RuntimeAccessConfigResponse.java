@@ -92,17 +92,14 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
-
         public Builder proxyUri(String proxyUri) {
             this.proxyUri = Objects.requireNonNull(proxyUri);
             return this;
         }
-
         public Builder runtimeOwner(String runtimeOwner) {
             this.runtimeOwner = Objects.requireNonNull(runtimeOwner);
             return this;
-        }
-        public RuntimeAccessConfigResponse build() {
+        }        public RuntimeAccessConfigResponse build() {
             return new RuntimeAccessConfigResponse(accessType, proxyUri, runtimeOwner);
         }
     }

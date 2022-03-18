@@ -93,17 +93,14 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
             this.numShards = Objects.requireNonNull(numShards);
             return this;
         }
-
         public Builder shardIndex(Integer shardIndex) {
             this.shardIndex = Objects.requireNonNull(shardIndex);
             return this;
         }
-
         public Builder testTargetsForShard(TestTargetsForShardResponse testTargetsForShard) {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
-        }
-        public ShardResponse build() {
+        }        public ShardResponse build() {
             return new ShardResponse(numShards, shardIndex, testTargetsForShard);
         }
     }

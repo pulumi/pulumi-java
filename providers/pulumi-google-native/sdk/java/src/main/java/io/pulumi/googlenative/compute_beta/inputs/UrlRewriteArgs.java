@@ -78,22 +78,18 @@ public final class UrlRewriteArgs extends io.pulumi.resources.ResourceArgs {
             this.hostRewrite = hostRewrite;
             return this;
         }
-
         public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = Output.ofNullable(hostRewrite);
             return this;
         }
-
         public Builder pathPrefixRewrite(@Nullable Output<String> pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
-
         public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = Output.ofNullable(pathPrefixRewrite);
             return this;
-        }
-        public UrlRewriteArgs build() {
+        }        public UrlRewriteArgs build() {
             return new UrlRewriteArgs(hostRewrite, pathPrefixRewrite);
         }
     }

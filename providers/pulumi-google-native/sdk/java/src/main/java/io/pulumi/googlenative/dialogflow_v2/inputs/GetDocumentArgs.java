@@ -90,22 +90,18 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
             this.documentId = Objects.requireNonNull(documentId);
             return this;
         }
-
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDocumentArgs build() {
+        }        public GetDocumentArgs build() {
             return new GetDocumentArgs(documentId, knowledgeBaseId, location, project);
         }
     }

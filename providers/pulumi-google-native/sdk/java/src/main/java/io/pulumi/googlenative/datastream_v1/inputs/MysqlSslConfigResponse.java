@@ -141,32 +141,26 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
-
         public Builder caCertificateSet(Boolean caCertificateSet) {
             this.caCertificateSet = Objects.requireNonNull(caCertificateSet);
             return this;
         }
-
         public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
-
         public Builder clientCertificateSet(Boolean clientCertificateSet) {
             this.clientCertificateSet = Objects.requireNonNull(clientCertificateSet);
             return this;
         }
-
         public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
-
         public Builder clientKeySet(Boolean clientKeySet) {
             this.clientKeySet = Objects.requireNonNull(clientKeySet);
             return this;
-        }
-        public MysqlSslConfigResponse build() {
+        }        public MysqlSslConfigResponse build() {
             return new MysqlSslConfigResponse(caCertificate, caCertificateSet, clientCertificate, clientCertificateSet, clientKey, clientKeySet);
         }
     }

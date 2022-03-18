@@ -62,12 +62,10 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable Map<String,String> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
-        }
-        public StatefulPolicyPreservedStateArgs build() {
+        }        public StatefulPolicyPreservedStateArgs build() {
             return new StatefulPolicyPreservedStateArgs(disks);
         }
     }

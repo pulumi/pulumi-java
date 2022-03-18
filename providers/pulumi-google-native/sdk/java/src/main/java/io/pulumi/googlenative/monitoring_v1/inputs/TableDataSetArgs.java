@@ -112,42 +112,34 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
             this.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
-
         public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
             this.minAlignmentPeriod = Output.ofNullable(minAlignmentPeriod);
             return this;
         }
-
         public Builder tableDisplayOptions(@Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions) {
             this.tableDisplayOptions = tableDisplayOptions;
             return this;
         }
-
         public Builder tableDisplayOptions(@Nullable TableDisplayOptionsArgs tableDisplayOptions) {
             this.tableDisplayOptions = Output.ofNullable(tableDisplayOptions);
             return this;
         }
-
         public Builder tableTemplate(@Nullable Output<String> tableTemplate) {
             this.tableTemplate = tableTemplate;
             return this;
         }
-
         public Builder tableTemplate(@Nullable String tableTemplate) {
             this.tableTemplate = Output.ofNullable(tableTemplate);
             return this;
         }
-
         public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
             this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
-        }
-        public TableDataSetArgs build() {
+        }        public TableDataSetArgs build() {
             return new TableDataSetArgs(minAlignmentPeriod, tableDisplayOptions, tableTemplate, timeSeriesQuery);
         }
     }

@@ -152,72 +152,58 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
-
         public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
-
         public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder evaluationJobConfig(Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig) {
             this.evaluationJobConfig = Objects.requireNonNull(evaluationJobConfig);
             return this;
         }
-
         public Builder evaluationJobConfig(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs evaluationJobConfig) {
             this.evaluationJobConfig = Output.of(Objects.requireNonNull(evaluationJobConfig));
             return this;
         }
-
         public Builder labelMissingGroundTruth(Output<Boolean> labelMissingGroundTruth) {
             this.labelMissingGroundTruth = Objects.requireNonNull(labelMissingGroundTruth);
             return this;
         }
-
         public Builder labelMissingGroundTruth(Boolean labelMissingGroundTruth) {
             this.labelMissingGroundTruth = Output.of(Objects.requireNonNull(labelMissingGroundTruth));
             return this;
         }
-
         public Builder modelVersion(Output<String> modelVersion) {
             this.modelVersion = Objects.requireNonNull(modelVersion);
             return this;
         }
-
         public Builder modelVersion(String modelVersion) {
             this.modelVersion = Output.of(Objects.requireNonNull(modelVersion));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
-        }
-        public EvaluationJobArgs build() {
+        }        public EvaluationJobArgs build() {
             return new EvaluationJobArgs(annotationSpecSet, description, evaluationJobConfig, labelMissingGroundTruth, modelVersion, project, schedule);
         }
     }

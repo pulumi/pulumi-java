@@ -70,12 +70,10 @@ public final class BucketAutoclassResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder toggleTime(String toggleTime) {
             this.toggleTime = Objects.requireNonNull(toggleTime);
             return this;
-        }
-        public BucketAutoclassResponse build() {
+        }        public BucketAutoclassResponse build() {
             return new BucketAutoclassResponse(enabled, toggleTime);
         }
     }

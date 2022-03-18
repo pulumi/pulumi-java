@@ -93,17 +93,14 @@ public final class MonitoringQueryLanguageConditionResponse extends io.pulumi.re
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder trigger(TriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
-        }
-        public MonitoringQueryLanguageConditionResponse build() {
+        }        public MonitoringQueryLanguageConditionResponse build() {
             return new MonitoringQueryLanguageConditionResponse(duration, query, trigger);
         }
     }

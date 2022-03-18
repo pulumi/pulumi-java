@@ -118,27 +118,25 @@ public final class GetEnvgroupResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder hostnames(List<String> hostnames) {
             this.hostnames = Objects.requireNonNull(hostnames);
             return this;
         }
-
+        public Builder hostnames(String... hostnames) {
+            return hostnames(List.of(hostnames));
+        }
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetEnvgroupResult build() {
+        }        public GetEnvgroupResult build() {
             return new GetEnvgroupResult(createdAt, hostnames, lastModifiedAt, name, state);
         }
     }

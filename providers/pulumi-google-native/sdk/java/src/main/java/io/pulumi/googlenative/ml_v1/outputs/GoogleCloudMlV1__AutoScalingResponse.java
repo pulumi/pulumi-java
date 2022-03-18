@@ -87,17 +87,17 @@ public final class GoogleCloudMlV1__AutoScalingResponse {
             this.maxNodes = Objects.requireNonNull(maxNodes);
             return this;
         }
-
         public Builder metrics(List<GoogleCloudMlV1__MetricSpecResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
+        public Builder metrics(GoogleCloudMlV1__MetricSpecResponse... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder minNodes(Integer minNodes) {
             this.minNodes = Objects.requireNonNull(minNodes);
             return this;
-        }
-        public GoogleCloudMlV1__AutoScalingResponse build() {
+        }        public GoogleCloudMlV1__AutoScalingResponse build() {
             return new GoogleCloudMlV1__AutoScalingResponse(maxNodes, metrics, minNodes);
         }
     }

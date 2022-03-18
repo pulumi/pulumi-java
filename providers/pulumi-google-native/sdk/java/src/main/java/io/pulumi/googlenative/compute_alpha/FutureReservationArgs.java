@@ -189,102 +189,82 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
             this.shareSettings = shareSettings;
             return this;
         }
-
         public Builder shareSettings(@Nullable ShareSettingsArgs shareSettings) {
             this.shareSettings = Output.ofNullable(shareSettings);
             return this;
         }
-
         public Builder specificSkuProperties(@Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties) {
             this.specificSkuProperties = specificSkuProperties;
             return this;
         }
-
         public Builder specificSkuProperties(@Nullable FutureReservationSpecificSKUPropertiesArgs specificSkuProperties) {
             this.specificSkuProperties = Output.ofNullable(specificSkuProperties);
             return this;
         }
-
         public Builder timeWindow(@Nullable Output<FutureReservationTimeWindowArgs> timeWindow) {
             this.timeWindow = timeWindow;
             return this;
         }
-
         public Builder timeWindow(@Nullable FutureReservationTimeWindowArgs timeWindow) {
             this.timeWindow = Output.ofNullable(timeWindow);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public FutureReservationArgs build() {
+        }        public FutureReservationArgs build() {
             return new FutureReservationArgs(description, kind, name, namePrefix, project, requestId, shareSettings, specificSkuProperties, timeWindow, zone);
         }
     }

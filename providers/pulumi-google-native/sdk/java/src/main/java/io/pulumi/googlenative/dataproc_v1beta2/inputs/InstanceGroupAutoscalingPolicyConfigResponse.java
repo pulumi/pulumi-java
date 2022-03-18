@@ -92,17 +92,14 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse extends io.pulum
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public InstanceGroupAutoscalingPolicyConfigResponse build() {
+        }        public InstanceGroupAutoscalingPolicyConfigResponse build() {
             return new InstanceGroupAutoscalingPolicyConfigResponse(maxInstances, minInstances, weight);
         }
     }

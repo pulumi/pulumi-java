@@ -108,22 +108,18 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
             this.exclusiveMaximum = Objects.requireNonNull(exclusiveMaximum);
             return this;
         }
-
         public Builder exclusiveMinimum(Double exclusiveMinimum) {
             this.exclusiveMinimum = Objects.requireNonNull(exclusiveMinimum);
             return this;
         }
-
         public Builder maximum(Double maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
-
         public Builder minimum(Double minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
-        }
-        public GoogleCloudRetailV2alphaIntervalResponse build() {
+        }        public GoogleCloudRetailV2alphaIntervalResponse build() {
             return new GoogleCloudRetailV2alphaIntervalResponse(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }
     }

@@ -102,22 +102,18 @@ public final class ActorResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder googleSupport(Boolean googleSupport) {
             this.googleSupport = Objects.requireNonNull(googleSupport);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public ActorResponse build() {
+        }        public ActorResponse build() {
             return new ActorResponse(displayName, email, googleSupport, principalId);
         }
     }

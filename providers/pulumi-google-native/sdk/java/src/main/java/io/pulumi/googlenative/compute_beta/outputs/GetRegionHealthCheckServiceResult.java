@@ -214,57 +214,55 @@ public final class GetRegionHealthCheckServiceResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder healthChecks(List<String> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
-
+        public Builder healthChecks(String... healthChecks) {
+            return healthChecks(List.of(healthChecks));
+        }
         public Builder healthStatusAggregationPolicy(String healthStatusAggregationPolicy) {
             this.healthStatusAggregationPolicy = Objects.requireNonNull(healthStatusAggregationPolicy);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkEndpointGroups(List<String> networkEndpointGroups) {
             this.networkEndpointGroups = Objects.requireNonNull(networkEndpointGroups);
             return this;
         }
-
+        public Builder networkEndpointGroups(String... networkEndpointGroups) {
+            return networkEndpointGroups(List.of(networkEndpointGroups));
+        }
         public Builder notificationEndpoints(List<String> notificationEndpoints) {
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }
-
+        public Builder notificationEndpoints(String... notificationEndpoints) {
+            return notificationEndpoints(List.of(notificationEndpoints));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetRegionHealthCheckServiceResult build() {
+        }        public GetRegionHealthCheckServiceResult build() {
             return new GetRegionHealthCheckServiceResult(creationTimestamp, description, fingerprint, healthChecks, healthStatusAggregationPolicy, kind, name, networkEndpointGroups, notificationEndpoints, region, selfLink);
         }
     }

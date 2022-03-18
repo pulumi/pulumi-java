@@ -114,32 +114,26 @@ public final class GetObjectAccessControlArgs extends io.pulumi.resources.Invoke
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder entity(String entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
-
         public Builder generation(@Nullable String generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetObjectAccessControlArgs build() {
+        }        public GetObjectAccessControlArgs build() {
             return new GetObjectAccessControlArgs(bucket, entity, generation, object, provisionalUserProject, userProject);
         }
     }

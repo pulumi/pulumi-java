@@ -61,12 +61,10 @@ public final class IdentityServiceConfigArgs extends io.pulumi.resources.Resourc
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public IdentityServiceConfigArgs build() {
+        }        public IdentityServiceConfigArgs build() {
             return new IdentityServiceConfigArgs(enabled);
         }
     }

@@ -61,12 +61,10 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.filePattern = filePattern;
             return this;
         }
-
         public Builder filePattern(@Nullable String filePattern) {
             this.filePattern = Output.ofNullable(filePattern);
             return this;
-        }
-        public FileIODetailsArgs build() {
+        }        public FileIODetailsArgs build() {
             return new FileIODetailsArgs(filePattern);
         }
     }

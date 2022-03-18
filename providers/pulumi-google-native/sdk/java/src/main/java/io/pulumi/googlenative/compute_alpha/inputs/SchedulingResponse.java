@@ -321,87 +321,73 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
             this.automaticRestart = Objects.requireNonNull(automaticRestart);
             return this;
         }
-
         public Builder availabilityDomain(Integer availabilityDomain) {
             this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
             return this;
         }
-
         public Builder currentCpus(Integer currentCpus) {
             this.currentCpus = Objects.requireNonNull(currentCpus);
             return this;
         }
-
         public Builder currentMemoryMb(String currentMemoryMb) {
             this.currentMemoryMb = Objects.requireNonNull(currentMemoryMb);
             return this;
         }
-
         public Builder hostErrorTimeoutSeconds(Integer hostErrorTimeoutSeconds) {
             this.hostErrorTimeoutSeconds = Objects.requireNonNull(hostErrorTimeoutSeconds);
             return this;
         }
-
         public Builder instanceTerminationAction(String instanceTerminationAction) {
             this.instanceTerminationAction = Objects.requireNonNull(instanceTerminationAction);
             return this;
         }
-
         public Builder latencyTolerant(Boolean latencyTolerant) {
             this.latencyTolerant = Objects.requireNonNull(latencyTolerant);
             return this;
         }
-
         public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
-
         public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
             return this;
         }
-
         public Builder maintenanceInterval(String maintenanceInterval) {
             this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
             return this;
         }
-
         public Builder maxRunDuration(DurationResponse maxRunDuration) {
             this.maxRunDuration = Objects.requireNonNull(maxRunDuration);
             return this;
         }
-
         public Builder minNodeCpus(Integer minNodeCpus) {
             this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
             return this;
         }
-
         public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
             this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
             return this;
         }
-
+        public Builder nodeAffinities(SchedulingNodeAffinityResponse... nodeAffinities) {
+            return nodeAffinities(List.of(nodeAffinities));
+        }
         public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
-
         public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public Builder provisioningModel(String provisioningModel) {
             this.provisioningModel = Objects.requireNonNull(provisioningModel);
             return this;
         }
-
         public Builder terminationTime(String terminationTime) {
             this.terminationTime = Objects.requireNonNull(terminationTime);
             return this;
-        }
-        public SchedulingResponse build() {
+        }        public SchedulingResponse build() {
             return new SchedulingResponse(automaticRestart, availabilityDomain, currentCpus, currentMemoryMb, hostErrorTimeoutSeconds, instanceTerminationAction, latencyTolerant, locationHint, maintenanceFreezeDurationHours, maintenanceInterval, maxRunDuration, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel, terminationTime);
         }
     }

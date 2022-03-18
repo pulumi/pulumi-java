@@ -70,12 +70,10 @@ public final class EnvironmentResponse {
             this.androidDevice = Objects.requireNonNull(androidDevice);
             return this;
         }
-
         public Builder iosDevice(IosDeviceResponse iosDevice) {
             this.iosDevice = Objects.requireNonNull(iosDevice);
             return this;
-        }
-        public EnvironmentResponse build() {
+        }        public EnvironmentResponse build() {
             return new EnvironmentResponse(androidDevice, iosDevice);
         }
     }

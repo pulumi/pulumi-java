@@ -109,22 +109,18 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
-
         public Builder targetCpuUtilization(Double targetCpuUtilization) {
             this.targetCpuUtilization = Objects.requireNonNull(targetCpuUtilization);
             return this;
         }
-
         public Builder targetThroughputUtilization(Double targetThroughputUtilization) {
             this.targetThroughputUtilization = Objects.requireNonNull(targetThroughputUtilization);
             return this;
-        }
-        public StandardSchedulerSettingsResponse build() {
+        }        public StandardSchedulerSettingsResponse build() {
             return new StandardSchedulerSettingsResponse(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
         }
     }

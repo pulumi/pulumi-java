@@ -119,27 +119,25 @@ public final class GetProductResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder productCategory(String productCategory) {
             this.productCategory = Objects.requireNonNull(productCategory);
             return this;
         }
-
         public Builder productLabels(List<KeyValueResponse> productLabels) {
             this.productLabels = Objects.requireNonNull(productLabels);
             return this;
         }
-        public GetProductResult build() {
+        public Builder productLabels(KeyValueResponse... productLabels) {
+            return productLabels(List.of(productLabels));
+        }        public GetProductResult build() {
             return new GetProductResult(description, displayName, name, productCategory, productLabels);
         }
     }

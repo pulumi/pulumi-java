@@ -161,72 +161,58 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
             this.containerSpecGcsPath = containerSpecGcsPath;
             return this;
         }
-
         public Builder containerSpecGcsPath(@Nullable String containerSpecGcsPath) {
             this.containerSpecGcsPath = Output.ofNullable(containerSpecGcsPath);
             return this;
         }
-
         public Builder environment(@Nullable Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
-
         public Builder launchOptions(@Nullable Output<Map<String,String>> launchOptions) {
             this.launchOptions = launchOptions;
             return this;
         }
-
         public Builder launchOptions(@Nullable Map<String,String> launchOptions) {
             this.launchOptions = Output.ofNullable(launchOptions);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder transformNameMappings(@Nullable Output<Map<String,String>> transformNameMappings) {
             this.transformNameMappings = transformNameMappings;
             return this;
         }
-
         public Builder transformNameMappings(@Nullable Map<String,String> transformNameMappings) {
             this.transformNameMappings = Output.ofNullable(transformNameMappings);
             return this;
         }
-
         public Builder update(@Nullable Output<Boolean> update) {
             this.update = update;
             return this;
         }
-
         public Builder update(@Nullable Boolean update) {
             this.update = Output.ofNullable(update);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs build() {
+        }        public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs(containerSpecGcsPath, environment, jobName, launchOptions, parameters, transformNameMappings, update);
         }
     }

@@ -88,17 +88,17 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
-
         public Builder items(List<GoogleCloudRunOpV2VersionToPathResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(GoogleCloudRunOpV2VersionToPathResponse... items) {
+            return items(List.of(items));
+        }
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public GoogleCloudRunOpV2SecretVolumeSourceResponse build() {
+        }        public GoogleCloudRunOpV2SecretVolumeSourceResponse build() {
             return new GoogleCloudRunOpV2SecretVolumeSourceResponse(defaultMode, items, secret);
         }
     }

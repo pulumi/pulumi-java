@@ -111,52 +111,42 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             this.argument = argument;
             return this;
         }
-
         public Builder argument(@Nullable String argument) {
             this.argument = Output.ofNullable(argument);
             return this;
         }
-
         public Builder callLogLevel(@Nullable Output<ExecutionCallLogLevel> callLogLevel) {
             this.callLogLevel = callLogLevel;
             return this;
         }
-
         public Builder callLogLevel(@Nullable ExecutionCallLogLevel callLogLevel) {
             this.callLogLevel = Output.ofNullable(callLogLevel);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder workflowId(Output<String> workflowId) {
             this.workflowId = Objects.requireNonNull(workflowId);
             return this;
         }
-
         public Builder workflowId(String workflowId) {
             this.workflowId = Output.of(Objects.requireNonNull(workflowId));
             return this;
-        }
-        public ExecutionArgs build() {
+        }        public ExecutionArgs build() {
             return new ExecutionArgs(argument, callLogLevel, location, project, workflowId);
         }
     }

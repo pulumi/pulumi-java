@@ -62,12 +62,10 @@ public final class TrafficPercentStrategyArgs extends io.pulumi.resources.Resour
             this.percentages = percentages;
             return this;
         }
-
         public Builder percentages(@Nullable Map<String,String> percentages) {
             this.percentages = Output.ofNullable(percentages);
             return this;
-        }
-        public TrafficPercentStrategyArgs build() {
+        }        public TrafficPercentStrategyArgs build() {
             return new TrafficPercentStrategyArgs(percentages);
         }
     }

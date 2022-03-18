@@ -76,12 +76,10 @@ public final class GcsDataResponse extends io.pulumi.resources.InvokeArgs {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public GcsDataResponse build() {
+        }        public GcsDataResponse build() {
             return new GcsDataResponse(bucketName, path);
         }
     }

@@ -112,42 +112,34 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
             this.autoDelete = autoDelete;
             return this;
         }
-
         public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Output.ofNullable(autoDelete);
             return this;
         }
-
         public Builder customImage(@Nullable Output<String> customImage) {
             this.customImage = customImage;
             return this;
         }
-
         public Builder customImage(@Nullable String customImage) {
             this.customImage = Output.ofNullable(customImage);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder instantiateFrom(@Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
             this.instantiateFrom = instantiateFrom;
             return this;
         }
-
         public Builder instantiateFrom(@Nullable DiskInstantiationConfigInstantiateFrom instantiateFrom) {
             this.instantiateFrom = Output.ofNullable(instantiateFrom);
             return this;
-        }
-        public DiskInstantiationConfigArgs build() {
+        }        public DiskInstantiationConfigArgs build() {
             return new DiskInstantiationConfigArgs(autoDelete, customImage, deviceName, instantiateFrom);
         }
     }

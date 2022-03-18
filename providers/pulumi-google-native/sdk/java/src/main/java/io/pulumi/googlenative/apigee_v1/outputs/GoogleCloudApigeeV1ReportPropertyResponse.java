@@ -71,12 +71,13 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public Builder value(List<GoogleCloudApigeeV1AttributeResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public GoogleCloudApigeeV1ReportPropertyResponse build() {
+        public Builder value(GoogleCloudApigeeV1AttributeResponse... value) {
+            return value(List.of(value));
+        }        public GoogleCloudApigeeV1ReportPropertyResponse build() {
             return new GoogleCloudApigeeV1ReportPropertyResponse(property, value);
         }
     }

@@ -93,17 +93,14 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
             this.highBoost = Objects.requireNonNull(highBoost);
             return this;
         }
-
         public Builder lowBoost(Boolean lowBoost) {
             this.lowBoost = Objects.requireNonNull(lowBoost);
             return this;
         }
-
         public Builder lufs(Double lufs) {
             this.lufs = Objects.requireNonNull(lufs);
             return this;
-        }
-        public AudioResponse build() {
+        }        public AudioResponse build() {
             return new AudioResponse(highBoost, lowBoost, lufs);
         }
     }

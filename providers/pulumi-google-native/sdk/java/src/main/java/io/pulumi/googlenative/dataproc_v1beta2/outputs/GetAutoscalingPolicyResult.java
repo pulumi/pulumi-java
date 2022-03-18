@@ -95,22 +95,18 @@ public final class GetAutoscalingPolicyResult {
             this.basicAlgorithm = Objects.requireNonNull(basicAlgorithm);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig);
             return this;
         }
-
         public Builder workerConfig(InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
-        }
-        public GetAutoscalingPolicyResult build() {
+        }        public GetAutoscalingPolicyResult build() {
             return new GetAutoscalingPolicyResult(basicAlgorithm, name, secondaryWorkerConfig, workerConfig);
         }
     }

@@ -86,17 +86,14 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
             this.clicked = Objects.requireNonNull(clicked);
             return this;
         }
-
         public Builder correctnessLevel(String correctnessLevel) {
             this.correctnessLevel = Objects.requireNonNull(correctnessLevel);
             return this;
         }
-
         public Builder displayed(Boolean displayed) {
             this.displayed = Objects.requireNonNull(displayed);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(clicked, correctnessLevel, displayed);
         }
     }

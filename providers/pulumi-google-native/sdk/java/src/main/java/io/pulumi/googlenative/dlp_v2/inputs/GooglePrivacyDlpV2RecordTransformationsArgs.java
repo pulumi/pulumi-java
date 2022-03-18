@@ -80,22 +80,24 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
             this.fieldTransformations = fieldTransformations;
             return this;
         }
-
         public Builder fieldTransformations(@Nullable List<GooglePrivacyDlpV2FieldTransformationArgs> fieldTransformations) {
             this.fieldTransformations = Output.ofNullable(fieldTransformations);
             return this;
         }
-
+        public Builder fieldTransformations(GooglePrivacyDlpV2FieldTransformationArgs... fieldTransformations) {
+            return fieldTransformations(List.of(fieldTransformations));
+        }
         public Builder recordSuppressions(@Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions) {
             this.recordSuppressions = recordSuppressions;
             return this;
         }
-
         public Builder recordSuppressions(@Nullable List<GooglePrivacyDlpV2RecordSuppressionArgs> recordSuppressions) {
             this.recordSuppressions = Output.ofNullable(recordSuppressions);
             return this;
         }
-        public GooglePrivacyDlpV2RecordTransformationsArgs build() {
+        public Builder recordSuppressions(GooglePrivacyDlpV2RecordSuppressionArgs... recordSuppressions) {
+            return recordSuppressions(List.of(recordSuppressions));
+        }        public GooglePrivacyDlpV2RecordTransformationsArgs build() {
             return new GooglePrivacyDlpV2RecordTransformationsArgs(fieldTransformations, recordSuppressions);
         }
     }

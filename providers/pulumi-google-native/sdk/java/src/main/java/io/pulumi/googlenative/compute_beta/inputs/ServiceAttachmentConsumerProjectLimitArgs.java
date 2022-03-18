@@ -75,22 +75,18 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
             this.connectionLimit = connectionLimit;
             return this;
         }
-
         public Builder connectionLimit(@Nullable Integer connectionLimit) {
             this.connectionLimit = Output.ofNullable(connectionLimit);
             return this;
         }
-
         public Builder projectIdOrNum(@Nullable Output<String> projectIdOrNum) {
             this.projectIdOrNum = projectIdOrNum;
             return this;
         }
-
         public Builder projectIdOrNum(@Nullable String projectIdOrNum) {
             this.projectIdOrNum = Output.ofNullable(projectIdOrNum);
             return this;
-        }
-        public ServiceAttachmentConsumerProjectLimitArgs build() {
+        }        public ServiceAttachmentConsumerProjectLimitArgs build() {
             return new ServiceAttachmentConsumerProjectLimitArgs(connectionLimit, projectIdOrNum);
         }
     }

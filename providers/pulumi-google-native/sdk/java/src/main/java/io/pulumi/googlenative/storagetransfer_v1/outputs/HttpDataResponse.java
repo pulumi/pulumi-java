@@ -51,8 +51,7 @@ public final class HttpDataResponse {
         public Builder listUrl(String listUrl) {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
-        }
-        public HttpDataResponse build() {
+        }        public HttpDataResponse build() {
             return new HttpDataResponse(listUrl);
         }
     }

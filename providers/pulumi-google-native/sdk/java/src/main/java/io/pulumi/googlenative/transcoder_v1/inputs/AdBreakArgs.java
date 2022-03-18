@@ -61,12 +61,10 @@ public final class AdBreakArgs extends io.pulumi.resources.ResourceArgs {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
-
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
-        }
-        public AdBreakArgs build() {
+        }        public AdBreakArgs build() {
             return new AdBreakArgs(startTimeOffset);
         }
     }

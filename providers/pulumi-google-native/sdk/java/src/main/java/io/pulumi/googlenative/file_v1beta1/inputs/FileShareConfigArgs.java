@@ -112,42 +112,37 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.capacityGb = capacityGb;
             return this;
         }
-
         public Builder capacityGb(@Nullable String capacityGb) {
             this.capacityGb = Output.ofNullable(capacityGb);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nfsExportOptions(@Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions) {
             this.nfsExportOptions = nfsExportOptions;
             return this;
         }
-
         public Builder nfsExportOptions(@Nullable List<NfsExportOptionsArgs> nfsExportOptions) {
             this.nfsExportOptions = Output.ofNullable(nfsExportOptions);
             return this;
         }
-
+        public Builder nfsExportOptions(NfsExportOptionsArgs... nfsExportOptions) {
+            return nfsExportOptions(List.of(nfsExportOptions));
+        }
         public Builder sourceBackup(@Nullable Output<String> sourceBackup) {
             this.sourceBackup = sourceBackup;
             return this;
         }
-
         public Builder sourceBackup(@Nullable String sourceBackup) {
             this.sourceBackup = Output.ofNullable(sourceBackup);
             return this;
-        }
-        public FileShareConfigArgs build() {
+        }        public FileShareConfigArgs build() {
             return new FileShareConfigArgs(capacityGb, name, nfsExportOptions, sourceBackup);
         }
     }

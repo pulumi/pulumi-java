@@ -61,12 +61,10 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
-        }
-        public EncryptionConfigArgs build() {
+        }        public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(kmsKeyName);
         }
     }

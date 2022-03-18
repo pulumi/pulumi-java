@@ -110,42 +110,34 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
             this.confidenceLevel = confidenceLevel;
             return this;
         }
-
         public Builder confidenceLevel(@Nullable Double confidenceLevel) {
             this.confidenceLevel = Output.ofNullable(confidenceLevel);
             return this;
         }
-
         public Builder lowerBound(@Nullable Output<Double> lowerBound) {
             this.lowerBound = lowerBound;
             return this;
         }
-
         public Builder lowerBound(@Nullable Double lowerBound) {
             this.lowerBound = Output.ofNullable(lowerBound);
             return this;
         }
-
         public Builder ratio(@Nullable Output<Double> ratio) {
             this.ratio = ratio;
             return this;
         }
-
         public Builder ratio(@Nullable Double ratio) {
             this.ratio = Output.ofNullable(ratio);
             return this;
         }
-
         public Builder upperBound(@Nullable Output<Double> upperBound) {
             this.upperBound = upperBound;
             return this;
         }
-
         public Builder upperBound(@Nullable Double upperBound) {
             this.upperBound = Output.ofNullable(upperBound);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs(confidenceLevel, lowerBound, ratio, upperBound);
         }
     }

@@ -80,22 +80,21 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
             this.individualOutcome = individualOutcome;
             return this;
         }
-
         public Builder individualOutcome(@Nullable List<IndividualOutcomeArgs> individualOutcome) {
             this.individualOutcome = Output.ofNullable(individualOutcome);
             return this;
         }
-
+        public Builder individualOutcome(IndividualOutcomeArgs... individualOutcome) {
+            return individualOutcome(List.of(individualOutcome));
+        }
         public Builder rollUp(@Nullable Output<PrimaryStepRollUp> rollUp) {
             this.rollUp = rollUp;
             return this;
         }
-
         public Builder rollUp(@Nullable PrimaryStepRollUp rollUp) {
             this.rollUp = Output.ofNullable(rollUp);
             return this;
-        }
-        public PrimaryStepArgs build() {
+        }        public PrimaryStepArgs build() {
             return new PrimaryStepArgs(individualOutcome, rollUp);
         }
     }

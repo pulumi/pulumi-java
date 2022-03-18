@@ -66,12 +66,10 @@ public final class GetFirewallPolicyIamPolicyArgs extends io.pulumi.resources.In
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetFirewallPolicyIamPolicyArgs build() {
+        }        public GetFirewallPolicyIamPolicyArgs build() {
             return new GetFirewallPolicyIamPolicyArgs(optionsRequestedPolicyVersion, resource);
         }
     }

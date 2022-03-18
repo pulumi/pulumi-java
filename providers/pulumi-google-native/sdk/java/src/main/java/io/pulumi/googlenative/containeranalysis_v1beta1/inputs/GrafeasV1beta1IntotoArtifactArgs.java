@@ -67,22 +67,18 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
             this.hashes = hashes;
             return this;
         }
-
         public Builder hashes(@Nullable ArtifactHashesArgs hashes) {
             this.hashes = Output.ofNullable(hashes);
             return this;
         }
-
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Output.ofNullable(resourceUri);
             return this;
-        }
-        public GrafeasV1beta1IntotoArtifactArgs build() {
+        }        public GrafeasV1beta1IntotoArtifactArgs build() {
             return new GrafeasV1beta1IntotoArtifactArgs(hashes, resourceUri);
         }
     }

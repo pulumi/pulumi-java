@@ -147,62 +147,50 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
             this.annotationType = annotationType;
             return this;
         }
-
         public Builder annotationType(@Nullable GoogleCloudDatalabelingV1beta1InputConfigAnnotationType annotationType) {
             this.annotationType = Output.ofNullable(annotationType);
             return this;
         }
-
         public Builder bigquerySource(@Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource) {
             this.bigquerySource = bigquerySource;
             return this;
         }
-
         public Builder bigquerySource(@Nullable GoogleCloudDatalabelingV1beta1BigQuerySourceArgs bigquerySource) {
             this.bigquerySource = Output.ofNullable(bigquerySource);
             return this;
         }
-
         public Builder classificationMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata) {
             this.classificationMetadata = classificationMetadata;
             return this;
         }
-
         public Builder classificationMetadata(@Nullable GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs classificationMetadata) {
             this.classificationMetadata = Output.ofNullable(classificationMetadata);
             return this;
         }
-
         public Builder dataType(Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
-
         public Builder dataType(GoogleCloudDatalabelingV1beta1InputConfigDataType dataType) {
             this.dataType = Output.of(Objects.requireNonNull(dataType));
             return this;
         }
-
         public Builder gcsSource(@Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource) {
             this.gcsSource = gcsSource;
             return this;
         }
-
         public Builder gcsSource(@Nullable GoogleCloudDatalabelingV1beta1GcsSourceArgs gcsSource) {
             this.gcsSource = Output.ofNullable(gcsSource);
             return this;
         }
-
         public Builder textMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
             this.textMetadata = textMetadata;
             return this;
         }
-
         public Builder textMetadata(@Nullable GoogleCloudDatalabelingV1beta1TextMetadataArgs textMetadata) {
             this.textMetadata = Output.ofNullable(textMetadata);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1InputConfigArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1InputConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1InputConfigArgs(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
         }
     }

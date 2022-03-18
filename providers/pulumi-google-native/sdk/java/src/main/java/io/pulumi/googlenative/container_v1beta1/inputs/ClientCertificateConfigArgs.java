@@ -61,12 +61,10 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
             this.issueClientCertificate = issueClientCertificate;
             return this;
         }
-
         public Builder issueClientCertificate(@Nullable Boolean issueClientCertificate) {
             this.issueClientCertificate = Output.ofNullable(issueClientCertificate);
             return this;
-        }
-        public ClientCertificateConfigArgs build() {
+        }        public ClientCertificateConfigArgs build() {
             return new ClientCertificateConfigArgs(issueClientCertificate);
         }
     }

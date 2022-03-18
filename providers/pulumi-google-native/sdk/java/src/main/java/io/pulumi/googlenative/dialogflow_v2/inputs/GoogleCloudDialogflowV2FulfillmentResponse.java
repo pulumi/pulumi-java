@@ -128,27 +128,25 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder features(List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features) {
             this.features = Objects.requireNonNull(features);
             return this;
         }
-
+        public Builder features(GoogleCloudDialogflowV2FulfillmentFeatureResponse... features) {
+            return features(List.of(features));
+        }
         public Builder genericWebService(GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService) {
             this.genericWebService = Objects.requireNonNull(genericWebService);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GoogleCloudDialogflowV2FulfillmentResponse build() {
+        }        public GoogleCloudDialogflowV2FulfillmentResponse build() {
             return new GoogleCloudDialogflowV2FulfillmentResponse(displayName, enabled, features, genericWebService, name);
         }
     }

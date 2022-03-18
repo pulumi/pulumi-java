@@ -110,22 +110,21 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
             this.testPackageId = Objects.requireNonNull(testPackageId);
             return this;
         }
-
         public Builder testRunnerClass(String testRunnerClass) {
             this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
             return this;
         }
-
         public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
-
+        public Builder testTargets(String... testTargets) {
+            return testTargets(List.of(testTargets));
+        }
         public Builder useOrchestrator(Boolean useOrchestrator) {
             this.useOrchestrator = Objects.requireNonNull(useOrchestrator);
             return this;
-        }
-        public AndroidInstrumentationTestResponse build() {
+        }        public AndroidInstrumentationTestResponse build() {
             return new AndroidInstrumentationTestResponse(testPackageId, testRunnerClass, testTargets, useOrchestrator);
         }
     }

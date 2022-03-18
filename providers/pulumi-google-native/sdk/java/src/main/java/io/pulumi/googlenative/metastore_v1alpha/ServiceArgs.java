@@ -292,162 +292,130 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseType = databaseType;
             return this;
         }
-
         public Builder databaseType(@Nullable ServiceDatabaseType databaseType) {
             this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder hiveMetastoreConfig(@Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig) {
             this.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
-
         public Builder hiveMetastoreConfig(@Nullable HiveMetastoreConfigArgs hiveMetastoreConfig) {
             this.hiveMetastoreConfig = Output.ofNullable(hiveMetastoreConfig);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder metadataIntegration(@Nullable Output<MetadataIntegrationArgs> metadataIntegration) {
             this.metadataIntegration = metadataIntegration;
             return this;
         }
-
         public Builder metadataIntegration(@Nullable MetadataIntegrationArgs metadataIntegration) {
             this.metadataIntegration = Output.ofNullable(metadataIntegration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder releaseChannel(@Nullable Output<ServiceReleaseChannel> releaseChannel) {
             this.releaseChannel = releaseChannel;
             return this;
         }
-
         public Builder releaseChannel(@Nullable ServiceReleaseChannel releaseChannel) {
             this.releaseChannel = Output.ofNullable(releaseChannel);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
-
         public Builder tier(@Nullable Output<ServiceTier> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable ServiceTier tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(databaseType, encryptionConfig, hiveMetastoreConfig, labels, location, maintenanceWindow, metadataIntegration, name, network, networkConfig, port, project, releaseChannel, requestId, serviceId, tier);
         }
     }

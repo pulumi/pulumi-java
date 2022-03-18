@@ -70,12 +70,10 @@ public final class ServiceAttachmentConsumerProjectLimitResponse {
             this.connectionLimit = Objects.requireNonNull(connectionLimit);
             return this;
         }
-
         public Builder projectIdOrNum(String projectIdOrNum) {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
-        }
-        public ServiceAttachmentConsumerProjectLimitResponse build() {
+        }        public ServiceAttachmentConsumerProjectLimitResponse build() {
             return new ServiceAttachmentConsumerProjectLimitResponse(connectionLimit, projectIdOrNum);
         }
     }

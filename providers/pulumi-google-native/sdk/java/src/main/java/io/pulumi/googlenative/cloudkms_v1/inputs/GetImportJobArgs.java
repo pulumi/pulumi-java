@@ -90,22 +90,18 @@ public final class GetImportJobArgs extends io.pulumi.resources.InvokeArgs {
             this.importJobId = Objects.requireNonNull(importJobId);
             return this;
         }
-
         public Builder keyRingId(String keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetImportJobArgs build() {
+        }        public GetImportJobArgs build() {
             return new GetImportJobArgs(importJobId, keyRingId, location, project);
         }
     }

@@ -78,17 +78,14 @@ public final class GetHubIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.hubId = Objects.requireNonNull(hubId);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetHubIamPolicyArgs build() {
+        }        public GetHubIamPolicyArgs build() {
             return new GetHubIamPolicyArgs(hubId, optionsRequestedPolicyVersion, project);
         }
     }

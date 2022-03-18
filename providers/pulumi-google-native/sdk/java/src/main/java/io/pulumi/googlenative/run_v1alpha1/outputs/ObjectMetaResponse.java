@@ -281,77 +281,68 @@ public final class ObjectMetaResponse {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder deletionGracePeriodSeconds(Integer deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = Objects.requireNonNull(deletionGracePeriodSeconds);
             return this;
         }
-
         public Builder deletionTimestamp(String deletionTimestamp) {
             this.deletionTimestamp = Objects.requireNonNull(deletionTimestamp);
             return this;
         }
-
         public Builder finalizers(List<String> finalizers) {
             this.finalizers = Objects.requireNonNull(finalizers);
             return this;
         }
-
+        public Builder finalizers(String... finalizers) {
+            return finalizers(List.of(finalizers));
+        }
         public Builder generateName(String generateName) {
             this.generateName = Objects.requireNonNull(generateName);
             return this;
         }
-
         public Builder generation(Integer generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder ownerReferences(List<OwnerReferenceResponse> ownerReferences) {
             this.ownerReferences = Objects.requireNonNull(ownerReferences);
             return this;
         }
-
+        public Builder ownerReferences(OwnerReferenceResponse... ownerReferences) {
+            return ownerReferences(List.of(ownerReferences));
+        }
         public Builder resourceVersion(String resourceVersion) {
             this.resourceVersion = Objects.requireNonNull(resourceVersion);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public ObjectMetaResponse build() {
+        }        public ObjectMetaResponse build() {
             return new ObjectMetaResponse(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }
     }

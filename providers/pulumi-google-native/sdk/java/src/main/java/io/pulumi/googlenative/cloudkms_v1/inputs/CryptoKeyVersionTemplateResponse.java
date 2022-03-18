@@ -76,12 +76,10 @@ public final class CryptoKeyVersionTemplateResponse extends io.pulumi.resources.
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
-        }
-        public CryptoKeyVersionTemplateResponse build() {
+        }        public CryptoKeyVersionTemplateResponse build() {
             return new CryptoKeyVersionTemplateResponse(algorithm, protectionLevel);
         }
     }

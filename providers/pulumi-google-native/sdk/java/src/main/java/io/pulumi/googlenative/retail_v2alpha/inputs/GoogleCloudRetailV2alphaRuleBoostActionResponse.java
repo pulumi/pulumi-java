@@ -77,12 +77,10 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse extends io.pu
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
-
         public Builder productsFilter(String productsFilter) {
             this.productsFilter = Objects.requireNonNull(productsFilter);
             return this;
-        }
-        public GoogleCloudRetailV2alphaRuleBoostActionResponse build() {
+        }        public GoogleCloudRetailV2alphaRuleBoostActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleBoostActionResponse(boost, productsFilter);
         }
     }

@@ -95,17 +95,20 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
             this.auxiliaryTables = Objects.requireNonNull(auxiliaryTables);
             return this;
         }
-
+        public Builder auxiliaryTables(GooglePrivacyDlpV2AuxiliaryTableResponse... auxiliaryTables) {
+            return auxiliaryTables(List.of(auxiliaryTables));
+        }
         public Builder quasiIds(List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
+        public Builder quasiIds(GooglePrivacyDlpV2TaggedFieldResponse... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }
         public Builder regionCode(String regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
-        }
-        public GooglePrivacyDlpV2KMapEstimationConfigResponse build() {
+        }        public GooglePrivacyDlpV2KMapEstimationConfigResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationConfigResponse(auxiliaryTables, quasiIds, regionCode);
         }
     }

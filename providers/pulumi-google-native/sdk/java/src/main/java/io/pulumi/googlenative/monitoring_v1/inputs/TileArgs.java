@@ -127,52 +127,42 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
             this.height = height;
             return this;
         }
-
         public Builder height(@Nullable Integer height) {
             this.height = Output.ofNullable(height);
             return this;
         }
-
         public Builder widget(@Nullable Output<WidgetArgs> widget) {
             this.widget = widget;
             return this;
         }
-
         public Builder widget(@Nullable WidgetArgs widget) {
             this.widget = Output.ofNullable(widget);
             return this;
         }
-
         public Builder width(@Nullable Output<Integer> width) {
             this.width = width;
             return this;
         }
-
         public Builder width(@Nullable Integer width) {
             this.width = Output.ofNullable(width);
             return this;
         }
-
         public Builder xPos(@Nullable Output<Integer> xPos) {
             this.xPos = xPos;
             return this;
         }
-
         public Builder xPos(@Nullable Integer xPos) {
             this.xPos = Output.ofNullable(xPos);
             return this;
         }
-
         public Builder yPos(@Nullable Output<Integer> yPos) {
             this.yPos = yPos;
             return this;
         }
-
         public Builder yPos(@Nullable Integer yPos) {
             this.yPos = Output.ofNullable(yPos);
             return this;
-        }
-        public TileArgs build() {
+        }        public TileArgs build() {
             return new TileArgs(height, widget, width, xPos, yPos);
         }
     }

@@ -77,12 +77,10 @@ public final class RoutingVPCResponse extends io.pulumi.resources.InvokeArgs {
             this.requiredForNewSiteToSiteDataTransferSpokes = Objects.requireNonNull(requiredForNewSiteToSiteDataTransferSpokes);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public RoutingVPCResponse build() {
+        }        public RoutingVPCResponse build() {
             return new RoutingVPCResponse(requiredForNewSiteToSiteDataTransferSpokes, uri);
         }
     }

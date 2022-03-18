@@ -61,12 +61,10 @@ public final class DataprocParametersArgs extends io.pulumi.resources.ResourceAr
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
-        }
-        public DataprocParametersArgs build() {
+        }        public DataprocParametersArgs build() {
             return new DataprocParametersArgs(cluster);
         }
     }

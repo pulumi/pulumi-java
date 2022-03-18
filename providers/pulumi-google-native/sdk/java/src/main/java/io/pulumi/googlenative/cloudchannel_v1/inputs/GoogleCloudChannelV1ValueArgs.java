@@ -129,52 +129,42 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
             this.boolValue = boolValue;
             return this;
         }
-
         public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = Output.ofNullable(boolValue);
             return this;
         }
-
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
-
         public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
-
         public Builder int64Value(@Nullable Output<String> int64Value) {
             this.int64Value = int64Value;
             return this;
         }
-
         public Builder int64Value(@Nullable String int64Value) {
             this.int64Value = Output.ofNullable(int64Value);
             return this;
         }
-
         public Builder protoValue(@Nullable Output<Map<String,String>> protoValue) {
             this.protoValue = protoValue;
             return this;
         }
-
         public Builder protoValue(@Nullable Map<String,String> protoValue) {
             this.protoValue = Output.ofNullable(protoValue);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
-        }
-        public GoogleCloudChannelV1ValueArgs build() {
+        }        public GoogleCloudChannelV1ValueArgs build() {
             return new GoogleCloudChannelV1ValueArgs(boolValue, doubleValue, int64Value, protoValue, stringValue);
         }
     }

@@ -53,12 +53,10 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public ManagedZoneReverseLookupConfigArgs build() {
+        }        public ManagedZoneReverseLookupConfigArgs build() {
             return new ManagedZoneReverseLookupConfigArgs(kind);
         }
     }

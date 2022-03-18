@@ -61,12 +61,10 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
             this.nodeConfigDefaults = nodeConfigDefaults;
             return this;
         }
-
         public Builder nodeConfigDefaults(@Nullable NodeConfigDefaultsArgs nodeConfigDefaults) {
             this.nodeConfigDefaults = Output.ofNullable(nodeConfigDefaults);
             return this;
-        }
-        public NodePoolDefaultsArgs build() {
+        }        public NodePoolDefaultsArgs build() {
             return new NodePoolDefaultsArgs(nodeConfigDefaults);
         }
     }

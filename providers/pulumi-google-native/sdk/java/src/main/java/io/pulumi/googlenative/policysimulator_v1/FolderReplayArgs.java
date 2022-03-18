@@ -83,32 +83,26 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(GoogleCloudPolicysimulatorV1ReplayConfigArgs config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
-
         public Builder folderId(Output<String> folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public Builder folderId(String folderId) {
             this.folderId = Output.of(Objects.requireNonNull(folderId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
-        }
-        public FolderReplayArgs build() {
+        }        public FolderReplayArgs build() {
             return new FolderReplayArgs(config, folderId, location);
         }
     }

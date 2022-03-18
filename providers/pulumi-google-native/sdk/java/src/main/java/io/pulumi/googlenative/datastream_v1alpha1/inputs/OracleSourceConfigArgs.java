@@ -78,22 +78,18 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
             this.allowlist = allowlist;
             return this;
         }
-
         public Builder allowlist(@Nullable OracleRdbmsArgs allowlist) {
             this.allowlist = Output.ofNullable(allowlist);
             return this;
         }
-
         public Builder rejectlist(@Nullable Output<OracleRdbmsArgs> rejectlist) {
             this.rejectlist = rejectlist;
             return this;
         }
-
         public Builder rejectlist(@Nullable OracleRdbmsArgs rejectlist) {
             this.rejectlist = Output.ofNullable(rejectlist);
             return this;
-        }
-        public OracleSourceConfigArgs build() {
+        }        public OracleSourceConfigArgs build() {
             return new OracleSourceConfigArgs(allowlist, rejectlist);
         }
     }

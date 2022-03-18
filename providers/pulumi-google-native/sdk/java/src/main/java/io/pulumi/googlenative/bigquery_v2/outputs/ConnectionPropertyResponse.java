@@ -69,12 +69,10 @@ public final class ConnectionPropertyResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ConnectionPropertyResponse build() {
+        }        public ConnectionPropertyResponse build() {
             return new ConnectionPropertyResponse(key, value);
         }
     }

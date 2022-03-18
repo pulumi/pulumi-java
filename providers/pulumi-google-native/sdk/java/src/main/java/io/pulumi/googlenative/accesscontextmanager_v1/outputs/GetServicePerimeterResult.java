@@ -151,37 +151,30 @@ public final class GetServicePerimeterResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder perimeterType(String perimeterType) {
             this.perimeterType = Objects.requireNonNull(perimeterType);
             return this;
         }
-
         public Builder spec(ServicePerimeterConfigResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder status(ServicePerimeterConfigResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder useExplicitDryRunSpec(Boolean useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = Objects.requireNonNull(useExplicitDryRunSpec);
             return this;
-        }
-        public GetServicePerimeterResult build() {
+        }        public GetServicePerimeterResult build() {
             return new GetServicePerimeterResult(description, name, perimeterType, spec, status, title, useExplicitDryRunSpec);
         }
     }

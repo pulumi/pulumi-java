@@ -78,17 +78,14 @@ public final class GetCompanyArgs extends io.pulumi.resources.InvokeArgs {
             this.companyId = Objects.requireNonNull(companyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public GetCompanyArgs build() {
+        }        public GetCompanyArgs build() {
             return new GetCompanyArgs(companyId, project, tenantId);
         }
     }

@@ -189,92 +189,74 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable DatasetAccessEntryArgs dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder groupByEmail(@Nullable Output<String> groupByEmail) {
             this.groupByEmail = groupByEmail;
             return this;
         }
-
         public Builder groupByEmail(@Nullable String groupByEmail) {
             this.groupByEmail = Output.ofNullable(groupByEmail);
             return this;
         }
-
         public Builder iamMember(@Nullable Output<String> iamMember) {
             this.iamMember = iamMember;
             return this;
         }
-
         public Builder iamMember(@Nullable String iamMember) {
             this.iamMember = Output.ofNullable(iamMember);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder routine(@Nullable Output<RoutineReferenceArgs> routine) {
             this.routine = routine;
             return this;
         }
-
         public Builder routine(@Nullable RoutineReferenceArgs routine) {
             this.routine = Output.ofNullable(routine);
             return this;
         }
-
         public Builder specialGroup(@Nullable Output<String> specialGroup) {
             this.specialGroup = specialGroup;
             return this;
         }
-
         public Builder specialGroup(@Nullable String specialGroup) {
             this.specialGroup = Output.ofNullable(specialGroup);
             return this;
         }
-
         public Builder userByEmail(@Nullable Output<String> userByEmail) {
             this.userByEmail = userByEmail;
             return this;
         }
-
         public Builder userByEmail(@Nullable String userByEmail) {
             this.userByEmail = Output.ofNullable(userByEmail);
             return this;
         }
-
         public Builder view(@Nullable Output<TableReferenceArgs> view) {
             this.view = view;
             return this;
         }
-
         public Builder view(@Nullable TableReferenceArgs view) {
             this.view = Output.ofNullable(view);
             return this;
-        }
-        public DatasetAccessItemArgs build() {
+        }        public DatasetAccessItemArgs build() {
             return new DatasetAccessItemArgs(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);
         }
     }

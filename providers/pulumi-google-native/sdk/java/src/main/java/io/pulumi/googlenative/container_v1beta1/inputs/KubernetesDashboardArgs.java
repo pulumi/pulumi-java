@@ -61,12 +61,10 @@ public final class KubernetesDashboardArgs extends io.pulumi.resources.ResourceA
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
-        }
-        public KubernetesDashboardArgs build() {
+        }        public KubernetesDashboardArgs build() {
             return new KubernetesDashboardArgs(disabled);
         }
     }

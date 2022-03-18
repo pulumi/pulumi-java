@@ -78,17 +78,14 @@ public final class GetStoredInfoTypeArgs extends io.pulumi.resources.InvokeArgs 
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder storedInfoTypeId(String storedInfoTypeId) {
             this.storedInfoTypeId = Objects.requireNonNull(storedInfoTypeId);
             return this;
-        }
-        public GetStoredInfoTypeArgs build() {
+        }        public GetStoredInfoTypeArgs build() {
             return new GetStoredInfoTypeArgs(location, project, storedInfoTypeId);
         }
     }

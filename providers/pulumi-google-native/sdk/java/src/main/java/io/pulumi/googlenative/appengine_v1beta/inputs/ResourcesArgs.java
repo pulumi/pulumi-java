@@ -129,52 +129,45 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Double cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder diskGb(@Nullable Output<Double> diskGb) {
             this.diskGb = diskGb;
             return this;
         }
-
         public Builder diskGb(@Nullable Double diskGb) {
             this.diskGb = Output.ofNullable(diskGb);
             return this;
         }
-
         public Builder kmsKeyReference(@Nullable Output<String> kmsKeyReference) {
             this.kmsKeyReference = kmsKeyReference;
             return this;
         }
-
         public Builder kmsKeyReference(@Nullable String kmsKeyReference) {
             this.kmsKeyReference = Output.ofNullable(kmsKeyReference);
             return this;
         }
-
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
-
         public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public ResourcesArgs build() {
+        public Builder volumes(VolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public ResourcesArgs build() {
             return new ResourcesArgs(cpu, diskGb, kmsKeyReference, memoryGb, volumes);
         }
     }

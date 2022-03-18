@@ -230,122 +230,104 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             this.autoRenew = autoRenew;
             return this;
         }
-
         public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = Output.ofNullable(autoRenew);
             return this;
         }
-
         public Builder category(@Nullable Output<RegionCommitmentCategory> category) {
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable RegionCommitmentCategory category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder licenseResource(@Nullable Output<LicenseResourceCommitmentArgs> licenseResource) {
             this.licenseResource = licenseResource;
             return this;
         }
-
         public Builder licenseResource(@Nullable LicenseResourceCommitmentArgs licenseResource) {
             this.licenseResource = Output.ofNullable(licenseResource);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder plan(@Nullable Output<RegionCommitmentPlan> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable RegionCommitmentPlan plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder reservations(@Nullable Output<List<ReservationArgs>> reservations) {
             this.reservations = reservations;
             return this;
         }
-
         public Builder reservations(@Nullable List<ReservationArgs> reservations) {
             this.reservations = Output.ofNullable(reservations);
             return this;
         }
-
+        public Builder reservations(ReservationArgs... reservations) {
+            return reservations(List.of(reservations));
+        }
         public Builder resources(@Nullable Output<List<ResourceCommitmentArgs>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<ResourceCommitmentArgs> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(ResourceCommitmentArgs... resources) {
+            return resources(List.of(resources));
+        }
         public Builder type(@Nullable Output<RegionCommitmentType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable RegionCommitmentType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public RegionCommitmentArgs build() {
+        }        public RegionCommitmentArgs build() {
             return new RegionCommitmentArgs(autoRenew, category, description, licenseResource, name, plan, project, region, requestId, reservations, resources, type);
         }
     }

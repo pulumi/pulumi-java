@@ -105,22 +105,21 @@ public final class GetDicomStoreResult {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationConfig(NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
-
         public Builder streamConfigs(List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs) {
             this.streamConfigs = Objects.requireNonNull(streamConfigs);
             return this;
         }
-        public GetDicomStoreResult build() {
+        public Builder streamConfigs(GoogleCloudHealthcareV1beta1DicomStreamConfigResponse... streamConfigs) {
+            return streamConfigs(List.of(streamConfigs));
+        }        public GetDicomStoreResult build() {
             return new GetDicomStoreResult(labels, name, notificationConfig, streamConfigs);
         }
     }
