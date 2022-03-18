@@ -15,22 +15,6 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="eks:index:VpcCni")
 public class VpcCni extends io.pulumi.resources.CustomResource {
-    public interface BuilderApplicator {
-        public void apply(VpcCniArgs.Builder a);
-    }
-    private static io.pulumi.eks.VpcCniArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.eks.VpcCniArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public VpcCni(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
