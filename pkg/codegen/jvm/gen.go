@@ -657,11 +657,11 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 
 		// add main setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:     setterName,
-			PropertyType:   propertyType.ToCode(ctx.imports),
-			PropertyName:   propertyName.String(),
-			Assignment:     assignment(propertyName),
-			ListNestedType: listNestedType,
+			SetterName:   setterName,
+			PropertyType: propertyType.ToCode(ctx.imports),
+			PropertyName: propertyName.String(),
+			Assignment:   assignment(propertyName),
+			ListType:     listNestedType,
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -704,11 +704,11 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 				}
 
 				builderSetters = append(builderSetters, builderSetterTemplateContext{
-					SetterName:     setterName,
-					PropertyType:   propertyTypeUnwrapped.ToCode(ctx.imports),
-					PropertyName:   propertyName.String(),
-					Assignment:     assignmentUnwrapped(propertyName),
-					ListNestedType: listNestedType,
+					SetterName:   setterName,
+					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
+					PropertyName: propertyName.String(),
+					Assignment:   assignmentUnwrapped(propertyName),
+					ListType:     listNestedType,
 				})
 			}
 		}
@@ -881,11 +881,11 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 
 		// add main setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:     setterName,
-			PropertyType:   propertyType.ToCode(ctx.imports),
-			PropertyName:   propertyName.String(),
-			Assignment:     assignment(propertyName),
-			ListNestedType: listNestedType,
+			SetterName:   setterName,
+			PropertyType: propertyType.ToCode(ctx.imports),
+			PropertyName: propertyName.String(),
+			Assignment:   assignment(propertyName),
+			ListType:     listNestedType,
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -928,11 +928,11 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 				}
 
 				builderSetters = append(builderSetters, builderSetterTemplateContext{
-					SetterName:     setterName,
-					PropertyType:   propertyTypeUnwrapped.ToCode(ctx.imports),
-					PropertyName:   propertyName.String(),
-					Assignment:     assignmentUnwrapped(propertyName),
-					ListNestedType: listNestedType,
+					SetterName:   setterName,
+					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
+					PropertyName: propertyName.String(),
+					Assignment:   assignmentUnwrapped(propertyName),
+					ListType:     listNestedType,
 				})
 			}
 		}
@@ -1147,11 +1147,11 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 
 		// add setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:     setterName,
-			PropertyType:   propertyType.ToCode(ctx.imports),
-			PropertyName:   propertyName.String(),
-			Assignment:     assignment(propertyName),
-			ListNestedType: listNestedType,
+			SetterName:   setterName,
+			PropertyType: propertyType.ToCode(ctx.imports),
+			PropertyName: propertyName.String(),
+			Assignment:   assignment(propertyName),
+			ListType:     listNestedType,
 		})
 	}
 
