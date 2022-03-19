@@ -7,7 +7,6 @@ import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -25,8 +24,8 @@ public class DeploymentRunnerTest {
     @Test
     void testTerminatesEarlyOnException() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
-            .setSpyGlobalInstance();
+                .setMocks(new MocksTest.MyMocks())
+                .setSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
         var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack.class).join();
@@ -67,13 +66,15 @@ public class DeploymentRunnerTest {
             .setStandardLogger(logger)
             .setSpyGlobalInstance();
 
-        for (var i = 0; i < 2; i++) {
-            final var delay = 100L + i;
-            mock.runner.registerTask(String.format("task%d", i), new CompletableFuture<Void>().completeOnTimeout(null, delay, TimeUnit.MILLISECONDS));
-        }
-        Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier =
-                () -> CompletableFuture.completedFuture(Map.of());
-        var code = mock.runner.runAsyncFuture(supplier, null).join();
+        var code = mock.runAsyncCustom(() -> {
+            for (var i = 0; i < 2; i++) {
+                final var delay = 100L + i;
+                mock.runner.registerTask(String.format("task%d", i), new CompletableFuture<Void>().completeOnTimeout(null, delay, TimeUnit.MILLISECONDS));
+            }
+            Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier =
+                    () -> CompletableFuture.completedFuture(Map.of());
+            return mock.runner.runAsyncFuture(supplier, null);
+        }).join();
         assertThat(code).isEqualTo(0);
 
         var messages = logger.getMessages();
