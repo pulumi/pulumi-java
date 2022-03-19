@@ -31,17 +31,11 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 import static io.pulumi.core.TypeShape.of;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MocksTest {
-
-    @AfterEach
-    public void printInternalErrorCount() {
-        cleanupDeploymentMocks();
-    }
 
     @Test
     void testCustomMocks() {

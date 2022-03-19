@@ -26,7 +26,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static io.pulumi.serialization.internal.ConverterTests.deserializeFromValue;
 import static io.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -34,11 +33,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ResourceRefPropertyTest {
 
     private static DeploymentTests.DeploymentMock mock;
-
-    @AfterEach
-    public void cleanup() {
-        cleanupDeploymentMocks();
-    }
 
     @ParameterizedTest
     @ValueSource(booleans = {false, true})

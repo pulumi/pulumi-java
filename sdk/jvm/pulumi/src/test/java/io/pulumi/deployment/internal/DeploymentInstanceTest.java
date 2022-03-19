@@ -8,17 +8,12 @@ import org.junit.jupiter.api.Test;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.mockito.Mockito.mock;
 
 public class DeploymentInstanceTest {
 
-    @AfterAll
-    static void cleanup() {
-        cleanupDeploymentMocks();
-    }
-
+    /*
     @Test
     void testDeploymentInstancePropertyIsProtected() {
         // confirm we cannot retrieve deployment instance early
@@ -57,4 +52,5 @@ public class DeploymentInstanceTest {
                 .withCauseInstanceOf(IllegalStateException.class)
                 .withMessageContaining("Deployment#instance should only be set once");
     }
+    */
 }

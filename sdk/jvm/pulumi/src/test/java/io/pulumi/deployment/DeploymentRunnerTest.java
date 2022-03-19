@@ -17,16 +17,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentRunnerTest {
-
-    @AfterEach
-    public void cleanup() {
-        cleanupDeploymentMocks();
-    }
 
     @Test
     void testTerminatesEarlyOnException() {

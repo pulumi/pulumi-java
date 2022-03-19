@@ -2,9 +2,7 @@ package io.pulumi.deployment;
 
 import io.pulumi.Config;
 import io.pulumi.core.Output;
-import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentInternal;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -18,51 +16,50 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 
-import static io.pulumi.deployment.internal.DeploymentTests.*;
+import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMock;
+import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentTest {
-
     private static DeploymentMock mock;
 
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
-            .setSpyGlobalInstance();
-    }
-
-    @AfterAll
-    static void cleanup() {
-        cleanupDeploymentMocks();
+                .setMocks(new MocksTest.MyMocks())
+                .setSpyGlobalInstance();
     }
 
     @Test
     void testConfigRequire() {
-        mock.overrideConfig("hello-jvm:name", "test");
+        mock.run(() -> {
+            mock.overrideConfig("hello-jvm:name", "test");
 
-        Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier = () -> {
-            var config = Config.of("hello-jvm");
-            //noinspection unused
-            var ignore = config.require("name");
-            return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());
-        };
+            Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier = () -> {
+                var config = Config.of("hello-jvm");
+                //noinspection unused
+                var ignore = config.require("name");
+                return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());
+            };
 
-        var code = mock.runner.runAsyncFuture(supplier, null).join();
-        assertThat(code).isEqualTo(0);
+            var code = mock.runner.runAsyncFuture(supplier, null).join();
+            assertThat(code).isEqualTo(0);
+        });
     }
 
     @Test
     void testConfigRequireMissing() {
-        Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier = () -> {
-            var config = Config.of("hello-jvm");
-            //noinspection unused
-            var ignore = config.require("missing");
-            return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());
-        };
-        mock.standardLogger.setLevel(Level.OFF);
-        var code = mock.runner.runAsyncFuture(supplier, null).join();
-        assertThat(code).isEqualTo(32);
+         mock.run(() -> {
+            Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier = () -> {
+                var config = Config.of("hello-jvm");
+                //noinspection unused
+                var ignore = config.require("missing");
+                return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());
+            };
+            mock.standardLogger.setLevel(Level.OFF);
+            var code = mock.runner.runAsyncFuture(supplier, null).join();
+            assertThat(code).isEqualTo(32);
+        });
     }
 
     // FIXME
@@ -127,18 +124,20 @@ public class DeploymentTest {
 
     @Test
     void testRunWaitsForOrphanedOutput() {
-        final var result = new AtomicInteger(0);
-        var cf = new CompletableFuture<Integer>();
-        var runTaskOne = mock.runner.runAsyncFuture(() -> {
-            //noinspection unused
-            Output<Integer> orphaned = Output.of(cf).applyValue(result::getAndSet); // the orphaned output
-            return CompletableFuture.completedFuture(Map.of()); // empty outputs
-        }, null);
+        mock.run(() -> {
+            final var result = new AtomicInteger(0);
+            var cf = new CompletableFuture<Integer>();
+            var runTaskOne = mock.runner.runAsyncFuture(() -> {
+                //noinspection unused
+                Output<Integer> orphaned = Output.of(cf).applyValue(result::getAndSet); // the orphaned output
+                return CompletableFuture.completedFuture(Map.of()); // empty outputs
+            }, null);
 
-        var triggered = cf.complete(42);
-        assertThat(triggered).isTrue();
-        runTaskOne.join();
+            var triggered = cf.complete(42);
+            assertThat(triggered).isTrue();
+            runTaskOne.join();
 
-        assertThat(result.get()).isEqualTo(42);
+            assertThat(result.get()).isEqualTo(42);
+        });
     }
 }

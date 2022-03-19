@@ -19,7 +19,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ResourceTest {
@@ -32,11 +31,6 @@ public class ResourceTest {
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
-    }
-
-    @AfterAll
-    static void cleanup() {
-        cleanupDeploymentMocks();
     }
 
     @Test

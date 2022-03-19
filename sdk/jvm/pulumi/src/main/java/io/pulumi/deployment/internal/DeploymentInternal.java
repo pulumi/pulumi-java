@@ -74,14 +74,14 @@ public interface DeploymentInternal extends Deployment {
     @VisibleForTesting
     static CompletableFuture<Integer> createRunnerAndRunAsync(
             Supplier<DeploymentInternal> deploymentFactory,
-            Function<Runner, CompletableFuture<Integer>> runAsync
-    ) {
+            Function<Runner, CompletableFuture<Integer>> runAsync) {
         return CompletableFuture.supplyAsync(deploymentFactory)
-                .thenApply(deployment -> {
+                .thenCompose(deployment -> {
                     var newInstance = new DeploymentInstanceInternal(deployment);
-                    DeploymentInstanceHolder.setInstance(newInstance);
-                    return newInstance.getInternal().getRunner();
-                })
-                .thenCompose(runAsync);
+                    return DeploymentInstanceHolder.withInstance(newInstance, () -> {
+                        var runner = newInstance.getInternal().getRunner();
+                        return runAsync.apply(runner);
+                    });
+                });
     }
 }

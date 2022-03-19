@@ -4,16 +4,17 @@ import com.google.common.annotations.VisibleForTesting;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.DeploymentInstance;
 
-import javax.annotation.Nullable;
+import java.util.LinkedList;
 import java.util.Optional;
+import java.util.Queue;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Supplier;
 
 public abstract class DeploymentInstanceHolder {
 
-    // TODO: maybe using a state machine for the uninitialized and initialized deployment would make sense
-    //       not only it need the deployment instance, but also a stack - initialized after 'run' is called
-    //       and config, ale probably more stuff... it's a god object...
     private static final AtomicReference<DeploymentInstance> instance = new AtomicReference<>();
+    private static final CompletableFutureLock lock = new CompletableFutureLock();
 
     /**
      * @throws IllegalStateException if called before 'run' was called
@@ -31,21 +32,46 @@ public abstract class DeploymentInstanceHolder {
         return Optional.ofNullable(instance.get());
     }
 
-    /**
-     * @throws IllegalStateException if called more than once (the instance already set)
-     */
-    @InternalUse
-    static void setInstance(@Nullable DeploymentInstance newInstance) {
-        if (instance.get() != null) {
-            throw new IllegalStateException("Deployment#instance should only be set once at the beginning of a 'run' call.");
+    public static <T> CompletableFuture<T> withInstance(DeploymentInstance instance,
+                                                        Supplier<CompletableFuture<T>> action) {
+        return lock.acquire().thenCompose(__ -> {
+            var oldInstance = DeploymentInstanceHolder.instance.getAndSet(instance);
+            DeploymentInstanceHolder.instance.set(instance);
+            return action.get().whenComplete((___, ____) -> {
+                if (!DeploymentInstanceHolder.instance.compareAndSet(instance, oldInstance)) {
+                    throw new IllegalStateException("DeploymentInstanceHolder lock failed");
+                }
+            });
+        }).whenComplete((__, ___) -> lock.release());
+    }
+}
+
+class CompletableFutureLock {
+    private boolean locked;
+    private final Queue<CompletableFuture<Void>> promises;
+
+    public CompletableFutureLock() {
+        locked = false;
+        promises = new LinkedList<>();
+    }
+
+    public synchronized CompletableFuture<Void> acquire() {
+        if (!locked) {
+            locked = true;
+            return CompletableFuture.completedFuture(null);
+        } else {
+            var promise = new CompletableFuture<Void>();
+            promises.add(promise);
+            return promise;
         }
-        instance.set(newInstance);
     }
 
-    @InternalUse
-    @VisibleForTesting
-    static void internalUnsafeDestroyInstance() {
-        instance.set(null);
+    public synchronized void release() {
+        var p = promises.poll();
+        if (p != null) {
+            p.completeAsync(() -> null);
+        } else {
+            locked = false;
+        }
     }
-
 }

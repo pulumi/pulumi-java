@@ -39,7 +39,6 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -148,11 +147,6 @@ class ConverterTests {
 
     @Nested
     class BooleanConverterTest {
-
-        @AfterEach
-        void cleanup() {
-            cleanupDeploymentMocks();
-        }
 
         @Test
         void testTrue() {

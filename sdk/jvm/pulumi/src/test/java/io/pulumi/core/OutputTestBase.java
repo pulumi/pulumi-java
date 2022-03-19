@@ -12,7 +12,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -25,11 +24,6 @@ public abstract class OutputTestBase {
                 .setMocks(new MocksTest.MyMocks())
                 .setOptions(new TestOptions(isPreview()))
                 .setMockGlobalInstance();
-    }
-
-    @AfterAll
-    void cleanup() {
-        cleanupDeploymentMocks();
     }
 
     @Test

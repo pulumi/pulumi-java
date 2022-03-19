@@ -18,6 +18,7 @@ import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -98,12 +99,14 @@ public class DeploymentTests {
             }
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
-            return this.runner.runAsync(stackType)
-                    .thenApply(ignore -> new TestAsyncResult(
-                            ImmutableList.copyOf(mockMonitor.resources),
-                            mockEngine.getErrors().stream()
-                                    .map(RunException::new).collect(toImmutableList())
-                    ));
+            var deploymentInstance = new DeploymentInstanceInternal(this.deployment);
+            return DeploymentImpl.withInstance(deploymentInstance, () ->
+                    this.runner.runAsync(stackType)
+                            .thenApply(ignore -> new TestAsyncResult(
+                                    ImmutableList.copyOf(mockMonitor.resources),
+                                    mockEngine.getErrors().stream()
+                                            .map(RunException::new).collect(toImmutableList())
+                            )));
         }
 
         public CompletableFuture<TestAsyncResult> runAsync(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback) {
@@ -115,13 +118,24 @@ public class DeploymentTests {
             }
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
-            return this.runner.runAsyncFuture(callback)
-                    .thenApply(ignore -> new TestAsyncResult(
-                            ImmutableList.copyOf(mockMonitor.resources),
-                            mockEngine.getErrors().stream()
-                                    .map(RunException::new)
-                                    .collect(toImmutableList())
-                    ));
+            var deploymentInstance = new DeploymentInstanceInternal(this.deployment);
+            return DeploymentImpl.withInstance(deploymentInstance, () ->
+                    this.runner.runAsyncFuture(callback)
+                            .thenApply(ignore -> new TestAsyncResult(
+                                    ImmutableList.copyOf(mockMonitor.resources),
+                                    mockEngine.getErrors().stream()
+                                            .map(RunException::new)
+                                            .collect(toImmutableList())
+                            )));
+        }
+
+        public <T> CompletableFuture<T> runAsyncCustom(Supplier<CompletableFuture<T>> callback) {
+            var deploymentInstance = new DeploymentInstanceInternal(this.deployment);
+            return DeploymentImpl.withInstance(deploymentInstance, callback);
+        }
+
+        public void run(Runnable runnable) {
+            runAsyncCustom(() -> CompletableFuture.runAsync(runnable)).join();
         }
 
         public static class TestAsyncResult {
@@ -278,7 +292,6 @@ public class DeploymentTests {
             this.deployment = Mockito.spy(new DeploymentImpl(this.state));
             this.runner = this.deployment.getRunner();
 
-            DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
             return new DeploymentMock(options, runner, engine, monitor, deployment, config, state, standardLogger, logger, log);
         }
 
@@ -300,16 +313,9 @@ public class DeploymentTests {
 
             this.deployment = mock;
 
-            DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
             return new DeploymentMock(
                     options, runner, engine, monitor, deployment, config, state, standardLogger, logger, log);
         }
-    }
-
-    public static void cleanupDeploymentMocks() {
-        // ensure we don't get the error:
-        //   java.lang.IllegalStateException: Deployment.getInstance should only be set once at the beginning of a 'run' call.
-        DeploymentImpl.internalUnsafeDestroyInstance(); // FIXME: how to avoid this?
     }
 
     public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {

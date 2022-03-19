@@ -30,12 +30,6 @@ class ReSerializerTest {
                 .setMockGlobalInstance();
     }
 
-    @AfterAll
-    static void cleanup() {
-        cleanupDeploymentMocks();
-    }
-
-
     @Nullable
     private Object reSerialize(@Nullable Object o) {
         var serialized = new Serializer(mock.log)

@@ -13,7 +13,6 @@ import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.InvokeArgs;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
@@ -21,19 +20,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentInvokeTest {
 
-    @AfterEach
-    void cleanup() {
-        cleanupDeploymentMocks();
-    }
-
     @Test
     void testCustomInvokes() {
-        DeploymentTests.DeploymentMockBuilder.builder()
+        var mocks = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new Mocks() {
                     @Override
@@ -55,11 +48,13 @@ public class DeploymentInvokeTest {
                 })
                 .setSpyGlobalInstance();
 
-        var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyVoid(r -> {
-            assertThat(r).hasSize(1);
-        });
+        mocks.run(() -> {
+            var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyVoid(r -> {
+                assertThat(r).hasSize(1);
+            });
 
-        Internal.of(out).getDataAsync().join();
+            Internal.of(out).getDataAsync().join();
+        });
     }
 
     static class CustomInvokes {

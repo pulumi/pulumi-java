@@ -10,16 +10,15 @@ import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
@@ -80,6 +79,7 @@ class StackTest {
     @Test
     void testStackWithNullOutputsThrows() {
         assertThatThrownBy(() -> run(NullOutputStack::new))
+                .getCause()
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have no value assigned");
     }
@@ -96,6 +96,7 @@ class StackTest {
     @Test
     void testStackWithInvalidOutputTypeThrows() {
         assertThatThrownBy(() -> run(InvalidOutputTypeStack::new))
+                .getCause()
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have incorrect type");
     }
@@ -106,21 +107,18 @@ class StackTest {
             .setOptions(new TestOptions("TestProject", "TestStack"))
             .setSpyGlobalInstance();
 
-        var stack = factory.get();
-        Internal.from(stack).registerPropertyOutputs();
+        return mock.runAsyncCustom(() -> {
+            var stack = factory.get();
+            Internal.from(stack).registerPropertyOutputs();
 
-        //noinspection unchecked
-        ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
+            //noinspection unchecked
+            ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
 
-        // TODO: is this OK that we're called twice?
-        verify(mock.deployment, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
+            // TODO: is this OK that we're called twice?
+            verify(mock.deployment, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
 
-        var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
-        return Tuples.of(stack, values);
-    }
-
-    @AfterEach
-    void cleanup() {
-        cleanupDeploymentMocks();
+            var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
+            return CompletableFuture.completedFuture(Tuples.of(stack, values));
+        }).join();
     }
 }
