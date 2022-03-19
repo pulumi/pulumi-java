@@ -28,10 +28,7 @@ public class Maps {
     }
 
     public static <K, V> Optional<V> tryGetValue(Map<K, V> map, K key) {
-        return map.entrySet().stream()
-                .filter(entry -> entry.getKey().equals(key))
-                .map(Map.Entry::getValue)
-                .findFirst();
+        return Optional.ofNullable(map.get(key));
     }
 
     public static <K, V> ImmutableMap<K, V> merge(
