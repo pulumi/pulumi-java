@@ -111,7 +111,7 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 
 	project := "gradle"
 
-	var plugins []*pulumirpc.PluginDependency = nil
+	var plugins []*pulumirpc.PluginDependency
 
 	getPluginsGradle := func(req *pulumirpc.GetRequiredPluginsRequest) ([]*pulumirpc.PluginDependency, error) {
 		plugins := []*pulumirpc.PluginDependency{}
